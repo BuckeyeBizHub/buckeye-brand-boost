@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7, ease: [0.22, 0.68, 0, 1.2] } }),
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7 } }),
 };
 
 const industries = [
