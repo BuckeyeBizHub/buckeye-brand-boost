@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
