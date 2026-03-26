@@ -40,7 +40,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-12 py-8 rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_60px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-wider">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-lg sm:text-xl px-12 py-8 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.6)] transition-all duration-400 group uppercase tracking-wider">
             <Phone className="w-5 h-5" />
             Get a Free Quote in 24 Hours
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
