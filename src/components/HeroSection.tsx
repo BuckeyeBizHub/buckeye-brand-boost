@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ohioSilhouette from "@/assets/ohio-silhouette.png";
+import buckeyeLogo from "@/assets/buckeye-logo.png";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -64,32 +65,19 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 60, scale: 0.93 }}
+          initial={{ opacity: 0, y: 60, scale: 0.85 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.4, ease: "easeOut" }}
+          className="mb-6"
         >
-          <h1 className="mb-6">
-            <span
-              className="block font-display italic text-[7rem] md:text-[10rem] lg:text-[13rem] xl:text-[16rem] font-black text-primary-foreground leading-[0.78]"
-              style={{
-                WebkitTextStroke: "3.5px rgba(0,0,0,0.75)",
-                textShadow: "0 0 80px rgba(255,255,255,0.6), 0 0 160px rgba(255,255,255,0.25), 0 10px 25px rgba(0,0,0,0.95), 0 20px 60px rgba(0,0,0,0.5)",
-                filter: "drop-shadow(0 0 40px rgba(255,255,255,0.18))",
-              }}
-            >
-              Buckeye
-            </span>
-            <span
-              className="block font-display text-[4.5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] font-black leading-[0.82] mt-2"
-              style={{
-                color: "#060614",
-                WebkitTextStroke: "2px rgba(255,255,255,0.1)",
-                textShadow: "0 0 50px rgba(0,0,0,0.98), 0 10px 35px rgba(0,0,0,0.8), 0 0 100px hsl(0 85% 40% / 0.35)",
-              }}
-            >
-              Biz Hub
-            </span>
-          </h1>
+          <img
+            src={buckeyeLogo}
+            alt="Buckeye Biz Hub"
+            className="w-[280px] md:w-[420px] lg:w-[520px] xl:w-[620px] mx-auto"
+            style={{
+              filter: "drop-shadow(0 0 60px hsl(0 85% 40% / 0.5)) drop-shadow(0 0 120px hsl(0 85% 40% / 0.25)) drop-shadow(0 20px 40px rgba(0,0,0,0.8))",
+            }}
+          />
         </motion.div>
 
         <motion.div

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +10,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-1.5 mb-5">
-              <span className="font-display italic text-2xl font-black text-primary-foreground">Buckeye</span>
-              <span className="font-display text-2xl font-black text-primary">Biz Hub</span>
+            <Link to="/" className="inline-block mb-5">
+              <img src={buckeyeLogo} alt="Buckeye Biz Hub" className="h-20 w-auto drop-shadow-[0_0_20px_hsl(0_85%_40%/0.4)]" />
             </Link>
             <p className="text-primary-foreground/30 text-sm leading-relaxed font-medium">
               Ohio's one-stop hub for business printing, promotional products, and vehicle branding.
