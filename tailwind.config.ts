@@ -57,6 +57,8 @@ export default {
           grey: "hsl(var(--ohio-grey))",
           "grey-light": "hsl(var(--ohio-grey-light))",
           "grey-dark": "hsl(var(--ohio-grey-dark))",
+          "red-glow": "hsl(var(--ohio-red-glow))",
+          gold: "hsl(var(--ohio-gold))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
