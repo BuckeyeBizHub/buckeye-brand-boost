@@ -29,7 +29,7 @@ const HeroSection = () => {
             <span className="block font-display italic text-7xl md:text-8xl lg:text-9xl font-bold text-primary-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ WebkitTextStroke: "1px rgba(0,0,0,0.3)" }}>
               Buckeye
             </span>
-            <span className="block font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" style={{ color: "hsl(var(--ohio-grey-dark))" }}>
+            <span className="block font-display text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" style={{ color: "#1a1a2e", WebkitTextStroke: "1px rgba(255,255,255,0.15)" }}>
               Biz Hub
             </span>
           </h1>
