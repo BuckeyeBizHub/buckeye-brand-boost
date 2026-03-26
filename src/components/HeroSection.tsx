@@ -1,170 +1,195 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import ohioSilhouette from "@/assets/ohio-silhouette.png";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Printer, Gift, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-ohio-grey-dark">
-      {/* Ultra-deep layered base */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,35%,2%)] via-[hsl(0,45%,4%)] to-[hsl(220,35%,1%)]" />
+      {/* Deep cinematic base */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(0,40%,8%)_0%,hsl(220,30%,3%)_50%,hsl(220,35%,1%)_100%)]" />
 
-      {/* Primary red radial — intense center glow */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[1400px] h-[1400px] rounded-full bg-primary/[0.18] blur-[250px]" />
-      </div>
-      {/* Secondary upper glow */}
-      <div className="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="w-[700px] h-[500px] rounded-full bg-ohio-red-glow/[0.14] blur-[140px]" />
-      </div>
-      {/* Lower warm glow */}
-      <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2">
-        <div className="w-[800px] h-[400px] rounded-full bg-primary/[0.08] blur-[160px]" />
-      </div>
+      {/* Dramatic red spotlights */}
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-primary/[0.12] blur-[200px]" />
+      <div className="absolute bottom-[15%] left-[30%] w-[500px] h-[500px] rounded-full bg-ohio-red-glow/[0.06] blur-[180px]" />
+      <div className="absolute top-[40%] right-[10%] w-[300px] h-[300px] rounded-full bg-primary/[0.08] blur-[120px]" />
 
-      {/* Ohio silhouette — glossy and prominent */}
-      <motion.img
-        src={ohioSilhouette}
-        alt=""
-        aria-hidden="true"
-        width={1920}
-        height={1080}
-        initial={{ scale: 1.2, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.65 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+      {/* Subtle diagonal lines texture */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          filter: "drop-shadow(0 0 120px hsl(0 85% 40% / 0.5)) drop-shadow(0 0 250px hsl(0 85% 40% / 0.25)) saturate(1.6) brightness(1.2) contrast(1.1)",
+          backgroundImage: `repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 40px,
+            rgba(255,255,255,0.08) 40px,
+            rgba(255,255,255,0.08) 41px
+          )`,
         }}
       />
 
-      {/* Red gradient overlay for dramatic depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,60%,3%)] via-[hsl(0,50%,8%)/0.3] to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,35%,2%)/0.7] via-transparent to-[hsl(0,40%,3%)]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,35%,1%)/0.55] via-transparent to-[hsl(220,35%,1%)/0.55]" />
-      {/* Red wash overlay — cinematic */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.06] via-transparent to-primary/[0.04]" />
-
-      {/* Subtle grid texture */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
+      {/* Vignette overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(220,35%,1%)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,35%,2%)/0.6] via-transparent to-[hsl(0,40%,3%)]" />
 
       {/* Red accent line at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_40px_hsl(0_85%_40%/0.5)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_50px_hsl(0_85%_40%/0.6)]" />
 
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-7xl mx-auto pt-24">
+        {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: -20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-3 bg-primary/30 border-2 border-primary/45 rounded-full px-8 py-3.5 mb-14 backdrop-blur-xl shadow-[0_0_50px_hsl(0_85%_40%/0.25)]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="inline-flex items-center gap-3 bg-primary/20 border border-primary/30 rounded-full px-6 py-2.5 mb-10 backdrop-blur-xl"
         >
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-[0.7rem] font-black text-primary-foreground/90 tracking-[0.25em] uppercase">Ohio's #1 Business Branding Partner</span>
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-[0.65rem] font-bold text-primary-foreground/80 tracking-[0.2em] uppercase">
+            Ohio's #1 Business Branding Partner
+          </span>
         </motion.div>
 
+        {/* Logo — the hero centerpiece */}
         <motion.div
-          initial={{ opacity: 0, y: 60, scale: 0.85 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.4, ease: "easeOut" }}
-          className="mb-6"
+          initial={{ opacity: 0, scale: 0.7, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mb-8"
         >
-          <img
+          <motion.img
             src={buckeyeLogo}
             alt="Buckeye Biz Hub"
-            className="w-[280px] md:w-[420px] lg:w-[520px] xl:w-[620px] mx-auto"
+            className="w-[300px] md:w-[400px] lg:w-[480px] xl:w-[540px] mx-auto relative z-10"
             style={{
-              filter: "drop-shadow(0 0 60px hsl(0 85% 40% / 0.5)) drop-shadow(0 0 120px hsl(0 85% 40% / 0.25)) drop-shadow(0 20px 40px rgba(0,0,0,0.8))",
+              filter:
+                "drop-shadow(0 0 80px hsl(0 85% 40% / 0.55)) drop-shadow(0 0 160px hsl(0 85% 40% / 0.2)) drop-shadow(0 30px 50px rgba(0,0,0,0.9))",
             }}
+            animate={{ y: [0, -8, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           />
+          {/* Glow ring behind logo */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[550px] lg:w-[650px] h-[400px] md:h-[550px] lg:h-[650px] rounded-full bg-primary/[0.06] blur-[100px]" />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-          className="w-60 h-1.5 mx-auto my-10 rounded-full"
-          style={{ background: "linear-gradient(90deg, transparent, hsl(0 85% 38%), hsl(0 90% 52%), hsl(0 85% 38%), transparent)", boxShadow: "0 0 30px hsl(0 85% 40% / 0.4)" }}
-        />
-
-        <motion.p
-          initial={{ opacity: 0, y: 25 }}
+        {/* Tagline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.5 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mt-2 mb-6 tracking-tight leading-[0.95]"
-          style={{ textShadow: "0 0 50px rgba(255,255,255,0.4), 0 0 100px rgba(255,255,255,0.15), 0 6px 20px rgba(0,0,0,0.8)" }}
+          transition={{ duration: 0.9, delay: 0.4 }}
+          className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-primary-foreground mb-5 tracking-tight leading-[1]"
+          style={{
+            textShadow:
+              "0 0 60px rgba(255,255,255,0.3), 0 4px 20px rgba(0,0,0,0.9)",
+          }}
         >
-          Rooted in Ohio. Built to Grow Your Business.
-        </motion.p>
+          Rooted in Ohio.
+          <br />
+          <span className="text-primary text-glow-red">Built to Grow</span> Your Business.
+        </motion.h1>
 
+        {/* Sub-headline */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-lg md:text-xl lg:text-2xl text-primary-foreground/40 mb-16 max-w-3xl mx-auto font-medium leading-relaxed"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-base md:text-lg lg:text-xl text-primary-foreground/45 mb-12 max-w-2xl mx-auto font-medium leading-relaxed"
         >
           Ohio's one-stop hub for business printing, promotional products, and vehicle branding.
         </motion.p>
 
+        {/* Service pills */}
         <motion.div
-          initial={{ opacity: 0, y: 45 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.75 }}
+          className="flex flex-wrap items-center justify-center gap-4 mb-14"
+        >
+          {[
+            { icon: Printer, label: "Business Printing" },
+            { icon: Gift, label: "Promotional Products" },
+            { icon: Truck, label: "Vehicle Branding" },
+          ].map((svc) => (
+            <div
+              key={svc.label}
+              className="flex items-center gap-2.5 bg-primary-foreground/[0.04] border border-primary-foreground/10 rounded-full px-5 py-2.5 backdrop-blur-md"
+            >
+              <svc.icon className="w-4 h-4 text-primary" />
+              <span className="text-xs font-bold text-primary-foreground/70 tracking-wide uppercase">
+                {svc.label}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-xl sm:text-2xl px-16 py-10 rounded-2xl shadow-[0_0_60px_hsl(0_85%_40%/0.6),0_0_120px_hsl(0_85%_40%/0.2)] hover:shadow-[0_0_90px_hsl(0_85%_40%/0.8),0_0_160px_hsl(0_85%_40%/0.3)] transition-all duration-500 group uppercase tracking-widest"
-              style={{ animation: 'pulse-glow 3s infinite' }}
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5),0_0_100px_hsl(0_85%_40%/0.15)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7),0_0_140px_hsl(0_85%_40%/0.25)] transition-all duration-500 group uppercase tracking-wider"
+              style={{ animation: "pulse-glow 3s infinite" }}
             >
               Get Your Free Quote Today
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
             </Button>
           </Link>
           <Link to="/promotional-products">
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary-foreground/25 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/60 font-bold text-xl sm:text-2xl px-16 py-10 rounded-2xl backdrop-blur-md transition-all duration-500 tracking-widest uppercase hover:shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+              className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/[0.07] hover:border-primary-foreground/50 font-bold text-lg sm:text-xl px-12 py-8 rounded-2xl backdrop-blur-md transition-all duration-500 tracking-wider uppercase"
             >
               Browse Products
             </Button>
           </Link>
         </motion.div>
 
+        {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
-          className="mt-28 flex flex-wrap items-center justify-center gap-16 md:gap-28"
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-20 md:mt-28 grid grid-cols-3 max-w-3xl mx-auto"
         >
           {[
             { value: "500+", label: "Ohio Businesses Served" },
             { value: "24hr", label: "Quote Turnaround" },
             { value: "100%", label: "Satisfaction Guarantee" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-5xl md:text-7xl font-black text-primary text-glow-red">{stat.value}</div>
-              <div className="text-[0.65rem] md:text-xs text-primary-foreground/30 font-bold tracking-[0.25em] uppercase mt-3">{stat.label}</div>
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`text-center py-4 ${i !== 2 ? "border-r border-primary-foreground/10" : ""}`}
+            >
+              <div className="text-4xl md:text-6xl font-black text-primary text-glow-red mb-2">
+                {stat.value}
+              </div>
+              <div className="text-[0.6rem] md:text-[0.7rem] text-primary-foreground/35 font-bold tracking-[0.2em] uppercase">
+                {stat.label}
+              </div>
             </div>
           ))}
         </motion.div>
       </div>
 
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 14, 0] }}
+          animate={{ y: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 2.4, ease: "easeInOut" }}
-          className="w-8 h-14 rounded-full border-2 border-primary-foreground/15 flex items-start justify-center p-2.5"
+          className="w-7 h-12 rounded-full border-2 border-primary-foreground/15 flex items-start justify-center p-2"
         >
-          <div className="w-1.5 h-3.5 bg-primary rounded-full shadow-[0_0_15px_hsl(0_85%_40%/0.8)]" />
+          <div className="w-1.5 h-3 bg-primary rounded-full shadow-[0_0_12px_hsl(0_85%_40%/0.8)]" />
         </motion.div>
       </motion.div>
     </section>
