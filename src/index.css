@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -37,12 +37,14 @@
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --hero-bg: 220 15% 18%;
+    --hero-bg: 220 15% 10%;
     --ohio-red: 0 78% 45%;
     --ohio-red-light: 0 78% 55%;
+    --ohio-red-glow: 0 85% 60%;
     --ohio-grey: 220 10% 45%;
     --ohio-grey-light: 220 10% 96%;
-    --ohio-grey-dark: 220 15% 18%;
+    --ohio-grey-dark: 220 15% 10%;
+    --ohio-gold: 45 90% 55%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -69,4 +71,34 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+}
+
+@layer utilities {
+  .text-glow-red {
+    text-shadow: 0 0 20px hsl(0 78% 45% / 0.5), 0 0 40px hsl(0 78% 45% / 0.3);
+  }
+  .text-glow-white {
+    text-shadow: 0 0 30px rgba(255,255,255,0.4), 0 4px 8px rgba(0,0,0,0.5);
+  }
+  .card-glow {
+    box-shadow: 0 0 0 1px hsl(0 78% 45% / 0.1), 0 8px 30px -8px hsl(0 78% 45% / 0.15);
+  }
+  .card-glow-hover:hover {
+    box-shadow: 0 0 0 1px hsl(0 78% 45% / 0.3), 0 12px 40px -8px hsl(0 78% 45% / 0.25);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(0 78% 45% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(0 78% 45% / 0.6), 0 0 60px hsl(0 78% 45% / 0.2); }
 }
