@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const Footer = () => {
   return (
