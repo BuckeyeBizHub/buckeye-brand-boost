@@ -118,25 +118,26 @@ const Contact = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.55, duration: 0.7 }}
-            className="mt-16 grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto"
+            className="mt-16 grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto"
           >
             {[
-              { icon: Mail, label: "Email", value: "david@buckeyebizhub.com", href: "mailto:david@buckeyebizhub.com" },
-              { icon: Phone, label: "Phone", value: "614-561-3358", href: "tel:6145613358" },
-              { icon: MapPin, label: "Location", value: "Columbus, Ohio", href: undefined },
+              { icon: Mail, label: "Email Us", value: "david@buckeyebizhub.com", href: "mailto:david@buckeyebizhub.com" },
+              { icon: Phone, label: "Call Us", value: "614-561-3358", href: "tel:6145613358" },
+              { icon: MapPin, label: "Our Location", value: "Columbus, Ohio", href: undefined },
             ].map((item) => {
               const Wrapper = item.href ? "a" : "div";
               return (
                 <Wrapper
                   key={item.label}
                   {...(item.href ? { href: item.href } : {})}
-                  className="group bg-primary-foreground/[0.04] backdrop-blur-sm border border-primary-foreground/[0.08] hover:border-primary/30 rounded-2xl p-6 text-center transition-all duration-400 hover:bg-primary-foreground/[0.07] hover:shadow-[0_0_35px_hsl(0_80%_42%/0.12)]"
+                  className="group relative bg-primary-foreground/[0.05] backdrop-blur-md border border-primary-foreground/[0.1] hover:border-primary/40 rounded-2xl p-7 text-center transition-all duration-500 hover:bg-primary-foreground/[0.08] hover:shadow-[0_0_45px_hsl(0_80%_42%/0.18)] overflow-hidden"
                 >
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/[0.12] group-hover:bg-primary/[0.2] flex items-center justify-center transition-all duration-400 group-hover:shadow-[0_0_30px_hsl(0_80%_42%/0.25)]">
-                    <item.icon className="w-6 h-6 text-primary transition-transform duration-400 group-hover:scale-110" />
+                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/[0.12] group-hover:bg-primary/[0.22] flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_35px_hsl(0_80%_42%/0.3)]">
+                    <item.icon className="w-7 h-7 text-primary transition-transform duration-400 group-hover:scale-110" />
                   </div>
-                  <div className="text-[0.6rem] font-extrabold uppercase tracking-[0.25em] text-primary-foreground/30 mb-1">{item.label}</div>
-                  <div className="font-bold text-sm text-primary-foreground/75 group-hover:text-primary transition-colors">{item.value}</div>
+                  <div className="text-[0.6rem] font-extrabold uppercase tracking-[0.3em] text-primary-foreground/30 mb-2">{item.label}</div>
+                  <div className="font-black text-base text-primary-foreground/80 group-hover:text-primary transition-colors duration-300">{item.value}</div>
                 </Wrapper>
               );
             })}
