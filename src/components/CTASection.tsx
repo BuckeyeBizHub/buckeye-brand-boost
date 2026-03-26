@@ -5,12 +5,12 @@ import { ArrowRight, Phone } from "lucide-react";
 const CTASection = () => {
   return (
     <section className="py-28 lg:py-36 relative overflow-hidden">
-      {/* Vibrant layered background */}
-      <div className="absolute inset-0 bg-primary" />
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,85%,38%)] via-primary to-[hsl(0,70%,35%)]" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-foreground/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
+      {/* Dark layered background */}
+      <div className="absolute inset-0 bg-ohio-grey-dark" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,8%)] via-ohio-grey-dark to-[hsl(0,0%,12%)]" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/[0.06] rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/[0.06] rounded-full blur-[120px]" />
+      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
 
       <div className="container relative text-center">
         <motion.div
@@ -40,7 +40,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-12 py-8 rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_60px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-wider">
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-lg sm:text-xl px-12 py-8 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.6)] transition-all duration-400 group uppercase tracking-wider">
             <Phone className="w-5 h-5" />
             Get a Free Quote in 24 Hours
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
