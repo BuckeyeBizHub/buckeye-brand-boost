@@ -8,6 +8,7 @@ import Services from "./pages/Services.tsx";
 import PromotionalProducts from "./pages/PromotionalProducts.tsx";
 import BusinessPrinting from "./pages/BusinessPrinting.tsx";
 import Contact from "./pages/Contact.tsx";
+import About from "./pages/About.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
