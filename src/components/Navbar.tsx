@@ -26,9 +26,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl shadow-[0_4px_40px_rgba(0,0,0,0.4)] border-b border-primary/[0.08]" : "bg-transparent"}`}>
       <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center gap-1.5 group">
-          <span className="font-display italic text-[1.7rem] font-black text-primary-foreground group-hover:text-primary-foreground transition-colors">Buckeye</span>
-          <span className="font-display text-[1.7rem] font-black text-primary transition-colors">Biz Hub</span>
+        <Link to="/" className="flex items-center group">
+          <img src={buckeyeLogo} alt="Buckeye Biz Hub" className="h-14 w-auto drop-shadow-[0_0_15px_hsl(0_85%_40%/0.4)]" />
         </Link>
 
         {/* Desktop */}
