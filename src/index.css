@@ -7,44 +7,44 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    --foreground: 220 25% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 220 25% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 220 25% 8%;
 
-    --primary: 0 80% 42%;
+    --primary: 0 85% 40%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 14% 94%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary-foreground: 220 25% 8%;
 
     --muted: 220 14% 94%;
-    --muted-foreground: 220 10% 40%;
+    --muted-foreground: 220 12% 38%;
 
-    --accent: 0 80% 42%;
+    --accent: 0 85% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 0 80% 42%;
+    --border: 220 18% 88%;
+    --input: 220 18% 88%;
+    --ring: 0 85% 40%;
 
     --radius: 0.625rem;
 
     /* Custom tokens */
-    --hero-bg: 220 20% 7%;
-    --ohio-red: 0 80% 42%;
-    --ohio-red-light: 0 75% 52%;
-    --ohio-red-glow: 0 90% 58%;
-    --ohio-grey: 220 12% 40%;
-    --ohio-grey-light: 220 20% 97%;
-    --ohio-grey-dark: 220 20% 7%;
-    --ohio-gold: 42 92% 56%;
+    --hero-bg: 220 25% 5%;
+    --ohio-red: 0 85% 40%;
+    --ohio-red-light: 0 80% 50%;
+    --ohio-red-glow: 0 95% 55%;
+    --ohio-grey: 220 14% 38%;
+    --ohio-grey-light: 220 25% 96%;
+    --ohio-grey-dark: 220 25% 5%;
+    --ohio-gold: 42 95% 54%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -77,26 +77,37 @@
 
 @layer utilities {
   .text-glow-red {
-    text-shadow: 0 0 20px hsl(0 80% 42% / 0.5), 0 0 50px hsl(0 80% 42% / 0.25);
+    text-shadow: 0 0 25px hsl(0 85% 40% / 0.6), 0 0 60px hsl(0 85% 40% / 0.3), 0 0 100px hsl(0 85% 40% / 0.1);
   }
   .text-glow-white {
-    text-shadow: 0 0 40px rgba(255,255,255,0.45), 0 4px 12px rgba(0,0,0,0.7);
+    text-shadow: 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,255,255,0.2), 0 4px 16px rgba(0,0,0,0.8);
   }
   .card-lift {
     transition: transform 0.4s cubic-bezier(.22,.68,0,1.2), box-shadow 0.4s ease;
   }
   .card-lift:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px -12px hsl(0 80% 42% / 0.18), 0 8px 20px -8px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px -12px hsl(0 85% 40% / 0.22), 0 10px 25px -8px rgba(0,0,0,0.15);
+  }
+  .red-accent-bar {
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary;
+  }
+  .section-glow {
+    @apply absolute rounded-full blur-[180px];
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 24px hsl(0 80% 42% / 0.35); }
-  50% { box-shadow: 0 0 48px hsl(0 80% 42% / 0.6), 0 0 80px hsl(0 80% 42% / 0.15); }
+  0%, 100% { box-shadow: 0 0 30px hsl(0 85% 40% / 0.4), 0 0 60px hsl(0 85% 40% / 0.1); }
+  50% { box-shadow: 0 0 55px hsl(0 85% 40% / 0.65), 0 0 100px hsl(0 85% 40% / 0.2); }
 }
 
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
