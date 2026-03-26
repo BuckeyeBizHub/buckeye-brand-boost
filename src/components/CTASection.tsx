@@ -5,12 +5,12 @@ import { ArrowRight, Phone } from "lucide-react";
 const CTASection = () => {
   return (
     <section className="py-28 lg:py-36 relative overflow-hidden">
-      {/* Vibrant layered background */}
-      <div className="absolute inset-0 bg-primary" />
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,85%,38%)] via-primary to-[hsl(0,70%,35%)]" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-foreground/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
+      {/* Dark layered background */}
+      <div className="absolute inset-0 bg-ohio-grey-dark" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,8%)] via-ohio-grey-dark to-[hsl(0,0%,12%)]" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/[0.06] rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/[0.06] rounded-full blur-[120px]" />
+      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
 
       <div className="container relative text-center">
         <motion.div
