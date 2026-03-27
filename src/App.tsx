@@ -11,6 +11,7 @@ import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
 import Industries from "./pages/Industries.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import AdminPhotos from "./pages/AdminPhotos.tsx";
 
 const queryClient = new QueryClient();
 
