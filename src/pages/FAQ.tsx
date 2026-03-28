@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "What are your pricing and wholesale rates?",
-    a: "We offer competitive wholesale pricing on all products, powered by our partnership with NextDayFlyers.com and top promotional product suppliers. Volume discounts are available on bulk orders of business cards (500+), apparel (24+), and promotional items (50+). Every quote is custom — contact us for a free, no-obligation price estimate tailored to your project and quantity.",
+    a: "We offer competitive wholesale pricing on all products through our trusted supplier network and top promotional product partners. Volume discounts are available on bulk orders of business cards (500+), apparel (24+), and promotional items (50+). Every quote is custom — contact us for a free, no-obligation price estimate tailored to your project and quantity.",
   },
   {
     q: "Do you ship across Ohio or only serve Columbus?",

@@ -326,7 +326,7 @@ const BusinessPrinting = () => {
             {[
               { title: "Wholesale Pricing", desc: "Get commercial printing at wholesale rates. No middleman markup — direct savings passed to your Ohio business." },
               { title: "Fast Ohio Delivery", desc: "Most orders ship within 24-48 hours. Columbus, Cleveland, Cincinnati, Dayton — we cover all of Ohio with fast delivery." },
-              { title: "NextDayFlyers Quality", desc: "Powered by NextDayFlyers.com — one of America's most trusted wholesale printers with decades of industry experience." },
+              { title: "Premium Quality", desc: "We use top-tier printing equipment and premium materials to deliver professional results every time." },
               { title: "Local Service", desc: "Ohio-based business support. Talk to real people who understand local business needs and Ohio market dynamics." },
               { title: "Design Assistance", desc: "Need help with your print design? Our team provides free design support to ensure your materials look professional." },
               { title: "No Order Too Big or Small", desc: "From 100 business cards to 100,000 flyers — we handle orders of any size with consistent quality and pricing." },
