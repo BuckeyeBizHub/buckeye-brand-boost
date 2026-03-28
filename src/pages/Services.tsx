@@ -3,9 +3,7 @@ import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import servicePrinting from "@/assets/service-printing.png";
-import servicePromo from "@/assets/service-promo.png";
-import serviceVehicle from "@/assets/service-vehicle.png";
+import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
 const services = [
   {
