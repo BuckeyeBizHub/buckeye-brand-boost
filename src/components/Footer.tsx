@@ -9,6 +9,7 @@ const quickLinks = [
   { label: "Promotional Products", href: "/promotional-products" },
   { label: "Industries We Serve", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "About Us", href: "/about" },
 ];
 

@@ -16,6 +16,7 @@ import Portfolio from "./pages/Portfolio.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import Blog from "./pages/Blog.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import Testimonials from "./pages/Testimonials.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
