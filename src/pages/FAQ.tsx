@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 const faqs = [
   {
     q: "What business printing services does Buckeye Biz Hub offer in Columbus, Ohio?",
-    a: "We offer a full range of professional printing services including business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays, and custom apparel printing. Powered by NextDayFlyers.com, we deliver wholesale pricing with fast turnaround across Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio.",
+    a: "We offer a full range of professional printing services including business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays, and custom apparel printing. We deliver wholesale pricing with fast turnaround across Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio.",
   },
   {
     q: "How fast is your turnaround time for printing and promotional products?",
