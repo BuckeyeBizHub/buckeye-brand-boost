@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
