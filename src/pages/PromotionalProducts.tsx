@@ -17,7 +17,7 @@ const categories = [
     items: ["T-Shirts & Polos", "Embroidered Caps", "Hoodies & Fleece", "Jackets & Outerwear"],
   },
   {
-    image: promoDrinkware,
+    image: PHOTO_PRINT_9,
     title: "Drinkware & Bar Items",
     subtitle: "Sip, Pour & Promote",
     description: "Custom tumblers, coffee mugs, bar rail mats, branded coasters, and water bottles your audience will use daily — keeping your logo front and center.",
