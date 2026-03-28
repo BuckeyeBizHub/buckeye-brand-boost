@@ -193,7 +193,7 @@ const About = () => {
               Meet <span className="text-primary text-glow-red">David Stein</span>
             </h2>
             <h3 className="text-2xl md:text-3xl text-primary-foreground/50 font-bold uppercase tracking-wider">
-              Head of Business Development
+              Co-Founder & Head of Business Development
             </h3>
           </motion.div>
 
