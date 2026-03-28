@@ -3,23 +3,20 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
-import shirtsHats from "@/assets/products/shirts-hats.jpg";
-import barRails from "@/assets/products/bar-rails.jpg";
-import drinkware from "@/assets/products/drinkware.jpg";
-import tents from "@/assets/products/tents.jpg";
-import yardSigns from "@/assets/products/yard-signs.jpg";
-import vehicleBranding from "@/assets/products/vehicle-branding.jpg";
-import businessPrinting from "@/assets/products/business-printing.jpg";
+import {
+  PHOTO_APPAREL_1, PHOTO_PRINT_1, PHOTO_PRINT_3,
+  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3,
+  PHOTO_VEHICLE_1, PHOTO_PRINT_5,
+} from "@/lib/photos";
 
 const products = [
-  { img: shirtsHats, label: "Custom Shirts & Hats", tag: "Apparel" },
-  { img: barRails, label: "Bar Rails", tag: "Bar & Restaurant" },
-  { img: drinkware, label: "Branded Drinkware", tag: "Drinkware" },
-  { img: tents, label: "Event Tents", tag: "Outdoor" },
-  { img: yardSigns, label: "Yard Signs", tag: "Signage" },
-  { img: vehicleBranding, label: "Vehicle Wraps", tag: "Vehicle" },
-  { img: businessPrinting, label: "Business Printing", tag: "Print" },
+  { img: PHOTO_APPAREL_1, label: "Custom Shirts & Hats", tag: "Apparel" },
+  { img: PHOTO_PRINT_3, label: "Bar Rails", tag: "Bar & Restaurant" },
+  { img: PHOTO_PRINT_1, label: "Branded Drinkware", tag: "Drinkware" },
+  { img: PHOTO_SIGNAGE_1, label: "Event Tents", tag: "Outdoor" },
+  { img: PHOTO_SIGNAGE_3, label: "Yard Signs", tag: "Signage" },
+  { img: PHOTO_VEHICLE_1, label: "Vehicle Wraps", tag: "Vehicle" },
+  { img: PHOTO_PRINT_5, label: "Business Printing", tag: "Print" },
 ];
 
 const ProductCarousel = () => {
