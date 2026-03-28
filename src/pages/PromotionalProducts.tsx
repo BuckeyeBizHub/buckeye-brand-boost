@@ -10,7 +10,7 @@ import {
 
 const categories = [
   {
-    image: promoApparel,
+    image: PHOTO_APPAREL_1,
     title: "Apparel",
     subtitle: "Wear Your Brand Everywhere",
     description: "Custom shirts, embroidered hats, hoodies, polos, and jackets — premium branded apparel that turns your team and customers into walking billboards.",
