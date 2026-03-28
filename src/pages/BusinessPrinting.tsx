@@ -6,11 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import {
-  PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3, PHOTO_PRINT_4, PHOTO_PRINT_5,
-  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8, PHOTO_PRINT_9, PHOTO_PRINT_10,
-  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_4,
+  PHOTO_PRINT_7, PHOTO_PRINT_8, PHOTO_PRINT_9, PHOTO_PRINT_10,
+  PHOTO_SIGNAGE_4,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
 } from "@/lib/photos";
+
+import businessCardsStack from "@/assets/business-cards-letterhead-stack.jpg";
+import yardSignInstall from "@/assets/yard-sign-installation.jpg";
+import brochuresFlyers from "@/assets/brochures-flyers-layou.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
