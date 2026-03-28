@@ -156,7 +156,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Custom Hats", "Ohio Branded Snapbacks", "Corporate Golf Caps", "Trucker Hats", "Embroidered Beanies", "Team Headwear"],
   },
   {
-    image: PHOTO_PRINT_9,
+    image: brandedDrinkware,
     title: "Drinkware & Bar Items",
     subtitle: "Sip, Pour & Promote",
     description: "Custom tumblers, branded coffee mugs, promotional water bottles, and insulated drinkware that Ohio customers use every single day — keeping your logo front and center at home, at work, and on the go across Columbus and beyond.",
