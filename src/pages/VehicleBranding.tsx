@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, Zap, Star, CheckCircle, Award, Truck, Shield, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -78,9 +79,11 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
             ))}
           </div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-wrap gap-4 pt-3">
-            <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_55px_hsl(0_80%_42%/0.6)] transition-all duration-300 group/btn uppercase tracking-wider">
-              <Car className="w-5 h-5" />Get a Quote<ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_55px_hsl(0_80%_42%/0.6)] transition-all duration-300 group/btn uppercase tracking-wider">
+                <Car className="w-5 h-5" />Get a Quote<ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>
@@ -101,6 +104,19 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
       "Paint protection included — wraps shield your vehicle's factory finish",
     ],
     useCases: ["Columbus Vehicle Wraps", "Ohio Full Wraps", "Commercial Van Wraps", "Box Truck Wraps", "SUV Branding"],
+  },
+  {
+    image: PHOTO_VEHICLE_7,
+    title: "Partial Wraps & Spot Graphics",
+    subtitle: "Smart Branding",
+    description: "Get maximum visual impact at a fraction of the cost with partial vehicle wraps and spot graphics. Cover key panels — doors, tailgate, hood, or rear window — with bold branded graphics while keeping your budget lean. Ideal for Columbus small businesses and startups looking for professional vehicle branding without the full-wrap price tag.",
+    benefits: [
+      "Cover 25-75% of the vehicle for dramatic impact at lower cost",
+      "Strategic panel placement for maximum visibility on Ohio roads",
+      "Same premium 3M/Avery vinyl and professional installation",
+      "Easy to update or expand to a full wrap as your business grows",
+    ],
+    useCases: ["Columbus Partial Wraps", "Ohio Spot Graphics", "Budget Vehicle Branding", "Door & Tailgate Wraps", "Startup Vehicle Marketing"],
   },
   {
     image: PHOTO_VEHICLE_2,
@@ -277,13 +293,15 @@ const VehicleBranding = () => {
             Professional vehicle wraps, fleet graphics, and truck lettering for Ohio businesses. Every mile is a marketing opportunity.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-            <Button size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
-              style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
-              <Phone className="w-7 h-7" />
-              Get Your Free Quote Today
-              <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
+                style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
+                <Phone className="w-7 h-7" />
+                Get Your Free Quote Today
+                <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
