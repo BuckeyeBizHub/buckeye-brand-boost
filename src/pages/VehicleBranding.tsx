@@ -293,13 +293,15 @@ const VehicleBranding = () => {
             Professional vehicle wraps, fleet graphics, and truck lettering for Ohio businesses. Every mile is a marketing opportunity.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-            <Button size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
-              style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
-              <Phone className="w-7 h-7" />
-              Get Your Free Quote Today
-              <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
+                style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
+                <Phone className="w-7 h-7" />
+                Get Your Free Quote Today
+                <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
