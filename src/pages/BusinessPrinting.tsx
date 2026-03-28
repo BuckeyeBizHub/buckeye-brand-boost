@@ -122,7 +122,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
   {
     title: "Business Cards",
     seoTitle: "Columbus Business Cards – Premium & Custom Printed",
-    description: "Make a powerful first impression with professionally designed and printed business cards from Buckeye Biz Hub, powered by NextDayFlyers.com.",
+    description: "Make a powerful first impression with professionally designed and printed business cards from Buckeye Biz Hub.",
     benefits: [
       "Multiple premium paper stocks: 16pt, 32pt ultra-thick, silk laminate, and more",
       "Full-color printing with spot UV, foil stamping, and embossing options",
@@ -231,7 +231,7 @@ const BusinessPrinting = () => {
           <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center gap-3 bg-primary/25 border-2 border-primary/40 rounded-full px-7 py-3 mb-10 shadow-[0_0_30px_hsl(0_80%_42%/0.2)]">
               <Printer className="w-5 h-5 text-primary" />
-              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Powered by NextDayFlyers.com</span>
+              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Professional Printing Services</span>
             </div>
           </motion.div>
 
@@ -283,7 +283,7 @@ const BusinessPrinting = () => {
               Your Complete <span className="text-primary">Business Printing Partner</span> in Ohio
             </h2>
             <p className="text-lg text-primary-foreground/50 leading-relaxed mb-6">
-              Buckeye Biz Hub is your one-stop shop for all commercial and business printing services in Columbus, Ohio and beyond. Powered by NextDayFlyers.com, we combine wholesale pricing with local service to deliver everything from custom business cards and vinyl banners to large format trade show displays and branded apparel.
+              Buckeye Biz Hub is your one-stop shop for all commercial and business printing services in Columbus, Ohio and beyond. We combine wholesale pricing with local service to deliver everything from custom business cards and vinyl banners to large format trade show displays and branded apparel.
             </p>
             <p className="text-lg text-primary-foreground/50 leading-relaxed">
               Whether you're a startup needing your first batch of business cards, a real estate agency ordering yard signs, or a corporation outfitting your team with branded uniforms, our printing experts deliver exceptional quality at prices that make sense for your budget.
@@ -326,7 +326,7 @@ const BusinessPrinting = () => {
             {[
               { title: "Wholesale Pricing", desc: "Get commercial printing at wholesale rates. No middleman markup — direct savings passed to your Ohio business." },
               { title: "Fast Ohio Delivery", desc: "Most orders ship within 24-48 hours. Columbus, Cleveland, Cincinnati, Dayton — we cover all of Ohio with fast delivery." },
-              { title: "NextDayFlyers Quality", desc: "Powered by NextDayFlyers.com — one of America's most trusted wholesale printers with decades of industry experience." },
+              { title: "Premium Quality", desc: "We use top-tier printing equipment and premium materials to deliver professional results every time." },
               { title: "Local Service", desc: "Ohio-based business support. Talk to real people who understand local business needs and Ohio market dynamics." },
               { title: "Design Assistance", desc: "Need help with your print design? Our team provides free design support to ensure your materials look professional." },
               { title: "No Order Too Big or Small", desc: "From 100 business cards to 100,000 flyers — we handle orders of any size with consistent quality and pricing." },

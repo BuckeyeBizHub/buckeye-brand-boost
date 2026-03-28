@@ -21,7 +21,7 @@ const sections = [
   {
     title: "Sharing of Information",
     content: [
-      "We may share your information with trusted third-party service providers who assist us in operating our website, conducting our business, or servicing you — including payment processors, shipping partners, and print fulfillment providers such as NextDayFlyers.com. These parties are obligated to keep your information confidential.",
+      "We may share your information with trusted third-party service providers who assist us in operating our website, conducting our business, or servicing you — including payment processors, shipping partners, and print fulfillment providers. These parties are obligated to keep your information confidential.",
       "We may also disclose your information when required by law, to enforce our site policies, or to protect our or others' rights, property, or safety.",
     ],
   },
