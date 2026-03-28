@@ -1,70 +1,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Printer, Star, Zap, Clock, Shield } from "lucide-react";
+import { ArrowRight, Phone, Printer, Star, Zap, Clock, Shield, CheckCircle2, Users, Award, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import {
   PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3, PHOTO_PRINT_4, PHOTO_PRINT_5,
-  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8,
+  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8, PHOTO_PRINT_9, PHOTO_PRINT_10,
   PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_4,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
 } from "@/lib/photos";
 
-const categories = [
-  {
-    title: "Business Cards & Stationery",
-    description: "Premium cards, letterhead, envelopes — powered by NextDayFlyers.com",
-    products: [
-      { img: PHOTO_PRINT_1, title: "Business Cards", desc: "Premium full-color cards with multiple paper stocks & finishes" },
-      { img: PHOTO_PRINT_2, title: "Letterhead & Envelopes", desc: "Professional stationery sets that elevate your brand" },
-      { img: PHOTO_PRINT_3, title: "Specialty Cards", desc: "Embossed, foil-stamped, and ultra-thick luxury cards" },
-    ],
-  },
-  {
-    title: "Banners & Yard Signs",
-    description: "Large format banners, yard signs, and outdoor signage — powered by NextDayFlyers.com",
-    products: [
-      { img: PHOTO_SIGNAGE_1, title: "Vinyl Banners", desc: "Durable indoor/outdoor banners in any custom size" },
-      { img: PHOTO_SIGNAGE_3, title: "Yard Signs", desc: "Corrugated plastic signs for events, campaigns & more" },
-      { img: PHOTO_SIGNAGE_2, title: "Retractable Banners", desc: "Portable pull-up displays perfect for trade shows" },
-    ],
-  },
-  {
-    title: "Brochures & Marketing Materials",
-    description: "Tri-fold brochures, flyers, rack cards, and sell sheets — powered by NextDayFlyers.com",
-    products: [
-      { img: PHOTO_PRINT_4, title: "Tri-Fold Brochures", desc: "High-impact brochures with glossy or matte finishes" },
-      { img: PHOTO_PRINT_5, title: "Flyers & Rack Cards", desc: "Eye-catching single-sheet marketing materials" },
-      { img: PHOTO_PRINT_6, title: "Sell Sheets & Postcards", desc: "Professional leave-behinds and direct mail pieces" },
-    ],
-  },
-  {
-    title: "Large Format Printing",
-    description: "Posters, murals, trade show graphics, and vehicle wraps — powered by NextDayFlyers.com",
-    products: [
-      { img: PHOTO_PRINT_7, title: "Posters & Prints", desc: "Vivid large format posters from any digital file" },
-      { img: PHOTO_SIGNAGE_4, title: "Trade Show Graphics", desc: "Booth backdrops, displays, and exhibition signage" },
-      { img: PHOTO_PRINT_8, title: "Wall Murals", desc: "Full-wall graphics that transform any interior space" },
-    ],
-  },
-  {
-    title: "Custom Apparel & More",
-    description: "Printed shirts, hoodies, and branded apparel — powered by NextDayFlyers.com",
-    products: [
-      { img: PHOTO_APPAREL_1, title: "Custom T-Shirts", desc: "Screen-printed and DTG shirts for teams & events" },
-      { img: PHOTO_APPAREL_2, title: "Branded Hoodies", desc: "Embroidered and printed premium outerwear" },
-      { img: PHOTO_APPAREL_3, title: "Team & Corporate Wear", desc: "Polos, caps, and uniforms with your branding" },
-    ],
-  },
-];
-
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
+    opacity: 1, y: 0,
     transition: { delay: i * 0.12, duration: 0.7, ease: "easeOut" as const },
   }),
 };
@@ -73,6 +24,194 @@ const trustBadges = [
   { icon: Zap, label: "Fast Turnaround" },
   { icon: Shield, label: "Quality Guaranteed" },
   { icon: Clock, label: "24hr Quote Response" },
+  { icon: Truck, label: "Wholesale Pricing" },
+];
+
+interface ServiceSectionProps {
+  title: string;
+  seoTitle: string;
+  description: string;
+  benefits: string[];
+  useCases: string[];
+  seoText: string;
+  images: string[];
+  reversed?: boolean;
+  index: number;
+}
+
+const ServiceSection = ({ title, seoTitle, description, benefits, useCases, seoText, images, reversed, index }: ServiceSectionProps) => (
+  <section className={`py-24 lg:py-32 relative overflow-hidden ${index % 2 === 0 ? "bg-ohio-grey-dark" : "bg-[hsl(0,0%,7%)]"}`}>
+    <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] bg-primary/[0.06] rounded-full blur-[150px]" />
+    <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px]" />
+    <div className={`absolute top-0 ${index % 2 === 0 ? 'left-0' : 'right-0'} w-1.5 h-full bg-gradient-to-b from-transparent via-primary/60 to-transparent`} />
+
+    <div className="container relative">
+      <motion.div
+        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
+        custom={0} variants={fadeUp} className="text-center mb-16"
+      >
+        <span className="inline-block bg-primary/25 border-2 border-primary/40 text-primary text-xs font-black uppercase tracking-[0.25em] px-6 py-2 rounded-full mb-6 shadow-[0_0_20px_hsl(0_80%_42%/0.15)]">
+          0{index + 1} — {title}
+        </span>
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-5 text-glow-white leading-[0.9]">
+          {seoTitle}
+        </h2>
+        <p className="text-lg md:text-xl text-primary-foreground/50 max-w-3xl mx-auto font-medium">
+          {description}
+        </p>
+      </motion.div>
+
+      <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${reversed ? 'lg:flex-row-reverse' : ''}`}>
+        {/* Images Grid */}
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true }}
+          custom={1} variants={fadeUp}
+          className={`grid grid-cols-2 gap-4 ${reversed ? 'lg:order-2' : ''}`}
+        >
+          {images.map((img, i) => (
+            <div key={i} className={`relative overflow-hidden rounded-2xl group ${i === 0 ? 'col-span-2 h-64' : 'h-48'}`}>
+              <img src={img} alt={`${title} - ${i + 1}`} loading="lazy" width={800} height={600}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ohio-grey-dark/60 to-transparent" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Content */}
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true }}
+          custom={2} variants={fadeUp}
+          className={reversed ? 'lg:order-1' : ''}
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-black mb-6 text-primary">Why Choose Our {title}?</h3>
+
+          <div className="space-y-3 mb-8">
+            {benefits.map((b) => (
+              <div key={b} className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <span className="text-primary-foreground/70 font-medium">{b}</span>
+              </div>
+            ))}
+          </div>
+
+          <h4 className="font-display text-xl font-black mb-4 text-primary-foreground/80">Common Use Cases</h4>
+          <div className="flex flex-wrap gap-2 mb-8">
+            {useCases.map((uc) => (
+              <span key={uc} className="bg-primary/15 border border-primary/30 text-primary-foreground/70 text-sm font-bold px-4 py-1.5 rounded-full">
+                {uc}
+              </span>
+            ))}
+          </div>
+
+          <p className="text-primary-foreground/40 text-sm leading-relaxed mb-8">{seoText}</p>
+
+          <Link to="/contact">
+            <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider">
+              Get a Quote
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
+
+const services: Omit<ServiceSectionProps, 'index'>[] = [
+  {
+    title: "Business Cards",
+    seoTitle: "Columbus Business Cards – Premium & Custom Printed",
+    description: "Make a powerful first impression with professionally designed and printed business cards from Buckeye Biz Hub, powered by NextDayFlyers.com.",
+    benefits: [
+      "Multiple premium paper stocks: 16pt, 32pt ultra-thick, silk laminate, and more",
+      "Full-color printing with spot UV, foil stamping, and embossing options",
+      "Fast turnaround — order today, receive within days across Ohio",
+      "Wholesale pricing for bulk orders of 500, 1,000, 5,000+ cards",
+      "Free design assistance to match your brand identity",
+    ],
+    useCases: ["Networking Events", "Sales Teams", "Grand Openings", "Trade Shows", "Corporate Gifting"],
+    seoText: "Looking for affordable Columbus business cards or custom business card printing in Ohio? Buckeye Biz Hub delivers premium quality business cards with wholesale pricing and fast turnaround. Whether you need standard business cards, luxury thick cards, or specialty finishes like spot UV and foil stamping, we serve Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio with professional business card printing services.",
+    images: [PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3],
+  },
+  {
+    title: "Banners & Yard Signs",
+    seoTitle: "Ohio Yard Signs & Vinyl Banners – Custom Printed",
+    description: "High-visibility outdoor signage built to withstand Ohio weather. Perfect for campaigns, events, real estate, and business promotions.",
+    benefits: [
+      "Durable vinyl banners rated for outdoor use — wind, rain, and UV resistant",
+      "Corrugated plastic yard signs with optional H-wire stakes included",
+      "Custom sizes from small directional signs to massive building banners",
+      "Vibrant full-color printing with fade-resistant inks",
+      "Bulk discounts for political campaigns, real estate agents, and event planners",
+    ],
+    useCases: ["Political Campaigns", "Real Estate Open Houses", "Grand Openings", "Church Events", "Construction Sites"],
+    seoText: "Need custom Ohio yard signs or wholesale vinyl banners in Columbus? Buckeye Biz Hub provides high-quality corrugated yard signs, retractable banners, and large vinyl banners for businesses across Ohio. From political campaign signs to real estate yard signs, our Columbus banner printing services deliver fast with competitive wholesale pricing throughout Ohio.",
+    images: [PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_2],
+    reversed: true,
+  },
+  {
+    title: "Brochures & Flyers",
+    seoTitle: "Brochure & Flyer Printing – Columbus, Ohio",
+    description: "Professional marketing collateral that tells your story. Tri-fold brochures, rack cards, flyers, and sell sheets printed on premium stock.",
+    benefits: [
+      "Tri-fold, bi-fold, z-fold, and gate-fold brochure options",
+      "Glossy, matte, and silk finishes for a premium look and feel",
+      "Flyers available in multiple sizes: 4×6, 5×7, 8.5×11, and custom",
+      "Rack cards perfect for hotel lobbies, restaurants, and trade shows",
+      "Affordable pricing on runs from 250 to 100,000+ pieces",
+    ],
+    useCases: ["Direct Mail Campaigns", "Trade Show Handouts", "Restaurant Menus", "Hotel Information", "Medical Offices"],
+    seoText: "Searching for professional brochure printing in Columbus Ohio or affordable flyer printing services? Buckeye Biz Hub offers high-quality tri-fold brochures, rack cards, flyers, and marketing materials with wholesale pricing. Our Ohio printing services include design support, premium paper options, and fast delivery throughout Columbus, Cleveland, and all of Ohio.",
+    images: [PHOTO_PRINT_4, PHOTO_PRINT_5, PHOTO_PRINT_6],
+  },
+  {
+    title: "Letterhead & Stationery",
+    seoTitle: "Custom Letterhead & Business Stationery – Ohio",
+    description: "Establish brand authority with professionally printed letterhead, envelopes, notepads, and complete stationery packages.",
+    benefits: [
+      "Matching sets: letterhead, envelopes, business cards, and notepads",
+      "Premium paper stocks including linen, cotton, and recycled options",
+      "Full-color or Pantone-matched printing for exact brand colors",
+      "Custom sizes and die-cut options for unique branding",
+      "Ideal for law firms, medical offices, and corporate headquarters",
+    ],
+    useCases: ["Law Firms", "Medical Practices", "Corporate Offices", "Financial Advisors", "Real Estate Agencies"],
+    seoText: "Professional custom letterhead printing and business stationery in Columbus Ohio. Buckeye Biz Hub delivers complete stationery packages including printed envelopes, letterhead, and matching business cards with premium paper options. Our wholesale printing Ohio services help businesses across the state present a polished, professional image.",
+    images: [PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_2],
+    reversed: true,
+  },
+  {
+    title: "Large Format Printing",
+    seoTitle: "Large Format Printing Services – Columbus & Ohio",
+    description: "Go big with posters, wall murals, trade show displays, and vehicle wraps printed in stunning detail on wide-format equipment.",
+    benefits: [
+      "Posters up to 60\" wide in any custom length — perfect for storefronts",
+      "Trade show displays: pop-up banners, booth backdrops, and table throws",
+      "Wall murals and window graphics for interior branding and retail spaces",
+      "High-resolution printing at 720–1440 DPI for photo-quality output",
+      "Mounting, lamination, and finishing options for durability",
+    ],
+    useCases: ["Trade Show Booths", "Retail Window Displays", "Office Branding", "Event Backdrops", "Restaurant Decor"],
+    seoText: "Need large format printing in Columbus Ohio? Buckeye Biz Hub offers wide-format poster printing, trade show display printing, wall murals, and custom signage for businesses across Ohio. Our large format printing services deliver stunning quality at wholesale prices with fast turnaround for Columbus, Dayton, Cincinnati, and Cleveland businesses.",
+    images: [PHOTO_PRINT_7, PHOTO_SIGNAGE_4, PHOTO_PRINT_8],
+  },
+  {
+    title: "Custom Apparel Printing",
+    seoTitle: "Custom Apparel Printing Ohio – Shirts, Hoodies & More",
+    description: "Branded apparel for teams, events, and promotions. Screen printing, DTG, and embroidery on premium garments.",
+    benefits: [
+      "Screen printing for bulk orders — vibrant colors that last hundreds of washes",
+      "Direct-to-garment (DTG) for small runs and complex full-color designs",
+      "Embroidery for polos, caps, and corporate uniforms with a premium feel",
+      "Wide garment selection: t-shirts, hoodies, tank tops, hats, and more",
+      "No minimum orders on DTG — perfect for prototypes and one-offs",
+    ],
+    useCases: ["Company Uniforms", "Team Sports", "Event Merchandise", "Promotional Giveaways", "Brand Ambassadors"],
+    seoText: "Looking for custom t-shirt printing in Columbus Ohio or wholesale apparel printing? Buckeye Biz Hub provides screen printing, DTG printing, and embroidery services on premium garments. From custom team shirts to branded corporate uniforms, our Ohio apparel printing delivers fast with competitive wholesale pricing.",
+    images: [PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3],
+    reversed: true,
+  },
 ];
 
 const BusinessPrinting = () => {
@@ -85,9 +224,7 @@ const BusinessPrinting = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,6%)] via-ohio-grey-dark to-[hsl(0,0%,8%)]" />
         <div className="absolute top-[-200px] right-[-200px] w-[900px] h-[900px] bg-primary/[0.12] rounded-full blur-[180px]" />
         <div className="absolute bottom-[-150px] left-[-150px] w-[700px] h-[700px] bg-primary/[0.08] rounded-full blur-[150px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[200px]" />
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        {/* Diagonal red accent strip */}
         <div className="absolute top-0 right-0 w-[300px] h-full bg-gradient-to-b from-primary/[0.06] to-transparent skew-x-[-12deg] translate-x-20" />
 
         <div className="container relative text-center">
@@ -99,40 +236,24 @@ const BusinessPrinting = () => {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.8 }}
-            className="font-display text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black leading-[0.85] mb-10 text-glow-white"
+            initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.8 }}
+            className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.85] mb-10 text-glow-white"
           >
-            Business Printing
+            Professional Business Printing
             <br />
-            <span className="text-primary text-glow-red relative">
-              That Stands Out
-              <motion.div
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "80%" }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-              />
-            </span>
+            <span className="text-primary text-glow-red">in Ohio</span>
+            <br />
+            <span className="text-3xl md:text-4xl lg:text-5xl text-primary-foreground/60">Fast, High-Quality & Wholesale</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.7 }}
-            className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/55 max-w-3xl mx-auto mb-14 font-medium"
+            initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.7 }}
+            className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/55 max-w-4xl mx-auto mb-14 font-medium"
           >
-            Professional printing delivered fast with <span className="text-primary font-bold">NextDayFlyers</span> quality.
+            From business cards to vehicle wraps, Buckeye Biz Hub delivers <span className="text-primary font-bold">premium printing</span> with wholesale pricing and fast turnaround across Columbus, Cleveland, Cincinnati, and all of Ohio.
           </motion.p>
 
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-6 mb-14"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="flex flex-wrap justify-center gap-6 mb-14">
             {trustBadges.map((badge) => (
               <div key={badge.label} className="flex items-center gap-2.5 bg-primary-foreground/[0.05] border border-primary-foreground/10 rounded-full px-5 py-2.5">
                 <badge.icon className="w-4 h-4 text-primary" />
@@ -153,93 +274,77 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
-      {/* Categories */}
-      {categories.map((cat, catIdx) => (
-        <section
-          key={cat.title}
-          className={`py-24 lg:py-32 relative overflow-hidden ${catIdx % 2 === 0 ? "bg-ohio-grey-dark" : "bg-[hsl(0,0%,7%)]"}`}
-        >
-          {/* Bold accent glows */}
-          <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] bg-primary/[0.06] rounded-full blur-[150px]" />
-          <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px]" />
-          {/* Red side accent */}
-          <div className={`absolute top-0 ${catIdx % 2 === 0 ? 'left-0' : 'right-0'} w-1.5 h-full bg-gradient-to-b from-transparent via-primary/60 to-transparent`} />
+      {/* Intro SEO Block */}
+      <section className="py-20 bg-[hsl(0,0%,7%)] relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="container relative">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-glow-white">
+              Your Complete <span className="text-primary">Business Printing Partner</span> in Ohio
+            </h2>
+            <p className="text-lg text-primary-foreground/50 leading-relaxed mb-6">
+              Buckeye Biz Hub is your one-stop shop for all commercial and business printing services in Columbus, Ohio and beyond. Powered by NextDayFlyers.com, we combine wholesale pricing with local service to deliver everything from custom business cards and vinyl banners to large format trade show displays and branded apparel.
+            </p>
+            <p className="text-lg text-primary-foreground/50 leading-relaxed">
+              Whether you're a startup needing your first batch of business cards, a real estate agency ordering yard signs, or a corporation outfitting your team with branded uniforms, our printing experts deliver exceptional quality at prices that make sense for your budget.
+            </p>
+          </motion.div>
 
-          <div className="container relative">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={0}
-              variants={fadeUp}
-              className="text-center mb-20"
-            >
-              <span className="inline-block bg-primary/25 border-2 border-primary/40 text-primary text-xs font-black uppercase tracking-[0.25em] px-6 py-2 rounded-full mb-6 shadow-[0_0_20px_hsl(0_80%_42%/0.15)]">
-                0{catIdx + 1} — Service Category
-              </span>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-5 text-glow-white leading-[0.9]">
-                {cat.title}
-              </h2>
-              <p className="text-lg md:text-xl text-primary-foreground/45 max-w-2xl mx-auto font-medium">
-                {cat.description}
-              </p>
-            </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {[
+              { icon: Award, stat: "10,000+", label: "Products Available" },
+              { icon: Users, stat: "500+", label: "Ohio Businesses Served" },
+              { icon: Clock, stat: "24-48hr", label: "Average Turnaround" },
+              { icon: Star, stat: "4.9/5", label: "Customer Rating" },
+            ].map((item) => (
+              <div key={item.label} className="text-center bg-primary-foreground/[0.03] border border-primary-foreground/10 rounded-2xl p-8 hover:border-primary/40 transition-colors duration-300">
+                <item.icon className="w-8 h-8 text-primary mx-auto mb-4" />
+                <div className="font-display text-3xl md:text-4xl font-black text-primary mb-2">{item.stat}</div>
+                <div className="text-primary-foreground/50 font-bold uppercase tracking-wider text-sm">{item.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
-            <div className="grid md:grid-cols-3 gap-10">
-              {cat.products.map((product, prodIdx) => (
-                <motion.div
-                  key={product.title}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-60px" }}
-                  custom={prodIdx + 1}
-                  variants={fadeUp}
-                  className="group relative bg-primary-foreground/[0.03] border border-primary-foreground/10 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_60px_hsl(0_80%_42%/0.2)] hover:-translate-y-2"
-                >
-                  {/* Top red accent bar */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={product.img}
-                      alt={product.title}
-                      loading="lazy"
-                      width={800}
-                      height={600}
-                      className="w-full h-full object-cover group-hover:scale-115 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ohio-grey-dark via-ohio-grey-dark/30 to-transparent" />
-                    {/* Overlay red tint on hover */}
-                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
-                  </div>
-                  <div className="p-7">
-                    <h3 className="font-display text-2xl font-black mb-3 group-hover:text-primary transition-colors duration-300">
-                      {product.title}
-                    </h3>
-                    <p className="text-primary-foreground/45 text-sm leading-relaxed mb-6">
-                      {product.desc}
-                    </p>
-                    <Link to="/contact">
-                      <Button size="sm" className="bg-primary/15 border-2 border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground font-black uppercase tracking-wider text-xs px-6 py-5 shadow-[0_0_15px_hsl(0_80%_42%/0.1)] hover:shadow-[0_0_30px_hsl(0_80%_42%/0.3)] transition-all duration-300 group/btn">
-                        Get a Quote
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+      {/* Service Sections */}
+      {services.map((service, idx) => (
+        <ServiceSection key={service.title} {...service} index={idx} />
       ))}
+
+      {/* Why Buckeye Biz Hub SEO Section */}
+      <section className="py-24 lg:py-32 bg-[hsl(0,0%,6%)] relative overflow-hidden">
+        <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/[0.06] rounded-full blur-[200px]" />
+        <div className="container relative">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-glow-white">
+              Why Ohio Businesses Choose <span className="text-primary text-glow-red">Buckeye Biz Hub</span>
+            </h2>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              { title: "Wholesale Pricing", desc: "Get commercial printing at wholesale rates. No middleman markup — direct savings passed to your Ohio business." },
+              { title: "Fast Ohio Delivery", desc: "Most orders ship within 24-48 hours. Columbus, Cleveland, Cincinnati, Dayton — we cover all of Ohio with fast delivery." },
+              { title: "NextDayFlyers Quality", desc: "Powered by NextDayFlyers.com — one of America's most trusted wholesale printers with decades of industry experience." },
+              { title: "Local Service", desc: "Ohio-based business support. Talk to real people who understand local business needs and Ohio market dynamics." },
+              { title: "Design Assistance", desc: "Need help with your print design? Our team provides free design support to ensure your materials look professional." },
+              { title: "No Order Too Big or Small", desc: "From 100 business cards to 100,000 flyers — we handle orders of any size with consistent quality and pricing." },
+            ].map((item) => (
+              <div key={item.title} className="bg-primary-foreground/[0.03] border border-primary-foreground/10 rounded-2xl p-8 hover:border-primary/40 hover:shadow-[0_0_40px_hsl(0_80%_42%/0.1)] transition-all duration-300">
+                <h3 className="font-display text-xl font-black text-primary mb-3">{item.title}</h3>
+                <p className="text-primary-foreground/50 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-32 lg:py-40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(0,0%,5%)]" />
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,4%)] via-[hsl(0,0%,8%)] to-[hsl(0,0%,4%)]" />
         <div className="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] bg-primary/[0.1] rounded-full blur-[200px]" />
         <div className="absolute bottom-[-200px] left-[-100px] w-[600px] h-[600px] bg-primary/[0.08] rounded-full blur-[180px]" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
 
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, scale: 0.88 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
@@ -248,14 +353,14 @@ const BusinessPrinting = () => {
               <Star className="w-8 h-8 text-primary fill-primary" />
               <Star className="w-6 h-6 text-primary fill-primary" />
             </div>
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-foreground mb-8 leading-[0.85] text-glow-white">
-              Ready to Print{" "}
-              <br className="hidden md:block" />
+            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-8 leading-[0.85] text-glow-white">
+              Ready to Print
+              <br />
               <span className="text-primary text-glow-red">Your Success?</span>
             </h2>
           </motion.div>
-          <motion.p initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/50 mb-16 font-medium max-w-3xl mx-auto">
-            Let Buckeye Biz Hub handle all your printing needs.
+          <motion.p initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl text-primary-foreground/50 mb-16 font-medium max-w-3xl mx-auto">
+            From custom Columbus business cards to wholesale Ohio banner printing, Buckeye Biz Hub is your trusted partner for every printing need. Contact our team today to discuss your next project and get a free, no-obligation quote.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
@@ -268,6 +373,23 @@ const BusinessPrinting = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Schema.org JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Buckeye Biz Hub - Business Printing Services",
+        "description": "Professional business printing services in Columbus, Ohio. Business cards, banners, brochures, large format printing, and custom apparel at wholesale prices.",
+        "url": "https://buckeye-brand-boost.lovable.app/business-printing",
+        "areaServed": { "@type": "State", "name": "Ohio" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Business Printing Services",
+          "itemListElement": services.map((s, i) => ({
+            "@type": "Offer", "itemOffered": { "@type": "Service", "name": s.title, "description": s.description }, "position": i + 1
+          }))
+        }
+      }) }} />
 
       <Footer />
     </div>
