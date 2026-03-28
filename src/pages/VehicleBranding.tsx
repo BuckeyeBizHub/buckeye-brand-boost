@@ -92,7 +92,7 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
 
 const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
   {
-    image: PHOTO_VEHICLE_1,
+    image: vehicleWrapBA,
     title: "Full Vehicle Wraps",
     subtitle: "Maximum Impact",
     description: "Transform any car, van, truck, or SUV into a full rolling advertisement with our premium Columbus vehicle wraps. Full wraps cover every panel with stunning, high-resolution graphics that generate up to 70,000 daily impressions — making them the most cost-effective advertising medium for Ohio businesses.",
