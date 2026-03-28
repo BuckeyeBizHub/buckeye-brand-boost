@@ -130,7 +130,7 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
 
 const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
   {
-    image: PHOTO_APPAREL_1,
+    image: customApparel,
     title: "Custom Apparel & Branded Clothing",
     subtitle: "Wear Your Brand",
     description: "From Columbus custom shirts and embroidered polos to branded hoodies and jackets, our custom apparel turns your team and customers into walking billboards. Perfect for Ohio businesses looking for high-quality promotional clothing at wholesale prices.",
