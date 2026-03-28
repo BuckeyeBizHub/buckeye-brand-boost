@@ -211,25 +211,29 @@ const Services = () => {
                       transition={{ duration: 0.5, delay: 0.4 }}
                       className="flex flex-wrap gap-4 pt-2"
                     >
-                      <Button
-                        size="lg"
-                        className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.55)] transition-all duration-300 group/btn uppercase tracking-wider"
-                      >
-                        <Phone className="w-5 h-5" />
-                        {s.cta}
-                        <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className={`font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 ${
-                          isDark
-                            ? "border-primary-foreground/15 text-primary-foreground/70 hover:border-primary/50 hover:text-primary hover:bg-primary/[0.08]"
-                            : "border-border hover:border-primary/40 hover:text-primary hover:bg-primary/[0.04]"
-                        }`}
-                      >
-                        Learn More
-                      </Button>
+                      <Link to="/contact">
+                        <Button
+                          size="lg"
+                          className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.55)] transition-all duration-300 group/btn uppercase tracking-wider"
+                        >
+                          <Phone className="w-5 h-5" />
+                          {s.cta}
+                          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
+                        </Button>
+                      </Link>
+                      <Link to={s.learnMoreHref}>
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className={`font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 ${
+                            isDark
+                              ? "border-primary-foreground/15 text-primary-foreground/70 hover:border-primary/50 hover:text-primary hover:bg-primary/[0.08]"
+                              : "border-border hover:border-primary/40 hover:text-primary hover:bg-primary/[0.04]"
+                          }`}
+                        >
+                          Learn More
+                        </Button>
+                      </Link>
                     </motion.div>
                   </div>
                 </motion.div>
