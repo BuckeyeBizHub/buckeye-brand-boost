@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
@@ -14,6 +15,7 @@ const services = [
     items: ["Business Cards", "Banners & Signs", "Brochures", "Letterhead", "Yard Signs", "Custom Print"],
     cta: "Get a Quote",
     accent: "from-primary via-ohio-red-light to-ohio-red-glow",
+    learnMoreHref: "/business-printing",
   },
   {
     image: PHOTO_APPAREL_1,
@@ -23,6 +25,7 @@ const services = [
     items: ["Custom Apparel", "Drinkware", "Bar Rails", "Tents & Canopies", "Giveaways", "Branded Merch"],
     cta: "Get a Quote",
     accent: "from-ohio-red-glow via-primary to-ohio-red-light",
+    learnMoreHref: "/promotional-products",
   },
   {
     image: PHOTO_VEHICLE_3,
@@ -32,6 +35,7 @@ const services = [
     items: ["Full Wraps", "Partial Wraps", "Decals", "Magnetic Signs", "Fleet Graphics", "Custom Design"],
     cta: "Get a Quote",
     accent: "from-primary via-ohio-red-glow to-ohio-red-light",
+    learnMoreHref: "/vehicle-branding",
   },
 ];
 
@@ -207,25 +211,29 @@ const Services = () => {
                       transition={{ duration: 0.5, delay: 0.4 }}
                       className="flex flex-wrap gap-4 pt-2"
                     >
-                      <Button
-                        size="lg"
-                        className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.55)] transition-all duration-300 group/btn uppercase tracking-wider"
-                      >
-                        <Phone className="w-5 h-5" />
-                        {s.cta}
-                        <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className={`font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 ${
-                          isDark
-                            ? "border-primary-foreground/15 text-primary-foreground/70 hover:border-primary/50 hover:text-primary hover:bg-primary/[0.08]"
-                            : "border-border hover:border-primary/40 hover:text-primary hover:bg-primary/[0.04]"
-                        }`}
-                      >
-                        Learn More
-                      </Button>
+                      <Link to="/contact">
+                        <Button
+                          size="lg"
+                          className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.55)] transition-all duration-300 group/btn uppercase tracking-wider"
+                        >
+                          <Phone className="w-5 h-5" />
+                          {s.cta}
+                          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
+                        </Button>
+                      </Link>
+                      <Link to={s.learnMoreHref}>
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className={`font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 ${
+                            isDark
+                              ? "border-primary-foreground/15 text-primary-foreground/70 hover:border-primary/50 hover:text-primary hover:bg-primary/[0.08]"
+                              : "border-border hover:border-primary/40 hover:text-primary hover:bg-primary/[0.04]"
+                          }`}
+                        >
+                          Learn More
+                        </Button>
+                      </Link>
                     </motion.div>
                   </div>
                 </motion.div>
