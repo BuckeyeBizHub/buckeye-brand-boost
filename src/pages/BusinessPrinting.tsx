@@ -166,7 +166,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Direct Mail Campaigns", "Trade Show Handouts", "Restaurant Menus", "Hotel Information", "Medical Offices"],
     seoText: "Searching for professional brochure printing in Columbus Ohio or affordable flyer printing services? Buckeye Biz Hub offers high-quality tri-fold brochures, rack cards, flyers, and marketing materials with wholesale pricing. Our Ohio printing services include design support, premium paper options, and fast delivery throughout Columbus, Cleveland, and all of Ohio.",
-    images: [PHOTO_PRINT_4, PHOTO_PRINT_5, PHOTO_PRINT_6],
+    images: [brochuresFlyers, brochuresFlyers, brochuresFlyers],
   },
   {
     title: "Letterhead & Stationery",
