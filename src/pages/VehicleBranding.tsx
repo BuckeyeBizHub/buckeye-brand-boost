@@ -144,7 +144,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Magnetic Car Signs", "Columbus Contractor Signs", "Removable Vehicle Branding", "Realtor Car Magnets", "Ohio Service Vehicles"],
   },
   {
-    image: PHOTO_VEHICLE_5,
+    image: vehicleFleet,
     title: "Fleet Branding & Multi-Vehicle Programs",
     subtitle: "Scale Your Brand",
     description: "Consistent, professional fleet branding for Ohio businesses with multiple vehicles. From 2 vans to 200 trucks, we design, produce, and install cohesive fleet graphics that turn your entire operation into a mobile marketing force across Columbus and statewide.",
