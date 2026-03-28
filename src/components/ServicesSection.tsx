@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { Printer, Gift, Truck, ArrowRight, Sparkles, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import servicePrinting from "@/assets/service-printing.png";
-import servicePromo from "@/assets/service-promo.png";
-import serviceVehicle from "@/assets/service-vehicle.png";
+import { PHOTO_PRINT_2, PHOTO_APPAREL_2, PHOTO_VEHICLE_2 } from "@/lib/photos";
 
 const services = [
   {
