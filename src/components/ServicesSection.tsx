@@ -22,7 +22,7 @@ const services = [
     cta: "Shop Promo Items",
     href: "/promotional-products",
     num: "02",
-    image: servicePromo,
+    image: PHOTO_APPAREL_2,
     features: ["Custom Apparel", "Drinkware", "Bar Rails", "Giveaways"],
   },
   {
