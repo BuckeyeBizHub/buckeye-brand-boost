@@ -14,6 +14,7 @@ const services = [
     items: ["Business Cards", "Banners & Signs", "Brochures", "Letterhead", "Yard Signs", "Custom Print"],
     cta: "Get a Quote",
     accent: "from-primary via-ohio-red-light to-ohio-red-glow",
+    learnMoreHref: "/business-printing",
   },
   {
     image: PHOTO_APPAREL_1,
@@ -23,6 +24,7 @@ const services = [
     items: ["Custom Apparel", "Drinkware", "Bar Rails", "Tents & Canopies", "Giveaways", "Branded Merch"],
     cta: "Get a Quote",
     accent: "from-ohio-red-glow via-primary to-ohio-red-light",
+    learnMoreHref: "/promotional-products",
   },
   {
     image: PHOTO_VEHICLE_3,
@@ -32,6 +34,7 @@ const services = [
     items: ["Full Wraps", "Partial Wraps", "Decals", "Magnetic Signs", "Fleet Graphics", "Custom Design"],
     cta: "Get a Quote",
     accent: "from-primary via-ohio-red-glow to-ohio-red-light",
+    learnMoreHref: "/vehicle-branding",
   },
 ];
 

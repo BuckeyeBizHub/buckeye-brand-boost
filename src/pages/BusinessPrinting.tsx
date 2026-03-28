@@ -241,9 +241,9 @@ const BusinessPrinting = () => {
           >
             Professional Business Printing
             <br />
-            <span className="text-primary text-glow-red">in Ohio</span>
+            <span className="text-primary text-glow-red">That Makes Your Brand</span>
             <br />
-            <span className="text-3xl md:text-4xl lg:text-5xl text-primary-foreground/60">Fast, High-Quality & Wholesale</span>
+            <span className="text-primary text-glow-red">Stand Out</span>
           </motion.h1>
 
           <motion.p
