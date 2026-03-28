@@ -135,7 +135,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Networking Events", "Sales Teams", "Grand Openings", "Trade Shows", "Corporate Gifting"],
     seoText: "Looking for affordable Columbus business cards or custom business card printing in Ohio? Buckeye Biz Hub delivers premium quality business cards with wholesale pricing and fast turnaround. Whether you need standard business cards, luxury thick cards, or specialty finishes like spot UV and foil stamping, we serve Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio with professional business card printing services.",
-    images: [PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3],
+    images: [businessCardsStack, businessCardsStack, businessCardsStack],
   },
   {
     title: "Banners & Yard Signs",
