@@ -31,7 +31,7 @@ const categories = [
     items: ["Pop-Up Tents", "Table Throws", "Retractable Banners", "Yard Signs"],
   },
   {
-    image: promoVehicle,
+    image: PHOTO_VEHICLE_4,
     title: "Vehicle Branding",
     subtitle: "Turn Miles Into Marketing",
     description: "Full wraps, partial wraps, decals, and magnetic signs that transform your fleet into a rolling advertisement seen by thousands every day.",
