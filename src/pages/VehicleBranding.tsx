@@ -106,6 +106,19 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Vehicle Wraps", "Ohio Full Wraps", "Commercial Van Wraps", "Box Truck Wraps", "SUV Branding"],
   },
   {
+    image: PHOTO_VEHICLE_7,
+    title: "Partial Wraps & Spot Graphics",
+    subtitle: "Smart Branding",
+    description: "Get maximum visual impact at a fraction of the cost with partial vehicle wraps and spot graphics. Cover key panels — doors, tailgate, hood, or rear window — with bold branded graphics while keeping your budget lean. Ideal for Columbus small businesses and startups looking for professional vehicle branding without the full-wrap price tag.",
+    benefits: [
+      "Cover 25-75% of the vehicle for dramatic impact at lower cost",
+      "Strategic panel placement for maximum visibility on Ohio roads",
+      "Same premium 3M/Avery vinyl and professional installation",
+      "Easy to update or expand to a full wrap as your business grows",
+    ],
+    useCases: ["Columbus Partial Wraps", "Ohio Spot Graphics", "Budget Vehicle Branding", "Door & Tailgate Wraps", "Startup Vehicle Marketing"],
+  },
+  {
     image: PHOTO_VEHICLE_2,
     title: "Decals & Cut Vinyl Graphics",
     subtitle: "Precision Branding",
