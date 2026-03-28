@@ -169,14 +169,14 @@ const HeroSection = () => {
             <div className="w-[380px] h-[420px] rounded-3xl overflow-hidden border-4 border-primary/40 shadow-[0_0_80px_hsl(0_85%_40%/0.3),0_20px_60px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
-                alt="David Stein – Founder of Buckeye Biz Hub, Columbus Ohio"
+                alt="David Stein – Co-Founder of Buckeye Biz Hub, Columbus Ohio"
                 className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,35%,2%)/0.7] via-transparent to-transparent" />
             </div>
             {/* Name tag */}
             <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-md px-8 py-3 rounded-2xl border border-primary/60 shadow-[0_0_40px_hsl(0_85%_40%/0.4)]">
-              <p className="text-primary-foreground font-black text-sm tracking-wider uppercase whitespace-nowrap">David Stein · Founder</p>
+              <p className="text-primary-foreground font-black text-sm tracking-wider uppercase whitespace-nowrap">David Stein · Co-Founder</p>
             </div>
             {/* Decorative glow */}
             <div className="absolute -top-10 -right-10 w-[200px] h-[200px] rounded-full bg-primary/[0.08] blur-[80px]" />
