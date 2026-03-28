@@ -3,43 +3,42 @@ import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, Zap } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import promoApparel from "@/assets/promo-apparel.jpg";
-import promoDrinkware from "@/assets/promo-drinkware.jpg";
-import promoOutdoor from "@/assets/promo-outdoor.jpg";
-import promoVehicle from "@/assets/promo-vehicle.jpg";
-import promoOffice from "@/assets/promo-office.jpg";
+import {
+  PHOTO_APPAREL_1, PHOTO_PRINT_9, PHOTO_SIGNAGE_1,
+  PHOTO_VEHICLE_4, PHOTO_PRINT_10,
+} from "@/lib/photos";
 
 const categories = [
   {
-    image: promoApparel,
+    image: PHOTO_APPAREL_1,
     title: "Apparel",
     subtitle: "Wear Your Brand Everywhere",
     description: "Custom shirts, embroidered hats, hoodies, polos, and jackets — premium branded apparel that turns your team and customers into walking billboards.",
     items: ["T-Shirts & Polos", "Embroidered Caps", "Hoodies & Fleece", "Jackets & Outerwear"],
   },
   {
-    image: promoDrinkware,
+    image: PHOTO_PRINT_9,
     title: "Drinkware & Bar Items",
     subtitle: "Sip, Pour & Promote",
     description: "Custom tumblers, coffee mugs, bar rail mats, branded coasters, and water bottles your audience will use daily — keeping your logo front and center.",
     items: ["Insulated Tumblers", "Coffee Mugs", "Bar Rail Mats", "Custom Coasters"],
   },
   {
-    image: promoOutdoor,
+    image: PHOTO_SIGNAGE_1,
     title: "Outdoor & Events",
     subtitle: "Own Every Event",
     description: "Branded pop-up tents, table throws, retractable banners, yard signs, and event displays that make your booth or storefront impossible to miss.",
     items: ["Pop-Up Tents", "Table Throws", "Retractable Banners", "Yard Signs"],
   },
   {
-    image: promoVehicle,
+    image: PHOTO_VEHICLE_4,
     title: "Vehicle Branding",
     subtitle: "Turn Miles Into Marketing",
     description: "Full wraps, partial wraps, decals, and magnetic signs that transform your fleet into a rolling advertisement seen by thousands every day.",
     items: ["Full Vehicle Wraps", "Partial Wraps", "Vinyl Decals", "Magnetic Signs"],
   },
   {
-    image: promoOffice,
+    image: PHOTO_PRINT_10,
     title: "Office & Giveaways",
     subtitle: "Small Items, Big Impact",
     description: "Branded notebooks, pens, tote bags, USB drives, lanyards, and keychains — the everyday giveaways that keep your brand in your customer's hands.",

@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { Printer, Gift, Truck, ArrowRight, Sparkles, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import servicePrinting from "@/assets/service-printing.png";
-import servicePromo from "@/assets/service-promo.png";
-import serviceVehicle from "@/assets/service-vehicle.png";
+import { PHOTO_PRINT_2, PHOTO_APPAREL_2, PHOTO_VEHICLE_2 } from "@/lib/photos";
 
 const services = [
   {
@@ -14,7 +12,7 @@ const services = [
     cta: "Shop Printing",
     href: "/business-printing",
     num: "01",
-    image: servicePrinting,
+    image: PHOTO_PRINT_2,
     features: ["Business Cards", "Banners & Signs", "Brochures", "Yard Signs"],
   },
   {
@@ -24,7 +22,7 @@ const services = [
     cta: "Shop Promo Items",
     href: "/promotional-products",
     num: "02",
-    image: servicePromo,
+    image: PHOTO_APPAREL_2,
     features: ["Custom Apparel", "Drinkware", "Bar Rails", "Giveaways"],
   },
   {
@@ -34,7 +32,7 @@ const services = [
     cta: "Explore Vehicle Branding",
     href: "/services",
     num: "03",
-    image: serviceVehicle,
+    image: PHOTO_VEHICLE_2,
     features: ["Full Wraps", "Decals", "Magnetic Signs", "Fleet Graphics"],
   },
 ];

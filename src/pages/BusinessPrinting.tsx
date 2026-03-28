@@ -5,66 +5,57 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import businessCards from "@/assets/printing-business-cards.jpg";
-import stationery from "@/assets/printing-stationery.jpg";
-import cardsPremium from "@/assets/printing-cards-premium.jpg";
-import banners from "@/assets/printing-banners.jpg";
-import yardSigns from "@/assets/printing-yard-signs.jpg";
-import retractable from "@/assets/printing-retractable.jpg";
-import brochures from "@/assets/printing-brochures.jpg";
-import flyers from "@/assets/printing-flyers.jpg";
-import sellsheets from "@/assets/printing-sellsheets.jpg";
-import posters from "@/assets/printing-posters.jpg";
-import tradeshow from "@/assets/printing-tradeshow.jpg";
-import murals from "@/assets/printing-murals.jpg";
-import apparel from "@/assets/printing-apparel.jpg";
-import hoodies from "@/assets/printing-hoodies.jpg";
-import teamwear from "@/assets/printing-teamwear.jpg";
+import {
+  PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3, PHOTO_PRINT_4, PHOTO_PRINT_5,
+  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8,
+  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_4,
+  PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
+} from "@/lib/photos";
 
 const categories = [
   {
     title: "Business Cards & Stationery",
     description: "Premium cards, letterhead, envelopes — powered by NextDayFlyers.com",
     products: [
-      { img: businessCards, title: "Business Cards", desc: "Premium full-color cards with multiple paper stocks & finishes" },
-      { img: stationery, title: "Letterhead & Envelopes", desc: "Professional stationery sets that elevate your brand" },
-      { img: cardsPremium, title: "Specialty Cards", desc: "Embossed, foil-stamped, and ultra-thick luxury cards" },
+      { img: PHOTO_PRINT_1, title: "Business Cards", desc: "Premium full-color cards with multiple paper stocks & finishes" },
+      { img: PHOTO_PRINT_2, title: "Letterhead & Envelopes", desc: "Professional stationery sets that elevate your brand" },
+      { img: PHOTO_PRINT_3, title: "Specialty Cards", desc: "Embossed, foil-stamped, and ultra-thick luxury cards" },
     ],
   },
   {
     title: "Banners & Yard Signs",
     description: "Large format banners, yard signs, and outdoor signage — powered by NextDayFlyers.com",
     products: [
-      { img: banners, title: "Vinyl Banners", desc: "Durable indoor/outdoor banners in any custom size" },
-      { img: yardSigns, title: "Yard Signs", desc: "Corrugated plastic signs for events, campaigns & more" },
-      { img: retractable, title: "Retractable Banners", desc: "Portable pull-up displays perfect for trade shows" },
+      { img: PHOTO_SIGNAGE_1, title: "Vinyl Banners", desc: "Durable indoor/outdoor banners in any custom size" },
+      { img: PHOTO_SIGNAGE_3, title: "Yard Signs", desc: "Corrugated plastic signs for events, campaigns & more" },
+      { img: PHOTO_SIGNAGE_2, title: "Retractable Banners", desc: "Portable pull-up displays perfect for trade shows" },
     ],
   },
   {
     title: "Brochures & Marketing Materials",
     description: "Tri-fold brochures, flyers, rack cards, and sell sheets — powered by NextDayFlyers.com",
     products: [
-      { img: brochures, title: "Tri-Fold Brochures", desc: "High-impact brochures with glossy or matte finishes" },
-      { img: flyers, title: "Flyers & Rack Cards", desc: "Eye-catching single-sheet marketing materials" },
-      { img: sellsheets, title: "Sell Sheets & Postcards", desc: "Professional leave-behinds and direct mail pieces" },
+      { img: PHOTO_PRINT_4, title: "Tri-Fold Brochures", desc: "High-impact brochures with glossy or matte finishes" },
+      { img: PHOTO_PRINT_5, title: "Flyers & Rack Cards", desc: "Eye-catching single-sheet marketing materials" },
+      { img: PHOTO_PRINT_6, title: "Sell Sheets & Postcards", desc: "Professional leave-behinds and direct mail pieces" },
     ],
   },
   {
     title: "Large Format Printing",
     description: "Posters, murals, trade show graphics, and vehicle wraps — powered by NextDayFlyers.com",
     products: [
-      { img: posters, title: "Posters & Prints", desc: "Vivid large format posters from any digital file" },
-      { img: tradeshow, title: "Trade Show Graphics", desc: "Booth backdrops, displays, and exhibition signage" },
-      { img: murals, title: "Wall Murals", desc: "Full-wall graphics that transform any interior space" },
+      { img: PHOTO_PRINT_7, title: "Posters & Prints", desc: "Vivid large format posters from any digital file" },
+      { img: PHOTO_SIGNAGE_4, title: "Trade Show Graphics", desc: "Booth backdrops, displays, and exhibition signage" },
+      { img: PHOTO_PRINT_8, title: "Wall Murals", desc: "Full-wall graphics that transform any interior space" },
     ],
   },
   {
     title: "Custom Apparel & More",
     description: "Printed shirts, hoodies, and branded apparel — powered by NextDayFlyers.com",
     products: [
-      { img: apparel, title: "Custom T-Shirts", desc: "Screen-printed and DTG shirts for teams & events" },
-      { img: hoodies, title: "Branded Hoodies", desc: "Embroidered and printed premium outerwear" },
-      { img: teamwear, title: "Team & Corporate Wear", desc: "Polos, caps, and uniforms with your branding" },
+      { img: PHOTO_APPAREL_1, title: "Custom T-Shirts", desc: "Screen-printed and DTG shirts for teams & events" },
+      { img: PHOTO_APPAREL_2, title: "Branded Hoodies", desc: "Embroidered and printed premium outerwear" },
+      { img: PHOTO_APPAREL_3, title: "Team & Corporate Wear", desc: "Polos, caps, and uniforms with your branding" },
     ],
   },
 ];

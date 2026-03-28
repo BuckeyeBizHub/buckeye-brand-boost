@@ -3,13 +3,11 @@ import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import servicePrinting from "@/assets/service-printing.png";
-import servicePromo from "@/assets/service-promo.png";
-import serviceVehicle from "@/assets/service-vehicle.png";
+import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
 const services = [
   {
-    image: servicePrinting,
+    image: PHOTO_PRINT_6,
     title: "Business Printing",
     description:
       "High-quality business cards, banners, yard signs, brochures, letterhead, and custom printing that makes your business look professional and stand out.",
@@ -18,7 +16,7 @@ const services = [
     accent: "from-primary via-ohio-red-light to-ohio-red-glow",
   },
   {
-    image: servicePromo,
+    image: PHOTO_APPAREL_1,
     title: "Promotional Products",
     description:
       "Custom shirts, hats, drinkware, bar rails, tents, giveaways, and promotional items that get your brand noticed every day.",
@@ -27,7 +25,7 @@ const services = [
     accent: "from-ohio-red-glow via-primary to-ohio-red-light",
   },
   {
-    image: serviceVehicle,
+    image: PHOTO_VEHICLE_3,
     title: "Vehicle Branding",
     description:
       "Full vehicle wraps, decals, magnetic signs, fleet graphics, and vehicle branding that turns every mile into powerful mobile advertising.",
