@@ -12,6 +12,7 @@ import About from "./pages/About.tsx";
 import Industries from "./pages/Industries.tsx";
 import VehicleBranding from "./pages/VehicleBranding.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Portfolio from "./pages/Portfolio.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 
 const queryClient = new QueryClient();
