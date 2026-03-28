@@ -14,6 +14,7 @@ import VehicleBranding from "./pages/VehicleBranding.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import FAQ from "./pages/FAQ.tsx";
+import Blog from "./pages/Blog.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 
 const queryClient = new QueryClient();
