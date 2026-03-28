@@ -4,10 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
-  PHOTO_VEHICLE_1, PHOTO_VEHICLE_2, PHOTO_VEHICLE_3,
-  PHOTO_VEHICLE_4, PHOTO_VEHICLE_5, PHOTO_VEHICLE_6, PHOTO_VEHICLE_7,
-} from "@/lib/photos";
+import vehicleWrapBA from "@/assets/vehicle-wrap-before-after.jpg";
+import vehicleDecal from "@/assets/vehicle-decal-closeup.jpg";
+import vehicleFleet from "@/assets/branded-vehicle-fleet.jpg";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -93,7 +92,7 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
 
 const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
   {
-    image: PHOTO_VEHICLE_1,
+    image: vehicleWrapBA,
     title: "Full Vehicle Wraps",
     subtitle: "Maximum Impact",
     description: "Transform any car, van, truck, or SUV into a full rolling advertisement with our premium Columbus vehicle wraps. Full wraps cover every panel with stunning, high-resolution graphics that generate up to 70,000 daily impressions — making them the most cost-effective advertising medium for Ohio businesses.",
@@ -106,7 +105,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Vehicle Wraps", "Ohio Full Wraps", "Commercial Van Wraps", "Box Truck Wraps", "SUV Branding"],
   },
   {
-    image: PHOTO_VEHICLE_7,
+    image: vehicleWrapBA,
     title: "Partial Wraps & Spot Graphics",
     subtitle: "Smart Branding",
     description: "Get maximum visual impact at a fraction of the cost with partial vehicle wraps and spot graphics. Cover key panels — doors, tailgate, hood, or rear window — with bold branded graphics while keeping your budget lean. Ideal for Columbus small businesses and startups looking for professional vehicle branding without the full-wrap price tag.",
@@ -119,7 +118,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Partial Wraps", "Ohio Spot Graphics", "Budget Vehicle Branding", "Door & Tailgate Wraps", "Startup Vehicle Marketing"],
   },
   {
-    image: PHOTO_VEHICLE_2,
+    image: vehicleDecal,
     title: "Decals & Cut Vinyl Graphics",
     subtitle: "Precision Branding",
     description: "Custom truck decals, window graphics, door lettering, and cut vinyl logos for Ohio businesses that want professional branding without a full wrap. Perfect for adding your logo, phone number, website, and services to any vehicle in your Columbus fleet.",
@@ -132,7 +131,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Custom Truck Decals", "Ohio Window Graphics", "Door Lettering", "Logo Decals", "Columbus Vehicle Graphics"],
   },
   {
-    image: PHOTO_VEHICLE_3,
+    image: vehicleDecal,
     title: "Magnetic Signs & Removable Branding",
     subtitle: "Flexible Marketing",
     description: "Heavy-duty magnetic vehicle signs that let you brand your personal vehicle for business during work hours and remove them when you're off the clock. Ideal for Columbus contractors, realtors, and service professionals who use personal vehicles.",
@@ -145,7 +144,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Magnetic Car Signs", "Columbus Contractor Signs", "Removable Vehicle Branding", "Realtor Car Magnets", "Ohio Service Vehicles"],
   },
   {
-    image: PHOTO_VEHICLE_5,
+    image: vehicleFleet,
     title: "Fleet Branding & Multi-Vehicle Programs",
     subtitle: "Scale Your Brand",
     description: "Consistent, professional fleet branding for Ohio businesses with multiple vehicles. From 2 vans to 200 trucks, we design, produce, and install cohesive fleet graphics that turn your entire operation into a mobile marketing force across Columbus and statewide.",
@@ -158,7 +157,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Ohio Fleet Branding", "Columbus Fleet Wraps", "Multi-Vehicle Graphics", "Delivery Van Branding", "Service Fleet Identity"],
   },
   {
-    image: PHOTO_VEHICLE_6,
+    image: vehicleFleet,
     title: "Truck Lettering & Commercial Graphics",
     subtitle: "Classic & Professional",
     description: "Professional truck lettering, DOT number compliance graphics, and commercial vehicle identification for Ohio trucking companies, contractors, and service businesses. Clean, bold typography that meets FMCSA requirements while showcasing your brand across Columbus highways.",
