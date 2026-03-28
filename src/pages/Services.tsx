@@ -16,7 +16,7 @@ const services = [
     accent: "from-primary via-ohio-red-light to-ohio-red-glow",
   },
   {
-    image: servicePromo,
+    image: PHOTO_APPAREL_1,
     title: "Promotional Products",
     description:
       "Custom shirts, hats, drinkware, bar rails, tents, giveaways, and promotional items that get your brand noticed every day.",
