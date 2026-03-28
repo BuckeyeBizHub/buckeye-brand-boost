@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
-  PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
-  PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_11,
-  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3,
-  PHOTO_VEHICLE_4,
+  PHOTO_APPAREL_3,
+  PHOTO_PRINT_10,
 } from "@/lib/photos";
+import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
+import brandedDrinkware from "@/assets/branded-drinkware-tumblers.jpg";
+import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
 
 
 const fadeUp = {
