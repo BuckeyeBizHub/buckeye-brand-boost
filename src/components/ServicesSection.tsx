@@ -32,7 +32,7 @@ const services = [
     cta: "Explore Vehicle Branding",
     href: "/services",
     num: "03",
-    image: serviceVehicle,
+    image: PHOTO_VEHICLE_2,
     features: ["Full Wraps", "Decals", "Magnetic Signs", "Fleet Graphics"],
   },
 ];

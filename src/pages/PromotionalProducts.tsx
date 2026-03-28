@@ -38,7 +38,7 @@ const categories = [
     items: ["Full Vehicle Wraps", "Partial Wraps", "Vinyl Decals", "Magnetic Signs"],
   },
   {
-    image: promoOffice,
+    image: PHOTO_PRINT_10,
     title: "Office & Giveaways",
     subtitle: "Small Items, Big Impact",
     description: "Branded notebooks, pens, tote bags, USB drives, lanyards, and keychains — the everyday giveaways that keep your brand in your customer's hands.",

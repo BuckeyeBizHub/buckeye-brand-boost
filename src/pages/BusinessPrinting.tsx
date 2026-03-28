@@ -53,9 +53,9 @@ const categories = [
     title: "Custom Apparel & More",
     description: "Printed shirts, hoodies, and branded apparel — powered by NextDayFlyers.com",
     products: [
-      { img: apparel, title: "Custom T-Shirts", desc: "Screen-printed and DTG shirts for teams & events" },
-      { img: hoodies, title: "Branded Hoodies", desc: "Embroidered and printed premium outerwear" },
-      { img: teamwear, title: "Team & Corporate Wear", desc: "Polos, caps, and uniforms with your branding" },
+      { img: PHOTO_APPAREL_1, title: "Custom T-Shirts", desc: "Screen-printed and DTG shirts for teams & events" },
+      { img: PHOTO_APPAREL_2, title: "Branded Hoodies", desc: "Embroidered and printed premium outerwear" },
+      { img: PHOTO_APPAREL_3, title: "Team & Corporate Wear", desc: "Polos, caps, and uniforms with your branding" },
     ],
   },
 ];

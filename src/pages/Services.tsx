@@ -25,7 +25,7 @@ const services = [
     accent: "from-ohio-red-glow via-primary to-ohio-red-light",
   },
   {
-    image: serviceVehicle,
+    image: PHOTO_VEHICLE_3,
     title: "Vehicle Branding",
     description:
       "Full vehicle wraps, decals, magnetic signs, fleet graphics, and vehicle branding that turns every mile into powerful mobile advertising.",
