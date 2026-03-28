@@ -12,7 +12,7 @@ const services = [
     cta: "Shop Printing",
     href: "/business-printing",
     num: "01",
-    image: servicePrinting,
+    image: PHOTO_PRINT_2,
     features: ["Business Cards", "Banners & Signs", "Brochures", "Yard Signs"],
   },
   {
