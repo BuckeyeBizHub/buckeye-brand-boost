@@ -181,7 +181,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Law Firms", "Medical Practices", "Corporate Offices", "Financial Advisors", "Real Estate Agencies"],
     seoText: "Professional custom letterhead printing and business stationery in Columbus Ohio. Buckeye Biz Hub delivers complete stationery packages including printed envelopes, letterhead, and matching business cards with premium paper options. Our wholesale printing Ohio services help businesses across the state present a polished, professional image.",
-    images: [PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_2],
+    images: [PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_9],
     reversed: true,
   },
   {
