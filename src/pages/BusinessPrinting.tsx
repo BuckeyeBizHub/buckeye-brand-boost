@@ -17,9 +17,9 @@ const categories = [
     title: "Business Cards & Stationery",
     description: "Premium cards, letterhead, envelopes — powered by NextDayFlyers.com",
     products: [
-      { img: businessCards, title: "Business Cards", desc: "Premium full-color cards with multiple paper stocks & finishes" },
-      { img: stationery, title: "Letterhead & Envelopes", desc: "Professional stationery sets that elevate your brand" },
-      { img: cardsPremium, title: "Specialty Cards", desc: "Embossed, foil-stamped, and ultra-thick luxury cards" },
+      { img: PHOTO_PRINT_1, title: "Business Cards", desc: "Premium full-color cards with multiple paper stocks & finishes" },
+      { img: PHOTO_PRINT_2, title: "Letterhead & Envelopes", desc: "Professional stationery sets that elevate your brand" },
+      { img: PHOTO_PRINT_3, title: "Specialty Cards", desc: "Embossed, foil-stamped, and ultra-thick luxury cards" },
     ],
   },
   {
