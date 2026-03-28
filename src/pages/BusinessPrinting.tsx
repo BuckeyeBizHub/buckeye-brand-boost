@@ -283,7 +283,7 @@ const BusinessPrinting = () => {
               Your Complete <span className="text-primary">Business Printing Partner</span> in Ohio
             </h2>
             <p className="text-lg text-primary-foreground/50 leading-relaxed mb-6">
-              Buckeye Biz Hub is your one-stop shop for all commercial and business printing services in Columbus, Ohio and beyond. Powered by NextDayFlyers.com, we combine wholesale pricing with local service to deliver everything from custom business cards and vinyl banners to large format trade show displays and branded apparel.
+              Buckeye Biz Hub is your one-stop shop for all commercial and business printing services in Columbus, Ohio and beyond. We combine wholesale pricing with local service to deliver everything from custom business cards and vinyl banners to large format trade show displays and branded apparel.
             </p>
             <p className="text-lg text-primary-foreground/50 leading-relaxed">
               Whether you're a startup needing your first batch of business cards, a real estate agency ordering yard signs, or a corporation outfitting your team with branded uniforms, our printing experts deliver exceptional quality at prices that make sense for your budget.
