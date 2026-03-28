@@ -36,7 +36,7 @@ const HeroSection = () => {
       {/* Red accent line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_50px_hsl(0_85%_40%/0.6)]" />
 
-      <div className="relative z-10 text-center px-4 max-w-7xl mx-auto pt-24">
+      <div className="relative z-10 text-center px-6 sm:px-4 max-w-7xl mx-auto pt-24">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
