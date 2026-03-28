@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import Blog from "./pages/Blog.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 
 const queryClient = new QueryClient();
