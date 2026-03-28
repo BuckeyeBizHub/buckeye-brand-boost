@@ -5,21 +5,12 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import businessCards from "@/assets/printing-business-cards.jpg";
-import stationery from "@/assets/printing-stationery.jpg";
-import cardsPremium from "@/assets/printing-cards-premium.jpg";
-import banners from "@/assets/printing-banners.jpg";
-import yardSigns from "@/assets/printing-yard-signs.jpg";
-import retractable from "@/assets/printing-retractable.jpg";
-import brochures from "@/assets/printing-brochures.jpg";
-import flyers from "@/assets/printing-flyers.jpg";
-import sellsheets from "@/assets/printing-sellsheets.jpg";
-import posters from "@/assets/printing-posters.jpg";
-import tradeshow from "@/assets/printing-tradeshow.jpg";
-import murals from "@/assets/printing-murals.jpg";
-import apparel from "@/assets/printing-apparel.jpg";
-import hoodies from "@/assets/printing-hoodies.jpg";
-import teamwear from "@/assets/printing-teamwear.jpg";
+import {
+  PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3, PHOTO_PRINT_4, PHOTO_PRINT_5,
+  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8,
+  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_4,
+  PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
+} from "@/lib/photos";
 
 const categories = [
   {
