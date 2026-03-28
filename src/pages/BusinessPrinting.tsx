@@ -231,7 +231,7 @@ const BusinessPrinting = () => {
           <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center gap-3 bg-primary/25 border-2 border-primary/40 rounded-full px-7 py-3 mb-10 shadow-[0_0_30px_hsl(0_80%_42%/0.2)]">
               <Printer className="w-5 h-5 text-primary" />
-              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Powered by NextDayFlyers.com</span>
+              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Professional Printing Services</span>
             </div>
           </motion.div>
 
