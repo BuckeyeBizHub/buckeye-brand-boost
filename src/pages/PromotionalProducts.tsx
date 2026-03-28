@@ -210,12 +210,8 @@ const PromotionalProducts = () => {
 
   return (
     <div className="min-h-screen">
-      <Helmet>
-        <title>Promotional Products & Custom Merchandise – Columbus, Ohio | Buckeye Biz Hub</title>
-        <meta name="description" content="Custom promotional products, branded apparel, drinkware, bar rails, event tents & corporate giveaways for Ohio businesses. Wholesale pricing, fast turnaround. Get a free quote today!" />
-        <link rel="canonical" href="https://buckeye-brand-boost.lovable.app/promotional-products" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      {/* JSON-LD for SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <Navbar />
 
