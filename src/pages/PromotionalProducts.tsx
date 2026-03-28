@@ -24,7 +24,7 @@ const categories = [
     items: ["Insulated Tumblers", "Coffee Mugs", "Bar Rail Mats", "Custom Coasters"],
   },
   {
-    image: promoOutdoor,
+    image: PHOTO_SIGNAGE_1,
     title: "Outdoor & Events",
     subtitle: "Own Every Event",
     description: "Branded pop-up tents, table throws, retractable banners, yard signs, and event displays that make your booth or storefront impossible to miss.",
