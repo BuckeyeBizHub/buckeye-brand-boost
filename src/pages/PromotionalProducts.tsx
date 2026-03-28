@@ -9,7 +9,7 @@ import {
   PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3,
   PHOTO_VEHICLE_4,
 } from "@/lib/photos";
-import { Helmet } from "react-helmet";
+
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
