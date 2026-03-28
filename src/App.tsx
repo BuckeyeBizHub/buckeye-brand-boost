@@ -10,6 +10,7 @@ import BusinessPrinting from "./pages/BusinessPrinting.tsx";
 import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
 import Industries from "./pages/Industries.tsx";
+import VehicleBranding from "./pages/VehicleBranding.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 
