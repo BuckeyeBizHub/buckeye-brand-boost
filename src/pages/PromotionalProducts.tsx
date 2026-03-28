@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
-  PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
-  PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_11,
-  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3,
-  PHOTO_VEHICLE_4,
+  PHOTO_APPAREL_3,
+  PHOTO_PRINT_10,
 } from "@/lib/photos";
+import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
+import brandedDrinkware from "@/assets/branded-drinkware-tumblers.jpg";
+import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
 
 
 const fadeUp = {
@@ -129,7 +130,7 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
 
 const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
   {
-    image: PHOTO_APPAREL_1,
+    image: customApparel,
     title: "Custom Apparel & Branded Clothing",
     subtitle: "Wear Your Brand",
     description: "From Columbus custom shirts and embroidered polos to branded hoodies and jackets, our custom apparel turns your team and customers into walking billboards. Perfect for Ohio businesses looking for high-quality promotional clothing at wholesale prices.",
@@ -155,7 +156,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Custom Hats", "Ohio Branded Snapbacks", "Corporate Golf Caps", "Trucker Hats", "Embroidered Beanies", "Team Headwear"],
   },
   {
-    image: PHOTO_PRINT_9,
+    image: brandedDrinkware,
     title: "Drinkware & Bar Items",
     subtitle: "Sip, Pour & Promote",
     description: "Custom tumblers, branded coffee mugs, promotional water bottles, and insulated drinkware that Ohio customers use every single day — keeping your logo front and center at home, at work, and on the go across Columbus and beyond.",
@@ -168,7 +169,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Branded Tumblers", "Custom Coffee Mugs", "Promotional Water Bottles", "Ohio Corporate Gifts", "Employee Appreciation"],
   },
   {
-    image: PHOTO_SIGNAGE_1,
+    image: tentsBarRails,
     title: "Tents, Banners & Outdoor Displays",
     subtitle: "Own Every Event",
     description: "Branded pop-up tents, retractable banners, table throws, and outdoor event displays that make your booth or storefront impossible to miss at Columbus trade shows, Ohio festivals, farmers markets, and community events.",
@@ -181,7 +182,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Trade Show Displays", "Ohio Festival Tents", "Retractable Banners", "Table Throws", "Outdoor Signage"],
   },
   {
-    image: PHOTO_VEHICLE_4,
+    image: tentsBarRails,
     title: "Bar Rails, Coasters & Restaurant Branding",
     subtitle: "Bar & Restaurant Essentials",
     description: "Custom branded bar rail mats, rubber bar mats, printed coasters, and restaurant branding products that elevate your Columbus bar, brewery, or restaurant's identity. Perfect for Ohio's thriving hospitality industry.",
