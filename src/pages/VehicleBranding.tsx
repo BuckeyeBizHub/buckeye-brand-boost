@@ -118,7 +118,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Partial Wraps", "Ohio Spot Graphics", "Budget Vehicle Branding", "Door & Tailgate Wraps", "Startup Vehicle Marketing"],
   },
   {
-    image: PHOTO_VEHICLE_2,
+    image: vehicleDecal,
     title: "Decals & Cut Vinyl Graphics",
     subtitle: "Precision Branding",
     description: "Custom truck decals, window graphics, door lettering, and cut vinyl logos for Ohio businesses that want professional branding without a full wrap. Perfect for adding your logo, phone number, website, and services to any vehicle in your Columbus fleet.",
