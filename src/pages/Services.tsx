@@ -7,7 +7,7 @@ import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
 const services = [
   {
-    image: servicePrinting,
+    image: PHOTO_PRINT_6,
     title: "Business Printing",
     description:
       "High-quality business cards, banners, yard signs, brochures, letterhead, and custom printing that makes your business look professional and stand out.",
