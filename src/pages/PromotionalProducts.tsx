@@ -169,7 +169,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Branded Tumblers", "Custom Coffee Mugs", "Promotional Water Bottles", "Ohio Corporate Gifts", "Employee Appreciation"],
   },
   {
-    image: PHOTO_SIGNAGE_1,
+    image: tentsBarRails,
     title: "Tents, Banners & Outdoor Displays",
     subtitle: "Own Every Event",
     description: "Branded pop-up tents, retractable banners, table throws, and outdoor event displays that make your booth or storefront impossible to miss at Columbus trade shows, Ohio festivals, farmers markets, and community events.",
