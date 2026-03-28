@@ -4,10 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
-  PHOTO_VEHICLE_1, PHOTO_VEHICLE_2, PHOTO_VEHICLE_3,
-  PHOTO_VEHICLE_4, PHOTO_VEHICLE_5, PHOTO_VEHICLE_6, PHOTO_VEHICLE_7,
-} from "@/lib/photos";
+import vehicleWrapBA from "@/assets/vehicle-wrap-before-after.jpg";
+import vehicleDecal from "@/assets/vehicle-decal-closeup.jpg";
+import vehicleFleet from "@/assets/branded-vehicle-fleet.jpg";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
