@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, Zap, CheckCircle, Award, Truck, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -112,11 +113,13 @@ const ServiceSection = ({ image, title, subtitle, description, benefits, useCase
           </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }} className="flex flex-wrap gap-4 pt-3">
-            <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_55px_hsl(0_80%_42%/0.6)] transition-all duration-300 group/btn uppercase tracking-wider">
-              <ShoppingBag className="w-5 h-5" />
-              Get a Quote
-              <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_55px_hsl(0_80%_42%/0.6)] transition-all duration-300 group/btn uppercase tracking-wider">
+                <ShoppingBag className="w-5 h-5" />
+                Get a Quote
+                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>
@@ -137,6 +140,19 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
       "Bulk wholesale pricing for Ohio businesses large and small",
     ],
     useCases: ["Columbus Custom Shirts", "Ohio Embroidered Polos", "Branded Hoodies", "Corporate Jackets", "Team Uniforms", "Event T-Shirts"],
+  },
+  {
+    image: PHOTO_APPAREL_3,
+    title: "Hats & Custom Headwear",
+    subtitle: "Top Off Your Brand",
+    description: "Custom embroidered hats, branded snapbacks, trucker caps, and beanies that keep your logo visible year-round. Whether it's a Columbus construction crew, Ohio golf outing, or corporate gift program, custom headwear is one of the highest-retention promotional items available.",
+    benefits: [
+      "Embroidery, screen print, and patch options on premium blanks",
+      "Richardson, Flexfit, New Era, and Yupoong brands available",
+      "Low minimums — perfect for Columbus small business branding",
+      "Structured, unstructured, trucker, and beanie styles in stock",
+    ],
+    useCases: ["Columbus Custom Hats", "Ohio Branded Snapbacks", "Corporate Golf Caps", "Trucker Hats", "Embroidered Beanies", "Team Headwear"],
   },
   {
     image: PHOTO_PRINT_9,
@@ -318,13 +334,15 @@ const PromotionalProducts = () => {
             Custom promotional products, branded merchandise, and marketing materials for every Ohio business. Wholesale pricing. Fast turnaround. No hassle.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-            <Button size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
-              style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
-              <Phone className="w-7 h-7" />
-              Get Your Free Quote Today
-              <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
+                style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
+                <Phone className="w-7 h-7" />
+                Get Your Free Quote Today
+                <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
