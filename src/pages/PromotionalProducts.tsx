@@ -139,6 +139,19 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Custom Shirts", "Ohio Embroidered Polos", "Branded Hoodies", "Corporate Jackets", "Team Uniforms", "Event T-Shirts"],
   },
   {
+    image: PHOTO_APPAREL_3,
+    title: "Hats & Custom Headwear",
+    subtitle: "Top Off Your Brand",
+    description: "Custom embroidered hats, branded snapbacks, trucker caps, and beanies that keep your logo visible year-round. Whether it's a Columbus construction crew, Ohio golf outing, or corporate gift program, custom headwear is one of the highest-retention promotional items available.",
+    benefits: [
+      "Embroidery, screen print, and patch options on premium blanks",
+      "Richardson, Flexfit, New Era, and Yupoong brands available",
+      "Low minimums — perfect for Columbus small business branding",
+      "Structured, unstructured, trucker, and beanie styles in stock",
+    ],
+    useCases: ["Columbus Custom Hats", "Ohio Branded Snapbacks", "Corporate Golf Caps", "Trucker Hats", "Embroidered Beanies", "Team Headwear"],
+  },
+  {
     image: PHOTO_PRINT_9,
     title: "Drinkware & Bar Items",
     subtitle: "Sip, Pour & Promote",
