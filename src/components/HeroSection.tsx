@@ -176,7 +176,7 @@ const HeroSection = () => {
             </div>
             {/* Name tag */}
             <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-md px-8 py-3 rounded-2xl border border-primary/60 shadow-[0_0_40px_hsl(0_85%_40%/0.4)]">
-              <p className="text-primary-foreground font-black text-sm tracking-wider uppercase whitespace-nowrap">David Stein · Founder</p>
+              <p className="text-primary-foreground font-black text-sm tracking-wider uppercase whitespace-nowrap">David Stein · Co-Founder</p>
             </div>
             {/* Decorative glow */}
             <div className="absolute -top-10 -right-10 w-[200px] h-[200px] rounded-full bg-primary/[0.08] blur-[80px]" />
