@@ -182,7 +182,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Trade Show Displays", "Ohio Festival Tents", "Retractable Banners", "Table Throws", "Outdoor Signage"],
   },
   {
-    image: PHOTO_VEHICLE_4,
+    image: tentsBarRails,
     title: "Bar Rails, Coasters & Restaurant Branding",
     subtitle: "Bar & Restaurant Essentials",
     description: "Custom branded bar rail mats, rubber bar mats, printed coasters, and restaurant branding products that elevate your Columbus bar, brewery, or restaurant's identity. Perfect for Ohio's thriving hospitality industry.",
