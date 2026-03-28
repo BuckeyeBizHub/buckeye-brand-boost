@@ -16,7 +16,7 @@ const HeroSection = () => {
           alt="Buckeye Biz Hub branded products – shirts, hats, business cards, vehicle wraps"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,35%,2%)/0.82] via-[hsl(220,30%,3%)/0.88] to-[hsl(220,35%,2%)/0.95]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,35%,2%)/0.92] via-[hsl(220,30%,2%)/0.94] to-[hsl(220,35%,1%)/0.98]" />
       </div>
 
       {/* Dramatic red spotlights */}
