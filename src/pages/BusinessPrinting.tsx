@@ -6,11 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import {
-  PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3, PHOTO_PRINT_4, PHOTO_PRINT_5,
-  PHOTO_PRINT_6, PHOTO_PRINT_7, PHOTO_PRINT_8, PHOTO_PRINT_9, PHOTO_PRINT_10,
-  PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_2, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_4,
+  PHOTO_PRINT_7, PHOTO_PRINT_8, PHOTO_PRINT_9, PHOTO_PRINT_10,
+  PHOTO_SIGNAGE_4,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2, PHOTO_APPAREL_3,
 } from "@/lib/photos";
+
+import businessCardsStack from "@/assets/business-cards-letterhead-stack.jpg";
+import yardSignInstall from "@/assets/yard-sign-installation.jpg";
+import brochuresFlyers from "@/assets/brochures-flyers-layou.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -132,7 +135,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Networking Events", "Sales Teams", "Grand Openings", "Trade Shows", "Corporate Gifting"],
     seoText: "Looking for affordable Columbus business cards or custom business card printing in Ohio? Buckeye Biz Hub delivers premium quality business cards with wholesale pricing and fast turnaround. Whether you need standard business cards, luxury thick cards, or specialty finishes like spot UV and foil stamping, we serve Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio with professional business card printing services.",
-    images: [PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_3],
+    images: [businessCardsStack, businessCardsStack, businessCardsStack],
   },
   {
     title: "Banners & Yard Signs",
@@ -147,7 +150,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Political Campaigns", "Real Estate Open Houses", "Grand Openings", "Church Events", "Construction Sites"],
     seoText: "Need custom Ohio yard signs or wholesale vinyl banners in Columbus? Buckeye Biz Hub provides high-quality corrugated yard signs, retractable banners, and large vinyl banners for businesses across Ohio. From political campaign signs to real estate yard signs, our Columbus banner printing services deliver fast with competitive wholesale pricing throughout Ohio.",
-    images: [PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_2],
+    images: [yardSignInstall, yardSignInstall, yardSignInstall],
     reversed: true,
   },
   {
@@ -163,7 +166,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Direct Mail Campaigns", "Trade Show Handouts", "Restaurant Menus", "Hotel Information", "Medical Offices"],
     seoText: "Searching for professional brochure printing in Columbus Ohio or affordable flyer printing services? Buckeye Biz Hub offers high-quality tri-fold brochures, rack cards, flyers, and marketing materials with wholesale pricing. Our Ohio printing services include design support, premium paper options, and fast delivery throughout Columbus, Cleveland, and all of Ohio.",
-    images: [PHOTO_PRINT_4, PHOTO_PRINT_5, PHOTO_PRINT_6],
+    images: [brochuresFlyers, brochuresFlyers, brochuresFlyers],
   },
   {
     title: "Letterhead & Stationery",
@@ -178,7 +181,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Law Firms", "Medical Practices", "Corporate Offices", "Financial Advisors", "Real Estate Agencies"],
     seoText: "Professional custom letterhead printing and business stationery in Columbus Ohio. Buckeye Biz Hub delivers complete stationery packages including printed envelopes, letterhead, and matching business cards with premium paper options. Our wholesale printing Ohio services help businesses across the state present a polished, professional image.",
-    images: [PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_2],
+    images: [PHOTO_PRINT_9, PHOTO_PRINT_10, PHOTO_PRINT_9],
     reversed: true,
   },
   {
