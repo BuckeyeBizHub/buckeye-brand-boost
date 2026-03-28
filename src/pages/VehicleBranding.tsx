@@ -105,7 +105,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Columbus Vehicle Wraps", "Ohio Full Wraps", "Commercial Van Wraps", "Box Truck Wraps", "SUV Branding"],
   },
   {
-    image: PHOTO_VEHICLE_7,
+    image: vehicleWrapBA,
     title: "Partial Wraps & Spot Graphics",
     subtitle: "Smart Branding",
     description: "Get maximum visual impact at a fraction of the cost with partial vehicle wraps and spot graphics. Cover key panels — doors, tailgate, hood, or rear window — with bold branded graphics while keeping your budget lean. Ideal for Columbus small businesses and startups looking for professional vehicle branding without the full-wrap price tag.",
