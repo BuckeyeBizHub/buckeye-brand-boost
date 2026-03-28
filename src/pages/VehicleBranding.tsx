@@ -157,7 +157,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Ohio Fleet Branding", "Columbus Fleet Wraps", "Multi-Vehicle Graphics", "Delivery Van Branding", "Service Fleet Identity"],
   },
   {
-    image: PHOTO_VEHICLE_6,
+    image: vehicleFleet,
     title: "Truck Lettering & Commercial Graphics",
     subtitle: "Classic & Professional",
     description: "Professional truck lettering, DOT number compliance graphics, and commercial vehicle identification for Ohio trucking companies, contractors, and service businesses. Clean, bold typography that meets FMCSA requirements while showcasing your brand across Columbus highways.",
