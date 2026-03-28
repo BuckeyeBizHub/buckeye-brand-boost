@@ -122,7 +122,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
   {
     title: "Business Cards",
     seoTitle: "Columbus Business Cards – Premium & Custom Printed",
-    description: "Make a powerful first impression with professionally designed and printed business cards from Buckeye Biz Hub, powered by NextDayFlyers.com.",
+    description: "Make a powerful first impression with professionally designed and printed business cards from Buckeye Biz Hub.",
     benefits: [
       "Multiple premium paper stocks: 16pt, 32pt ultra-thick, silk laminate, and more",
       "Full-color printing with spot UV, foil stamping, and embossing options",
