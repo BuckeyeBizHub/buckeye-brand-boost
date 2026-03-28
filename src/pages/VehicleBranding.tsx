@@ -131,7 +131,7 @@ const sections: Omit<ServiceSectionProps, "reversed" | "dark" | "index">[] = [
     useCases: ["Custom Truck Decals", "Ohio Window Graphics", "Door Lettering", "Logo Decals", "Columbus Vehicle Graphics"],
   },
   {
-    image: PHOTO_VEHICLE_3,
+    image: vehicleDecal,
     title: "Magnetic Signs & Removable Branding",
     subtitle: "Flexible Marketing",
     description: "Heavy-duty magnetic vehicle signs that let you brand your personal vehicle for business during work hours and remove them when you're off the clock. Ideal for Columbus contractors, realtors, and service professionals who use personal vehicles.",
