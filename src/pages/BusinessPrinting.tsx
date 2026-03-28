@@ -35,9 +35,9 @@ const categories = [
     title: "Brochures & Marketing Materials",
     description: "Tri-fold brochures, flyers, rack cards, and sell sheets — powered by NextDayFlyers.com",
     products: [
-      { img: brochures, title: "Tri-Fold Brochures", desc: "High-impact brochures with glossy or matte finishes" },
-      { img: flyers, title: "Flyers & Rack Cards", desc: "Eye-catching single-sheet marketing materials" },
-      { img: sellsheets, title: "Sell Sheets & Postcards", desc: "Professional leave-behinds and direct mail pieces" },
+      { img: PHOTO_PRINT_4, title: "Tri-Fold Brochures", desc: "High-impact brochures with glossy or matte finishes" },
+      { img: PHOTO_PRINT_5, title: "Flyers & Rack Cards", desc: "Eye-catching single-sheet marketing materials" },
+      { img: PHOTO_PRINT_6, title: "Sell Sheets & Postcards", desc: "Professional leave-behinds and direct mail pieces" },
     ],
   },
   {
