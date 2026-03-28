@@ -44,9 +44,9 @@ const categories = [
     title: "Large Format Printing",
     description: "Posters, murals, trade show graphics, and vehicle wraps — powered by NextDayFlyers.com",
     products: [
-      { img: posters, title: "Posters & Prints", desc: "Vivid large format posters from any digital file" },
-      { img: tradeshow, title: "Trade Show Graphics", desc: "Booth backdrops, displays, and exhibition signage" },
-      { img: murals, title: "Wall Murals", desc: "Full-wall graphics that transform any interior space" },
+      { img: PHOTO_PRINT_7, title: "Posters & Prints", desc: "Vivid large format posters from any digital file" },
+      { img: PHOTO_SIGNAGE_4, title: "Trade Show Graphics", desc: "Booth backdrops, displays, and exhibition signage" },
+      { img: PHOTO_PRINT_8, title: "Wall Murals", desc: "Full-wall graphics that transform any interior space" },
     ],
   },
   {
