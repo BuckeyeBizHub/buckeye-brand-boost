@@ -3,11 +3,10 @@ import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, Zap } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import promoApparel from "@/assets/promo-apparel.jpg";
-import promoDrinkware from "@/assets/promo-drinkware.jpg";
-import promoOutdoor from "@/assets/promo-outdoor.jpg";
-import promoVehicle from "@/assets/promo-vehicle.jpg";
-import promoOffice from "@/assets/promo-office.jpg";
+import {
+  PHOTO_APPAREL_1, PHOTO_PRINT_9, PHOTO_SIGNAGE_1,
+  PHOTO_VEHICLE_4, PHOTO_PRINT_10,
+} from "@/lib/photos";
 
 const categories = [
   {
