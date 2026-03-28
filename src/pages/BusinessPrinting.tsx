@@ -150,7 +150,7 @@ const services: Omit<ServiceSectionProps, 'index'>[] = [
     ],
     useCases: ["Political Campaigns", "Real Estate Open Houses", "Grand Openings", "Church Events", "Construction Sites"],
     seoText: "Need custom Ohio yard signs or wholesale vinyl banners in Columbus? Buckeye Biz Hub provides high-quality corrugated yard signs, retractable banners, and large vinyl banners for businesses across Ohio. From political campaign signs to real estate yard signs, our Columbus banner printing services deliver fast with competitive wholesale pricing throughout Ohio.",
-    images: [PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_SIGNAGE_2],
+    images: [yardSignInstall, yardSignInstall, yardSignInstall],
     reversed: true,
   },
   {
