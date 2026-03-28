@@ -26,9 +26,9 @@ const categories = [
     title: "Banners & Yard Signs",
     description: "Large format banners, yard signs, and outdoor signage — powered by NextDayFlyers.com",
     products: [
-      { img: banners, title: "Vinyl Banners", desc: "Durable indoor/outdoor banners in any custom size" },
-      { img: yardSigns, title: "Yard Signs", desc: "Corrugated plastic signs for events, campaigns & more" },
-      { img: retractable, title: "Retractable Banners", desc: "Portable pull-up displays perfect for trade shows" },
+      { img: PHOTO_SIGNAGE_1, title: "Vinyl Banners", desc: "Durable indoor/outdoor banners in any custom size" },
+      { img: PHOTO_SIGNAGE_3, title: "Yard Signs", desc: "Corrugated plastic signs for events, campaigns & more" },
+      { img: PHOTO_SIGNAGE_2, title: "Retractable Banners", desc: "Portable pull-up displays perfect for trade shows" },
     ],
   },
   {
