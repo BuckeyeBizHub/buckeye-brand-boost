@@ -146,8 +146,8 @@ const PromotionalProducts = () => {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-lg md:text-2xl text-primary-foreground/55 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed px-4">
-            As proud members of SAGE and PPAI, we have access to over 1 million high-quality promotional items — and we always find you the best options at the best price.
+            className="text-lg md:text-2xl text-primary-foreground/70 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed px-6">
+            As proud members of SAGE and PPAI, we have access to over one million high-quality promotional items and always find you the best options at the best price.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-14 flex flex-wrap justify-center gap-8 md:gap-14">
