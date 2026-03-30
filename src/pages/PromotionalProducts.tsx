@@ -79,7 +79,7 @@ const categories = [
     ],
   },
   {
-    image: printingHoodies,
+    image: customHats,
     title: "Hats & Headwear",
     benefit: "High-retention items your customers actually wear",
     bullets: [
