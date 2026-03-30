@@ -12,7 +12,7 @@ import barCoastersInUse from "@/assets/bar-coasters-in-use.jpg";
 import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
 import promoGiveaways from "@/assets/promo-giveaways-pens-keychains.jpg";
-import printingHoodies from "@/assets/printing-hoodies.jpg";
+import customHats from "@/assets/custom-hats-headwear.jpg";
 import promoApparel from "@/assets/promo-apparel.jpg";
 
 const fadeUp = {
@@ -79,7 +79,7 @@ const categories = [
     ],
   },
   {
-    image: printingHoodies,
+    image: customHats,
     title: "Hats & Headwear",
     benefit: "High-retention items your customers actually wear",
     bullets: [
