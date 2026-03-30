@@ -18,6 +18,7 @@ import Blog from "./pages/Blog.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Testimonials from "./pages/Testimonials.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
+import Pricing from "./pages/Pricing.tsx";
 
 const queryClient = new QueryClient();
 
