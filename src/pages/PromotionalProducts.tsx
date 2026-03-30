@@ -11,7 +11,7 @@ import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
 import barCoastersInUse from "@/assets/bar-coasters-in-use.jpg";
 import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
-import promoOutdoor from "@/assets/promo-outdoor.jpg";
+import promoGiveaways from "@/assets/promo-giveaways-pens-keychains.jpg";
 import printingHoodies from "@/assets/printing-hoodies.jpg";
 import promoApparel from "@/assets/promo-apparel.jpg";
 
@@ -68,7 +68,7 @@ const categories = [
     ],
   },
   {
-    image: promoOutdoor,
+    image: promoGiveaways,
     title: "Promotional Giveaways & Business Essentials",
     benefit: "Memorable items your customers actually keep and use",
     bullets: [
