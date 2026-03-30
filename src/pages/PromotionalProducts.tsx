@@ -13,7 +13,7 @@ import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
 import promoGiveaways from "@/assets/promo-giveaways-pens-keychains.jpg";
 import customHats from "@/assets/custom-hats-headwear.jpg";
-import promoApparel from "@/assets/promo-apparel.jpg";
+import customBagsTotes from "@/assets/custom-bags-totes.jpg";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
