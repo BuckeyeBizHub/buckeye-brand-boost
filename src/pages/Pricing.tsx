@@ -41,10 +41,10 @@ const tiers = [
 ];
 
 const trustPoints = [
-  { icon: Eye, text: "You always see the actual supplier cost" },
-  { icon: TrendingDown, text: "You pay true wholesale pricing" },
-  { icon: Shield, text: "Bigger orders = even lower percentage" },
-  { icon: Handshake, text: "Full transparency builds real trust" },
+  { icon: Eye, text: "You see the actual supplier cost on every invoice — complete transparency with zero surprises" },
+  { icon: TrendingDown, text: "You pay true wholesale pricing instead of the inflated markups most printers charge" },
+  { icon: Shield, text: "Bigger orders automatically unlock even lower fees — the more you grow, the more you save" },
+  { icon: Handshake, text: "Full transparency builds real trust and turns us into your long-term business partner" },
 ];
 
 const Pricing = () => (
