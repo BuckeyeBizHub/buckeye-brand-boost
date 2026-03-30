@@ -8,10 +8,10 @@ import Footer from "@/components/Footer";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
 import brandedDrinkware from "@/assets/branded-drinkware-tumblers.jpg";
 import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
-import promoOutdoor from "@/assets/promo-outdoor.jpg";
+import barCoastersInUse from "@/assets/bar-coasters-in-use.jpg";
 import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
-import { PHOTO_APPAREL_3, PHOTO_PRINT_10 } from "@/lib/photos";
+import { PHOTO_APPAREL_3 } from "@/lib/photos";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -55,7 +55,7 @@ const categories = [
     ],
   },
   {
-    image: tentsBarRails,
+    image: barCoastersInUse,
     title: "Bar Rails, Coasters & Point-of-Sale Items",
     benefit: "Elevate your bar, brewery, or restaurant identity",
     bullets: [
@@ -125,9 +125,9 @@ const PromotionalProducts = () => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] blur-[220px]" />
+        <div className="absolute inset-0">
+          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,2%/0.75)] via-[hsl(0,50%,7%/0.65)] to-[hsl(220,30%,2%/0.9)]" />
         </div>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
@@ -146,8 +146,8 @@ const PromotionalProducts = () => {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-lg md:text-2xl text-primary-foreground/55 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed px-4">
-            As proud members of SAGE and PPAI, we have access to over 1 million high-quality promotional items — and we always find you the best options at the best price.
+            className="text-lg md:text-2xl text-primary-foreground/70 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed px-6">
+            As proud members of SAGE and PPAI, we have access to over one million high-quality promotional items and always find you the best options at the best price.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-14 flex flex-wrap justify-center gap-8 md:gap-14">
