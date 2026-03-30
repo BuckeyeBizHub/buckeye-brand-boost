@@ -125,9 +125,9 @@ const PromotionalProducts = () => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] blur-[220px]" />
+        <div className="absolute inset-0">
+          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,2%/0.75)] via-[hsl(0,50%,7%/0.65)] to-[hsl(220,30%,2%/0.9)]" />
         </div>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
