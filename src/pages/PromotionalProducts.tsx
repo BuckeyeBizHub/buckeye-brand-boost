@@ -8,10 +8,10 @@ import Footer from "@/components/Footer";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
 import brandedDrinkware from "@/assets/branded-drinkware-tumblers.jpg";
 import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
-import promoOutdoor from "@/assets/promo-outdoor.jpg";
+import barCoastersInUse from "@/assets/bar-coasters-in-use.jpg";
 import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
-import { PHOTO_APPAREL_3, PHOTO_PRINT_10 } from "@/lib/photos";
+import { PHOTO_APPAREL_3 } from "@/lib/photos";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
