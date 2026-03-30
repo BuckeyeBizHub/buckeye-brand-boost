@@ -90,7 +90,7 @@ const categories = [
     ],
   },
   {
-    image: promoApparel,
+    image: customBagsTotes,
     title: "Bags & Totes",
     benefit: "Walking billboards your customers carry everywhere",
     bullets: [
