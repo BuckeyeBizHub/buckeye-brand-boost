@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Printer, CheckCircle2, Shield, Award, Eye, Heart, Users, Package } from "lucide-react";
+import { ArrowRight, Phone, Printer, CheckCircle2, Shield, Eye, Award, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,91 +10,70 @@ import yardSignInstall from "@/assets/yard-sign-installation.jpg";
 import brochuresFlyers from "@/assets/brochures-flyers-layou.jpg";
 import productCollage from "@/assets/product-collage-hero.jpg";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
-import printingStationery from "@/assets/printing-stationery.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
-    transition: { delay: i * 0.1, duration: 0.7, ease: "easeOut" as const },
+    transition: { delay: i * 0.12, duration: 0.7, ease: "easeOut" as const },
   }),
 };
 
-const sections = [
+const serviceCards = [
   {
-    num: "01",
     title: "Business Cards & Stationery",
     headline: "Your First Impression, Perfected",
-    description: "Premium business cards that make people take notice. From ultra-thick 32pt cards with spot UV and foil stamping to classic designs on silk laminate — we source from hundreds of suppliers to find you the highest quality at the best price.",
-    benefits: [
-      "Multiple premium paper stocks: 16pt, 32pt ultra-thick, silk laminate, linen, and more",
-      "Full-color printing with spot UV, foil stamping, embossing, and specialty finishes",
-      "Wholesale pricing on bulk orders — 250, 500, 1,000, 5,000+ cards",
-      "We compare multiple suppliers to always get you the best quality and price",
-      "Free design assistance to match your existing brand identity",
+    image: businessCardsStack,
+    bullets: [
+      "Premium stocks: 32pt ultra-thick, silk laminate, linen & more",
+      "Spot UV, foil stamping, embossing & specialty finishes",
+      "Wholesale pricing on 250 to 5,000+ card runs",
+      "Free design assistance to match your brand",
     ],
-    images: [businessCardsStack],
-    reversed: false,
   },
   {
-    num: "02",
     title: "Banners, Yard Signs & Large Format",
     headline: "Go Big — Without the Big Price Tag",
-    description: "High-visibility outdoor signage built to withstand Ohio weather. Whether you need 10 yard signs or 10,000, we'll find the best supplier with the highest quality materials at a price that makes sense.",
-    benefits: [
-      "Durable vinyl banners — wind, rain, and UV resistant for Ohio's toughest conditions",
-      "Corrugated plastic yard signs with optional H-wire stakes included",
-      "Custom sizes from small directional signs to massive building-sized banners",
-      "Vibrant full-color printing with fade-resistant inks",
-      "Bulk pricing for political campaigns, real estate, and event promotions",
+    image: yardSignInstall,
+    bullets: [
+      "Durable vinyl banners — wind, rain & UV resistant",
+      "Corrugated yard signs with H-wire stakes included",
+      "Custom sizes from directional signs to building banners",
+      "Bulk pricing for campaigns, real estate & events",
     ],
-    images: [yardSignInstall],
-    reversed: true,
   },
   {
-    num: "03",
     title: "Brochures, Flyers & Marketing Materials",
     headline: "Marketing That Tells Your Story",
-    description: "Professional marketing collateral printed on premium stock. Tri-fold brochures, rack cards, flyers, sell sheets — everything your business needs to communicate quality and professionalism.",
-    benefits: [
-      "Tri-fold, bi-fold, z-fold, and gate-fold brochure options",
-      "Glossy, matte, and silk finishes for a premium look and feel",
-      "Available in multiple sizes: 4×6, 5×7, 8.5×11, and custom dimensions",
-      "Perfect for direct mail, trade shows, restaurants, medical offices, and more",
-      "Affordable pricing on runs from 250 to 100,000+ pieces",
+    image: brochuresFlyers,
+    bullets: [
+      "Tri-fold, bi-fold, z-fold & gate-fold options",
+      "Glossy, matte & silk premium finishes",
+      "Multiple sizes: 4×6, 5×7, 8.5×11 & custom",
+      "Affordable runs from 250 to 100,000+ pieces",
     ],
-    images: [brochuresFlyers],
-    reversed: false,
   },
   {
-    num: "04",
     title: "Letterhead, Envelopes & Corporate Stationery",
     headline: "Establish Your Brand Authority",
-    description: "A complete, professionally printed stationery package tells your clients you're serious about your business. Matching letterhead, envelopes, notepads, and business cards create a cohesive, polished image.",
-    benefits: [
-      "Matching sets: letterhead, envelopes, business cards, and custom notepads",
-      "Premium paper stocks including linen, cotton, and recycled options",
-      "Full-color or Pantone-matched printing for exact brand color consistency",
-      "Ideal for law firms, medical offices, financial advisors, and corporate HQs",
-      "Custom die-cut options for truly unique branding",
+    image: businessCardsStack,
+    bullets: [
+      "Matching letterhead, envelopes, cards & notepads",
+      "Linen, cotton & recycled premium paper stocks",
+      "Pantone-matched printing for exact brand colors",
+      "Ideal for law firms, medical offices & corporate HQs",
     ],
-    images: [printingStationery],
-    reversed: true,
   },
   {
-    num: "05",
     title: "Custom Printed Apparel & More",
     headline: "Branded Gear Your Team Will Love",
-    description: "From company uniforms to event merchandise, we source the highest quality apparel and printing at wholesale prices. Screen printing, DTG, embroidery — whatever fits your brand best.",
-    benefits: [
-      "Screen printing for bulk orders — vibrant colors that last hundreds of washes",
-      "Direct-to-garment (DTG) for small runs and complex full-color designs",
-      "Embroidery for polos, caps, and corporate uniforms with a premium feel",
-      "Wide garment selection: t-shirts, hoodies, tank tops, hats, jackets, and more",
-      "No minimum orders on DTG — perfect for prototypes and one-offs",
+    image: customApparel,
+    bullets: [
+      "Screen printing — vibrant colors that last 100s of washes",
+      "DTG for small runs & complex full-color designs",
+      "Embroidery for polos, caps & corporate uniforms",
+      "No minimums on DTG — perfect for prototypes",
     ],
-    images: [customApparel],
-    reversed: false,
   },
 ];
 
@@ -103,8 +82,6 @@ const trustPoints = [
   { icon: Eye, title: "Full Transparency", desc: "See the actual supplier cost on every project. No hidden markups, no games, no surprises — ever." },
   { icon: Award, title: "Best Possible Pricing", desc: "True wholesale pricing passed directly to you with only a small, transparent fee on top." },
   { icon: Heart, title: "Passion for Small Business", desc: "David Stein built Buckeye Biz Hub because he believes every business deserves premium branding without overpaying." },
-  { icon: Users, title: "Local Ohio Service", desc: "Real people who understand Ohio businesses. Personal service, not a faceless online form." },
-  { icon: Package, title: "4,300+ Supplier Partners", desc: "We compare multiple suppliers for every project so you always get the best solution for your needs." },
 ];
 
 const BusinessPrinting = () => {
@@ -119,7 +96,6 @@ const BusinessPrinting = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%)]/95 via-[hsl(0,0%,4%)]/85 to-[hsl(0,0%,4%)]/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,0%,4%)] via-transparent to-[hsl(0,0%,4%)]/50" />
         </div>
-        <div className="absolute top-[-200px] right-[-200px] w-[800px] h-[800px] bg-primary/[0.1] rounded-full blur-[200px]" />
 
         <div className="container relative">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
@@ -198,86 +174,76 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
-      {/* Service Sections */}
-      {sections.map((s, idx) => (
-        <section key={s.title} className={`py-20 lg:py-28 relative overflow-hidden ${idx % 2 === 0 ? "bg-ohio-grey-dark" : "bg-[hsl(0,0%,7%)]"}`}>
-          <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-primary/[0.05] rounded-full blur-[150px]" />
-
-          <div className="container relative">
-            <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${s.reversed ? '' : ''}`}>
-              {/* Image */}
-              <motion.div
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                custom={0} variants={fadeUp}
-                className={s.reversed ? 'lg:order-2' : ''}
-              >
-                <div className="relative overflow-hidden rounded-3xl group shadow-2xl">
-                  <img src={s.images[0]} alt={s.title} loading="lazy" width={800} height={600}
-                    className="w-full h-[350px] md:h-[450px] object-cover group-hover:scale-105 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ohio-grey-dark/50 to-transparent" />
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
-                  <div className="absolute top-5 left-5 bg-primary/90 text-primary-foreground font-black text-sm px-4 py-2 rounded-xl tracking-wider uppercase">
-                    {s.num} · {s.title.split(' ')[0]}
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Content */}
-              <motion.div
-                initial="hidden" whileInView="visible" viewport={{ once: true }}
-                custom={1} variants={fadeUp}
-                className={s.reversed ? 'lg:order-1' : ''}
-              >
-                <span className="inline-block text-xs font-black text-primary tracking-[0.25em] uppercase mb-4">
-                  {s.num} — {s.title}
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-5 text-glow-white leading-tight">
-                  {s.headline}
-                </h2>
-                <p className="text-lg text-primary-foreground/55 leading-relaxed mb-8">
-                  {s.description}
-                </p>
-
-                <div className="space-y-3 mb-8">
-                  {s.benefits.map((b) => (
-                    <div key={b} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-primary-foreground/70 font-medium">{b}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link to="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base px-10 py-6 rounded-xl shadow-[0_0_35px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_55px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider">
-                    Get a Quote
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </Button>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* Why Choose Section */}
-      <section className="py-24 lg:py-32 bg-[hsl(0,0%,6%)] relative overflow-hidden">
-        <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/[0.06] rounded-full blur-[200px]" />
+      {/* Service Card Grid */}
+      <section className="py-24 lg:py-32 bg-ohio-grey-dark relative overflow-hidden">
+        <div className="absolute top-[-150px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[180px]" />
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-glow-white">
-              Why Ohio Businesses Choose <span className="text-primary text-glow-red">Buckeye Biz Hub</span>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-glow-white mb-4">
+              Our <span className="text-primary text-glow-red">Printing Services</span>
             </h2>
-            <p className="text-lg text-primary-foreground/50 max-w-2xl mx-auto">Quality, transparency, and passion for helping businesses grow.</p>
+            <p className="text-lg text-primary-foreground/50 max-w-2xl mx-auto">Premium products sourced from 4,300+ suppliers — always the highest quality at the best price.</p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {trustPoints.map((item) => (
-              <div key={item.title} className="bg-primary-foreground/[0.04] border border-primary-foreground/10 rounded-2xl p-8 hover:border-primary/40 hover:shadow-[0_0_40px_hsl(0_80%_42%/0.1)] transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-xl bg-primary/15 border border-primary/25 flex items-center justify-center mb-5 group-hover:bg-primary/25 transition-colors">
-                  <item.icon className="w-6 h-6 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCards.map((card, idx) => (
+              <motion.div
+                key={card.title}
+                initial="hidden" whileInView="visible" viewport={{ once: true }}
+                custom={idx} variants={fadeUp}
+                className="group bg-[hsl(0,0%,8%)] border border-primary-foreground/10 rounded-3xl overflow-hidden hover:border-primary/40 hover:shadow-[0_0_50px_hsl(0_80%_42%/0.12)] transition-all duration-500"
+              >
+                {/* Card Image */}
+                <div className="relative h-56 overflow-hidden">
+                  <img src={card.image} alt={card.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(0,0%,8%)] via-transparent to-transparent" />
                 </div>
-                <h3 className="font-display text-xl font-black text-primary-foreground mb-3">{item.title}</h3>
-                <p className="text-primary-foreground/50 leading-relaxed">{item.desc}</p>
+
+                {/* Card Content */}
+                <div className="p-7 pt-4">
+                  <h3 className="text-sm font-black text-primary tracking-[0.15em] uppercase mb-2">{card.title}</h3>
+                  <p className="font-display text-xl md:text-2xl font-black text-primary-foreground mb-5 leading-tight">{card.headline}</p>
+
+                  <div className="space-y-2.5 mb-7">
+                    {card.bullets.map((b) => (
+                      <div key={b} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span className="text-sm text-primary-foreground/70 font-medium leading-snug">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link to="/contact">
+                    <Button size="lg" className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base py-6 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.3)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.5)] transition-all duration-300 group/btn uppercase tracking-wider">
+                      Get a Quote
+                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose — Light Background for Max Contrast */}
+      <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
+        <div className="container relative">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black mb-4 text-foreground">
+              Why Ohio Businesses Choose <span className="text-primary">Buckeye Biz Hub</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Quality, transparency, and passion for helping businesses grow.</p>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {trustPoints.map((item) => (
+              <div key={item.title} className="text-center group">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                  <item.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-black text-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">{item.desc}</p>
               </div>
             ))}
           </motion.div>
@@ -312,7 +278,6 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
-      {/* Schema.org JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
