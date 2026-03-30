@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Users, Zap } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -11,7 +11,9 @@ import tentsBarRails from "@/assets/tents-table-throws-bar-rails.jpg";
 import barCoastersInUse from "@/assets/bar-coasters-in-use.jpg";
 import promoOffice from "@/assets/promo-office.jpg";
 import printingTradeshow from "@/assets/printing-tradeshow.jpg";
-import { PHOTO_APPAREL_3 } from "@/lib/photos";
+import promoOutdoor from "@/assets/promo-outdoor.jpg";
+import printingHoodies from "@/assets/printing-hoodies.jpg";
+import promoApparel from "@/assets/promo-apparel.jpg";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -56,35 +58,46 @@ const categories = [
   },
   {
     image: barCoastersInUse,
-    title: "Bar Rails, Coasters & Point-of-Sale Items",
+    title: "On-Premise Point-of-Sale Items",
     benefit: "Elevate your bar, brewery, or restaurant identity",
     bullets: [
       "Full-color custom bar rail mats with your logo",
-      "Durable rubber construction built for heavy daily use",
       "Custom printed coasters in cork, cardboard, and rubber",
       "Branded menus, table tents, and POS displays",
+      "Durable construction built for heavy daily use",
     ],
   },
   {
-    image: PHOTO_APPAREL_3,
-    title: "Hats, Bags & Headwear",
+    image: promoOutdoor,
+    title: "Promotional Giveaways & Business Essentials",
+    benefit: "Memorable items your customers actually keep and use",
+    bullets: [
+      "Branded pens, keychains, lanyards, and stress balls",
+      "Custom packaging and kitting for events and mailers",
+      "Thousands of options across every price point",
+      "We compare suppliers so you get the best value",
+    ],
+  },
+  {
+    image: printingHoodies,
+    title: "Hats & Headwear",
     benefit: "High-retention items your customers actually wear",
     bullets: [
-      "Embroidery, screen print, and patch options",
+      "Embroidery, screen print, and custom patch options",
       "Richardson, Flexfit, New Era, and Yupoong brands",
       "Snapbacks, truckers, beanies, and structured caps",
-      "Custom tote bags, drawstring bags, and backpacks",
+      "Wholesale pricing on bulk orders",
     ],
   },
   {
-    image: promoOffice,
-    title: "Office & Desk Giveaways",
-    benefit: "Stay on their desk and in their mind",
+    image: promoApparel,
+    title: "Bags & Totes",
+    benefit: "Walking billboards your customers carry everywhere",
     bullets: [
-      "Branded notebooks, pens, sticky pads, and mouse pads",
-      "USB drives, phone stands, and tech accessories",
-      "Full-color imprinting, debossing, and laser engraving",
-      "Thousands of options to fit any budget",
+      "Custom tote bags, drawstring bags, and backpacks",
+      "Full-color printing, embroidery, and screen print",
+      "Eco-friendly and reusable options available",
+      "Perfect for trade shows, retail, and corporate gifts",
     ],
   },
   {
@@ -96,6 +109,17 @@ const categories = [
       "Branded lanyards, badge holders, and wristbands",
       "Kitting and fulfillment services for large orders",
       "Fast shipping across Ohio — Columbus, Cleveland, Cincinnati",
+    ],
+  },
+  {
+    image: promoOffice,
+    title: "Office & Desk Accessories",
+    benefit: "Stay on their desk and in their mind",
+    bullets: [
+      "Branded notebooks, pens, sticky pads, and mouse pads",
+      "USB drives, phone stands, and tech accessories",
+      "Full-color imprinting, debossing, and laser engraving",
+      "Thousands of options to fit any budget",
     ],
   },
 ];
