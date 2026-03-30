@@ -18,6 +18,7 @@ import Blog from "./pages/Blog.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Testimonials from "./pages/Testimonials.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
+import Pricing from "./pages/Pricing.tsx";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/industries" element={<Industries />} />
           <Route path="/vehicle-branding" element={<VehicleBranding />} />
           <Route path="/admin/photos" element={<AdminPhotos />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
