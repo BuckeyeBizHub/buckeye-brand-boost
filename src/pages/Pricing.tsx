@@ -103,7 +103,7 @@ const Pricing = () => (
                     <td className="px-6 py-5 font-bold text-foreground text-lg">{row.order}</td>
                     <td className="px-6 py-5 text-muted-foreground line-through opacity-60">{row.traditional}</td>
                     <td className="px-6 py-5 font-bold text-primary text-lg">{row.buckeye}</td>
-                    <td className="px-6 py-5 font-black text-green-600 text-lg">{row.save}</td>
+                    <td className="px-6 py-5 font-black text-primary text-lg">{row.save}</td>
                   </tr>
                 ))}
               </tbody>
