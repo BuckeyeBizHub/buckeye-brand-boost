@@ -86,41 +86,42 @@ const VehicleBranding = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
+      <section className="relative pt-48 pb-36 lg:pt-60 lg:pb-52 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0">
-          <img src={vehicleFleet} alt="Branded vehicle fleet by Buckeye Biz Hub" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,2%/0.8)] via-[hsl(0,50%,7%/0.7)] to-[hsl(220,30%,2%/0.92)]" />
+          <img src={vehicleFleet} alt="Branded vehicle fleet by Buckeye Biz Hub" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,3%/0.45)] via-[hsl(0,40%,5%/0.55)] to-[hsl(0,60%,8%/0.92)]" />
+          <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-[hsl(0,50%,6%)] via-[hsl(0,50%,6%/0.85)] to-transparent" />
         </div>
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
 
-        <div className="container relative text-center">
+        <div className="container relative text-center max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
+            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-12 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
             <Sparkles className="w-4 h-4" /> Vehicle Branding & Wraps <Sparkles className="w-4 h-4" />
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.9] mb-10"
-            style={{ textShadow: '0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)' }}>
+            className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-black text-primary-foreground leading-[0.88] mb-12"
+            style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.7), 0 8px 30px rgba(0,0,0,0.9)' }}>
             Vehicle Branding That Looks Sharp and{" "}
             <span className="text-primary text-glow-red">Saves You Money</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-lg md:text-2xl text-primary-foreground/70 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed px-6">
+            className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/85 max-w-3xl mx-auto font-semibold leading-snug px-6"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.8)' }}>
             We shop your job throughout Central Ohio to the best shops and have a trusted network of installers — so you get premium quality branding while protecting your wallet.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-14 flex flex-wrap justify-center gap-8 md:gap-14">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-16 flex flex-wrap justify-center gap-10 md:gap-16">
             {[
               { num: "Best Shops", label: "Central Ohio Network" },
               { num: "Premium", label: "Quality Materials" },
               { num: "100%", label: "Cost Transparency" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-display text-3xl md:text-4xl font-black text-primary" style={{ textShadow: '0 0 25px hsl(0 80% 42% / 0.4)' }}>{stat.num}</div>
-                <div className="text-xs font-bold text-primary-foreground/35 tracking-[0.2em] uppercase mt-1">{stat.label}</div>
+                <div className="font-display text-3xl md:text-5xl font-black text-primary" style={{ textShadow: '0 0 25px hsl(0 80% 42% / 0.4)' }}>{stat.num}</div>
+                <div className="text-xs font-bold text-primary-foreground/45 tracking-[0.2em] uppercase mt-2">{stat.label}</div>
               </div>
             ))}
           </motion.div>
