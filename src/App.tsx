@@ -12,6 +12,7 @@ import About from "./pages/About.tsx";
 import Industries from "./pages/Industries.tsx";
 import VehicleBranding from "./pages/VehicleBranding.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import Blog from "./pages/Blog.tsx";
@@ -28,6 +29,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
