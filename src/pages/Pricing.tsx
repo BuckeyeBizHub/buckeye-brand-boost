@@ -41,10 +41,10 @@ const tiers = [
 ];
 
 const trustPoints = [
-  { icon: Eye, text: "You always see the actual supplier cost" },
-  { icon: TrendingDown, text: "You pay true wholesale pricing" },
-  { icon: Shield, text: "Bigger orders = even lower percentage" },
-  { icon: Handshake, text: "Full transparency builds real trust" },
+  { icon: Eye, text: "You see the actual supplier cost on every invoice — complete transparency with zero surprises" },
+  { icon: TrendingDown, text: "You pay true wholesale pricing instead of the inflated markups most printers charge" },
+  { icon: Shield, text: "Bigger orders automatically unlock even lower fees — the more you grow, the more you save" },
+  { icon: Handshake, text: "Full transparency builds real trust and turns us into your long-term business partner" },
 ];
 
 const Pricing = () => (
@@ -189,15 +189,17 @@ const Pricing = () => (
           className="text-4xl md:text-5xl font-black text-foreground text-center mb-14"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Why Ohio Businesses <span className="text-primary">Love This Model</span>
+          Why Ohio Businesses <span className="text-primary">Love Our Pricing</span>
         </motion.h2>
         <div className="grid sm:grid-cols-2 gap-6">
           {trustPoints.map((point, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border shadow-sm"
+              className="flex items-start gap-5 p-7 rounded-2xl bg-card border-2 border-primary/15 shadow-md"
             >
-              <point.icon className="w-7 h-7 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-foreground text-lg font-semibold">{point.text}</span>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <point.icon className="w-6 h-6 text-primary" />
+              </div>
+              <span className="text-foreground text-lg md:text-xl font-bold leading-snug">{point.text}</span>
             </motion.div>
           ))}
         </div>
