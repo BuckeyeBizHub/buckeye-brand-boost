@@ -189,7 +189,7 @@ const Pricing = () => (
           className="text-4xl md:text-5xl font-black text-foreground text-center mb-14"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Why Ohio Businesses <span className="text-primary">Love This Model</span>
+          Why Ohio Businesses <span className="text-primary">Love Our Pricing</span>
         </motion.h2>
         <div className="grid sm:grid-cols-2 gap-6">
           {trustPoints.map((point, i) => (
