@@ -15,6 +15,7 @@ const navLinks = [
   { label: "Services", href: "/services", dropdown: serviceDropdown },
   { label: "Promotional Products", href: "/promotional-products" },
   { label: "Industries", href: "/industries" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About Us", href: "/about" },
 ];
