@@ -1,23 +1,43 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Shield, Eye, TrendingDown, Handshake } from "lucide-react";
+import { ArrowRight, CheckCircle, Eye, TrendingDown, Shield, Handshake } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import productCollage from "@/assets/product-collage-hero.jpg";
-import businessCards from "@/assets/business-cards-letterhead-stack.jpg";
-import vehicleFleet from "@/assets/branded-vehicle-fleet.jpg";
 
-const savingsData = [
-  { order: "$500", traditional: "$750 – $1,000", buckeye: "$590", save: "$160–$410" },
-  { order: "$1,000", traditional: "$1,500 – $2,000", buckeye: "$1,180", save: "$320–$820" },
-  { order: "$2,500", traditional: "$3,750 – $5,000", buckeye: "$2,875", save: "$875–$2,125" },
+const savingsBoxes = [
+  {
+    label: "Small Order",
+    cost: "$400",
+    traditional: "$600–$800",
+    buckeye: "$500",
+    feeLabel: "25% fee",
+    save: "$100–$300",
+  },
+  {
+    label: "Medium Order",
+    cost: "$1,200",
+    traditional: "$1,800–$2,400",
+    buckeye: "$1,416",
+    feeLabel: "18% fee",
+    save: "$384–$984",
+    featured: true,
+  },
+  {
+    label: "Large Order",
+    cost: "$3,000",
+    traditional: "$4,500–$6,000",
+    buckeye: "$3,450",
+    feeLabel: "15% fee",
+    save: "$1,050–$2,550",
+  },
 ];
 
-const feeData = [
-  { size: "Under $500", fee: "25%", example: "+ $250", total: "$1,250" },
-  { size: "$500 – $2,000", fee: "18%", example: "+ $180", total: "$1,180" },
-  { size: "Over $2,000", fee: "15%", example: "+ $150", total: "$1,150" },
+const tiers = [
+  { size: "Under $500", fee: "25%", example: "Cost + 25%" },
+  { size: "$500 – $2,000", fee: "18%", example: "Cost + 18%" },
+  { size: "Over $2,000", fee: "15%", example: "Cost + 15%" },
 ];
 
 const trustPoints = [
@@ -42,7 +62,7 @@ const Pricing = () => (
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           className="inline-block text-primary font-black text-sm tracking-[0.2em] uppercase mb-6"
         >
-          Pricing – True Wholesale Cost + Our Small Transparent Fee
+          Transparent Pricing
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
@@ -64,58 +84,70 @@ const Pricing = () => (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-          <p>
-            At Buckeye Biz Hub we do things differently. We are on the side of helping small businesses grow and thrive.
-          </p>
-          <p>
-            We have wholesale accounts with over 4,300 printing and item suppliers, giving us true wholesale pricing. Instead of marking up the product like most printers, we simply add a small, transparent fee for sourcing, paying the supplier upfront, fulfillment, delivery, and handling everything for you.
-          </p>
-          <p className="font-semibold text-foreground">
-            We offer full transparency and are happy to show you the full supplier costs at every step — no hidden markups, no games, no surprises.
-          </p>
+          <p>At Buckeye Biz Hub we do things differently. We are on the side of helping small businesses grow and thrive.</p>
+          <p>We have wholesale accounts with over 4,300 printing and item suppliers, giving us true wholesale pricing. Instead of marking up the product like most printers, we simply add a small, transparent fee for sourcing, paying the supplier upfront, fulfillment, delivery, and handling everything for you.</p>
+          <p className="font-semibold text-foreground">We offer full transparency and are happy to show you the full supplier costs at every step — no hidden markups, no games, no surprises.</p>
         </motion.div>
       </div>
     </section>
 
-    {/* Savings Comparison */}
+    {/* Savings Boxes */}
     <section className="py-16 lg:py-24 bg-secondary/50">
-      <div className="container max-w-5xl mx-auto px-6">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+      <div className="container max-w-6xl mx-auto px-6">
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            See How Much You <span className="text-primary">Save</span>
+            See Exactly How Much You <span className="text-primary">Save</span>
           </h2>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl border-2 border-primary/20 overflow-hidden shadow-xl bg-card">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="bg-primary text-primary-foreground">
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Order Size</th>
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Traditional Printer<br /><span className="font-normal text-primary-foreground/70 text-xs">(Typical 50–100% Markup)</span></th>
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Buckeye Biz Hub<br /><span className="font-normal text-primary-foreground/70 text-xs">(Transparent Cost + Fee)</span></th>
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">You Save</th>
-                </tr>
-              </thead>
-              <tbody>
-                {savingsData.map((row, i) => (
-                  <tr key={i} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-card" : "bg-secondary/30"}`}>
-                    <td className="px-6 py-5 font-bold text-foreground text-lg">{row.order}</td>
-                    <td className="px-6 py-5 text-muted-foreground line-through opacity-60">{row.traditional}</td>
-                    <td className="px-6 py-5 font-bold text-primary text-lg">{row.buckeye}</td>
-                    <td className="px-6 py-5 font-black text-primary text-lg">{row.save}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </motion.div>
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {savingsBoxes.map((box, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`relative rounded-3xl p-8 border-2 transition-shadow ${
+                box.featured
+                  ? "border-primary bg-card shadow-2xl scale-[1.03]"
+                  : "border-border bg-card shadow-lg"
+              }`}
+            >
+              {box.featured && (
+                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-black uppercase tracking-wider px-4 py-1.5 rounded-full">
+                  Most Popular
+                </span>
+              )}
+              <div className="text-center mb-6">
+                <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{box.label}</span>
+                <p className="text-3xl font-black text-foreground mt-1">{box.cost}</p>
+                <p className="text-xs text-muted-foreground">Supplier Cost</p>
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="text-sm text-muted-foreground">Traditional Printer</span>
+                  <span className="text-sm line-through opacity-50 text-muted-foreground">{box.traditional}</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="text-sm font-semibold text-foreground">Buckeye Biz Hub</span>
+                  <span className="text-lg font-black text-primary">{box.buckeye}</span>
+                </div>
+                <p className="text-center text-xs text-muted-foreground">({box.feeLabel})</p>
+                <div className="bg-primary/10 rounded-xl p-4 text-center mt-2">
+                  <span className="text-sm font-bold text-foreground">You Save</span>
+                  <p className="text-2xl font-black text-primary">{box.save}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
 
-    {/* Fee Structure */}
+    {/* Fee Tiers Table */}
     <section className="py-16 lg:py-24 bg-background">
-      <div className="container max-w-5xl mx-auto px-6">
+      <div className="container max-w-4xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4" style={{ fontFamily: "var(--font-display)" }}>
             Our <span className="text-primary">Transparent</span> Pricing
@@ -126,20 +158,18 @@ const Pricing = () => (
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-foreground text-primary-foreground">
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Order Size<br /><span className="font-normal text-primary-foreground/70 text-xs">(Actual Supplier Cost)</span></th>
+                <tr className="bg-foreground text-background">
+                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Order Size<br /><span className="font-normal opacity-70 text-xs">(Actual Supplier Cost)</span></th>
                   <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Our Fee %</th>
-                  <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Example:<br /><span className="font-normal text-primary-foreground/70 text-xs">Supplier Cost = $1,000</span></th>
                   <th className="px-6 py-5 font-black text-sm uppercase tracking-wider">Your Total</th>
                 </tr>
               </thead>
               <tbody>
-                {feeData.map((row, i) => (
+                {tiers.map((row, i) => (
                   <tr key={i} className={`border-b border-border/50 ${i % 2 === 0 ? "bg-card" : "bg-secondary/30"}`}>
                     <td className="px-6 py-5 font-bold text-foreground">{row.size}</td>
                     <td className="px-6 py-5 font-black text-primary text-2xl">{row.fee}</td>
-                    <td className="px-6 py-5 text-muted-foreground">{row.example}</td>
-                    <td className="px-6 py-5 font-bold text-foreground text-lg">{row.total}</td>
+                    <td className="px-6 py-5 text-muted-foreground font-semibold">{row.example}</td>
                   </tr>
                 ))}
               </tbody>
@@ -153,25 +183,21 @@ const Pricing = () => (
     </section>
 
     {/* Why Ohio Businesses Love This */}
-    <section className="relative py-16 lg:py-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={businessCards} alt="Business printing" className="w-full h-full object-cover opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--hero-bg))] via-[hsl(var(--hero-bg))/0.95] to-[hsl(var(--hero-bg))]" />
-      </div>
-      <div className="container relative z-10 max-w-4xl mx-auto px-6">
+    <section className="py-16 lg:py-24 bg-secondary/30">
+      <div className="container max-w-4xl mx-auto px-6">
         <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-black text-primary-foreground text-center mb-14"
+          className="text-4xl md:text-5xl font-black text-foreground text-center mb-14"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Why Ohio Businesses <span className="text-primary text-glow-red">Love This Model</span>
+          Why Ohio Businesses <span className="text-primary">Love This Model</span>
         </motion.h2>
         <div className="grid sm:grid-cols-2 gap-6">
           {trustPoints.map((point, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-primary-foreground/[0.04] border border-primary/10"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border shadow-sm"
             >
               <point.icon className="w-7 h-7 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-primary-foreground/80 text-lg font-semibold">{point.text}</span>
+              <span className="text-foreground text-lg font-semibold">{point.text}</span>
             </motion.div>
           ))}
         </div>
