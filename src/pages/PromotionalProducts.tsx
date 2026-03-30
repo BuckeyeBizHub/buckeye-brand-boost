@@ -68,7 +68,7 @@ const categories = [
     ],
   },
   {
-    image: promoOutdoor,
+    image: promoGiveaways,
     title: "Promotional Giveaways & Business Essentials",
     benefit: "Memorable items your customers actually keep and use",
     bullets: [
