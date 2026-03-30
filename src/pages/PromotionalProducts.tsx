@@ -55,7 +55,7 @@ const categories = [
     ],
   },
   {
-    image: tentsBarRails,
+    image: barCoastersInUse,
     title: "Bar Rails, Coasters & Point-of-Sale Items",
     benefit: "Elevate your bar, brewery, or restaurant identity",
     bullets: [
