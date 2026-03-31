@@ -435,11 +435,21 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl py-8 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider"
+                disabled={submitting}
+                className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl py-8 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider disabled:opacity-70"
               >
-                <Send className="w-5 h-5" />
-                Get My 24-Hour Custom Quote
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {submitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Get My 24-Hour Custom Quote
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
 
               <p className="text-center text-muted-foreground text-sm font-medium pt-2">
