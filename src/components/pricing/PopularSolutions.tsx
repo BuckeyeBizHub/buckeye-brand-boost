@@ -8,7 +8,7 @@ import pricingApparel from "@/assets/pricing-apparel.jpg";
 import pricingSignage from "@/assets/pricing-signage.jpg";
 import pricingRebrand from "@/assets/pricing-rebrand.jpg";
 
-const solutions = [
+const solutions: { image: string; title: string; price: string | null; popular?: boolean; bullets: string[] }[] = [
   {
     image: pricingVehicle,
     title: "Vehicle Wraps & Fleet Branding",
