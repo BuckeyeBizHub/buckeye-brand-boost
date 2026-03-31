@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, MapPin, Send, CheckCircle, Clock, ShieldCheck, BadgeCheck, ThumbsUp } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Send, CheckCircle, Clock, ShieldCheck, BadgeCheck, ThumbsUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 import pricingHero from "@/assets/pricing-hero.jpg";
 
 const contactSchema = z.object({
@@ -71,6 +72,7 @@ const heroBadges = [
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [form, setForm] = useState<ContactForm>({
     name: "",
@@ -100,7 +102,7 @@ const Contact = () => {
     if (errors.services) setErrors((e) => ({ ...e, services: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
@@ -113,8 +115,34 @@ const Contact = () => {
       return;
     }
     setErrors({});
-    setSubmitted(true);
-    toast({ title: "Quote request sent!", description: "We'll get back to you within 24 hours." });
+    setSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: form.name,
+          business: form.business,
+          email: form.email,
+          phone: form.phone,
+          services: form.services,
+          otherService: form.otherService,
+          message: form.message,
+          budget: form.budget,
+          timeline: form.timeline,
+          referral: form.referral,
+        },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast({ title: "Quote request sent!", description: "We'll get back to you within 24 hours." });
+    } catch (err) {
+      console.error("Submit error:", err);
+      toast({ title: "Something went wrong", description: "Please try again or call us at (614) 561-3358.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -407,11 +435,21 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl py-8 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider"
+                disabled={submitting}
+                className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl py-8 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider disabled:opacity-70"
               >
-                <Send className="w-5 h-5" />
-                Get My 24-Hour Custom Quote
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {submitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Get My 24-Hour Custom Quote
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
 
               <p className="text-center text-muted-foreground text-sm font-medium pt-2">
