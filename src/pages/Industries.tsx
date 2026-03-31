@@ -28,7 +28,7 @@ const industries = [
       "Embroidered staff polos & scrubs",
       "Referral program materials & direct mail",
     ],
-    quote: "Our new vehicle wrap and lobby signage made our practice look 10x more professional. Patients comment on it every day.",
+    quote: "Our new vehicle wrap and lobby signage made our practice look 10x more professional. Patients comment on it every single day.",
     ctaLabel: "Get Dental Practice Quote",
   },
   {
