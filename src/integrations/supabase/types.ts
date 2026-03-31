@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_submissions: {
+        Row: {
+          budget: string
+          business: string
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          other_service: string | null
+          phone: string
+          referral: string | null
+          services: string[]
+          timeline: string
+        }
+        Insert: {
+          budget: string
+          business: string
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          other_service?: string | null
+          phone: string
+          referral?: string | null
+          services?: string[]
+          timeline: string
+        }
+        Update: {
+          budget?: string
+          business?: string
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          other_service?: string | null
+          phone?: string
+          referral?: string | null
+          services?: string[]
+          timeline?: string
+        }
+        Relationships: []
+      }
       photos: {
         Row: {
           alt_text: string | null
