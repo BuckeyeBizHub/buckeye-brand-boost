@@ -42,7 +42,7 @@ const IndustriesHero = () => (
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-xl md:text-2xl text-primary-foreground/70 max-w-3xl mx-auto mb-10 font-medium"
       >
-        Custom printing, promotional products & vehicle wraps built specifically for your business
+        Tailored printing, promotional products, and vehicle branding for Ohio's key businesses
       </motion.p>
 
       {/* Badges */}

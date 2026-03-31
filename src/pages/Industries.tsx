@@ -13,6 +13,7 @@ import industryLandscaping from "@/assets/industry-landscaping.jpg";
 import industryRealestate from "@/assets/industry-realestate.jpg";
 import industryRestaurant from "@/assets/industry-restaurant.jpg";
 import industryConstruction from "@/assets/industry-construction.jpg";
+import industryAdditional from "@/assets/industry-additional.jpg";
 
 const industries = [
   {
@@ -135,6 +136,23 @@ const industries = [
     quote: "Our wrapped fleet and branded crew gear make us look like the biggest company on every job site. It wins us contracts.",
     ctaLabel: "Get Construction Quote",
   },
+  {
+    image: industryAdditional,
+    title: "Additional Industries We Serve",
+    description: "We also proudly serve many more Ohio businesses including retail stores, manufacturing, law firms, education, property management, logistics & warehousing, and more. No matter your industry, we deliver premium branding at wholesale pricing.",
+    bullets: [
+      "Retail stores & boutiques",
+      "Manufacturing & industrial",
+      "Law firms & professional services",
+      "Schools, colleges & education",
+      "Property management companies",
+      "Logistics, warehousing & distribution",
+      "Fitness studios & gyms",
+      "Nonprofits & community organizations",
+    ],
+    quote: "We weren't sure if Buckeye Biz Hub worked with our niche industry — turns out they had perfect solutions ready to go.",
+    ctaLabel: "Tell Us About Your Industry",
+  },
 ];
 
 const Industries = () => {
@@ -142,7 +160,7 @@ const Industries = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Industries We Serve",
-    description: "Custom printing, promotional products & vehicle wraps built specifically for Ohio's key industries including dental, medical, HVAC, automotive, landscaping, real estate, restaurants, and construction.",
+    description: "Tailored printing, promotional products & vehicle branding for Ohio's key industries including dental, medical, HVAC, automotive, landscaping, real estate, restaurants, construction, and more.",
     url: "https://buckeye-brand-boost.lovable.app/industries",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
