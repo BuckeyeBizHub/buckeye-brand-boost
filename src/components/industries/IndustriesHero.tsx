@@ -32,8 +32,8 @@ const IndustriesHero = () => (
         transition={{ duration: 0.7 }}
         className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.92] mb-6"
       >
-        Industries We Serve{" "}
-        <span className="text-primary">Across Ohio</span>
+        9 Industries —{" "}
+        <span className="text-primary">Tailored Solutions</span>
       </motion.h1>
 
       <motion.p
