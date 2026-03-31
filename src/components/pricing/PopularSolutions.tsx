@@ -46,11 +46,14 @@ const solutions: { image: string; title: string; price: string | null; popular?:
   },
   {
     image: pricingRebrand,
-    title: "Full Business Rebrand Kits",
-    price: "$2,499",
+    title: "Business Branding Packages",
+    price: null,
     bullets: [
       "Vehicle wraps + apparel + signage",
       "Business cards & marketing materials",
+      "Website creation & design",
+      "Google Business Profile optimization",
+      "SEO to boost your online visibility",
       "Everything bundled with big savings",
       "100% transparent – nothing hidden",
     ],
