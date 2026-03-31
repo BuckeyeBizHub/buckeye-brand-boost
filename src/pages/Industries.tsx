@@ -58,7 +58,7 @@ const industries = [
       "Promotional leave-behinds (pens, flashlights)",
       "Business cards & estimate folders",
     ],
-    quote: "Our wrapped vans are the best advertising we've ever done. We get calls every week from people who saw us in their neighborhood.",
+    quote: "Our wrapped vans are the best advertising we've ever done. We get multiple new calls every week from people who saw us driving through their neighborhood.",
     ctaLabel: "Get HVAC & Plumbing Quote",
   },
   {
