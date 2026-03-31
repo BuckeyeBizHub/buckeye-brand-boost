@@ -35,11 +35,12 @@ const solutions: { image: string; title: string; price: string | null; popular?:
   {
     image: pricingSignage,
     title: "Signage & Yard Signs",
-    price: "$89",
+    price: null,
     bullets: [
       "Coroplast & metal yard signs",
       "Banners & job-site signage",
       "A-frames & directional signs",
+      "12x12, 12x18, 18x24 and more sizes",
       "Every cost disclosed at quote",
     ],
   },
