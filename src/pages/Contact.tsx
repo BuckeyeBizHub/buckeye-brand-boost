@@ -72,6 +72,7 @@ const heroBadges = [
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [form, setForm] = useState<ContactForm>({
     name: "",
@@ -101,7 +102,7 @@ const Contact = () => {
     if (errors.services) setErrors((e) => ({ ...e, services: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
@@ -114,8 +115,34 @@ const Contact = () => {
       return;
     }
     setErrors({});
-    setSubmitted(true);
-    toast({ title: "Quote request sent!", description: "We'll get back to you within 24 hours." });
+    setSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: form.name,
+          business: form.business,
+          email: form.email,
+          phone: form.phone,
+          services: form.services,
+          otherService: form.otherService,
+          message: form.message,
+          budget: form.budget,
+          timeline: form.timeline,
+          referral: form.referral,
+        },
+      });
+
+      if (error) throw error;
+
+      setSubmitted(true);
+      toast({ title: "Quote request sent!", description: "We'll get back to you within 24 hours." });
+    } catch (err) {
+      console.error("Submit error:", err);
+      toast({ title: "Something went wrong", description: "Please try again or call us at (614) 561-3358.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
