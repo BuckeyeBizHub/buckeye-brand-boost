@@ -59,7 +59,7 @@ const About = () => {
               </div>
               <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground rounded-2xl px-6 py-3 shadow-lg">
                 <p className="text-sm font-bold">David Stein</p>
-                <p className="text-xs text-primary-foreground/80">Founder & Owner</p>
+                <p className="text-xs text-primary-foreground/80">Co-Founder & Owner</p>
               </div>
             </motion.div>
           </div>
