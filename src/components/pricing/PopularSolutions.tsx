@@ -114,13 +114,14 @@ const PopularSolutions = () => (
                 {sol.title}
               </h3>
 
-              {/* Price */}
-              <div className="mb-4">
-                <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
-                  From
-                </span>
-                <p className="text-3xl font-black text-primary">{sol.price}</p>
-              </div>
+              {sol.price && (
+                <div className="mb-4">
+                  <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                    From
+                  </span>
+                  <p className="text-3xl font-black text-primary">{sol.price}</p>
+                </div>
+              )}
 
               {/* Bullets */}
               <ul className="space-y-2 mb-6 flex-1">
