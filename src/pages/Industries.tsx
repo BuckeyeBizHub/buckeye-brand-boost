@@ -73,7 +73,7 @@ const industries = [
       "Service shuttle & courtesy car wraps",
       "Illuminated exterior displays",
     ],
-    quote: "The banners and lot flags transformed our curb appeal. We've seen a real uptick in walk-in traffic since the rebrand.",
+    quote: "The banners, lot flags, and staff polos completely transformed our curb appeal. Walk-in traffic has noticeably increased since the rebrand.",
     ctaLabel: "Get Auto Dealership Quote",
   },
   {
