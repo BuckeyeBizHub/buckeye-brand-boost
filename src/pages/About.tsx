@@ -53,7 +53,7 @@ const About = () => {
               <div className="rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl">
                 <img
                   src={davidHero}
-                  alt="David Stein, Founder of Buckeye Biz Hub"
+                  alt="David Stein, Co-Founder of Buckeye Biz Hub"
                   className="w-full h-[350px] md:h-[450px] object-cover object-top"
                 />
               </div>
