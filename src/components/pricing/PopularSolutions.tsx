@@ -12,7 +12,7 @@ const solutions = [
   {
     image: pricingVehicle,
     title: "Vehicle Wraps & Fleet Branding",
-    price: "$1,299",
+    price: null,
     bullets: [
       "Full-color wraps & partial wraps",
       "Magnetic signs & vehicle lettering",
