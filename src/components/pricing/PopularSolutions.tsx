@@ -8,11 +8,11 @@ import pricingApparel from "@/assets/pricing-apparel.jpg";
 import pricingSignage from "@/assets/pricing-signage.jpg";
 import pricingRebrand from "@/assets/pricing-rebrand.jpg";
 
-const solutions = [
+const solutions: { image: string; title: string; price: string | null; popular?: boolean; bullets: string[] }[] = [
   {
     image: pricingVehicle,
     title: "Vehicle Wraps & Fleet Branding",
-    price: "$1,299",
+    price: null,
     bullets: [
       "Full-color wraps & partial wraps",
       "Magnetic signs & vehicle lettering",
@@ -114,13 +114,14 @@ const PopularSolutions = () => (
                 {sol.title}
               </h3>
 
-              {/* Price */}
-              <div className="mb-4">
-                <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
-                  From
-                </span>
-                <p className="text-3xl font-black text-primary">{sol.price}</p>
-              </div>
+              {sol.price && (
+                <div className="mb-4">
+                  <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                    From
+                  </span>
+                  <p className="text-3xl font-black text-primary">{sol.price}</p>
+                </div>
+              )}
 
               {/* Bullets */}
               <ul className="space-y-2 mb-6 flex-1">
