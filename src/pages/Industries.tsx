@@ -133,7 +133,7 @@ const industries = [
       "Business cards & proposal folders",
       "Yard signs at active build sites",
     ],
-    quote: "Our wrapped fleet and branded crew gear make us look like the biggest company on every job site. It wins us contracts.",
+    quote: "The job-site banners and truck wraps make us look like the most professional crew on every project. We're booking more work because of it.",
     ctaLabel: "Get Construction Quote",
   },
   {
