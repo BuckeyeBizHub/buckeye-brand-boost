@@ -43,7 +43,7 @@ const industries = [
       "Prescription pads & HIPAA-compliant forms",
       "Exterior building graphics & monument signs",
     ],
-    quote: "Buckeye Biz Hub handled everything — from our scrub embroidery to our fleet branding. One partner for it all.",
+    quote: "Buckeye Biz Hub handled everything from our scrub embroidery to our fleet branding. One partner for it all and the turnaround was lightning fast.",
     ctaLabel: "Get Medical Office Quote",
   },
   {
