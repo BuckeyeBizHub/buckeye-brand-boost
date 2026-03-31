@@ -28,7 +28,7 @@ const industries = [
       "Embroidered staff polos & scrubs",
       "Referral program materials & direct mail",
     ],
-    quote: "Our new vehicle wrap and lobby signage made our practice look 10x more professional. Patients comment on it every day.",
+    quote: "Our new vehicle wrap and lobby signage made our practice look 10x more professional. Patients comment on it every single day.",
     ctaLabel: "Get Dental Practice Quote",
   },
   {
@@ -43,7 +43,7 @@ const industries = [
       "Prescription pads & HIPAA-compliant forms",
       "Exterior building graphics & monument signs",
     ],
-    quote: "Buckeye Biz Hub handled everything — from our scrub embroidery to our fleet branding. One partner for it all.",
+    quote: "Buckeye Biz Hub handled everything from our scrub embroidery to our fleet branding. One partner for it all and the turnaround was lightning fast.",
     ctaLabel: "Get Medical Office Quote",
   },
   {
@@ -58,7 +58,7 @@ const industries = [
       "Promotional leave-behinds (pens, flashlights)",
       "Business cards & estimate folders",
     ],
-    quote: "Our wrapped vans are the best advertising we've ever done. We get calls every week from people who saw us in their neighborhood.",
+    quote: "Our wrapped vans are the best advertising we've ever done. We get multiple new calls every week from people who saw us driving through their neighborhood.",
     ctaLabel: "Get HVAC & Plumbing Quote",
   },
   {
@@ -73,7 +73,7 @@ const industries = [
       "Service shuttle & courtesy car wraps",
       "Illuminated exterior displays",
     ],
-    quote: "The banners and lot flags transformed our curb appeal. We've seen a real uptick in walk-in traffic since the rebrand.",
+    quote: "The banners, lot flags, and staff polos completely transformed our curb appeal. Walk-in traffic has noticeably increased since the rebrand.",
     ctaLabel: "Get Auto Dealership Quote",
   },
   {
@@ -88,7 +88,7 @@ const industries = [
       "Promotional giveaways (seed packets, koozies)",
       "Estimate folders & door hangers",
     ],
-    quote: "Every yard sign we plant at a job generates at least 2–3 calls from neighbors. It's been incredible for growth.",
+    quote: "Every yard sign we plant at a job generates calls from neighbors. It's been incredible for growing our local customer base.",
     ctaLabel: "Get Landscaping Quote",
   },
   {
@@ -103,7 +103,7 @@ const industries = [
       "Open house banners & A-frame displays",
       "Just-sold postcards & direct mail",
     ],
-    quote: "My branded closing gift packages have become a huge referral driver. Clients love them and remember my name.",
+    quote: "My branded closing gift packages have become a huge referral driver. Clients love them and remember my name long after closing.",
     ctaLabel: "Get Real Estate Quote",
   },
   {
@@ -133,7 +133,7 @@ const industries = [
       "Business cards & proposal folders",
       "Yard signs at active build sites",
     ],
-    quote: "Our wrapped fleet and branded crew gear make us look like the biggest company on every job site. It wins us contracts.",
+    quote: "The job-site banners and truck wraps make us look like the most professional crew on every project. We're booking more work because of it.",
     ctaLabel: "Get Construction Quote",
   },
   {
