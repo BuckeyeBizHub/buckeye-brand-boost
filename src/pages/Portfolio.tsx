@@ -27,11 +27,11 @@ const projects = [
     tags: ["Fleet Wraps", "Columbus", "HVAC"],
   },
   {
-    image: PHOTO_PRINT_1,
+    image: premiumBusinessCards,
     title: "Premium Business Cards – Downtown Law Firm",
     category: "Business Printing" as Category,
     description: "Created 32pt ultra-thick business cards with spot UV and gold foil stamping for a prestigious Columbus law firm. The premium feel matched their brand identity perfectly.",
-    results: ["5,000 cards delivered in 4 days", "Spot UV + foil stamping finish", "Client retention up 20%"],
+    results: ["Delivered 10,000 premium business cards", "Spot UV + gold foil stamping finish", "Saved the client $640 while upgrading from standard business cards to premium 32pt stock"],
     tags: ["Business Cards", "Premium Print", "Columbus"],
   },
   {
