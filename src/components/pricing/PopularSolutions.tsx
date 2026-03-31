@@ -23,7 +23,7 @@ const solutions: { image: string; title: string; price: string | null; popular?:
   {
     image: pricingApparel,
     title: "Branded Apparel & Promo Products",
-    price: "$12/shirt",
+    price: null,
     popular: true,
     bullets: [
       "Custom polos, hoodies & tees",
