@@ -53,13 +53,13 @@ const About = () => {
               <div className="rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl">
                 <img
                   src={davidHero}
-                  alt="David Stein, Founder of Buckeye Biz Hub"
+                  alt="David Stein, Co-Founder of Buckeye Biz Hub"
                   className="w-full h-[350px] md:h-[450px] object-cover object-top"
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground rounded-2xl px-6 py-3 shadow-lg">
                 <p className="text-sm font-bold">David Stein</p>
-                <p className="text-xs text-primary-foreground/80">Founder & Owner</p>
+                <p className="text-xs text-primary-foreground/80">Co-Founder & Owner</p>
               </div>
             </motion.div>
           </div>
@@ -108,7 +108,7 @@ const About = () => {
               <div className="mt-10 pt-8 border-t border-border">
                 <p className="mb-0 italic text-foreground">With gratitude,</p>
                 <p className="text-2xl font-display font-black text-primary mb-1">David Stein</p>
-                <p className="text-sm text-muted-foreground font-medium">Founder & Owner</p>
+                <p className="text-sm text-muted-foreground font-medium">Co-Founder & Owner</p>
                 <p className="text-sm text-muted-foreground font-medium">Buckeye Biz Hub</p>
                 <p className="text-sm text-muted-foreground font-medium">Columbus, Ohio</p>
               </div>
