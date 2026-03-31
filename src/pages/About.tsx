@@ -1,327 +1,280 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Star, Users, Target, Award, TrendingUp, Briefcase, Building2, ChevronRight, Sparkles } from "lucide-react";
+import { ArrowRight, Phone, Heart, Clock, Shield, DollarSign, Users, MapPin, Award, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import davidHero from "@/assets/david-stein-hero.jpg";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.7, ease: "easeOut" as const },
+    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
   }),
 };
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-ohio-grey-dark text-primary-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,4%)] via-[hsl(0,0%,7%)] to-[hsl(0,0%,5%)]" />
-        <div className="absolute top-[-250px] right-[-250px] w-[1000px] h-[1000px] bg-primary/[0.15] rounded-full blur-[200px]" />
-        <div className="absolute bottom-[-200px] left-[-200px] w-[800px] h-[800px] bg-primary/[0.1] rounded-full blur-[180px]" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[250px]" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-        <div className="absolute top-0 right-0 w-[400px] h-full bg-gradient-to-b from-primary/[0.08] to-transparent skew-x-[-12deg] translate-x-24" />
-        <div className="absolute bottom-0 left-0 w-[200px] h-1/2 bg-gradient-to-t from-primary/[0.05] to-transparent skew-x-[12deg] -translate-x-10" />
-
-        <div className="container relative text-center">
-          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }}>
-            <div className="inline-flex items-center gap-3 bg-primary/30 border-2 border-primary/50 rounded-full px-8 py-3.5 mb-12 shadow-[0_0_40px_hsl(0_80%_42%/0.25)]">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-sm font-black text-primary tracking-[0.2em] uppercase">Our Story</span>
-            </div>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.8 }}
-            className="font-display text-7xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-black leading-[0.8] mb-12 text-glow-white"
-          >
-            About
-            <br />
-            <span className="text-primary text-glow-red relative inline-block">
-              Buckeye Biz Hub
-              <motion.div
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 h-2 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "85%" }}
-                transition={{ delay: 0.9, duration: 0.9 }}
-              />
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/50 max-w-4xl mx-auto font-bold tracking-wide"
-          >
-            Rooted in Ohio. Built to Grow Your Business.
-          </motion.p>
-        </div>
-      </section>
-
-      {/* 50+ Years Experience */}
-      <section className="py-28 lg:py-36 relative overflow-hidden bg-[hsl(0,0%,6%)]">
-        <div className="absolute top-[-150px] right-[-150px] w-[700px] h-[700px] bg-primary/[0.08] rounded-full blur-[170px]" />
-        <div className="absolute bottom-[-100px] left-[-100px] w-[500px] h-[500px] bg-primary/[0.05] rounded-full blur-[140px]" />
-        <div className="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-transparent via-primary/70 to-transparent" />
+      <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-ohio-grey-dark">
+        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/90 via-ohio-grey-dark to-ohio-navy/80" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
         <div className="container relative">
-          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={0}
-              variants={fadeUp}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
             >
-              <span className="inline-block bg-primary/30 border-2 border-primary/50 text-primary text-xs font-black uppercase tracking-[0.3em] px-7 py-2.5 rounded-full mb-8 shadow-[0_0_25px_hsl(0_80%_42%/0.2)]">
-                01 — Our Mission
+              <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+                About Us
               </span>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 text-glow-white leading-[0.85]">
-                50+ Years of <span className="text-primary text-glow-red">Combined Experience</span>
-              </h2>
-              <p className="text-lg md:text-xl text-primary-foreground/50 leading-[1.8]">
-                We bring over 50 years of combined experience in printing, branding, and business development directly to your project. Our mission is simple: we provide the tools, strategy, and high-quality materials you need to grow your brand and succeed.
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6 text-primary-foreground">
+                Meet the Team Behind{" "}
+                <span className="text-primary">Buckeye Biz Hub</span>
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/60 leading-relaxed max-w-lg">
+                Ohio-owned. Locally rooted. Here to help small businesses thrive.
               </p>
             </motion.div>
 
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              custom={1}
-              variants={fadeUp}
-              className="grid grid-cols-2 gap-7"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="relative"
             >
-              {[
-                { icon: Award, number: "50+", label: "Years Combined Experience" },
-                { icon: TrendingUp, number: "3", label: "Businesses Built & Sold" },
-                { icon: Target, number: "100%", label: "Client-Focused Approach" },
-                { icon: Briefcase, number: "∞", label: "Dedication to Your Growth" },
-              ].map((stat, idx) => (
-                <motion.div
-                  key={stat.label}
-                  custom={idx + 2}
-                  variants={fadeUp}
-                  className="group bg-primary-foreground/[0.04] border border-primary-foreground/10 rounded-2xl p-8 text-center hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_50px_hsl(0_80%_42%/0.2)] hover:-translate-y-2 relative overflow-hidden"
-                >
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-primary/20 border-2 border-primary/40 flex items-center justify-center group-hover:bg-primary/30 group-hover:shadow-[0_0_25px_hsl(0_80%_42%/0.3)] transition-all duration-300">
-                    <stat.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="font-display text-4xl md:text-5xl font-black text-primary text-glow-red mb-2">{stat.number}</div>
-                  <div className="text-xs font-bold text-primary-foreground/40 uppercase tracking-[0.15em]">{stat.label}</div>
-                </motion.div>
-              ))}
+              <div className="rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl">
+                <img
+                  src={davidHero}
+                  alt="David Stein, Founder of Buckeye Biz Hub"
+                  className="w-full h-[350px] md:h-[450px] object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground rounded-2xl px-6 py-3 shadow-lg">
+                <p className="text-sm font-bold">David Stein</p>
+                <p className="text-xs text-primary-foreground/80">Founder & Owner</p>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Network */}
-      <section className="py-28 lg:py-36 relative overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute bottom-[-150px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.07] rounded-full blur-[160px]" />
-        <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-primary/[0.05] rounded-full blur-[120px]" />
-        <div className="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-transparent via-primary/70 to-transparent" />
-
-        <div className="container relative">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            custom={0}
-            variants={fadeUp}
-            className="max-w-5xl mx-auto text-center mb-20"
-          >
-            <span className="inline-block bg-primary/30 border-2 border-primary/50 text-primary text-xs font-black uppercase tracking-[0.3em] px-7 py-2.5 rounded-full mb-8 shadow-[0_0_25px_hsl(0_80%_42%/0.2)]">
-              02 — Our Network
-            </span>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-10 text-glow-white leading-[0.85]">
-              A Team Built for <span className="text-primary text-glow-red">Your Success</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-primary-foreground/50 leading-relaxed max-w-3xl mx-auto">
-              Building a business takes more than just a great idea. It requires a dedicated team and a comprehensive strategy. That is why we have cultivated a vast network of industry professionals to support your growth.
-            </p>
-          </motion.div>
-
+      {/* Open Letter */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            custom={1}
+            custom={0}
             variants={fadeUp}
-            className="max-w-5xl mx-auto relative"
+            className="max-w-3xl mx-auto"
           >
-            <div className="bg-primary-foreground/[0.04] border-2 border-primary/20 rounded-3xl p-12 md:p-16 relative overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_60px_hsl(0_80%_42%/0.12)]">
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-ohio-red-light to-primary" />
-              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-ohio-red-light to-primary opacity-30" />
-              <p className="text-xl md:text-2xl text-primary-foreground/55 leading-[1.8] text-center">
-                When you work with us, you gain access to top-tier experts in <span className="text-primary font-black">advertising</span>, <span className="text-primary font-black">business printing</span>, <span className="text-primary font-black">small business building</span>, and <span className="text-primary font-black">search engine optimization (SEO)</span>. We pool our knowledge to solve your unique challenges, create exceptional printed materials, and put your brand in front of the right audience.
-              </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-foreground leading-tight">
+              An Open Letter from{" "}
+              <span className="text-primary">David Stein</span>{" "}
+              & the Buckeye Biz Hub Team
+            </h2>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-12" />
+
+            <div className="prose prose-lg max-w-none text-muted-foreground leading-[1.9] space-y-6">
+              <p className="text-xl font-medium text-foreground italic">Dear fellow Ohio business owners,</p>
+
+              <p>My name is David Stein, and together with my team here at Buckeye Biz Hub, I want to personally welcome you.</p>
+
+              <p>I'm a third-generation entrepreneur. I grew up watching my family build and run businesses right here in Ohio, so I know exactly how hard it is to make every single dollar count. Every expense matters. Every decision can mean the difference between just surviving and actually thriving.</p>
+
+              <p>For years I worked as a business consultant, helping over 35 different local Ohio companies with everything from branding and marketing to signage, business printing, SEO, promotional products, vehicle wraps, and full rebrand strategies. Along the way I've helped those businesses save more than <span className="text-primary font-bold">$1.3 million</span> in unnecessary spending — not by cutting corners, but by guiding them to the best options with complete honesty and transparency.</p>
+
+              <p>That experience showed me something important: too many hardworking small businesses in Columbus and across Ohio are being held back by slow turnaround times, hidden fees, and generic service from big out-of-state companies.</p>
+
+              <p className="text-xl font-bold text-foreground">So we started Buckeye Biz Hub.</p>
+
+              <p>We're a 100% Ohio-owned and operated company built on one simple promise: help small businesses not just survive, but thrive. Whether you run a dental practice, HVAC company, restaurant, landscaping crew, auto dealership, real estate agency, construction firm, or any other local business, we want to be the partner that makes your brand stand out — without wasting a single dollar.</p>
+
+              <p>We believe every Ohio business deserves to look as professional as the big guys — without the big-guy prices or wait times. That's why we offer 24-hour quotes, full pricing transparency up front (nothing ever hidden), and a genuine commitment to your success.</p>
+
+              <p>If you're reading this, thank you for being part of the Ohio small-business community. We're here for you — not just as vendors, but as fellow Ohioans who want to see you win.</p>
+
+              <p className="text-xl font-semibold text-foreground mt-8">Let's build something great together.</p>
+
+              <div className="mt-10 pt-8 border-t border-border">
+                <p className="mb-0 italic text-foreground">With gratitude,</p>
+                <p className="text-2xl font-display font-black text-primary mb-1">David Stein</p>
+                <p className="text-sm text-muted-foreground font-medium">Founder & Owner</p>
+                <p className="text-sm text-muted-foreground font-medium">Buckeye Biz Hub</p>
+                <p className="text-sm text-muted-foreground font-medium">Columbus, Ohio</p>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* David Stein – Leadership */}
-      <section className="py-28 lg:py-36 relative overflow-hidden bg-[hsl(0,0%,5%)]">
-        <div className="absolute top-[-150px] left-[-150px] w-[700px] h-[700px] bg-primary/[0.08] rounded-full blur-[170px]" />
-        <div className="absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] bg-primary/[0.06] rounded-full blur-[140px]" />
-        <div className="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-transparent via-primary/70 to-transparent" />
-
-        <div className="container relative">
+      {/* David's Consulting Impact */}
+      <section className="py-20 lg:py-28 bg-ohio-cream">
+        <div className="container">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-60px" }}
             custom={0}
             variants={fadeUp}
-            className="text-center mb-20"
+            className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-block bg-primary/30 border-2 border-primary/50 text-primary text-xs font-black uppercase tracking-[0.3em] px-7 py-2.5 rounded-full mb-8 shadow-[0_0_25px_hsl(0_80%_42%/0.2)]">
-              03 — Leadership
+            <span className="inline-block bg-ohio-forest/10 border border-ohio-forest/30 text-ohio-forest text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+              Consulting Impact
             </span>
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 text-glow-white leading-[0.85]">
-              Meet <span className="text-primary text-glow-red">David Stein</span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-foreground leading-tight">
+              Business Consultant &{" "}
+              <span className="text-primary">Local Partner</span>
             </h2>
-            <h3 className="text-2xl md:text-3xl text-primary-foreground/50 font-bold uppercase tracking-wider">
-              Co-Founder & Head of Business Development
-            </h3>
-          </motion.div>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-12">
+              In addition to running Buckeye Biz Hub, David has personally consulted with and helped over{" "}
+              <span className="text-primary font-bold">35 different local Ohio companies</span> — saving them more than{" "}
+              <span className="text-primary font-bold">$1.3 million</span> in unnecessary spending through honest guidance on branding, marketing, signage, business printing, SEO, promotional products, vehicle wraps, and complete rebrand strategies.
+            </p>
 
-          <div className="grid lg:grid-cols-[1.3fr_1fr] gap-16 items-start">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              custom={1}
-              variants={fadeUp}
-            >
-              {/* Featured quote card */}
-              <div className="bg-primary-foreground/[0.04] border-2 border-primary/20 rounded-3xl p-10 md:p-14 relative overflow-hidden mb-8 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_50px_hsl(0_80%_42%/0.12)]">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary via-ohio-red-light to-primary" />
-                <div className="absolute top-6 left-10 text-primary/20 font-display text-[6rem] leading-none font-black">"</div>
-                <p className="text-lg md:text-xl text-primary-foreground/55 leading-[1.8] relative z-10 mb-8">
-                  David Stein knows exactly what it takes to build a company from the ground up. David has successfully started and sold three different businesses across the <span className="text-primary font-black">hospitality</span>, <span className="text-primary font-black">restaurant</span>, and <span className="text-primary font-black">business printing</span> sectors.
-                </p>
-                <p className="text-lg md:text-xl text-primary-foreground/55 leading-[1.8] relative z-10">
-                  He understands the daily hurdles business owners face and uses his firsthand experience to guide our clients toward sustainable, long-term growth.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              custom={2}
-              variants={fadeUp}
-              className="flex flex-col gap-6"
-            >
-              <div className="text-xs font-black text-primary uppercase tracking-[0.3em] mb-2">Businesses Founded & Sold</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { icon: Building2, title: "Hospitality", desc: "Built and sold a successful hospitality business" },
-                { icon: Briefcase, title: "Restaurant", desc: "Founded and exited a thriving restaurant venture" },
-                { icon: Award, title: "Business Printing", desc: "Created and sold a profitable printing company" },
-              ].map((biz, idx) => (
+                { icon: Users, number: "35+", label: "Ohio Companies Helped" },
+                { icon: DollarSign, number: "$1.3M+", label: "Saved for Clients" },
+                { icon: Award, number: "3rd Gen", label: "Entrepreneur" },
+                { icon: TrendingUp, number: "100%", label: "Transparent Pricing" },
+              ].map((stat, idx) => (
                 <motion.div
-                  key={biz.title}
-                  custom={idx + 3}
+                  key={stat.label}
+                  custom={idx + 1}
                   variants={fadeUp}
-                  className="group flex items-center gap-6 bg-primary-foreground/[0.04] border-2 border-primary-foreground/10 rounded-2xl p-7 hover:border-primary/60 transition-all duration-500 hover:shadow-[0_0_50px_hsl(0_80%_42%/0.2)] hover:-translate-y-1 relative overflow-hidden"
+                  className="bg-background border border-border rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-primary/20 border-2 border-primary/40 flex items-center justify-center group-hover:bg-primary/30 group-hover:shadow-[0_0_20px_hsl(0_80%_42%/0.25)] transition-all duration-300">
-                    <biz.icon className="w-8 h-8 text-primary" />
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <stat.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-display text-2xl font-black mb-1 group-hover:text-primary transition-colors duration-300">{biz.title}</h4>
-                    <p className="text-sm text-primary-foreground/40 font-medium">{biz.desc}</p>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-primary-foreground/20 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
+                  <div className="text-2xl md:text-3xl font-black text-primary mb-1">{stat.number}</div>
+                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{stat.label}</div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Why */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            custom={0}
+            variants={fadeUp}
+            className="text-center mb-14"
+          >
+            <span className="inline-block bg-ohio-navy/10 border border-ohio-navy/30 text-ohio-navy text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+              Our Why
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              Why We Do <span className="text-primary">What We Do</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                icon: Heart,
+                title: "Help Ohio Businesses Thrive",
+                desc: "A deep desire to help local small businesses not just survive — but truly thrive and grow.",
+              },
+              {
+                icon: Clock,
+                title: "24-Hour Quotes",
+                desc: "Fast turnaround with full pricing transparency on every single project, every time.",
+              },
+              {
+                icon: MapPin,
+                title: "Real Local Support",
+                desc: "We're real Ohioans right here in Columbus — not a faceless, out-of-state call center.",
+              },
+              {
+                icon: Shield,
+                title: "Premium Without the Markup",
+                desc: "Big-brand quality at honest prices. No hidden fees, no surprises, no games.",
+              },
+            ].map((card, idx) => (
+              <motion.div
+                key={card.title}
+                custom={idx + 1}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                className="bg-ohio-cream border border-border rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <card.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-black mb-3 text-foreground">{card.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Your Goals = Our Goals */}
-      <section className="py-28 lg:py-36 relative overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute top-[-150px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.07] rounded-full blur-[160px]" />
-        <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-primary/[0.04] rounded-full blur-[120px]" />
-        <div className="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-transparent via-primary/70 to-transparent" />
-
-        <div className="container relative">
+      {/* Final CTA */}
+      <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/60 via-ohio-grey-dark to-ohio-navy/40" />
+        <div className="container relative text-center">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            custom={0}
-            variants={fadeUp}
-            className="max-w-5xl mx-auto text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
-            <span className="inline-block bg-primary/30 border-2 border-primary/50 text-primary text-xs font-black uppercase tracking-[0.3em] px-7 py-2.5 rounded-full mb-8 shadow-[0_0_25px_hsl(0_80%_42%/0.2)]">
-              04 — Our Promise
-            </span>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-10 text-glow-white leading-[0.85]">
-              Your Goals Are <span className="text-primary text-glow-red">Our Goals</span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-primary-foreground mb-6 leading-tight max-w-4xl mx-auto">
+              Ready to Partner with a Company That Truly{" "}
+              <span className="text-primary">Cares About Your Success?</span>
             </h2>
-            <p className="text-xl md:text-2xl text-primary-foreground/50 leading-[1.8] max-w-3xl mx-auto mb-14">
-              Whether you need a complete branding overhaul, high-volume commercial printing, or a localized SEO strategy, our team has the background to make it happen. We treat your business goals as our own.
+            <p className="text-lg md:text-xl text-primary-foreground/50 mb-10 max-w-2xl mx-auto">
+              Let's have a real conversation about how we can help your business grow.
             </p>
-            <div className="flex flex-wrap justify-center gap-5">
-              {["Branding Overhaul", "Commercial Printing", "SEO Strategy", "Business Growth"].map((item) => (
-                <div key={item} className="flex items-center gap-2 bg-primary/15 border border-primary/30 rounded-full px-6 py-3 shadow-[0_0_15px_hsl(0_80%_42%/0.1)]">
-                  <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(0_80%_42%/0.5)]" />
-                  <span className="text-sm font-bold text-primary-foreground/60 uppercase tracking-wider">{item}</span>
-                </div>
-              ))}
-            </div>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider"
+              >
+                <Phone className="w-6 h-6" />
+                Get Your Free Quote in 24 Hours
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-36 lg:py-44 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(0,0%,4%)]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,3%)] via-[hsl(0,0%,6%)] to-[hsl(0,0%,3%)]" />
-        <div className="absolute top-[-250px] right-[-150px] w-[900px] h-[900px] bg-primary/[0.12] rounded-full blur-[220px]" />
-        <div className="absolute bottom-[-250px] left-[-150px] w-[700px] h-[700px] bg-primary/[0.1] rounded-full blur-[200px]" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
-
-        <div className="container relative text-center">
-          <motion.div initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
-            <div className="inline-flex items-center gap-3 mb-12">
-              <Star className="w-7 h-7 text-primary fill-primary" />
-              <Star className="w-9 h-9 text-primary fill-primary" />
-              <Star className="w-7 h-7 text-primary fill-primary" />
-            </div>
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-foreground mb-10 leading-[0.82] text-glow-white max-w-5xl mx-auto">
-              Let Us Turn Your Vision Into a{" "}
-              <span className="text-primary text-glow-red">Thriving Brand</span>
-            </h2>
-          </motion.div>
-          <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/45 mb-16 font-medium max-w-3xl mx-auto leading-relaxed">
-            Contact our team today to discuss your next project.
-          </motion.p>
-          <motion.div initial={{ opacity: 0, y: 35 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-            <Link to="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-xl sm:text-2xl px-16 py-10 rounded-2xl shadow-[0_0_80px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_120px_hsl(0_80%_42%/0.7)] transition-all duration-400 group uppercase tracking-[0.15em]" style={{ animation: 'pulse-glow 3s infinite' }}>
-                <Phone className="w-7 h-7" />
-                Get Your Free Quote Today
-                <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" />
-              </Button>
-            </Link>
-          </motion.div>
+      {/* Trust Bar */}
+      <section className="py-6 bg-ohio-navy">
+        <div className="container">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-primary-foreground/60 text-sm font-medium">
+            {[
+              "35+ Ohio Companies Helped",
+              "$1.3 Million+ Saved",
+              "100% Satisfaction Guaranteed",
+              "Columbus, Ohio",
+            ].map((item, idx) => (
+              <span key={item} className="flex items-center gap-2">
+                {idx > 0 && <span className="hidden sm:inline text-primary-foreground/20">•</span>}
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
