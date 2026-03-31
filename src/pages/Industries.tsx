@@ -103,7 +103,7 @@ const industries = [
       "Open house banners & A-frame displays",
       "Just-sold postcards & direct mail",
     ],
-    quote: "My branded closing gift packages have become a huge referral driver. Clients love them and remember my name.",
+    quote: "My branded closing gift packages have become a huge referral driver. Clients love them and remember my name long after closing.",
     ctaLabel: "Get Real Estate Quote",
   },
   {
