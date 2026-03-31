@@ -88,7 +88,7 @@ const industries = [
       "Promotional giveaways (seed packets, koozies)",
       "Estimate folders & door hangers",
     ],
-    quote: "Every yard sign we plant at a job generates at least 2–3 calls from neighbors. It's been incredible for growth.",
+    quote: "Every yard sign we plant at a job generates calls from neighbors. It's been incredible for growing our local customer base.",
     ctaLabel: "Get Landscaping Quote",
   },
   {
