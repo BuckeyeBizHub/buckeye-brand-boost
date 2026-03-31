@@ -108,7 +108,7 @@ const About = () => {
               <div className="mt-10 pt-8 border-t border-border">
                 <p className="mb-0 italic text-foreground">With gratitude,</p>
                 <p className="text-2xl font-display font-black text-primary mb-1">David Stein</p>
-                <p className="text-sm text-muted-foreground font-medium">Founder & Owner</p>
+                <p className="text-sm text-muted-foreground font-medium">Co-Founder & Owner</p>
                 <p className="text-sm text-muted-foreground font-medium">Buckeye Biz Hub</p>
                 <p className="text-sm text-muted-foreground font-medium">Columbus, Ohio</p>
               </div>
