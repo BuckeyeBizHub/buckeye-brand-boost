@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import fleetWrapHvac from "@/assets/fleet-wrap-hvac.jpg";
 import {
   PHOTO_VEHICLE_1, PHOTO_VEHICLE_2, PHOTO_VEHICLE_3, PHOTO_VEHICLE_5, PHOTO_VEHICLE_6,
   PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_6, PHOTO_PRINT_8,
@@ -17,11 +18,11 @@ type Category = typeof categories[number];
 
 const projects = [
   {
-    image: PHOTO_VEHICLE_1,
+    image: fleetWrapHvac,
     title: "Full Fleet Wrap – Columbus HVAC Company",
     category: "Vehicle Branding" as Category,
     description: "Designed and installed full wraps on 12 service vans for a growing Columbus HVAC contractor. Bold red and white branding with contact info visible from 100+ feet away.",
-    results: ["Branded 12 vehicles in 3 weeks", "70K+ daily impressions per van", "35% increase in inbound calls"],
+    results: ["Branded 12 vehicles in just 3 weeks", "70K+ daily impressions per van", "35% increase in inbound calls", "Saved the customer over $1,500 per vehicle by connecting them to a well-known installer in our network"],
     tags: ["Fleet Wraps", "Columbus", "HVAC"],
   },
   {
