@@ -34,6 +34,14 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import brochuresHero from "@/assets/brochures-hero.jpg";
+import halfFoldImg from "@/assets/folds/half-fold.png";
+import trifoldImg from "@/assets/folds/trifold.png";
+import zFoldImg from "@/assets/folds/z-fold.png";
+import gateFoldImg from "@/assets/folds/gate-fold.png";
+import accordionFoldImg from "@/assets/folds/accordion-fold.png";
+import doubleParallelFoldImg from "@/assets/folds/double-parallel-fold.png";
+import frenchFoldImg from "@/assets/folds/french-fold.png";
+import parallelMapFoldImg from "@/assets/folds/parallel-map-fold.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
