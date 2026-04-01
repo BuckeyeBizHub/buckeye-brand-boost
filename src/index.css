@@ -98,6 +98,9 @@
   .section-glow {
     @apply absolute rounded-full blur-[180px];
   }
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
 }
 
 @keyframes pulse-glow {

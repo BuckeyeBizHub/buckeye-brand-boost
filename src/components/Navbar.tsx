@@ -193,7 +193,7 @@ const Navbar = () => {
                         key={item.label}
                         to={item.href}
                         onClick={() => setOpen(false)}
-                        className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
+                        className={`block px-10 py-4 text-sm font-bold uppercase tracking-widest transition-colors ${
                           isActive(item.href) ? "text-primary" : "text-primary-foreground/40 hover:text-primary"
                         }`}
                       >
