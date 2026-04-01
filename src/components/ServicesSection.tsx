@@ -38,6 +38,12 @@ const services = [
     href: "/yard-signs-and-signage",
   },
   {
+    icon: Package,
+    title: "Banners, Flags & Decals",
+    desc: "Custom banners, feather flags, and decals that grab attention and drive traffic.",
+    href: "/services",
+  },
+  {
     icon: Car,
     title: "Vehicle Wraps & Fleet Branding",
     desc: "Turn your vehicles into powerful 24/7 advertisements.",
@@ -82,10 +88,10 @@ const ServicesSection = () => {
             What We Offer
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-            Our 9 Core <span className="text-primary">Services</span>
+            Our 10 Core <span className="text-primary">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Everything your Ohio business needs to look professional and grow — from business cards to full rebrands and everything in between.
+            From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
           </p>
         </motion.div>
 
