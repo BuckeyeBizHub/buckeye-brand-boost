@@ -53,14 +53,14 @@ const fadeUp = {
 };
 
 const foldTypes = [
-  { title: "Bi-Fold", icon: Columns2, desc: "Classic single-fold for menus, programs, and simple product overviews." },
-  { title: "Tri-Fold", icon: LayoutGrid, desc: "The most popular brochure fold — perfect for rack cards, trade shows, and mailers." },
-  { title: "Z-Fold", icon: FoldVertical, desc: "Unfolds in a zigzag pattern — great for step-by-step guides and maps." },
-  { title: "Gate Fold", icon: PanelLeft, desc: "Two panels fold inward to reveal a dramatic center spread — ideal for luxury brands." },
-  { title: "Accordion Fold", icon: AlignJustify, desc: "Multiple panels fold like an accordion — perfect for timelines and multi-step processes." },
-  { title: "Roll Fold", icon: GalleryHorizontalEnd, desc: "Panels roll inward sequentially — commonly used for travel and tourism brochures." },
-  { title: "Double Parallel Fold", icon: CopySlash, desc: "Two parallel folds create four panels — great for compact product catalogs." },
-  { title: "French Fold", icon: BookMarked, desc: "Folded in half both ways for a thick, premium feel — ideal for invitations and event programs." },
+  { title: "Half-Fold", panels: "2-Panel", image: halfFoldImg, desc: "Popularly known as bifold brochures, this type is made up of two panels, folding the total space in half. This style works best for simple business presentations. The large space can introduce one or two products or services." },
+  { title: "Tri-Fold", panels: "3-Panel", image: trifoldImg, desc: "The trifold divides your brochure into three vertical panels, allowing your customer to take in information in a specific sequence. This is one of the most popular options because it's compact, holds a lot of information, and fits in most rack card slots. Take advantage of the trifold by creating engaging content divided per panel." },
+  { title: "Z-Fold", panels: "3-Panel", image: zFoldImg, desc: "This fold divides your brochure into three vertical panels into its distinctive \"Z\" shape. Each panel folds on top of one another and efficiently presents different features of a product or service. Z-fold brochures are also commonly used for content with multiple language translations. When unfolded, all panels create one whole unified page." },
+  { title: "Gate Fold", panels: "3-Panel", image: gateFoldImg, desc: "This brochure has a three-panel design where the two front panels fold inward to form the \"gate.\" The front panels can reveal an image or infographic that unveils a new offer from your business. We recommend gate fold brochures for presentations that focus on design or a \"big reveal\" — they typically catch more attention." },
+  { title: "Accordion Fold", panels: "4-Panel", image: accordionFoldImg, desc: "The accordion fold divides your brochure into four panels that fold on top of one another. This option unfolds information in an organized and sequential manner — like the Z-fold, but with four panels. It's simpler to design because of its chronological presentation. Use accordion folds for event brochures with day-to-day schedules or maps." },
+  { title: "Double Parallel Fold", panels: "4-Panel", image: doubleParallelFoldImg, desc: "The double parallel fold divides your brochure into four panels that are parallel and stand in the same direction. Usually printed on larger paper for extra design space. Use these to give customers a detailed company overview, categorize different product offers, or add a fillable form." },
+  { title: "French Fold", panels: "4-Panel", image: frenchFoldImg, desc: "This fold divides your brochure into four panels. The paper is folded in half, then folded again perpendicular to the first fold. The total space is large enough to show photographs of your products. Popular for programs and promotional pieces, especially when a full-size image on the inside is needed." },
+  { title: "Parallel Map Fold", panels: "4-Panel", image: parallelMapFoldImg, desc: "This fold divides the brochure into four vertical panels directly adjacent to one another when fully opened. A parallel map brochure opens like a folder, then unfolds further. Use the long height per panel to showcase your services in detail." },
 ];
 
 const printingServices = [
