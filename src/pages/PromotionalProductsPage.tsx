@@ -29,6 +29,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 
 import brandedDrinkware from "@/assets/branded-drinkware-tumblers.jpg";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
