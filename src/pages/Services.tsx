@@ -17,6 +17,7 @@ import vehicleWrapImg from "@/assets/vehicle-wrap-product.jpg";
 import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 import websiteImg from "@/assets/service-website-design.jpg";
 import seoImg from "@/assets/service-local-seo.jpg";
+import bannersImg from "@/assets/service-banners-flags-decals.jpg";
 
 const services = [
   {
