@@ -37,6 +37,11 @@ import doubleParallelFoldImg from "@/assets/folds/double-parallel-fold.png";
 import frenchFoldImg from "@/assets/folds/french-fold.png";
 import parallelMapFoldImg from "@/assets/folds/parallel-map-fold.png";
 
+import paper70lb from "@/assets/paper/70lb.jpg";
+import paper80lb from "@/assets/paper/80lb.jpg";
+import paper100lb from "@/assets/paper/100lb.jpg";
+import cardstock10pt from "@/assets/paper/10pt.jpg";
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
@@ -84,13 +89,17 @@ const printingServices = [
   },
 ];
 
-const paperStocks = [
-  { name: "70lb Uncoated Text", best: "Flyers, inserts, and internal documents where writability matters." },
-  { name: "80lb Gloss Text", best: "Standard brochures and flyers with vivid photo reproduction." },
-  { name: "100lb Gloss Text", best: "Premium brochures and catalogs with a substantial, high-quality feel." },
-  { name: "100lb Gloss Cover (10pt)", best: "Postcards, rack cards, and door hangers that need stiffness and durability." },
-  { name: "14pt Cardstock", best: "Premium postcards, table tents, and thick marketing collateral." },
-  { name: "Linen & Cotton", best: "Letterhead and stationery with a sophisticated, textured feel." },
+const paperWeights = [
+  { name: "70 lb.", image: paper70lb, desc: "Our thinnest available paper stock, but still durable. This paper weight is best used for inside pages of catalogs and booklets." },
+  { name: "80 lb.", image: paper80lb, desc: "Thicker than our 70 lb. paper, this stock works great for posters with the added durability." },
+  { name: "100 lb.", image: paper100lb, desc: "This paper stock is the thickest available. It's ideal for flyers and brochures, as the thickness helps it withstand increased handling." },
+];
+
+const cardstockWeights = [
+  { name: "10 pt.", image: cardstock10pt, desc: "Our thinnest available cardstock which makes it ideal for folding. Well-suited for greeting cards." },
+  { name: "14 pt.", desc: "Popularly used for business cards, presentation folders, and booklet covers." },
+  { name: "16 pt.", desc: "Slightly thicker cardstock option best suited for invitations." },
+  { name: "17 pt.", desc: "Our thickest and sturdiest cardstock ideal for direct mail postcards." },
 ];
 
 const finishes = [
@@ -333,27 +342,62 @@ const BrochuresAndPrinting = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Paper Stocks */}
+            {/* Paper Stock */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
-                <Layers className="w-6 h-6 text-primary" /> Popular Paper Stocks
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
+                <Layers className="w-6 h-6 text-primary" /> Paper Stock
               </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Also called book or text, this type of paper is made specifically for print. This type of stock is typically used for flyers, brochures, and posters. The thickness is measured in pounds (lb.), called the basis weight. In the United States, the basis weight is defined as the weight of 500 sheets of paper in its basic production size. The higher the basis weight, the thicker the paper.
+              </p>
               <div className="space-y-4">
-                {paperStocks.map((stock) => (
-                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50">
-                    <p className="font-bold text-foreground mb-1">{stock.name}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{stock.best}</p>
+                {paperWeights.map((stock) => (
+                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
+                    <img src={stock.image} alt={`${stock.name} paper thickness`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-foreground mb-1">{stock.name}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{stock.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Finishes */}
+            {/* Cardstock */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
+                <Layers className="w-6 h-6 text-primary" /> Cardstock
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Also called cover stock, cardstock is thicker than paper stock but is more flexible than a paperboard. The thickness makes it ideal for business cards, postcards, and greeting cards. Cardstock is measured in points (pt.) derived from the thickness of a single piece of paper. A paper measuring .014 inch thick would have a 14 pt. measurement. The larger the number, the thicker the paper.
+              </p>
+              <div className="space-y-4">
+                {cardstockWeights.map((stock) => (
+                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
+                    {stock.image ? (
+                      <img src={stock.image} alt={`${stock.name} cardstock thickness`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                    ) : (
+                      <div className="w-24 h-16 bg-muted/50 rounded flex items-center justify-center flex-shrink-0">
+                        <span className="text-xs font-bold text-muted-foreground">{stock.name}</span>
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-bold text-foreground mb-1">{stock.name}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{stock.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Finishes section below */}
+          <div className="mt-14">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
                 <Sparkles className="w-6 h-6 text-primary" /> Finishes & Enhancements
               </h3>
-              <div className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {finishes.map((f) => (
                   <div key={f.name} className="bg-card rounded-xl p-5 border border-border/50">
                     <p className="font-bold text-foreground mb-1">{f.name}</p>
