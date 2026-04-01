@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImg from "@/assets/business-cards-hero.jpg";
 import businessCardsImg from "@/assets/business-cards-product.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 /* ── data ── */
 const cardOptions = [
@@ -103,6 +104,8 @@ const BusinessCards = () => {
       address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
     },
   };
+
+    usePageTitle("Business Cards Columbus Ohio");
 
   return (
     <div className="min-h-screen">

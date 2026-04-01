@@ -16,6 +16,7 @@ import decalsImg from "@/assets/vehicle-wrap-decals-real.jpg";
 import magneticImg from "@/assets/vehicle-wrap-magnetic-real.jpg";
 import windowImg from "@/assets/vehicle-wrap-window-real.jpg";
 import fleetImg from "@/assets/vehicle-wrap-fleet-real.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -76,7 +77,10 @@ const faqJsonLd = {
   })),
 };
 
-const VehicleWrapsAndFleet = () => (
+const VehicleWrapsAndFleet = () => {
+  usePageTitle("Vehicle Wraps & Fleet Branding Columbus Ohio");
+
+  return (
   <div className="min-h-screen">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -319,5 +323,7 @@ const VehicleWrapsAndFleet = () => (
     <Footer />
   </div>
 );
+
+};
 
 export default VehicleWrapsAndFleet;

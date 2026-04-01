@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const Testimonials = () => {
   const jsonLd = {
@@ -16,6 +17,8 @@ const Testimonials = () => {
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
+
+    usePageTitle("Client Reviews & Testimonials Columbus Ohio");
 
   return (
     <div className="min-h-screen">

@@ -41,6 +41,7 @@ import promoAwards from "@/assets/promo-awards-recognition.jpg";
 import promoOutdoor from "@/assets/promo-outdoor.jpg";
 import promoHolidayGifts from "@/assets/promo-holiday-gifts.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -206,6 +207,8 @@ const PromotionalProductsPage = () => {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
+
+    usePageTitle("Promotional Products Columbus Ohio");
 
   return (
     <div className="min-h-screen">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Sparkles, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const sections = [
   {
@@ -62,7 +63,10 @@ const sections = [
   },
 ];
 
-const PrivacyPolicy = () => (
+const PrivacyPolicy = () => {
+  usePageTitle("Privacy Policy");
+
+  return (
   <div className="min-h-screen">
     <Navbar />
 
@@ -123,5 +127,7 @@ const PrivacyPolicy = () => (
     <Footer />
   </div>
 );
+
+};
 
 export default PrivacyPolicy;

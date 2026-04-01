@@ -18,6 +18,7 @@ import promoImg from "@/assets/promo-drinkware.jpg";
 import websiteImg from "@/assets/rebrand-website.jpg";
 import seoImg from "@/assets/rebrand-seo.jpg";
 import styleGuideImg from "@/assets/rebrand-style-guide.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -70,7 +71,10 @@ const faqJsonLd = {
   })),
 };
 
-const FullRebrandKits = () => (
+const FullRebrandKits = () => {
+  usePageTitle("Full Rebrand Kits Columbus Ohio");
+
+  return (
   <div className="min-h-screen">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -267,5 +271,7 @@ const FullRebrandKits = () => (
     <Footer />
   </div>
 );
+
+};
 
 export default FullRebrandKits;

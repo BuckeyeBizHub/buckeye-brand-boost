@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -16,6 +17,8 @@ const fadeUp = {
 };
 
 const About = () => {
+    usePageTitle("About Us - Ohio's Local Branding Experts");
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

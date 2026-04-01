@@ -35,6 +35,7 @@ import businessCardsStack from "@/assets/business-cards-letterhead-stack.jpg";
 import yardSignInstall from "@/assets/yard-sign-installation.jpg";
 import brochuresFlyers from "@/assets/brochures-flyers-layou.jpg";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -140,6 +141,8 @@ const trustPoints = [
 ];
 
 const BusinessPrinting = () => {
+    usePageTitle("Business Printing Services Columbus Ohio");
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

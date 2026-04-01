@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 
 import heroImg from "@/assets/local-seo-hero.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -68,7 +69,10 @@ const faqJsonLd = {
   })),
 };
 
-const LocalSeo = () => (
+const LocalSeo = () => {
+  usePageTitle("Local SEO & Google Ranking Columbus Ohio");
+
+  return (
   <div className="min-h-screen">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -270,5 +274,7 @@ const LocalSeo = () => (
     <Footer />
   </div>
 );
+
+};
 
 export default LocalSeo;

@@ -42,6 +42,7 @@ import paper70lb from "@/assets/paper/70lb.jpg";
 import paper80lb from "@/assets/paper/80lb.jpg";
 import paper100lb from "@/assets/paper/100lb.jpg";
 import cardstock10pt from "@/assets/paper/10pt.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -152,6 +153,8 @@ const BrochuresAndPrinting = () => {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
+
+    usePageTitle("Brochures & Business Printing Columbus Ohio");
 
   return (
     <div className="min-h-screen">

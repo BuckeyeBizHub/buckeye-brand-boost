@@ -35,6 +35,7 @@ import coroplastSign from "@/assets/yard-sign-coroplast-real.jpg";
 import realEstateSign from "@/assets/yard-sign-realestate-real.jpg";
 import jobsiteBanner from "@/assets/yard-sign-jobsite-real.jpg";
 import eventDirectional from "@/assets/yard-sign-event-directional-real.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -140,6 +141,8 @@ const YardSignsAndSignage = () => {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
+
+    usePageTitle("Yard Signs & Custom Signage Columbus Ohio");
 
   return (
     <div className="min-h-screen">
