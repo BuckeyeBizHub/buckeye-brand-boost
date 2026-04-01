@@ -89,13 +89,17 @@ const printingServices = [
   },
 ];
 
-const paperStocks = [
-  { name: "70lb Uncoated Text", best: "Flyers, inserts, and internal documents where writability matters." },
-  { name: "80lb Gloss Text", best: "Standard brochures and flyers with vivid photo reproduction." },
-  { name: "100lb Gloss Text", best: "Premium brochures and catalogs with a substantial, high-quality feel." },
-  { name: "100lb Gloss Cover (10pt)", best: "Postcards, rack cards, and door hangers that need stiffness and durability." },
-  { name: "14pt Cardstock", best: "Premium postcards, table tents, and thick marketing collateral." },
-  { name: "Linen & Cotton", best: "Letterhead and stationery with a sophisticated, textured feel." },
+const paperWeights = [
+  { name: "70 lb.", image: paper70lb, desc: "Our thinnest available paper stock, but still durable. This paper weight is best used for inside pages of catalogs and booklets." },
+  { name: "80 lb.", image: paper80lb, desc: "Thicker than our 70 lb. paper, this stock works great for posters with the added durability." },
+  { name: "100 lb.", image: paper100lb, desc: "This paper stock is the thickest available. It's ideal for flyers and brochures, as the thickness helps it withstand increased handling." },
+];
+
+const cardstockWeights = [
+  { name: "10 pt.", image: cardstock10pt, desc: "Our thinnest available cardstock which makes it ideal for folding. Well-suited for greeting cards." },
+  { name: "14 pt.", desc: "Popularly used for business cards, presentation folders, and booklet covers." },
+  { name: "16 pt.", desc: "Slightly thicker cardstock option best suited for invitations." },
+  { name: "17 pt.", desc: "Our thickest and sturdiest cardstock ideal for direct mail postcards." },
 ];
 
 const finishes = [
