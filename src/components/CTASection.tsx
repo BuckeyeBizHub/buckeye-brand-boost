@@ -23,7 +23,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="flex justify-center gap-3 mb-10"
         >
-          {[Star, Star, Star].map((Icon, i) => (
+          {[Star, Star, Star, Star, Star].map((Icon, i) => (
             <Icon key={i} className="w-6 h-6 text-primary/70 fill-primary/50" />
           ))}
         </motion.div>
