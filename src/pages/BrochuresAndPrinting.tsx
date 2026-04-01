@@ -37,6 +37,11 @@ import doubleParallelFoldImg from "@/assets/folds/double-parallel-fold.png";
 import frenchFoldImg from "@/assets/folds/french-fold.png";
 import parallelMapFoldImg from "@/assets/folds/parallel-map-fold.png";
 
+import paper70lb from "@/assets/paper/70lb.jpg";
+import paper80lb from "@/assets/paper/80lb.jpg";
+import paper100lb from "@/assets/paper/100lb.jpg";
+import cardstock10pt from "@/assets/paper/10pt.jpg";
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
