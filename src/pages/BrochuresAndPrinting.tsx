@@ -342,27 +342,62 @@ const BrochuresAndPrinting = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Paper Stocks */}
+            {/* Paper Stock */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
-                <Layers className="w-6 h-6 text-primary" /> Popular Paper Stocks
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
+                <Layers className="w-6 h-6 text-primary" /> Paper Stock
               </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Also called book or text, this type of paper is made specifically for print. This type of stock is typically used for flyers, brochures, and posters. The thickness is measured in pounds (lb.), called the basis weight. In the United States, the basis weight is defined as the weight of 500 sheets of paper in its basic production size. The higher the basis weight, the thicker the paper.
+              </p>
               <div className="space-y-4">
-                {paperStocks.map((stock) => (
-                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50">
-                    <p className="font-bold text-foreground mb-1">{stock.name}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{stock.best}</p>
+                {paperWeights.map((stock) => (
+                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
+                    <img src={stock.image} alt={`${stock.name} paper thickness`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                    <div>
+                      <p className="font-bold text-foreground mb-1">{stock.name}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{stock.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Finishes */}
+            {/* Cardstock */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
+                <Layers className="w-6 h-6 text-primary" /> Cardstock
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Also called cover stock, cardstock is thicker than paper stock but is more flexible than a paperboard. The thickness makes it ideal for business cards, postcards, and greeting cards. Cardstock is measured in points (pt.) derived from the thickness of a single piece of paper. A paper measuring .014 inch thick would have a 14 pt. measurement. The larger the number, the thicker the paper.
+              </p>
+              <div className="space-y-4">
+                {cardstockWeights.map((stock) => (
+                  <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
+                    {stock.image ? (
+                      <img src={stock.image} alt={`${stock.name} cardstock thickness`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                    ) : (
+                      <div className="w-24 h-16 bg-muted/50 rounded flex items-center justify-center flex-shrink-0">
+                        <span className="text-xs font-bold text-muted-foreground">{stock.name}</span>
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-bold text-foreground mb-1">{stock.name}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{stock.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Finishes section below */}
+          <div className="mt-14">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
                 <Sparkles className="w-6 h-6 text-primary" /> Finishes & Enhancements
               </h3>
-              <div className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {finishes.map((f) => (
                   <div key={f.name} className="bg-card rounded-xl p-5 border border-border/50">
                     <p className="font-bold text-foreground mb-1">{f.name}</p>
