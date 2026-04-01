@@ -27,39 +27,43 @@ const results = [
 ];
 
 const RealResultsSection = () => (
-  <section className="py-20 lg:py-28 bg-ohio-grey-light relative overflow-hidden">
-    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-    <div className="container max-w-6xl mx-auto px-6">
+  <section className="relative py-20 lg:py-28 overflow-hidden">
+    {/* Smooth gradient background */}
+    <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-ohio-grey-light/80" />
+    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/[0.03] rounded-full blur-[180px]" />
+
+    <div className="container max-w-6xl mx-auto px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-14"
+        className="text-center mb-12"
       >
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">
           Real Results for Real <span className="text-primary">Ohio Businesses</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           We don't just make things look good — we help Ohio businesses grow with branding that delivers measurable results.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 mb-12">
+      <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 mb-10">
         {results.map((r, i) => (
           <motion.div
             key={r.title}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300"
+            transition={{ delay: i * 0.08, duration: 0.5 }}
+            className="group flex items-start gap-4 p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/25 hover:shadow-[0_8px_30px_-8px_hsl(0_85%_40%/0.1)] transition-all duration-500"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
               <r.icon className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-1">{r.title}</h3>
+              <h3 className="font-display text-lg font-black text-foreground mb-1 group-hover:text-primary transition-colors duration-300">{r.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
             </div>
           </motion.div>
