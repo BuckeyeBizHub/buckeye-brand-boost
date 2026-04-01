@@ -121,12 +121,15 @@ const LocalSeo = () => (
     <section className="py-24 lg:py-32 bg-background">
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Local SEO Matters for Ohio Businesses</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Local SEO Matters for Your Business</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Today, 97% of consumers search online to find local businesses, and 46% of all Google searches have local intent. When someone in Columbus searches "HVAC repair near me" or "best dentist in Dublin Ohio," the businesses that appear at the top of Google — especially in the Map Pack — get the vast majority of clicks, calls, and customers. If your business isn't showing up there, you're invisible to the people who are ready to buy right now.
+            Today, 97% of consumers search online to find local businesses, and 46% of all Google searches have local intent. Whether someone in Columbus searches "HVAC repair near me," a homeowner in Cleveland looks for "best roofer near me," or a customer in Cincinnati needs "emergency plumber" — the businesses that appear at the top of Google get the vast majority of clicks, calls, and customers. If your business isn't showing up there, you're invisible to the people who are ready to buy right now.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            Local SEO is the most cost-effective marketing investment any service business can make. Unlike paid ads that stop generating leads the moment you stop paying, strong local SEO builds a compounding asset — the longer you invest, the stronger your position becomes, and the harder it is for competitors to catch up. It's not optional anymore; it's the foundation of how local businesses get found and chosen.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Local SEO is the most cost-effective marketing investment any Ohio service business can make. Unlike paid ads that stop generating leads the moment you stop paying, strong local SEO builds a compounding asset — the longer you invest, the stronger your position becomes, and the harder it is for competitors to catch up. It's not optional anymore; it's the foundation of how local businesses get found and chosen.
+            We proudly serve businesses throughout all of Ohio — Columbus, Cleveland, Cincinnati, Dayton, Toledo, Akron, Canton, Youngstown, and every small town in between. And if you're outside of Ohio? We help businesses nationwide. Our proven local SEO strategies work for any service-area business, anywhere.
           </p>
         </motion.div>
       </div>
