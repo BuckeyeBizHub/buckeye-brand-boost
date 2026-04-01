@@ -444,7 +444,7 @@ const BrochuresAndPrinting = () => {
                 "And don't skimp on paper quality. Handing someone a thin, flimsy brochure sends the wrong message about your business. Go with at least 80lb gloss text or 100lb for trade shows — the weight and feel of the piece says as much about your brand as the words on it."
               </p>
               <footer className="mt-6">
-                <p className="font-bold text-foreground text-base md:text-lg">— David Stein</p>
+                <p className="font-bold text-foreground text-base md:text-lg">— David Stein, The Buckeye Branding Czar</p>
                 <p className="text-muted-foreground text-sm font-semibold">Founder & Owner, Buckeye Biz Hub</p>
               </footer>
             </blockquote>

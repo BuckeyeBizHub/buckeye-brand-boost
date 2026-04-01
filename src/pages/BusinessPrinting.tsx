@@ -356,7 +356,7 @@ const BusinessPrinting = () => {
                 </p>
               </div>
               <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-display text-lg font-black text-foreground">— David Stein</p>
+                <p className="font-display text-lg font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
                 <p className="text-sm text-muted-foreground font-bold">Founder & Owner, Buckeye Biz Hub</p>
               </div>
             </div>

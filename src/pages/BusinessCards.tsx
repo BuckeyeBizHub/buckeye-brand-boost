@@ -273,7 +273,7 @@ const BusinessCards = () => {
               "I've handed out thousands of business cards over 25 years in Ohio — and I can tell you, the cards that get kept are the ones that feel different. My advice? Go thicker than you think you need, add one premium finish like foil or spot UV, and keep the design clean. White space is your friend. Your card should say 'I'm serious about my business' before anyone reads a single word on it."
             </p>
             <footer>
-              <p className="font-bold text-foreground text-base">— David Stein</p>
+              <p className="font-bold text-foreground text-base">— David Stein, The Buckeye Branding Czar</p>
               <p className="text-muted-foreground text-sm font-semibold">Founder & Owner, Buckeye Biz Hub</p>
             </footer>
           </motion.blockquote>

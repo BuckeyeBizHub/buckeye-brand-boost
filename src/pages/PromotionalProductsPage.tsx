@@ -382,7 +382,7 @@ const PromotionalProductsPage = () => {
                 "My advice? Focus on three things: usefulness, quality, and relevance. Choose items your specific audience will genuinely appreciate. A tech company's clients love wireless chargers. A dental office's patients love branded toothbrush kits. Match the product to the person and you'll see real results — not just smiles at a trade show, but actual referrals and repeat business."
               </p>
               <div className="mt-6">
-                <p className="font-display font-black text-foreground">— David Stein</p>
+                <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
                 <p className="text-sm text-muted-foreground font-semibold">Founder & Owner, Buckeye Biz Hub</p>
               </div>
             </div>
