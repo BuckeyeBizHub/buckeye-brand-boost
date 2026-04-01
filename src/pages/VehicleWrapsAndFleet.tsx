@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 
 import heroImg from "@/assets/vehicle-wrap-hero.jpg";
 import fullWrapImg from "@/assets/vehicle-wrap-full-real.jpg";
@@ -314,6 +315,7 @@ const VehicleWrapsAndFleet = () => (
       </div>
     </section>
 
+    <RelatedServices />
     <Footer />
   </div>
 );

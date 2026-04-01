@@ -137,6 +137,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/* Spacer for mobile sticky CTA bar */}
+      <div className="h-16 lg:hidden" />
     </footer>
   );
 };

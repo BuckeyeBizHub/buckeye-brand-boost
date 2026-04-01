@@ -26,6 +26,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 
 import apparelHero from "@/assets/service-apparel-uniforms.jpg";
 import polosGolf from "@/assets/apparel-polos-golf.jpg";
@@ -445,6 +446,7 @@ const BrandedApparel = () => {
         </div>
       </section>
 
+      <RelatedServices />
       <Footer />
     </div>
   );

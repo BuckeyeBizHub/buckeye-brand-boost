@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import BackToTop from "@/components/BackToTop";
+import MobileCTABar from "@/components/MobileCTABar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Index from "./pages/Index.tsx";
 import Services from "./pages/Services.tsx";
 import PromotionalProducts from "./pages/PromotionalProducts.tsx";
@@ -39,6 +42,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <Breadcrumbs />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
@@ -66,6 +70,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <BackToTop />
+        <MobileCTABar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
