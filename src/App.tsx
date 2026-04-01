@@ -32,6 +32,7 @@ import VehicleWrapsAndFleet from "./pages/VehicleWrapsAndFleet.tsx";
 import FullRebrandKits from "./pages/FullRebrandKits.tsx";
 import WebsiteDesign from "./pages/WebsiteDesign.tsx";
 import LocalSeo from "./pages/LocalSeo.tsx";
+import BannersAndFlags from "./pages/BannersAndFlags.tsx";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/full-rebrand-kits" element={<FullRebrandKits />} />
           <Route path="/website-design" element={<WebsiteDesign />} />
           <Route path="/local-seo" element={<LocalSeo />} />
+          <Route path="/banners-and-flags" element={<BannersAndFlags />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
