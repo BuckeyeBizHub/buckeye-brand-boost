@@ -1,293 +1,296 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, ShieldCheck, BadgeCheck, ThumbsUp, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { PHOTO_PRINT_6, PHOTO_APPAREL_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
+import pricingHero from "@/assets/pricing-hero.jpg";
+import businessCardsImg from "@/assets/business-cards-product.jpg";
+import vehicleWrapImg from "@/assets/vehicle-wrap-product.jpg";
+import apparelImg from "@/assets/service-apparel-uniforms.jpg";
+import yardSignsImg from "@/assets/yard-signs-product.jpg";
+import promoImg from "@/assets/service-promo-giveaways.jpg";
+import brochuresImg from "@/assets/service-brochures-printing.jpg";
+import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 
 const services = [
   {
-    image: PHOTO_PRINT_6,
-    title: "Business Printing",
-    description:
-      "High-quality business cards, banners, yard signs, brochures, letterhead, and custom printing that makes your business look professional and stand out.",
-    items: ["Business Cards", "Banners & Signs", "Brochures", "Letterhead", "Yard Signs", "Custom Print"],
-    cta: "Get a Quote",
-    accent: "from-primary via-ohio-red-light to-ohio-red-glow",
-    learnMoreHref: "/business-printing",
+    image: businessCardsImg,
+    title: "Business Cards & Stationery",
+    description: "Premium business cards, letterhead, and stationery that make a powerful first impression. From spot UV to gold foil — we do it all.",
+    href: "/business-cards",
   },
   {
-    image: PHOTO_APPAREL_1,
-    title: "Promotional Products",
-    description:
-      "Custom shirts, hats, drinkware, bar rails, tents, giveaways, and promotional items that get your brand noticed every day.",
-    items: ["Custom Apparel", "Drinkware", "Bar Rails", "Tents & Canopies", "Giveaways", "Branded Merch"],
-    cta: "Get a Quote",
-    accent: "from-ohio-red-glow via-primary to-ohio-red-light",
-    learnMoreHref: "/promotional-products",
+    image: vehicleWrapImg,
+    title: "Vehicle Wraps & Fleet Branding",
+    description: "Turn every mile into mobile advertising with full or partial wraps. We connect you with top installers and save you thousands.",
+    href: "/vehicle-wraps-and-fleet-branding",
   },
   {
-    image: PHOTO_VEHICLE_3,
-    title: "Vehicle Branding",
-    description:
-      "Full vehicle wraps, decals, magnetic signs, fleet graphics, and vehicle branding that turns every mile into powerful mobile advertising.",
-    items: ["Full Wraps", "Partial Wraps", "Decals", "Magnetic Signs", "Fleet Graphics", "Custom Design"],
-    cta: "Get a Quote",
-    accent: "from-primary via-ohio-red-glow to-ohio-red-light",
-    learnMoreHref: "/vehicle-branding",
+    image: apparelImg,
+    title: "Branded Apparel & Uniforms",
+    description: "Custom polos, t-shirts, hoodies, and uniforms with professional embroidery or screen printing. Outfit your entire team.",
+    href: "/branded-apparel-and-uniforms",
+  },
+  {
+    image: yardSignsImg,
+    title: "Yard Signs & Custom Signage",
+    description: "Durable, full-color yard signs, banners, retractable displays, and custom signage that gets your business noticed fast.",
+    href: "/yard-signs-and-signage",
+  },
+  {
+    image: promoImg,
+    title: "Promotional Products & Giveaways",
+    description: "Branded pens, tote bags, drinkware, keychains, and thousands more items. Perfect for trade shows, events, and client gifts.",
+    href: "/promotional-products",
+  },
+  {
+    image: brochuresImg,
+    title: "Brochures, Flyers & Business Printing",
+    description: "High-impact brochures, flyers, postcards, and sell sheets printed on premium stock with vibrant full-color quality.",
+    href: "/brochures-and-business-printing",
+  },
+  {
+    image: rebrandImg,
+    title: "Full Rebrand Kits",
+    description: "Complete brand overhaul packages — business cards, signage, apparel, vehicle wraps, and digital assets all unified under one cohesive look.",
+    href: "/full-rebrand-kits",
   },
 ];
 
+const trustItems = [
+  "500+ Ohio Businesses Helped",
+  "Full Pricing Transparency",
+  "24-Hour Quotes",
+  "Ohio Owned & Operated",
+];
+
 const Services = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Buckeye Biz Hub",
+    description: "Premium printing, promotional products, signage & vehicle branding for Ohio businesses.",
+    url: "https://buckeye-brand-boost.lovable.app/services",
+    areaServed: { "@type": "State", name: "Ohio" },
+    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
+  };
+
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
-      {/* Hero Banner */}
-      <section className="relative pt-36 pb-28 lg:pt-48 lg:pb-40 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,25%,3%)] via-[hsl(0,40%,8%)] to-[hsl(220,25%,3%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1100px] h-[1100px] rounded-full bg-primary/[0.15] blur-[200px]" />
+      {/* Hero — same style as Pricing hero */}
+      <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={pricingHero}
+            alt="Branded Ohio vehicles, apparel, signage and promotional products"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={800}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(220,55%,12%,0.75)] to-[hsl(220,25%,5%,0.92)]" />
         </div>
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="w-[600px] h-[400px] rounded-full bg-ohio-red-glow/[0.1] blur-[120px]" />
-        </div>
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-        <div className="container relative text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30 shadow-[0_0_30px_hsl(0_80%_42%/0.15)]"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            What We Do
-            <Sparkles className="w-3.5 h-3.5" />
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black text-primary-foreground leading-[0.9] mb-8"
-            style={{ textShadow: '0 0 60px rgba(255,255,255,0.3), 0 4px 20px rgba(0,0,0,0.8)' }}
-          >
-            Our{" "}
-            <span className="text-primary text-glow-red">Services</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xl md:text-2xl text-primary-foreground/55 max-w-3xl mx-auto font-semibold tracking-wide"
-          >
-            Premium printing, branded merch, and vehicle branding — everything Ohio businesses need to{" "}
-            <span className="text-primary font-black">dominate</span>.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="mt-14"
-          >
+        <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
+          <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="w-8 h-14 mx-auto border-2 border-primary-foreground/20 rounded-full flex items-start justify-center pt-2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30 shadow-[0_0_30px_hsl(0_80%_42%/0.15)]"
             >
-              <div className="w-1.5 h-3 bg-primary rounded-full" />
+              <Sparkles className="w-3.5 h-3.5" />
+              Our Services
+              <Sparkles className="w-3.5 h-3.5" />
             </motion.div>
-          </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-[0.92]"
+              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.3)" }}
+            >
+              Everything Your Ohio Business Needs to{" "}
+              <span className="text-primary">Stand Out</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide"
+              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
+            >
+              Premium printing, promotional products, signage & vehicle branding — all with 24-hour quotes and full transparency
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="flex flex-wrap justify-center gap-3 mb-10"
+            >
+              {[
+                { icon: ShieldCheck, label: "No Hidden Fees" },
+                { icon: BadgeCheck, label: "Wholesale Pricing" },
+                { icon: ThumbsUp, label: "100% Satisfaction Guaranteed" },
+              ].map((b) => (
+                <span
+                  key={b.label}
+                  className="inline-flex items-center gap-2 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/25 rounded-full px-5 py-2.5 text-sm font-bold text-primary-foreground"
+                >
+                  <b.icon className="w-4 h-4 text-primary" />
+                  {b.label}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45, duration: 0.5 }}
+            >
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300"
+                >
+                  Get Your Custom Quote in 24 Hours
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Service Sections */}
-      <section className="relative overflow-hidden">
-        {services.map((s, i) => {
-          const isDark = i % 2 === 1;
-          return (
-            <div
-              key={s.title}
-              className={`relative py-28 lg:py-40 overflow-hidden ${isDark ? "bg-ohio-grey-dark" : "bg-ohio-grey-light"}`}
-            >
-              <div className={`absolute top-[-150px] ${i % 2 === 0 ? "right-[-100px]" : "left-[-100px]"} w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[150px]`} />
-              {isDark && (
-                <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,25%,5%)] via-[hsl(0,30%,6%)] to-[hsl(220,25%,5%)]" />
-              )}
+      {/* Core Services Grid */}
+      <section className="py-24 lg:py-36 bg-background">
+        <div className="container max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+              <Sparkles className="w-3.5 h-3.5" />
+              What We Offer
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From business cards to full fleet wraps — we help Ohio businesses look professional at wholesale prices.
+            </p>
+          </motion.div>
 
-              <div className="container relative">
-                <motion.div
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8 }}
-                  className={`grid md:grid-cols-2 gap-14 lg:gap-20 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}
-                >
-                  {/* Image Panel */}
-                  <div className={`${i % 2 === 1 ? "md:[direction:ltr]" : ""}`}>
-                    <motion.div
-                      whileHover={{ scale: 1.03 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="relative rounded-3xl overflow-hidden group"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((s, i) => (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-400"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="p-6 lg:p-8">
+                  <h3 className="font-display text-xl font-black text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    {s.description}
+                  </p>
+                  <Link to={s.href}>
+                    <Button
+                      variant="outline"
+                      className="font-bold border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/btn"
                     >
-                      {/* Top gradient bar */}
-                      <div className={`absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r ${s.accent} z-10`} />
-
-                      {/* Image */}
-                      <div className="relative aspect-square overflow-hidden rounded-3xl border-2 border-primary/10 group-hover:border-primary/30 transition-colors duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.3)] group-hover:shadow-[0_25px_80px_hsl(0_80%_42%/0.25)]">
-                        <img
-                          src={s.image}
-                          alt={s.title}
-                          loading="lazy"
-                          width={800}
-                          height={800}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        {/* Overlay glow on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      </div>
-
-                      {/* Item tags below image */}
-                      <div className="flex flex-wrap justify-center gap-2.5 mt-6">
-                        {s.items.map((item, j) => (
-                          <motion.span
-                            key={item}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 + j * 0.05 }}
-                            className={`text-xs font-bold px-4 py-2 rounded-full border transition-colors duration-300 ${
-                              isDark
-                                ? "text-primary-foreground/60 bg-primary-foreground/[0.06] border-primary-foreground/10 hover:border-primary/40 hover:text-primary"
-                                : "text-muted-foreground bg-muted border-border hover:border-primary/40 hover:text-primary"
-                            }`}
-                          >
-                            {item}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  {/* Text Content */}
-                  <div className={`${i % 2 === 1 ? "md:[direction:ltr]" : ""} space-y-8`}>
-                    <motion.div
-                      initial={{ opacity: 0, x: i % 2 === 0 ? 30 : -30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      className="space-y-6"
-                    >
-                      <span className={`inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.25em] uppercase px-5 py-2 rounded-full ${
-                        isDark
-                          ? "text-primary bg-primary/[0.12] border border-primary/20"
-                          : "text-primary bg-primary/[0.08]"
-                      }`}>
-                        <Star className="w-3 h-3 fill-primary" />
-                        0{i + 1}
-                      </span>
-                      <h2 className={`font-display text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] ${
-                        isDark ? "text-primary-foreground" : "text-foreground"
-                      }`}
-                        style={isDark ? { textShadow: '0 0 40px rgba(255,255,255,0.15)' } : {}}
-                      >
-                        {s.title}
-                      </h2>
-                      <div className={`w-28 h-[4px] rounded-full bg-gradient-to-r ${s.accent}`} />
-                      <p className={`text-lg lg:text-xl leading-[1.8] max-w-lg font-medium ${
-                        isDark ? "text-primary-foreground/55" : "text-muted-foreground"
-                      }`}>
-                        {s.description}
-                      </p>
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                      className="flex flex-wrap gap-4 pt-2"
-                    >
-                      <Link to="/contact">
-                        <Button
-                          size="lg"
-                          className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_30px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_50px_hsl(0_80%_42%/0.55)] transition-all duration-300 group/btn uppercase tracking-wider"
-                        >
-                          <Phone className="w-5 h-5" />
-                          {s.cta}
-                          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-                        </Button>
-                      </Link>
-                      <Link to={s.learnMoreHref}>
-                        <Button
-                          variant="outline"
-                          size="lg"
-                          className={`font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 ${
-                            isDark
-                              ? "border-primary-foreground/15 text-primary-foreground/70 hover:border-primary/50 hover:text-primary hover:bg-primary/[0.08]"
-                              : "border-border hover:border-primary/40 hover:text-primary hover:bg-primary/[0.04]"
-                          }`}
-                        >
-                          Learn More
-                        </Button>
-                      </Link>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          );
-        })}
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-28 lg:py-40 relative overflow-hidden">
+      <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-foreground/[0.05] rounded-full blur-[120px]" />
 
-        <div className="container relative text-center">
+        <div className="container relative text-center max-w-3xl mx-auto px-6">
           <motion.h2
-            initial={{ opacity: 0, scale: 0.88 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-foreground mb-8 leading-[0.9]"
-            style={{ textShadow: '0 0 60px rgba(255,255,255,0.3), 0 4px 20px rgba(0,0,0,0.5)' }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight"
+            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}
           >
-            Let's Build Your{" "}
-            <br className="hidden md:block" />
-            Brand
+            Not sure which service is right for you?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-primary-foreground/65 mb-14 font-semibold italic font-display"
+            transition={{ delay: 0.15 }}
+            className="text-xl md:text-2xl text-primary-foreground/80 mb-12 font-semibold"
           >
-            Rooted in Ohio. Built to Grow Your Business.
+            Get a custom recommendation in 24 hours — completely free, no obligation.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
           >
-            <Button
-              size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group uppercase tracking-widest"
-              style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}
-            >
-              <Phone className="w-6 h-6" />
-              Get a Free Quote Today
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group uppercase tracking-widest"
+              >
+                <Phone className="w-6 h-6" />
+                Get Your Quote
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </Button>
+            </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Bar */}
+      <section className="py-8 bg-ohio-navy">
+        <div className="container">
+          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
+            {trustItems.map((item, i) => (
+              <span key={i} className="flex items-center gap-2 text-sm font-bold text-primary-foreground/70 tracking-wide">
+                <Clock className="w-4 h-4 text-primary" />
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
