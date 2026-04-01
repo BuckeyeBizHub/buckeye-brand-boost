@@ -12,12 +12,12 @@ const serviceDropdown = [
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services", dropdown: serviceDropdown },
-  { label: "Promotional Products", href: "/promotional-products" },
+  { label: "About", href: "/about" },
   { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "About Us", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Services", href: "/services", dropdown: serviceDropdown },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -131,7 +131,7 @@ const Navbar = () => {
         {/* CTA */}
         <Link to="/contact" className="hidden lg:block flex-shrink-0">
           <Button size="sm" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black px-7 shadow-[0_0_25px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_40px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider text-xs">
-            Get a Quote
+            Get 24-Hour Quote
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Button>
         </Link>
@@ -193,7 +193,7 @@ const Navbar = () => {
           <div className="px-6 pt-4">
             <Link to="/contact" onClick={() => setOpen(false)}>
               <Button size="sm" className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black shadow-[0_0_25px_hsl(0_85%_40%/0.35)] uppercase tracking-wider group">
-                Get a Quote
+                Get 24-Hour Quote
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </Link>
