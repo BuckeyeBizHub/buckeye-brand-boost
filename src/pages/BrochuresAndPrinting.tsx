@@ -216,27 +216,77 @@ const BrochuresAndPrinting = () => {
         </div>
       </section>
 
-      {/* Section 3: Brochure Fold Types */}
+      {/* Section 3: Choose the Best Brochure Fold */}
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Brochure Fold Types Explained
+              Choose the Best Brochure Fold
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Choosing the right fold can make all the difference. Here's a guide to the most popular brochure fold styles and when to use each.
+              The right fold style depends on your content, audience, and how you plan to distribute your brochures. Here's a guide to every popular option.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {foldTypes.map((fold, i) => (
+          {/* 2-Panel */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+            <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
+              <Columns2 className="w-5 h-5" /> How to Use a 2-Panel Option
+            </h3>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+            {foldTypes.filter(f => f.panels === "2-Panel").map((fold, i) => (
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <fold.icon className="w-7 h-7 text-primary" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h3>
+                <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
+                  <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
+                    <img src={fold.image} alt={`${fold.title} brochure example`} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <CardContent className="p-6">
+                    <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{fold.desc}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 3-Panel */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+            <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
+              <LayoutGrid className="w-5 h-5" /> How to Use the 3-Panel Format
+            </h3>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+            {foldTypes.filter(f => f.panels === "3-Panel").map((fold, i) => (
+              <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+                <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
+                  <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
+                    <img src={fold.image} alt={`${fold.title} brochure example`} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <CardContent className="p-6">
+                    <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{fold.desc}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 4-Panel */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
+            <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
+              <Layers className="w-5 h-5" /> Best Uses for 4-Panel Brochures
+            </h3>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {foldTypes.filter(f => f.panels === "4-Panel").map((fold, i) => (
+              <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+                <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
+                  <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
+                    <img src={fold.image} alt={`${fold.title} brochure example`} className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <CardContent className="p-6">
+                    <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">{fold.desc}</p>
                   </CardContent>
                 </Card>
