@@ -364,7 +364,7 @@ const BrandedApparel = () => {
               </p>
               <div className="mt-6">
                 <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
-                <p className="text-sm text-muted-foreground font-semibold">Founder & Owner, Buckeye Biz Hub</p>
+                <p className="text-sm text-muted-foreground font-semibold">Buckeye Biz Hub</p>
               </div>
             </div>
           </motion.div>
