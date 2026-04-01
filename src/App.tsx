@@ -33,6 +33,7 @@ import FullRebrandKits from "./pages/FullRebrandKits.tsx";
 import WebsiteDesign from "./pages/WebsiteDesign.tsx";
 import LocalSeo from "./pages/LocalSeo.tsx";
 import BannersAndFlags from "./pages/BannersAndFlags.tsx";
+import Decals from "./pages/Decals.tsx";
 
 const queryClient = new QueryClient();
 
