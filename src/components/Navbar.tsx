@@ -38,6 +38,7 @@ const navLinks: NavLink[] = [
       { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
       { label: "Website Design & Development", href: "/website-design" },
       { label: "Local SEO & Google Ranking", href: "/local-seo" },
+      { label: "Banners, Flags & Decals", href: "/banners-and-flags" },
     ],
   },
   { label: "Pricing", href: "/pricing" },
