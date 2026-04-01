@@ -22,13 +22,7 @@ import {
   Mail,
   Lightbulb,
   LayoutGrid,
-  FoldVertical,
   Columns2,
-  PanelLeft,
-  GalleryHorizontalEnd,
-  AlignJustify,
-  CopySlash,
-  BookMarked,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
