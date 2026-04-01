@@ -102,15 +102,16 @@ const cardstockWeights = [
   { name: "17 pt.", desc: "Our thickest and sturdiest cardstock ideal for direct mail postcards." },
 ];
 
-const finishes = [
-  { name: "Matte Finish", desc: "Smooth, non-reflective coating for an elegant, understated look. Great for text-heavy pieces." },
-  { name: "Gloss Finish", desc: "High-shine coating that makes colors pop and photos look vibrant. Ideal for product brochures." },
-  { name: "High-Gloss UV", desc: "Ultra-shiny protective coating that resists fingerprints and adds a premium look." },
-  { name: "Soft-Touch Lamination", desc: "Velvety, luxurious texture that feels incredible in hand — perfect for high-end brands." },
-  { name: "Foil Stamping", desc: "Metallic gold, silver, or copper accents that add a striking, premium detail to any printed piece." },
-  { name: "Embossing / Debossing", desc: "Raised or pressed lettering and logos that add a tactile, three-dimensional element." },
-  { name: "Spot UV", desc: "Selective glossy coating on specific areas (like logos) for dramatic contrast against a matte background." },
-  { name: "Edge Painting", desc: "Colorful painted edges for an eye-catching detail that makes thick cards truly stand out." },
+const coatings = [
+  { name: "Matte", desc: "Has a satin-like texture and its smooth surface helps with reading through a lot of text." },
+  { name: "Gloss", desc: "Coating on both sides adds some shine without glaring against the light." },
+  { name: "High-Gloss UV", desc: "Adds gloss that makes images pop. Brochures with high-gloss UV coating can also withstand repeated handling." },
+];
+
+const laminates = [
+  { name: "Silk", desc: "Sits somewhere between a matte and gloss finish. It is soft to the touch and adds an elegant look." },
+  { name: "Soft Touch", desc: "Has a velvety finish that's perfect for high-end and premium products or services." },
+  { name: "Gloss Antibacterial", desc: "A special high-gloss finish that has germ-inhibiting properties. Beneficial for brochures that are passed around often." },
 ];
 
 const faqItems = [
