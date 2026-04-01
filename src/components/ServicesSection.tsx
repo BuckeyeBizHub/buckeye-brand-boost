@@ -109,10 +109,11 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.5 }}
+              className="h-full"
             >
               <Link
                 to={s.href}
-                className="group block bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden card-lift shadow-sm hover:shadow-xl transition-all duration-300 p-6"
+                className="group flex flex-col h-full bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden card-lift shadow-sm hover:shadow-xl transition-all duration-300 p-6"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
@@ -122,10 +123,10 @@ const ServicesSection = () => {
                     {s.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                   {s.desc}
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-auto">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
