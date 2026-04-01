@@ -78,15 +78,6 @@ const HeroSection = () => {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Button>
             </Link>
-            <Link to="/portfolio">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary-foreground/25 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-xl px-14 py-8 rounded-2xl transition-all duration-500 uppercase tracking-wider"
-              >
-                See Our Work
-              </Button>
-            </Link>
           </motion.div>
         </div>
 
