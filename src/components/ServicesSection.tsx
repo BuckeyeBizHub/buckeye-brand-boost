@@ -6,78 +6,59 @@ import {
   CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
 } from "lucide-react";
 
-import businessCardsImg from "@/assets/business-cards-product.jpg";
-import brochuresImg from "@/assets/service-brochures-printing.jpg";
-import promoImg from "@/assets/service-promo-giveaways.jpg";
-import apparelImg from "@/assets/service-apparel-uniforms.jpg";
-import yardSignsImg from "@/assets/yard-signs-product.jpg";
-import vehicleWrapImg from "@/assets/vehicle-wrap-product.jpg";
-import rebrandImg from "@/assets/service-rebrand-kit.jpg";
-import websiteImg from "@/assets/service-website-design.jpg";
-import seoImg from "@/assets/service-local-seo.jpg";
-
 const services = [
   {
     icon: CreditCard,
     title: "Business Cards & Stationery",
     desc: "Premium cards that make a lasting first impression.",
-    image: businessCardsImg,
     href: "/business-cards",
   },
   {
     icon: BookOpen,
     title: "Brochures & Business Printing",
     desc: "High-impact materials that clearly communicate your message.",
-    image: brochuresImg,
     href: "/brochures-and-business-printing",
   },
   {
     icon: Gift,
     title: "Promotional Products & Giveaways",
     desc: "Custom items that keep your brand top-of-mind.",
-    image: promoImg,
     href: "/promotional-products",
   },
   {
     icon: Shirt,
     title: "Branded Apparel & Uniforms",
     desc: "Professional uniforms that build team pride and credibility.",
-    image: apparelImg,
     href: "/branded-apparel-and-uniforms",
   },
   {
     icon: Signpost,
     title: "Yard Signs & Custom Signage",
     desc: "Bold signs that generate immediate attention and calls.",
-    image: yardSignsImg,
     href: "/yard-signs-and-signage",
   },
   {
     icon: Car,
     title: "Vehicle Wraps & Fleet Branding",
     desc: "Turn your vehicles into powerful 24/7 advertisements.",
-    image: vehicleWrapImg,
     href: "/vehicle-wraps-and-fleet-branding",
   },
   {
     icon: Package,
     title: "Full Rebrand Kits",
     desc: "Complete brand transformations in one coordinated package.",
-    image: rebrandImg,
     href: "/full-rebrand-kits",
   },
   {
     icon: Monitor,
     title: "Website Design & Development",
     desc: "Modern websites that attract and convert customers.",
-    image: websiteImg,
     href: "/website-design",
   },
   {
     icon: Search,
     title: "Local SEO & Google Ranking",
     desc: "Dominate local search and appear in the Map Pack.",
-    image: seoImg,
     href: "/local-seo",
   },
 ];
@@ -119,39 +100,23 @@ const ServicesSection = () => {
             >
               <Link
                 to={s.href}
-                className="group block bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden card-lift shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group block bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden card-lift shadow-sm hover:shadow-xl transition-all duration-300 p-6"
               >
-                {/* Image */}
-                <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={s.image}
-                    alt={`${s.title} – Buckeye Biz Hub Ohio`}
-                    loading="lazy"
-                    width={400}
-                    height={176}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <s.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">
-                      {s.title}
-                    </h3>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
+                    <s.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {s.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
+                  <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">
+                    {s.title}
+                  </h3>
                 </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {s.desc}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
               </Link>
             </motion.div>
           ))}
