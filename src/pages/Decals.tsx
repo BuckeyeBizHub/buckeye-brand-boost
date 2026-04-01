@@ -28,7 +28,7 @@ import americanFlagImg from "@/assets/decal-american-flag.jpg";
 import anniversary250Img from "@/assets/decal-250th-anniversary.jpg";
 
 import googleBadge from "@/assets/google-5-star-badge.png";
-import bbbBadge from "@/assets/bbb-badge.png";
+import bbbBadge from "@/assets/bbb-a-plus-badge.png";
 
 const serviceCards = [
   {
