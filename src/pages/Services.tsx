@@ -91,6 +91,7 @@ const Services = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
       <ServicesHero />
+      <FounderQuote />
 
       <section className="py-24 lg:py-36 bg-background">
         <div className="container max-w-7xl mx-auto px-6">
