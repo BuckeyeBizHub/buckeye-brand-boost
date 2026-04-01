@@ -395,14 +395,32 @@ const BrochuresAndPrinting = () => {
           {/* Finishes section below */}
           <div className="mt-14">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
                 <Sparkles className="w-6 h-6 text-primary" /> Finishes & Enhancements
               </h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {finishes.map((f) => (
-                  <div key={f.name} className="bg-card rounded-xl p-5 border border-border/50">
-                    <p className="font-bold text-foreground mb-1">{f.name}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Choose from our coating options to enhance the details of your images and text.
+              </p>
+
+              <h4 className="font-display text-lg font-bold text-foreground mb-4">Coating Options</h4>
+              <div className="grid sm:grid-cols-3 gap-4 mb-8">
+                {coatings.map((c) => (
+                  <div key={c.name} className="bg-card rounded-xl p-5 border border-border/50">
+                    <p className="font-bold text-foreground mb-1">{c.name}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{c.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-display text-lg font-bold text-foreground mb-2">Premium Laminate Options</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                These different finishes make your handouts stand out immediately, whether it's passed around or displayed on a rack.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {laminates.map((l) => (
+                  <div key={l.name} className="bg-card rounded-xl p-5 border border-border/50">
+                    <p className="font-bold text-foreground mb-1">{l.name}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{l.desc}</p>
                   </div>
                 ))}
               </div>
