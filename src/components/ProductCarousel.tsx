@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import {
-  PHOTO_VEHICLE_1, PHOTO_PRINT_5,
-} from "@/lib/photos";
+import { PHOTO_PRINT_5 } from "@/lib/photos";
+import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
 import businessCardsProduct from "@/assets/business-cards-product.jpg";
 import customHatsProduct from "@/assets/custom-hats-product.jpg";
 import brandedDrinkwareProduct from "@/assets/branded-drinkware-product.jpg";
@@ -18,7 +17,7 @@ const products = [
   { img: brandedDrinkwareProduct, label: "Branded Drinkware", tag: "Drinkware" },
   { img: eventTentProduct, label: "Event Tents", tag: "Outdoor" },
   { img: yardSignsProduct, label: "Yard Signs", tag: "Signage" },
-  { img: PHOTO_VEHICLE_1, label: "Vehicle Wraps", tag: "Vehicle" },
+  { img: vehicleWrapProduct, label: "Vehicle Wraps", tag: "Vehicle" },
   { img: PHOTO_PRINT_5, label: "Business Printing", tag: "Print" },
 ];
 
