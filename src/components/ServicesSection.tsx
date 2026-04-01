@@ -63,9 +63,15 @@ const services = [
   },
   {
     icon: Flag,
-    title: "Banners, Flags & Decals",
-    desc: "Grab attention instantly with eye-catching custom banners, feather flags, and small decals designed to drive traffic and make your message impossible to miss.",
+    title: "Banners & Flags",
+    desc: "Eye-catching custom banners, feather flags, retractable banners, and graduation banners that grab attention and drive traffic for grand openings, events, job sites, and celebrations.",
     href: "/banners-and-flags",
+  },
+  {
+    icon: Sticker,
+    title: "Decals",
+    desc: "Custom decals that make a big impact — from vehicle decals and window clings to bumper stickers, floor graphics, and wall decals. Perfect for branding, promotions, and adding professional details to any surface.",
+    href: "/contact",
   },
 ];
 
