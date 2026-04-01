@@ -4,28 +4,60 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
-const serviceDropdown = [
-  { label: "Business Printing", href: "/business-printing" },
-  { label: "Promotional Products", href: "/promotional-products" },
-  { label: "Vehicle Branding", href: "/vehicle-branding" },
-];
+interface DropdownItem {
+  label: string;
+  href: string;
+}
 
-const navLinks = [
+interface NavLink {
+  label: string;
+  href: string;
+  dropdown?: DropdownItem[];
+}
+
+const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    dropdown: [
+      { label: "Portfolio", href: "/portfolio" },
+    ],
+  },
   { label: "Industries", href: "/industries" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Services", href: "/services", dropdown: serviceDropdown },
+  {
+    label: "Business Printing",
+    href: "/business-printing",
+    dropdown: [
+      { label: "Business Cards & Stationery", href: "/business-cards" },
+      { label: "Brochures & Printing", href: "/brochures-and-business-printing" },
+      { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
+    ],
+  },
+  {
+    label: "Promotional Products",
+    href: "/promotional-products",
+    dropdown: [
+      { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
+      { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
+    ],
+  },
+  {
+    label: "Vehicle Branding",
+    href: "/vehicle-branding",
+    dropdown: [
+      { label: "Vehicle Wraps & Fleet", href: "/vehicle-wraps-and-fleet-branding" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const location = useLocation();
 
@@ -37,22 +69,27 @@ const Navbar = () => {
 
   useEffect(() => {
     setOpen(false);
-    setDropdownOpen(false);
-    setMobileServicesOpen(false);
+    setActiveDropdown(null);
+    setMobileExpanded(null);
   }, [location.pathname]);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (label: string) => {
     clearTimeout(timeoutRef.current);
-    setDropdownOpen(true);
+    setActiveDropdown(label);
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
   };
 
   const isActive = (href: string) => {
     if (href === "/") return location.pathname === "/";
     return location.pathname.startsWith(href);
+  };
+
+  const isNavActive = (link: NavLink) => {
+    if (isActive(link.href)) return true;
+    return link.dropdown?.some((s) => isActive(s.href)) ?? false;
   };
 
   return (
@@ -69,27 +106,25 @@ const Navbar = () => {
             link.dropdown ? (
               <div
                 key={link.label}
-                ref={dropdownRef}
                 className="relative"
-                onMouseEnter={handleMouseEnter}
+                onMouseEnter={() => handleMouseEnter(link.label)}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
                   to={link.href}
                   className={`relative flex items-center gap-1 text-[0.75rem] font-bold tracking-[0.12em] uppercase px-4 py-2 rounded-lg transition-all duration-300 ${
-                    isActive(link.href) || serviceDropdown.some((s) => isActive(s.href))
+                    isNavActive(link)
                       ? "text-primary-foreground bg-primary-foreground/[0.06]"
                       : "text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/[0.04]"
                   }`}
                 >
                   {link.label}
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${activeDropdown === link.label ? "rotate-180" : ""}`} />
                 </Link>
 
-                {/* Dropdown */}
                 <div
                   className={`absolute top-full left-0 mt-2 w-64 rounded-2xl border-2 border-primary/15 bg-[hsl(0,0%,6%)] backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_hsl(0_85%_40%/0.1)] overflow-hidden transition-all duration-300 origin-top ${
-                    dropdownOpen
+                    activeDropdown === link.label
                       ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                   }`}
@@ -149,18 +184,18 @@ const Navbar = () => {
             link.dropdown ? (
               <div key={link.label}>
                 <button
-                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
                   className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
-                    isActive(link.href) ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
+                    isNavActive(link) ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
                   }`}
                 >
                   {link.label}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
                 </button>
-                {mobileServicesOpen && (
+                {mobileExpanded === link.label && (
                   <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08]">
                     <Link to={link.href} onClick={() => setOpen(false)} className="block px-10 py-3 text-sm font-bold text-primary-foreground/40 hover:text-primary uppercase tracking-widest">
-                      All Services
+                      View All
                     </Link>
                     {link.dropdown.map((item) => (
                       <Link
