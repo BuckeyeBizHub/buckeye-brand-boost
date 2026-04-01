@@ -108,7 +108,7 @@ const ServicesSection = () => {
                     <s.icon className="w-5 h-5 text-primary" />
                   </div>
                   <span className="text-xs font-black text-primary tracking-[0.2em] uppercase">
-                    {s.num} · {s.title}
+                    {s.title}
                   </span>
                 </div>
 
