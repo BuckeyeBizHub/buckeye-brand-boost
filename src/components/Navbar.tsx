@@ -21,35 +21,13 @@ const navLinks: NavLink[] = [
     label: "About",
     href: "/about",
     dropdown: [
+      { label: "About Us", href: "/about" },
       { label: "Portfolio", href: "/portfolio" },
     ],
   },
   { label: "Industries", href: "/industries" },
+  { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
-  {
-    label: "Business Printing",
-    href: "/business-printing",
-    dropdown: [
-      { label: "Business Cards & Stationery", href: "/business-cards" },
-      { label: "Brochures & Printing", href: "/brochures-and-business-printing" },
-      { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
-    ],
-  },
-  {
-    label: "Promotional Products",
-    href: "/promotional-products",
-    dropdown: [
-      { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
-      { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
-    ],
-  },
-  {
-    label: "Vehicle Branding",
-    href: "/vehicle-branding",
-    dropdown: [
-      { label: "Vehicle Wraps & Fleet", href: "/vehicle-wraps-and-fleet-branding" },
-    ],
-  },
   { label: "Contact", href: "/contact" },
 ];
 
