@@ -63,6 +63,15 @@ const CTASection = () => {
             </Button>
           </Link>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-12"
+        >
+          <TrustBadges variant="dark" size="sm" />
+        </motion.div>
       </div>
     </section>
   );
