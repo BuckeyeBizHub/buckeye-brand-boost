@@ -41,7 +41,7 @@ const services = [
     icon: Flag,
     title: "Banners, Flags & Decals",
     desc: "Custom banners, feather flags, and decals that grab attention and drive traffic.",
-    href: "/services",
+    href: "/banners-and-flags",
   },
   {
     icon: Car,
