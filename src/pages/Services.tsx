@@ -52,8 +52,8 @@ const services = [
   },
   {
     image: bannersImg,
-    title: "Banners, Flags & Decals",
-    description: "Grab attention instantly with eye-catching custom banners, feather flags, retractable banners, and small decals. Perfect for grand openings, trade shows, job sites, events, and promotions — designed to drive traffic and make your message impossible to miss.",
+    title: "Banners & Flags",
+    description: "Eye-catching custom banners, feather flags, retractable banners, and graduation banners that grab attention and drive traffic for grand openings, events, job sites, real estate, and celebrations. Perfect for making your message impossible to miss.",
     href: "/banners-and-flags",
   },
   {
