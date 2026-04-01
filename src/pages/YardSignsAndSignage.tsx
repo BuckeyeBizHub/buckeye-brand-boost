@@ -26,6 +26,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 
 import yardSignHero from "@/assets/yard-sign-installation.jpg";
 import standardYardSign from "@/assets/yard-signs-product.jpg";
