@@ -69,7 +69,7 @@ const jsonLd = {
 };
 
 const FAQ = () => {
-    usePageTitle("FAQ - Frequently Asked Questions");
+    usePageTitle("FAQ - Frequently Asked Questions", "Answers to common questions about Buckeye Biz Hub's printing, promotional products, vehicle wraps, pricing, turnaround times, and ordering process.");
 
   return (
     <div className="min-h-screen">

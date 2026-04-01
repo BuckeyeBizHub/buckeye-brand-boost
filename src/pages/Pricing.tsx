@@ -23,7 +23,7 @@ const Pricing = () => {
     },
   };
 
-    usePageTitle("Pricing - Transparent Quotes for Ohio Business Branding");
+    usePageTitle("Pricing - Transparent Quotes for Ohio Business Branding", "Transparent pricing for business printing, promotional products, and vehicle branding in Ohio. 24-hour quotes, no hidden fees, wholesale pricing on every order.");
 
   return (
     <div className="min-h-screen bg-background">

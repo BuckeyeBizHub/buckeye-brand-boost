@@ -143,7 +143,7 @@ const PromotionalProducts = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Promotional Products & Giveaways Columbus Ohio");
+    usePageTitle("Promotional Products & Giveaways Columbus Ohio", "Custom promotional products and branded giveaways for Ohio businesses. Drinkware, apparel, tech gadgets, and more with your logo. Fast quotes and wholesale pricing.");
 
   return (
     <div className="min-h-screen">

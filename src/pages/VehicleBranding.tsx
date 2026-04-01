@@ -81,7 +81,7 @@ const VehicleBranding = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Vehicle Branding Columbus Ohio");
+    usePageTitle("Vehicle Branding Columbus Ohio", "Professional vehicle branding services in Columbus Ohio. Custom wraps, decals, and fleet graphics that generate thousands of daily impressions for your business.");
 
   return (
     <div className="min-h-screen">

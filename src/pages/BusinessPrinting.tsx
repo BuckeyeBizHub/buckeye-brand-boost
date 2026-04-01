@@ -141,7 +141,7 @@ const trustPoints = [
 ];
 
 const BusinessPrinting = () => {
-    usePageTitle("Business Printing Services Columbus Ohio");
+    usePageTitle("Business Printing Services Columbus Ohio", "Professional business printing services in Columbus Ohio. Business cards, brochures, flyers, letterheads, and more with premium quality and fast turnaround.");
 
   return (
     <div className="min-h-screen bg-background text-foreground">

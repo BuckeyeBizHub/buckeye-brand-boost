@@ -167,7 +167,7 @@ const Industries = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Industries We Serve in Ohio");
+    usePageTitle("Industries We Serve in Ohio", "Buckeye Biz Hub serves contractors, restaurants, real estate agents, healthcare providers, and more across Ohio with custom printing, branding, and promotional products.");
 
   return (
     <div className="min-h-screen bg-background">

@@ -71,7 +71,7 @@ const faqJsonLd = {
 };
 
 const WebsiteDesign = () => {
-  usePageTitle("Website Design & Development Columbus Ohio");
+  usePageTitle("Website Design & Development Columbus Ohio", "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites that attract customers and build trust 24/7.");
 
   return (
   <div className="min-h-screen">

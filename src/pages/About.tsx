@@ -17,7 +17,7 @@ const fadeUp = {
 };
 
 const About = () => {
-    usePageTitle("About Us - Ohio's Local Branding Experts");
+    usePageTitle("About Us - Ohio's Local Branding Experts", "Meet Buckeye Biz Hub — Columbus Ohio's trusted local branding partner. Learn about our mission, values, and commitment to helping Ohio businesses grow with premium printing and branding.");
 
   return (
     <div className="min-h-screen bg-background text-foreground">

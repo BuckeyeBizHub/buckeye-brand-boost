@@ -78,7 +78,7 @@ const faqJsonLd = {
 };
 
 const VehicleWrapsAndFleet = () => {
-  usePageTitle("Vehicle Wraps & Fleet Branding Columbus Ohio");
+  usePageTitle("Vehicle Wraps & Fleet Branding Columbus Ohio", "Custom vehicle wraps and fleet branding in Columbus Ohio. Turn your vehicles into 24/7 mobile advertisements with professional wraps that protect and promote.");
 
   return (
   <div className="min-h-screen">

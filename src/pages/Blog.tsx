@@ -104,7 +104,7 @@ const Blog = () => {
     publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
   };
 
-    usePageTitle("Blog - Ohio Business Branding Tips & News");
+    usePageTitle("Blog - Ohio Business Branding Tips & News", "Expert tips on business branding, printing, promotional products, vehicle wraps, and marketing strategies for Ohio small businesses.");
 
   return (
     <div className="min-h-screen">
