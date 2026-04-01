@@ -263,6 +263,7 @@ const FullRebrandKits = () => (
       </div>
     </section>
 
+    <RelatedServices />
     <Footer />
   </div>
 );

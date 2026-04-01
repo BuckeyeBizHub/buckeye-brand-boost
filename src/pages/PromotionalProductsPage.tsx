@@ -465,6 +465,7 @@ const PromotionalProductsPage = () => {
         </div>
       </section>
 
+      <RelatedServices />
       <Footer />
     </div>
   );

@@ -630,6 +630,7 @@ const BrochuresAndPrinting = () => {
         </div>
       </section>
 
+      <RelatedServices />
       <Footer />
     </div>
   );

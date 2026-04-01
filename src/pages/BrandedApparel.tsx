@@ -446,6 +446,7 @@ const BrandedApparel = () => {
         </div>
       </section>
 
+      <RelatedServices />
       <Footer />
     </div>
   );

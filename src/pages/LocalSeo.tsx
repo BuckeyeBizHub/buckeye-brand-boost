@@ -266,6 +266,7 @@ const LocalSeo = () => (
       </div>
     </section>
 
+    <RelatedServices />
     <Footer />
   </div>
 );
