@@ -53,7 +53,7 @@ const services = [
   {
     image: bannersImg,
     title: "Banners, Flags & Decals",
-    description: "Custom banners, event flags, feather flags, and small decals that grab attention and drive traffic. Perfect for grand openings, trade shows, job sites, and promotions.",
+    description: "Custom banners, feather flags, event flags, retractable banners, and small decals that grab attention and drive traffic for grand openings, job sites, trade shows, and promotions.",
     href: "/banners-and-flags",
   },
   {
