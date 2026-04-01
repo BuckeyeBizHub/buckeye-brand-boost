@@ -18,6 +18,7 @@ import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 import websiteImg from "@/assets/service-website-design.jpg";
 import seoImg from "@/assets/service-local-seo.jpg";
 import bannersImg from "@/assets/service-banners-flags-decals.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const services = [
   {
@@ -92,6 +93,8 @@ const Services = () => {
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
+
+    usePageTitle("All Services - Printing, Promos & Vehicle Branding Columbus Ohio");
 
   return (
     <div className="min-h-screen">

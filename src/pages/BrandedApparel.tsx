@@ -38,6 +38,7 @@ import safetyVests from "@/assets/apparel-safety-hivis.jpg";
 import aprons from "@/assets/apparel-aprons-service.jpg";
 import corporateDress from "@/assets/apparel-corporate-dress.jpg";
 import teamwear from "@/assets/printing-teamwear.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -187,6 +188,8 @@ const BrandedApparel = () => {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
+
+    usePageTitle("Branded Apparel & Uniforms Columbus Ohio");
 
   return (
     <div className="min-h-screen">

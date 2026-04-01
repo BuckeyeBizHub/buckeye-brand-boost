@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import pricingHero from "@/assets/pricing-hero.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Full name is required").max(100),
@@ -144,6 +145,8 @@ const Contact = () => {
       setSubmitting(false);
     }
   };
+
+    usePageTitle("Contact Us - Get Your Free 24-Hour Quote");
 
   return (
     <div className="min-h-screen bg-background text-foreground">

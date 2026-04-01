@@ -33,6 +33,7 @@ import graduationImg from "@/assets/banner-graduation.jpg";
 import jobsiteImg from "@/assets/banner-jobsite-construction.jpg";
 import eventImg from "@/assets/banner-event-grandopening.jpg";
 import customFlagsImg from "@/assets/banner-custom-flags.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -134,6 +135,8 @@ const BannersAndFlags = () => {
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
+
+    usePageTitle("Custom Banners & Flags Columbus Ohio");
 
   return (
     <div className="min-h-screen">

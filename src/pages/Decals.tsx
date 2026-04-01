@@ -29,6 +29,7 @@ import anniversary250Img from "@/assets/decal-250th-anniversary.jpg";
 
 import googleBadge from "@/assets/google-5-star-badge.png";
 import bbbBadge from "@/assets/bbb-a-plus-badge.png";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const serviceCards = [
   {
@@ -134,6 +135,8 @@ const Decals = () => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+
+    usePageTitle("Custom Decals & Stickers Columbus Ohio");
 
   return (
     <div className="min-h-screen">

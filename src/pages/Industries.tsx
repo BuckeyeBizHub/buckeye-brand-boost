@@ -14,6 +14,7 @@ import industryRealestate from "@/assets/industry-realestate.jpg";
 import industryRestaurant from "@/assets/industry-restaurant.jpg";
 import industryConstruction from "@/assets/industry-construction.jpg";
 import industryAdditional from "@/assets/industry-additional.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const industries = [
   {
@@ -165,6 +166,8 @@ const Industries = () => {
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
+
+    usePageTitle("Industries We Serve in Ohio");
 
   return (
     <div className="min-h-screen bg-background">

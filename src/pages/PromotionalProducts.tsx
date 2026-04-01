@@ -14,6 +14,7 @@ import printingTradeshow from "@/assets/printing-tradeshow.jpg";
 import promoGiveaways from "@/assets/promo-giveaways-pens-keychains.jpg";
 import customHats from "@/assets/custom-hats-headwear.jpg";
 import customBagsTotes from "@/assets/custom-bags-totes.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -141,6 +142,8 @@ const PromotionalProducts = () => {
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
+
+    usePageTitle("Promotional Products & Giveaways Columbus Ohio");
 
   return (
     <div className="min-h-screen">

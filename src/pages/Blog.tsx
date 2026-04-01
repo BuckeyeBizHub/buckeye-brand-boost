@@ -6,6 +6,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
+import { usePageTitle } from "@/hooks/usePageTitle";
   PHOTO_VEHICLE_1, PHOTO_VEHICLE_3, PHOTO_VEHICLE_5,
   PHOTO_PRINT_2, PHOTO_PRINT_6,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2,
@@ -102,6 +103,8 @@ const Blog = () => {
     url: "https://buckeye-brand-boost.lovable.app/blog",
     publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
   };
+
+    usePageTitle("Blog - Ohio Business Branding Tips & News");
 
   return (
     <div className="min-h-screen">

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import vehicleWrapBA from "@/assets/vehicle-wrap-before-after.jpg";
 import vehicleDecal from "@/assets/vehicle-decal-closeup.jpg";
 import vehicleFleet from "@/assets/branded-vehicle-fleet.jpg";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -79,6 +80,8 @@ const VehicleBranding = () => {
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
+
+    usePageTitle("Vehicle Branding Columbus Ohio");
 
   return (
     <div className="min-h-screen">

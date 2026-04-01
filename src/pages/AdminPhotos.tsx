@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Upload, Trash2, Copy, ImagePlus, Filter, Search, X, Check } from "lucide-react";
 import { motion } from "framer-motion";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const CATEGORIES = [
   "Apparel",
@@ -112,6 +113,8 @@ const AdminPhotos = () => {
     toast({ title: "URL copied to clipboard!" });
     setTimeout(() => setCopiedId(null), 2000);
   };
+
+    usePageTitle("Admin Photos");
 
   return (
     <div className="min-h-screen bg-background">
