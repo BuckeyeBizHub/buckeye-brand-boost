@@ -12,12 +12,12 @@ const serviceDropdown = [
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services", dropdown: serviceDropdown },
-  { label: "Promotional Products", href: "/promotional-products" },
+  { label: "About", href: "/about" },
   { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "About Us", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Services", href: "/services", dropdown: serviceDropdown },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
