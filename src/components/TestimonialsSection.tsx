@@ -48,7 +48,7 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
   const items = showAll ? testimonials : testimonials.slice(0, 6);
 
   return (
-    <section className="py-32 lg:py-44 bg-ohio-grey-dark relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,25%,5%)] via-[hsl(0,30%,6%)] to-[hsl(220,25%,5%)]" />
       <div className="absolute top-[-200px] right-[-150px] w-[700px] h-[700px] bg-primary/[0.07] rounded-full blur-[200px]" />
       <div className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[150px]" />

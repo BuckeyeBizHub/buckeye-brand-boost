@@ -4,10 +4,12 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ElevateCtaSection = () => (
-  <section className="py-24 lg:py-32 relative overflow-hidden bg-primary">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(0,85%,35%)] to-primary" />
-    <div className="absolute top-0 left-0 right-0 h-px bg-primary-foreground/10" />
-    <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+  <section className="relative py-20 lg:py-28 overflow-hidden">
+    {/* Rich gradient background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,75%,30%)] via-primary to-[hsl(0,85%,35%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(0_85%_45%/0.4),transparent_60%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(0_85%_25%/0.5),transparent_60%)]" />
+    <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,.3) 1px, transparent 0)', backgroundSize: '24px 24px' }} />
 
     <div className="container relative text-center max-w-4xl mx-auto px-6">
       <motion.div
