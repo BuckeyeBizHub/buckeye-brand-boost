@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import fleetWrapHvac from "@/assets/fleet-wrap-hvac.jpg";
 import premiumBusinessCards from "@/assets/premium-business-cards.jpg";
-import {
 import { usePageTitle } from "@/hooks/usePageTitle";
+import {
   PHOTO_VEHICLE_1, PHOTO_VEHICLE_2, PHOTO_VEHICLE_3, PHOTO_VEHICLE_5, PHOTO_VEHICLE_6,
   PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_6, PHOTO_PRINT_8,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2,

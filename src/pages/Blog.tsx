@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
 import { usePageTitle } from "@/hooks/usePageTitle";
+import {
   PHOTO_VEHICLE_1, PHOTO_VEHICLE_3, PHOTO_VEHICLE_5,
   PHOTO_PRINT_2, PHOTO_PRINT_6,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2,
