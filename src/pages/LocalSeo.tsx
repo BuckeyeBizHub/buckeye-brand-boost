@@ -46,8 +46,8 @@ const faqItems = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Local SEO Services Columbus Ohio",
-  description: "Local SEO services for Columbus and Central Ohio businesses. Google Map Pack optimization, citation building, review management, and flat-fee monthly plans.",
+  name: "Local SEO Services Ohio",
+  description: "Local SEO services for businesses throughout Ohio and beyond. Google Map Pack optimization, citation building, review management, and flat-fee monthly plans. Serving Columbus, Cleveland, Cincinnati, Dayton, Toledo, and nationwide.",
   url: "https://buckeye-brand-boost.lovable.app/local-seo",
   provider: {
     "@type": "LocalBusiness",
