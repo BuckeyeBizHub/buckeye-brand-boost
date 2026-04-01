@@ -29,11 +29,11 @@ import Footer from "@/components/Footer";
 
 import yardSignHero from "@/assets/yard-sign-installation.jpg";
 import standardYardSign from "@/assets/yard-signs-product.jpg";
-import largeYardSign from "@/assets/yard-sign-large.jpg";
-import coroplastSign from "@/assets/printing-yard-signs.jpg";
-import realEstateSign from "@/assets/yard-sign-realestate.jpg";
-import jobsiteBanner from "@/assets/yard-sign-jobsite-banner.jpg";
-import eventDirectional from "@/assets/yard-sign-event-directional.jpg";
+import largeYardSign from "@/assets/yard-sign-sizes-real.jpg";
+import coroplastSign from "@/assets/yard-sign-coroplast-real.jpg";
+import realEstateSign from "@/assets/yard-sign-realestate-real.jpg";
+import jobsiteBanner from "@/assets/yard-sign-jobsite-real.jpg";
+import eventDirectional from "@/assets/yard-sign-event-directional-real.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
