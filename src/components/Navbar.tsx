@@ -131,7 +131,7 @@ const Navbar = () => {
         {/* CTA */}
         <Link to="/contact" className="hidden lg:block flex-shrink-0">
           <Button size="sm" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black px-7 shadow-[0_0_25px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_40px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider text-xs">
-            Get a Quote
+            Get 24-Hour Quote
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Button>
         </Link>
