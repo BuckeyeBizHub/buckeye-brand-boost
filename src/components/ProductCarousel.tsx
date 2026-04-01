@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { PHOTO_PRINT_5 } from "@/lib/photos";
+
 import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
 import businessPrintingProduct from "@/assets/business-printing-product.jpg";
 import businessCardsProduct from "@/assets/business-cards-product.jpg";
