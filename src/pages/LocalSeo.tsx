@@ -146,7 +146,7 @@ const LocalSeo = () => (
             Our Flat-Fee Local SEO Services
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Everything you need to dominate local search in Columbus and Central Ohio — managed for you monthly.
+            Everything you need to dominate local search in your market — whether you're in Ohio or anywhere in the country — managed for you monthly.
           </p>
         </motion.div>
 
