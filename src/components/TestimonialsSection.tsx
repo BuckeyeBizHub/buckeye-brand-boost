@@ -11,49 +11,31 @@ export const testimonials = [
   {
     image: PHOTO_PRINT_2,
     quote: "Buckeye Biz Hub completely transformed our brand presence. The business cards and brochures they produced are absolutely stunning — our patients constantly compliment the quality. Best printing partner we've ever worked with in Columbus.",
-    name: "Dr. Sarah Mitchell",
-    company: "Bright Smile Dental",
-    tag: "Columbus Dental Practice",
     stars: 5,
   },
   {
     image: PHOTO_VEHICLE_1,
-    quote: "We wrapped our entire fleet of 15 service vans and the results have been incredible. Our phone calls increased by 40% within the first two months. The wraps look phenomenal and have held up perfectly through Ohio winters.",
-    name: "Mike Rodriguez",
-    company: "Elite Comfort HVAC",
-    tag: "Central Ohio HVAC",
+    quote: "We wrapped our entire fleet of service vans and the results have been incredible. Our phone calls increased significantly within the first two months. The wraps look phenomenal and have held up perfectly through Ohio winters.",
     stars: 5,
   },
   {
     image: PHOTO_APPAREL_1,
-    quote: "The custom uniforms and branded merchandise program Buckeye Biz Hub set up for our restaurant chain has been a game-changer. Consistent branding across all 8 locations, and the reorder process is seamless.",
-    name: "Jennifer Walsh",
-    company: "Buckeye Burger Co.",
-    tag: "Ohio Restaurant Chain",
+    quote: "The custom uniforms and branded merchandise program has been a game-changer. Consistent branding across all locations, and the reorder process is seamless.",
     stars: 5,
   },
   {
     image: PHOTO_SIGNAGE_1,
-    quote: "Our trade show presence went from forgettable to show-stopping. The custom tent, retractable banners, and table throws they designed made our booth the busiest at the Columbus Home & Garden Expo three years running.",
-    name: "David Chen",
-    company: "GreenScape Landscaping",
-    tag: "Columbus Landscaping",
+    quote: "Our trade show presence went from forgettable to show-stopping. The custom tent, retractable banners, and table throws made our booth the busiest at the expo.",
     stars: 5,
   },
   {
     image: PHOTO_VEHICLE_5,
-    quote: "As a dealership, image is everything. Buckeye Biz Hub delivered premium signage, branded giveaways, and vehicle decals that elevated our showroom and customer experience. They understand the auto industry.",
-    name: "Tom Bradley",
-    company: "Bradley Auto Group",
-    tag: "Ohio Auto Dealership",
+    quote: "As a dealership, image is everything. Buckeye Biz Hub delivered premium signage, branded giveaways, and vehicle decals that elevated our showroom and customer experience.",
     stars: 5,
   },
   {
     image: PHOTO_PRINT_6,
-    quote: "I've used Buckeye Biz Hub for yard signs, door hangers, and business cards for 3 years now. Fast turnaround, wholesale pricing, and the quality never disappoints. They're my go-to for everything marketing-related.",
-    name: "Amanda Foster",
-    company: "Foster Realty Group",
-    tag: "Columbus Real Estate",
+    quote: "I've used Buckeye Biz Hub for yard signs, door hangers, and business cards for years now. Fast turnaround, wholesale pricing, and the quality never disappoints. They're my go-to for everything marketing-related.",
     stars: 5,
   },
 ];
@@ -98,7 +80,7 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((t, i) => (
             <motion.div
-              key={t.name}
+              key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
@@ -125,15 +107,11 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
               {/* Client info */}
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300 flex-shrink-0">
-                  <img src={t.image} alt={t.name} loading="lazy" width={56} height={56} className="w-full h-full object-cover" />
+                  <img src={t.image} alt="Client project" loading="lazy" width={56} height={56} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-display text-base font-black text-primary-foreground/80 group-hover:text-primary-foreground transition-colors duration-300">
-                    {t.name}
-                  </h4>
-                  <p className="text-sm font-bold text-primary-foreground/40">{t.company}</p>
-                  <span className="inline-block mt-1 text-[0.6rem] font-extrabold text-primary tracking-[0.15em] uppercase bg-primary/[0.1] px-2.5 py-1 rounded-full">
-                    {t.tag}
+                  <span className="inline-block text-[0.65rem] font-extrabold text-primary tracking-[0.15em] uppercase bg-primary/[0.1] px-2.5 py-1 rounded-full">
+                    Verified Client
                   </span>
                 </div>
               </div>
