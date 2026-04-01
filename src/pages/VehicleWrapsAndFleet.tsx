@@ -9,12 +9,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import heroImg from "@/assets/vehicle-wrap-hero.jpg";
-import fullWrapImg from "@/assets/vehicle-wrap-full.jpg";
-import partialWrapImg from "@/assets/vehicle-wrap-partial.jpg";
-import decalsImg from "@/assets/vehicle-wrap-decals.jpg";
-import magneticImg from "@/assets/vehicle-wrap-magnetic.jpg";
-import windowImg from "@/assets/vehicle-wrap-window.jpg";
-import fleetImg from "@/assets/vehicle-wrap-fleet.jpg";
+import fullWrapImg from "@/assets/vehicle-wrap-full-real.jpg";
+import partialWrapImg from "@/assets/vehicle-wrap-partial-real.jpg";
+import decalsImg from "@/assets/vehicle-wrap-decals-real.jpg";
+import magneticImg from "@/assets/vehicle-wrap-magnetic-real.jpg";
+import windowImg from "@/assets/vehicle-wrap-window-real.jpg";
+import fleetImg from "@/assets/vehicle-wrap-fleet-real.jpg";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
