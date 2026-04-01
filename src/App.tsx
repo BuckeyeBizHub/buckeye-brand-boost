@@ -68,6 +68,7 @@ const App = () => (
           <Route path="/full-rebrand-kits" element={<FullRebrandKits />} />
           <Route path="/website-design" element={<WebsiteDesign />} />
           <Route path="/local-seo" element={<LocalSeo />} />
+          <Route path="/banners-and-flags" element={<BannersAndFlags />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
