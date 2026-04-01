@@ -20,6 +20,15 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Testimonials from "./pages/Testimonials.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
 import Pricing from "./pages/Pricing.tsx";
+import BusinessCards from "./pages/BusinessCards.tsx";
+import BrochuresAndPrinting from "./pages/BrochuresAndPrinting.tsx";
+import PromotionalProductsPage from "./pages/PromotionalProductsPage.tsx";
+import BrandedApparel from "./pages/BrandedApparel.tsx";
+import YardSignsAndSignage from "./pages/YardSignsAndSignage.tsx";
+import VehicleWrapsAndFleet from "./pages/VehicleWrapsAndFleet.tsx";
+import FullRebrandKits from "./pages/FullRebrandKits.tsx";
+import WebsiteDesign from "./pages/WebsiteDesign.tsx";
+import LocalSeo from "./pages/LocalSeo.tsx";
 
 const queryClient = new QueryClient();
 
@@ -34,7 +43,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/business-printing" element={<BusinessPrinting />} />
-          <Route path="/promotional-products" element={<PromotionalProducts />} />
+          <Route path="/promotional-products" element={<PromotionalProductsPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/industries" element={<Industries />} />
@@ -46,6 +55,14 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/business-cards" element={<BusinessCards />} />
+          <Route path="/brochures-and-business-printing" element={<BrochuresAndPrinting />} />
+          <Route path="/branded-apparel-and-uniforms" element={<BrandedApparel />} />
+          <Route path="/yard-signs-and-signage" element={<YardSignsAndSignage />} />
+          <Route path="/vehicle-wraps-and-fleet-branding" element={<VehicleWrapsAndFleet />} />
+          <Route path="/full-rebrand-kits" element={<FullRebrandKits />} />
+          <Route path="/website-design" element={<WebsiteDesign />} />
+          <Route path="/local-seo" element={<LocalSeo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
