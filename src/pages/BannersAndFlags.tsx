@@ -25,7 +25,7 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import TrustBadges from "@/components/TrustBadges";
 
-import heroImg from "@/assets/banners-flags-hero-v2.jpg";
+import heroImg from "@/assets/banners-hero.jpg";
 import vinylMeshImg from "@/assets/banner-vinyl-mesh.jpg";
 import featherBladeImg from "@/assets/banner-feather-blade.jpg";
 import retractableImg from "@/assets/banner-retractable-standup.jpg";
