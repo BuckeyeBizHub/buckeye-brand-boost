@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -66,14 +66,16 @@ const services = [
     title: "Banners & Flags",
     desc: "Grab attention instantly with custom banners, feather flags, retractable banners, and graduation banners designed to drive traffic and make your message impossible to miss.",
     href: "/banners-and-flags",
+    featured: true,
   },
   {
     icon: Sticker,
     title: "Decals",
     desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that add professional details and promote your brand everywhere.",
     href: "/decals",
+    featured: true,
   },
-];
+] as const;
 
 const ServicesSection = () => {
   return (
@@ -101,8 +103,9 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
+        {/* Main 9 services grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((s, i) => (
+          {services.filter((s) => !("featured" in s && s.featured)).map((s, i) => (
             <motion.div
               key={s.title}
               initial={{ opacity: 0, y: 40 }}
@@ -128,6 +131,49 @@ const ServicesSection = () => {
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-auto">
                   Learn More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Featured services — Banners & Flags + Decals */}
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8">
+          {services.filter((s) => "featured" in s && s.featured).map((s, i) => (
+            <motion.div
+              key={s.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="h-full"
+            >
+              <Link
+                to={s.href}
+                className="group relative flex flex-col h-full bg-card rounded-2xl border-2 border-primary/40 hover:border-primary overflow-hidden card-lift shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
+              >
+                {/* Popular badge */}
+                <div className="absolute top-4 right-4">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-extrabold text-primary-foreground bg-primary px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                    <Star className="w-3 h-3 fill-current" />
+                    Popular
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center shrink-0 group-hover:bg-primary/25 transition-colors duration-300 ring-2 ring-primary/20">
+                    <s.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-black text-foreground leading-snug group-hover:text-primary transition-colors duration-300">
+                    {s.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-grow">
+                  {s.desc}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-auto">
+                  Explore Options
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </Link>
