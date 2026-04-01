@@ -64,14 +64,14 @@ const services = [
   {
     icon: Flag,
     title: "Banners & Flags",
-    desc: "Eye-catching custom banners, feather flags, retractable banners, and graduation banners that grab attention and drive traffic for grand openings, events, job sites, and celebrations.",
+    desc: "Grab attention instantly with custom banners, feather flags, retractable banners, and graduation banners designed to drive traffic and make your message impossible to miss.",
     href: "/banners-and-flags",
   },
   {
     icon: Sticker,
     title: "Decals",
-    desc: "Custom decals that make a big impact — from vehicle decals and window clings to bumper stickers, floor graphics, and wall decals. Perfect for branding, promotions, and adding professional details to any surface.",
-    href: "/contact",
+    desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that add professional details and promote your brand everywhere.",
+    href: "/decals",
   },
 ];
 
@@ -97,7 +97,7 @@ const ServicesSection = () => {
             Our Core <span className="text-primary">Branding Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From business cards to vehicle wraps, banners, flags, decals, and full rebrand kits — everything your Ohio business needs to look professional and grow.
+            From premium business cards and powerful vehicle wraps to eye-catching banners, flags, graduation banners, and custom decals — everything your Ohio business needs to look professional, stand out, and grow.
           </p>
         </motion.div>
 
