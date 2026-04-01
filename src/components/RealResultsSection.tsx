@@ -3,6 +3,11 @@ import { PhoneCall, Award, Wallet, BadgeCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+import vehicleWrapFleet from "@/assets/vehicle-wrap-fleet-real.jpg";
+import brandedApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
+import yardSignReal from "@/assets/yard-sign-realestate-real.jpg";
+import bannerEvent from "@/assets/banner-event-grandopening.jpg";
+
 const results = [
   {
     icon: PhoneCall,
@@ -26,9 +31,10 @@ const results = [
   },
 ];
 
+const photos = [vehicleWrapFleet, brandedApparel, yardSignReal, bannerEvent];
+
 const RealResultsSection = () => (
   <section className="relative py-20 lg:py-28 overflow-hidden">
-    {/* Smooth gradient background */}
     <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-ohio-grey-light/80" />
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/[0.03] rounded-full blur-[180px]" />
@@ -47,6 +53,27 @@ const RealResultsSection = () => (
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           We don't just make things look good — we help Ohio businesses grow with branding that delivers measurable results.
         </p>
+      </motion.div>
+
+      {/* Photo strip */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 rounded-2xl overflow-hidden"
+      >
+        {photos.map((src, i) => (
+          <div key={i} className="relative h-40 md:h-48 overflow-hidden rounded-xl">
+            <img
+              src={src}
+              alt={`Ohio business branding result ${i + 1}`}
+              loading="lazy"
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+          </div>
+        ))}
       </motion.div>
 
       <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 mb-10">
