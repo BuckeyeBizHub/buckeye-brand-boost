@@ -6,7 +6,7 @@ import TrustBadges from "@/components/TrustBadges";
 
 const CTASection = () => {
   return (
-    <section className="py-32 lg:py-44 relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Deep black layered background */}
       <div className="absolute inset-0 bg-[hsl(0,0%,4%)]" />
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,3%)] via-[hsl(0,0%,7%)] to-[hsl(0,0%,3%)]" />
