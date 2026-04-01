@@ -17,7 +17,7 @@ const products = [
   { img: brandedDrinkwareProduct, label: "Branded Drinkware", tag: "Drinkware" },
   { img: eventTentProduct, label: "Event Tents", tag: "Outdoor" },
   { img: yardSignsProduct, label: "Yard Signs", tag: "Signage" },
-  { img: PHOTO_VEHICLE_1, label: "Vehicle Wraps", tag: "Vehicle" },
+  { img: vehicleWrapProduct, label: "Vehicle Wraps", tag: "Vehicle" },
   { img: PHOTO_PRINT_5, label: "Business Printing", tag: "Print" },
 ];
 
