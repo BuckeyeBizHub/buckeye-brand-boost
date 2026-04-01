@@ -53,7 +53,7 @@ const services = [
   {
     image: bannersImg,
     title: "Banners, Flags & Decals",
-    description: "Custom banners, event flags, feather flags, and small decals that grab attention and drive traffic. Perfect for grand openings, trade shows, job sites, and promotions.",
+    description: "Custom banners, feather flags, event flags, retractable banners, and small decals that grab attention and drive traffic for grand openings, job sites, trade shows, and promotions.",
     href: "/banners-and-flags",
   },
   {
@@ -117,7 +117,7 @@ const Services = () => {
               Our 10 Core Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
+              From business cards to vehicle wraps, banners, flags, decals, and full rebrand kits — everything your Ohio business needs to stand out and grow.
             </p>
           </motion.div>
 
