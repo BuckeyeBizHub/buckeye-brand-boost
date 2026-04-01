@@ -92,7 +92,7 @@ const HeroSection = () => {
             <div className="w-[360px] h-[430px] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
-                alt="David Stein – Co-Founder of Buckeye Biz Hub, Columbus Ohio"
+                alt="David Stein – The Buckeye Branding Czar, Buckeye Biz Hub, Columbus Ohio"
                 className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.5] to-transparent" />
