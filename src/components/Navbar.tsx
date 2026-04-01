@@ -26,7 +26,21 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: "Industries", href: "/industries" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    dropdown: [
+      { label: "Business Cards & Stationery", href: "/business-cards" },
+      { label: "Brochures & Business Printing", href: "/brochures-and-business-printing" },
+      { label: "Promotional Products & Giveaways", href: "/promotional-products" },
+      { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
+      { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
+      { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding" },
+      { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
+      { label: "Website Design & Development", href: "/website-design" },
+      { label: "Local SEO & Google Ranking", href: "/local-seo" },
+    ],
+  },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
