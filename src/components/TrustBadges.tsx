@@ -9,9 +9,9 @@ interface TrustBadgesProps {
 
 const TrustBadges = ({ variant = "light", size = "md", className = "" }: TrustBadgesProps) => {
   const sizeMap = {
-    sm: "h-12 sm:h-14",
-    md: "h-16 sm:h-20",
-    lg: "h-20 sm:h-24",
+    sm: "h-20 sm:h-24",
+    md: "h-24 sm:h-28",
+    lg: "h-28 sm:h-32",
   };
 
   return (
