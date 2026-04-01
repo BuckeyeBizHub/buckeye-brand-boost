@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, ShoppingBag, DollarSign, Zap, Star, ArrowRight } from "lucide-react";
+import TrustBadges from "@/components/TrustBadges";
 
 const benefits = [
   { icon: MapPin, title: "Local Ohio Roots", description: "Proudly based in Ohio, we understand the local market and care about our community.", number: "01", accent: "from-primary to-ohio-red-light" },
