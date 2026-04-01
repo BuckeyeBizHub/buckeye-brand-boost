@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
+  CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search, Flag,
 } from "lucide-react";
 
 const services = [
@@ -36,6 +36,12 @@ const services = [
     title: "Yard Signs & Custom Signage",
     desc: "Bold signs that generate immediate attention and calls.",
     href: "/yard-signs-and-signage",
+  },
+  {
+    icon: Flag,
+    title: "Banners, Flags & Decals",
+    desc: "Custom banners, feather flags, and decals that grab attention and drive traffic.",
+    href: "/services",
   },
   {
     icon: Car,
@@ -82,10 +88,10 @@ const ServicesSection = () => {
             What We Offer
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-            Our 9 Core <span className="text-primary">Services</span>
+            Our 10 Core <span className="text-primary">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Everything your Ohio business needs to look professional and grow — from business cards to full rebrands and everything in between.
+            From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
           </p>
         </motion.div>
 
@@ -132,7 +138,7 @@ const ServicesSection = () => {
         >
           <Link to="/services">
             <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider">
-              View All 9 Services
+              View All 10 Services
               <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1.5 transition-transform duration-300" />
             </Button>
           </Link>

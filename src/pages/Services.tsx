@@ -17,6 +17,7 @@ import vehicleWrapImg from "@/assets/vehicle-wrap-product.jpg";
 import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 import websiteImg from "@/assets/service-website-design.jpg";
 import seoImg from "@/assets/service-local-seo.jpg";
+import bannersImg from "@/assets/service-banners-flags-decals.jpg";
 
 const services = [
   {
@@ -48,6 +49,12 @@ const services = [
     title: "Yard Signs & Custom Signage",
     description: "Get noticed where it matters most. Our bold yard signs, banners, and job-site signage generate immediate attention, phone calls, and new customers for local businesses throughout Central Ohio.",
     href: "/yard-signs-and-signage",
+  },
+  {
+    image: bannersImg,
+    title: "Banners, Flags & Decals",
+    description: "Custom banners, event flags, feather flags, and small decals that grab attention and drive traffic. Perfect for grand openings, trade shows, job sites, and promotions.",
+    href: "/services",
   },
   {
     image: vehicleWrapImg,
@@ -107,10 +114,10 @@ const Services = () => {
               What We Offer
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-              Our 9 Core Services
+              Our 10 Core Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to full fleet wraps and digital marketing — we help Ohio businesses look professional at wholesale prices.
+              From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
             </p>
           </motion.div>
 
