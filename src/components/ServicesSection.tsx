@@ -99,7 +99,7 @@ const ServicesSection = () => {
             Our Core <span className="text-primary">Branding Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From premium business cards and powerful vehicle wraps to eye-catching banners, flags, graduation banners, and custom decals — everything your Ohio business needs to look professional, stand out, and grow.
+            Everything your Ohio business needs to look professional, stand out, and grow — from premium business cards to powerful vehicle wraps, banners, flags, graduation banners, and custom decals.
           </p>
         </motion.div>
 
