@@ -4,14 +4,15 @@ import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, Star } from "lucide-re
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  PHOTO_APPAREL_1, PHOTO_PRINT_1, PHOTO_PRINT_3,
+  PHOTO_APPAREL_1, PHOTO_PRINT_1,
   PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3,
   PHOTO_VEHICLE_1, PHOTO_PRINT_5,
 } from "@/lib/photos";
+import businessCardsProduct from "@/assets/business-cards-product.jpg";
 
 const products = [
   { img: PHOTO_APPAREL_1, label: "Custom Shirts & Hats", tag: "Apparel" },
-  { img: PHOTO_PRINT_3, label: "Bar Rails", tag: "Bar & Restaurant" },
+  { img: businessCardsProduct, label: "Business Cards", tag: "Print" },
   { img: PHOTO_PRINT_1, label: "Branded Drinkware", tag: "Drinkware" },
   { img: PHOTO_SIGNAGE_1, label: "Event Tents", tag: "Outdoor" },
   { img: PHOTO_SIGNAGE_3, label: "Yard Signs", tag: "Signage" },
