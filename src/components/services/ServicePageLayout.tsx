@@ -190,6 +190,7 @@ const ServicePageLayout = ({
         </div>
       </section>
 
+      <RelatedServices />
       <Footer />
     </div>
   );
