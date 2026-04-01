@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const CTASection = () => {
   return (
