@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { PHOTO_PRINT_5 } from "@/lib/photos";
 import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
+import businessPrintingProduct from "@/assets/business-printing-product.jpg";
 import businessCardsProduct from "@/assets/business-cards-product.jpg";
 import customHatsProduct from "@/assets/custom-hats-product.jpg";
 import brandedDrinkwareProduct from "@/assets/branded-drinkware-product.jpg";
