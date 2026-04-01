@@ -64,14 +64,12 @@ const services = [
     image: websiteImg,
     title: "Website Design & Development",
     description: "Custom, mobile-friendly websites built to convert visitors into customers.",
-    price: "From $1,999",
     href: "/website-design",
   },
   {
     image: seoImg,
     title: "Local SEO & Google Ranking",
     description: "Improve local search rankings and dominate the Google Map Pack.",
-    price: "From $399/month",
     href: "/local-seo",
   },
 ];
