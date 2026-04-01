@@ -238,7 +238,7 @@ const LocalSeo = () => (
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
       <div className="container relative text-center max-w-3xl mx-auto px-6">
         <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
-          Ready to dominate local search and get more customers from Columbus and Central Ohio?
+          Ready to dominate local search and get more customers — anywhere in Ohio and beyond?
         </motion.h2>
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
           <Link to="/contact">
