@@ -142,11 +142,6 @@ const trustPoints = [
 const BusinessPrinting = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Business Card Printing & Custom Business Printing in Columbus, Ohio | Buckeye Biz Hub</title>
-        <meta name="description" content="Premium business cards, brochures, letterhead, banners & more. Fast 24-hour quotes, wholesale pricing, and full transparency from your local Ohio printer." />
-        <link rel="canonical" href="https://buckeye-brand-boost.lovable.app/business-printing" />
-      </Helmet>
       <Navbar />
 
       {/* Hero */}
