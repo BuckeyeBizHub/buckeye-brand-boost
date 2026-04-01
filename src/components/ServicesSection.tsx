@@ -104,7 +104,7 @@ const ServicesSection = () => {
             Our 9 Core <span className="text-primary">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From business cards to full rebrands and everything in between — everything your Ohio business needs to look professional and grow.
+            Everything your Ohio business needs to look professional and grow — from business cards to full rebrands and everything in between.
           </p>
         </motion.div>
 
