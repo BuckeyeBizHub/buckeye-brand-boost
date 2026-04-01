@@ -15,7 +15,7 @@ const seoServices = [
   { title: "Google Business Profile Optimization & Management", icon: MapPin, desc: "We fully optimize and actively manage your Google Business Profile — photos, posts, categories, Q&A, and attributes — so you appear at the top of the Map Pack when customers search locally." },
   { title: "Local Citation Building & NAP Consistency", icon: FileText, desc: "We build and clean up your business listings across 50+ directories ensuring your Name, Address, and Phone number are perfectly consistent — a critical ranking factor for local search." },
   { title: "Review Management & Reputation Boosting", icon: Star, desc: "We implement review generation strategies and help you respond professionally to every review — building the social proof that Google rewards with higher rankings." },
-  { title: "Local Content Creation & On-Page SEO", icon: Search, desc: "We create locally-focused content and optimize your website pages with the keywords Columbus and Central Ohio customers actually search for." },
+  { title: "Local Content Creation & On-Page SEO", icon: Search, desc: "We create locally-focused content and optimize your website pages with the keywords your local customers actually search for — whether you're in Columbus, Cincinnati, Cleveland, Toledo, or anywhere in Ohio and beyond." },
   { title: "Local Rank Tracking & Competitive Heatmaps", icon: BarChart3, desc: "See exactly where you rank across every zip code in your service area with visual heatmaps and monthly reporting that shows real progress." },
   { title: "Schema Markup & Technical Local SEO", icon: Code, desc: "We implement LocalBusiness schema markup, optimize site speed, mobile usability, and technical SEO factors that help Google understand and rank your business locally." },
 ];
@@ -30,7 +30,7 @@ const processSteps = [
 ];
 
 const faqItems = [
-  { q: "What is Local SEO and why does it matter?", a: "Local SEO is the process of optimizing your online presence to attract more business from local searches on Google. When someone searches 'plumber near me' or 'best dentist in Columbus,' Local SEO determines which businesses appear in the top results and the Google Map Pack. For Ohio service businesses, it's the #1 way to get found by ready-to-buy customers." },
+  { q: "What is Local SEO and why does it matter?", a: "Local SEO is the process of optimizing your online presence to attract more business from local searches on Google. When someone searches 'plumber near me' or 'best dentist in Columbus,' Local SEO determines which businesses appear in the top results and the Google Map Pack. Whether you're in Columbus, Cleveland, Cincinnati, Dayton, Toledo, or any city across Ohio — and even outside of Ohio — it's the #1 way to get found by ready-to-buy customers in your area." },
   { q: "How long does it take to see results?", a: "Most businesses start seeing measurable improvements within 60–90 days, with significant ranking gains by month 4–6. Local SEO is an ongoing process — the longer you invest, the stronger your position becomes. We provide monthly reports so you can see progress from day one." },
   { q: "Do you guarantee rankings?", a: "No ethical SEO provider can guarantee specific rankings because Google's algorithm is proprietary and constantly evolving. What we do guarantee is proven, best-practice strategies executed consistently — which have delivered strong results for every client we've worked with." },
   { q: "What is the Google Map Pack?", a: "The Google Map Pack (also called the Local 3-Pack) is the map and three business listings that appear at the top of Google search results for local queries. Appearing in the Map Pack is the most valuable position for local businesses because it gets the most clicks and calls." },
@@ -38,15 +38,16 @@ const faqItems = [
   { q: "Do you handle Google Business Profile for me?", a: "Yes! We fully manage your Google Business Profile including weekly posts, photo uploads, Q&A management, category optimization, and responding to reviews. You don't need to touch it — we handle everything." },
   { q: "Can I cancel my plan anytime?", a: "Yes — we believe in earning your business every month, not locking you into long contracts. Our plans are month-to-month with no cancellation fees. We're confident you'll stay because you'll see real results." },
   { q: "What is a citation and why do I need them?", a: "A citation is any online mention of your business name, address, and phone number (NAP). Citations on directories like Yelp, BBB, Yellow Pages, and industry-specific sites tell Google your business is legitimate and established — boosting your local rankings." },
-  { q: "Do you create local content for my business?", a: "Yes! We create locally-focused blog posts, service area pages, and optimized website content targeting the specific keywords your Columbus and Central Ohio customers are searching for." },
+  { q: "Do you create local content for my business?", a: "Yes! We create locally-focused blog posts, service area pages, and optimized website content targeting the specific keywords your customers are searching for — customized for your exact city, region, and service area whether you're in Ohio or beyond." },
+  { q: "Do you only work with Ohio businesses?", a: "Not at all! While we're proudly based in Ohio and serve businesses throughout the entire state — Columbus, Cleveland, Cincinnati, Dayton, Toledo, Akron, Youngstown, and every small town in between — we also help businesses outside of Ohio. Our local SEO strategies work for any service-area business anywhere in the country. If you want to dominate your local market, we can help." },
   { q: "How much does local SEO cost?", a: "We offer simple flat-fee monthly plans that vary based on your market competitiveness and service area size. Every plan includes full transparency — you'll know exactly what you're paying for and what work is being done each month. Contact us for a custom quote." },
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Local SEO Services Columbus Ohio",
-  description: "Local SEO services for Columbus and Central Ohio businesses. Google Map Pack optimization, citation building, review management, and flat-fee monthly plans.",
+  name: "Local SEO Services Ohio",
+  description: "Local SEO services for businesses throughout Ohio and beyond. Google Map Pack optimization, citation building, review management, and flat-fee monthly plans. Serving Columbus, Cleveland, Cincinnati, Dayton, Toledo, and nationwide.",
   url: "https://buckeye-brand-boost.lovable.app/local-seo",
   provider: {
     "@type": "LocalBusiness",
@@ -85,11 +86,11 @@ const LocalSeo = () => (
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-            Local SEO Services in Columbus & Central Ohio – Get Found When Customers Search "Near Me"
+            Local SEO Services for Ohio Businesses & Beyond – Get Found When Customers Search "Near Me"
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
-            We help Ohio businesses dominate local search, appear in the Google Map Pack, and drive more calls, visits, and customers with simple flat-fee monthly plans.
+            We help businesses throughout Ohio — and across the country — dominate local search, appear in the Google Map Pack, and drive more calls, visits, and customers with simple flat-fee monthly plans.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
@@ -120,12 +121,15 @@ const LocalSeo = () => (
     <section className="py-24 lg:py-32 bg-background">
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Local SEO Matters for Ohio Businesses</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Local SEO Matters for Your Business</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Today, 97% of consumers search online to find local businesses, and 46% of all Google searches have local intent. When someone in Columbus searches "HVAC repair near me" or "best dentist in Dublin Ohio," the businesses that appear at the top of Google — especially in the Map Pack — get the vast majority of clicks, calls, and customers. If your business isn't showing up there, you're invisible to the people who are ready to buy right now.
+            Today, 97% of consumers search online to find local businesses, and 46% of all Google searches have local intent. Whether someone in Columbus searches "HVAC repair near me," a homeowner in Cleveland looks for "best roofer near me," or a customer in Cincinnati needs "emergency plumber" — the businesses that appear at the top of Google get the vast majority of clicks, calls, and customers. If your business isn't showing up there, you're invisible to the people who are ready to buy right now.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            Local SEO is the most cost-effective marketing investment any service business can make. Unlike paid ads that stop generating leads the moment you stop paying, strong local SEO builds a compounding asset — the longer you invest, the stronger your position becomes, and the harder it is for competitors to catch up. It's not optional anymore; it's the foundation of how local businesses get found and chosen.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Local SEO is the most cost-effective marketing investment any Ohio service business can make. Unlike paid ads that stop generating leads the moment you stop paying, strong local SEO builds a compounding asset — the longer you invest, the stronger your position becomes, and the harder it is for competitors to catch up. It's not optional anymore; it's the foundation of how local businesses get found and chosen.
+            We proudly serve businesses throughout all of Ohio — Columbus, Cleveland, Cincinnati, Dayton, Toledo, Akron, Canton, Youngstown, and every small town in between. And if you're outside of Ohio? We help businesses nationwide. Our proven local SEO strategies work for any service-area business, anywhere.
           </p>
         </motion.div>
       </div>
@@ -142,7 +146,7 @@ const LocalSeo = () => (
             Our Flat-Fee Local SEO Services
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Everything you need to dominate local search in Columbus and Central Ohio — managed for you monthly.
+            Everything you need to dominate local search in your market — whether you're in Ohio or anywhere in the country — managed for you monthly.
           </p>
         </motion.div>
 
@@ -234,7 +238,7 @@ const LocalSeo = () => (
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
       <div className="container relative text-center max-w-3xl mx-auto px-6">
         <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
-          Ready to dominate local search and get more customers from Columbus and Central Ohio?
+          Ready to dominate local search and get more customers — anywhere in Ohio and beyond?
         </motion.h2>
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
           <Link to="/contact">
