@@ -50,6 +50,12 @@ const services = [
     href: "/yard-signs-and-signage",
   },
   {
+    image: bannersImg,
+    title: "Banners, Flags & Decals",
+    description: "Custom banners, event flags, feather flags, and small decals that grab attention and drive traffic. Perfect for grand openings, trade shows, job sites, and promotions.",
+    href: "/services",
+  },
+  {
     image: vehicleWrapImg,
     title: "Vehicle Wraps & Fleet Branding",
     description: "Transform your fleet into powerful 24/7 mobile advertisements. Our custom vehicle wraps create thousands of daily impressions while making your brand unforgettable on every Ohio road.",
