@@ -1,21 +1,24 @@
-import PageLayout from "@/components/PageLayout";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ProductCarousel from "@/components/ProductCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <PageLayout showBreadcrumbs={false}>
+    <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <ServicesSection />
       <WhyChooseSection />
       <ProductCarousel />
       <TestimonialsSection />
       <CTASection />
-    </PageLayout>
+      <Footer />
+    </div>
   );
 };
 
