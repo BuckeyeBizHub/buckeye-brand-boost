@@ -16,11 +16,6 @@ import {
   BadgeCheck,
   ThumbsUp,
   Lightbulb,
-  Flag,
-  Layers,
-  Wind,
-  Sticker,
-  RectangleHorizontal,
   Clock,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -29,12 +24,12 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import TrustBadges from "@/components/TrustBadges";
 
-import heroImg from "@/assets/banners-flags-hero.jpg";
-import vinylImg from "@/assets/banner-vinyl-product.jpg";
-import meshImg from "@/assets/banner-mesh-product.jpg";
-import fabricImg from "@/assets/banner-fabric-product.jpg";
-import retractableImg from "@/assets/banner-retractable.jpg";
-import featherImg from "@/assets/banner-feather-flags.jpg";
+import heroImg from "@/assets/banners-flags-hero-v2.jpg";
+import vinylMeshImg from "@/assets/banner-vinyl-mesh.jpg";
+import featherBladeImg from "@/assets/banner-feather-blade.jpg";
+import retractableImg from "@/assets/banner-retractable-standup.jpg";
+import jobsiteImg from "@/assets/banner-jobsite-construction.jpg";
+import eventImg from "@/assets/banner-event-grandopening.jpg";
 import decalsImg from "@/assets/banner-decals-stickers.jpg";
 
 const fadeUp = {
@@ -46,88 +41,59 @@ const fadeUp = {
   }),
 };
 
-const bannerTypes = [
+const serviceCards = [
   {
-    title: "Vinyl Banners",
-    desc: "The workhorse of outdoor advertising. Durable, weatherproof 13oz vinyl with reinforced grommets — perfect for job sites, storefronts, grand openings, and events. Available in any custom size.",
-    image: vinylImg,
-    icon: RectangleHorizontal,
+    image: vinylMeshImg,
+    title: "Vinyl Banners & Mesh Banners",
+    desc: "Heavy-duty 13oz vinyl and wind-resistant mesh banners built for outdoor durability. Waterproof, UV-resistant, and available in any custom size with reinforced grommets for easy hanging.",
   },
   {
-    title: "Mesh Banners",
-    desc: "Designed for windy locations. Micro-perforated mesh allows wind to pass through while maintaining bold, visible graphics. Ideal for fences, construction sites, and elevated installations.",
-    image: meshImg,
-    icon: Wind,
+    image: featherBladeImg,
+    title: "Feather Flags & Blade Flags",
+    desc: "Tall, eye-catching feather and blade flags that flutter in the breeze and grab roadside attention. Available in heights from 7ft to 17ft with ground stakes, cross bases, or water-filled bases.",
   },
   {
-    title: "Fabric Banners",
-    desc: "Premium, wrinkle-resistant fabric with vibrant dye-sublimation printing. Lightweight and portable — perfect for indoor events, trade shows, conferences, and retail displays.",
-    image: fabricImg,
-    icon: Layers,
-  },
-  {
-    title: "Retractable Banner Stands",
-    desc: "Professional roll-up banner stands that set up in seconds. Portable, reusable, and perfect for trade shows, lobbies, open houses, and presentations. Includes carrying case.",
     image: retractableImg,
-    icon: Flag,
+    title: "Retractable Banners & Stand-Up Signs",
+    desc: "Professional roll-up banner stands that set up in seconds. Portable, reusable, and perfect for trade shows, lobbies, open houses, and presentations. Includes carrying case.",
+  },
+  {
+    image: jobsiteImg,
+    title: "Job-Site & Construction Banners",
+    desc: "Large-format fence banners and construction site signage that turns your job site into a billboard. Durable mesh and vinyl options designed to withstand weather and promote your brand 24/7.",
+  },
+  {
+    image: eventImg,
+    title: "Event & Grand Opening Banners",
+    desc: "Make your grand opening, sale, or special event impossible to miss with vibrant, full-color event banners. Custom sizes, fast turnaround, and bold designs that drive foot traffic and excitement.",
+  },
+  {
+    image: decalsImg,
+    title: "Small Decals & Stickers",
+    desc: "Custom die-cut logo stickers, window decals, bumper stickers, and floor graphics printed on premium vinyl with UV-protective lamination. Perfect for packaging, vehicles, storefronts, and giveaways.",
   },
 ];
 
-const flagTypes = [
-  {
-    title: "Feather Flags",
-    desc: "Tall, eye-catching teardrop or feather-shaped flags that flutter in the breeze. Available in heights from 7ft to 17ft with ground stakes, cross bases, or water-filled bases for any surface.",
-  },
-  {
-    title: "Blade Flags",
-    desc: "Sleek, straight-edge flags that maintain their shape in any wind condition. Bold, modern look that's perfect for car dealerships, retail stores, and outdoor events.",
-  },
-  {
-    title: "Swooper Flags",
-    desc: "Ultra-tall, dramatic swooping flags (up to 15ft) that are impossible to miss. Great for roadside visibility, grand openings, and seasonal promotions.",
-  },
-  {
-    title: "Custom Flag Shapes",
-    desc: "Need something unique? We produce custom-shaped flags for special events, branding activations, and one-of-a-kind promotional campaigns.",
-  },
-];
-
-const decalTypes = [
-  {
-    title: "Die-Cut Logo Stickers",
-    desc: "Custom-shaped stickers cut precisely to your logo outline. Perfect for product packaging, mailers, laptops, and giveaways.",
-  },
-  {
-    title: "Window Decals",
-    desc: "Static cling or adhesive window decals for storefronts, vehicles, and office doors. Easy to apply and remove without residue.",
-  },
-  {
-    title: "Bumper Stickers",
-    desc: "Weather-resistant vinyl bumper stickers with UV-protective lamination. Great for brand awareness campaigns, political campaigns, and events.",
-  },
-  {
-    title: "Floor & Wall Graphics",
-    desc: "Large-format adhesive graphics for floors, walls, and windows. Non-slip floor options available for retail, events, and trade shows.",
-  },
+const materialsInfo = [
+  { title: "Heavy-Duty 13oz Vinyl", desc: "The industry standard for outdoor banners — waterproof, tear-resistant, and UV-protected for years of use." },
+  { title: "Mesh Banners", desc: "Micro-perforated material that allows wind to pass through, preventing tearing in high-wind locations like fences and elevated installations." },
+  { title: "Full-Color Printing", desc: "Vibrant, high-resolution printing on one or both sides using UV-resistant inks that won't fade in Ohio weather." },
+  { title: "Grommets & Pole Pockets", desc: "Metal grommets in all corners (and every 2 feet on large banners) for secure hanging. Pole pockets available for rod-mounted displays." },
+  { title: "H-Wire Stakes & Stands", desc: "Sturdy H-wire stakes for yard signs, cross bases for indoor flags, and water-filled bases for outdoor stability on any surface." },
+  { title: "Custom Sizes & Shapes", desc: "No standard sizes here — we produce banners, flags, and decals in any custom dimensions your project requires." },
 ];
 
 const faqItems = [
-  { q: "What sizes do your banners come in?", a: "We produce banners in any custom size. Popular sizes include 2' × 4', 3' × 6', 4' × 8', and 3' × 10'. Just tell us your dimensions and we'll provide a quote within 24 hours." },
-  { q: "What material should I choose for outdoor banners?", a: "For most outdoor applications, 13oz vinyl is the industry standard — it's durable, waterproof, and UV-resistant. For windy locations like fences or elevated installations, mesh banners are the best choice as they allow wind to pass through without tearing." },
-  { q: "Do banners come with grommets?", a: "Yes! All vinyl and mesh banners include metal grommets in all four corners by default. We can also add grommets every 2 feet along the edges for larger banners, or use pole pockets for hanging on poles or rods." },
-  { q: "How do feather flags hold up in wind?", a: "Feather flags are designed to flutter in the wind, which actually makes them more visible. They can withstand moderate winds (15-25 mph). For high-wind areas, we recommend blade flags which maintain their shape better. We always recommend bringing flags indoors during severe weather." },
-  { q: "What's the difference between feather flags and blade flags?", a: "Feather flags have a curved, teardrop shape that flutters dramatically in the breeze. Blade flags have a straight, rectangular shape that stays taut and maintains consistent visibility. Both are effective — feather flags are more eye-catching in motion, while blade flags offer better readability." },
-  { q: "How long do outdoor banners last?", a: "With proper care, vinyl banners typically last 2-5 years outdoors. Mesh banners last 1-3 years. Fabric banners are best for indoor or short-term outdoor use. All our banners use UV-resistant inks to prevent fading." },
-  { q: "Can I get a proof before printing?", a: "Absolutely! Every order includes a free digital proof. We won't print anything until you've reviewed and approved the design. Changes are free at the proof stage." },
-  { q: "Do you offer rush production?", a: "Yes! Many banner and flag orders can be completed in 2-3 business days with rush production. Standard turnaround is 5-7 business days. Rush fees may apply and we're always transparent about costs." },
-  { q: "What file formats do you accept for printing?", a: 'We accept print-ready PDFs (preferred), Adobe Illustrator (.ai), Photoshop (.psd), and high-resolution JPEG/PNG files. For best results, all files should be 150-300 DPI depending on banner size, with 0.5" bleed on all sides.' },
-  { q: "Do you offer design services for banners and flags?", a: "Yes! If you don't have print-ready artwork, our design team can create custom banner, flag, or decal designs that match your brand. Design services are available at competitive rates and include unlimited revisions until you're satisfied." },
-];
-
-const trustItems = [
-  "24-Hour Quotes",
-  "Full Pricing Transparency",
-  "Ohio Owned & Operated",
+  { q: "What sizes are most popular for banners?", a: "The most popular banner sizes are 3' × 6', 4' × 8', and 3' × 10' for outdoor use. For retractable stands, 33\" × 80\" is the standard. However, we produce banners in any custom size — just tell us your dimensions and we'll quote it within 24 hours." },
+  { q: "What material is best for outdoor use?", a: "For most outdoor applications, 13oz vinyl is the gold standard — it's waterproof, UV-resistant, and incredibly durable. For windy locations like fences or elevated installations, mesh banners are the better choice because they allow wind to pass through without tearing." },
+  { q: "Do you offer wind-resistant options?", a: "Absolutely. Our mesh banners are specifically designed for high-wind environments. For flags, blade flags maintain their shape better in strong winds compared to feather flags. We always recommend bringing flags indoors during severe weather." },
+  { q: "Can banners be printed on both sides?", a: "Yes! We offer single-sided and double-sided printing on vinyl banners. Double-sided banners use a block-out layer in the middle to prevent show-through, ensuring your message is clear and vibrant from both directions." },
+  { q: "How long do outdoor banners last?", a: "With proper care, vinyl banners typically last 2-5 years outdoors. Mesh banners last 1-3 years. All our banners use UV-resistant inks to prevent fading. For maximum lifespan, we recommend taking banners down during severe storms." },
+  { q: "Do you provide stands or stakes?", a: "Yes! We offer a full range of mounting hardware including H-wire stakes for yard signs, ground stakes for feather flags, cross bases for indoor use, water-filled bases for outdoor stability, and retractable stands with carrying cases." },
+  { q: "Can I get rush production?", a: "Yes! Many banner and flag orders can be completed in 2-3 business days with rush production. Standard turnaround is 5-7 business days. Rush fees may apply and we're always transparent about costs upfront." },
+  { q: "What file formats do you accept?", a: "We accept print-ready PDFs (preferred), Adobe Illustrator (.ai), Photoshop (.psd), and high-resolution JPEG/PNG files. For best results, files should be 150-300 DPI depending on banner size, with 0.5\" bleed on all sides." },
+  { q: "Do you offer design help?", a: "Yes! If you don't have print-ready artwork, our design team can create custom banner, flag, or decal designs that match your brand. Design services are available at competitive rates and include unlimited revisions until you're satisfied." },
+  { q: "Can I order small decals and large banners in one order?", a: "Absolutely! We handle projects of any size and complexity. Many Ohio businesses order banners, flags, and decals together as a coordinated package — and we offer package pricing to save you money." },
 ];
 
 const BannersAndFlags = () => {
@@ -135,7 +101,7 @@ const BannersAndFlags = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Custom Banners, Flags & Decals",
-    description: "Custom vinyl banners, mesh banners, feather flags, blade flags, and decals for Ohio businesses. 24-hour quotes, wholesale pricing, fast turnaround.",
+    description: "Custom vinyl banners, mesh banners, feather flags, blade flags, retractable banners, and decals for Ohio businesses. 24-hour quotes, wholesale pricing, fast turnaround.",
     url: "https://buckeye-brand-boost.lovable.app/banners-and-flags",
     provider: {
       "@type": "LocalBusiness",
@@ -164,7 +130,7 @@ const BannersAndFlags = () => {
       {/* Hero */}
       <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Custom banners, feather flags, and decals displayed at an outdoor event in Columbus Ohio" className="w-full h-full object-cover" width={1920} height={800} />
+          <img src={heroImg} alt="Custom banners, feather flags, retractable banners, and decals displayed at an outdoor event in Columbus Ohio" className="w-full h-full object-cover" width={1920} height={800} />
           <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(220,55%,12%,0.75)] to-[hsl(220,25%,5%,0.92)]" />
         </div>
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
@@ -174,12 +140,12 @@ const BannersAndFlags = () => {
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-              Custom Banners, Flags & Decals That Get You{" "}
-              <span className="text-primary">Noticed</span>
+              Custom Banners, Flags & Decals That Grab Attention and Drive{" "}
+              <span className="text-primary">Results</span>
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
-              High-quality event banners, feather flags, job site signs, and small decals — printed fast with 24-hour quotes and full transparency.
+              High-quality event banners, feather flags, retractable banners, job-site signs, and small decals — printed fast with 24-hour quotes and full transparency to help your Ohio business get noticed.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
@@ -216,7 +182,7 @@ const BannersAndFlags = () => {
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-8 text-center">
-              Why Banners, Flags & Decals Still Drive Results for <span className="text-primary">Ohio Businesses</span>
+              Why Banners, Flags & Decals Work for <span className="text-primary">Ohio Businesses</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Custom banners and flags are among the most versatile and cost-effective marketing tools available. Whether you're promoting a grand opening, marking a job site, attracting foot traffic to your retail store, or branding a trade show booth — banners and flags deliver immediate, high-visibility impact at a fraction of the cost of digital advertising.
@@ -228,40 +194,35 @@ const BannersAndFlags = () => {
         </div>
       </section>
 
-      {/* Popular Banner Types – 2x2 Grid */}
+      {/* 3x2 Service Grid */}
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <RectangleHorizontal className="w-4 h-4" /> Banner Types
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+              <Sparkles className="w-3.5 h-3.5" /> Our Options
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Popular <span className="text-primary">Banner Types</span>
+              Our Banners, Flags & <span className="text-primary">Decals Options</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              From heavy-duty outdoor vinyl to elegant fabric displays — we produce every type of banner your business needs.
+              From heavy-duty outdoor vinyl to portable retractable stands and custom stickers — we produce everything your business needs to get noticed.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-8">
-            {bannerTypes.map((cat, i) => (
-              <motion.div key={cat.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCards.map((card, i) => (
+              <motion.div key={card.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:border-primary/40 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group bg-card overflow-hidden">
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img src={cat.image} alt={`${cat.title} for Ohio businesses`} loading="lazy" width={800} height={600} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={card.image} alt={`${card.title} for Ohio businesses`} loading="lazy" width={800} height={600} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <div className="w-10 h-10 rounded-xl bg-primary/90 flex items-center justify-center">
-                        <cat.icon className="w-5 h-5 text-primary-foreground" />
-                      </div>
-                    </div>
                   </div>
                   <CardContent className="p-7">
-                    <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{cat.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-5">{cat.desc}</p>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{card.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-5">{card.desc}</p>
                     <Link to="/contact">
                       <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider">
-                        Get a Quote
+                        Learn More
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
@@ -273,92 +234,34 @@ const BannersAndFlags = () => {
         </div>
       </section>
 
-      {/* Feather Flags & Blade Flags */}
+      {/* Materials & Add-Ons */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="container max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <img src={featherImg} alt="Colorful feather flags and blade flags displayed outside an Ohio business" loading="lazy" width={800} height={600} className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
-            </motion.div>
+        <div className="container max-w-5xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
+              Materials & <span className="text-primary">Add-Ons Explained</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              We use only commercial-grade materials to ensure your banners, flags, and decals look great and last — even in Ohio weather.
+            </p>
+          </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Flag className="w-4 h-4" /> Flags
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-6">
-                Feather Flags & <span className="text-primary">Blade Flags</span>
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Nothing grabs roadside attention like a tall, fluttering flag. Our custom feather flags and blade flags are designed for maximum visibility and durability — available in multiple heights with versatile base options for any surface.
-              </p>
-
-              <div className="space-y-5">
-                {flagTypes.map((flag, i) => (
-                  <motion.div key={flag.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
-                    <div>
-                      <h3 className="font-display font-bold text-foreground mb-1">{flag.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{flag.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <Link to="/contact" className="mt-8 inline-block">
-                <Button className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider px-8 py-6">
-                  Get a Custom Flag Quote
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Small Decals & Stickers */}
-      <section className="py-20 lg:py-28 bg-muted/30">
-        <div className="container max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="order-2 lg:order-1">
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Sticker className="w-4 h-4" /> Decals & Stickers
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-6">
-                Custom Decals & <span className="text-primary">Stickers</span>
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                From small logo stickers to large wall graphics, our custom decals are printed on premium vinyl with UV-protective lamination for long-lasting durability. Perfect for packaging, vehicles, storefronts, and promotional giveaways.
-              </p>
-
-              <div className="space-y-5">
-                {decalTypes.map((decal, i) => (
-                  <motion.div key={decal.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
-                    <div>
-                      <h3 className="font-display font-bold text-foreground mb-1">{decal.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{decal.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <Link to="/contact" className="mt-8 inline-block">
-                <Button className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider px-8 py-6">
-                  Get a Custom Decal Quote
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="order-1 lg:order-2">
-              <img src={decalsImg} alt="Custom vinyl decals and stickers with business logos for Ohio companies" loading="lazy" width={800} height={600} className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
-            </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {materialsInfo.map((item, i) => (
+              <motion.div key={item.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+                <div className="bg-card rounded-2xl border border-border/50 p-6 h-full hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+                  <CheckCircle2 className="w-6 h-6 text-primary mb-3" />
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Design Tips from David */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-3 mb-8">
@@ -372,7 +275,7 @@ const BannersAndFlags = () => {
                 "Banners and flags need to communicate one thing instantly: who you are and what you want people to do. Don't overcrowd them with text. Your company name, one strong benefit statement, and a phone number or website — that's it."
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6 italic font-serif">
-                "For feather flags, stick to bold colors and minimal text — they're moving, so people only get 2-3 seconds to read them. For vinyl banners, use high-contrast colors (white text on dark backgrounds works great from a distance) and make your call-to-action the largest element. And always, always include grommets every 2 feet on large banners — Ohio wind is no joke."
+                "For feather flags, stick to bold colors and minimal text — they're moving, so people only get 2-3 seconds to read them. For vinyl banners, use high-contrast colors (white text on dark backgrounds works great from a distance) and make your call-to-action the largest element. Design for visibility at 100+ feet, not readability at 3 feet."
               </p>
               <div className="mt-6">
                 <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
@@ -384,7 +287,7 @@ const BannersAndFlags = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 lg:py-28 bg-muted/30">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
@@ -418,13 +321,14 @@ const BannersAndFlags = () => {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
-            Ready to get custom banners, flags & decals for your Ohio business?
+            Ready for custom banners, flags, and decals that actually drive traffic and get your message{" "}
+            <span className="text-primary-foreground/90 underline decoration-primary-foreground/30 underline-offset-4">noticed</span>?
           </motion.h2>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact">
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
                 <Phone className="w-6 h-6" />
-                Get Your Custom Banners & Flags Quoted in 24 Hours
+                Get Your Custom Banners & Flags Quote in 24 Hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>
@@ -439,7 +343,7 @@ const BannersAndFlags = () => {
       <section className="py-8 bg-ohio-navy">
         <div className="container">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
-            {trustItems.map((item, i) => (
+            {["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned & Operated"].map((item, i) => (
               <span key={i} className="flex items-center gap-2 text-sm font-bold text-primary-foreground/70 tracking-wide">
                 <Clock className="w-4 h-4 text-primary" />
                 {item}
