@@ -90,7 +90,7 @@ const LocalSeo = () => (
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
-            We help Ohio businesses dominate local search, appear in the Google Map Pack, and drive more calls, visits, and customers with simple flat-fee monthly plans.
+            We help businesses throughout Ohio — and across the country — dominate local search, appear in the Google Map Pack, and drive more calls, visits, and customers with simple flat-fee monthly plans.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
