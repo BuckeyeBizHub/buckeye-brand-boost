@@ -71,8 +71,8 @@ const ProductCarousel = () => {
           className="flex justify-center gap-6 mb-16"
         >
           {[
-            { val: "5,000+", lbl: "Products" },
-            { val: "7", lbl: "Categories" },
+            { val: "50,000+", lbl: "Products" },
+            { val: "500+", lbl: "Categories" },
             { val: "24hr", lbl: "Quotes" },
           ].map((s) => (
             <div key={s.lbl} className="flex items-center gap-2">
