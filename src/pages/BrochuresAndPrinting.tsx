@@ -27,6 +27,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import brochuresHero from "@/assets/brochures-hero.jpg";
 import halfFoldImg from "@/assets/folds/half-fold.png";
 import trifoldImg from "@/assets/folds/trifold.png";
