@@ -193,7 +193,7 @@ const Navbar = () => {
           <div className="px-6 pt-4">
             <Link to="/contact" onClick={() => setOpen(false)}>
               <Button size="sm" className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black shadow-[0_0_25px_hsl(0_85%_40%/0.35)] uppercase tracking-wider group">
-                Get a Quote
+                Get 24-Hour Quote
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </Link>
