@@ -104,17 +104,6 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
                 "{t.quote}"
               </p>
 
-              {/* Client info */}
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300 flex-shrink-0">
-                  <img src={t.image} alt="Client project" loading="lazy" width={56} height={56} className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <span className="inline-block text-[0.65rem] font-extrabold text-primary tracking-[0.15em] uppercase bg-primary/[0.1] px-2.5 py-1 rounded-full">
-                    Verified Client
-                  </span>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
