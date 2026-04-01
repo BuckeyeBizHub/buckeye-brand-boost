@@ -99,7 +99,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-7 py-2.5 rounded-xl">
               <p className="text-primary-foreground font-bold text-sm tracking-wide uppercase whitespace-nowrap">
-                David Stein · Co-Founder
+                David Stein · The Buckeye Branding Czar
               </p>
             </div>
           </div>
