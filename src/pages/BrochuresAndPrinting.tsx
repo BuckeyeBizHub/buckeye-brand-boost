@@ -102,15 +102,16 @@ const cardstockWeights = [
   { name: "17 pt.", desc: "Our thickest and sturdiest cardstock ideal for direct mail postcards." },
 ];
 
-const finishes = [
-  { name: "Matte Finish", desc: "Smooth, non-reflective coating for an elegant, understated look. Great for text-heavy pieces." },
-  { name: "Gloss Finish", desc: "High-shine coating that makes colors pop and photos look vibrant. Ideal for product brochures." },
-  { name: "High-Gloss UV", desc: "Ultra-shiny protective coating that resists fingerprints and adds a premium look." },
-  { name: "Soft-Touch Lamination", desc: "Velvety, luxurious texture that feels incredible in hand — perfect for high-end brands." },
-  { name: "Foil Stamping", desc: "Metallic gold, silver, or copper accents that add a striking, premium detail to any printed piece." },
-  { name: "Embossing / Debossing", desc: "Raised or pressed lettering and logos that add a tactile, three-dimensional element." },
-  { name: "Spot UV", desc: "Selective glossy coating on specific areas (like logos) for dramatic contrast against a matte background." },
-  { name: "Edge Painting", desc: "Colorful painted edges for an eye-catching detail that makes thick cards truly stand out." },
+const coatings = [
+  { name: "Matte", desc: "Has a satin-like texture and its smooth surface helps with reading through a lot of text." },
+  { name: "Gloss", desc: "Coating on both sides adds some shine without glaring against the light." },
+  { name: "High-Gloss UV", desc: "Adds gloss that makes images pop. Brochures with high-gloss UV coating can also withstand repeated handling." },
+];
+
+const laminates = [
+  { name: "Silk", desc: "Sits somewhere between a matte and gloss finish. It is soft to the touch and adds an elegant look." },
+  { name: "Soft Touch", desc: "Has a velvety finish that's perfect for high-end and premium products or services." },
+  { name: "Gloss Antibacterial", desc: "A special high-gloss finish that has germ-inhibiting properties. Beneficial for brochures that are passed around often." },
 ];
 
 const faqItems = [
@@ -394,14 +395,32 @@ const BrochuresAndPrinting = () => {
           {/* Finishes section below */}
           <div className="mt-14">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h3 className="font-display text-2xl font-black text-foreground mb-6 flex items-center gap-3">
+              <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
                 <Sparkles className="w-6 h-6 text-primary" /> Finishes & Enhancements
               </h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {finishes.map((f) => (
-                  <div key={f.name} className="bg-card rounded-xl p-5 border border-border/50">
-                    <p className="font-bold text-foreground mb-1">{f.name}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Choose from our coating options to enhance the details of your images and text.
+              </p>
+
+              <h4 className="font-display text-lg font-bold text-foreground mb-4">Coating Options</h4>
+              <div className="grid sm:grid-cols-3 gap-4 mb-8">
+                {coatings.map((c) => (
+                  <div key={c.name} className="bg-card rounded-xl p-5 border border-border/50">
+                    <p className="font-bold text-foreground mb-1">{c.name}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{c.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-display text-lg font-bold text-foreground mb-2">Premium Laminate Options</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                These different finishes make your handouts stand out immediately, whether it's passed around or displayed on a rack.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {laminates.map((l) => (
+                  <div key={l.name} className="bg-card rounded-xl p-5 border border-border/50">
+                    <p className="font-bold text-foreground mb-1">{l.name}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{l.desc}</p>
                   </div>
                 ))}
               </div>
