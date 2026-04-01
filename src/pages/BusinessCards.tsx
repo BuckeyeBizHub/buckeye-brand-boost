@@ -274,7 +274,7 @@ const BusinessCards = () => {
             </p>
             <footer>
               <p className="font-bold text-foreground text-base">— David Stein, The Buckeye Branding Czar</p>
-              <p className="text-muted-foreground text-sm font-semibold">Founder & Owner, Buckeye Biz Hub</p>
+              <p className="text-muted-foreground text-sm font-semibold">Buckeye Biz Hub</p>
             </footer>
           </motion.blockquote>
         </div>
