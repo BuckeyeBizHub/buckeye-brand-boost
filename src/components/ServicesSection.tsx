@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
+  CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search, Flag,
 } from "lucide-react";
 
 const services = [
