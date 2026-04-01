@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const CTASection = () => {
   return (
@@ -23,7 +24,7 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="flex justify-center gap-3 mb-10"
         >
-          {[Star, Star, Star].map((Icon, i) => (
+          {[Star, Star, Star, Star, Star].map((Icon, i) => (
             <Icon key={i} className="w-6 h-6 text-primary/70 fill-primary/50" />
           ))}
         </motion.div>
@@ -61,6 +62,15 @@ const CTASection = () => {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
           </Link>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-12"
+        >
+          <TrustBadges variant="dark" size="sm" />
         </motion.div>
       </div>
     </section>

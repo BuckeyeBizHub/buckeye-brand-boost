@@ -145,7 +145,7 @@ const FAQ = () => {
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)', backgroundSize: '44px 44px' }} />
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, y: -10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex justify-center gap-3 mb-10">
-            {[Star, Star, Star].map((Icon, i) => (
+            {[Star, Star, Star, Star, Star].map((Icon, i) => (
               <Icon key={i} className="w-6 h-6 text-primary-foreground/70 fill-primary-foreground/50" />
             ))}
           </motion.div>

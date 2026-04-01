@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, ShoppingBag, DollarSign, Zap, Star, ArrowRight } from "lucide-react";
+import TrustBadges from "@/components/TrustBadges";
 
 const benefits = [
   { icon: MapPin, title: "Local Ohio Roots", description: "Proudly based in Ohio, we understand the local market and care about our community.", number: "01", accent: "from-primary to-ohio-red-light" },
@@ -90,6 +91,15 @@ const WhyChooseSection = () => {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-16"
+        >
+          <TrustBadges variant="light" size="md" />
+        </motion.div>
       </div>
     </section>
   );
