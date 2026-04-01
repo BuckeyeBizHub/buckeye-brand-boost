@@ -70,6 +70,7 @@ const App = () => (
           <Route path="/website-design" element={<WebsiteDesign />} />
           <Route path="/local-seo" element={<LocalSeo />} />
           <Route path="/banners-and-flags" element={<BannersAndFlags />} />
+          <Route path="/decals" element={<Decals />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
