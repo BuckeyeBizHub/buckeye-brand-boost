@@ -418,6 +418,120 @@ const BrochuresAndPrinting = () => {
         </div>
       </section>
 
+      {/* Brochure FAQs */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
+              Brochure FAQs
+            </h2>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                {
+                  q: "What are the most popular brochure sizes and their main uses?",
+                  a: (
+                    <ul className="list-disc pl-5 space-y-2">
+                      <li><strong>2-fold (8.5" x 11")</strong> – Ideal for introducing a specific product or service.</li>
+                      <li><strong>3-fold (8.5" x 11" or 11" x 17")</strong> – Perfect when you need to present longer lists or detailed information in a logical sequence.</li>
+                      <li><strong>4-fold (8.5" x 14")</strong> – Gives you more space for larger images, infographics, or detailed blocks of information.</li>
+                    </ul>
+                  ),
+                },
+                {
+                  q: "Are the popular brochure sizes folded or unfolded?",
+                  a: (
+                    <div>
+                      <p className="mb-3">The dimensions listed above are the flat (unfolded) sizes. When folded, each panel measures approximately:</p>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li><strong>2-fold</strong> → 5.5" per section</li>
+                        <li><strong>3-fold</strong> → 3.7" per section (8.5" x 11") or 5.6" per section (11" x 17")</li>
+                        <li><strong>4-fold</strong> → 3.5" per section</li>
+                      </ul>
+                    </div>
+                  ),
+                },
+                {
+                  q: "Do you offer custom sizes for brochures?",
+                  a: "Yes. We can produce custom brochures ranging from 5.5\" to 27.75\" in width and 4\" to 16\" in height, in .25\" increments. These are the flat dimensions before folding.",
+                },
+                {
+                  q: "What is the difference between gloss and high-gloss UV coating?",
+                  a: "Gloss coating gives a nice, reflective shine and protects your prints from scuffs and scratches. High-Gloss UV delivers an even stronger \"wet-look\" shine — especially beautiful on deep, dark colors like black and navy — and is highly abrasion-resistant for heavy handling.",
+                },
+                {
+                  q: "What is matte coating?",
+                  a: "Matte coating adds a sophisticated, muted sheen while protecting your brochure from fingerprints and smudges. It's a favorite for a premium, elegant look.",
+                },
+                {
+                  q: "Will my custom brochures be delivered folded?",
+                  a: "Yes — you can choose your preferred folding option during the quoting process. If you prefer to receive them unfolded but scored (for easy folding later), just let us know and we'll make it happen.",
+                },
+                {
+                  q: "What does \"printing turnaround\" mean?",
+                  a: "Printing turnaround is the number of business days it takes us to print and finish your order once we have your approved file. It does not include shipping, weekends, or holidays.",
+                },
+                {
+                  q: "What printing and shipping options should I choose for a rush order?",
+                  a: "Select the fastest printing turnaround available. Enter your ZIP code under delivery options to see the quickest shipping times. We'll work with you to meet your deadline.",
+                },
+                {
+                  q: "Why should I use the free proof?",
+                  a: "Reviewing the free digital proof lets you see exactly how your brochure will look before we print. It's especially helpful for first-time orders, rush jobs, or when you have specific design concerns.",
+                },
+                {
+                  q: "How do I create custom brochures?",
+                  a: "You can design them yourself using our free templates or any design software, then upload the file. We also offer design assistance if needed.",
+                },
+                {
+                  q: "Can I upload my own design?",
+                  a: "Absolutely. We accept most common file formats. For best results, use CMYK color mode, 300 dpi resolution, and include a .125\" bleed. We'll review your file and let you know if any tweaks are needed.",
+                },
+                {
+                  q: "Do you have custom brochure design tips?",
+                  a: (
+                    <ul className="list-disc pl-5 space-y-2">
+                      <li>Place your company name, logo, and main message clearly on the front panel so it's visible even when displayed in a rack.</li>
+                      <li>Keep a good balance between text and images — avoid clutter.</li>
+                      <li>Think about how the brochure will be used (handed out, mailed, displayed) when planning the layout.</li>
+                    </ul>
+                  ),
+                },
+                {
+                  q: "When should I order my brochures?",
+                  a: "Order as soon as you have your content ready. We offer same-day and next-day production options when possible — just let us know your deadline and we'll make it happen.",
+                },
+                {
+                  q: "Is the paper coated on both sides? Can I write on it?",
+                  a: "Yes — all our brochures are coated on both sides. Gloss, high-gloss UV, and matte finishes protect both sides. Uncoated and matte surfaces can be written on with a ballpoint pen or permanent marker. High-gloss UV is more difficult to write on.",
+                },
+                {
+                  q: "Which paper stocks and weights are available?",
+                  a: (
+                    <ul className="list-disc pl-5 space-y-2">
+                      <li><strong>70 lb paper</strong> – Lightweight, similar to book pages</li>
+                      <li><strong>80 lb paper</strong> – Most popular, feels like a quality magazine</li>
+                      <li><strong>100 lb paper</strong> – Thick and substantial for a premium feel</li>
+                    </ul>
+                  ),
+                },
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`brochure-faq-${i}`} className="bg-card border border-border/50 rounded-xl px-6 data-[state=open]:shadow-md transition-shadow">
+                  <AccordionTrigger className="text-left font-bold text-foreground hover:no-underline py-5 text-base">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
