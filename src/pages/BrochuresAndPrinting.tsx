@@ -154,7 +154,7 @@ const BrochuresAndPrinting = () => {
     })),
   };
 
-    usePageTitle("Brochures & Business Printing Columbus Ohio");
+    usePageTitle("Brochures & Business Printing Columbus Ohio", "High-quality brochures, flyers, menus, and business printing in Columbus Ohio. Vibrant colors, premium paper, and fast turnaround with wholesale pricing.");
 
   return (
     <div className="min-h-screen">

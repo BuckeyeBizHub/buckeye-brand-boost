@@ -72,7 +72,7 @@ const faqJsonLd = {
 };
 
 const FullRebrandKits = () => {
-  usePageTitle("Full Rebrand Kits Columbus Ohio");
+  usePageTitle("Full Rebrand Kits Columbus Ohio", "Complete rebrand kits for Ohio businesses. Coordinated vehicle branding, signage, apparel, printing, and digital assets in one professional package.");
 
   return (
   <div className="min-h-screen">

@@ -106,7 +106,7 @@ const Portfolio = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Portfolio - Our Work for Ohio Businesses");
+    usePageTitle("Portfolio - Our Work for Ohio Businesses", "Browse real examples of business cards, vehicle wraps, promotional products, banners, and branding projects completed for Ohio businesses by Buckeye Biz Hub.");
 
   return (
     <div className="min-h-screen">

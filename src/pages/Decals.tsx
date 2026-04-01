@@ -136,7 +136,7 @@ const Decals = () => {
     })),
   };
 
-    usePageTitle("Custom Decals & Stickers Columbus Ohio");
+    usePageTitle("Custom Decals & Stickers Columbus Ohio", "Custom vehicle decals, DOT numbers, window clings, reflective safety stickers, and patriotic decals for Ohio businesses. Durable, professional, and affordable.");
 
   return (
     <div className="min-h-screen">

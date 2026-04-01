@@ -146,7 +146,7 @@ const Contact = () => {
     }
   };
 
-    usePageTitle("Contact Us - Get Your Free 24-Hour Quote");
+    usePageTitle("Contact Us - Get Your Free 24-Hour Quote", "Contact Buckeye Biz Hub for a free 24-hour quote on business printing, promotional products, vehicle wraps, banners, and more. Serving Columbus and all of Ohio.");
 
   return (
     <div className="min-h-screen bg-background text-foreground">

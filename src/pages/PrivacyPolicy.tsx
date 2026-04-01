@@ -64,7 +64,7 @@ const sections = [
 ];
 
 const PrivacyPolicy = () => {
-  usePageTitle("Privacy Policy");
+  usePageTitle("Privacy Policy", "Buckeye Biz Hub privacy policy. Learn how we collect, use, and protect your personal information when you use our printing and branding services.");
 
   return (
   <div className="min-h-screen">

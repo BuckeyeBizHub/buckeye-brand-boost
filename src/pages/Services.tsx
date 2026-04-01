@@ -94,7 +94,7 @@ const Services = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("All Services - Printing, Promos & Vehicle Branding Columbus Ohio");
+    usePageTitle("All Services - Printing, Promos & Vehicle Branding Columbus Ohio", "Explore all branding services from Buckeye Biz Hub — business cards, brochures, promotional products, vehicle wraps, banners, flags, decals, signage, website design, and local SEO for Ohio businesses.");
 
   return (
     <div className="min-h-screen">
