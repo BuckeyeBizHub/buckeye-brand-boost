@@ -80,7 +80,7 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((t, i) => (
             <motion.div
-              key={t.name}
+              key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
