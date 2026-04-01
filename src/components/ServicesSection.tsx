@@ -10,62 +10,62 @@ const services = [
   {
     icon: CreditCard,
     title: "Business Cards & Stationery",
-    desc: "Premium cards that make a lasting first impression.",
+    desc: "Make a powerful first impression that lasts with premium cards featuring luxurious stocks, gold foil, and spot UV finishes.",
     href: "/business-cards",
   },
   {
     icon: BookOpen,
     title: "Brochures & Business Printing",
-    desc: "High-impact materials that clearly communicate your message.",
+    desc: "Communicate your message with clarity and impact using vibrant, high-quality printed materials that build trust and help you stand out.",
     href: "/brochures-and-business-printing",
   },
   {
     icon: Gift,
     title: "Promotional Products & Giveaways",
-    desc: "Custom items that keep your brand top-of-mind.",
+    desc: "Turn every interaction into a lasting brand impression with custom items that keep your name top-of-mind and drive referrals.",
     href: "/promotional-products",
   },
   {
     icon: Shirt,
     title: "Branded Apparel & Uniforms",
-    desc: "Professional uniforms that build team pride and credibility.",
+    desc: "Build instant credibility and team unity with sharp, professional branded apparel that makes your staff look proud and consistent.",
     href: "/branded-apparel-and-uniforms",
   },
   {
     icon: Signpost,
     title: "Yard Signs & Custom Signage",
-    desc: "Bold signs that generate immediate attention and calls.",
+    desc: "Get noticed where it matters most with bold, weather-resistant signs that generate immediate attention and new customers.",
     href: "/yard-signs-and-signage",
-  },
-  {
-    icon: Flag,
-    title: "Banners, Flags & Decals",
-    desc: "Custom banners, feather flags, and decals that grab attention and drive traffic.",
-    href: "/banners-and-flags",
   },
   {
     icon: Car,
     title: "Vehicle Wraps & Fleet Branding",
-    desc: "Turn your vehicles into powerful 24/7 advertisements.",
+    desc: "Transform your fleet into powerful 24/7 mobile advertisements that create thousands of daily impressions.",
     href: "/vehicle-wraps-and-fleet-branding",
   },
   {
     icon: Package,
     title: "Full Rebrand Kits",
-    desc: "Complete brand transformations in one coordinated package.",
+    desc: "Elevate your entire brand presence in one complete package with coordinated vehicle wraps, signage, apparel, printing, and digital assets.",
     href: "/full-rebrand-kits",
   },
   {
     icon: Monitor,
     title: "Website Design & Development",
-    desc: "Modern websites that attract and convert customers.",
+    desc: "Build a modern, fast-loading website that attracts customers and converts visitors into loyal clients 24/7.",
     href: "/website-design",
   },
   {
     icon: Search,
     title: "Local SEO & Google Ranking",
-    desc: "Dominate local search and appear in the Map Pack.",
+    desc: "Get discovered by more local customers when they search online and dominate the Google Map Pack.",
     href: "/local-seo",
+  },
+  {
+    icon: Flag,
+    title: "Banners, Flags & Decals",
+    desc: "Grab attention instantly with eye-catching custom banners, feather flags, and small decals designed to drive traffic and make your message impossible to miss.",
+    href: "/banners-and-flags",
   },
 ];
 
@@ -88,10 +88,10 @@ const ServicesSection = () => {
             What We Offer
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-            Our 10 Core <span className="text-primary">Services</span>
+            Our 10 Core <span className="text-primary">Branding Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
+            Everything your Ohio business needs to look professional, stand out, and grow — from premium business cards to powerful vehicle wraps, banners, flags, and full rebrand kits.
           </p>
         </motion.div>
 
