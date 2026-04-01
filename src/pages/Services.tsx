@@ -114,10 +114,10 @@ const Services = () => {
               What We Offer
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-              Our 9 Core Services
+              Our 10 Core Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to full fleet wraps and digital marketing — we help Ohio businesses look professional at wholesale prices.
+              From business cards to vehicle wraps, banners, flags, and decals — everything your Ohio business needs to stand out.
             </p>
           </motion.div>
 
