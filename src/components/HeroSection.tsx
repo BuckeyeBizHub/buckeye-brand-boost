@@ -4,6 +4,7 @@ import productCollage from "@/assets/product-collage-hero.jpg";
 import davidHeadshot from "@/assets/david-stein-headshot.jpg";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import TrustBadges from "@/components/TrustBadges";
 
 const HeroSection = () => {
   return (
