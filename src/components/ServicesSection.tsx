@@ -1,54 +1,84 @@
 import { motion } from "framer-motion";
-import { Printer, Gift, Truck, ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
+} from "lucide-react";
 
-import businessCards from "@/assets/business-cards-letterhead-stack.jpg";
-import yardSign from "@/assets/yard-sign-installation.jpg";
-import apparel from "@/assets/custom-apparel-polos-hoodies.jpg";
-import drinkware from "@/assets/branded-drinkware-tumblers.jpg";
-import vehicleWrap from "@/assets/vehicle-wrap-before-after.jpg";
-import fleet from "@/assets/branded-vehicle-fleet.jpg";
+import businessCardsImg from "@/assets/business-cards-product.jpg";
+import brochuresImg from "@/assets/service-brochures-printing.jpg";
+import promoImg from "@/assets/service-promo-giveaways.jpg";
+import apparelImg from "@/assets/service-apparel-uniforms.jpg";
+import yardSignsImg from "@/assets/yard-signs-product.jpg";
+import vehicleWrapImg from "@/assets/vehicle-wrap-product.jpg";
+import rebrandImg from "@/assets/service-rebrand-kit.jpg";
+import websiteImg from "@/assets/service-website-design.jpg";
+import seoImg from "@/assets/service-local-seo.jpg";
 
 const services = [
   {
-    icon: Printer,
-    num: "01",
-    title: "Business Printing",
-    headline: "Print That Demands Attention",
-    bullets: [
-      "Premium business cards, brochures & banners",
-      "Yard signs, letterhead & large format",
-      "Fast turnaround, wholesale pricing",
-    ],
-    images: [businessCards, yardSign],
-    href: "/business-printing",
+    icon: CreditCard,
+    title: "Business Cards & Stationery",
+    desc: "Premium cards that make a lasting first impression.",
+    image: businessCardsImg,
+    href: "/business-cards",
+  },
+  {
+    icon: BookOpen,
+    title: "Brochures & Business Printing",
+    desc: "High-impact materials that clearly communicate your message.",
+    image: brochuresImg,
+    href: "/brochures-and-business-printing",
   },
   {
     icon: Gift,
-    num: "02",
-    title: "Promotional Products",
-    headline: "Merch Your Customers Will Love",
-    bullets: [
-      "Custom apparel, polos & hoodies",
-      "Branded drinkware, tumblers & bar items",
-      "Thousands of logo-ready products",
-    ],
-    images: [apparel, drinkware],
+    title: "Promotional Products & Giveaways",
+    desc: "Custom items that keep your brand top-of-mind.",
+    image: promoImg,
     href: "/promotional-products",
   },
   {
-    icon: Truck,
-    num: "03",
-    title: "Vehicle Branding",
-    headline: "Turn Every Drive Into Marketing",
-    bullets: [
-      "Full & partial wraps, decals & lettering",
-      "Fleet branding for maximum reach",
-      "Durable, weather-resistant materials",
-    ],
-    images: [vehicleWrap, fleet],
-    href: "/vehicle-branding",
+    icon: Shirt,
+    title: "Branded Apparel & Uniforms",
+    desc: "Professional uniforms that build team pride and credibility.",
+    image: apparelImg,
+    href: "/branded-apparel-and-uniforms",
+  },
+  {
+    icon: Signpost,
+    title: "Yard Signs & Custom Signage",
+    desc: "Bold signs that generate immediate attention and calls.",
+    image: yardSignsImg,
+    href: "/yard-signs-and-signage",
+  },
+  {
+    icon: Car,
+    title: "Vehicle Wraps & Fleet Branding",
+    desc: "Turn your vehicles into powerful 24/7 advertisements.",
+    image: vehicleWrapImg,
+    href: "/vehicle-wraps-and-fleet-branding",
+  },
+  {
+    icon: Package,
+    title: "Full Rebrand Kits",
+    desc: "Complete brand transformations in one coordinated package.",
+    image: rebrandImg,
+    href: "/full-rebrand-kits",
+  },
+  {
+    icon: Monitor,
+    title: "Website Design & Development",
+    desc: "Modern websites that attract and convert customers.",
+    image: websiteImg,
+    href: "/website-design",
+  },
+  {
+    icon: Search,
+    title: "Local SEO & Google Ranking",
+    desc: "Dominate local search and appear in the Map Pack.",
+    image: seoImg,
+    href: "/local-seo",
   },
 ];
 
@@ -58,83 +88,90 @@ const ServicesSection = () => {
       <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
       <div className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
 
-      <div className="container relative">
+      <div className="container relative max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-5">
-            Our Services
+          <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+            <Sparkles className="w-3.5 h-3.5" />
+            What We Offer
           </span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
-            What We Do for{" "}
-            <span className="text-primary">Ohio Businesses</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
+            Our 9 Core <span className="text-primary">Services</span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            From business cards to full rebrands and everything in between — everything your Ohio business needs to look professional and grow.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="group bg-card rounded-3xl border border-border hover:border-primary/40 overflow-hidden card-lift shadow-md hover:shadow-2xl"
+              transition={{ delay: i * 0.06, duration: 0.5 }}
             >
-              {/* Dual image strip */}
-              <div className="relative h-60 grid grid-cols-2 overflow-hidden">
-                {s.images.map((img, j) => (
-                  <div key={j} className="relative overflow-hidden">
-                    <img
-                      src={img}
-                      alt={`${s.title} example ${j + 1}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
-              </div>
-
-              {/* Content */}
-              <div className="px-8 pt-7 pb-8">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <s.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-xs font-black text-primary tracking-[0.2em] uppercase">
-                    {s.title}
-                  </span>
+              <Link
+                to={s.href}
+                className="group block bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden card-lift shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                {/* Image */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={`${s.title} – Buckeye Biz Hub Ohio`}
+                    loading="lazy"
+                    width={400}
+                    height={176}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent" />
                 </div>
 
-                <h3 className="font-display text-2xl font-black text-foreground mb-5 leading-snug group-hover:text-primary transition-colors duration-300">
-                  {s.headline}
-                </h3>
-
-                <ul className="space-y-3 mb-8">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2.5 text-[0.95rem] text-foreground/70">
-                      <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link to={s.href}>
-                  <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base uppercase tracking-wider py-6 rounded-xl shadow-[0_4px_30px_hsl(0_85%_40%/0.35)] hover:shadow-[0_6px_50px_hsl(0_85%_40%/0.55)] transition-all duration-300 group/btn">
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <s.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">
+                      {s.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {s.desc}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                     Learn More
-                    <ArrowRight className="w-5 h-5 ml-1 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-                  </Button>
-                </Link>
-              </div>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
+
+        {/* View All CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center mt-14"
+        >
+          <Link to="/services">
+            <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider">
+              View All 9 Services
+              <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1.5 transition-transform duration-300" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
