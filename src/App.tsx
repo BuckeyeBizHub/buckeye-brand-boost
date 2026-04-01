@@ -32,6 +32,7 @@ import VehicleWrapsAndFleet from "./pages/VehicleWrapsAndFleet.tsx";
 import FullRebrandKits from "./pages/FullRebrandKits.tsx";
 import WebsiteDesign from "./pages/WebsiteDesign.tsx";
 import LocalSeo from "./pages/LocalSeo.tsx";
+import BannersAndFlags from "./pages/BannersAndFlags.tsx";
 
 const queryClient = new QueryClient();
 
