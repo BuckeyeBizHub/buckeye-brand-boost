@@ -94,7 +94,7 @@ const ServicesSection = () => {
             What We Offer
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-            Our 11 Core <span className="text-primary">Branding Services</span>
+            Our Core <span className="text-primary">Branding Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             From business cards to vehicle wraps, banners, flags, decals, and full rebrand kits — everything your Ohio business needs to look professional and grow.
