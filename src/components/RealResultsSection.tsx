@@ -34,7 +34,7 @@ const results = [
 const photos = [vehicleWrapFleet, brandedApparel, yardSignReal, bannerEvent];
 
 const RealResultsSection = () => (
-  <section className="relative py-20 lg:py-28 overflow-hidden">
+  <section className="relative py-14 lg:py-20 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-ohio-grey-light/80" />
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/[0.03] rounded-full blur-[180px]" />
