@@ -86,26 +86,35 @@ const services = [
   },
 ] as const;
 
+// Masonry height classes for visual variation
+const heightVariants = [
+  "h-48", "h-56", "h-48", // row 1
+  "h-52", "h-48", "h-56", // row 2
+  "h-48", "h-56", "h-52", // row 3
+];
+
 const ServicesSection = () => {
   const regular = services.filter((s) => !("featured" in s && s.featured));
   const featured = services.filter((s) => "featured" in s && s.featured);
 
   return (
-    <section id="services" className="py-20 lg:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/60 to-background" />
-      <div className="absolute top-[-200px] right-[-150px] w-[700px] h-[700px] bg-primary/[0.03] rounded-full blur-[250px]" />
-      <div className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+    <section id="services" className="py-16 lg:py-24 relative overflow-hidden">
+      {/* Layered background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-background" />
+      <div className="absolute top-1/4 right-[-10%] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
+      <div className="absolute bottom-1/4 left-[-10%] w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[180px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-ohio-navy/[0.02] rounded-full blur-[250px]" />
 
       <div className="container relative max-w-7xl mx-auto px-6">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 lg:mb-16"
         >
-          <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+          <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-5 bg-primary/[0.07] px-5 py-2 rounded-full">
             <Sparkles className="w-3.5 h-3.5" />
             What We Offer
           </span>
@@ -113,77 +122,79 @@ const ServicesSection = () => {
             Our Core <span className="text-primary">Branding Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Everything your Ohio business needs to look professional, stand out, and grow — from premium business cards to powerful vehicle wraps, banners, flags, graduation banners, and custom decals.
+            From premium business cards and powerful vehicle wraps to eye-catching banners, flags, graduation banners, and custom decals — everything your Ohio business needs to look professional, stand out, and grow.
           </p>
         </motion.div>
 
-        {/* 3-column grid with photos */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {regular.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.5 }}
-              className={`h-full ${i % 3 === 1 ? "lg:translate-y-4" : ""}`}
-            >
-              <Link
-                to={s.href}
-                className="group flex flex-col h-full bg-card/80 backdrop-blur-sm rounded-2xl border border-border/60 hover:border-primary/30 overflow-hidden shadow-sm hover:shadow-[0_12px_40px_-8px_hsl(0_85%_40%/0.12)] transition-all duration-500 hover:-translate-y-1"
+        {/* Staggered masonry grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+          {regular.map((s, i) => {
+            const imgH = heightVariants[i % heightVariants.length];
+            const offset = i % 3 === 1 ? "lg:mt-6" : "";
+
+            return (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 36 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ delay: i * 0.04, duration: 0.5 }}
+                className={offset}
               >
-                {/* Photo */}
-                <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={s.img}
-                    alt={s.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-display text-[1.05rem] font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
-                    {s.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  to={s.href}
+                  className="group flex flex-col bg-card/90 backdrop-blur-sm rounded-2xl border border-border/50 overflow-hidden hover:border-primary/25 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_-12px_hsl(0_85%_40%/0.14)] transition-all duration-500 hover:-translate-y-1.5"
+                >
+                  <div className={`relative ${imgH} overflow-hidden`}>
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
+                  </div>
+                  <div className="p-5 lg:p-6 flex flex-col flex-grow">
+                    <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
+                      {s.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                      {s.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* Featured services — Banners & Flags + Decals */}
-        <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 mt-5 lg:mt-6">
+        {/* Featured services */}
+        <div className="grid sm:grid-cols-2 gap-4 lg:gap-5 mt-6 lg:mt-8">
           {featured.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="h-full"
+              transition={{ delay: i * 0.08, duration: 0.5 }}
             >
               <Link
                 to={s.href}
-                className="group relative flex flex-col h-full bg-gradient-to-br from-card to-card/90 backdrop-blur-sm rounded-2xl border-2 border-primary/30 hover:border-primary/60 overflow-hidden shadow-md hover:shadow-[0_16px_50px_-10px_hsl(0_85%_40%/0.2)] transition-all duration-500 hover:-translate-y-1"
+                className="group relative flex flex-col bg-gradient-to-br from-card to-card/95 backdrop-blur-sm rounded-2xl border-2 border-primary/25 hover:border-primary/50 overflow-hidden shadow-[0_4px_24px_-6px_hsl(0_85%_40%/0.1)] hover:shadow-[0_20px_56px_-12px_hsl(0_85%_40%/0.2)] transition-all duration-500 hover:-translate-y-1.5"
               >
-                {/* Photo */}
-                <div className="relative h-52 overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50" />
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={s.img}
                     alt={s.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                  {/* Popular badge */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
                   <div className="absolute top-4 right-4">
                     <span className="inline-flex items-center gap-1 text-[10px] font-extrabold text-primary-foreground bg-primary px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                       <Star className="w-3 h-3 fill-current" />
@@ -191,18 +202,14 @@ const ServicesSection = () => {
                     </span>
                   </div>
                 </div>
-
-                {/* Gradient top bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60" />
-
-                <div className="p-7 flex flex-col flex-grow">
+                <div className="p-6 lg:p-7 flex flex-col flex-grow">
                   <h3 className="font-display text-xl font-black text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
                     {s.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-grow">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                     {s.desc}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-auto">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                     Explore Options
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
@@ -212,16 +219,19 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* View All CTA */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.2 }}
           className="text-center mt-12"
         >
           <Link to="/services">
-            <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.3)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.5)] transition-all duration-300 group uppercase tracking-wider"
+            >
               View All Services
               <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1.5 transition-transform duration-300" />
             </Button>
