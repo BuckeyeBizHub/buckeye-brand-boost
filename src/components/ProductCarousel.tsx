@@ -31,7 +31,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section id="products" className="py-20 lg:py-28 bg-ohio-grey-light relative overflow-hidden">
+    <section id="products" className="py-14 lg:py-20 bg-ohio-grey-light relative overflow-hidden">
       <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-primary/[0.05] rounded-full blur-[200px]" />
       <div className="absolute bottom-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[160px]" />
       {/* Bottom red accent */}
