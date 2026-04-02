@@ -29,7 +29,7 @@ const props = [
 ];
 
 const ValuePropsStrip = () => (
-  <section className="relative py-16 lg:py-20 bg-gradient-to-b from-[hsl(220,30%,4%)] via-background to-background overflow-hidden">
+  <section className="relative py-12 lg:py-16 bg-gradient-to-b from-[hsl(220,30%,4%)] via-background to-background overflow-hidden">
     {/* Fade-in from dark hero */}
     <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-ohio-grey-dark to-transparent" />
     <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent" />

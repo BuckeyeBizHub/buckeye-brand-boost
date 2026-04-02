@@ -34,7 +34,7 @@ const results = [
 const photos = [vehicleWrapFleet, brandedApparel, yardSignReal, bannerEvent];
 
 const RealResultsSection = () => (
-  <section className="relative py-20 lg:py-28 overflow-hidden">
+  <section className="relative py-14 lg:py-20 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-ohio-grey-light/80" />
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/[0.03] rounded-full blur-[180px]" />
@@ -64,7 +64,7 @@ const RealResultsSection = () => (
         className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 rounded-2xl overflow-hidden"
       >
         {photos.map((src, i) => (
-          <div key={i} className="relative h-40 md:h-48 overflow-hidden rounded-xl">
+          <div key={i} className="relative h-48 md:h-60 overflow-hidden rounded-xl">
             <img
               src={src}
               alt={`Ohio business branding result ${i + 1}`}
