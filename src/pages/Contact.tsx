@@ -259,9 +259,9 @@ const Contact = () => {
               <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-primary/10 flex items-center justify-center">
                 <CheckCircle className="w-12 h-12 text-primary" />
               </div>
-              <h3 className="font-display text-3xl md:text-4xl font-black text-foreground mb-4">Quote Request Sent!</h3>
+              <h3 className="font-display text-3xl md:text-4xl font-black text-foreground mb-4">Thank You!</h3>
               <p className="text-muted-foreground text-lg max-w-md mx-auto mb-8 leading-relaxed">
-                Thanks for reaching out. We'll review your project details and get back to you within <span className="font-bold text-primary">24 hours</span>.
+                We'll send your custom quote within <span className="font-bold text-primary">24 hours</span>.
               </p>
               <Button
                 onClick={() => {
