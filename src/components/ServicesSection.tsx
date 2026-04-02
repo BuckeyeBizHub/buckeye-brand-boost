@@ -98,7 +98,7 @@ const ServicesSection = () => {
   const featured = services.filter((s) => "featured" in s && s.featured);
 
   return (
-    <section id="services" className="py-16 lg:py-24 relative overflow-hidden">
+    <section id="services" className="py-12 lg:py-16 relative overflow-hidden">
       {/* Layered background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-background" />
       <div className="absolute top-1/4 right-[-10%] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
