@@ -88,9 +88,9 @@ const services = [
 
 // Masonry height classes for visual variation
 const heightVariants = [
-  "h-48", "h-56", "h-48", // row 1
-  "h-52", "h-48", "h-56", // row 2
-  "h-48", "h-56", "h-52", // row 3
+  "h-56", "h-64", "h-56", // row 1
+  "h-60", "h-56", "h-64", // row 2
+  "h-56", "h-64", "h-60", // row 3
 ];
 
 const ServicesSection = () => {

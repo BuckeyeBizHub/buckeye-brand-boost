@@ -18,7 +18,7 @@ const stats = [
 
 const WhyChooseSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
+    <section className="py-14 lg:py-20 bg-ohio-grey-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-ohio-grey-dark to-[hsl(0,25%,5%)]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/[0.08] rounded-full blur-[250px]" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.05] rounded-full blur-[150px]" />

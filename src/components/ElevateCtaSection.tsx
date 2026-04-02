@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ElevateCtaSection = () => (
-  <section className="relative py-20 lg:py-28 overflow-hidden">
+  <section className="relative py-14 lg:py-20 overflow-hidden">
     {/* Rich gradient background */}
     <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,75%,30%)] via-primary to-[hsl(0,85%,35%)]" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(0_85%_45%/0.4),transparent_60%)]" />

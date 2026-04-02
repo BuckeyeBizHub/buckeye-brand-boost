@@ -104,7 +104,7 @@ const ProductCarousel = () => {
                 className="flex-shrink-0 w-[22rem] snap-start group"
               >
                 <div className="bg-card rounded-3xl overflow-hidden border-2 border-border group-hover:border-primary/40 card-lift shadow-sm">
-                  <div className="relative overflow-hidden h-80">
+                  <div className="relative overflow-hidden h-96">
                     <img src={p.img} alt={p.label} loading="lazy" width={640} height={640} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-115" />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                     {/* Red tint overlay on hover */}

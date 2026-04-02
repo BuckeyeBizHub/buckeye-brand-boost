@@ -64,7 +64,7 @@ const RealResultsSection = () => (
         className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 rounded-2xl overflow-hidden"
       >
         {photos.map((src, i) => (
-          <div key={i} className="relative h-40 md:h-48 overflow-hidden rounded-xl">
+          <div key={i} className="relative h-48 md:h-60 overflow-hidden rounded-xl">
             <img
               src={src}
               alt={`Ohio business branding result ${i + 1}`}
