@@ -73,6 +73,27 @@ const heroBadges = [
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+
+  // Make Tidio chat widget more prominent on the Contact page
+  useEffect(() => {
+    const openTidio = () => {
+      if (window.tidioChatApi) {
+        window.tidioChatApi.display(true);
+        window.tidioChatApi.open();
+      }
+    };
+    if (window.tidioChatApi) {
+      openTidio();
+    } else {
+      document.addEventListener("tidioChat-ready", openTidio);
+    }
+    return () => {
+      document.removeEventListener("tidioChat-ready", openTidio);
+      if (window.tidioChatApi) {
+        window.tidioChatApi.close();
+      }
+    };
+  }, []);
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [form, setForm] = useState<ContactForm>({
