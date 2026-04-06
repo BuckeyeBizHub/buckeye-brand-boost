@@ -122,7 +122,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <iframe
-              data-tally-src="https://tally.so/embed/wA7BAx?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              data-tally-src="https://tally.so/embed/QKYlz8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
               width="100%"
               height="500"
