@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, Phone, MapPin, Send, CheckCircle, Clock, ShieldCheck, BadgeCheck, ThumbsUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
