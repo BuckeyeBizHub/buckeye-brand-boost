@@ -45,6 +45,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <TidioChatEnhancer />
         <Breadcrumbs />
         <Routes>
           <Route path="/" element={<Index />} />
