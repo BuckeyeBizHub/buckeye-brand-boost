@@ -76,21 +76,22 @@ const Contact = () => {
 
   // Make Tidio chat widget more prominent on the Contact page
   useEffect(() => {
+    const win = window as any;
     const openTidio = () => {
-      if (window.tidioChatApi) {
-        window.tidioChatApi.display(true);
-        window.tidioChatApi.open();
+      if (win.tidioChatApi) {
+        win.tidioChatApi.display(true);
+        win.tidioChatApi.open();
       }
     };
-    if (window.tidioChatApi) {
+    if (win.tidioChatApi) {
       openTidio();
     } else {
       document.addEventListener("tidioChat-ready", openTidio);
     }
     return () => {
       document.removeEventListener("tidioChat-ready", openTidio);
-      if (window.tidioChatApi) {
-        window.tidioChatApi.close();
+      if (win.tidioChatApi) {
+        win.tidioChatApi.close();
       }
     };
   }, []);
