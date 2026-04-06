@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, Phone, MapPin, Send, CheckCircle, Clock, ShieldCheck, BadgeCheck, ThumbsUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -73,6 +73,28 @@ const heroBadges = [
 const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+
+  // Make Tidio chat widget more prominent on the Contact page
+  useEffect(() => {
+    const win = window as any;
+    const openTidio = () => {
+      if (win.tidioChatApi) {
+        win.tidioChatApi.display(true);
+        win.tidioChatApi.open();
+      }
+    };
+    if (win.tidioChatApi) {
+      openTidio();
+    } else {
+      document.addEventListener("tidioChat-ready", openTidio);
+    }
+    return () => {
+      document.removeEventListener("tidioChat-ready", openTidio);
+      if (win.tidioChatApi) {
+        win.tidioChatApi.close();
+      }
+    };
+  }, []);
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [form, setForm] = useState<ContactForm>({
