@@ -74,27 +74,7 @@ const Contact = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
 
-  // Make Tidio chat widget more prominent on the Contact page
-  useEffect(() => {
-    const win = window as any;
-    const openTidio = () => {
-      if (win.tidioChatApi) {
-        win.tidioChatApi.display(true);
-        win.tidioChatApi.open();
-      }
-    };
-    if (win.tidioChatApi) {
-      openTidio();
-    } else {
-      document.addEventListener("tidioChat-ready", openTidio);
-    }
-    return () => {
-      document.removeEventListener("tidioChat-ready", openTidio);
-      if (win.tidioChatApi) {
-        win.tidioChatApi.close();
-      }
-    };
-  }, []);
+  // Tidio enhancement handled globally by TidioChatEnhancer
   const [submitting, setSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [form, setForm] = useState<ContactForm>({
