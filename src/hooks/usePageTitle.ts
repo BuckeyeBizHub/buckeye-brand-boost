@@ -6,7 +6,7 @@ export function usePageTitle(pageTitle?: string, metaDescription?: string) {
   useEffect(() => {
     document.title = pageTitle
       ? `${pageTitle} | ${SITE_NAME}`
-      : "Buckeye Biz Hub - Ohio Business Branding Partner | Printing, Promos & Vehicle Wraps";
+      : "Buckeye Biz Hub | Your Columbus Branding Concierge";
 
     if (metaDescription) {
       let meta = document.querySelector('meta[name="description"]');
