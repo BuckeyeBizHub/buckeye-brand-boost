@@ -59,7 +59,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-lg md:text-xl text-primary-foreground/50 mb-12 max-w-lg mx-auto lg:mx-0"
+            className="text-base md:text-lg text-primary-foreground/50 mb-8 max-w-lg mx-auto lg:mx-0"
           >
             Business printing, promotional products & vehicle branding — Columbus, Ohio.
           </motion.p>
@@ -73,7 +73,7 @@ const HeroSection = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-xl px-14 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
               >
                 Get Your Free Quote
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -98,7 +98,7 @@ const HeroSection = () => {
           className="flex-shrink-0 hidden lg:block"
         >
           <div className="relative">
-            <div className="w-[360px] h-[430px] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
+            <div className="w-[300px] h-[370px] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
                 alt="David Stein – Your Buckeye Branding Concierge, Buckeye Biz Hub, Columbus Ohio"
@@ -116,7 +116,7 @@ const HeroSection = () => {
       </div>
 
       {/* Stats */}
-      <div className="absolute bottom-10 left-0 right-0 z-10">
+      <div className="absolute bottom-6 left-0 right-0 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
