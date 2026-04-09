@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pt-36 pb-28 flex flex-col lg:flex-row items-center gap-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 pt-24 pb-20 lg:pt-28 lg:pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
           <motion.h1
