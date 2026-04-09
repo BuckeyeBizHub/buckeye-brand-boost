@@ -34,6 +34,7 @@ import WebsiteDesign from "./pages/WebsiteDesign.tsx";
 import LocalSeo from "./pages/LocalSeo.tsx";
 import BannersAndFlags from "./pages/BannersAndFlags.tsx";
 import Decals from "./pages/Decals.tsx";
+import Research from "./pages/Research.tsx";
 import TidioChatEnhancer from "./components/TidioChatEnhancer";
 import ResearchAssistant from "./components/ResearchAssistant";
 
@@ -74,6 +75,7 @@ const App = () => (
           <Route path="/local-seo" element={<LocalSeo />} />
           <Route path="/banners-and-flags" element={<BannersAndFlags />} />
           <Route path="/decals" element={<Decals />} />
+          <Route path="/research" element={<Research />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
