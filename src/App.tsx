@@ -35,6 +35,7 @@ import LocalSeo from "./pages/LocalSeo.tsx";
 import BannersAndFlags from "./pages/BannersAndFlags.tsx";
 import Decals from "./pages/Decals.tsx";
 import TidioChatEnhancer from "./components/TidioChatEnhancer";
+import ResearchAssistant from "./components/ResearchAssistant";
 
 const queryClient = new QueryClient();
 
