@@ -1,12 +1,25 @@
 import { motion } from "framer-motion";
-import { Send, Loader2, Sparkles, Search, Trash2 } from "lucide-react";
+import { Send, Loader2, Sparkles, Search, Trash2, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useResearchAssistant, SUGGESTED_QUESTIONS } from "@/hooks/useResearchAssistant";
+import { useResearchAssistant } from "@/hooks/useResearchAssistant";
 import MessageBubble from "@/components/research/MessageBubble";
 import { usePageTitle } from "@/hooks/usePageTitle";
+
+const RESEARCH_PAGE_QUESTIONS = [
+  "What promotional products get the best ROI for small businesses?",
+  "How much do vehicle wraps cost compared to billboard advertising?",
+  "What are the most popular trade show giveaways in 2025?",
+  "How can branded apparel boost team morale and brand visibility?",
+  "What's the turnaround time for custom banners and yard signs?",
+  "What branding essentials should a new Columbus business invest in first?",
+  "What printing options work best for restaurant menus and flyers?",
+  "How do Ohio businesses use yard signs to generate leads?",
+  "What's the difference between screen printing and embroidery for uniforms?",
+  "What are the most effective local marketing strategies for Columbus startups?",
+];
 
 const Research = () => {
   usePageTitle(
@@ -21,66 +34,71 @@ const Research = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-b from-[hsl(var(--hero-bg))] via-[hsl(220,25%,8%)] to-background overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 right-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[120px]" />
-          <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-ohio-navy/30 blur-[100px]" />
+      <section className="relative pt-32 pb-14 bg-gradient-to-b from-[hsl(var(--hero-bg))] via-[hsl(220,25%,8%)] to-[hsl(0,0%,4%)] overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-16 right-1/3 w-[500px] h-[500px] rounded-full bg-primary/15 blur-[150px]" />
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-ohio-navy/20 blur-[120px]" />
         </div>
         <div className="container relative z-10 text-center max-w-3xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-5 bg-primary/[0.08] px-5 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-5 bg-primary/[0.08] px-5 py-2 rounded-full border border-primary/10">
               <Sparkles className="w-3.5 h-3.5" />
               AI-Powered Research
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-4">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-5">
               Branding Research<br />
               <span className="text-primary">Assistant</span>
             </h1>
-            <p className="text-lg text-primary-foreground/60 max-w-xl mx-auto">
-              Get instant, expert answers about promotional products, printing, vehicle branding, costs, timelines, and Columbus-area marketing ideas — all backed by cited sources.
+            <p className="text-lg text-primary-foreground/60 max-w-xl mx-auto leading-relaxed">
+              Get instant, expert answers about promotional products, printing, vehicle branding, costs, timelines, and Columbus-area marketing ideas — backed by cited sources.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Chat area */}
-      <section className="flex-1 py-8 lg:py-12 bg-gradient-to-b from-background to-muted/30">
-        <div className="container max-w-3xl mx-auto px-6">
-          <div className="rounded-2xl border border-border/60 bg-card shadow-xl overflow-hidden">
+      <section className="flex-1 py-8 lg:py-14 bg-gradient-to-b from-[hsl(0,0%,4%)] via-background to-muted/20">
+        <div className="container max-w-4xl mx-auto px-6">
+          <div className="rounded-2xl border border-primary/10 bg-card shadow-[0_20px_60px_rgba(0,0,0,0.15)] overflow-hidden">
             {/* Chat header bar */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-border/50 bg-muted/30">
+            <div className="flex items-center justify-between px-6 lg:px-8 py-5 border-b border-border/50 bg-gradient-to-r from-foreground/[0.02] to-primary/[0.03]">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-ohio-navy flex items-center justify-center">
-                  <Search className="w-5 h-5 text-ohio-gold" />
+                <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center shadow-[0_0_20px_hsl(0_85%_40%/0.3)]">
+                  <Search className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <h2 className="font-display text-base font-bold text-foreground">Ask Your Question</h2>
-                  <p className="text-xs text-muted-foreground">Powered by AI · Answers with cited sources</p>
+                  <h2 className="font-display text-lg font-bold text-foreground">Ask Your Question</h2>
+                  <p className="text-xs text-muted-foreground">Powered by AI · Every answer includes cited sources</p>
                 </div>
               </div>
               {messages.length > 0 && (
-                <Button variant="ghost" size="sm" onClick={clearMessages} className="text-muted-foreground hover:text-foreground gap-1.5">
+                <Button variant="outline" size="sm" onClick={clearMessages} className="gap-1.5 text-xs font-bold">
                   <Trash2 className="w-3.5 h-3.5" />
-                  Clear
+                  Clear Chat
                 </Button>
               )}
             </div>
 
             {/* Messages */}
-            <div className="min-h-[400px] max-h-[60vh] overflow-y-auto px-6 py-6 space-y-5">
+            <div className="min-h-[500px] lg:min-h-[550px] max-h-[65vh] overflow-y-auto px-6 lg:px-8 py-8 space-y-6">
               {messages.length === 0 && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
-                  <p className="text-center text-muted-foreground text-sm">
-                    Try one of these popular questions, or type your own below:
-                  </p>
+                  <div className="text-center">
+                    <p className="text-base font-semibold text-foreground mb-1">
+                      What would you like to know?
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Choose a question below or type your own — we'll find the answer with sources.
+                    </p>
+                  </div>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    {SUGGESTED_QUESTIONS.map((q) => (
+                    {RESEARCH_PAGE_QUESTIONS.map((q) => (
                       <button
                         key={q}
                         onClick={() => askQuestion(q)}
-                        className="text-left text-sm px-4 py-3.5 rounded-xl border border-border hover:border-primary/30 hover:bg-primary/[0.04] transition-all text-foreground leading-relaxed group"
+                        className="text-left text-sm px-4 py-4 rounded-xl border border-border hover:border-primary/40 hover:bg-primary/[0.04] hover:shadow-md transition-all text-foreground leading-relaxed group"
                       >
-                        <span className="text-primary mr-1.5 font-bold">→</span>
+                        <span className="text-primary mr-2 font-black text-base">→</span>
                         {q}
                       </button>
                     ))}
@@ -106,16 +124,16 @@ const Research = () => {
             {/* Input */}
             <form
               onSubmit={(e) => { e.preventDefault(); askQuestion(input); }}
-              className="flex items-center gap-3 px-6 py-4 border-t border-border/50 bg-background"
+              className="flex items-center gap-3 px-6 lg:px-8 py-5 border-t border-border/50 bg-muted/20"
             >
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about products, costs, timelines, branding ideas..."
-                className="flex-1 text-sm bg-transparent outline-none placeholder:text-muted-foreground py-1"
+                className="flex-1 text-sm bg-transparent outline-none placeholder:text-muted-foreground py-1.5"
                 disabled={isLoading}
               />
-              <Button type="submit" size="sm" className="gap-2 px-5 font-bold" disabled={isLoading || !input.trim()}>
+              <Button type="submit" className="gap-2 px-6 font-bold shadow-[0_0_15px_hsl(0_85%_40%/0.2)]" disabled={isLoading || !input.trim()}>
                 <Send className="w-4 h-4" />
                 Ask
               </Button>
@@ -123,15 +141,27 @@ const Research = () => {
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center mt-10">
-            <p className="text-sm text-muted-foreground mb-3">
-              Ready to get started? Our team is here to help.
+          <div className="mt-14 rounded-2xl border border-primary/15 bg-gradient-to-r from-primary/[0.06] via-card to-primary/[0.06] px-8 py-10 text-center shadow-lg">
+            <h3 className="font-display text-2xl font-black text-foreground mb-2">
+              Ready to bring your brand to life?
+            </h3>
+            <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
+              Our team delivers custom quotes within 24 hours — no obligation, just expert guidance for your Ohio business.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="font-bold uppercase tracking-wider">
-                Get Your Free 24-Hour Quote
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link to="/contact">
+                <Button size="lg" className="font-black uppercase tracking-wider gap-2 px-8 shadow-[0_0_25px_hsl(0_85%_40%/0.3)]">
+                  Get Your Free Quote
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+              <a href="tel:+16145551234">
+                <Button size="lg" variant="outline" className="font-bold gap-2 px-6 border-primary/20 hover:border-primary/40">
+                  <Phone className="w-4 h-4" />
+                  Call Us Today
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
