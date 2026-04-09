@@ -148,9 +148,26 @@ const Blog = () => {
               <Button onClick={() => window.location.reload()}>Retry</Button>
             </div>
           ) : posts.length === 0 ? (
-            <div className="text-center py-20">
-              <h2 className="text-2xl font-black text-foreground mb-4">No Posts Found</h2>
-              <p className="text-muted-foreground">Try a different category or search term.</p>
+            <div className="text-center py-20 max-w-2xl mx-auto">
+              <div className="mx-auto mb-8 w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                <BookOpen className="w-10 h-10 text-primary" />
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-4 leading-tight">Our Latest Insights</h2>
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                Practical tips on promotional products, custom printing, vehicle branding, and Ohio business strategies from your Buckeye Branding Concierge.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/services">
+                  <Button size="lg" className="font-bold text-base px-8 py-6 rounded-xl">
+                    Browse Services <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="font-bold text-base px-8 py-6 rounded-xl border-2">
+                    Get a Custom Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
           ) : (
             <>
