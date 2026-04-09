@@ -155,7 +155,7 @@ const Research = () => {
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
-              <a href="<a href="tel:+16145613358">">
+              <a href="tel:+16145613358">
                 <Button size="lg" variant="outline" className="font-bold gap-2 px-6 border-primary/20 hover:border-primary/40">
                   <Phone className="w-4 h-4" />
                   Call Us Today
