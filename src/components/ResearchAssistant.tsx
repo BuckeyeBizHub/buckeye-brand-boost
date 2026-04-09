@@ -2,9 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, Send, Loader2, Sparkles, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import { useResearchAssistant, SUGGESTED_QUESTIONS } from "@/hooks/useResearchAssistant";
+import { useResearchAssistant, getQuestionsForPage } from "@/hooks/useResearchAssistant";
 import MessageBubble from "@/components/research/MessageBubble";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const VISIBLE_PATHS = [
   "/", "/services", "/business-cards", "/brochures-and-business-printing",
@@ -13,10 +13,29 @@ const VISIBLE_PATHS = [
   "/local-seo", "/banners-and-flags", "/decals", "/pricing", "/industries",
 ];
 
+const PAGE_LABELS: Record<string, string> = {
+  "/vehicle-wraps-and-fleet-branding": "vehicle wraps & fleet branding",
+  "/business-cards": "business cards & stationery",
+  "/brochures-and-business-printing": "brochures & printing",
+  "/promotional-products": "promotional products",
+  "/branded-apparel-and-uniforms": "branded apparel & uniforms",
+  "/yard-signs-and-signage": "yard signs & signage",
+  "/banners-and-flags": "banners & flags",
+  "/decals": "decals",
+  "/full-rebrand-kits": "full rebrand kits",
+  "/website-design": "website design",
+  "/local-seo": "local SEO",
+  "/pricing": "pricing & packages",
+  "/services": "our services",
+};
+
 const ResearchAssistant = () => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const { messages, input, setInput, isLoading, askQuestion, messagesEndRef } = useResearchAssistant();
+
+  const contextQuestions = useMemo(() => getQuestionsForPage(pathname), [pathname]);
+  const pageLabel = PAGE_LABELS[pathname];
 
   if (!VISIBLE_PATHS.includes(pathname)) return null;
 
@@ -84,13 +103,19 @@ const ResearchAssistant = () => {
               {messages.length === 0 && (
                 <div className="space-y-4">
                   <div className="text-center px-2">
-                    <p className="text-sm font-medium text-foreground mb-1">How can I help your business?</p>
+                    <p className="text-sm font-medium text-foreground mb-1">
+                      {pageLabel
+                        ? <>Questions about <span className="text-primary font-bold">{pageLabel}</span>?</>
+                        : "How can I help your business?"}
+                    </p>
                     <p className="text-xs text-muted-foreground">
-                      Ask about printing, promotional products, vehicle branding, costs, timelines, or Ohio-specific marketing ideas.
+                      {pageLabel
+                        ? "Get instant answers about costs, timelines, options, and more."
+                        : "Ask about printing, promotional products, vehicle branding, costs, timelines, or Ohio-specific ideas."}
                     </p>
                   </div>
                   <div className="space-y-2">
-                    {SUGGESTED_QUESTIONS.slice(0, 3).map((q) => (
+                    {contextQuestions.map((q) => (
                       <button
                         key={q}
                         onClick={() => askQuestion(q)}

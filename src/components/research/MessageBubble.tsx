@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import type { Message } from "@/hooks/useResearchAssistant";
 
@@ -11,7 +12,7 @@ const MessageBubble = ({ message, compact = false }: Props) => {
   const isUser = message.role === "user";
 
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+    <div className={`flex flex-col ${isUser ? "items-end" : "items-start"}`}>
       <div
         className={`${compact ? "max-w-[85%]" : "max-w-[75%]"} rounded-2xl px-4 py-3 text-sm ${
           isUser
@@ -50,6 +51,17 @@ const MessageBubble = ({ message, compact = false }: Props) => {
           </div>
         )}
       </div>
+
+      {/* Quote CTA after assistant messages */}
+      {!isUser && (
+        <Link
+          to="/contact"
+          className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-primary hover:text-ohio-red-light transition-colors group"
+        >
+          Get a custom quote
+          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+        </Link>
+      )}
     </div>
   );
 };
