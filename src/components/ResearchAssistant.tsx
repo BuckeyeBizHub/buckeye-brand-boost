@@ -44,7 +44,7 @@ const ResearchAssistant = () => {
     askQuestion(input);
   }, [askQuestion, input]);
 
-  if (!VISIBLE_PATHS.has(pathname)) return null;
+  if (!VISIBLE_PATHS.has(pathname) && !pathname.startsWith("/blog")) return null;
 
   return (
     <>
