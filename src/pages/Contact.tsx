@@ -138,17 +138,18 @@ const Contact = () => {
 
       {/* Prefer to Call or Email */}
       <section className="py-16 lg:py-20 bg-background">
-        <div className="container max-w-3xl mx-auto text-center">
+        <div className="container max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center"
           >
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-8">
               Prefer to Call or Email Instead?
             </h3>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 mb-12">
               <a
                 href="tel:6145613358"
                 className="group flex items-center justify-center gap-4 bg-ohio-cream border-2 border-border hover:border-primary/40 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg"
@@ -173,6 +174,21 @@ const Contact = () => {
                   <p className="text-lg font-black text-foreground group-hover:text-primary transition-colors">david@buckeyebizhub.com</p>
                 </div>
               </a>
+            </div>
+
+            {/* Embedded Google Map */}
+            <div className="rounded-2xl overflow-hidden border-2 border-border shadow-lg">
+              <iframe
+                src="https://maps.google.com/maps?cid=5595316780144329459&output=embed"
+                loading="lazy"
+                width="100%"
+                height="300"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Buckeye Biz Hub on Google Maps"
+                allowFullScreen
+                style={{ border: 0 }}
+                className="w-full"
+              />
             </div>
           </motion.div>
         </div>
