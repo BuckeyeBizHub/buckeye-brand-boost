@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Send, Loader2, Sparkles, Search, Trash2, ArrowRight, Phone } from "lucide-react";
+import { Send, Loader2, Sparkles, Search, Trash2, ArrowRight, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -49,9 +49,20 @@ const Research = () => {
               Branding Research<br />
               <span className="text-primary">Assistant</span>
             </h1>
-            <p className="text-lg text-primary-foreground/60 max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg text-primary-foreground/60 max-w-xl mx-auto leading-relaxed mb-6">
               Get instant, expert answers about promotional products, printing, vehicle branding, costs, timelines, and Columbus-area marketing ideas — backed by cited sources.
             </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-primary-foreground/50">
+              <a href="tel:+16145613358" className="flex items-center gap-1.5 hover:text-primary-foreground/80 transition-colors">
+                <Phone className="w-3.5 h-3.5" />
+                (614) 561-3358
+              </a>
+              <span className="hidden sm:inline text-primary-foreground/20">|</span>
+              <a href="mailto:david@buckeyebizhub.com" className="flex items-center gap-1.5 hover:text-primary-foreground/80 transition-colors">
+                <Mail className="w-3.5 h-3.5" />
+                david@buckeyebizhub.com
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -158,7 +169,13 @@ const Research = () => {
               <a href="tel:+16145613358">
                 <Button size="lg" variant="outline" className="font-bold gap-2 px-6 border-primary/20 hover:border-primary/40">
                   <Phone className="w-4 h-4" />
-                  Call Us Today
+                  (614) 561-3358
+                </Button>
+              </a>
+              <a href="mailto:david@buckeyebizhub.com">
+                <Button size="lg" variant="outline" className="font-bold gap-2 px-6 border-primary/20 hover:border-primary/40">
+                  <Mail className="w-4 h-4" />
+                  Email Us
                 </Button>
               </a>
             </div>

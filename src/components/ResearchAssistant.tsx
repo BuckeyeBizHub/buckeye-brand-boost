@@ -52,14 +52,14 @@ const ResearchAssistant = () => {
       {!isOpen && (
         <button
           onClick={handleOpen}
-          className="fixed bottom-24 right-4 sm:right-6 z-50 flex items-center gap-2.5 rounded-full bg-ohio-navy pl-3.5 pr-4 sm:pl-4 sm:pr-5 py-2.5 sm:py-3 font-semibold text-primary-foreground shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_hsl(220_55%_22%/0.5)] transition-all duration-300 hover:scale-105 animate-fade-in"
+          className="fixed bottom-24 right-4 sm:right-6 z-50 flex items-center gap-2 sm:gap-2.5 rounded-full bg-ohio-navy pl-3 pr-3.5 sm:pl-4 sm:pr-5 py-3 sm:py-3 font-semibold text-primary-foreground shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_hsl(220_55%_22%/0.5)] transition-all duration-300 hover:scale-105 animate-fade-in ring-2 ring-ohio-gold/30 sm:ring-0"
           aria-label="Open Research Assistant"
         >
           <div className="relative">
-            <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="absolute -top-1 -right-1 w-2 h-2 sm:w-2.5 sm:h-2.5 bg-ohio-gold rounded-full animate-pulse" />
+            <Search className="w-5 h-5" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-ohio-gold rounded-full animate-pulse" />
           </div>
-          <span className="hidden sm:inline text-sm font-bold tracking-wide">Ask an Expert</span>
+          <span className="text-xs sm:text-sm font-bold tracking-wide">Ask an Expert</span>
         </button>
       )}
 
