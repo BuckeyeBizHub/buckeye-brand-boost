@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useResearchAssistant, getQuestionsForPage } from "@/hooks/useResearchAssistant";
 import MessageBubble from "@/components/research/MessageBubble";
-import { useState, useMemo, lazy, useCallback } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 const VISIBLE_PATHS = new Set([
   "/", "/services", "/business-cards", "/brochures-and-business-printing",
