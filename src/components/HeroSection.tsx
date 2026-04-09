@@ -8,7 +8,7 @@ import TrustBadges from "@/components/TrustBadges";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-ohio-grey-dark">
+    <section className="relative w-full min-h-[600px] h-[clamp(600px,85vh,900px)] flex items-center overflow-hidden bg-ohio-grey-dark">
       {/* Background: product collage */}
       <div className="absolute inset-0">
         <img
