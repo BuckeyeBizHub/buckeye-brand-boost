@@ -97,7 +97,7 @@ const Blog = () => {
                 }`}>
                 All Posts
               </button>
-              {categories.filter((c) => c.count > 0 && c.slug !== "uncategorized").map((cat) => (
+              {categories.filter((c) => c.slug !== "uncategorized").map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => { setActiveCat(cat.id); setPage(1); }}
