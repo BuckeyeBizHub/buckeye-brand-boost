@@ -46,7 +46,7 @@ const Contact = () => {
             width={1920}
             height={800}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(220,55%,12%,0.75)] to-[hsl(220,25%,5%,0.92)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(0,0%,0%,0.75)] to-[hsl(0,0%,0%,0.92)]" />
         </div>
 
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
