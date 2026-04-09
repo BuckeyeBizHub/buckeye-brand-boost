@@ -19,6 +19,7 @@ import ScrollToTop from "./components/ScrollToTop.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import FAQ from "./pages/FAQ.tsx";
 import Blog from "./pages/Blog.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Testimonials from "./pages/Testimonials.tsx";
 import AdminPhotos from "./pages/AdminPhotos.tsx";
