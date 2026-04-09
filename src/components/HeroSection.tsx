@@ -31,7 +31,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-primary-foreground mb-6 tracking-tighter leading-[0.9]"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-4 tracking-tighter leading-[0.9]"
             style={{
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
             }}
