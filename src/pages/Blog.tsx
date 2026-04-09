@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 import { fetchPosts, fetchCategories, WPCategory } from "@/lib/wordpress";
 
 const Blog = () => {
@@ -18,10 +18,11 @@ const Blog = () => {
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
-  usePageTitle(
-    "Blog - Ohio Business Branding Tips & News",
-    "Expert tips on business branding, printing, promotional products, vehicle wraps, and marketing strategies for Ohio small businesses."
-  );
+  usePageSEO({
+    title: "Blog - Ohio Business Branding Tips & News",
+    description: "Expert tips on business branding, printing, promotional products, vehicle wraps, and marketing strategies for Ohio small businesses.",
+    canonical: "https://www.buckeyebizhub.com/blog",
+  });
 
   const { data: categories = [] } = useQuery({
     queryKey: ["wp-categories"],
