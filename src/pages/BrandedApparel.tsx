@@ -367,7 +367,7 @@ const BrandedApparel = () => {
                 "My top tip? Invest in the garment quality first. A $12 polo with great embroidery will get worn every week. A $5 tee with a flashy print ends up at the bottom of a drawer. Your team will actually want to wear premium apparel — and that's when branded clothing starts working as a real marketing tool, not just a uniform obligation."
               </p>
               <div className="mt-6">
-                <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
+                <p className="font-display font-black text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-sm text-muted-foreground font-semibold">Buckeye Biz Hub</p>
               </div>
             </div>

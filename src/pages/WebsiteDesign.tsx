@@ -201,7 +201,7 @@ const WebsiteDesign = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">
               "I've seen too many Ohio businesses spend thousands on a beautiful website that doesn't actually generate a single lead. A great website isn't about fancy animations or stock photos — it's about making it dead simple for a visitor to understand what you do, trust you, and take action. Every page needs a clear headline, a compelling reason to choose you, and an obvious next step — whether that's a phone call, a form, or a quote request. If your website isn't generating leads every week, it's not doing its job."
             </p>
-            <p className="font-bold text-foreground">— David Stein, The Buckeye Branding Czar</p>
+            <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
             <p className="text-muted-foreground text-sm">Buckeye Biz Hub</p>
           </div>
         </motion.div>

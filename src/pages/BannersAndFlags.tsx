@@ -301,7 +301,7 @@ const BannersAndFlags = () => {
                 "For graduation banners, keep it personal and proud — the graduate's name, school, year, and a great photo. Use school colors for maximum impact. These banners become keepsakes, so quality matters. For business banners, use high-contrast colors (white text on dark backgrounds works great from a distance) and make your call-to-action the largest element."
               </p>
               <div className="mt-6">
-                <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
+                <p className="font-display font-black text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-sm text-muted-foreground font-semibold">Buckeye Biz Hub</p>
               </div>
             </div>

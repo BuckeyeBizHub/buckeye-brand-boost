@@ -306,7 +306,7 @@ const YardSignsAndSignage = () => {
                 "Stick to your company name, phone number or website, and a short benefit statement. Use your brand colors and make the text as large as possible. White space is your friend — a clean, simple sign will always outperform a cluttered one. And always go double-sided if you're near a road with two-way traffic."
               </p>
               <div className="mt-6">
-                <p className="font-display font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
+                <p className="font-display font-black text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-sm text-muted-foreground font-semibold">Buckeye Biz Hub</p>
               </div>
             </div>

@@ -203,7 +203,7 @@ const BusinessPrinting = () => {
 
             <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
               <p>
-                At Buckeye Biz Hub we do business printing differently. With over 25 years of experience, David Stein, The Buckeye Branding Czar, understands exactly what it takes to grow a company — and how important it is to have high-quality branded materials without overpaying.
+                At Buckeye Biz Hub we do business printing differently. With over 25 years of experience, David Stein, Your Buckeye Branding Concierge, understands exactly what it takes to grow a company — and how important it is to have high-quality branded materials without overpaying.
               </p>
               <p>
                 We maintain wholesale accounts with over <span className="text-primary font-bold">4,300 printing and item suppliers</span>. This gives us unmatched options and the ability to always find the highest quality materials at the best possible price. We compare multiple suppliers for every single project so you always get the best solution for your needs.
@@ -359,7 +359,7 @@ const BusinessPrinting = () => {
                 </p>
               </div>
               <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-display text-lg font-black text-foreground">— David Stein, The Buckeye Branding Czar</p>
+                <p className="font-display text-lg font-black text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-sm text-muted-foreground font-bold">Buckeye Biz Hub</p>
               </div>
             </div>

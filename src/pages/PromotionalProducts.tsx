@@ -129,7 +129,7 @@ const trustPoints = [
   { icon: Star, title: "1 Million+ Products", desc: "Access to over 1 million products through SAGE and PPAI — the industry's largest networks" },
   { icon: Eye, title: "Full Cost Transparency", desc: "True wholesale pricing with full cost transparency — we show you exactly what we pay" },
   { icon: Award, title: "Best Solution Guaranteed", desc: "We compare options across thousands of suppliers so you always get the best solution" },
-  { icon: Heart, title: "Led by The Buckeye Branding Czar", desc: "David Stein, The Buckeye Branding Czar, personally helps you grow with the right products" },
+  { icon: Heart, title: "Led by Your Buckeye Branding Concierge", desc: "David Stein, Your Buckeye Branding Concierge, personally helps you grow with the right products" },
 ];
 
 const PromotionalProducts = () => {

@@ -262,7 +262,7 @@ const VehicleWrapsAndFleet = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">
               "The best vehicle wraps follow three simple rules: keep the message short enough to read in 3 seconds, use bold contrast colors that pop from 100+ feet away, and always include a clear call-to-action — your phone number or website. I've seen businesses add $50,000+ in annual revenue from a single wrapped van. The key is professional design and quality materials. A cheap wrap looks cheap, and that's worse than no wrap at all."
             </p>
-            <p className="font-bold text-foreground">— David Stein, The Buckeye Branding Czar</p>
+            <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
             <p className="text-muted-foreground text-sm">Buckeye Biz Hub</p>
           </div>
         </motion.div>
