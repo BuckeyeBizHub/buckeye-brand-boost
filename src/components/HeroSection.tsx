@@ -8,30 +8,33 @@ import TrustBadges from "@/components/TrustBadges";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[600px] h-[clamp(600px,85vh,900px)] flex items-center overflow-hidden bg-ohio-grey-dark">
+    <section className="relative w-full h-auto min-h-[480px] sm:min-h-[540px] md:min-h-[600px] lg:min-h-0 lg:h-[clamp(600px,80vh,860px)] flex items-center overflow-hidden bg-ohio-grey-dark">
       {/* Background: product collage */}
       <div className="absolute inset-0">
         <img
           src={productCollage}
           alt="Buckeye Biz Hub branded products – shirts, hats, business cards, vehicle wraps"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover opacity-20"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-[hsl(220,30%,2%)/0.88]" />
-        <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-[hsl(0,40%,5%)] via-[hsl(0,30%,4%)/0.80] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[hsl(0,40%,5%)] via-[hsl(0,30%,4%)/0.80] to-transparent" />
       </div>
 
       {/* Red accent line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 pt-24 pb-20 lg:pt-28 lg:pb-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-24 pb-24 sm:pb-28 lg:pt-28 lg:pb-20 flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-4 tracking-tighter leading-[0.9]"
+            className="text-[clamp(2.75rem,8vw,5rem)] lg:text-[clamp(4rem,5.5vw,6rem)] font-black text-primary-foreground mb-3 sm:mb-4 tracking-tighter leading-[0.9]"
             style={{
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
             }}
@@ -45,7 +48,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl sm:text-2xl md:text-3xl text-primary-foreground font-bold mb-4 leading-tight max-w-2xl mx-auto lg:mx-0"
+            className="text-[clamp(1.15rem,3.5vw,1.875rem)] text-primary-foreground font-bold mb-3 sm:mb-4 leading-tight max-w-2xl mx-auto lg:mx-0"
             style={{
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
             }}
@@ -59,7 +62,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-base md:text-lg text-primary-foreground/50 mb-8 max-w-lg mx-auto lg:mx-0"
+            className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0"
           >
             Business printing, promotional products & vehicle branding — Columbus, Ohio.
           </motion.p>
@@ -68,15 +71,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.65 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5"
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
           >
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
               >
                 Get Your Free Quote
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Button>
             </Link>
           </motion.div>
@@ -84,7 +87,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
-            className="mt-8"
+            className="mt-6 sm:mt-8"
           >
             <TrustBadges variant="dark" size="sm" />
           </motion.div>
@@ -98,16 +101,19 @@ const HeroSection = () => {
           className="flex-shrink-0 hidden lg:block"
         >
           <div className="relative">
-            <div className="w-[300px] h-[370px] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
+            <div className="w-64 xl:w-72 aspect-[3/3.7] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
                 alt="David Stein – Your Buckeye Branding Concierge, Buckeye Biz Hub, Columbus Ohio"
+                width={300}
+                height={370}
                 className="w-full h-full object-cover object-top"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.5] to-transparent" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-7 py-2.5 rounded-xl">
-              <p className="text-primary-foreground font-bold text-sm tracking-wide uppercase whitespace-nowrap">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-5 xl:px-7 py-2 xl:py-2.5 rounded-xl">
+              <p className="text-primary-foreground font-bold text-xs xl:text-sm tracking-wide uppercase whitespace-nowrap">
                 David Stein · Your Buckeye Branding Concierge
               </p>
             </div>
@@ -116,12 +122,12 @@ const HeroSection = () => {
       </div>
 
       {/* Stats */}
-      <div className="absolute bottom-6 left-0 right-0 z-10">
+      <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="grid grid-cols-3 max-w-xl mx-auto"
+          className="grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4"
         >
           {[
             { value: "500+", label: "Ohio Businesses" },
@@ -132,8 +138,8 @@ const HeroSection = () => {
               key={stat.label}
               className={`text-center py-2 ${i !== 2 ? "border-r border-primary-foreground/10" : ""}`}
             >
-              <div className="text-3xl font-black text-primary text-glow-red mb-1">{stat.value}</div>
-              <div className="text-[0.6rem] text-primary-foreground/40 font-bold tracking-[0.15em] uppercase">{stat.label}</div>
+              <div className="text-2xl sm:text-3xl font-black text-primary text-glow-red mb-1">{stat.value}</div>
+              <div className="text-[0.55rem] sm:text-[0.6rem] text-primary-foreground/40 font-bold tracking-[0.15em] uppercase">{stat.label}</div>
             </div>
           ))}
         </motion.div>
