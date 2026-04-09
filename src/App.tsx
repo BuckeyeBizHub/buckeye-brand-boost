@@ -79,6 +79,7 @@ const App = () => (
         </Routes>
         <BackToTop />
         <MobileCTABar />
+        <ResearchAssistant />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
