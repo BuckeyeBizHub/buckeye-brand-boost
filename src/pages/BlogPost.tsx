@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor, WPPost } from "@/lib/wordpress";
 
 const BlogPost = () => {
@@ -27,7 +27,16 @@ const BlogPost = () => {
   });
 
   const title = post ? post.title.rendered.replace(/<[^>]*>/g, "") : "Loading…";
-  usePageTitle(title, post ? post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 155) : undefined);
+  const excerpt = post ? post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 155) : undefined;
+  const ogImage = post ? (getFeaturedImage(post) || undefined) : undefined;
+
+  usePageSEO({
+    title,
+    description: excerpt,
+    canonical: post ? `https://www.buckeyebizhub.com/blog/${post.slug}` : undefined,
+    ogImage,
+    ogType: "article",
+  });
 
   if (isLoading) {
     return (
