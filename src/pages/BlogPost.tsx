@@ -73,8 +73,22 @@ const BlogPost = () => {
   const author = getAuthor(post);
   const date = format(new Date(post.date), "MMMM d, yyyy");
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    ...(image && { image }),
+    datePublished: post.date,
+    dateModified: post.modified,
+    author: { "@type": "Person", name: author?.name || "David Stein" },
+    publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
+    url: `https://www.buckeyebizhub.com/blog/${post.slug}`,
+    description: excerpt,
+  };
+
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero */}
