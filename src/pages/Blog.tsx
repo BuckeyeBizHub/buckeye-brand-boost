@@ -104,7 +104,7 @@ const Blog = () => {
                   className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 whitespace-nowrap ${
                     activeCat === cat.id ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
                   }`}>
-                  {cat.name}
+                  <span dangerouslySetInnerHTML={{ __html: cat.name }} />
                 </button>
               ))}
             </div>
