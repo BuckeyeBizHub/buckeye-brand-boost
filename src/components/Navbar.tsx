@@ -22,6 +22,7 @@ const navLinks: NavLink[] = [
     href: "/about",
     dropdown: [
       { label: "About Us", href: "/about" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   { label: "Industries", href: "/industries" },
