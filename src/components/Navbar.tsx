@@ -43,6 +43,7 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: "Pricing", href: "/pricing" },
+  { label: "Research", href: "/research" },
   { label: "Contact", href: "/contact" },
 ];
 
