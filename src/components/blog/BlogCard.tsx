@@ -86,6 +86,8 @@ const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(({ post, featured = f
       </div>
     </Link>
   );
-};
+});
+
+BlogCard.displayName = "BlogCard";
 
 export default BlogCard;
