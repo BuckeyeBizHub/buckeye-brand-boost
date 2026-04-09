@@ -52,12 +52,12 @@ const ResearchAssistant = () => {
       {!isOpen && (
         <button
           onClick={handleOpen}
-          className="fixed bottom-24 right-4 sm:right-6 z-50 flex items-center gap-2 sm:gap-2.5 rounded-full bg-ohio-navy pl-3 pr-3.5 sm:pl-4 sm:pr-5 py-3 sm:py-3 font-semibold text-primary-foreground shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_hsl(220_55%_22%/0.5)] transition-all duration-300 hover:scale-105 animate-fade-in ring-2 ring-ohio-gold/30 sm:ring-0"
+          className="fixed bottom-24 right-4 sm:right-6 z-50 flex items-center gap-2 sm:gap-2.5 rounded-full bg-primary pl-3 pr-3.5 sm:pl-4 sm:pr-5 py-3 sm:py-3 font-semibold text-primary-foreground shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_40px_hsl(0_85%_40%/0.4)] transition-all duration-300 hover:scale-105 animate-fade-in ring-2 ring-primary/30 sm:ring-0"
           aria-label="Open Research Assistant"
         >
           <div className="relative">
             <Search className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-ohio-gold rounded-full animate-pulse" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary-foreground rounded-full animate-pulse" />
           </div>
           <span className="text-xs sm:text-sm font-bold tracking-wide">Ask an Expert</span>
         </button>
@@ -71,10 +71,10 @@ const ResearchAssistant = () => {
             style={{ maxHeight: "min(600px, calc(100vh - 8rem))" }}
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 bg-gradient-to-r from-ohio-navy to-[hsl(220,55%,28%)] text-primary-foreground">
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 bg-gradient-to-r from-foreground to-foreground/90 text-primary-foreground">
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-ohio-gold" />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xs sm:text-sm leading-tight">Branding Research Assistant</h3>

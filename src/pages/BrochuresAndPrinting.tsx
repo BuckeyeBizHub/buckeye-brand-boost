@@ -166,7 +166,7 @@ const BrochuresAndPrinting = () => {
       <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
         <div className="absolute inset-0">
           <img src={brochuresHero} alt="Premium full-color brochures printed for Columbus Ohio businesses" className="w-full h-full object-cover" width={1920} height={800} />
-          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(220,55%,12%,0.75)] to-[hsl(220,25%,5%,0.92)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(0,0%,0%,0.75)] to-[hsl(0,0%,0%,0.92)]" />
         </div>
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
@@ -448,7 +448,7 @@ const BrochuresAndPrinting = () => {
                 "And don't skimp on paper quality. Handing someone a thin, flimsy brochure sends the wrong message about your business. Go with at least 80lb gloss text or 100lb for trade shows — the weight and feel of the piece says as much about your brand as the words on it."
               </p>
               <footer className="mt-6">
-                <p className="font-bold text-foreground text-base md:text-lg">— David Stein, The Buckeye Branding Czar</p>
+                <p className="font-bold text-foreground text-base md:text-lg">— David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-muted-foreground text-sm font-semibold">Buckeye Biz Hub</p>
               </footer>
             </blockquote>

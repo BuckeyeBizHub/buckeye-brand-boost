@@ -84,7 +84,7 @@ const FullRebrandKits = () => {
     <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Complete business rebrand kit with vehicle wraps apparel signage and printing on a Columbus Ohio office table" className="w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(220,55%,12%,0.75)] to-[hsl(220,25%,5%,0.92)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(0,0%,0%,0.75)] to-[hsl(0,0%,0%,0.92)]" />
       </div>
       <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
         <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
@@ -210,7 +210,7 @@ const FullRebrandKits = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">
               "The biggest mistake I see Ohio businesses make is rebranding in pieces — a new logo here, new cards there, but the van still has the old colors and the website hasn't been touched in three years. That disconnect confuses customers and kills trust. A coordinated rebrand — where every single touchpoint matches — is the fastest way to look bigger, more professional, and more trustworthy than your competition. And when you bundle it all through our network, you save thousands while getting it done right the first time."
             </p>
-            <p className="font-bold text-foreground">— David Stein, The Buckeye Branding Czar</p>
+            <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
             <p className="text-muted-foreground text-sm">Buckeye Biz Hub</p>
           </div>
         </motion.div>

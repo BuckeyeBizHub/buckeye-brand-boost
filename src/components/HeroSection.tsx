@@ -101,14 +101,14 @@ const HeroSection = () => {
             <div className="w-[360px] h-[430px] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
-                alt="David Stein – The Buckeye Branding Czar, Buckeye Biz Hub, Columbus Ohio"
+                alt="David Stein – Your Buckeye Branding Concierge, Buckeye Biz Hub, Columbus Ohio"
                 className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.5] to-transparent" />
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-7 py-2.5 rounded-xl">
               <p className="text-primary-foreground font-bold text-sm tracking-wide uppercase whitespace-nowrap">
-                David Stein · The Buckeye Branding Czar
+                David Stein · Your Buckeye Branding Concierge
               </p>
             </div>
           </div>

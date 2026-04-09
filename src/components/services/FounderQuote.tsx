@@ -14,7 +14,7 @@ const FounderQuote = () => (
           "After running three different companies here in Ohio for over 25 years, I've learned the hard way how expensive and time-consuming branding mistakes can be. That's why we built Buckeye Biz Hub and secured strong local partnerships — so we can help you create a powerful, professional brand while saving you significant time and, more importantly, real money by avoiding those same costly errors."
         </p>
         <footer className="mt-6">
-          <p className="font-bold text-foreground text-base md:text-lg">— David Stein, The Buckeye Branding Czar</p>
+          <p className="font-bold text-foreground text-base md:text-lg">— David Stein, Your Buckeye Branding Concierge</p>
           <p className="text-muted-foreground text-sm font-semibold">Buckeye Biz Hub</p>
         </footer>
       </motion.blockquote>

@@ -356,7 +356,7 @@ const Decals = () => {
               </div>
               <div>
                 <h2 className="font-display text-2xl md:text-3xl font-black text-foreground">Design Tips from David</h2>
-                <p className="text-sm text-muted-foreground">David Stein, The Buckeye Branding Czar</p>
+                <p className="text-sm text-muted-foreground">David Stein, Your Buckeye Branding Concierge</p>
               </div>
             </div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
