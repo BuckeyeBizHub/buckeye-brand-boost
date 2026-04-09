@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { Clock, Tag } from "lucide-react";
 import { WPPost, getExcerpt, getFeaturedImage, getCategories } from "@/lib/wordpress";
@@ -8,7 +9,7 @@ interface BlogCardProps {
   featured?: boolean;
 }
 
-const BlogCard = ({ post, featured = false }: BlogCardProps) => {
+const BlogCard = forwardRef<HTMLDivElement, BlogCardProps>(({ post, featured = false }, ref) => {
   const image = getFeaturedImage(post);
   const categories = getCategories(post);
   const excerpt = getExcerpt(post, featured ? 220 : 140);
@@ -85,6 +86,8 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
       </div>
     </Link>
   );
-};
+});
+
+BlogCard.displayName = "BlogCard";
 
 export default BlogCard;
