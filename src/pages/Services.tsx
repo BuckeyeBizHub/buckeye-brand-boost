@@ -159,10 +159,10 @@ const Services = () => {
               What We Offer
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-              Our 10 Core Services
+              Our Full Service Lineup
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to vehicle wraps, banners, flags, decals, and full rebrand kits — everything your Ohio business needs to stand out and grow.
+              From business cards to vehicle wraps, postcards to large format printing — everything your Ohio business needs to stand out and grow.
             </p>
           </motion.div>
 
