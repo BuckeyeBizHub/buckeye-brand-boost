@@ -87,14 +87,42 @@ const services = [
     description: "Get discovered by more local customers when they search online. Our local SEO strategies help you rank higher on Google, dominate the Map Pack, and appear exactly when potential customers in Columbus and Central Ohio are looking for you.",
     href: "/local-seo",
   },
-];
-
-const Services = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    description: "Premium printing, promotional products, signage, vehicle branding & digital services for Ohio businesses.",
+  {
+    image: postcardsImg,
+    title: "Postcards & Direct Mail",
+    description: "Reach targeted neighborhoods with premium postcards and EDDM direct mail campaigns. Multiple sizes, paper stocks, and finishes — plus we coordinate mailing so you just sit back and watch the leads come in.",
+    href: "/postcards",
+  },
+  {
+    image: catalogsImg,
+    title: "Catalogs & Booklets",
+    description: "Professional saddle-stitched, perfect-bound, and wire-o bound catalogs and booklets that showcase your products beautifully. From 8-page brochures to 200-page catalogs — we handle design, printing, and delivery.",
+    href: "/catalogs-and-booklets",
+  },
+  {
+    image: foldersImg,
+    title: "Presentation Folders",
+    description: "Custom pocket folders with foil stamping, spot UV, and embossing that make your proposals and sales materials look polished and professional. Close more deals with folders that impress.",
+    href: "/presentation-folders",
+  },
+  {
+    image: menusImg,
+    title: "Menus & Table Tents",
+    description: "Durable, vibrant, and professionally designed menus and table tents for restaurants, bars, and hospitality businesses. Laminated, wipeable, and built to withstand daily use.",
+    href: "/menus-and-table-tents",
+  },
+  {
+    image: letterheadImg,
+    title: "Letterhead & Envelopes",
+    description: "Professional letterhead and matching printed envelopes that elevate every letter, invoice, and proposal. Coordinated stationery sets with premium paper stocks and optional foil accents.",
+    href: "/letterhead-and-envelopes",
+  },
+  {
+    image: largeFormatImg,
+    title: "Large Format Printing",
+    description: "Posters, wall graphics, floor graphics, retractable banners, trade show displays, and custom wallpaper — printed big, bold, and beautiful on premium substrates with UV-resistant inks.",
+    href: "/large-format-printing",
+  },
     url: "https://buckeye-brand-boost.lovable.app/services",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
