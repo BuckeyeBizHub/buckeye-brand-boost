@@ -4,7 +4,7 @@ import productCollage from "@/assets/product-collage-hero.jpg";
 import davidHeadshot from "@/assets/david-stein-headshot.jpg";
 import luxuryCards from "@/assets/luxury-gold-foil-cards.jpg";
 import trifoldBrochure from "@/assets/trifold-brochure-sample.png";
-import diecutPostcards from "@/assets/diecut-postcards-sample.jpg";
+import customDecals from "@/assets/usa-250th-anniversary-decal.jpeg";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBadges from "@/components/TrustBadges";
@@ -12,7 +12,7 @@ import TrustBadges from "@/components/TrustBadges";
 const showcaseItems = [
   { img: luxuryCards, alt: "Luxury gold foil raised business cards", label: "Gold Foil Cards" },
   { img: trifoldBrochure, alt: "Premium tri-fold brochure printing", label: "Tri-Fold Brochures" },
-  { img: diecutPostcards, alt: "Custom die-cut postcards", label: "Die-Cut Postcards" },
+  { img: customDecals, alt: "USA 250th Anniversary custom decal", label: "Custom Decals" },
 ];
 
 const HeroSection = () => {
