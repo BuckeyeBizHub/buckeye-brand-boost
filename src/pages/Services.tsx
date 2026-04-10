@@ -123,7 +123,15 @@ const services = [
     description: "Posters, wall graphics, floor graphics, retractable banners, trade show displays, and custom wallpaper — printed big, bold, and beautiful on premium substrates with UV-resistant inks.",
     href: "/large-format-printing",
   },
-    url: "https://buckeye-brand-boost.lovable.app/services",
+];
+
+const Services = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Buckeye Biz Hub",
+    description: "Premium printing, promotional products, signage, vehicle branding & digital services for Ohio businesses.",
+    url: "https://www.buckeyebizhub.com/services",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
