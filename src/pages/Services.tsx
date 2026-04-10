@@ -18,6 +18,12 @@ import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 import websiteImg from "@/assets/service-website-design.jpg";
 import seoImg from "@/assets/service-local-seo.jpg";
 import bannersImg from "@/assets/service-banners-flags-decals.jpg";
+import postcardsImg from "@/assets/postcards-hero.jpg";
+import catalogsImg from "@/assets/catalogs-hero.jpg";
+import foldersImg from "@/assets/presentation-folders-hero.jpg";
+import menusImg from "@/assets/menus-hero.jpg";
+import letterheadImg from "@/assets/letterhead-hero.jpg";
+import largeFormatImg from "@/assets/large-format-hero.jpg";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const services = [
