@@ -18,6 +18,12 @@ import rebrandImg from "@/assets/service-rebrand-kit.jpg";
 import websiteImg from "@/assets/service-website-design.jpg";
 import seoImg from "@/assets/service-local-seo.jpg";
 import bannersImg from "@/assets/service-banners-flags-decals.jpg";
+import postcardsImg from "@/assets/postcards-hero.jpg";
+import catalogsImg from "@/assets/catalogs-hero.jpg";
+import foldersImg from "@/assets/presentation-folders-hero.jpg";
+import menusImg from "@/assets/menus-hero.jpg";
+import letterheadImg from "@/assets/letterhead-hero.jpg";
+import largeFormatImg from "@/assets/large-format-hero.jpg";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const services = [
@@ -81,6 +87,42 @@ const services = [
     description: "Get discovered by more local customers when they search online. Our local SEO strategies help you rank higher on Google, dominate the Map Pack, and appear exactly when potential customers in Columbus and Central Ohio are looking for you.",
     href: "/local-seo",
   },
+  {
+    image: postcardsImg,
+    title: "Postcards & Direct Mail",
+    description: "Reach targeted neighborhoods with premium postcards and EDDM direct mail campaigns. Multiple sizes, paper stocks, and finishes — plus we coordinate mailing so you just sit back and watch the leads come in.",
+    href: "/postcards",
+  },
+  {
+    image: catalogsImg,
+    title: "Catalogs & Booklets",
+    description: "Professional saddle-stitched, perfect-bound, and wire-o bound catalogs and booklets that showcase your products beautifully. From 8-page brochures to 200-page catalogs — we handle design, printing, and delivery.",
+    href: "/catalogs-and-booklets",
+  },
+  {
+    image: foldersImg,
+    title: "Presentation Folders",
+    description: "Custom pocket folders with foil stamping, spot UV, and embossing that make your proposals and sales materials look polished and professional. Close more deals with folders that impress.",
+    href: "/presentation-folders",
+  },
+  {
+    image: menusImg,
+    title: "Menus & Table Tents",
+    description: "Durable, vibrant, and professionally designed menus and table tents for restaurants, bars, and hospitality businesses. Laminated, wipeable, and built to withstand daily use.",
+    href: "/menus-and-table-tents",
+  },
+  {
+    image: letterheadImg,
+    title: "Letterhead & Envelopes",
+    description: "Professional letterhead and matching printed envelopes that elevate every letter, invoice, and proposal. Coordinated stationery sets with premium paper stocks and optional foil accents.",
+    href: "/letterhead-and-envelopes",
+  },
+  {
+    image: largeFormatImg,
+    title: "Large Format Printing",
+    description: "Posters, wall graphics, floor graphics, retractable banners, trade show displays, and custom wallpaper — printed big, bold, and beautiful on premium substrates with UV-resistant inks.",
+    href: "/large-format-printing",
+  },
 ];
 
 const Services = () => {
@@ -89,7 +131,7 @@ const Services = () => {
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub",
     description: "Premium printing, promotional products, signage, vehicle branding & digital services for Ohio businesses.",
-    url: "https://buckeye-brand-boost.lovable.app/services",
+    url: "https://www.buckeyebizhub.com/services",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
@@ -117,10 +159,10 @@ const Services = () => {
               What We Offer
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-              Our 10 Core Services
+              Our Full Service Lineup
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to vehicle wraps, banners, flags, decals, and full rebrand kits — everything your Ohio business needs to stand out and grow.
+              From business cards to vehicle wraps, postcards to large format printing — everything your Ohio business needs to stand out and grow.
             </p>
           </motion.div>
 

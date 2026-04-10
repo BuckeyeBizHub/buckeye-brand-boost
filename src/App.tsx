@@ -36,6 +36,12 @@ import LocalSeo from "./pages/LocalSeo.tsx";
 import BannersAndFlags from "./pages/BannersAndFlags.tsx";
 import Decals from "./pages/Decals.tsx";
 import Research from "./pages/Research.tsx";
+import Postcards from "./pages/Postcards.tsx";
+import CatalogsAndBooklets from "./pages/CatalogsAndBooklets.tsx";
+import PresentationFolders from "./pages/PresentationFolders.tsx";
+import MenusAndTableTents from "./pages/MenusAndTableTents.tsx";
+import LetterheadAndEnvelopes from "./pages/LetterheadAndEnvelopes.tsx";
+import LargeFormatPrinting from "./pages/LargeFormatPrinting.tsx";
 
 import ResearchAssistant from "./components/ResearchAssistant";
 
@@ -77,6 +83,12 @@ const App = () => (
           <Route path="/local-seo" element={<LocalSeo />} />
           <Route path="/banners-and-flags" element={<BannersAndFlags />} />
           <Route path="/decals" element={<Decals />} />
+          <Route path="/postcards" element={<Postcards />} />
+          <Route path="/catalogs-and-booklets" element={<CatalogsAndBooklets />} />
+          <Route path="/presentation-folders" element={<PresentationFolders />} />
+          <Route path="/menus-and-table-tents" element={<MenusAndTableTents />} />
+          <Route path="/letterhead-and-envelopes" element={<LetterheadAndEnvelopes />} />
+          <Route path="/large-format-printing" element={<LargeFormatPrinting />} />
           <Route path="/research" element={<Research />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
