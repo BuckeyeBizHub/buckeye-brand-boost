@@ -73,7 +73,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 max-w-lg mx-auto lg:mx-0"
           >
-            Premium business printing, promotional products & vehicle branding — Columbus, Ohio.
+            Premium business cards, brochures, catalogs, postcards, vehicle wraps & full branding — Columbus, Ohio.
           </motion.p>
 
           <motion.div
