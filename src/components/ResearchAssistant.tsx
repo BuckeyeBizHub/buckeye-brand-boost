@@ -11,6 +11,9 @@ const VISIBLE_PATHS = new Set([
   "/promotional-products", "/branded-apparel-and-uniforms", "/yard-signs-and-signage",
   "/vehicle-wraps-and-fleet-branding", "/full-rebrand-kits", "/website-design",
   "/local-seo", "/banners-and-flags", "/decals", "/pricing", "/industries",
+  "/postcards", "/catalogs-and-booklets", "/presentation-folders",
+  "/menus-and-table-tents", "/letterhead-and-envelopes", "/large-format-printing",
+  "/blog",
 ]);
 
 const PAGE_LABELS: Record<string, string> = {
@@ -27,6 +30,13 @@ const PAGE_LABELS: Record<string, string> = {
   "/local-seo": "local SEO",
   "/pricing": "pricing & packages",
   "/services": "our services",
+  "/postcards": "postcards & direct mail",
+  "/catalogs-and-booklets": "catalogs & booklets",
+  "/presentation-folders": "presentation folders",
+  "/menus-and-table-tents": "menus & table tents",
+  "/letterhead-and-envelopes": "letterhead & envelopes",
+  "/large-format-printing": "large format printing",
+  "/blog": "our blog",
 };
 
 const ResearchAssistant = () => {
