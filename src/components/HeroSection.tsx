@@ -2,9 +2,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import productCollage from "@/assets/product-collage-hero.jpg";
 import davidHeadshot from "@/assets/david-stein-headshot.jpg";
+import luxuryCards from "@/assets/luxury-gold-foil-cards.jpg";
+import trifoldBrochure from "@/assets/trifold-brochure-sample.png";
+import diecutPostcards from "@/assets/diecut-postcards-sample.jpg";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBadges from "@/components/TrustBadges";
+
+const showcaseItems = [
+  { img: luxuryCards, alt: "Luxury gold foil raised business cards", label: "Gold Foil Cards" },
+  { img: trifoldBrochure, alt: "Premium tri-fold brochure printing", label: "Tri-Fold Brochures" },
+  { img: diecutPostcards, alt: "Custom die-cut postcards", label: "Die-Cut Postcards" },
+];
 
 const HeroSection = () => {
   return (
@@ -64,7 +73,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 max-w-lg mx-auto lg:mx-0"
           >
-            Business printing, promotional products & vehicle branding — Columbus, Ohio.
+            Premium business printing, promotional products & vehicle branding — Columbus, Ohio.
           </motion.p>
 
           <motion.div
@@ -93,12 +102,12 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Right: David headshot */}
+        {/* Right: David headshot + Premium printing showcase */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="flex-shrink-0 hidden lg:block"
+          className="flex-shrink-0 hidden lg:flex flex-col items-center gap-6"
         >
           <div className="relative">
             <div className="w-64 xl:w-72 aspect-[3/3.7] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
@@ -118,6 +127,38 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
+
+          {/* Premium printing showcase strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex gap-3 mt-4"
+          >
+            {showcaseItems.map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9 + i * 0.12, duration: 0.5 }}
+                className="group relative w-[5.5rem] xl:w-24"
+              >
+                <div className="aspect-square rounded-xl overflow-hidden border border-primary-foreground/15 shadow-lg group-hover:border-primary/40 transition-all duration-300 group-hover:scale-105">
+                  <img
+                    src={item.img}
+                    alt={item.alt}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+                <p className="text-[0.5rem] xl:text-[0.55rem] text-primary-foreground/50 font-bold text-center mt-1.5 uppercase tracking-wider leading-tight">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
       </div>
 
