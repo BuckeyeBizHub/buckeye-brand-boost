@@ -121,6 +121,36 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.buckeyebizhub.com/postcards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.buckeyebizhub.com/catalogs-and-booklets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.buckeyebizhub.com/presentation-folders</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.buckeyebizhub.com/menus-and-table-tents</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.buckeyebizhub.com/letterhead-and-envelopes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.buckeyebizhub.com/large-format-printing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.buckeyebizhub.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
