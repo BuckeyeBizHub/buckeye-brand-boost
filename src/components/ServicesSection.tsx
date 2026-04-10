@@ -18,13 +18,13 @@ import vehicleDecalCloseup from "@/assets/vehicle-decal-closeup.jpg";
 const services = [
   {
     title: "Business Cards & Stationery",
-    desc: "Make a powerful first impression that lasts with premium cards featuring luxurious stocks, gold foil, and spot UV finishes.",
+    desc: "Premium cards on ultra-thick 32pt stock with gold foil stamping, spot UV, embossing, and custom die-cuts — designed to leave a lasting impression.",
     href: "/business-cards",
     img: businessCardsProduct,
   },
   {
     title: "Brochures & Business Printing",
-    desc: "Communicate your message with clarity and impact using vibrant, high-quality printed materials that build trust and help you stand out.",
+    desc: "Tri-fold, bi-fold, gate-fold, and Z-fold brochures on premium paper stocks with vivid full-color printing, plus flyers, notepads, and custom forms.",
     href: "/brochures-and-business-printing",
     img: brochuresHero,
   },
@@ -48,7 +48,7 @@ const services = [
   },
   {
     title: "Vehicle Wraps & Fleet Branding",
-    desc: "Transform your fleet into powerful 24/7 mobile advertisements that create thousands of daily impressions.",
+    desc: "Transform your fleet into powerful 24/7 mobile advertisements with 3M/Avery materials and professional Ohio installers.",
     href: "/vehicle-wraps-and-fleet-branding",
     img: vehicleWrapProduct,
   },
@@ -72,14 +72,14 @@ const services = [
   },
   {
     title: "Banners & Flags",
-    desc: "Grab attention instantly with custom banners, feather flags, retractable banners, and graduation banners designed to drive traffic and make your message impossible to miss.",
+    desc: "Custom banners, feather flags, retractable banners, and graduation banners designed to drive traffic and make your message impossible to miss.",
     href: "/banners-and-flags",
     img: bannerFeatherFlags,
     featured: true,
   },
   {
     title: "Decals",
-    desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that add professional details and promote your brand everywhere.",
+    desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that promote your brand everywhere.",
     href: "/decals",
     img: vehicleDecalCloseup,
     featured: true,
