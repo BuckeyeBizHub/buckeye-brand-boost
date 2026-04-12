@@ -21,7 +21,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
           <div className="grid md:grid-cols-2">
             <div className="relative h-72 md:h-full min-h-[320px] overflow-hidden">
               {image ? (
-                <img src={image} alt={post.title.rendered} loading="eager" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={image} alt={post.title.rendered.replace(/<[^>]*>/g, "")} loading="eager" fetchPriority="high" width={640} height={400} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">No Image</div>
               )}
@@ -58,7 +58,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
       <div className="bg-card rounded-3xl border-2 border-border hover:border-primary/40 overflow-hidden card-lift shadow-sm hover:shadow-[0_25px_70px_-15px_hsl(0_85%_40%/0.18)] h-full flex flex-col">
         <div className="relative h-52 overflow-hidden">
           {image ? (
-            <img src={image} alt={post.title.rendered} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src={image} alt={post.title.rendered.replace(/<[^>]*>/g, "")} loading="lazy" width={400} height={225} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-sm">No Image</div>
           )}
