@@ -50,7 +50,7 @@ const Blog = () => {
     "@type": "Blog",
     name: "Buckeye Biz Hub – Resources & Insights",
     description: "Ohio business tips, printing guides, promotional product ideas, and vehicle branding strategies from Buckeye Biz Hub.",
-    url: "https://buckeye-brand-boost.lovable.app/blog",
+    url: "https://www.buckeyebizhub.com/blog",
     publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
   };
 
