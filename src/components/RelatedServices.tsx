@@ -3,13 +3,22 @@ import { ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
+  Flag, Sticker, Mail, BookMarked, FolderOpen, UtensilsCrossed, FileText, Maximize,
 } from "lucide-react";
 
 const allServices = [
   { label: "Business Cards & Stationery", href: "/business-cards", icon: CreditCard },
   { label: "Brochures & Business Printing", href: "/brochures-and-business-printing", icon: BookOpen },
+  { label: "Postcards & Direct Mail", href: "/postcards", icon: Mail },
+  { label: "Catalogs & Booklets", href: "/catalogs-and-booklets", icon: BookMarked },
+  { label: "Presentation Folders", href: "/presentation-folders", icon: FolderOpen },
+  { label: "Letterhead & Envelopes", href: "/letterhead-and-envelopes", icon: FileText },
+  { label: "Large Format Printing", href: "/large-format-printing", icon: Maximize },
+  { label: "Menus & Table Tents", href: "/menus-and-table-tents", icon: UtensilsCrossed },
   { label: "Promotional Products & Giveaways", href: "/promotional-products", icon: Gift },
   { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms", icon: Shirt },
+  { label: "Banners & Flags", href: "/banners-and-flags", icon: Flag },
+  { label: "Custom Decals", href: "/decals", icon: Sticker },
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage", icon: Signpost },
   { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding", icon: Car },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits", icon: Package },

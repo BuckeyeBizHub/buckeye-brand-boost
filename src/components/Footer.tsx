@@ -4,17 +4,34 @@ import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const companyLinks = [
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Industries", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
 ];
 
-const serviceLinks = [
-  { label: "Business Printing", href: "/business-printing" },
+const printingLinks = [
+  { label: "Business Cards", href: "/business-cards" },
+  { label: "Brochures & Printing", href: "/brochures-and-business-printing" },
+  { label: "Postcards & Direct Mail", href: "/postcards" },
+  { label: "Catalogs & Booklets", href: "/catalogs-and-booklets" },
+  { label: "Presentation Folders", href: "/presentation-folders" },
+  { label: "Letterhead & Envelopes", href: "/letterhead-and-envelopes" },
+  { label: "Menus & Table Tents", href: "/menus-and-table-tents" },
+  { label: "Large Format Printing", href: "/large-format-printing" },
+];
+
+const brandingLinks = [
   { label: "Promotional Products", href: "/promotional-products" },
-  { label: "Vehicle Wraps & Branding", href: "/vehicle-branding" },
-  { label: "Custom Signage & Banners", href: "/services" },
+  { label: "Branded Apparel", href: "/branded-apparel-and-uniforms" },
+  { label: "Vehicle Wraps & Fleet", href: "/vehicle-wraps-and-fleet-branding" },
+  { label: "Banners & Flags", href: "/banners-and-flags" },
+  { label: "Custom Decals", href: "/decals" },
+  { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
+  { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
 ];
 
 const Footer = () => {
