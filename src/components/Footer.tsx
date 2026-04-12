@@ -45,7 +45,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container relative py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Column 1 – Company Info */}
           <div>
             <Link to="/" className="inline-block mb-5">
@@ -74,14 +74,29 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 3 – Services */}
+          {/* Column 3 – Printing */}
           <div>
             <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
               <span className="w-6 h-[2px] bg-primary rounded-full" />
-              Services
+              Printing
             </h4>
             <div className="flex flex-col gap-3">
-              {serviceLinks.map((link) => (
+              {printingLinks.map((link) => (
+                <Link key={link.label} to={link.href} className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Column 4 – Branding */}
+          <div>
+            <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
+              <span className="w-6 h-[2px] bg-primary rounded-full" />
+              Branding
+            </h4>
+            <div className="flex flex-col gap-3">
+              {brandingLinks.map((link) => (
                 <Link key={link.label} to={link.href} className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300">
                   {link.label}
                 </Link>
