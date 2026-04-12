@@ -121,9 +121,13 @@ const BlogPost = () => {
       <article className="py-16 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           {image && (
-            <motion.img initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            <img
               src={image} alt={post.title.rendered.replace(/<[^>]*>/g, "")}
               className="w-full rounded-2xl mb-12 shadow-lg"
+              loading="eager"
+              fetchPriority="high"
+              width={960}
+              height={540}
             />
           )}
           <div
@@ -137,8 +141,28 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           />
 
+          {/* Service cross-links */}
+          <div className="mt-12 p-8 rounded-2xl bg-muted/40 border border-border">
+            <h3 className="font-display text-xl font-black text-foreground mb-4">Explore Our Services</h3>
+            <p className="text-muted-foreground text-sm mb-5">Looking for help with your next project? Browse our most popular services:</p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { to: "/promotional-products", label: "Promotional Products" },
+                { to: "/business-cards", label: "Business Cards" },
+                { to: "/vehicle-wraps-and-fleet", label: "Vehicle Wraps" },
+                { to: "/branded-apparel", label: "Branded Apparel" },
+                { to: "/banners-and-flags", label: "Banners & Flags" },
+                { to: "/yard-signs-and-signage", label: "Signage" },
+              ].map((s) => (
+                <Link key={s.to} to={s.to} className="text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors">
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* CTA */}
-          <div className="mt-16 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(0,78%,28%)] text-center">
+          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(0,78%,28%)] text-center">
             <h3 className="font-display text-3xl font-black text-primary-foreground mb-4">Need Help With Your Project?</h3>
             <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto">David Stein · Your Buckeye Branding Concierge is ready to help you bring your ideas to life.</p>
             <Link to="/contact">

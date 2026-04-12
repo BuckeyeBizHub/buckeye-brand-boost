@@ -194,6 +194,27 @@ const Blog = () => {
               )}
             </>
           )}
+
+          {/* Service cross-links for SEO */}
+          <div className="mt-16 p-8 rounded-2xl bg-card border border-border text-center">
+            <h2 className="font-display text-2xl font-black text-foreground mb-3">Browse Our Services</h2>
+            <p className="text-muted-foreground text-sm mb-6">Need help bringing your brand to life? Explore what we offer:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { to: "/services", label: "All Services" },
+                { to: "/promotional-products", label: "Promotional Products" },
+                { to: "/business-cards", label: "Business Cards" },
+                { to: "/vehicle-wraps-and-fleet", label: "Vehicle Wraps" },
+                { to: "/branded-apparel", label: "Branded Apparel" },
+                { to: "/large-format-printing", label: "Large Format Printing" },
+                { to: "/banners-and-flags", label: "Banners & Flags" },
+              ].map((s) => (
+                <Link key={s.to} to={s.to} className="text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors">
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
