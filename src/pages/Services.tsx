@@ -24,6 +24,7 @@ import foldersImg from "@/assets/presentation-folders-hero.jpg";
 import menusImg from "@/assets/menus-hero.jpg";
 import letterheadImg from "@/assets/letterhead-hero.jpg";
 import largeFormatImg from "@/assets/large-format-hero.jpg";
+import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const services = [
@@ -174,6 +175,7 @@ const Services = () => {
         </div>
       </section>
 
+      <RelatedBlogPosts heading="Branding Tips from Our Blog" searchTerm="branding printing" />
       <ServicesCTA />
       <ServicesTrustBar />
       <Footer />

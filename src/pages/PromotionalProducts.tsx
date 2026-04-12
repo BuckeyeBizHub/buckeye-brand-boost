@@ -3,6 +3,7 @@ import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import Footer from "@/components/Footer";
 
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
@@ -327,6 +328,7 @@ const PromotionalProducts = () => {
         </div>
       </section>
 
+      <RelatedBlogPosts heading="Promotional Product Tips & Guides" searchTerm="promotional products" />
       <Footer />
     </div>
   );
