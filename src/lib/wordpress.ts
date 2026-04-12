@@ -103,7 +103,8 @@ export async function fetchPost(slug: string): Promise<WPPost | null> {
 export async function fetchCategories(): Promise<WPCategory[]> {
   const res = await fetch(`${WP_API}/categories?per_page=50&orderby=count&order=desc`);
   if (!res.ok) throw new Error(`WordPress API error: ${res.status}`);
-  return res.json();
+  const cats: WPCategory[] = await res.json();
+  return cats.map((c) => ({ ...c, name: decodeHtmlEntities(c.name) }));
 }
 
 export async function fetchRelatedPosts(post: WPPost, limit = 3): Promise<WPPost[]> {
