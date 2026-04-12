@@ -13,6 +13,8 @@ const ServicesHero = () => (
         className="w-full h-full object-cover"
         width={1920}
         height={800}
+        loading="eager"
+        fetchPriority="high"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(0,0%,0%,0.75)] to-[hsl(0,0%,0%,0.92)]" />
     </div>

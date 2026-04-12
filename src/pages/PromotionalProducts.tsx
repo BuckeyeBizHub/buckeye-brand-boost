@@ -154,7 +154,7 @@ const PromotionalProducts = () => {
       {/* Hero */}
       <section className="relative pt-48 pb-36 lg:pt-60 lg:pb-52 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0">
-          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover object-center" />
+          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover object-center" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,3%/0.45)] via-[hsl(0,40%,5%/0.55)] to-[hsl(0,60%,8%/0.92)]" />
           <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-[hsl(0,50%,6%)] via-[hsl(0,50%,6%/0.85)] to-transparent" />
         </div>
