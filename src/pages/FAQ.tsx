@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const faqs = [
   {
@@ -69,7 +69,7 @@ const jsonLd = {
 };
 
 const FAQ = () => {
-    usePageTitle("FAQ - Frequently Asked Questions", "Answers to common questions about Buckeye Biz Hub's printing, promotional products, vehicle wraps, pricing, turnaround times, and ordering process.");
+    usePageSEO({ title: "FAQ - Frequently Asked Questions", description: "Answers to common questions about Buckeye Biz Hub's printing, promotional products, vehicle wraps, pricing, turnaround times, and ordering process." });
 
   return (
     <div className="min-h-screen">

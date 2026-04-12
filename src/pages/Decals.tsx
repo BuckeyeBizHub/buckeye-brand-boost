@@ -29,7 +29,7 @@ import anniversary250Img from "@/assets/decal-250th-anniversary.jpg";
 
 import googleBadge from "@/assets/google-5-star-badge.png";
 import bbbBadge from "@/assets/bbb-a-plus-badge.png";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const serviceCards = [
   {
@@ -136,7 +136,7 @@ const Decals = () => {
     })),
   };
 
-    usePageTitle("Custom Decals & Stickers Columbus Ohio", "Custom vehicle decals, DOT numbers, window clings, reflective safety stickers, and patriotic decals for Ohio businesses. Durable, professional, and affordable.");
+    usePageSEO({ title: "Custom Decals & Stickers Columbus Ohio", description: "Custom vehicle decals, DOT numbers, window clings, reflective safety stickers, and patriotic decals for Ohio businesses. Durable, professional, and affordable." });
 
   return (
     <div className="min-h-screen">

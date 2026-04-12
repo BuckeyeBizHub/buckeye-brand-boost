@@ -5,7 +5,7 @@ import HowWePrice from "@/components/pricing/HowWePrice";
 import PopularSolutions from "@/components/pricing/PopularSolutions";
 import PricingComparison from "@/components/pricing/PricingComparison";
 import PricingCTA from "@/components/pricing/PricingCTA";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const Pricing = () => {
   const jsonLd = {
@@ -23,7 +23,7 @@ const Pricing = () => {
     },
   };
 
-    usePageTitle("Pricing - Transparent Quotes for Ohio Business Branding", "Transparent pricing for business printing, promotional products, and vehicle branding in Ohio. 24-hour quotes, no hidden fees, wholesale pricing on every order.");
+    usePageSEO({ title: "Pricing - Transparent Quotes for Ohio Business Branding", description: "Transparent pricing for business printing, promotional products, and vehicle branding in Ohio. 24-hour quotes, no hidden fees, wholesale pricing on every order." });
 
   return (
     <div className="min-h-screen bg-background">

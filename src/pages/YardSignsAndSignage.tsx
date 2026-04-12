@@ -35,7 +35,7 @@ import coroplastSign from "@/assets/yard-sign-coroplast-real.jpg";
 import realEstateSign from "@/assets/yard-sign-realestate-real.jpg";
 import jobsiteBanner from "@/assets/yard-sign-jobsite-real.jpg";
 import eventDirectional from "@/assets/yard-sign-event-directional-real.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -142,7 +142,7 @@ const YardSignsAndSignage = () => {
     })),
   };
 
-    usePageTitle("Yard Signs & Custom Signage Columbus Ohio", "Bold, weather-resistant yard signs and custom signage for Columbus and Central Ohio businesses. Real estate signs, job site signs, and event signage with fast turnaround.");
+    usePageSEO({ title: "Yard Signs & Custom Signage Columbus Ohio", description: "Bold, weather-resistant yard signs and custom signage for Columbus and Central Ohio businesses. Real estate signs, job site signs, and event signage with fast turnaround." });
 
   return (
     <div className="min-h-screen">

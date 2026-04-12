@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import fleetWrapHvac from "@/assets/fleet-wrap-hvac.jpg";
 import premiumBusinessCards from "@/assets/premium-business-cards.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 import {
   PHOTO_VEHICLE_1, PHOTO_VEHICLE_2, PHOTO_VEHICLE_3, PHOTO_VEHICLE_5, PHOTO_VEHICLE_6,
   PHOTO_PRINT_1, PHOTO_PRINT_2, PHOTO_PRINT_6, PHOTO_PRINT_8,
@@ -106,7 +106,7 @@ const Portfolio = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Portfolio - Our Work for Ohio Businesses", "Browse real examples of business cards, vehicle wraps, promotional products, banners, and branding projects completed for Ohio businesses by Buckeye Biz Hub.");
+    usePageSEO({ title: "Portfolio - Our Work for Ohio Businesses", description: "Browse real examples of business cards, vehicle wraps, promotional products, banners, and branding projects completed for Ohio businesses by Buckeye Biz Hub." });
 
   return (
     <div className="min-h-screen">

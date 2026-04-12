@@ -18,7 +18,7 @@ import promoImg from "@/assets/promo-drinkware.jpg";
 import websiteImg from "@/assets/rebrand-website.jpg";
 import seoImg from "@/assets/rebrand-seo.jpg";
 import styleGuideImg from "@/assets/rebrand-style-guide.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -72,7 +72,7 @@ const faqJsonLd = {
 };
 
 const FullRebrandKits = () => {
-  usePageTitle("Full Rebrand Kits Columbus Ohio", "Complete rebrand kits for Ohio businesses. Coordinated vehicle branding, signage, apparel, printing, and digital assets in one professional package.");
+  usePageSEO({ title: "Full Rebrand Kits Columbus Ohio", description: "Complete rebrand kits for Ohio businesses. Coordinated vehicle branding, signage, apparel, printing, and digital assets in one professional package." });
 
   return (
   <div className="min-h-screen">

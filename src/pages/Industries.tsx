@@ -14,7 +14,7 @@ import industryRealestate from "@/assets/industry-realestate.jpg";
 import industryRestaurant from "@/assets/industry-restaurant.jpg";
 import industryConstruction from "@/assets/industry-construction.jpg";
 import industryAdditional from "@/assets/industry-additional.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const industries = [
   {
@@ -167,7 +167,7 @@ const Industries = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Industries We Serve in Ohio", "Buckeye Biz Hub serves contractors, restaurants, real estate agents, healthcare providers, and more across Ohio with custom printing, branding, and promotional products.");
+    usePageSEO({ title: "Industries We Serve in Ohio", description: "Buckeye Biz Hub serves contractors, restaurants, real estate agents, healthcare providers, and more across Ohio with custom printing, branding, and promotional products." });
 
   return (
     <div className="min-h-screen bg-background">

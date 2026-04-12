@@ -33,7 +33,7 @@ import graduationImg from "@/assets/banner-graduation.jpg";
 import jobsiteImg from "@/assets/banner-jobsite-construction.jpg";
 import eventImg from "@/assets/banner-event-grandopening.jpg";
 import customFlagsImg from "@/assets/banner-custom-flags.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -136,7 +136,7 @@ const BannersAndFlags = () => {
     })),
   };
 
-    usePageTitle("Custom Banners & Flags Columbus Ohio", "Custom vinyl banners, feather flags, retractable banners, and graduation banners in Columbus Ohio. Perfect for events, grand openings, job sites, and celebrations.");
+    usePageSEO({ title: "Custom Banners & Flags Columbus Ohio", description: "Custom vinyl banners, feather flags, retractable banners, and graduation banners in Columbus Ohio. Perfect for events, grand openings, job sites, and celebrations." });
 
   return (
     <div className="min-h-screen">

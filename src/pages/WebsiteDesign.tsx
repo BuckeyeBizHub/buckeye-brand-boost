@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 
 import heroImg from "@/assets/website-design-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -71,7 +71,7 @@ const faqJsonLd = {
 };
 
 const WebsiteDesign = () => {
-  usePageTitle("Website Design & Development Columbus Ohio", "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites that attract customers and build trust 24/7.");
+  usePageSEO({ title: "Website Design & Development Columbus Ohio", description: "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites that attract customers and build trust 24/7." });
 
   return (
   <div className="min-h-screen">

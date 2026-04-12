@@ -10,10 +10,10 @@ import ElevateCtaSection from "@/components/ElevateCtaSection";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const Index = () => {
-    usePageTitle(undefined, "Buckeye Biz Hub is your local Ohio partner for premium business printing, promotional products, vehicle wraps, banners, and full branding solutions. Fast 24-hour quotes, wholesale pricing, and 100% satisfaction guaranteed.");
+    usePageSEO({ description: "Buckeye Biz Hub is your local Ohio partner for premium business printing, promotional products, vehicle wraps, banners, and full branding solutions. Fast 24-hour quotes, wholesale pricing, and 100% satisfaction guaranteed." });
 
   return (
     <div className="min-h-screen">

@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useResearchAssistant } from "@/hooks/useResearchAssistant";
 import MessageBubble from "@/components/research/MessageBubble";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const RESEARCH_PAGE_QUESTIONS = [
   "What promotional products get the best ROI for small businesses?",
