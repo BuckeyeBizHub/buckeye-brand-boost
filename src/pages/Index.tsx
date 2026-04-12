@@ -7,6 +7,7 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import ProductCarousel from "@/components/ProductCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ElevateCtaSection from "@/components/ElevateCtaSection";
+import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -42,6 +43,7 @@ const Index = () => {
       <ProductCarousel />
       <TestimonialsSection />
       <LatestBlogSection />
+      <RelatedBlogPosts heading="More Branding & Printing Resources" searchTerm="Ohio business" count={3} />
       <ElevateCtaSection />
       <CTASection />
       <Footer />
