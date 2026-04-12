@@ -139,7 +139,7 @@ const PromotionalProducts = () => {
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Promotional Products",
     description: "Over 1 million promotional products at true wholesale pricing. SAGE and PPAI members serving Columbus and all of Ohio.",
-    url: "https://buckeye-brand-boost.lovable.app/promotional-products",
+    url: "https://www.buckeyebizhub.com/promotional-products",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
@@ -154,7 +154,7 @@ const PromotionalProducts = () => {
       {/* Hero */}
       <section className="relative pt-48 pb-36 lg:pt-60 lg:pb-52 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0">
-          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover object-center" />
+          <img src={barCoastersInUse} alt="Buckeye Biz Hub branded coasters and pint glasses on a bar" className="w-full h-full object-cover object-center" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,30%,3%/0.45)] via-[hsl(0,40%,5%/0.55)] to-[hsl(0,60%,8%/0.92)]" />
           <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-[hsl(0,50%,6%)] via-[hsl(0,50%,6%/0.85)] to-transparent" />
         </div>
@@ -166,12 +166,12 @@ const PromotionalProducts = () => {
             <Sparkles className="w-4 h-4" /> SAGE & PPAI Members <Sparkles className="w-4 h-4" />
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-black text-primary-foreground leading-[0.88] mb-12"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.7), 0 8px 30px rgba(0,0,0,0.9)' }}>
             Over 1 Million Promotional Products at{" "}
             <span className="text-primary text-glow-red">True Wholesale Pricing</span>
-          </motion.h1>
+          </h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
             className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/85 max-w-3xl mx-auto font-semibold leading-snug px-6"
