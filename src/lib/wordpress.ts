@@ -41,6 +41,12 @@ function stripHtml(html: string): string {
   return tmp.textContent || tmp.innerText || "";
 }
 
+function decodeHtmlEntities(text: string): string {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = text;
+  return tmp.textContent || tmp.innerText || text;
+}
+
 export function getExcerpt(post: WPPost, maxLen = 160): string {
   const raw = stripHtml(post.excerpt.rendered);
   return raw.length > maxLen ? raw.slice(0, maxLen).trimEnd() + "…" : raw;
@@ -54,7 +60,7 @@ export function getFeaturedImage(post: WPPost): string | null {
 
 export function getCategories(post: WPPost): WPCategory[] {
   const terms = post._embedded?.["wp:term"]?.[0];
-  return (terms || []).map((t) => ({ id: t.id, name: t.name, slug: t.slug, count: 0 }));
+  return (terms || []).map((t) => ({ id: t.id, name: decodeHtmlEntities(t.name), slug: t.slug, count: 0 }));
 }
 
 export function getAuthor(post: WPPost) {
@@ -97,7 +103,8 @@ export async function fetchPost(slug: string): Promise<WPPost | null> {
 export async function fetchCategories(): Promise<WPCategory[]> {
   const res = await fetch(`${WP_API}/categories?per_page=50&orderby=count&order=desc`);
   if (!res.ok) throw new Error(`WordPress API error: ${res.status}`);
-  return res.json();
+  const cats: WPCategory[] = await res.json();
+  return cats.map((c) => ({ ...c, name: decodeHtmlEntities(c.name) }));
 }
 
 export async function fetchRelatedPosts(post: WPPost, limit = 3): Promise<WPPost[]> {
