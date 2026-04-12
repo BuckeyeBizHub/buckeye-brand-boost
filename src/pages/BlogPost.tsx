@@ -105,7 +105,7 @@ const BlogPost = () => {
               <span key={c.id} className="text-[0.65rem] font-extrabold text-primary-foreground tracking-[0.15em] uppercase bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
             ))}
           </div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+          <h1
             className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-6"
             style={{ textShadow: "0 0 60px rgba(255,255,255,0.2), 0 4px 20px rgba(0,0,0,0.8)" }}
             dangerouslySetInnerHTML={{ __html: post.title.rendered }}
