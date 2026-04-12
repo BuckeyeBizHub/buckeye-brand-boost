@@ -30,26 +30,20 @@ const ServicesHero = () => (
           <Sparkles className="w-3.5 h-3.5" />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <h1
           className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-[0.92]"
           style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.3)" }}
         >
           Everything Your Ohio Business Needs to{" "}
           <span className="text-primary">Stand Out</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.6 }}
+        <p
           className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
         >
           Premium printing, promotional products, signage, vehicle branding & digital services — all with 24-hour quotes and full transparency
-        </motion.p>
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

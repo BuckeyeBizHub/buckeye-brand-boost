@@ -72,17 +72,17 @@ const Blog = () => {
             className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
             <BookOpen className="w-4 h-4" /> Resources & Insights <BookOpen className="w-4 h-4" />
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground leading-[0.88] mb-10"
             style={{ textShadow: "0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)" }}>
             Ohio Business Tips,{" "}<br className="hidden md:block" />
             <span className="text-primary text-glow-red">Printing Guides</span>{" "}<br className="hidden md:block" />
             & Branding Strategies
-          </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
+          </h1>
+          <p
             className="text-xl md:text-2xl text-primary-foreground/50 max-w-3xl mx-auto font-semibold tracking-wide leading-relaxed">
             Expert insights to help Columbus and Ohio businesses grow through smart printing, branding, and promotional strategies.
-          </motion.p>
+          </p>
         </div>
       </section>
 

@@ -139,7 +139,7 @@ const PromotionalProducts = () => {
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Promotional Products",
     description: "Over 1 million promotional products at true wholesale pricing. SAGE and PPAI members serving Columbus and all of Ohio.",
-    url: "https://buckeye-brand-boost.lovable.app/promotional-products",
+    url: "https://www.buckeyebizhub.com/promotional-products",
     areaServed: { "@type": "State", name: "Ohio" },
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
@@ -166,12 +166,12 @@ const PromotionalProducts = () => {
             <Sparkles className="w-4 h-4" /> SAGE & PPAI Members <Sparkles className="w-4 h-4" />
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
+          <h1
             className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-black text-primary-foreground leading-[0.88] mb-12"
             style={{ textShadow: '2px 2px 0 rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.7), 0 8px 30px rgba(0,0,0,0.9)' }}>
             Over 1 Million Promotional Products at{" "}
             <span className="text-primary text-glow-red">True Wholesale Pricing</span>
-          </motion.h1>
+          </h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
             className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/85 max-w-3xl mx-auto font-semibold leading-snug px-6"
