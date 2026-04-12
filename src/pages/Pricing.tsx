@@ -14,7 +14,7 @@ const Pricing = () => {
     name: "Buckeye Biz Hub – Pricing",
     description:
       "Transparent pricing for business printing, promotional products & vehicle branding in Ohio. 24-hour quotes, no hidden fees, full pricing transparency up front.",
-    url: "https://buckeye-brand-boost.lovable.app/pricing",
+    url: "https://www.buckeyebizhub.com/pricing",
     areaServed: { "@type": "State", name: "Ohio" },
     address: {
       "@type": "PostalAddress",

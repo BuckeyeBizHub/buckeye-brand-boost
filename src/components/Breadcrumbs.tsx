@@ -13,6 +13,7 @@ const routeLabels: Record<string, string> = {
   "/blog": "Blog",
   "/testimonials": "Testimonials",
   "/privacy-policy": "Privacy Policy",
+  "/research": "Research Assistant",
   "/business-cards": "Business Cards & Stationery",
   "/brochures-and-business-printing": "Brochures & Business Printing",
   "/promotional-products": "Promotional Products & Giveaways",
@@ -22,13 +23,23 @@ const routeLabels: Record<string, string> = {
   "/full-rebrand-kits": "Full Rebrand Kits",
   "/website-design": "Website Design & Development",
   "/local-seo": "Local SEO & Google Ranking",
+  "/banners-and-flags": "Banners & Flags",
+  "/decals": "Custom Decals",
+  "/postcards": "Postcards & Direct Mail",
+  "/catalogs-and-booklets": "Catalogs & Booklets",
+  "/presentation-folders": "Presentation Folders",
+  "/menus-and-table-tents": "Menus & Table Tents",
+  "/letterhead-and-envelopes": "Letterhead & Envelopes",
+  "/large-format-printing": "Large Format Printing",
 };
 
 const servicePages = [
   "/business-cards", "/brochures-and-business-printing", "/promotional-products",
   "/branded-apparel-and-uniforms", "/yard-signs-and-signage",
   "/vehicle-wraps-and-fleet-branding", "/full-rebrand-kits",
-  "/website-design", "/local-seo",
+  "/website-design", "/local-seo", "/banners-and-flags", "/decals",
+  "/postcards", "/catalogs-and-booklets", "/presentation-folders",
+  "/menus-and-table-tents", "/letterhead-and-envelopes", "/large-format-printing",
 ];
 
 const Breadcrumbs = () => {
@@ -51,7 +62,7 @@ const Breadcrumbs = () => {
       "@type": "ListItem",
       position: i + 1,
       name: c.label,
-      item: `https://buckeye-brand-boost.lovable.app${c.href}`,
+      item: `https://www.buckeyebizhub.com${c.href}`,
     })),
   };
 
