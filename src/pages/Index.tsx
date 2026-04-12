@@ -43,7 +43,6 @@ const Index = () => {
       <ProductCarousel />
       <TestimonialsSection />
       <LatestBlogSection />
-      <RelatedBlogPosts heading="More Branding & Printing Resources" searchTerm="Ohio business" count={3} />
       <ElevateCtaSection />
       <CTASection />
       <Footer />

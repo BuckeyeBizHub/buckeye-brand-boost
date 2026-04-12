@@ -39,10 +39,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-6 flex-1 flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
+          <h1
             className="text-[clamp(2.75rem,8vw,5rem)] lg:text-[clamp(4rem,5.5vw,6rem)] font-black text-primary-foreground mb-3 tracking-tighter leading-[0.9]"
             style={{
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
@@ -51,12 +48,9 @@ const HeroSection = () => {
             Buckeye
             <br />
             <span className="text-primary text-glow-red">Biz Hub</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+          <p
             className="text-[clamp(1.15rem,3.5vw,1.875rem)] text-primary-foreground font-bold mb-3 leading-tight max-w-2xl mx-auto lg:mx-0"
             style={{
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
@@ -65,16 +59,11 @@ const HeroSection = () => {
             Rooted in Ohio.
             <br />
             Built to Grow Your Business.
-          </motion.p>
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 max-w-lg mx-auto lg:mx-0"
-          >
+          <p className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 max-w-lg mx-auto lg:mx-0">
             Premium business cards, brochures, catalogs, postcards, vehicle wraps & full branding — Columbus, Ohio.
-          </motion.p>
+          </p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
