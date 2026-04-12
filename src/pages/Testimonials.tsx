@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const Testimonials = () => {
   const jsonLd = {
@@ -18,7 +18,7 @@ const Testimonials = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Client Reviews & Testimonials Columbus Ohio", "Read real reviews from 500+ Ohio businesses who trust Buckeye Biz Hub for printing, promotional products, vehicle wraps, and branding. 4.9/5 average rating.");
+    usePageSEO({ title: "Client Reviews & Testimonials Columbus Ohio", description: "Read real reviews from 500+ Ohio businesses who trust Buckeye Biz Hub for printing, promotional products, vehicle wraps, and branding. 4.9/5 average rating." });
 
   return (
     <div className="min-h-screen">

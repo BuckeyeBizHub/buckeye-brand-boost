@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import pricingHero from "@/assets/pricing-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const heroBadges = [
   { icon: ShieldCheck, label: "No Hidden Fees" },
@@ -14,7 +14,7 @@ const heroBadges = [
 ];
 
 const Contact = () => {
-  usePageTitle("Contact Us - Get Your Free 24-Hour Quote", "Contact Buckeye Biz Hub for a free 24-hour quote on business printing, promotional products, vehicle wraps, banners, and more. Serving Columbus and all of Ohio.");
+  usePageSEO({ title: "Contact Us - Get Your Free 24-Hour Quote", description: "Contact Buckeye Biz Hub for a free 24-hour quote on business printing, promotional products, vehicle wraps, banners, and more. Serving Columbus and all of Ohio." });
 
   // Load Tally embed script
   useEffect(() => {

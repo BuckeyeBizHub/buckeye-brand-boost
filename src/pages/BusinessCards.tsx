@@ -13,7 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroImg from "@/assets/business-cards-hero.jpg";
 import businessCardsImg from "@/assets/business-cards-product.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 /* ── data ── */
 const cardOptions = [
@@ -105,7 +105,7 @@ const BusinessCards = () => {
     },
   };
 
-    usePageTitle("Business Cards Columbus Ohio", "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses.");
+    usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses." });
 
   return (
     <div className="min-h-screen">

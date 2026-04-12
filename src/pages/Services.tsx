@@ -24,7 +24,7 @@ import foldersImg from "@/assets/presentation-folders-hero.jpg";
 import menusImg from "@/assets/menus-hero.jpg";
 import letterheadImg from "@/assets/letterhead-hero.jpg";
 import largeFormatImg from "@/assets/large-format-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const services = [
   {
@@ -136,7 +136,7 @@ const Services = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("All Services - Printing, Promos & Vehicle Branding Columbus Ohio", "Explore all branding services from Buckeye Biz Hub — business cards, brochures, promotional products, vehicle wraps, banners, flags, decals, signage, website design, and local SEO for Ohio businesses.");
+    usePageSEO({ title: "All Services - Printing, Promos & Vehicle Branding Columbus Ohio", description: "Explore all branding services from Buckeye Biz Hub — business cards, brochures, promotional products, vehicle wraps, banners, flags, decals, signage, website design, and local SEO for Ohio businesses." });
 
   return (
     <div className="min-h-screen">

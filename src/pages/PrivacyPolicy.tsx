@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Sparkles, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const sections = [
   {
@@ -64,7 +64,7 @@ const sections = [
 ];
 
 const PrivacyPolicy = () => {
-  usePageTitle("Privacy Policy", "Buckeye Biz Hub privacy policy. Learn how we collect, use, and protect your personal information when you use our printing and branding services.");
+  usePageSEO({ title: "Privacy Policy", description: "Buckeye Biz Hub privacy policy. Learn how we collect, use, and protect your personal information when you use our printing and branding services." });
 
   return (
   <div className="min-h-screen">

@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import heroImg from "@/assets/presentation-folders-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -60,7 +60,7 @@ const jsonLd = {
 };
 
 const PresentationFolders = () => {
-  usePageTitle("Presentation Folders Printing Columbus OH", "Custom presentation folders and pocket folders for Ohio businesses. Premium stocks, foil stamping, spot UV, and custom pockets. 24-hour quotes from Buckeye Biz Hub.");
+  usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders and pocket folders for Ohio businesses. Premium stocks, foil stamping, spot UV, and custom pockets. 24-hour quotes from Buckeye Biz Hub." });
 
   return (
     <div className="min-h-screen">

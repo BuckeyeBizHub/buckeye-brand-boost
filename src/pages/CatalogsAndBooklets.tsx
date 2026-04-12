@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import heroImg from "@/assets/catalogs-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -62,7 +62,7 @@ const jsonLd = {
 };
 
 const CatalogsAndBooklets = () => {
-  usePageTitle("Catalogs & Booklets Printing Columbus OH", "Professional catalog and booklet printing — saddle-stitched, perfect-bound, and wire-o binding. Full-color, premium paper stocks, and fast turnaround for Ohio businesses.");
+  usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Professional catalog and booklet printing — saddle-stitched, perfect-bound, and wire-o binding. Full-color, premium paper stocks, and fast turnaround for Ohio businesses." });
 
   return (
     <div className="min-h-screen">

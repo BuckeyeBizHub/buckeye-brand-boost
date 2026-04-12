@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import vehicleWrapBA from "@/assets/vehicle-wrap-before-after.jpg";
 import vehicleDecal from "@/assets/vehicle-decal-closeup.jpg";
 import vehicleFleet from "@/assets/branded-vehicle-fleet.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -81,7 +81,7 @@ const VehicleBranding = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Vehicle Branding Columbus Ohio", "Professional vehicle branding services in Columbus Ohio. Custom wraps, decals, and fleet graphics that generate thousands of daily impressions for your business.");
+    usePageSEO({ title: "Vehicle Branding Columbus Ohio", description: "Professional vehicle branding services in Columbus Ohio. Custom wraps, decals, and fleet graphics that generate thousands of daily impressions for your business." });
 
   return (
     <div className="min-h-screen">

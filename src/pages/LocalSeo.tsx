@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 
 import heroImg from "@/assets/local-seo-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -70,7 +70,7 @@ const faqJsonLd = {
 };
 
 const LocalSeo = () => {
-  usePageTitle("Local SEO & Google Ranking Columbus Ohio", "Local SEO services to help your Ohio business rank higher on Google and dominate the Map Pack. Get found by more local customers in Columbus and Central Ohio.");
+  usePageSEO({ title: "Local SEO & Google Ranking Columbus Ohio", description: "Local SEO services to help your Ohio business rank higher on Google and dominate the Map Pack. Get found by more local customers in Columbus and Central Ohio." });
 
   return (
   <div className="min-h-screen">

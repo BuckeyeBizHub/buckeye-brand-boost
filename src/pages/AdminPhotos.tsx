@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Upload, Trash2, Copy, ImagePlus, Filter, Search, X, Check } from "lucide-react";
 import { motion } from "framer-motion";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const CATEGORIES = [
   "Apparel",
@@ -114,7 +114,7 @@ const AdminPhotos = () => {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-    usePageTitle("Admin Photos");
+    usePageSEO({ title: "Admin Photos" });
 
   return (
     <div className="min-h-screen bg-background">

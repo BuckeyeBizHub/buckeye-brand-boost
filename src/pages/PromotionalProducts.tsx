@@ -14,7 +14,7 @@ import printingTradeshow from "@/assets/printing-tradeshow.jpg";
 import promoGiveaways from "@/assets/promo-giveaways-pens-keychains.jpg";
 import customHats from "@/assets/custom-hats-headwear.jpg";
 import customBagsTotes from "@/assets/custom-bags-totes.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -143,7 +143,7 @@ const PromotionalProducts = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageTitle("Promotional Products & Giveaways Columbus Ohio", "Custom promotional products and branded giveaways for Ohio businesses. Drinkware, apparel, tech gadgets, and more with your logo. Fast quotes and wholesale pricing.");
+    usePageSEO({ title: "Promotional Products & Giveaways Columbus Ohio", description: "Custom promotional products and branded giveaways for Ohio businesses. Drinkware, apparel, tech gadgets, and more with your logo. Fast quotes and wholesale pricing." });
 
   return (
     <div className="min-h-screen">

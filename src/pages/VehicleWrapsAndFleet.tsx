@@ -16,7 +16,7 @@ import decalsImg from "@/assets/vehicle-wrap-decals-real.jpg";
 import magneticImg from "@/assets/vehicle-wrap-magnetic-real.jpg";
 import windowImg from "@/assets/vehicle-wrap-window-real.jpg";
 import fleetImg from "@/assets/vehicle-wrap-fleet-real.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -78,7 +78,7 @@ const faqJsonLd = {
 };
 
 const VehicleWrapsAndFleet = () => {
-  usePageTitle("Vehicle Wraps & Fleet Branding Columbus Ohio", "Custom vehicle wraps and fleet branding in Columbus Ohio. Turn your vehicles into 24/7 mobile advertisements with professional wraps that protect and promote.");
+  usePageSEO({ title: "Vehicle Wraps & Fleet Branding Columbus Ohio", description: "Custom vehicle wraps and fleet branding in Columbus Ohio. Turn your vehicles into 24/7 mobile advertisements with professional wraps that protect and promote." });
 
   return (
   <div className="min-h-screen">

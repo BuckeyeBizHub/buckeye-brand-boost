@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import heroImg from "@/assets/letterhead-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -65,7 +65,7 @@ const jsonLd = {
 };
 
 const LetterheadAndEnvelopes = () => {
-  usePageTitle("Letterhead & Envelope Printing Columbus OH", "Custom letterhead and matching envelope printing for Ohio businesses. Premium paper, full-color, and coordinated stationery sets. 24-hour quotes.");
+  usePageSEO({ title: "Letterhead & Envelope Printing Columbus OH", description: "Custom letterhead and matching envelope printing for Ohio businesses. Premium paper, full-color, and coordinated stationery sets. 24-hour quotes." });
 
   return (
     <div className="min-h-screen">

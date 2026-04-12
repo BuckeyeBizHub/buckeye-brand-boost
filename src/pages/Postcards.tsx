@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import heroImg from "@/assets/postcards-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -54,7 +54,7 @@ const jsonLd = {
 };
 
 const Postcards = () => {
-  usePageTitle("Custom Postcards & Direct Mail Printing Columbus OH", "Premium postcard printing for direct mail, promotions, and events. Multiple sizes from 4×6 to 8.5×11, premium paper stocks, and EDDM mailing services. 24-hour quotes from Buckeye Biz Hub.");
+  usePageSEO({ title: "Custom Postcards & Direct Mail Printing Columbus OH", description: "Premium postcard printing for direct mail, promotions, and events. Multiple sizes from 4×6 to 8.5×11, premium paper stocks, and EDDM mailing services. 24-hour quotes from Buckeye Biz Hub." });
 
   return (
     <div className="min-h-screen">

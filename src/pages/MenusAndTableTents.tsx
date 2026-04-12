@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import heroImg from "@/assets/menus-hero.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
@@ -62,7 +62,7 @@ const jsonLd = {
 };
 
 const MenusAndTableTents = () => {
-  usePageTitle("Menu Printing & Table Tents Columbus OH", "Custom restaurant menu printing and table tents for Ohio restaurants, bars, and hospitality businesses. Durable, laminated, and beautifully designed.");
+  usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom restaurant menu printing and table tents for Ohio restaurants, bars, and hospitality businesses. Durable, laminated, and beautifully designed." });
 
   return (
     <div className="min-h-screen">

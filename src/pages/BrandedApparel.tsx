@@ -38,7 +38,7 @@ import safetyVests from "@/assets/apparel-safety-hivis.jpg";
 import aprons from "@/assets/apparel-aprons-service.jpg";
 import corporateDress from "@/assets/apparel-corporate-dress.jpg";
 import teamwear from "@/assets/printing-teamwear.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -189,7 +189,7 @@ const BrandedApparel = () => {
     })),
   };
 
-    usePageTitle("Branded Apparel & Uniforms Columbus Ohio", "Custom branded apparel and uniforms for Ohio businesses. Embroidered polos, hoodies, jackets, and safety vests with your company logo. Wholesale pricing available.");
+    usePageSEO({ title: "Branded Apparel & Uniforms Columbus Ohio", description: "Custom branded apparel and uniforms for Ohio businesses. Embroidered polos, hoodies, jackets, and safety vests with your company logo. Wholesale pricing available." });
 
   return (
     <div className="min-h-screen">

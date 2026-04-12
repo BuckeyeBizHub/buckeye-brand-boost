@@ -35,7 +35,7 @@ import businessCardsStack from "@/assets/business-cards-letterhead-stack.jpg";
 import yardSignInstall from "@/assets/yard-sign-installation.jpg";
 import brochuresFlyers from "@/assets/brochures-flyers-layou.jpg";
 import customApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -141,7 +141,7 @@ const trustPoints = [
 ];
 
 const BusinessPrinting = () => {
-    usePageTitle("Business Printing Services Columbus Ohio", "Professional business printing services in Columbus Ohio. Business cards, brochures, flyers, letterheads, and more with premium quality and fast turnaround.");
+    usePageSEO({ title: "Business Printing Services Columbus Ohio", description: "Professional business printing services in Columbus Ohio. Business cards, brochures, flyers, letterheads, and more with premium quality and fast turnaround." });
 
   return (
     <div className="min-h-screen bg-background text-foreground">
