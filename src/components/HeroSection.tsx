@@ -17,7 +17,7 @@ const showcaseItems = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full flex flex-col overflow-hidden bg-ohio-grey-dark">
+    <section className="relative w-full min-h-[85vh] max-h-[900px] md:min-h-[80vh] md:max-h-[850px] lg:min-h-[75vh] lg:max-h-[800px] flex flex-col overflow-hidden bg-ohio-grey-dark">
       {/* Background: product collage */}
       <div className="absolute inset-0">
         <img
@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       {/* Main content area */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-6 flex-1 flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-20 sm:pt-24 pb-4 flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
           {/* Concierge badge */}
