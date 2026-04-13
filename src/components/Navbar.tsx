@@ -36,6 +36,7 @@ const navLinks: NavLink[] = [
       { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
       { label: "Banners & Flags", href: "/banners-and-flags" },
       { label: "Custom Decals", href: "/decals" },
+      { label: "Door Hangers", href: "/door-hangers" },
       { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
       { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding" },
       { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
