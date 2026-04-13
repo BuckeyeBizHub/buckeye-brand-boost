@@ -1,16 +1,55 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Star, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import StarRating from "@/components/StarRating";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import { usePageSEO } from "@/hooks/usePageTitle";
+import { Button } from "@/components/ui/button";
+
+const testimonials = [
+  {
+    quote: "David and the team made the entire process effortless. Our new door hangers brought in 47 new customers in the first week alone.",
+    name: "Mike Reynolds",
+    company: "Reynolds Pizza",
+    location: "Lewis Center, OH",
+  },
+  {
+    quote: "The vehicle wraps look incredible and have already generated multiple calls. Their concierge approach saved us so much time.",
+    name: "Sarah Thompson",
+    company: "Thompson HVAC Services",
+    location: "Powell, OH",
+  },
+  {
+    quote: "Premium quality at fair prices. The yard signs and banners for our open houses were perfect — and they delivered exactly when promised.",
+    name: "Jennifer Patel",
+    company: "Patel Real Estate Group",
+    location: "Columbus, OH",
+  },
+  {
+    quote: "Velvet business cards and tri-fold brochures turned our brand from basic to professional overnight. Highly recommend!",
+    name: "Robert Kline",
+    company: "Kline Construction",
+    location: "Dublin, OH",
+  },
+  {
+    quote: "From concept to delivery, they handled everything. Our trade show booth was a huge success thanks to their promotional products.",
+    name: "Lisa Chen",
+    company: "Chen Insurance Agency",
+    location: "Westerville, OH",
+  },
+  {
+    quote: "Fast quotes, great pricing, and they truly care about helping small businesses like ours succeed. Best printing partner we've ever had.",
+    name: "Mark Davidson",
+    company: "Davidson Auto Repair",
+    location: "Hilliard, OH",
+  },
+];
 
 const Testimonials = () => {
   usePageSEO({
-    title: "Client Reviews & Testimonials Columbus Ohio",
+    title: "What Our Clients Say",
     description:
-      "Read real reviews from 500+ Ohio businesses who trust Buckeye Biz Hub for printing, promotional products, vehicle wraps, and branding. 4.9/5 average rating.",
+      "Read real reviews from Columbus and Central Ohio business owners about working with Buckeye Biz Hub. Printing, promotional products, vehicle wraps, and more.",
   });
 
   return (
@@ -43,9 +82,9 @@ const Testimonials = () => {
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground leading-[0.88] mb-10"
             style={{ textShadow: '0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)' }}
           >
-            Trusted by{" "}
+            Don't Just Take{" "}
             <span className="text-primary text-glow-red relative">
-              500+ Ohio Businesses
+              Our Word For It
               <motion.span
                 className="absolute -bottom-3 left-0 w-full h-[5px] bg-gradient-to-r from-transparent via-ohio-red-glow to-transparent rounded-full"
                 initial={{ scaleX: 0 }}
@@ -61,35 +100,74 @@ const Testimonials = () => {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="text-xl md:text-2xl text-primary-foreground/50 max-w-3xl mx-auto font-semibold tracking-wide leading-relaxed"
           >
-            Real reviews from real Ohio businesses we've helped grow with professional printing, branded merchandise, and vehicle wraps.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mt-14 flex justify-center"
-          >
-            <StarRating
-              rating={4.9}
-              size="w-8 h-8"
-              showValue
-              reviewCount={500}
-              className="[&_span]:text-primary-foreground/70 [&>span:last-of-type]:text-primary-foreground/35"
-            />
-          </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="text-primary-foreground/35 font-bold text-sm uppercase tracking-[0.2em] mt-3"
-          >
-            4.9/5 Average Rating
+            Here's what Columbus and Central Ohio business owners are saying about working with Buckeye Biz Hub.
           </motion.p>
         </div>
       </section>
 
-      <TestimonialsSection showAll />
+      {/* Testimonial Grid */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow relative"
+              >
+                <MessageCircle className="w-8 h-8 text-primary/20 absolute top-6 right-6" />
+                <div className="flex gap-1 mb-5">
+                  {[...Array(5)].map((_, s) => (
+                    <Star key={s} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground/80 leading-relaxed mb-6 italic">"{t.quote}"</p>
+                <div className="border-t border-border pt-5">
+                  <p className="font-bold text-foreground">{t.name}</p>
+                  <p className="text-sm text-primary font-semibold">{t.company}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{t.location}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-ohio-grey-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
+        <div className="container relative text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-black text-primary-foreground mb-6"
+          >
+            Ready to Create Your Own{" "}
+            <span className="text-primary">Success Story?</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-primary-foreground/50 text-lg max-w-2xl mx-auto mb-10"
+          >
+            Let's talk about how we can help your business stand out with professional printing, promotional products, and concierge-level care.
+          </motion.p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="text-lg px-10 py-6 font-bold">
+              <Link to="/contact">Get in Touch</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-lg px-10 py-6 font-bold border-primary/30 text-primary-foreground hover:bg-primary/10">
+              <Link to="/research">Try the Research Assistant</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
