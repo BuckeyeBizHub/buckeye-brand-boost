@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, Component, type ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -9,6 +9,7 @@ import BackToTop from "@/components/BackToTop";
 import MobileCTABar from "@/components/MobileCTABar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import RedirectHandler from "@/components/RedirectHandler";
 
 // Critical route – no lazy load
 import Index from "./pages/Index.tsx";
