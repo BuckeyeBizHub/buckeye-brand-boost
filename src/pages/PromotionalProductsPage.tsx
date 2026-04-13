@@ -270,6 +270,40 @@ const PromotionalProductsPage = () => {
         </div>
       </section>
 
+      {/* Shop Ready-Made Products */}
+      <section className="py-16 lg:py-20 bg-muted/40 border-y border-border/50">
+        <div className="container max-w-4xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <ShoppingBag className="w-4 h-4" /> Quick & Easy Online Shopping
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
+              Shop <span className="text-primary">Ready-Made Products</span> Online
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+              Need branded swag fast? Browse our online store for ready-made promotional products and giveaways — pens, tumblers, tote bags, and more — available to order right now.
+            </p>
+            <a
+              href="http://www.buckeyebizhub.store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.5)] group uppercase tracking-wider transition-all duration-300 border-2 border-primary-foreground/10">
+                <ShoppingBag className="w-5 h-5 mr-2" />
+                Shop Ready-Made Products
+                <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
+              </Button>
+            </a>
+            <div className="mt-6 bg-card border border-border/60 rounded-xl px-6 py-4 max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <span className="font-bold text-foreground">Please note:</span> Our online store is for ready-made promotional products and giveaways only. For custom printing, vehicle wraps, signage, or full branding projects, please{" "}
+                <Link to="/contact" className="text-primary font-bold hover:underline">get a custom quote</Link>.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Section 2: Why Promotional Products Work */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
