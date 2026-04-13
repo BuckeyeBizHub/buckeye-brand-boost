@@ -31,22 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.buckeyebizhub.com/brochures-and-business-printing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.buckeyebizhub.com/branded-apparel-and-uniforms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.buckeyebizhub.com/vehicle-wraps-and-fleet-branding</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.buckeyebizhub.com/vehicle-branding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -92,11 +82,6 @@
   </url>
   <url>
     <loc>https://www.buckeyebizhub.com/letterhead-and-envelopes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.buckeyebizhub.com/large-format-printing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

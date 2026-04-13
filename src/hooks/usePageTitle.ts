@@ -10,6 +10,7 @@ interface SEOOptions {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
+  noindex?: boolean;
 }
 
 function setMeta(name: string, content: string, attr: "name" | "property" = "name") {
@@ -66,11 +67,14 @@ export function usePageSEO(opts: SEOOptions) {
     setMeta("og:image", opts.ogImage || DEFAULT_OG_IMAGE, "property");
     setMeta("og:site_name", SITE_NAME, "property");
 
+    // Robots
+    setMeta("robots", opts.noindex ? "noindex, follow" : "index, follow");
+
     // Twitter
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", fullTitle);
     if (opts.description) setMeta("twitter:description", opts.description);
     setMeta("twitter:image", opts.ogImage || DEFAULT_OG_IMAGE);
     setMeta("twitter:site", "@BuckeyeBizHub");
-  }, [opts.title, opts.description, opts.canonical, opts.ogImage, opts.ogType]);
+  }, [opts.title, opts.description, opts.canonical, opts.ogImage, opts.ogType, opts.noindex]);
 }
