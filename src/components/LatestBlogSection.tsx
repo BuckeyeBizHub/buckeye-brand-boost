@@ -10,11 +10,11 @@ import { fetchPosts } from "@/lib/wordpress";
 const LatestBlogSection = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["wp-latest-posts"],
-    queryFn: () => fetchPosts(1, 3),
+    queryFn: () => fetchPosts(1, 4),
     staleTime: 5 * 60 * 1000,
   });
 
-  if (error) return null; // silently hide if WordPress is unreachable
+  if (error) return null;
 
   return (
     <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
@@ -31,11 +31,11 @@ const LatestBlogSection = () => {
         </motion.div>
 
         {isLoading ? (
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
               <div key={i} className="rounded-3xl border-2 border-border overflow-hidden">
-                <Skeleton className="h-52 w-full" />
-                <div className="p-7 space-y-3">
+                <Skeleton className="h-48 w-full" />
+                <div className="p-6 space-y-3">
                   <Skeleton className="h-4 w-1/3" />
                   <Skeleton className="h-6 w-full" />
                   <Skeleton className="h-4 w-full" />
@@ -45,9 +45,15 @@ const LatestBlogSection = () => {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8">
-            {data?.items.map((post) => (
-              <motion.div key={post.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {data?.items.slice(0, 4).map((post, i) => (
+              <motion.div
+                key={post.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+              >
                 <BlogCard post={post} />
               </motion.div>
             ))}
