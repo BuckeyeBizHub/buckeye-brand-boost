@@ -119,7 +119,7 @@ const SEOHead = ({
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
   const canonical = canonicalUrl || `${SITE_URL}${pathname}`;
-  const image = ogImage || DEFAULT_OG_IMAGE;
+  const image = ogImage || buildDynamicOgUrl(fullTitle, desc, ogType, article);
   const robots = noindex ? "noindex,nofollow" : "index,follow";
 
   // Normalise structured data to array
