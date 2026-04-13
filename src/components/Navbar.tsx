@@ -145,17 +145,23 @@ const Navbar = () => {
                 </div>
               </div>
             ) : link.external ? (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative text-[0.75rem] font-bold tracking-[0.12em] uppercase px-4 py-2 rounded-lg transition-all duration-300 text-primary hover:text-primary-foreground hover:bg-primary/[0.12] border border-primary/30 hover:border-primary/60"
-                title="Shop ready-made promotional products — opens in a new tab"
-              >
-                {link.label}
-                <ExternalLink className="w-3 h-3 inline-block ml-1 -mt-0.5" />
-              </a>
+              <div key={link.label} className="relative group/shop">
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative text-[0.75rem] font-bold tracking-[0.12em] uppercase px-4 py-2 rounded-lg transition-all duration-300 text-primary hover:text-primary-foreground hover:bg-primary/[0.12] border border-primary/30 hover:border-primary/60"
+                >
+                  {link.label}
+                  <ExternalLink className="w-3 h-3 inline-block ml-1 -mt-0.5" />
+                </a>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-xl border border-border/60 bg-[hsl(0,0%,6%)] p-4 shadow-xl opacity-0 scale-95 -translate-y-1 pointer-events-none group-hover/shop:opacity-100 group-hover/shop:scale-100 group-hover/shop:translate-y-0 group-hover/shop:pointer-events-auto transition-all duration-300 z-50">
+                  <p className="text-xs text-primary-foreground/50 leading-relaxed">
+                    <span className="font-bold text-primary-foreground/70">Please note:</span> Our Online Store is for ready-made promotional products and swag only. For custom printing, vehicle wraps, signage, branded apparel, or full concierge branding services, please{" "}
+                    <Link to="/contact" className="text-primary font-bold hover:underline">contact us</Link>.
+                  </p>
+                </div>
+              </div>
             ) : (
               <Link
                 key={link.label}

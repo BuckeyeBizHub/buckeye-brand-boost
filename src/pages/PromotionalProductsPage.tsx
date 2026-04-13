@@ -297,8 +297,8 @@ const PromotionalProductsPage = () => {
             </a>
             <div className="mt-6 bg-card border border-border/60 rounded-xl px-6 py-4 max-w-2xl mx-auto">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                <span className="font-bold text-foreground">Please note:</span> Our online store is for ready-made promotional products and giveaways only. For custom printing, vehicle wraps, signage, or full branding projects, please{" "}
-                <Link to="/contact" className="text-primary font-bold hover:underline">get a custom quote</Link>.
+                <span className="font-bold text-foreground">Please note:</span> Our Online Store is for ready-made promotional products and swag only. For custom printing, vehicle wraps, signage, branded apparel, or full concierge branding services, please{" "}
+                <Link to="/contact" className="text-primary font-bold hover:underline">contact us for a personalized quote</Link>.
               </p>
             </div>
           </motion.div>
