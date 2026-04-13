@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
@@ -9,25 +9,17 @@ interface DropdownItem {
   href: string;
 }
 
+// NavLink interface moved below DropdownItem
+
 interface NavLink {
   label: string;
   href: string;
   dropdown?: DropdownItem[];
+  external?: boolean;
 }
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  {
-    label: "About",
-    href: "/about",
-    dropdown: [
-      { label: "About Us", href: "/about" },
-      { label: "Blog", href: "/blog" },
-      { label: "Testimonials", href: "/testimonials" },
-      { label: "Portfolio", href: "/portfolio" },
-    ],
-  },
-  { label: "Industries", href: "/industries" },
   {
     label: "Services",
     href: "/services",
@@ -51,8 +43,9 @@ const navLinks: NavLink[] = [
       { label: "Local SEO & Google Ranking", href: "/local-seo" },
     ],
   },
+  { label: "Promotional Products", href: "/promotional-products" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Research", href: "/research" },
+  { label: "Shop Online", href: "http://www.buckeyebizhub.store/", external: true },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -151,6 +144,18 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
+            ) : link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative text-[0.75rem] font-bold tracking-[0.12em] uppercase px-4 py-2 rounded-lg transition-all duration-300 text-primary hover:text-primary-foreground hover:bg-primary/[0.12] border border-primary/30 hover:border-primary/60"
+                title="Shop ready-made promotional products — opens in a new tab"
+              >
+                {link.label}
+                <ExternalLink className="w-3 h-3 inline-block ml-1 -mt-0.5" />
+              </a>
             ) : (
               <Link
                 key={link.label}
@@ -216,6 +221,18 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
+            ) : link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors text-primary hover:text-ohio-red-light"
+              >
+                {link.label}
+                <ExternalLink className="w-3.5 h-3.5 inline-block ml-1.5 -mt-0.5" />
+              </a>
             ) : (
               <Link
                 key={link.label}
