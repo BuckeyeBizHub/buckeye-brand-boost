@@ -53,6 +53,39 @@ export interface SEOHeadProps {
   article?: ArticleMeta;
 }
 
+// ── Dynamic OG image URL builder ───────────────────────────
+function buildDynamicOgUrl(
+  title: string,
+  description: string,
+  type: string,
+  article?: ArticleMeta
+): string {
+  const base = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/og`;
+  const params = new URLSearchParams({ title, type });
+  if (description) params.set("description", description);
+  if (article) {
+    const authors = Array.isArray(article.authors)
+      ? article.authors
+      : [article.authors];
+    if (authors[0]?.name) params.set("author", authors[0].name);
+    if (article.publishedTime) {
+      try {
+        params.set(
+          "date",
+          new Date(article.publishedTime).toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })
+        );
+      } catch {
+        // ignore date formatting errors
+      }
+    }
+  }
+  return `${base}?${params.toString()}`;
+}
+
 // ── Helpers ────────────────────────────────────────────────
 
 /** Estimate reading time in minutes from a word count */
