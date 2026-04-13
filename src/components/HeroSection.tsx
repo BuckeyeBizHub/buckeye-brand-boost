@@ -79,7 +79,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm sm:text-base text-primary-foreground/60 mb-2 max-w-lg mx-auto lg:mx-0 leading-relaxed"
           >
-            One dedicated partner for all your branding — from business cards and vehicle wraps to apparel and signage. We handle everything so you can focus on running your business.
+            Your dedicated Ohio branding concierge — we handle every detail from premium business cards and vehicle wraps to custom apparel and signage, so you can focus on what you do best: growing your business.
           </motion.p>
 
           <motion.p
