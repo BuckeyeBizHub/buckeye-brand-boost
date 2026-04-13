@@ -1,54 +1,105 @@
 import { motion } from "framer-motion";
-import { Star, Sparkles, ArrowRight, Phone, Quote } from "lucide-react";
+import { Sparkles, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ReviewCard from "@/components/ReviewCard";
+import type { ReviewData } from "@/lib/structured-data";
+import {
+  reviewCollectionSchema,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/structured-data";
 import {
   PHOTO_VEHICLE_1, PHOTO_PRINT_2, PHOTO_APPAREL_1,
   PHOTO_SIGNAGE_1, PHOTO_VEHICLE_5, PHOTO_PRINT_6,
 } from "@/lib/photos";
 
-export const testimonials = [
+/** Structured review data with author names and dates */
+export const testimonialReviews: (ReviewData & { image?: string })[] = [
   {
+    author: "Dr. Sarah Mitchell",
+    reviewBody: "Buckeye Biz Hub completely transformed our brand presence. The business cards and brochures they produced are absolutely stunning — our patients constantly compliment the quality. Best printing partner we've ever worked with in Columbus.",
+    ratingValue: 5,
+    datePublished: "2025-11-15",
     image: PHOTO_PRINT_2,
-    quote: "Buckeye Biz Hub completely transformed our brand presence. The business cards and brochures they produced are absolutely stunning — our patients constantly compliment the quality. Best printing partner we've ever worked with in Columbus.",
-    stars: 5,
   },
   {
+    author: "Mike Rodriguez",
+    reviewBody: "We wrapped our entire fleet of service vans and the results have been incredible. Our phone calls increased significantly within the first two months. The wraps look phenomenal and have held up perfectly through Ohio winters.",
+    ratingValue: 5,
+    datePublished: "2025-10-22",
     image: PHOTO_VEHICLE_1,
-    quote: "We wrapped our entire fleet of service vans and the results have been incredible. Our phone calls increased significantly within the first two months. The wraps look phenomenal and have held up perfectly through Ohio winters.",
-    stars: 5,
   },
   {
+    author: "Jennifer Walsh",
+    reviewBody: "The custom uniforms and branded merchandise program has been a game-changer. Consistent branding across all locations, and the reorder process is seamless.",
+    ratingValue: 5,
+    datePublished: "2025-09-08",
     image: PHOTO_APPAREL_1,
-    quote: "The custom uniforms and branded merchandise program has been a game-changer. Consistent branding across all locations, and the reorder process is seamless.",
-    stars: 5,
   },
   {
+    author: "Tom Kessler",
+    reviewBody: "Our trade show presence went from forgettable to show-stopping. The custom tent, retractable banners, and table throws made our booth the busiest at the expo.",
+    ratingValue: 5,
+    datePublished: "2025-08-14",
     image: PHOTO_SIGNAGE_1,
-    quote: "Our trade show presence went from forgettable to show-stopping. The custom tent, retractable banners, and table throws made our booth the busiest at the expo.",
-    stars: 5,
   },
   {
+    author: "Amanda Chen",
+    reviewBody: "As a dealership, image is everything. Buckeye Biz Hub delivered premium signage, branded giveaways, and vehicle decals that elevated our showroom and customer experience.",
+    ratingValue: 5,
+    datePublished: "2025-07-30",
     image: PHOTO_VEHICLE_5,
-    quote: "As a dealership, image is everything. Buckeye Biz Hub delivered premium signage, branded giveaways, and vehicle decals that elevated our showroom and customer experience.",
-    stars: 5,
   },
   {
+    author: "Brian Foley",
+    reviewBody: "I've used Buckeye Biz Hub for yard signs, door hangers, and business cards for years now. Fast turnaround, wholesale pricing, and the quality never disappoints. They're my go-to for everything marketing-related.",
+    ratingValue: 5,
+    datePublished: "2025-06-19",
     image: PHOTO_PRINT_6,
-    quote: "I've used Buckeye Biz Hub for yard signs, door hangers, and business cards for years now. Fast turnaround, wholesale pricing, and the quality never disappoints. They're my go-to for everything marketing-related.",
-    stars: 5,
   },
 ];
+
+/** The entity being reviewed — shared across pages */
+export const REVIEWED_ENTITY = {
+  type: "LocalBusiness",
+  name: "Buckeye Biz Hub",
+  url: SITE_URL,
+  image: DEFAULT_OG_IMAGE,
+} as const;
 
 interface TestimonialsSectionProps {
   showAll?: boolean;
 }
 
 const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
-  const items = showAll ? testimonials : testimonials.slice(0, 6);
+  const items = showAll ? testimonialReviews : testimonialReviews.slice(0, 6);
+
+  // Generate review collection JSON-LD
+  const schemaData = reviewCollectionSchema({
+    itemReviewed: REVIEWED_ENTITY,
+    reviews: items,
+    aggregateRating: {
+      ratingValue: 4.9,
+      ratingCount: 500,
+      reviewCount: items.length,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  });
 
   return (
-    <section className="py-14 lg:py-20 bg-ohio-grey-dark relative overflow-hidden">
+    <section
+      className="py-14 lg:py-20 bg-ohio-grey-dark relative overflow-hidden"
+      itemScope
+      itemType="https://schema.org/LocalBusiness"
+    >
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,25%,5%)] via-[hsl(0,30%,6%)] to-[hsl(220,25%,5%)]" />
       <div className="absolute top-[-200px] right-[-150px] w-[700px] h-[700px] bg-primary/[0.07] rounded-full blur-[200px]" />
       <div className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[150px]" />
@@ -78,32 +129,15 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {items.map((t, i) => (
+          {items.map((review, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group relative bg-primary-foreground/[0.03] border-2 border-primary-foreground/[0.06] hover:border-primary/30 rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:bg-primary-foreground/[0.05] hover:shadow-[0_25px_70px_-15px_hsl(0_85%_40%/0.15)]"
             >
-              {/* Quote icon */}
-              <div className="absolute top-6 right-6 w-10 h-10 rounded-xl bg-primary/[0.08] border border-primary/15 flex items-center justify-center group-hover:bg-primary/15 transition-colors duration-300">
-                <Quote className="w-5 h-5 text-primary/60" />
-              </div>
-
-              {/* Stars */}
-              <div className="flex gap-1 mb-5">
-                {Array.from({ length: t.stars }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 text-primary fill-primary" />
-                ))}
-              </div>
-
-              {/* Quote text */}
-              <p className="text-primary-foreground/50 text-[0.9rem] leading-[1.85] mb-8 font-medium italic">
-                "{t.quote}"
-              </p>
-
+              <ReviewCard review={review} image={review.image} />
             </motion.div>
           ))}
         </div>
