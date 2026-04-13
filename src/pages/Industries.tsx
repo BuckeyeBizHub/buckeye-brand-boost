@@ -143,13 +143,13 @@ const industries = [
   {
     image: industryAdditional,
     title: "And Many More",
-    description: "No matter your industry, we deliver premium branding, custom printing, and promotional products tailored to your business. If you don't see your industry above, don't worry — we've got you covered.",
+    description: "We proudly partner with businesses of all kinds across Central Ohio. Whatever your industry, we'll craft the perfect branding solution — just tell us what you need.",
     bullets: [
+      "Healthcare & wellness providers",
       "Retail stores & boutiques",
-      "Law firms & professional services",
-      "Schools, colleges & education",
-      "Fitness studios & gyms",
-      "Nonprofits & community organizations",
+      "Manufacturing & industrial",
+      "Logistics & distribution",
+      "Government & non-profits",
     ],
     quote: "We weren't sure if Buckeye Biz Hub worked with our niche industry — turns out they had perfect solutions ready to go.",
     ctaLabel: "Tell Us About Your Industry",
