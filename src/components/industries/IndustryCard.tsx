@@ -11,6 +11,7 @@ interface IndustryCardProps {
     bullets: string[];
     quote: string;
     ctaLabel: string;
+    hasLearnMore?: boolean;
   };
   index: number;
 }
