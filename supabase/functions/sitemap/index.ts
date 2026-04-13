@@ -1,4 +1,7 @@
-import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.100.1/dist/module/lib/cors.js";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
 
 const DOMAIN = "https://www.buckeyebizhub.com";
 const WP_API = "https://buckeyebizhub.blog/wp-json/wp/v2";
