@@ -9,16 +9,14 @@ import MessageBubble from "@/components/research/MessageBubble";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const RESEARCH_PAGE_QUESTIONS = [
-  "What promotional products get the best ROI for small businesses?",
-  "How much do vehicle wraps cost compared to billboard advertising?",
-  "What are the most popular trade show giveaways in 2025?",
-  "How can branded apparel boost team morale and brand visibility?",
-  "What's the turnaround time for custom banners and yard signs?",
-  "What branding essentials should a new Columbus business invest in first?",
-  "What printing options work best for restaurant menus and flyers?",
-  "How do Ohio businesses use yard signs to generate leads?",
-  "What's the difference between screen printing and embroidery for uniforms?",
-  "What are the most effective local marketing strategies for Columbus startups?",
+  "What are the best promotional products for trade shows and events in Columbus in 2026?",
+  "Should I choose a full vehicle wrap, partial wrap, or spot graphics for my Ohio fleet?",
+  "What's trending in custom branded apparel and embroidery for Columbus businesses right now?",
+  "How do I pick the right business cards and stationery for my company in 2026?",
+  "What kind of signage and banners work best for local Columbus events and storefronts?",
+  "How can I create a complete branded marketing kit on a reasonable budget?",
+  "What are some creative, cost-effective branding ideas for small businesses in Central Ohio?",
+  "How fast can you deliver custom printing or vehicle wraps for an upcoming project?",
 ];
 
 const Research = () => {
