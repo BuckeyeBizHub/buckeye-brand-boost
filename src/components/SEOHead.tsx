@@ -32,6 +32,15 @@ export interface ArticleMeta {
   wordCount?: number;
 }
 
+export interface PaginationMeta {
+  /** Current page number (1-indexed) */
+  currentPage: number;
+  /** Total number of pages */
+  totalPages: number;
+  /** Base path without page param (e.g. "/blog") */
+  basePath: string;
+}
+
 export interface SEOHeadProps {
   /** Page title (site name suffix added automatically) */
   title?: string;
@@ -51,6 +60,8 @@ export interface SEOHeadProps {
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   /** Article-specific meta (only used when ogType is "article") */
   article?: ArticleMeta;
+  /** Pagination info for rel prev/next and canonical handling */
+  pagination?: PaginationMeta;
 }
 
 // ── Dynamic OG image URL builder ───────────────────────────
