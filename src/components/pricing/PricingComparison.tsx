@@ -3,55 +3,59 @@ import { CheckCircle, XCircle, AlertTriangle } from "lucide-react";
 
 const rows = [
   {
-    feature: "Quote Speed",
-    buckeye: "24 hours",
-    local: "5–7 days",
-    national: "2–3 weeks",
+    feature: "Personalized Service",
+    buckeye: "Dedicated concierge for every order",
+    others: "Self-service or generic reps",
     buckeyeGood: true,
-    localBad: false,
-    nationalBad: false,
+    othersBad: true,
   },
   {
     feature: "Pricing Transparency",
-    buckeye: "Full transparency up front – all fees known at quote, nothing ever hidden",
-    local: "Often hidden fees",
-    national: "Hidden fees & surcharges",
+    buckeye: "Every cost shown upfront — no hidden fees, ever",
+    others: "Hidden fees, setup charges, surprise surcharges",
     buckeyeGood: true,
-    localBad: true,
-    nationalBad: true,
+    othersBad: true,
   },
   {
-    feature: "Setup Fees",
-    buckeye: "Zero on most orders",
-    local: "$50–200",
-    national: "Frequent hidden fees",
+    feature: "Supplier Access",
+    buckeye: "4,300+ vetted suppliers — we shop for the best deal",
+    others: "Limited catalog or single-source markup",
     buckeyeGood: true,
-    localBad: true,
-    nationalBad: true,
+    othersBad: true,
+  },
+  {
+    feature: "Quote Speed",
+    buckeye: "Most quotes in 24 hours",
+    others: "Days or weeks to hear back",
+    buckeyeGood: true,
+    othersBad: false,
+  },
+  {
+    feature: "Design Help",
+    buckeye: "Free design assistance included",
+    others: "Extra charges for design or revisions",
+    buckeyeGood: true,
+    othersBad: true,
+  },
+  {
+    feature: "Quality Guarantee",
+    buckeye: "100% satisfaction — we make it right",
+    others: "Limited or no guarantees",
+    buckeyeGood: true,
+    othersBad: true,
   },
   {
     feature: "Local Ohio Support",
-    buckeye: "Yes – we're here when you need us",
-    local: "Varies",
-    national: "None",
+    buckeye: "Ohio-based, always available by phone or email",
+    others: "Out-of-state call centers or chatbots",
     buckeyeGood: true,
-    localBad: false,
-    nationalBad: true,
-  },
-  {
-    feature: "Materials & Quality Guarantee",
-    buckeye: "Premium guaranteed",
-    local: "Varies",
-    national: "Lower quality",
-    buckeyeGood: true,
-    localBad: false,
-    nationalBad: true,
+    othersBad: true,
   },
 ];
 
 const PricingComparison = () => (
   <section className="py-20 lg:py-28 bg-background">
-    <div className="container max-w-6xl mx-auto px-6">
+    <div className="container max-w-5xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,12 +63,11 @@ const PricingComparison = () => (
         className="text-center mb-14"
       >
         <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-4">
-          Why Ohio Businesses Choose{" "}
-          <span className="text-primary">Buckeye Pricing</span>
+          Why Clients Choose{" "}
+          <span className="text-primary">Buckeye Biz Hub</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          See how we stack up against the competition — transparency wins every
-          time.
+          When you compare us to the alternatives, the choice is clear. Here's how we stack up.
         </p>
       </motion.div>
 
@@ -75,20 +78,17 @@ const PricingComparison = () => (
         className="rounded-2xl border-2 border-primary/20 overflow-hidden shadow-xl bg-card"
       >
         <div className="overflow-x-auto">
-          <table className="w-full text-left min-w-[640px]">
+          <table className="w-full text-left min-w-[540px]">
             <thead>
               <tr>
-                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider">
+                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider w-1/4">
                   Feature
                 </th>
-                <th className="px-6 py-5 bg-primary text-primary-foreground font-black text-sm uppercase tracking-wider">
+                <th className="px-6 py-5 bg-primary text-primary-foreground font-black text-sm uppercase tracking-wider w-[37.5%]">
                   Buckeye Biz Hub
                 </th>
-                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider">
-                  Typical Local Printer
-                </th>
-                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider">
-                  Big National Chain
+                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider w-[37.5%]">
+                  Typical Alternatives
                 </th>
               </tr>
             </thead>
@@ -113,25 +113,13 @@ const PricingComparison = () => (
                   </td>
                   <td className="px-6 py-5">
                     <div className="flex items-start gap-2">
-                      {row.localBad ? (
+                      {row.othersBad ? (
                         <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
                       ) : (
                         <AlertTriangle className="w-5 h-5 text-ohio-gold flex-shrink-0 mt-0.5" />
                       )}
                       <span className="text-sm text-muted-foreground">
-                        {row.local}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5">
-                    <div className="flex items-start gap-2">
-                      {row.nationalBad ? (
-                        <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                      ) : (
-                        <AlertTriangle className="w-5 h-5 text-ohio-gold flex-shrink-0 mt-0.5" />
-                      )}
-                      <span className="text-sm text-muted-foreground">
-                        {row.national}
+                        {row.others}
                       </span>
                     </div>
                   </td>

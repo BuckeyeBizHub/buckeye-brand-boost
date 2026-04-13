@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PricingHero from "@/components/pricing/PricingHero";
 import HowWePrice from "@/components/pricing/HowWePrice";
-import PopularSolutions from "@/components/pricing/PopularSolutions";
+import CustomerExamples from "@/components/pricing/CustomerExamples";
 import PricingComparison from "@/components/pricing/PricingComparison";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import { usePageSEO } from "@/hooks/usePageTitle";
@@ -13,7 +13,7 @@ const Pricing = () => {
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Pricing",
     description:
-      "Transparent pricing for business printing, promotional products & vehicle branding in Ohio. 24-hour quotes, no hidden fees, full pricing transparency up front.",
+      "Transparent pricing with concierge service included. Best possible pricing for Ohio businesses without cutting corners on quality.",
     url: "https://www.buckeyebizhub.com/pricing",
     areaServed: { "@type": "State", name: "Ohio" },
     address: {
@@ -23,7 +23,11 @@ const Pricing = () => {
     },
   };
 
-    usePageSEO({ title: "Pricing - Transparent Quotes for Ohio Business Branding", description: "Transparent pricing for business printing, promotional products, and vehicle branding in Ohio. 24-hour quotes, no hidden fees, wholesale pricing on every order." });
+  usePageSEO({
+    title: "Transparent Pricing with Concierge Service | Buckeye Biz Hub",
+    description:
+      "Transparent pricing with concierge service included. We deliver the best possible pricing for Ohio businesses without cutting corners on quality.",
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -34,7 +38,7 @@ const Pricing = () => {
       <Navbar />
       <PricingHero />
       <HowWePrice />
-      <PopularSolutions />
+      <CustomerExamples />
       <PricingComparison />
       <PricingCTA />
       <Footer />
