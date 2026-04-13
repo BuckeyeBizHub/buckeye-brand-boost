@@ -1,34 +1,48 @@
 import { motion } from "framer-motion";
-import { Zap, TrendingDown, Eye, ShieldCheck } from "lucide-react";
+import { Search, ShieldCheck, Heart, Zap, Eye, Handshake } from "lucide-react";
 
-const cards = [
+const steps = [
   {
-    icon: Zap,
-    title: "Lightning-Fast 24-Hour Quotes",
+    icon: Heart,
+    title: "We Listen First",
     description:
-      "Send us your project details and get a complete, itemized quote within 24 hours — no waiting days or weeks.",
+      "Every project starts with understanding your goals, your budget, and what matters most to your business. No pressure — just a real conversation.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: TrendingDown,
-    title: "Volume Discounts That Actually Save You Money",
+    icon: Search,
+    title: "We Shop for the Best Value",
     description:
-      "The bigger your order, the lower your fee. Our tiered pricing rewards growth — from 25% down to just 15%.",
+      "With access to thousands of suppliers, we compare options and negotiate on your behalf to find the best quality at the lowest possible price.",
     color: "bg-ohio-forest/10 text-ohio-forest",
   },
   {
     icon: Eye,
-    title: "FULL PRICING TRANSPARENCY UP FRONT",
+    title: "Full Transparency, Always",
     description:
-      "All fees known at time of quote, nothing ever hidden. You see every cost before you commit — no surprises, ever.",
+      "You see every cost upfront — product, printing, shipping, and our service fee. No hidden charges, no surprises. What we quote is what you pay.",
     color: "bg-ohio-navy/10 text-ohio-navy",
   },
   {
-    icon: ShieldCheck,
-    title: "100% Satisfaction Guarantee",
+    icon: Zap,
+    title: "Fast Turnaround on Quotes",
     description:
-      "We stand behind every order. If it's not right, we make it right — period. Your trust is our top priority.",
+      "Most quotes are delivered within 24 hours. We respect your time and know that fast answers help you make better decisions for your business.",
     color: "bg-primary/10 text-primary",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality You Can Count On",
+    description:
+      "We never cut corners. Every product is vetted for durability, print quality, and brand consistency — because your reputation is on the line.",
+    color: "bg-ohio-forest/10 text-ohio-forest",
+  },
+  {
+    icon: Handshake,
+    title: "A True Partner, Not a Vendor",
+    description:
+      "We treat every client like a neighbor. Your success is our success — and we're here to help you grow, not just sell you a product.",
+    color: "bg-ohio-navy/10 text-ohio-navy",
   },
 ];
 
@@ -42,35 +56,34 @@ const HowWePrice = () => (
         className="text-center mb-14"
       >
         <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-4">
-          How We Price –{" "}
-          <span className="text-primary">Simple, Fair & Fast</span>
+          How Our Pricing{" "}
+          <span className="text-primary">Works</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          No gimmicks. No fine print. Just a straightforward model built for
-          Ohio businesses who want results without overpaying.
+          We believe great branding shouldn't break the bank. Here's how we keep things simple, fair, and affordable for Ohio businesses.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {cards.map((card, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {steps.map((step, i) => (
           <motion.div
-            key={card.title}
+            key={step.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-card rounded-2xl border-2 border-border p-7 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col text-center"
+            transition={{ delay: i * 0.08 }}
+            className="bg-card rounded-2xl border-2 border-border p-7 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
           >
             <div
-              className={`w-14 h-14 rounded-xl ${card.color} flex items-center justify-center mx-auto mb-5`}
+              className={`w-14 h-14 rounded-xl ${step.color} flex items-center justify-center mb-5`}
             >
-              <card.icon className="w-7 h-7" />
+              <step.icon className="w-7 h-7" />
             </div>
             <h3 className="font-display text-lg font-black text-foreground mb-3 leading-tight">
-              {card.title}
+              {step.title}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {card.description}
+              {step.description}
             </p>
           </motion.div>
         ))}
