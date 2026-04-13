@@ -102,8 +102,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <RedirectHandler />
         <Breadcrumbs />
-        <Suspense fallback={<PageLoader />}>
+        <ErrorBoundary>
           <main id="main-content">
           <Routes>
             <Route path="/" element={<Index />} />
