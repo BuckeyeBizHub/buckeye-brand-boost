@@ -1,13 +1,42 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import {
+  SITE_NAME,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/structured-data";
 
-// ── Constants ──────────────────────────────────────────────
-export const SITE_NAME = "Buckeye Biz Hub";
-export const SITE_URL = "https://www.buckeyebizhub.com";
+// Re-export everything from the structured data library
+// so existing imports from SEOHead continue to work
+export {
+  SITE_NAME,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+  organizationSchema,
+  localBusinessSchema,
+  webSiteSchema,
+  webPageSchema,
+  breadcrumbSchema,
+  breadcrumbFromPath,
+  articleBreadcrumbSchema,
+  articleSchema,
+  productSchema,
+  faqSchema,
+  howToSchema,
+  combineSchemas,
+} from "@/lib/structured-data";
+export type {
+  ArticleSchemaOpts,
+  ProductSchemaOpts,
+  FAQItem,
+  HowToOpts,
+  HowToStep,
+  PersonRef,
+} from "@/lib/structured-data";
+
+// ── SEOHead-specific constants ─────────────────────────────
 export const DEFAULT_DESCRIPTION =
   "Ohio's trusted business branding partner. Premium printing, promotional products, vehicle wraps, banners, flags, decals & more.";
-export const DEFAULT_OG_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp";
 export const TWITTER_HANDLE = "@BuckeyeBizHub";
 
 // ── Types ──────────────────────────────────────────────────
