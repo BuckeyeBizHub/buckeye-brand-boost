@@ -1,3 +1,4 @@
+import BrochuresPricing from "@/components/pricing/BrochuresPricing";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -455,6 +456,9 @@ const BrochuresAndPrinting = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Pricing Guide */}
+      <BrochuresPricing />
 
       {/* Section 7: FAQ */}
       <section className="py-20 lg:py-28 bg-muted/30">
