@@ -25,6 +25,12 @@ import {
   TreePine,
   Sun,
   Coffee,
+  Printer,
+  Megaphone,
+  Zap,
+  CreditCard,
+  FolderOpen,
+  FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -41,6 +47,7 @@ import promoAwards from "@/assets/promo-awards-recognition.jpg";
 import promoOutdoor from "@/assets/promo-outdoor.jpg";
 import promoHolidayGifts from "@/assets/promo-holiday-gifts.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
+import { PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_PRINT_6 } from "@/lib/photos";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
@@ -324,7 +331,104 @@ const PromotionalProductsPage = () => {
         </div>
       </section>
 
-      {/* Section 4: Customization Options Explained */}
+      {/* Printed Marketing Materials */}
+      <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+        <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[180px]" />
+        <div className="container relative max-w-7xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <Printer className="w-4 h-4" /> Custom Printed Materials
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              Printed Marketing Materials That{" "}
+              <span className="text-primary">Complete Your Brand</span>
+            </h2>
+            <div className="w-24 h-[4px] mx-auto mt-6 rounded-full bg-gradient-to-r from-primary via-ohio-red-glow to-ohio-red-light" />
+            <p className="text-base md:text-lg text-muted-foreground leading-[1.9] font-medium max-w-3xl mx-auto mt-6">
+              Promotional products are just one piece of the puzzle. Pair them with professional printed materials
+              to create a cohesive brand experience that leaves a lasting impression at every touchpoint.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Megaphone,
+                title: "Custom Banners & Retractable Displays",
+                image: PHOTO_SIGNAGE_1,
+                description: "Command attention at trade shows, storefronts, and events with vibrant full-color banners. From lightweight retractable pull-ups to large-format vinyl, we print eye-catching displays that travel easy and set up in seconds.",
+                link: "/banners-and-flags",
+                linkLabel: "Explore Banners & Flags",
+              },
+              {
+                icon: Zap,
+                title: "Yard Signs & Outdoor Signage",
+                image: PHOTO_SIGNAGE_3,
+                description: "Weather-tough corrugated yard signs, A-frames, and custom outdoor signage built for Ohio's seasons. Perfect for grand openings, real estate, political campaigns, and jobsite branding that gets noticed from the street.",
+                link: "/yard-signs-and-signage",
+                linkLabel: "Explore Yard Signs",
+              },
+              {
+                icon: CreditCard,
+                title: "Business Cards & Stationery",
+                image: PHOTO_PRINT_1,
+                description: "First impressions start in the hand. Choose from premium stocks, foil stamping, spot UV, and soft-touch finishes that make your card the one they keep. We match every detail to your brand's personality.",
+                link: "/business-cards",
+                linkLabel: "Explore Business Cards",
+              },
+              {
+                icon: FolderOpen,
+                title: "Presentation Folders & Marketing Kits",
+                image: PHOTO_PRINT_3,
+                description: "Elevate proposals and client meetings with custom presentation folders, inserts, and branded marketing kits. Sturdy stocks, custom pockets, and foil options that tell prospects you mean business.",
+                link: "/presentation-folders",
+                linkLabel: "Explore Presentation Folders",
+              },
+              {
+                icon: FileText,
+                title: "Brochures, Flyers & Printed Collateral",
+                image: PHOTO_PRINT_6,
+                description: "From tri-folds and sell sheets to full catalogs and booklets, we handle every piece of printed collateral your business needs. High-quality stocks, vivid color, and fast Ohio turnarounds.",
+                link: "/brochures-and-printing",
+                linkLabel: "Explore Brochures & Printing",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.15)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+                  <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-[0_4px_20px_hsl(0_80%_42%/0.4)]">
+                    <item.icon className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                </div>
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-6 flex-1">
+                    {item.description}
+                  </p>
+                  <Link to={item.link}>
+                    <Button variant="outline" className="w-full font-bold text-sm py-5 rounded-xl border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/btn">
+                      {item.linkLabel}
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
