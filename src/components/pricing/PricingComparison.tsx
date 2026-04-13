@@ -1,55 +1,36 @@
 import { motion } from "framer-motion";
-import { CheckCircle, XCircle, AlertTriangle } from "lucide-react";
+import { ShieldCheck, Users, DollarSign, Phone, Palette, MapPin } from "lucide-react";
 
-const rows = [
+const reasons = [
   {
-    feature: "Personalized Service",
-    buckeye: "Dedicated concierge for every order",
-    others: "Self-service or generic reps",
-    buckeyeGood: true,
-    othersBad: true,
+    icon: Users,
+    title: "A Real Person, Not a Website",
+    text: "When you work with us, you get a dedicated concierge who knows your business, your brand, and your goals — not a faceless checkout page.",
   },
   {
-    feature: "Pricing Transparency",
-    buckeye: "Every cost shown upfront — no hidden fees, ever",
-    others: "Hidden fees, setup charges, surprise surcharges",
-    buckeyeGood: true,
-    othersBad: true,
+    icon: DollarSign,
+    title: "We Shop 4,300+ Suppliers for You",
+    text: "Big online printers mark up a single supplier's prices. We compare across thousands of vendors to find the best quality at the lowest cost — and pass those savings to you.",
   },
   {
-    feature: "Supplier Access",
-    buckeye: "4,300+ vetted suppliers — we shop for the best deal",
-    others: "Limited catalog or single-source markup",
-    buckeyeGood: true,
-    othersBad: true,
+    icon: ShieldCheck,
+    title: "Transparent Pricing, Always",
+    text: "No hidden setup fees, no surprise shipping charges, no bait-and-switch. You see every cost upfront before you approve anything.",
   },
   {
-    feature: "Quote Speed",
-    buckeye: "Most quotes in 24 hours",
-    others: "Days or weeks to hear back",
-    buckeyeGood: true,
-    othersBad: false,
+    icon: Palette,
+    title: "Free Design Assistance",
+    text: "Need help with your artwork? We include design support at no extra charge — something most online printers charge $50–$150+ for.",
   },
   {
-    feature: "Design Help",
-    buckeye: "Free design assistance included",
-    others: "Extra charges for design or revisions",
-    buckeyeGood: true,
-    othersBad: true,
+    icon: Phone,
+    title: "Fast, Personal Communication",
+    text: "Questions? Pick up the phone or send an email. You'll hear back from a real person — usually the same day. No ticket queues, no chatbots.",
   },
   {
-    feature: "Quality Guarantee",
-    buckeye: "100% satisfaction — we make it right",
-    others: "Limited or no guarantees",
-    buckeyeGood: true,
-    othersBad: true,
-  },
-  {
-    feature: "Local Ohio Support",
-    buckeye: "Ohio-based, always available by phone or email",
-    others: "Out-of-state call centers or chatbots",
-    buckeyeGood: true,
-    othersBad: true,
+    icon: MapPin,
+    title: "Local & Invested in Your Success",
+    text: "We're Ohio-based and care about the businesses in our community. Your success is our success — and we treat every order like it matters, because it does.",
   },
 ];
 
@@ -60,75 +41,45 @@ const PricingComparison = () => (
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-6"
       >
         <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-4">
-          Why Clients Choose{" "}
-          <span className="text-primary">Buckeye Biz Hub</span>
+          Why Choose Us Over{" "}
+          <span className="text-primary">Big Online Printers?</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          When you compare us to the alternatives, the choice is clear. Here's how we stack up.
-        </p>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="rounded-2xl border-2 border-primary/20 overflow-hidden shadow-xl bg-card"
+        className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-14 leading-relaxed"
       >
-        <div className="overflow-x-auto">
-          <table className="w-full text-left min-w-[540px]">
-            <thead>
-              <tr>
-                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider w-1/4">
-                  Feature
-                </th>
-                <th className="px-6 py-5 bg-primary text-primary-foreground font-black text-sm uppercase tracking-wider w-[37.5%]">
-                  Buckeye Biz Hub
-                </th>
-                <th className="px-6 py-5 bg-foreground text-background font-black text-sm uppercase tracking-wider w-[37.5%]">
-                  Typical Alternatives
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, i) => (
-                <tr
-                  key={row.feature}
-                  className={`border-b border-border/50 ${
-                    i % 2 === 0 ? "bg-card" : "bg-secondary/30"
-                  }`}
-                >
-                  <td className="px-6 py-5 font-bold text-foreground text-sm">
-                    {row.feature}
-                  </td>
-                  <td className="px-6 py-5 bg-primary/5">
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-ohio-forest flex-shrink-0 mt-0.5" />
-                      <span className="text-sm font-semibold text-foreground">
-                        {row.buckeye}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5">
-                    <div className="flex items-start gap-2">
-                      {row.othersBad ? (
-                        <XCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                      ) : (
-                        <AlertTriangle className="w-5 h-5 text-ohio-gold flex-shrink-0 mt-0.5" />
-                      )}
-                      <span className="text-sm text-muted-foreground">
-                        {row.others}
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </motion.div>
+        Big online printers promise low prices — but they make up for it with hidden fees, slow support, and one-size-fits-all service. We take a different approach: personal attention, honest pricing, and real savings you can see.
+      </motion.p>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reasons.map((reason, i) => (
+          <motion.div
+            key={reason.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.08 }}
+            className="bg-card rounded-2xl border-2 border-border p-7 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <reason.icon className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="font-display text-lg font-black text-foreground mb-2">
+              {reason.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {reason.text}
+            </p>
+          </motion.div>
+        ))}
+      </div>
     </div>
   </section>
 );
