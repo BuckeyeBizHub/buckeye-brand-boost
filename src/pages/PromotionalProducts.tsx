@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap, Printer, FileText, CreditCard, FolderOpen, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
