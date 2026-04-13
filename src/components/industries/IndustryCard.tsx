@@ -11,6 +11,7 @@ interface IndustryCardProps {
     bullets: string[];
     quote: string;
     ctaLabel: string;
+    hasLearnMore?: boolean;
   };
   index: number;
 }
@@ -71,7 +72,14 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => (
       </div>
 
       {/* CTA */}
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col gap-3">
+        {industry.hasLearnMore && (
+          <Link to="/contact" state={{ subject: industry.title }}>
+            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/5 font-bold text-base py-5 rounded-xl transition-all duration-300">
+              Learn More
+            </Button>
+          </Link>
+        )}
         <Link to="/contact">
           <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold text-base py-6 rounded-xl shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group/btn">
             {industry.ctaLabel}
