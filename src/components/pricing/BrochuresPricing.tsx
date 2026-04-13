@@ -14,7 +14,6 @@ const rows = [
   { product: "Flyers", size: '8.5" x 11"', stock: "100 lb Gloss", prices: ["$63", "$174", "$183", "$200", "$288", "$518"] },
   { product: "Flyers", size: '8.5" x 11"', stock: "10 pt Cardstock", prices: ["$64", "$250", "$263", "$289", "$464", "$740"] },
   { product: "Flyers", size: '8.5" x 11"', stock: "14 pt Cardstock", prices: ["$68", "$292", "$310", "$348", "$504", "$949"] },
-  { product: "Tri-Fold Brochures", size: '8.5" x 11" folded', stock: "100 lb Gloss", prices: ["—", "—", "$390", "$520", "$720", "$1,050"] },
 ];
 
 const quantities = ["100", "250", "500", "1,000", "2,000", "5,000"];
