@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap, Printer, FileText, CreditCard, FolderOpen, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -291,6 +291,92 @@ const PromotionalProducts = () => {
                 </div>
                 <h3 className="font-display text-lg font-black text-foreground mb-3">{tp.title}</h3>
                 <p className="text-sm text-muted-foreground font-medium leading-relaxed">{tp.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Printed Marketing Materials */}
+      <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+        <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[180px]" />
+        <div className="container relative">
+          <motion.div {...fadeUp} className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <Printer className="w-4 h-4" /> Custom Printed Materials
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              Printed Marketing Materials That{" "}
+              <span className="text-primary">Complete Your Brand</span>
+            </h2>
+            <div className="w-24 h-[4px] mx-auto mt-6 rounded-full bg-gradient-to-r from-primary via-ohio-red-glow to-ohio-red-light" />
+            <p className="text-base md:text-lg text-muted-foreground leading-[1.9] font-medium max-w-3xl mx-auto mt-6">
+              Promotional products are just one piece of the puzzle. Pair them with professional printed materials
+              to create a cohesive brand experience that leaves a lasting impression at every touchpoint.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Megaphone,
+                title: "Custom Banners & Retractable Displays",
+                description: "Command attention at trade shows, storefronts, and events with vibrant full-color banners. From lightweight retractable pull-ups to large-format vinyl, we print eye-catching displays that travel easy and set up in seconds.",
+                link: "/banners-and-flags",
+                linkLabel: "Explore Banners & Flags",
+              },
+              {
+                icon: Zap,
+                title: "Yard Signs & Outdoor Signage",
+                description: "Weather-tough corrugated yard signs, A-frames, and custom outdoor signage built for Ohio's seasons. Perfect for grand openings, real estate, political campaigns, and jobsite branding that gets noticed from the street.",
+                link: "/yard-signs-and-signage",
+                linkLabel: "Explore Yard Signs",
+              },
+              {
+                icon: CreditCard,
+                title: "Business Cards & Stationery",
+                description: "First impressions start in the hand. Choose from premium stocks, foil stamping, spot UV, and soft-touch finishes that make your card the one they keep. We match every detail to your brand's personality.",
+                link: "/business-cards",
+                linkLabel: "Explore Business Cards",
+              },
+              {
+                icon: FolderOpen,
+                title: "Presentation Folders & Marketing Kits",
+                description: "Elevate proposals and client meetings with custom presentation folders, inserts, and branded marketing kits. Sturdy stocks, custom pockets, and foil options that tell prospects you mean business.",
+                link: "/presentation-folders",
+                linkLabel: "Explore Presentation Folders",
+              },
+              {
+                icon: FileText,
+                title: "Brochures, Flyers & Printed Collateral",
+                description: "From tri-folds and sell sheets to full catalogs and booklets, we handle every piece of printed collateral your business needs. High-quality stocks, vivid color, and fast Ohio turnarounds.",
+                link: "/brochures-and-printing",
+                linkLabel: "Explore Brochures & Printing",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 p-8 shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.12)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+              >
+                <div className="w-14 h-14 mb-5 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-6 flex-1">
+                  {item.description}
+                </p>
+                <Link to={item.link}>
+                  <Button variant="outline" className="w-full font-bold text-sm py-5 rounded-xl border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/btn">
+                    {item.linkLabel}
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </motion.div>
             ))}
           </div>
