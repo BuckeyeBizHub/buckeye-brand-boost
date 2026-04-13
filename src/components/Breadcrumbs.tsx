@@ -17,7 +17,7 @@ const routeLabels: Record<string, string> = {
   "/privacy-policy": "Privacy Policy",
   "/research": "Research Assistant",
   "/business-cards": "Business Cards & Stationery",
-  "/brochures-and-business-printing": "Brochures & Business Printing",
+  "/business-printing": "Business Printing",
   "/promotional-products": "Promotional Products & Giveaways",
   "/branded-apparel-and-uniforms": "Branded Apparel & Uniforms",
   "/yard-signs-and-signage": "Yard Signs & Custom Signage",
@@ -36,7 +36,7 @@ const routeLabels: Record<string, string> = {
 };
 
 const servicePages = [
-  "/business-cards", "/brochures-and-business-printing", "/promotional-products",
+  "/business-cards", "/business-printing", "/promotional-products",
   "/branded-apparel-and-uniforms", "/yard-signs-and-signage",
   "/vehicle-wraps-and-fleet-branding", "/full-rebrand-kits",
   "/website-design", "/local-seo", "/banners-and-flags", "/decals",

@@ -39,7 +39,7 @@ const services = [
     image: brochuresImg,
     title: "Brochures & Business Printing",
     description: "Communicate your message with clarity, impact, and professionalism. We create vibrant, high-quality brochures, flyers, menus, and printed materials that capture attention, build trust, and help your Ohio business stand out in a crowded market.",
-    href: "/brochures-and-business-printing",
+    href: "/business-printing",
   },
   {
     image: promoImg,

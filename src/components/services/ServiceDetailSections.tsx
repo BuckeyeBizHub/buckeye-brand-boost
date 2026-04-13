@@ -123,7 +123,7 @@ const sections: DetailSection[] = [
       "Whether you're handing materials to a prospect, mailing a campaign, or stocking a lobby, professionally printed brochures communicate trust and competence in ways digital can't replicate. We offer every fold, every stock, and every finish — so you get exactly the piece your brand deserves.",
     image: brochuresImg,
     imageAlt: "Tri-fold brochure samples printed on premium stock",
-    href: "/brochures-and-business-printing",
+    href: "/business-printing",
     columns: [
       {
         heading: "Fold Types & When to Use Each",
