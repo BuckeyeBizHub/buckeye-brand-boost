@@ -15,36 +15,36 @@ interface SitemapUrl {
 
 // ── Static pages ───────────────────────────────────────────
 const STATIC_PAGES: SitemapUrl[] = [
+  // ── High-value hub pages ──
   { loc: "/", changefreq: "weekly", priority: "1.0" },
   { loc: "/services", changefreq: "weekly", priority: "0.9" },
-  { loc: "/blog", changefreq: "daily", priority: "0.9" },
+  { loc: "/pricing", changefreq: "monthly", priority: "0.9" },
   { loc: "/promotional-products", changefreq: "weekly", priority: "0.9" },
+  { loc: "/business-printing", changefreq: "monthly", priority: "0.9" },
+  { loc: "/blog", changefreq: "daily", priority: "0.9" },
   { loc: "/contact", changefreq: "monthly", priority: "0.9" },
-  { loc: "/business-cards", changefreq: "monthly", priority: "0.8" },
-  // "/brochures-and-business-printing" removed – redirects to /business-printing
-  { loc: "/branded-apparel-and-uniforms", changefreq: "monthly", priority: "0.8" },
-  { loc: "/vehicle-wraps-and-fleet-branding", changefreq: "monthly", priority: "0.8" },
-  // "/vehicle-branding" removed – redirects to /vehicle-wraps-and-fleet-branding
-  { loc: "/yard-signs-and-signage", changefreq: "monthly", priority: "0.8" },
-  { loc: "/banners-and-flags", changefreq: "monthly", priority: "0.8" },
-  { loc: "/decals", changefreq: "monthly", priority: "0.8" },
-  { loc: "/full-rebrand-kits", changefreq: "monthly", priority: "0.8" },
-  { loc: "/postcards", changefreq: "monthly", priority: "0.8" },
-  { loc: "/catalogs-and-booklets", changefreq: "monthly", priority: "0.8" },
-  { loc: "/presentation-folders", changefreq: "monthly", priority: "0.8" },
-  { loc: "/menus-and-table-tents", changefreq: "monthly", priority: "0.8" },
-  { loc: "/letterhead-and-envelopes", changefreq: "monthly", priority: "0.8" },
-  // "/large-format-printing" removed – redirects to /banners-and-flags
-  { loc: "/website-design", changefreq: "monthly", priority: "0.8" },
-  { loc: "/local-seo", changefreq: "monthly", priority: "0.8" },
-  { loc: "/business-printing", changefreq: "monthly", priority: "0.8" },
-  { loc: "/about", changefreq: "monthly", priority: "0.7" },
-  { loc: "/industries", changefreq: "monthly", priority: "0.7" },
-  { loc: "/pricing", changefreq: "monthly", priority: "0.7" },
-  { loc: "/portfolio", changefreq: "monthly", priority: "0.7" },
+  { loc: "/door-hangers", changefreq: "monthly", priority: "0.85" },
+  { loc: "/yard-signs-and-signage", changefreq: "monthly", priority: "0.85" },
+  { loc: "/vehicle-wraps-and-fleet-branding", changefreq: "monthly", priority: "0.85" },
+  { loc: "/research", changefreq: "monthly", priority: "0.8" },
+  // ── Deeper service pages ──
+  { loc: "/business-cards", changefreq: "monthly", priority: "0.6" },
+  { loc: "/branded-apparel-and-uniforms", changefreq: "monthly", priority: "0.6" },
+  { loc: "/banners-and-flags", changefreq: "monthly", priority: "0.6" },
+  { loc: "/decals", changefreq: "monthly", priority: "0.6" },
+  { loc: "/full-rebrand-kits", changefreq: "monthly", priority: "0.6" },
+  { loc: "/postcards", changefreq: "monthly", priority: "0.6" },
+  { loc: "/catalogs-and-booklets", changefreq: "monthly", priority: "0.6" },
+  { loc: "/presentation-folders", changefreq: "monthly", priority: "0.6" },
+  { loc: "/menus-and-table-tents", changefreq: "monthly", priority: "0.6" },
+  { loc: "/letterhead-and-envelopes", changefreq: "monthly", priority: "0.6" },
+  { loc: "/website-design", changefreq: "monthly", priority: "0.6" },
+  { loc: "/local-seo", changefreq: "monthly", priority: "0.6" },
+  { loc: "/about", changefreq: "monthly", priority: "0.6" },
+  { loc: "/industries", changefreq: "monthly", priority: "0.6" },
+  { loc: "/portfolio", changefreq: "monthly", priority: "0.6" },
   { loc: "/testimonials", changefreq: "monthly", priority: "0.6" },
   { loc: "/faq", changefreq: "monthly", priority: "0.6" },
-  { loc: "/research", changefreq: "monthly", priority: "0.6" },
   { loc: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
 ];
 
@@ -69,7 +69,7 @@ async function fetchAllBlogSlugs(): Promise<SitemapUrl[]> {
           loc: `/blog/${p.slug}`,
           lastmod: p.modified.split("T")[0],
           changefreq: "weekly",
-          priority: "0.7",
+          priority: "0.6",
         });
       }
 
