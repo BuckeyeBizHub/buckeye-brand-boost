@@ -438,6 +438,9 @@ const PromotionalProductsPage = () => {
         </div>
       </section>
 
+      {/* Deep-dive educational sections for each promo product type */}
+      <PromoProductDeepDives />
+
       {/* Printed Marketing Materials */}
       <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
         <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[180px]" />
