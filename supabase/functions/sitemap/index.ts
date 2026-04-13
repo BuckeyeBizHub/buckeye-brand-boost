@@ -21,10 +21,10 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: "/promotional-products", changefreq: "weekly", priority: "0.9" },
   { loc: "/contact", changefreq: "monthly", priority: "0.9" },
   { loc: "/business-cards", changefreq: "monthly", priority: "0.8" },
-  { loc: "/brochures-and-business-printing", changefreq: "monthly", priority: "0.8" },
+  // "/brochures-and-business-printing" removed – redirects to /business-printing
   { loc: "/branded-apparel-and-uniforms", changefreq: "monthly", priority: "0.8" },
   { loc: "/vehicle-wraps-and-fleet-branding", changefreq: "monthly", priority: "0.8" },
-  { loc: "/vehicle-branding", changefreq: "monthly", priority: "0.8" },
+  // "/vehicle-branding" removed – redirects to /vehicle-wraps-and-fleet-branding
   { loc: "/yard-signs-and-signage", changefreq: "monthly", priority: "0.8" },
   { loc: "/banners-and-flags", changefreq: "monthly", priority: "0.8" },
   { loc: "/decals", changefreq: "monthly", priority: "0.8" },
@@ -34,7 +34,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: "/presentation-folders", changefreq: "monthly", priority: "0.8" },
   { loc: "/menus-and-table-tents", changefreq: "monthly", priority: "0.8" },
   { loc: "/letterhead-and-envelopes", changefreq: "monthly", priority: "0.8" },
-  { loc: "/large-format-printing", changefreq: "monthly", priority: "0.8" },
+  // "/large-format-printing" removed – redirects to /banners-and-flags
   { loc: "/website-design", changefreq: "monthly", priority: "0.8" },
   { loc: "/local-seo", changefreq: "monthly", priority: "0.8" },
   { loc: "/business-printing", changefreq: "monthly", priority: "0.8" },
