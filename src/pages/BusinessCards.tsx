@@ -1,3 +1,4 @@
+import BusinessCardsPricing from "@/components/pricing/BusinessCardsPricing";
 import { motion } from "framer-motion";
 import {
   ArrowRight, Phone, Sparkles, ShieldCheck, BadgeCheck, ThumbsUp,
@@ -283,6 +284,9 @@ const BusinessCards = () => {
           </motion.blockquote>
         </div>
       </section>
+
+      {/* ═══ PRICING GUIDE ═══ */}
+      <BusinessCardsPricing />
 
       {/* ═══ FAQ ═══ */}
       <section className="py-24 lg:py-32 bg-muted/30">
