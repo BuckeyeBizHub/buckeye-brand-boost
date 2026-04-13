@@ -6,6 +6,7 @@ import ServicesHero from "@/components/services/ServicesHero";
 import ServiceCard from "@/components/services/ServiceCard";
 import ServicesCTA from "@/components/services/ServicesCTA";
 import ServicesTrustBar from "@/components/services/ServicesTrustBar";
+import ServiceDetailSections from "@/components/services/ServiceDetailSections";
 import FounderQuote from "@/components/services/FounderQuote";
 
 import businessCardsImg from "@/assets/business-cards-product.jpg";
