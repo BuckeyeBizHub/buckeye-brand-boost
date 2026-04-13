@@ -47,6 +47,7 @@ import promoAwards from "@/assets/promo-awards-recognition.jpg";
 import promoOutdoor from "@/assets/promo-outdoor.jpg";
 import promoHolidayGifts from "@/assets/promo-holiday-gifts.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
+import { PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_PRINT_6 } from "@/lib/photos";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
