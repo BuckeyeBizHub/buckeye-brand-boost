@@ -1,3 +1,6 @@
+import React from "https://esm.sh/react@18.2.0";
+import { ImageResponse } from "https://deno.land/x/og_edge@0.0.6/mod.ts";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -7,124 +10,24 @@ const corsHeaders = {
 const DEFAULT_OG_IMAGE =
   "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp";
 
-const WIDTH = 1200;
-const HEIGHT = 630;
-
-// ── Cached state (persists across warm invocations) ────────
-let ready = false;
-let satoriFn: (
-  element: Record<string, unknown>,
-  opts: Record<string, unknown>
-) => Promise<string>;
-let ResvgClass: new (
-  svg: string,
-  opts: Record<string, unknown>
-) => { render: () => { asPng: () => Uint8Array } };
-let fontRegular: ArrayBuffer;
-let fontBold: ArrayBuffer;
-
-async function ensureInit() {
-  if (ready) return;
-
-  const [smod, yogaMod, rmod, fontRegData, fontBoldData] = await Promise.all([
-    import("https://esm.sh/satori@0.10.14"),
-    import("https://esm.sh/yoga-wasm-web@0.3.3"),
-    import("https://deno.land/x/resvg_wasm@0.2.0/mod.ts"),
-    fetch(
-      "https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf"
-    ).then((r) => r.arrayBuffer()),
-    fetch(
-      "https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.ttf"
-    ).then((r) => r.arrayBuffer()),
-  ]);
-
-  // Yoga WASM for satori layout engine
-  const yogaWasm = await fetch(
-    "https://unpkg.com/yoga-wasm-web@0.3.3/dist/yoga.wasm"
-  ).then((r) => r.arrayBuffer());
-  const yoga = await yogaMod.default(yogaWasm);
-  smod.init(yoga);
-
-  // Resvg WASM for SVG → PNG
-  await rmod.initWasm();
-
-  satoriFn = smod.default;
-  ResvgClass = rmod.Resvg;
-  fontRegular = fontRegData;
-  fontBold = fontBoldData;
-  ready = true;
-}
-
 // ── Helpers ────────────────────────────────────────────────
 function truncate(s: string, max: number): string {
   return s.length > max ? s.slice(0, max - 1) + "…" : s;
 }
 
+function e(
+  tag: string,
+  props: Record<string, unknown> | null,
+  ...children: unknown[]
+) {
+  return React.createElement(tag, props, ...children);
+}
+
 // ── Templates ──────────────────────────────────────────────
-
 function defaultTemplate(title: string, desc: string) {
-  return wrapper([
-    titleBlock(title),
-    desc ? descBlock(desc) : null,
-  ]);
-}
-
-function articleTemplate(title: string, desc: string, author?: string, date?: string) {
-  const badges: unknown[] = [];
-  badges.push(badge("BLOG", "#c0392b", "#fff"));
-  if (date) badges.push(badge(date, "#222", "#999"));
-
-  return wrapper([
-    // Badge row
+  return e(
+    "div",
     {
-      type: "div",
-      props: {
-        style: { display: "flex", gap: 12, marginBottom: 20 },
-        children: badges,
-      },
-    },
-    titleBlock(title),
-    desc ? descBlock(desc) : null,
-    author
-      ? {
-          type: "div",
-          props: {
-            style: { fontSize: 20, color: "#aaa", marginTop: 16 },
-            children: `By ${author}`,
-          },
-        }
-      : null,
-  ]);
-}
-
-function productTemplate(title: string, desc: string, price?: string) {
-  return wrapper([
-    badge("PRODUCT", "#1a6b3c", "#fff"),
-    titleBlock(title),
-    desc ? descBlock(desc) : null,
-    price
-      ? {
-          type: "div",
-          props: {
-            style: {
-              fontSize: 36,
-              fontWeight: 700,
-              color: "#c0392b",
-              marginTop: 16,
-            },
-            children: price,
-          },
-        }
-      : null,
-  ]);
-}
-
-// ── Shared blocks ──────────────────────────────────────────
-
-function wrapper(contentChildren: (unknown | null)[]) {
-  return {
-    type: "div",
-    props: {
       style: {
         display: "flex",
         flexDirection: "column",
@@ -133,136 +36,276 @@ function wrapper(contentChildren: (unknown | null)[]) {
         backgroundColor: "#0d0d0d",
         padding: "60px 80px",
         justifyContent: "space-between",
-        fontFamily: "Inter",
+        fontFamily: "sans-serif",
       },
-      children: [
-        // Red accent bar at top
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              width: 80,
-              height: 6,
-              backgroundColor: "#c0392b",
-              borderRadius: 3,
-              marginBottom: 12,
-            },
-            children: [],
-          },
-        },
-        // Content area
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              flex: 1,
-            },
-            children: contentChildren.filter(Boolean),
-          },
-        },
-        // Footer
-        {
-          type: "div",
-          props: {
-            style: {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              borderTop: "2px solid #222",
-              paddingTop: 24,
-            },
-            children: [
-              {
-                type: "div",
-                props: {
-                  style: {
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 12,
-                  },
-                  children: [
-                    // Red dot logo mark
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          display: "flex",
-                          width: 14,
-                          height: 14,
-                          borderRadius: 7,
-                          backgroundColor: "#c0392b",
-                        },
-                        children: [],
-                      },
-                    },
-                    {
-                      type: "div",
-                      props: {
-                        style: {
-                          fontSize: 22,
-                          fontWeight: 700,
-                          color: "#c0392b",
-                          letterSpacing: 1,
-                        },
-                        children: "BUCKEYE BIZ HUB",
-                      },
-                    },
-                  ],
-                },
-              },
-              {
-                type: "div",
-                props: {
-                  style: { fontSize: 18, color: "#666" },
-                  children: "buckeyebizhub.com",
-                },
-              },
-            ],
-          },
-        },
-      ],
     },
-  };
+    // Red accent bar
+    e("div", {
+      style: {
+        width: 80,
+        height: 6,
+        backgroundColor: "#c0392b",
+        borderRadius: 3,
+      },
+    }),
+    // Content
+    e(
+      "div",
+      {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          flex: 1,
+          marginTop: 20,
+        },
+      },
+      e(
+        "div",
+        {
+          style: {
+            fontSize: title.length > 50 ? 40 : title.length > 30 ? 48 : 56,
+            fontWeight: 700,
+            color: "#ffffff",
+            lineHeight: 1.2,
+          },
+        },
+        title
+      ),
+      desc
+        ? e(
+            "div",
+            {
+              style: {
+                fontSize: 24,
+                color: "#999999",
+                marginTop: 20,
+                lineHeight: 1.4,
+              },
+            },
+            desc
+          )
+        : null
+    ),
+    // Footer
+    footer()
+  );
 }
 
-function titleBlock(title: string) {
-  return {
-    type: "div",
-    props: {
+function articleTemplate(
+  title: string,
+  desc: string,
+  author?: string,
+  date?: string
+) {
+  return e(
+    "div",
+    {
       style: {
-        fontSize: title.length > 50 ? 40 : title.length > 30 ? 48 : 56,
-        fontWeight: 700,
-        color: "#ffffff",
-        lineHeight: 1.2,
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#0d0d0d",
+        padding: "60px 80px",
+        justifyContent: "space-between",
+        fontFamily: "sans-serif",
       },
-      children: title,
     },
-  };
+    // Badge row
+    e(
+      "div",
+      { style: { display: "flex", gap: 12 } },
+      badge("BLOG", "#c0392b", "#fff"),
+      date ? badge(date, "#222222", "#999999") : null
+    ),
+    // Content
+    e(
+      "div",
+      {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          flex: 1,
+          marginTop: 20,
+        },
+      },
+      e(
+        "div",
+        {
+          style: {
+            fontSize: title.length > 50 ? 38 : title.length > 30 ? 46 : 52,
+            fontWeight: 700,
+            color: "#ffffff",
+            lineHeight: 1.2,
+          },
+        },
+        title
+      ),
+      desc
+        ? e(
+            "div",
+            {
+              style: {
+                fontSize: 22,
+                color: "#999999",
+                marginTop: 16,
+                lineHeight: 1.4,
+              },
+            },
+            desc
+          )
+        : null,
+      author
+        ? e(
+            "div",
+            {
+              style: {
+                fontSize: 20,
+                color: "#aaaaaa",
+                marginTop: 16,
+              },
+            },
+            `By ${author}`
+          )
+        : null
+    ),
+    footer()
+  );
 }
 
-function descBlock(desc: string) {
-  return {
-    type: "div",
-    props: {
+function productTemplate(
+  title: string,
+  desc: string,
+  price?: string
+) {
+  return e(
+    "div",
+    {
       style: {
-        fontSize: 24,
-        color: "#999",
-        marginTop: 20,
-        lineHeight: 1.4,
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#0d0d0d",
+        padding: "60px 80px",
+        justifyContent: "space-between",
+        fontFamily: "sans-serif",
       },
-      children: desc,
     },
-  };
+    badge("PRODUCT", "#1a6b3c", "#ffffff"),
+    e(
+      "div",
+      {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          flex: 1,
+          marginTop: 20,
+        },
+      },
+      e(
+        "div",
+        {
+          style: {
+            fontSize: title.length > 50 ? 40 : 52,
+            fontWeight: 700,
+            color: "#ffffff",
+            lineHeight: 1.2,
+          },
+        },
+        title
+      ),
+      desc
+        ? e(
+            "div",
+            {
+              style: {
+                fontSize: 22,
+                color: "#999999",
+                marginTop: 16,
+                lineHeight: 1.4,
+              },
+            },
+            desc
+          )
+        : null,
+      price
+        ? e(
+            "div",
+            {
+              style: {
+                fontSize: 36,
+                fontWeight: 700,
+                color: "#c0392b",
+                marginTop: 16,
+              },
+            },
+            price
+          )
+        : null
+    ),
+    footer()
+  );
+}
+
+// ── Shared blocks ──────────────────────────────────────────
+function footer() {
+  return e(
+    "div",
+    {
+      style: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        borderTop: "2px solid #222222",
+        paddingTop: 24,
+      },
+    },
+    e(
+      "div",
+      {
+        style: {
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+        },
+      },
+      e("div", {
+        style: {
+          width: 14,
+          height: 14,
+          borderRadius: 7,
+          backgroundColor: "#c0392b",
+        },
+      }),
+      e(
+        "div",
+        {
+          style: {
+            fontSize: 22,
+            fontWeight: 700,
+            color: "#c0392b",
+            letterSpacing: 1,
+          },
+        },
+        "BUCKEYE BIZ HUB"
+      )
+    ),
+    e(
+      "div",
+      { style: { fontSize: 18, color: "#666666" } },
+      "buckeyebizhub.com"
+    )
+  );
 }
 
 function badge(text: string, bg: string, fg: string) {
-  return {
-    type: "div",
-    props: {
+  return e(
+    "div",
+    {
       style: {
         display: "flex",
         fontSize: 14,
@@ -273,20 +316,18 @@ function badge(text: string, bg: string, fg: string) {
         borderRadius: 20,
         letterSpacing: 2,
       },
-      children: text,
     },
-  };
+    text
+  );
 }
 
-// ── Request handler ────────────────────────────────────────
+// ── Handler ────────────────────────────────────────────────
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
 
   try {
-    await ensureInit();
-
     const url = new URL(req.url);
     const rawTitle = url.searchParams.get("title") || "Buckeye Biz Hub";
     const rawDesc = url.searchParams.get("description") || "";
@@ -298,8 +339,7 @@ Deno.serve(async (req) => {
     const title = truncate(rawTitle, 80);
     const description = truncate(rawDesc, 140);
 
-    // Pick template
-    let element: Record<string, unknown>;
+    let element;
     switch (type) {
       case "article":
         element = articleTemplate(title, description, author, date);
@@ -311,32 +351,23 @@ Deno.serve(async (req) => {
         element = defaultTemplate(title, description);
     }
 
-    // Generate SVG via satori
-    const svg = await satoriFn(element, {
-      width: WIDTH,
-      height: HEIGHT,
-      fonts: [
-        { name: "Inter", data: fontRegular, weight: 400, style: "normal" },
-        { name: "Inter", data: fontBold, weight: 700, style: "normal" },
-      ],
+    const response = new ImageResponse(element, {
+      width: 1200,
+      height: 630,
     });
 
-    // Convert SVG → PNG via resvg
-    const resvg = new ResvgClass(svg, {
-      fitTo: { mode: "width", value: WIDTH },
-    });
-    const pngBytes = resvg.render().asPng();
-
-    return new Response(pngBytes, {
+    // Copy the response and add cache + CORS headers
+    const pngBuffer = await response.arrayBuffer();
+    return new Response(pngBuffer, {
       headers: {
         ...corsHeaders,
         "Content-Type": "image/png",
-        "Cache-Control": "public, max-age=604800, s-maxage=2592000, immutable",
+        "Cache-Control":
+          "public, max-age=604800, s-maxage=2592000, immutable",
       },
     });
   } catch (err) {
     console.error("OG image generation failed:", err);
-    // Fallback: redirect to static OG image
     return new Response(null, {
       status: 302,
       headers: { ...corsHeaders, Location: DEFAULT_OG_IMAGE },
