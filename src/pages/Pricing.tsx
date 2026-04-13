@@ -4,7 +4,6 @@ import PricingHero from "@/components/pricing/PricingHero";
 import HowWePrice from "@/components/pricing/HowWePrice";
 import CustomerExamples from "@/components/pricing/CustomerExamples";
 import PricingComparison from "@/components/pricing/PricingComparison";
-import BusinessCardsPricing from "@/components/pricing/BusinessCardsPricing";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
@@ -40,7 +39,6 @@ const Pricing = () => {
       <PricingHero />
       <HowWePrice />
       <CustomerExamples />
-      <BusinessCardsPricing />
       <PricingComparison />
       <PricingCTA />
       <Footer />
