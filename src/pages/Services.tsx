@@ -176,6 +176,7 @@ const Services = () => {
         </div>
       </section>
 
+      <ServiceDetailSections />
       <RelatedBlogPosts heading="Branding Tips from Our Blog" searchTerm="branding printing" />
       <ServicesCTA />
       <ServicesTrustBar />
