@@ -25,6 +25,12 @@ import {
   TreePine,
   Sun,
   Coffee,
+  Printer,
+  Megaphone,
+  Zap,
+  CreditCard,
+  FolderOpen,
+  FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
