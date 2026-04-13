@@ -2,14 +2,13 @@ import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, ArrowRight, Calendar, User, Phone } from "lucide-react";
 import { format } from "date-fns";
-import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { usePageSEO } from "@/hooks/usePageTitle";
-import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor, WPPost } from "@/lib/wordpress";
+import SEOHead, { articleSchema, SITE_URL } from "@/components/SEOHead";
+import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor } from "@/lib/wordpress";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,18 +28,12 @@ const BlogPost = () => {
   const title = post ? post.title.rendered.replace(/<[^>]*>/g, "") : "Loading…";
   const excerpt = post ? post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 155) : undefined;
   const ogImage = post ? (getFeaturedImage(post) || undefined) : undefined;
-
-  usePageSEO({
-    title,
-    description: excerpt,
-    canonical: post ? `https://www.buckeyebizhub.com/blog/${post.slug}` : undefined,
-    ogImage,
-    ogType: "article",
-  });
+  const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : undefined;
 
   if (isLoading) {
     return (
       <div className="min-h-screen">
+        <SEOHead title="Loading…" />
         <Navbar />
         <div className="pt-32 pb-20 container max-w-4xl">
           <Skeleton className="h-10 w-3/4 mb-6" />
@@ -57,6 +50,7 @@ const BlogPost = () => {
   if (error || !post) {
     return (
       <div className="min-h-screen">
+        <SEOHead title="Post Not Found" noindex />
         <Navbar />
         <div className="pt-40 pb-20 container text-center">
           <h1 className="text-4xl font-black text-foreground mb-4">Post Not Found</h1>
@@ -73,22 +67,24 @@ const BlogPost = () => {
   const author = getAuthor(post);
   const date = format(new Date(post.date), "MMMM d, yyyy");
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    ...(image && { image }),
-    datePublished: post.date,
-    dateModified: post.modified,
-    author: { "@type": "Person", name: author?.name || "David Stein" },
-    publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
-    url: `https://www.buckeyebizhub.com/blog/${post.slug}`,
-    description: excerpt,
-  };
-
   return (
     <div className="min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <SEOHead
+        title={title}
+        description={excerpt}
+        canonicalUrl={postUrl}
+        ogImage={ogImage}
+        ogType="article"
+        structuredData={articleSchema({
+          headline: title,
+          description: excerpt,
+          image: ogImage,
+          datePublished: post.date,
+          dateModified: post.modified,
+          authorName: author?.name || "David Stein",
+          url: postUrl!,
+        })}
+      />
       <Navbar />
 
       {/* Hero */}
@@ -122,7 +118,7 @@ const BlogPost = () => {
         <div className="container max-w-3xl">
           {image && (
             <img
-              src={image} alt={post.title.rendered.replace(/<[^>]*>/g, "")}
+              src={image} alt={title}
               className="w-full rounded-2xl mb-12 shadow-lg"
               loading="eager"
               fetchPriority="high"
@@ -149,8 +145,8 @@ const BlogPost = () => {
               {[
                 { to: "/promotional-products", label: "Promotional Products" },
                 { to: "/business-cards", label: "Business Cards" },
-                { to: "/vehicle-wraps-and-fleet", label: "Vehicle Wraps" },
-                { to: "/branded-apparel", label: "Branded Apparel" },
+                { to: "/vehicle-wraps-and-fleet-branding", label: "Vehicle Wraps" },
+                { to: "/branded-apparel-and-uniforms", label: "Branded Apparel" },
                 { to: "/banners-and-flags", label: "Banners & Flags" },
                 { to: "/yard-signs-and-signage", label: "Signage" },
               ].map((s) => (
