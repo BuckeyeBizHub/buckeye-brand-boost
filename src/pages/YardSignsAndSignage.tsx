@@ -1,3 +1,4 @@
+import YardSignsPricing from "@/components/pricing/YardSignsPricing";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -313,6 +314,9 @@ const YardSignsAndSignage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Pricing Guide */}
+      <YardSignsPricing />
 
       {/* Section 6: Yard Signs & Signage FAQ */}
       <section className="py-20 lg:py-28 bg-background">
