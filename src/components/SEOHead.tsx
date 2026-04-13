@@ -32,6 +32,15 @@ export interface ArticleMeta {
   wordCount?: number;
 }
 
+export interface PaginationMeta {
+  /** Current page number (1-indexed) */
+  currentPage: number;
+  /** Total number of pages */
+  totalPages: number;
+  /** Base path without page param (e.g. "/blog") */
+  basePath: string;
+}
+
 export interface SEOHeadProps {
   /** Page title (site name suffix added automatically) */
   title?: string;
@@ -51,6 +60,81 @@ export interface SEOHeadProps {
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   /** Article-specific meta (only used when ogType is "article") */
   article?: ArticleMeta;
+  /** Pagination info for rel prev/next and canonical handling */
+  pagination?: PaginationMeta;
+}
+
+// ── Canonical URL utility ──────────────────────────────────
+
+/** Query params that should always be stripped from canonical URLs */
+const TRACKING_PARAMS = [
+  "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+  "ref", "fbclid", "gclid", "gclsrc", "dclid", "msclkid",
+  "mc_cid", "mc_eid", "yclid", "twclid", "ttclid",
+];
+
+/**
+ * Build a normalised canonical URL.
+ * - Always https, always www.buckeyebizhub.com
+ * - Lowercase path, no trailing slash (except root "/")
+ * - Strips tracking / analytics query params
+ * - For paginated content: page 1 → base URL, page 2+ → ?page=N
+ */
+export function getCanonicalUrl(
+  path: string,
+  params?: Record<string, string>,
+  pagination?: PaginationMeta,
+): string {
+  // Normalise path: lowercase, no trailing slash (except root)
+  let normalised = path.toLowerCase().replace(/\/+$/, "") || "/";
+
+  // Build canonical from pagination if provided
+  if (pagination) {
+    normalised = pagination.basePath.toLowerCase().replace(/\/+$/, "") || "/";
+    if (pagination.currentPage > 1) {
+      return `${SITE_URL}${normalised}?page=${pagination.currentPage}`;
+    }
+    return `${SITE_URL}${normalised}`;
+  }
+
+  // If extra params provided, filter out tracking params and build query string
+  if (params && Object.keys(params).length > 0) {
+    const clean = new URLSearchParams();
+    for (const [key, val] of Object.entries(params)) {
+      if (!TRACKING_PARAMS.includes(key.toLowerCase())) {
+        clean.set(key, val);
+      }
+    }
+    const qs = clean.toString();
+    return qs ? `${SITE_URL}${normalised}?${qs}` : `${SITE_URL}${normalised}`;
+  }
+
+  return `${SITE_URL}${normalised}`;
+}
+
+/**
+ * Build rel="prev" / rel="next" URLs for paginated content.
+ * Returns { prev?: string; next?: string }
+ */
+export function getPaginationLinks(pagination: PaginationMeta): {
+  prev?: string;
+  next?: string;
+} {
+  const base = pagination.basePath.toLowerCase().replace(/\/+$/, "") || "/";
+  const result: { prev?: string; next?: string } = {};
+
+  if (pagination.currentPage > 1) {
+    result.prev =
+      pagination.currentPage === 2
+        ? `${SITE_URL}${base}`
+        : `${SITE_URL}${base}?page=${pagination.currentPage - 1}`;
+  }
+
+  if (pagination.currentPage < pagination.totalPages) {
+    result.next = `${SITE_URL}${base}?page=${pagination.currentPage + 1}`;
+  }
+
+  return result;
 }
 
 // ── Dynamic OG image URL builder ───────────────────────────
@@ -110,6 +194,7 @@ const SEOHead = ({
   noindex = false,
   structuredData,
   article,
+  pagination,
 }: SEOHeadProps) => {
   const { pathname } = useLocation();
 
@@ -118,9 +203,15 @@ const SEOHead = ({
     : `${SITE_NAME} | Your Columbus Branding Concierge`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
-  const canonical = canonicalUrl || `${SITE_URL}${pathname}`;
+
+  // Build canonical using the utility — handles normalisation, tracking param
+  // stripping, pagination, trailing slashes, and lowercase enforcement
+  const canonical = canonicalUrl || getCanonicalUrl(pathname, undefined, pagination);
   const image = ogImage || buildDynamicOgUrl(fullTitle, desc, ogType, article);
   const robots = noindex ? "noindex,nofollow" : "index,follow";
+
+  // Pagination prev/next links (Bing still uses these)
+  const pagLinks = pagination ? getPaginationLinks(pagination) : undefined;
 
   // Normalise structured data to array
   const ldItems = structuredData
@@ -151,6 +242,10 @@ const SEOHead = ({
 
       {/* Canonical */}
       <link rel="canonical" href={canonical} />
+
+      {/* Pagination prev/next (Bing still uses these) */}
+      {pagLinks?.prev && <link rel="prev" href={pagLinks.prev} />}
+      {pagLinks?.next && <link rel="next" href={pagLinks.next} />}
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
