@@ -331,6 +331,112 @@ const PromotionalProductsPage = () => {
         </div>
       </section>
 
+      {/* Custom Printed Promotional Products */}
+      <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+        <div className="absolute bottom-[-200px] right-[-150px] w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[180px]" />
+        <div className="container relative max-w-7xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <Printer className="w-4 h-4" /> Custom Printed Products
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              Custom Printed <span className="text-primary">Promotional Products</span>
+            </h2>
+            <div className="w-24 h-[4px] mx-auto mt-6 rounded-full bg-gradient-to-r from-primary via-ohio-red-glow to-ohio-red-light" />
+            <p className="text-base md:text-lg text-muted-foreground leading-[1.9] font-medium max-w-3xl mx-auto mt-6">
+              Some of the most effective promotional items combine everyday usefulness with full-color custom printing.
+              These are the products your customers reach for again and again — each one a mini billboard for your brand.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: ShoppingBag,
+                title: "Custom Printed Tote Bags",
+                description: "Eco-friendly, reusable tote bags with your full-color logo — perfect for trade shows, retail giveaways, and farmers markets. Choose from cotton canvas, non-woven, and recycled materials in dozens of colors and sizes.",
+                detail: "From $1.50/unit at volume",
+              },
+              {
+                icon: PenTool,
+                title: "Branded Notebooks & Journals",
+                description: "Professional custom notebooks with printed covers, debossed logos, or full-wrap designs. Perfect for client gifts, conferences, and employee welcome kits. Available in softcover, hardcover, and spiral-bound options.",
+                detail: "Hardcover from $4/unit",
+              },
+              {
+                icon: Smartphone,
+                title: "Custom Mousepads & Desk Accessories",
+                description: "Full-color printed mousepads, desk mats, and coasters that sit in front of your clients all day, every day. Soft fabric top with non-slip rubber base — built to last and impossible to ignore.",
+                detail: "From $2/unit at volume",
+              },
+              {
+                icon: Megaphone,
+                title: "Printed Banners & Table Throws",
+                description: "Full-color dye-sublimated table throws, retractable pull-up banners, and backdrop displays that make your booth or event space look polished and professional. Wrinkle-resistant, machine-washable fabrics available.",
+                detail: "Table throws from $99",
+              },
+              {
+                icon: Gift,
+                title: "Branded Giveaway Kits",
+                description: "Curated gift bundles combining printed items — a branded tote filled with a custom notebook, printed pen, and logo tumbler. We assemble and package everything so you just hand them out and make an impression.",
+                detail: "Custom bundles from $15/kit",
+              },
+              {
+                icon: Award,
+                title: "Printed Drinkware & Bottles",
+                description: "Full-color wrap printing on tumblers, water bottles, and coffee mugs. UV-printed logos that won't fade, peel, or wash off — because your brand should look as good on day 500 as it does on day one.",
+                detail: "From $5/unit at volume",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.12)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+              >
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-4 flex-1">
+                    {item.description}
+                  </p>
+                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-5">
+                    {item.detail}
+                  </p>
+                  <Link to="/contact">
+                    <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider">
+                      Get a Quote
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Concierge tip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-10 rounded-2xl border-l-4 border-primary bg-primary/[0.04] px-6 py-5"
+          >
+            <p className="text-sm text-foreground leading-relaxed">
+              <span className="font-black text-primary">💡 David's Tip:</span>{" "}
+              The highest-impact promo strategy? Pair a custom printed tote with a branded notebook and tumbler inside — it's a complete "brand experience" your customer walks away with.
+              We bundle-price these kits so you get a better deal than ordering each item separately.{" "}
+              <Link to="/contact" className="text-primary font-bold hover:underline">Let us put together a custom kit for you →</Link>
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Printed Marketing Materials */}
       <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
         <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[180px]" />
