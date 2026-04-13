@@ -322,6 +322,7 @@ const PromotionalProducts = () => {
               {
                 icon: Megaphone,
                 title: "Custom Banners & Retractable Displays",
+                image: PHOTO_SIGNAGE_1,
                 description: "Command attention at trade shows, storefronts, and events with vibrant full-color banners. From lightweight retractable pull-ups to large-format vinyl, we print eye-catching displays that travel easy and set up in seconds.",
                 link: "/banners-and-flags",
                 linkLabel: "Explore Banners & Flags",
@@ -329,6 +330,7 @@ const PromotionalProducts = () => {
               {
                 icon: Zap,
                 title: "Yard Signs & Outdoor Signage",
+                image: PHOTO_SIGNAGE_3,
                 description: "Weather-tough corrugated yard signs, A-frames, and custom outdoor signage built for Ohio's seasons. Perfect for grand openings, real estate, political campaigns, and jobsite branding that gets noticed from the street.",
                 link: "/yard-signs-and-signage",
                 linkLabel: "Explore Yard Signs",
@@ -336,6 +338,7 @@ const PromotionalProducts = () => {
               {
                 icon: CreditCard,
                 title: "Business Cards & Stationery",
+                image: PHOTO_PRINT_1,
                 description: "First impressions start in the hand. Choose from premium stocks, foil stamping, spot UV, and soft-touch finishes that make your card the one they keep. We match every detail to your brand's personality.",
                 link: "/business-cards",
                 linkLabel: "Explore Business Cards",
@@ -343,6 +346,7 @@ const PromotionalProducts = () => {
               {
                 icon: FolderOpen,
                 title: "Presentation Folders & Marketing Kits",
+                image: PHOTO_PRINT_3,
                 description: "Elevate proposals and client meetings with custom presentation folders, inserts, and branded marketing kits. Sturdy stocks, custom pockets, and foil options that tell prospects you mean business.",
                 link: "/presentation-folders",
                 linkLabel: "Explore Presentation Folders",
@@ -350,6 +354,7 @@ const PromotionalProducts = () => {
               {
                 icon: FileText,
                 title: "Brochures, Flyers & Printed Collateral",
+                image: PHOTO_PRINT_6,
                 description: "From tri-folds and sell sheets to full catalogs and booklets, we handle every piece of printed collateral your business needs. High-quality stocks, vivid color, and fast Ohio turnarounds.",
                 link: "/brochures-and-printing",
                 linkLabel: "Explore Brochures & Printing",
@@ -361,23 +366,30 @@ const PromotionalProducts = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 p-8 shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.12)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.15)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
               >
-                <div className="w-14 h-14 mb-5 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-primary" />
+                <div className="relative h-48 overflow-hidden">
+                  <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+                  <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-[0_4px_20px_hsl(0_80%_42%/0.4)]">
+                    <item.icon className="w-5 h-5 text-primary-foreground" />
+                  </div>
                 </div>
-                <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-6 flex-1">
-                  {item.description}
-                </p>
-                <Link to={item.link}>
-                  <Button variant="outline" className="w-full font-bold text-sm py-5 rounded-xl border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/btn">
-                    {item.linkLabel}
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                <div className="p-7 flex flex-col flex-1">
+                  <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-6 flex-1">
+                    {item.description}
+                  </p>
+                  <Link to={item.link}>
+                    <Button variant="outline" className="w-full font-bold text-sm py-5 rounded-xl border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-300 group/btn">
+                      {item.linkLabel}
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
