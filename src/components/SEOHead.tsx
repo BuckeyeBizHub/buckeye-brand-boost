@@ -64,6 +64,79 @@ export interface SEOHeadProps {
   pagination?: PaginationMeta;
 }
 
+// ── Canonical URL utility ──────────────────────────────────
+
+/** Query params that should always be stripped from canonical URLs */
+const TRACKING_PARAMS = [
+  "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+  "ref", "fbclid", "gclid", "gclsrc", "dclid", "msclkid",
+  "mc_cid", "mc_eid", "yclid", "twclid", "ttclid",
+];
+
+/**
+ * Build a normalised canonical URL.
+ * - Always https, always www.buckeyebizhub.com
+ * - Lowercase path, no trailing slash (except root "/")
+ * - Strips tracking / analytics query params
+ * - For paginated content: page 1 → base URL, page 2+ → ?page=N
+ */
+export function getCanonicalUrl(
+  path: string,
+  params?: Record<string, string>,
+  pagination?: PaginationMeta,
+): string {
+  // Normalise path: lowercase, no trailing slash (except root)
+  let normalised = path.toLowerCase().replace(/\/+$/, "") || "/";
+
+  // Build canonical from pagination if provided
+  if (pagination) {
+    normalised = pagination.basePath.toLowerCase().replace(/\/+$/, "") || "/";
+    if (pagination.currentPage > 1) {
+      return `${SITE_URL}${normalised}?page=${pagination.currentPage}`;
+    }
+    return `${SITE_URL}${normalised}`;
+  }
+
+  // If extra params provided, filter out tracking params and build query string
+  if (params && Object.keys(params).length > 0) {
+    const clean = new URLSearchParams();
+    for (const [key, val] of Object.entries(params)) {
+      if (!TRACKING_PARAMS.includes(key.toLowerCase())) {
+        clean.set(key, val);
+      }
+    }
+    const qs = clean.toString();
+    return qs ? `${SITE_URL}${normalised}?${qs}` : `${SITE_URL}${normalised}`;
+  }
+
+  return `${SITE_URL}${normalised}`;
+}
+
+/**
+ * Build rel="prev" / rel="next" URLs for paginated content.
+ * Returns { prev?: string; next?: string }
+ */
+export function getPaginationLinks(pagination: PaginationMeta): {
+  prev?: string;
+  next?: string;
+} {
+  const base = pagination.basePath.toLowerCase().replace(/\/+$/, "") || "/";
+  const result: { prev?: string; next?: string } = {};
+
+  if (pagination.currentPage > 1) {
+    result.prev =
+      pagination.currentPage === 2
+        ? `${SITE_URL}${base}`
+        : `${SITE_URL}${base}?page=${pagination.currentPage - 1}`;
+  }
+
+  if (pagination.currentPage < pagination.totalPages) {
+    result.next = `${SITE_URL}${base}?page=${pagination.currentPage + 1}`;
+  }
+
+  return result;
+}
+
 // ── Dynamic OG image URL builder ───────────────────────────
 function buildDynamicOgUrl(
   title: string,
