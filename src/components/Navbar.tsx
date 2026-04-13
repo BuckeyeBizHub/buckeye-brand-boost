@@ -228,17 +228,22 @@ const Navbar = () => {
                 )}
               </div>
             ) : link.external ? (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-                className="block px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors text-primary hover:text-ohio-red-light"
-              >
-                {link.label}
-                <ExternalLink className="w-3.5 h-3.5 inline-block ml-1.5 -mt-0.5" />
-              </a>
+              <div key={link.label}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="block px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors text-primary hover:text-ohio-red-light"
+                >
+                  {link.label}
+                  <ExternalLink className="w-3.5 h-3.5 inline-block ml-1.5 -mt-0.5" />
+                </a>
+                <p className="px-6 pb-3 text-xs text-primary-foreground/35 leading-relaxed">
+                  Ready-made promo products &amp; swag only. For custom printing, wraps, signage, or full branding —{" "}
+                  <Link to="/contact" onClick={() => setOpen(false)} className="text-primary font-bold hover:underline">contact us</Link>.
+                </p>
+              </div>
             ) : (
               <Link
                 key={link.label}
