@@ -497,6 +497,133 @@ export function howToSchema(opts: HowToOpts): JsonLd {
   };
 }
 
+// ── 10. Review & AggregateRating ───────────────────────────
+
+export interface ReviewData {
+  author: string;
+  authorUrl?: string;
+  reviewBody: string;
+  ratingValue: number;
+  datePublished?: string;
+}
+
+export interface AggregateRatingOpts {
+  ratingValue: number;
+  bestRating?: number;
+  worstRating?: number;
+  ratingCount: number;
+  reviewCount?: number;
+}
+
+export interface ReviewSchemaOpts {
+  /** The entity being reviewed */
+  itemReviewed: {
+    type: string; // "LocalBusiness", "Product", "Organization", etc.
+    name: string;
+    url?: string;
+    image?: string;
+  };
+  reviews: ReviewData[];
+  aggregateRating?: AggregateRatingOpts;
+}
+
+/** Generate individual Review JSON-LD */
+export function reviewSchema(review: ReviewData, itemReviewed?: ReviewSchemaOpts["itemReviewed"]): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.author,
+      ...(review.authorUrl && { url: review.authorUrl }),
+    },
+    reviewBody: review.reviewBody,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.ratingValue,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    ...(review.datePublished && { datePublished: review.datePublished }),
+    ...(itemReviewed && {
+      itemReviewed: {
+        "@type": itemReviewed.type,
+        name: itemReviewed.name,
+        ...(itemReviewed.url && { url: itemReviewed.url }),
+        ...(itemReviewed.image && { image: itemReviewed.image }),
+      },
+    }),
+  };
+}
+
+/** Generate AggregateRating JSON-LD */
+export function aggregateRatingSchema(
+  rating: AggregateRatingOpts,
+  itemReviewed: ReviewSchemaOpts["itemReviewed"],
+): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": itemReviewed.type,
+    name: itemReviewed.name,
+    ...(itemReviewed.url && { url: itemReviewed.url }),
+    ...(itemReviewed.image && { image: itemReviewed.image }),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: rating.ratingValue,
+      bestRating: rating.bestRating ?? 5,
+      worstRating: rating.worstRating ?? 1,
+      ratingCount: rating.ratingCount,
+      ...(rating.reviewCount && { reviewCount: rating.reviewCount }),
+    },
+  };
+}
+
+/** Generate a complete review collection with aggregate + individual reviews */
+export function reviewCollectionSchema(opts: ReviewSchemaOpts): JsonLd {
+  const aggregate = opts.aggregateRating ?? calculateAggregateRating(opts.reviews);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": opts.itemReviewed.type,
+    name: opts.itemReviewed.name,
+    ...(opts.itemReviewed.url && { url: opts.itemReviewed.url }),
+    ...(opts.itemReviewed.image && { image: opts.itemReviewed.image }),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: aggregate.ratingValue,
+      bestRating: aggregate.bestRating ?? 5,
+      worstRating: aggregate.worstRating ?? 1,
+      ratingCount: aggregate.ratingCount,
+      reviewCount: aggregate.reviewCount ?? aggregate.ratingCount,
+    },
+    review: opts.reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      reviewBody: r.reviewBody,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.ratingValue,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      ...(r.datePublished && { datePublished: r.datePublished }),
+    })),
+  };
+}
+
+/** Calculate aggregate rating from individual reviews */
+export function calculateAggregateRating(reviews: ReviewData[]): AggregateRatingOpts {
+  if (reviews.length === 0) {
+    return { ratingValue: 0, ratingCount: 0, reviewCount: 0 };
+  }
+  const sum = reviews.reduce((acc, r) => acc + r.ratingValue, 0);
+  return {
+    ratingValue: Math.round((sum / reviews.length) * 10) / 10,
+    ratingCount: reviews.length,
+    reviewCount: reviews.length,
+  };
+}
+
 // ── Combine helper ─────────────────────────────────────────
 
 /**
