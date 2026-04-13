@@ -173,7 +173,7 @@ const ROUTE_LABELS: Record<string, string> = {
   research: "Research Assistant",
   "privacy-policy": "Privacy Policy",
   "business-cards": "Business Cards",
-  "brochures-and-business-printing": "Brochures & Printing",
+  "business-printing": "Business Printing",
   "promotional-products": "Promotional Products",
   "branded-apparel-and-uniforms": "Branded Apparel",
   "yard-signs-and-signage": "Yard Signs & Signage",

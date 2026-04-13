@@ -27,7 +27,7 @@ const kitItems = [
   { title: "Yard Signs & Custom Signage", image: yardSignImg, href: "/yard-signs-and-signage" },
   { title: "Branded Apparel & Uniforms", image: apparelImg, href: "/branded-apparel-and-uniforms" },
   { title: "Business Cards & Stationery", image: businessCardsImg, href: "/business-cards" },
-  { title: "Brochures & Business Printing", image: brochuresImg, href: "/brochures-and-business-printing" },
+  { title: "Brochures & Business Printing", image: brochuresImg, href: "/business-printing" },
   { title: "Promotional Products & Giveaways", image: promoImg, href: "/promotional-products" },
   { title: "Website Design & Development", image: websiteImg, href: "/website-design" },
   { title: "Local SEO & Google Ranking", image: seoImg, href: "/local-seo" },

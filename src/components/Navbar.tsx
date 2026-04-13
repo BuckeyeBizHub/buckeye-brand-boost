@@ -10,7 +10,7 @@ const megaColumns = [
     icon: Printer,
     title: "Printing & Marketing",
     items: [
-      { label: "Business Printing", href: "/brochures-and-business-printing" },
+      { label: "Business Printing", href: "/business-printing" },
       { label: "Door Hangers", href: "/door-hangers" },
       { label: "Presentation Folders & Marketing Kits", href: "/presentation-folders" },
     ],

@@ -7,7 +7,7 @@ import MessageBubble from "@/components/research/MessageBubble";
 import { useState, useMemo, useCallback } from "react";
 
 const VISIBLE_PATHS = new Set([
-  "/", "/services", "/business-cards", "/brochures-and-business-printing",
+  "/", "/services", "/business-cards", "/business-printing",
   "/promotional-products", "/branded-apparel-and-uniforms", "/yard-signs-and-signage",
   "/vehicle-wraps-and-fleet-branding", "/full-rebrand-kits", "/website-design",
   "/local-seo", "/banners-and-flags", "/decals", "/pricing", "/industries",
@@ -19,7 +19,7 @@ const VISIBLE_PATHS = new Set([
 const PAGE_LABELS: Record<string, string> = {
   "/vehicle-wraps-and-fleet-branding": "vehicle wraps & fleet branding",
   "/business-cards": "business cards & stationery",
-  "/brochures-and-business-printing": "brochures & printing",
+  "/business-printing": "brochures & printing",
   "/promotional-products": "promotional products",
   "/branded-apparel-and-uniforms": "branded apparel & uniforms",
   "/yard-signs-and-signage": "yard signs & signage",

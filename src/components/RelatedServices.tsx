@@ -8,7 +8,7 @@ import {
 
 const allServices = [
   { label: "Business Cards & Stationery", href: "/business-cards", icon: CreditCard },
-  { label: "Brochures & Business Printing", href: "/brochures-and-business-printing", icon: BookOpen },
+  { label: "Brochures & Business Printing", href: "/business-printing", icon: BookOpen },
   { label: "Postcards & Direct Mail", href: "/postcards", icon: Mail },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets", icon: BookMarked },
   { label: "Presentation Folders", href: "/presentation-folders", icon: FolderOpen },

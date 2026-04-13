@@ -29,7 +29,7 @@ export const PAGE_QUESTIONS: Record<string, string[]> = {
     "How much do gold foil business cards cost in bulk?",
     "What finishes make business cards stand out?",
   ],
-  "/brochures-and-business-printing": [
+  "/business-printing": [
     "What's the best brochure fold type for a service menu?",
     "How many brochures should I order for a trade show?",
     "What paper weight is best for professional brochures?",
