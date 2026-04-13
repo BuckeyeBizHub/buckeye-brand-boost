@@ -32,8 +32,8 @@ const IndustriesHero = () => (
         transition={{ duration: 0.7 }}
         className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.92] mb-6"
       >
-        9 Industries —{" "}
-        <span className="text-primary">Tailored Solutions</span>
+        Industries We{" "}
+        <span className="text-primary">Proudly Serve</span>
       </motion.h1>
 
       <motion.p
@@ -42,7 +42,7 @@ const IndustriesHero = () => (
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-xl md:text-2xl text-primary-foreground/70 max-w-3xl mx-auto mb-10 font-medium"
       >
-        Tailored printing, promotional products, and vehicle branding for Ohio's key businesses
+        From small businesses to large organizations across Columbus and Central Ohio, we provide custom printing, promotional products, and vehicle branding with concierge-level care.
       </motion.p>
 
       {/* Badges */}
