@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Star, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,7 @@ import serviceWebsiteDesign from "@/assets/service-website-design.jpg";
 import serviceLocalSeo from "@/assets/service-local-seo.jpg";
 import bannerFeatherFlags from "@/assets/banner-feather-blade.jpg";
 import vehicleDecalCloseup from "@/assets/vehicle-decal-closeup.jpg";
+import { PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_VEHICLE_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
 const services = [
   {
@@ -21,82 +22,89 @@ const services = [
     desc: "Premium cards on ultra-thick 32pt stock with gold foil stamping, spot UV, embossing, and custom die-cuts — designed to leave a lasting impression.",
     href: "/business-cards",
     img: businessCardsProduct,
+    showcase: [PHOTO_PRINT_1, PHOTO_PRINT_3],
   },
   {
     title: "Brochures & Business Printing",
     desc: "Tri-fold, bi-fold, gate-fold, and Z-fold brochures on premium paper stocks with vivid full-color printing, plus flyers, notepads, and custom forms.",
     href: "/brochures-and-business-printing",
     img: brochuresHero,
+    showcase: [],
   },
   {
     title: "Promotional Products & Giveaways",
     desc: "Turn every interaction into a lasting brand impression with custom items that keep your name top-of-mind and drive referrals.",
     href: "/promotional-products",
     img: servicePromoGiveaways,
+    showcase: [],
   },
   {
     title: "Branded Apparel & Uniforms",
     desc: "Build instant credibility and team unity with sharp, professional branded apparel that makes your staff look proud and consistent.",
     href: "/branded-apparel-and-uniforms",
     img: customApparelPolos,
+    showcase: [],
   },
   {
     title: "Yard Signs & Custom Signage",
     desc: "Get noticed where it matters most with bold, weather-resistant signs that generate immediate attention and new customers.",
     href: "/yard-signs-and-signage",
     img: yardSignsProduct,
+    showcase: [],
   },
   {
     title: "Vehicle Wraps & Fleet Branding",
     desc: "Transform your fleet into powerful 24/7 mobile advertisements with 3M/Avery materials and professional Ohio installers.",
     href: "/vehicle-wraps-and-fleet-branding",
     img: vehicleWrapProduct,
+    showcase: [PHOTO_VEHICLE_1, PHOTO_VEHICLE_3],
   },
   {
     title: "Full Rebrand Kits",
     desc: "Elevate your entire brand presence in one complete package with coordinated vehicle wraps, signage, apparel, printing, and digital assets.",
     href: "/full-rebrand-kits",
     img: serviceRebrandKit,
+    showcase: [],
   },
   {
     title: "Website Design & Development",
     desc: "Build a modern, fast-loading website that attracts customers and converts visitors into loyal clients 24/7.",
     href: "/website-design",
     img: serviceWebsiteDesign,
+    showcase: [],
   },
   {
     title: "Local SEO & Google Ranking",
     desc: "Get discovered by more local customers when they search online and dominate the Google Map Pack.",
     href: "/local-seo",
     img: serviceLocalSeo,
+    showcase: [],
   },
+] as const;
+
+const featuredServices = [
   {
     title: "Banners & Flags",
     desc: "Custom banners, feather flags, retractable banners, and graduation banners designed to drive traffic and make your message impossible to miss.",
     href: "/banners-and-flags",
     img: bannerFeatherFlags,
-    featured: true,
   },
   {
     title: "Decals",
     desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that promote your brand everywhere.",
     href: "/decals",
     img: vehicleDecalCloseup,
-    featured: true,
   },
-] as const;
+];
 
 // Masonry height classes for visual variation
 const heightVariants = [
-  "h-56", "h-64", "h-56", // row 1
-  "h-60", "h-56", "h-64", // row 2
-  "h-56", "h-64", "h-60", // row 3
+  "h-56", "h-64", "h-56",
+  "h-60", "h-56", "h-64",
+  "h-56", "h-64", "h-60",
 ];
 
 const ServicesSection = () => {
-  const regular = services.filter((s) => !("featured" in s && s.featured));
-  const featured = services.filter((s) => "featured" in s && s.featured);
-
   return (
     <section id="services" className="py-12 lg:py-16 relative overflow-hidden">
       {/* Layered background */}
@@ -128,9 +136,10 @@ const ServicesSection = () => {
 
         {/* Staggered masonry grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-          {regular.map((s, i) => {
+          {services.map((s, i) => {
             const imgH = heightVariants[i % heightVariants.length];
             const offset = i % 3 === 1 ? "lg:mt-6" : "";
+            const hasShowcase = s.showcase && s.showcase.length > 0;
 
             return (
               <motion.div
@@ -153,6 +162,20 @@ const ServicesSection = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
+
+                    {/* Showcase thumbnails overlay */}
+                    {hasShowcase && (
+                      <div className="absolute bottom-3 right-3 flex gap-1.5">
+                        {s.showcase.map((thumb, ti) => (
+                          <div key={ti} className="w-12 h-12 rounded-lg overflow-hidden border border-primary-foreground/20 shadow-md opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src={thumb} alt="" className="w-full h-full object-cover" loading="lazy" />
+                          </div>
+                        ))}
+                        <div className="w-12 h-12 rounded-lg bg-foreground/60 backdrop-blur-sm flex items-center justify-center border border-primary-foreground/20">
+                          <Eye className="w-4 h-4 text-primary-foreground" />
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="p-5 lg:p-6 flex flex-col flex-grow">
                     <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
@@ -174,7 +197,7 @@ const ServicesSection = () => {
 
         {/* Featured services */}
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-5 mt-6 lg:mt-8">
-          {featured.map((s, i) => (
+          {featuredServices.map((s, i) => (
             <motion.div
               key={s.title}
               initial={{ opacity: 0, y: 36 }}

@@ -5,7 +5,7 @@ import davidHeadshot from "@/assets/david-stein-headshot.jpg";
 import luxuryCards from "@/assets/luxury-gold-foil-cards.jpg";
 import trifoldBrochure from "@/assets/trifold-brochure-sample.png";
 import customDecals from "@/assets/usa-250th-anniversary-decal.jpeg";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBadges from "@/components/TrustBadges";
 
@@ -39,6 +39,18 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-24 sm:pt-28 pb-6 flex-1 flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
+          {/* Concierge badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-4"
+          >
+            <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-extrabold text-primary tracking-[0.2em] uppercase bg-primary/[0.08] border border-primary/15 px-4 py-2 rounded-full">
+              Your Buckeye Branding Concierge
+            </span>
+          </motion.div>
+
           <h1
             className="text-[clamp(2.75rem,8vw,5rem)] lg:text-[clamp(4rem,5.5vw,6rem)] font-black text-primary-foreground mb-3 tracking-tighter leading-[0.9]"
             style={{
@@ -51,7 +63,7 @@ const HeroSection = () => {
           </h1>
 
           <p
-            className="text-[clamp(1.15rem,3.5vw,1.875rem)] text-primary-foreground font-bold mb-3 leading-tight max-w-2xl mx-auto lg:mx-0"
+            className="text-[clamp(1.15rem,3.5vw,1.875rem)] text-primary-foreground font-bold mb-2 leading-tight max-w-2xl mx-auto lg:mx-0"
             style={{
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
             }}
@@ -61,15 +73,29 @@ const HeroSection = () => {
             Built to Grow Your Business.
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-primary-foreground/50 mb-6 max-w-lg mx-auto lg:mx-0">
-            Premium business cards, brochures, catalogs, postcards, vehicle wraps & full branding — Columbus, Ohio.
-          </p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-sm sm:text-base text-primary-foreground/60 mb-2 max-w-lg mx-auto lg:mx-0 leading-relaxed"
+          >
+            One dedicated partner for all your branding — from business cards and vehicle wraps to apparel and signage. We handle everything so you can focus on running your business.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xs sm:text-sm text-primary-foreground/40 mb-6 max-w-lg mx-auto lg:mx-0 italic"
+          >
+            "Think of us as your personal branding department — without the overhead." — David Stein
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.65 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3"
           >
             <Link to="/contact">
               <Button
@@ -80,11 +106,21 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Button>
             </Link>
+            <a href="tel:+16145613358">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-sm px-6 py-5 rounded-2xl gap-2"
+              >
+                <Phone className="w-4 h-4" />
+                (614) 561-3358
+              </Button>
+            </a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
+            transition={{ duration: 0.7, delay: 0.7 }}
             className="mt-5"
           >
             <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 [&_img]:sm:h-14 gap-4 sm:gap-6" />
@@ -110,9 +146,9 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.5] to-transparent" />
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-5 xl:px-7 py-2 xl:py-2.5 rounded-xl">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-5 xl:px-7 py-2 xl:py-2.5 rounded-xl shadow-lg">
               <p className="text-primary-foreground font-bold text-xs xl:text-sm tracking-wide uppercase whitespace-nowrap">
-                David Stein · Your Buckeye Branding Concierge
+                David Stein · Branding Concierge
               </p>
             </div>
           </div>
@@ -160,7 +196,7 @@ const HeroSection = () => {
       >
         {[
           { value: "500+", label: "Ohio Businesses" },
-          { value: "24hr", label: "Turnaround" },
+          { value: "24hr", label: "Quote Turnaround" },
           { value: "100%", label: "Satisfaction" },
         ].map((stat, i) => (
           <div
