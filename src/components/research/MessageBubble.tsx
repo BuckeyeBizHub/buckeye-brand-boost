@@ -34,24 +34,25 @@ const MessageBubble = memo(({ message, compact = false }: Props) => {
               /* Headings */
               [&_h3]:font-display [&_h3]:font-bold [&_h3]:tracking-tight
               ${compact
-                ? "[&_h3]:text-[13px] [&_h3]:sm:text-sm [&_h3]:mt-3 [&_h3]:mb-1.5"
-                : "[&_h3]:text-base [&_h3]:sm:text-lg [&_h3]:mt-5 [&_h3]:mb-2"
+                ? "[&_h3]:text-[13px] [&_h3]:sm:text-sm [&_h3]:mt-4 [&_h3]:mb-2"
+                : "[&_h3]:text-base [&_h3]:sm:text-lg [&_h3]:mt-6 [&_h3]:mb-2.5"
               }
-              [&_h3]:text-foreground [&_h3]:border-b [&_h3]:border-border/30 [&_h3]:pb-1
+              [&_h3]:text-foreground [&_h3]:border-b [&_h3]:border-primary/20 [&_h3]:pb-1.5
+              [&_h3:first-child]:mt-0
               
-              /* Paragraphs */
+              /* Paragraphs — generous spacing */
               ${compact
-                ? "[&_p]:my-1.5 [&_p]:text-[13px] [&_p]:sm:text-sm [&_p]:leading-relaxed"
-                : "[&_p]:my-2.5 [&_p]:text-sm [&_p]:sm:text-[15px] [&_p]:leading-[1.75]"
+                ? "[&_p]:my-2 [&_p]:text-[13px] [&_p]:sm:text-sm [&_p]:leading-[1.7]"
+                : "[&_p]:my-3 [&_p]:text-sm [&_p]:sm:text-[15px] [&_p]:leading-[1.8]"
               }
               
-              /* Lists */
+              /* Lists — clean spacing */
               ${compact
-                ? "[&_ul]:my-1.5 [&_ol]:my-1.5 [&_li]:my-0.5 [&_li]:text-[13px] [&_li]:sm:text-sm"
-                : "[&_ul]:my-3 [&_ol]:my-3 [&_li]:my-1 [&_li]:text-sm [&_li]:sm:text-[15px]"
+                ? "[&_ul]:my-2.5 [&_ol]:my-2.5 [&_li]:my-1 [&_li]:text-[13px] [&_li]:sm:text-sm"
+                : "[&_ul]:my-3.5 [&_ol]:my-3.5 [&_li]:my-1.5 [&_li]:text-sm [&_li]:sm:text-[15px]"
               }
               [&_ul]:pl-1 [&_ol]:pl-1
-              [&_li]:leading-relaxed
+              [&_li]:leading-[1.7]
               [&_ul>li]:list-none [&_ul>li]:relative [&_ul>li]:pl-5
               [&_ul>li]:before:content-['•'] [&_ul>li]:before:absolute [&_ul>li]:before:left-0 [&_ul>li]:before:text-primary [&_ul>li]:before:font-bold
               
@@ -66,13 +67,13 @@ const MessageBubble = memo(({ message, compact = false }: Props) => {
               /* Code / inline */
               [&_code]:text-primary [&_code]:bg-primary/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-[12px]
               
-              /* Blockquote for pro tips */
-              [&_blockquote]:border-l-3 [&_blockquote]:border-primary [&_blockquote]:bg-primary/5 [&_blockquote]:rounded-r-lg
+              /* Blockquote for pro tips — prominent callout */
+              [&_blockquote]:border-l-[3px] [&_blockquote]:border-primary [&_blockquote]:bg-primary/[0.06] [&_blockquote]:rounded-r-xl
               ${compact
-                ? "[&_blockquote]:px-3 [&_blockquote]:py-2 [&_blockquote]:my-2"
-                : "[&_blockquote]:px-4 [&_blockquote]:py-3 [&_blockquote]:my-3"
+                ? "[&_blockquote]:px-3.5 [&_blockquote]:py-2.5 [&_blockquote]:my-3"
+                : "[&_blockquote]:px-5 [&_blockquote]:py-3.5 [&_blockquote]:my-4"
               }
-              [&_blockquote_p]:my-0
+              [&_blockquote_p]:my-0 [&_blockquote_p]:text-foreground/90
             `}
           >
             <ReactMarkdown>{message.content}</ReactMarkdown>
