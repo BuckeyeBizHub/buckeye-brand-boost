@@ -243,6 +243,10 @@ const SEOHead = ({
       {/* Canonical */}
       <link rel="canonical" href={canonical} />
 
+      {/* Pagination prev/next (Bing still uses these) */}
+      {pagLinks?.prev && <link rel="prev" href={pagLinks.prev} />}
+      {pagLinks?.next && <link rel="next" href={pagLinks.next} />}
+
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={desc} />
