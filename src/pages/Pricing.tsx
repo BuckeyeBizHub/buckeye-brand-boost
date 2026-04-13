@@ -40,6 +40,7 @@ const Pricing = () => {
       <PricingHero />
       <HowWePrice />
       <CustomerExamples />
+      <BusinessCardsPricing />
       <PricingComparison />
       <PricingCTA />
       <Footer />
