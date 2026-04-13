@@ -1,34 +1,38 @@
 import { motion } from "framer-motion";
-import { TrendingDown, CheckCircle } from "lucide-react";
+import { TrendingDown, CheckCircle, ShieldCheck } from "lucide-react";
 
 const examples = [
   {
-    title: "Local Landscaping Company",
+    title: "Business Cards",
     description:
-      "Needed 50 custom t-shirts for their crew. We sourced a high-quality, comfortable tee and printed a full-color logo — all for under $12 per shirt, delivered in 10 days.",
-    highlight: "Under $12/shirt",
-    savings: "Saved over 30% vs. their previous printer",
+      "We sourced premium business cards through our supplier network — comparing options across multiple vendors to lock in the best quality at the lowest price for your brand.",
+    ourPrice: "$420",
+    typicalPrice: "$580–$750",
+    savings: "$160–$330 saved",
   },
   {
-    title: "Real Estate Agent",
+    title: "Promotional Products",
     description:
-      "Ordered 500 premium business cards with a matte finish and spot UV logo. Total cost? Less than $75 — with free design assistance and shipping included.",
-    highlight: "Less than $75 total",
-    savings: "Free design help included",
+      "From custom pens to branded tote bags, we shopped across our 4,300+ supplier network to find the perfect mix of quality and value for your next event or campaign.",
+    ourPrice: "$4,650",
+    typicalPrice: "$5,800–$6,900",
+    savings: "$1,150–$2,250 saved",
   },
   {
-    title: "Food Truck Owner",
+    title: "Vehicle Wraps",
     description:
-      "Wanted a bold, eye-catching partial vehicle wrap. We designed, printed, and coordinated professional installation for under $1,800 — turning their truck into a moving billboard.",
-    highlight: "Under $1,800",
-    savings: "Design + print + install included",
+      "We coordinated design, high-quality print materials, and professional installation — all sourced competitively so your fleet looks incredible without the premium price tag.",
+    ourPrice: "$5,250",
+    typicalPrice: "$6,800–$8,500",
+    savings: "$1,550–$3,250 saved",
   },
   {
-    title: "Nonprofit Youth Sports League",
+    title: "Outdoor Yard Signs",
     description:
-      "Needed 200 custom water bottles with their league logo for a fundraiser. We found a BPA-free option with full-color printing at just $3.50 each — well under their budget.",
-    highlight: "$3.50 each",
-    savings: "Came in well under budget",
+      "Whether it's a handful of signs or a large batch for an event, we compare pricing across trusted suppliers to deliver durable, eye-catching signs at a price that fits your budget.",
+    ourPrice: "$1,350",
+    typicalPrice: "$1,750–$2,200",
+    savings: "$400–$850 saved",
   },
 ];
 
@@ -42,11 +46,11 @@ const CustomerExamples = () => (
         className="text-center mb-14"
       >
         <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-4">
-          Real Customer Examples &{" "}
-          <span className="text-primary">Savings</span>
+          Real Savings for{" "}
+          <span className="text-primary">Real Businesses</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Here's what real Ohio businesses have paid working with us. No inflated numbers — just honest pricing and great results.
+          We shop our network of 4,300+ suppliers so you don't have to. Here's what Ohio businesses are saving when they work with us.
         </p>
       </motion.div>
 
@@ -66,16 +70,22 @@ const CustomerExamples = () => (
             <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
               {ex.description}
             </p>
-            <div className="space-y-2 pt-4 border-t border-border">
-              <div className="flex items-center gap-2">
-                <TrendingDown className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-lg font-black text-primary">
-                  {ex.highlight}
+            <div className="space-y-3 pt-4 border-t border-border">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">With us:</span>
+                <span className="text-2xl font-black text-primary">
+                  {ex.ourPrice}
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-ohio-forest flex-shrink-0" />
-                <span className="text-sm font-semibold text-foreground/80">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Typical market price:</span>
+                <span className="text-sm font-semibold text-foreground/60 line-through">
+                  {ex.typicalPrice}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 pt-1">
+                <TrendingDown className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-base font-black text-primary">
                   {ex.savings}
                 </span>
               </div>
@@ -83,6 +93,20 @@ const CustomerExamples = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-10 text-center"
+      >
+        <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm">
+          <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
+          <span className="text-sm font-semibold text-foreground/80">
+            Every quote is transparent — you see our wholesale cost and management fee upfront.
+          </span>
+        </div>
+      </motion.div>
     </div>
   </section>
 );
