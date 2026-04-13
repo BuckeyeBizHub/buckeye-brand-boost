@@ -194,6 +194,7 @@ const SEOHead = ({
   noindex = false,
   structuredData,
   article,
+  pagination,
 }: SEOHeadProps) => {
   const { pathname } = useLocation();
 
@@ -202,9 +203,15 @@ const SEOHead = ({
     : `${SITE_NAME} | Your Columbus Branding Concierge`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
-  const canonical = canonicalUrl || `${SITE_URL}${pathname}`;
+
+  // Build canonical using the utility — handles normalisation, tracking param
+  // stripping, pagination, trailing slashes, and lowercase enforcement
+  const canonical = canonicalUrl || getCanonicalUrl(pathname, undefined, pagination);
   const image = ogImage || buildDynamicOgUrl(fullTitle, desc, ogType, article);
   const robots = noindex ? "noindex,nofollow" : "index,follow";
+
+  // Pagination prev/next links (Bing still uses these)
+  const pagLinks = pagination ? getPaginationLinks(pagination) : undefined;
 
   // Normalise structured data to array
   const ldItems = structuredData
