@@ -1,13 +1,42 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import {
+  SITE_NAME,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+} from "@/lib/structured-data";
 
-// ── Constants ──────────────────────────────────────────────
-export const SITE_NAME = "Buckeye Biz Hub";
-export const SITE_URL = "https://www.buckeyebizhub.com";
+// Re-export everything from the structured data library
+// so existing imports from SEOHead continue to work
+export {
+  SITE_NAME,
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+  organizationSchema,
+  localBusinessSchema,
+  webSiteSchema,
+  webPageSchema,
+  breadcrumbSchema,
+  breadcrumbFromPath,
+  articleBreadcrumbSchema,
+  articleSchema,
+  productSchema,
+  faqSchema,
+  howToSchema,
+  combineSchemas,
+} from "@/lib/structured-data";
+export type {
+  ArticleSchemaOpts,
+  ProductSchemaOpts,
+  FAQItem,
+  HowToOpts,
+  HowToStep,
+  PersonRef,
+} from "@/lib/structured-data";
+
+// ── SEOHead-specific constants ─────────────────────────────
 export const DEFAULT_DESCRIPTION =
   "Ohio's trusted business branding partner. Premium printing, promotional products, vehicle wraps, banners, flags, decals & more.";
-export const DEFAULT_OG_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp";
 export const TWITTER_HANDLE = "@BuckeyeBizHub";
 
 // ── Types ──────────────────────────────────────────────────
@@ -298,199 +327,3 @@ const SEOHead = ({
 };
 
 export default SEOHead;
-
-// ── Structured Data Helpers ────────────────────────────────
-
-const PUBLISHER_SCHEMA = {
-  "@type": "Organization",
-  name: SITE_NAME,
-  url: SITE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: DEFAULT_OG_IMAGE,
-    width: 600,
-    height: 60,
-  },
-};
-
-/** Organization schema – use on homepage */
-export function organizationSchema(overrides?: Record<string, unknown>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: DEFAULT_OG_IMAGE,
-    sameAs: [
-      "https://www.facebook.com/BuckeyeBizHub",
-      "https://twitter.com/BuckeyeBizHub",
-    ],
-    ...overrides,
-  };
-}
-
-/** LocalBusiness schema – use on homepage / about */
-export function localBusinessSchema(overrides?: Record<string, unknown>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: SITE_NAME,
-    url: SITE_URL,
-    telephone: "+1-614-300-3BMH",
-    image: DEFAULT_OG_IMAGE,
-    priceRange: "$$",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Columbus",
-      addressRegion: "OH",
-      addressCountry: "US",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "500",
-    },
-    ...overrides,
-  };
-}
-
-/** WebPage schema */
-export function webPageSchema(
-  name: string,
-  description: string,
-  url: string,
-  overrides?: Record<string, unknown>,
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name,
-    description,
-    url,
-    publisher: PUBLISHER_SCHEMA,
-    ...overrides,
-  };
-}
-
-/** Article / BlogPosting schema with full publisher + mainEntityOfPage */
-export interface ArticleSchemaOpts {
-  headline: string;
-  description?: string;
-  image?: string;
-  datePublished: string;
-  dateModified?: string;
-  /** Single author or array of authors */
-  authors?: ArticleAuthor | ArticleAuthor[];
-  url: string;
-  /** Word count for reading time / wordCount property */
-  wordCount?: number;
-  /** Use "BlogPosting" instead of "Article" */
-  isBlogPosting?: boolean;
-}
-
-export function articleSchema(opts: ArticleSchemaOpts) {
-  const authorsList = opts.authors
-    ? Array.isArray(opts.authors)
-      ? opts.authors
-      : [opts.authors]
-    : [{ name: "David Stein" }];
-
-  const authorSchema = authorsList.map((a) => ({
-    "@type": "Person" as const,
-    name: a.name,
-    ...(a.url && { url: a.url }),
-  }));
-
-  return {
-    "@context": "https://schema.org",
-    "@type": opts.isBlogPosting ? "BlogPosting" : "Article",
-    headline: opts.headline,
-    description: opts.description,
-    ...(opts.image && { image: opts.image }),
-    datePublished: opts.datePublished,
-    dateModified: opts.dateModified || opts.datePublished,
-    author: authorSchema.length === 1 ? authorSchema[0] : authorSchema,
-    publisher: PUBLISHER_SCHEMA,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": opts.url,
-    },
-    url: opts.url,
-    ...(opts.wordCount && { wordCount: opts.wordCount }),
-  };
-}
-
-/** Product schema */
-export function productSchema(opts: {
-  name: string;
-  description: string;
-  image?: string;
-  url: string;
-  priceCurrency?: string;
-  price?: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: opts.name,
-    description: opts.description,
-    ...(opts.image && { image: opts.image }),
-    url: opts.url,
-    ...(opts.price && {
-      offers: {
-        "@type": "Offer",
-        priceCurrency: opts.priceCurrency || "USD",
-        price: opts.price,
-        availability: "https://schema.org/InStock",
-      },
-    }),
-  };
-}
-
-/** BreadcrumbList schema */
-export function breadcrumbSchema(crumbs: { name: string; url: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.name,
-      item: c.url,
-    })),
-  };
-}
-
-/** Generate article breadcrumb with optional category */
-export function articleBreadcrumbSchema(opts: {
-  articleTitle: string;
-  articleUrl: string;
-  category?: { name: string; slug: string };
-}) {
-  const crumbs: { name: string; url: string }[] = [
-    { name: "Home", url: SITE_URL },
-    { name: "Blog", url: `${SITE_URL}/blog` },
-  ];
-  if (opts.category) {
-    crumbs.push({
-      name: opts.category.name,
-      url: `${SITE_URL}/blog?category=${opts.category.slug}`,
-    });
-  }
-  crumbs.push({ name: opts.articleTitle, url: opts.articleUrl });
-  return breadcrumbSchema(crumbs);
-}
-
-/** FAQPage schema */
-export function faqSchema(questions: { question: string; answer: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: questions.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: { "@type": "Answer", text: q.answer },
-    })),
-  };
-}
