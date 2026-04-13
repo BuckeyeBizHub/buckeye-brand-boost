@@ -42,7 +42,7 @@ const PricingHero = () => (
           className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-medium"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
         >
-          We know how hard it is to grow a business in today's economy. That's why we work hard to deliver the best possible pricing — without ever cutting corners on quality.
+          Clear pricing. Personal service. No stress.
         </motion.p>
 
         <motion.div

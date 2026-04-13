@@ -13,7 +13,7 @@ const Pricing = () => {
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Pricing",
     description:
-      "Transparent pricing with concierge service included. Best possible pricing for Ohio businesses without cutting corners on quality.",
+      "Transparent pricing with concierge service included. Clear pricing, personal service, no stress for Ohio businesses.",
     url: "https://www.buckeyebizhub.com/pricing",
     areaServed: { "@type": "State", name: "Ohio" },
     address: {
@@ -26,7 +26,7 @@ const Pricing = () => {
   usePageSEO({
     title: "Transparent Pricing with Concierge Service | Buckeye Biz Hub",
     description:
-      "Transparent pricing with concierge service included. We deliver the best possible pricing for Ohio businesses without cutting corners on quality.",
+      "Clear pricing. Personal service. No stress. We deliver the best possible pricing for Ohio businesses without cutting corners on quality.",
   });
 
   return (
