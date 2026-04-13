@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap, Printer, FileText, CreditCard, FolderOpen, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_PRINT_6 } from "@/lib/photos";
 import Navbar from "@/components/Navbar";
 import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import Footer from "@/components/Footer";
