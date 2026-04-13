@@ -190,7 +190,7 @@ const ROUTE_LABELS: Record<string, string> = {
   "menus-and-table-tents": "Menus & Table Tents",
   "letterhead-and-envelopes": "Letterhead & Envelopes",
   "large-format-printing": "Large Format Printing",
-  "business-printing": "Business Printing",
+  "door-hangers": "Door Hangers",
 };
 
 /** Auto-generate breadcrumbs from a URL path */
