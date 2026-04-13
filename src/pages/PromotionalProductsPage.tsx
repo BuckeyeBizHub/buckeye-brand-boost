@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Phone,
   CheckCircle2,
+  ExternalLink,
   Sparkles,
   ShieldCheck,
   BadgeCheck,
