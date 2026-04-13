@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, Component, type ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -9,6 +9,7 @@ import BackToTop from "@/components/BackToTop";
 import MobileCTABar from "@/components/MobileCTABar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import RedirectHandler from "@/components/RedirectHandler";
 
 // Critical route – no lazy load
 import Index from "./pages/Index.tsx";
@@ -50,8 +51,42 @@ const LetterheadAndEnvelopes = lazy(() => import("./pages/LetterheadAndEnvelopes
 const LargeFormatPrinting = lazy(() => import("./pages/LargeFormatPrinting.tsx"));
 
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
+const ServerError = lazy(() => import("./pages/ServerError.tsx"));
 
 const queryClient = new QueryClient();
+
+// ── Error Boundary ─────────────────────────────────────────
+interface ErrorBoundaryState { hasError: boolean }
+
+class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryState> {
+  state: ErrorBoundaryState = { hasError: false };
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    console.error("[ErrorBoundary] Uncaught error:", error);
+    // Send to GA4
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "exception", {
+        description: error.message,
+        fatal: true,
+      });
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <Suspense fallback={null}>
+          <ServerError />
+        </Suspense>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -67,7 +102,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <RedirectHandler />
         <Breadcrumbs />
+        <ErrorBoundary>
         <Suspense fallback={<PageLoader />}>
           <main id="main-content">
           <Routes>
@@ -109,6 +146,7 @@ const App = () => (
           </Routes>
           </main>
         </Suspense>
+        </ErrorBoundary>
         <BackToTop />
         <MobileCTABar />
         <Suspense fallback={null}>
