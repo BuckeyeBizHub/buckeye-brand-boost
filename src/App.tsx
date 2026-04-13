@@ -32,7 +32,7 @@ const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const AdminPhotos = lazy(() => import("./pages/AdminPhotos.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const BusinessCards = lazy(() => import("./pages/BusinessCards.tsx"));
-const BrochuresAndPrinting = lazy(() => import("./pages/BrochuresAndPrinting.tsx"));
+// BrochuresAndPrinting removed — merged into BusinessPrinting
 const PromotionalProductsPage = lazy(() => import("./pages/PromotionalProductsPage.tsx"));
 const BrandedApparel = lazy(() => import("./pages/BrandedApparel.tsx"));
 const YardSignsAndSignage = lazy(() => import("./pages/YardSignsAndSignage.tsx"));
@@ -126,7 +126,7 @@ const App = () => (
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/business-cards" element={<BusinessCards />} />
-            <Route path="/brochures-and-business-printing" element={<BrochuresAndPrinting />} />
+            {/* /brochures-and-business-printing removed — redirects to /business-printing via RedirectHandler */}
             <Route path="/branded-apparel-and-uniforms" element={<BrandedApparel />} />
             <Route path="/yard-signs-and-signage" element={<YardSignsAndSignage />} />
             <Route path="/vehicle-wraps-and-fleet-branding" element={<VehicleWrapsAndFleet />} />

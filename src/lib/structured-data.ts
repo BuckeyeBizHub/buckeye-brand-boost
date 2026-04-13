@@ -173,7 +173,7 @@ const ROUTE_LABELS: Record<string, string> = {
   research: "Research Assistant",
   "privacy-policy": "Privacy Policy",
   "business-cards": "Business Cards",
-  "brochures-and-business-printing": "Brochures & Printing",
+  "business-printing": "Business Printing",
   "promotional-products": "Promotional Products",
   "branded-apparel-and-uniforms": "Branded Apparel",
   "yard-signs-and-signage": "Yard Signs & Signage",
@@ -190,7 +190,7 @@ const ROUTE_LABELS: Record<string, string> = {
   "menus-and-table-tents": "Menus & Table Tents",
   "letterhead-and-envelopes": "Letterhead & Envelopes",
   "large-format-printing": "Large Format Printing",
-  "business-printing": "Business Printing",
+  "door-hangers": "Door Hangers",
 };
 
 /** Auto-generate breadcrumbs from a URL path */

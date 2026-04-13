@@ -15,7 +15,7 @@ const companyLinks = [
 
 const printingLinks = [
   { label: "Business Cards", href: "/business-cards" },
-  { label: "Brochures & Printing", href: "/brochures-and-business-printing" },
+  { label: "Brochures & Printing", href: "/business-printing" },
   { label: "Postcards & Direct Mail", href: "/postcards" },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets" },
   { label: "Presentation Folders", href: "/presentation-folders" },

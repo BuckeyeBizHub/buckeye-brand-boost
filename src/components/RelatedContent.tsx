@@ -16,7 +16,7 @@ interface ServiceInfo {
 
 const allServices: ServiceInfo[] = [
   { label: "Business Cards & Stationery", href: "/business-cards", icon: CreditCard, description: "Premium business cards with specialty finishes for a lasting first impression." },
-  { label: "Brochures & Business Printing", href: "/brochures-and-business-printing", icon: BookOpen, description: "Professional brochures and printed materials to showcase your services." },
+  { label: "Brochures & Business Printing", href: "/business-printing", icon: BookOpen, description: "Professional brochures and printed materials to showcase your services." },
   { label: "Postcards & Direct Mail", href: "/postcards", icon: Mail, description: "Eye-catching postcards and direct mail campaigns that drive local response." },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets", icon: BookMarked, description: "Multi-page catalogs and booklets to present your full product line." },
   { label: "Presentation Folders", href: "/presentation-folders", icon: FolderOpen, description: "Custom branded folders for professional client-facing documents." },

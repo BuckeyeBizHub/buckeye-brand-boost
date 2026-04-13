@@ -27,7 +27,7 @@ const services = [
   {
     title: "Brochures & Business Printing",
     desc: "Tri-fold, bi-fold, gate-fold, and Z-fold brochures on premium paper stocks with vivid full-color printing, plus flyers, notepads, and custom forms.",
-    href: "/brochures-and-business-printing",
+    href: "/business-printing",
     img: brochuresHero,
     showcase: [],
   },
