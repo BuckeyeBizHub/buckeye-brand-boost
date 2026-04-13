@@ -96,7 +96,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl shadow-[0_4px_40px_rgba(0,0,0,0.4)] border-b border-primary/[0.08]" : "bg-transparent"}`}>
+    <header className="fixed top-0 left-0 right-0 z-50">
+    <nav aria-label="Main navigation" className={`transition-all duration-500 ${scrolled ? "bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl shadow-[0_4px_40px_rgba(0,0,0,0.4)] border-b border-primary/[0.08]" : "bg-transparent"}`}>
       <div className="container flex items-center justify-between py-3.5">
         {/* Logo */}
         <Link to="/" className="flex items-center group flex-shrink-0">
@@ -239,6 +240,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    </header>
   );
 };
 

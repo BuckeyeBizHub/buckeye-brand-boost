@@ -1,5 +1,7 @@
-import { ChevronRight, Home } from "lucide-react";
+import { Home, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { breadcrumbFromPath } from "@/lib/structured-data";
+import { useHeadingHierarchy } from "@/hooks/useHeadingHierarchy";
 
 const routeLabels: Record<string, string> = {
   "/": "Home",
@@ -44,6 +46,10 @@ const servicePages = [
 
 const Breadcrumbs = () => {
   const { pathname } = useLocation();
+
+  // Dev-only heading hierarchy check runs on every navigation
+  useHeadingHierarchy();
+
   if (pathname === "/") return null;
 
   const label = routeLabels[pathname] || pathname.replace(/^\//, "").replace(/-/g, " ");
@@ -55,16 +61,8 @@ const Breadcrumbs = () => {
     { label, href: pathname },
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((c, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: c.label,
-      item: `https://www.buckeyebizhub.com${c.href}`,
-    })),
-  };
+  // Use structured-data library for JSON-LD (consistent with SEOHead)
+  const jsonLd = breadcrumbFromPath(pathname);
 
   return (
     <>
@@ -74,10 +72,10 @@ const Breadcrumbs = () => {
           <ol className="flex items-center gap-1.5 text-xs sm:text-sm flex-wrap">
             {crumbs.map((crumb, i) => (
               <li key={crumb.href} className="flex items-center gap-1.5">
-                {i > 0 && <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50" />}
-                {i === 0 && <Home className="w-3.5 h-3.5 text-muted-foreground/70" />}
+                {i > 0 && <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50" aria-hidden="true" />}
+                {i === 0 && <Home className="w-3.5 h-3.5 text-muted-foreground/70" aria-hidden="true" />}
                 {i === crumbs.length - 1 ? (
-                  <span className="font-semibold text-foreground">{crumb.label}</span>
+                  <span aria-current="page" className="font-semibold text-foreground">{crumb.label}</span>
                 ) : (
                   <Link to={crumb.href} className="text-muted-foreground hover:text-primary transition-colors font-medium">
                     {crumb.label}

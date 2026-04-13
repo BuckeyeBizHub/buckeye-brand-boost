@@ -69,6 +69,7 @@ const App = () => (
         <ScrollToTop />
         <Breadcrumbs />
         <Suspense fallback={<PageLoader />}>
+          <main id="main-content">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
@@ -106,6 +107,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </main>
         </Suspense>
         <BackToTop />
         <MobileCTABar />
