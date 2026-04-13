@@ -9,25 +9,17 @@ interface DropdownItem {
   href: string;
 }
 
+// NavLink interface moved below DropdownItem
+
 interface NavLink {
   label: string;
   href: string;
   dropdown?: DropdownItem[];
+  external?: boolean;
 }
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  {
-    label: "About",
-    href: "/about",
-    dropdown: [
-      { label: "About Us", href: "/about" },
-      { label: "Blog", href: "/blog" },
-      { label: "Testimonials", href: "/testimonials" },
-      { label: "Portfolio", href: "/portfolio" },
-    ],
-  },
-  { label: "Industries", href: "/industries" },
   {
     label: "Services",
     href: "/services",
@@ -51,8 +43,9 @@ const navLinks: NavLink[] = [
       { label: "Local SEO & Google Ranking", href: "/local-seo" },
     ],
   },
+  { label: "Promotional Products", href: "/promotional-products" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Research", href: "/research" },
+  { label: "Shop Online", href: "http://www.buckeyebizhub.store/", external: true },
   { label: "Contact", href: "/contact" },
 ];
 
