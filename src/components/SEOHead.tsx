@@ -24,6 +24,10 @@ export {
   faqSchema,
   howToSchema,
   combineSchemas,
+  reviewSchema,
+  aggregateRatingSchema,
+  reviewCollectionSchema,
+  calculateAggregateRating,
 } from "@/lib/structured-data";
 export type {
   ArticleSchemaOpts,
@@ -32,6 +36,9 @@ export type {
   HowToOpts,
   HowToStep,
   PersonRef,
+  ReviewData,
+  AggregateRatingOpts,
+  ReviewSchemaOpts,
 } from "@/lib/structured-data";
 
 // ── SEOHead-specific constants ─────────────────────────────
