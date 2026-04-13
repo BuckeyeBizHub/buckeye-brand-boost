@@ -106,7 +106,7 @@ const BusinessCards = () => {
     },
   };
 
-    usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses." });
+    usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses.", noindex: true });
 
   return (
     <div className="min-h-screen">

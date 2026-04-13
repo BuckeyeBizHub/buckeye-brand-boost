@@ -22,7 +22,7 @@ const REDIRECT_MAP: Record<string, RedirectEntry> = {
   "/promo-products": { to: "/promotional-products", permanent: true },
   "/promo": { to: "/promotional-products", permanent: true },
   "/wraps": { to: "/vehicle-wraps-and-fleet-branding", permanent: true },
-  "/cards": { to: "/business-cards", permanent: true },
+  "/cards": { to: "/business-printing", permanent: true },
   "/seo": { to: "/local-seo", permanent: true },
   "/apparel": { to: "/branded-apparel-and-uniforms", permanent: true },
   "/signs": { to: "/yard-signs-and-signage", permanent: true },

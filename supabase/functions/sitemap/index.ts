@@ -28,7 +28,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: "/vehicle-wraps-and-fleet-branding", changefreq: "monthly", priority: "0.85" },
   { loc: "/research", changefreq: "monthly", priority: "0.8" },
   // ── Deeper service pages ──
-  { loc: "/business-cards", changefreq: "monthly", priority: "0.6" },
+  // "/business-cards" removed – covered by /business-printing hub
   { loc: "/branded-apparel-and-uniforms", changefreq: "monthly", priority: "0.6" },
   { loc: "/banners-and-flags", changefreq: "monthly", priority: "0.6" },
   { loc: "/decals", changefreq: "monthly", priority: "0.6" },
