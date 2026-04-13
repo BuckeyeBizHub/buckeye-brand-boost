@@ -11,6 +11,27 @@ export const DEFAULT_OG_IMAGE =
 export const TWITTER_HANDLE = "@BuckeyeBizHub";
 
 // ── Types ──────────────────────────────────────────────────
+
+export interface ArticleAuthor {
+  name: string;
+  url?: string;
+}
+
+export interface ArticleMeta {
+  /** ISO date string */
+  publishedTime: string;
+  /** ISO date string */
+  modifiedTime?: string;
+  /** Author(s) – single or multiple */
+  authors: ArticleAuthor | ArticleAuthor[];
+  /** Primary category / section name */
+  section?: string;
+  /** Tag strings for article:tag */
+  tags?: string[];
+  /** Word count of the article body (used for reading time) */
+  wordCount?: number;
+}
+
 export interface SEOHeadProps {
   /** Page title (site name suffix added automatically) */
   title?: string;
@@ -28,6 +49,21 @@ export interface SEOHeadProps {
   noindex?: boolean;
   /** JSON-LD structured data object(s) */
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  /** Article-specific meta (only used when ogType is "article") */
+  article?: ArticleMeta;
+}
+
+// ── Helpers ────────────────────────────────────────────────
+
+/** Estimate reading time in minutes from a word count */
+export function estimateReadingTime(wordCount: number, wpm = 238): number {
+  return Math.max(1, Math.ceil(wordCount / wpm));
+}
+
+/** Count words in an HTML string (strips tags first) */
+export function countWords(html: string): number {
+  const text = html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return text ? text.split(" ").length : 0;
 }
 
 // ── Component ──────────────────────────────────────────────
@@ -40,6 +76,7 @@ const SEOHead = ({
   ogType = "website",
   noindex = false,
   structuredData,
+  article,
 }: SEOHeadProps) => {
   const { pathname } = useLocation();
 
@@ -58,6 +95,16 @@ const SEOHead = ({
       ? structuredData
       : [structuredData]
     : [];
+
+  // Normalise authors to array
+  const authors = article
+    ? Array.isArray(article.authors)
+      ? article.authors
+      : [article.authors]
+    : [];
+
+  const readingTime =
+    article?.wordCount ? estimateReadingTime(article.wordCount) : undefined;
 
   return (
     <Helmet>
@@ -80,12 +127,37 @@ const SEOHead = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={SITE_NAME} />
 
+      {/* Article-specific OG tags */}
+      {ogType === "article" && article && (
+        <>
+          <meta property="article:published_time" content={article.publishedTime} />
+          {article.modifiedTime && (
+            <meta property="article:modified_time" content={article.modifiedTime} />
+          )}
+          {authors.map((a, i) => (
+            <meta key={`author-${i}`} property="article:author" content={a.url || a.name} />
+          ))}
+          {article.section && (
+            <meta property="article:section" content={article.section} />
+          )}
+          {article.tags?.map((tag) => (
+            <meta key={`tag-${tag}`} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content={TWITTER_HANDLE} />
+      {readingTime && (
+        <meta name="twitter:label1" content="Reading time" />
+      )}
+      {readingTime && (
+        <meta name="twitter:data1" content={`${readingTime} min read`} />
+      )}
 
       {/* JSON-LD */}
       {ldItems.map((item, i) => (
@@ -100,6 +172,18 @@ const SEOHead = ({
 export default SEOHead;
 
 // ── Structured Data Helpers ────────────────────────────────
+
+const PUBLISHER_SCHEMA = {
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: DEFAULT_OG_IMAGE,
+    width: 600,
+    height: 60,
+  },
+};
 
 /** Organization schema – use on homepage */
 export function organizationSchema(overrides?: Record<string, unknown>) {
@@ -156,32 +240,56 @@ export function webPageSchema(
     name,
     description,
     url,
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    publisher: PUBLISHER_SCHEMA,
     ...overrides,
   };
 }
 
-/** Article / BlogPosting schema */
-export function articleSchema(opts: {
+/** Article / BlogPosting schema with full publisher + mainEntityOfPage */
+export interface ArticleSchemaOpts {
   headline: string;
   description?: string;
   image?: string;
   datePublished: string;
   dateModified?: string;
-  authorName?: string;
+  /** Single author or array of authors */
+  authors?: ArticleAuthor | ArticleAuthor[];
   url: string;
-}) {
+  /** Word count for reading time / wordCount property */
+  wordCount?: number;
+  /** Use "BlogPosting" instead of "Article" */
+  isBlogPosting?: boolean;
+}
+
+export function articleSchema(opts: ArticleSchemaOpts) {
+  const authorsList = opts.authors
+    ? Array.isArray(opts.authors)
+      ? opts.authors
+      : [opts.authors]
+    : [{ name: "David Stein" }];
+
+  const authorSchema = authorsList.map((a) => ({
+    "@type": "Person" as const,
+    name: a.name,
+    ...(a.url && { url: a.url }),
+  }));
+
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": opts.isBlogPosting ? "BlogPosting" : "Article",
     headline: opts.headline,
     description: opts.description,
     ...(opts.image && { image: opts.image }),
     datePublished: opts.datePublished,
     dateModified: opts.dateModified || opts.datePublished,
-    author: { "@type": "Person", name: opts.authorName || "David Stein" },
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    author: authorSchema.length === 1 ? authorSchema[0] : authorSchema,
+    publisher: PUBLISHER_SCHEMA,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": opts.url,
+    },
     url: opts.url,
+    ...(opts.wordCount && { wordCount: opts.wordCount }),
   };
 }
 
@@ -213,9 +321,7 @@ export function productSchema(opts: {
 }
 
 /** BreadcrumbList schema */
-export function breadcrumbSchema(
-  crumbs: { name: string; url: string }[],
-) {
+export function breadcrumbSchema(crumbs: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -228,10 +334,28 @@ export function breadcrumbSchema(
   };
 }
 
+/** Generate article breadcrumb with optional category */
+export function articleBreadcrumbSchema(opts: {
+  articleTitle: string;
+  articleUrl: string;
+  category?: { name: string; slug: string };
+}) {
+  const crumbs: { name: string; url: string }[] = [
+    { name: "Home", url: SITE_URL },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+  ];
+  if (opts.category) {
+    crumbs.push({
+      name: opts.category.name,
+      url: `${SITE_URL}/blog?category=${opts.category.slug}`,
+    });
+  }
+  crumbs.push({ name: opts.articleTitle, url: opts.articleUrl });
+  return breadcrumbSchema(crumbs);
+}
+
 /** FAQPage schema */
-export function faqSchema(
-  questions: { question: string; answer: string }[],
-) {
+export function faqSchema(questions: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
