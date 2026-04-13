@@ -10,7 +10,7 @@ import { fetchPosts } from "@/lib/wordpress";
 const LatestBlogSection = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["wp-latest-posts"],
-    queryFn: () => fetchPosts(1, 4),
+    queryFn: () => fetchPosts(1, 6),
     staleTime: 5 * 60 * 1000,
   });
 
@@ -31,8 +31,8 @@ const LatestBlogSection = () => {
         </motion.div>
 
         {isLoading ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="rounded-3xl border-2 border-border overflow-hidden">
                 <Skeleton className="h-48 w-full" />
                 <div className="p-6 space-y-3">
@@ -45,8 +45,8 @@ const LatestBlogSection = () => {
             ))}
           </div>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {data?.items.slice(0, 4).map((post, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {data?.items.slice(0, 6).map((post, i) => (
               <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
