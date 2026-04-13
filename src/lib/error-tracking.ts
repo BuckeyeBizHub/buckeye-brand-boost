@@ -15,8 +15,9 @@ interface RedirectEntry {
 }
 
 const REDIRECT_MAP: Record<string, RedirectEntry> = {
-  // Example redirects — add old URLs here as they change
-  "/business-printing": { to: "/brochures-and-business-printing", permanent: true },
+  // Redirect duplicate/noindexed pages to main hub pages
+  "/brochures-and-business-printing": { to: "/business-printing", permanent: true },
+  "/large-format-printing": { to: "/banners-and-flags", permanent: true },
   "/vehicle-branding": { to: "/vehicle-wraps-and-fleet-branding", permanent: true },
   "/promo-products": { to: "/promotional-products", permanent: true },
   "/promo": { to: "/promotional-products", permanent: true },
