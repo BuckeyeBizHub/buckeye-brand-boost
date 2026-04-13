@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PromoProductDeepDives from "@/components/promo/PromoProductDeepDives";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -436,6 +437,9 @@ const PromotionalProductsPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Deep-dive educational sections for each promo product type */}
+      <PromoProductDeepDives />
 
       {/* Printed Marketing Materials */}
       <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
