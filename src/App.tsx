@@ -105,6 +105,7 @@ const App = () => (
         <RedirectHandler />
         <Breadcrumbs />
         <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
           <main id="main-content">
           <Routes>
             <Route path="/" element={<Index />} />
@@ -145,6 +146,7 @@ const App = () => (
           </Routes>
           </main>
         </Suspense>
+        </ErrorBoundary>
         <BackToTop />
         <MobileCTABar />
         <Suspense fallback={null}>
