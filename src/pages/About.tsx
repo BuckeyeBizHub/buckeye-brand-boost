@@ -329,52 +329,110 @@ const About = () => {
             viewport={{ once: true, margin: "-60px" }}
             custom={0}
             variants={fadeUp}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-5xl mx-auto"
           >
-            <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-              Our Clients
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-foreground leading-tight">
-              Who We <span className="text-primary">Serve</span>
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-10">
-              We proudly work with real estate agents, restaurants, contractors,
-              HVAC/plumbing companies, non-profits, schools, auto repair shops,
-              and local events throughout Central Ohio.
+            <div className="text-center mb-12">
+              <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+                Our Clients
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-foreground leading-tight">
+                Who We <span className="text-primary">Proudly Serve</span>
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                We proudly partner with businesses and organizations throughout
+                Central Ohio and beyond. Whether you're in Columbus or one of
+                the surrounding communities within a 50-mile radius, we provide
+                concierge-level printing, promotional products, signage, and
+                branding solutions tailored to your needs.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Cities column */}
+              <motion.div
+                custom={1}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                className="bg-ohio-cream border border-border rounded-2xl p-8"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-black text-foreground">
+                    Cities & Communities We Serve
+                  </h3>
+                </div>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+                  {[
+                    "Columbus", "Powell", "Lewis Center", "Dublin",
+                    "Westerville", "Hilliard", "Delaware", "Grove City",
+                    "New Albany", "Gahanna", "Reynoldsburg", "Pickerington",
+                    "Canal Winchester", "Pataskala", "Marysville", "London",
+                    "Circleville", "Lancaster", "Newark",
+                  ].map((city) => (
+                    <li key={city} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
+                      {city}
+                    </li>
+                  ))}
+                  <li className="col-span-2 flex items-center gap-2 text-sm text-primary font-semibold mt-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                    And throughout Central Ohio (including Dayton &amp; Springfield)
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* Industries column */}
+              <motion.div
+                custom={2}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                className="bg-ohio-cream border border-border rounded-2xl p-8"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-display text-xl font-black text-foreground">
+                    Industries & Business Types
+                  </h3>
+                </div>
+                <ul className="space-y-2.5">
+                  {[
+                    "Real Estate Agents & Property Management",
+                    "Restaurants, Cafés & Food Trucks",
+                    "Contractors & Construction Companies",
+                    "HVAC, Plumbing & Electrical Services",
+                    "Auto Repair Shops & Automotive Businesses",
+                    "Retail Stores & Boutiques",
+                    "Professional Services (Law, Accounting, Consulting)",
+                    "Healthcare & Medical Offices",
+                    "Non-Profits & Charitable Organizations",
+                    "Schools, Colleges & Educational Institutions",
+                    "Churches & Religious Organizations",
+                    "Hotels, Hospitality & Event Venues",
+                    "Manufacturing & Industrial Companies",
+                    "Local Events, Festivals & Sports Teams",
+                  ].map((industry) => (
+                    <li key={industry} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
+                      {industry}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+
+            <p className="text-center text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto font-medium">
+              No matter your industry or location in Central Ohio, our goal is
+              simple: help your business look professional, stand out, and grow —
+              all with honest, concierge-level service.
             </p>
-
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {communities.map((city) => (
-                <span
-                  key={city}
-                  className="bg-ohio-cream border border-border text-foreground text-sm font-semibold px-5 py-2 rounded-full"
-                >
-                  <MapPin className="w-3.5 h-3.5 inline-block mr-1.5 text-primary -mt-0.5" />
-                  {city}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Real Estate Agents",
-                "Restaurants & Cafés",
-                "Contractors & Construction",
-                "HVAC & Plumbing",
-                "Auto Repair Shops",
-                "Non-Profits",
-                "Schools & Education",
-                "Local Events & Festivals",
-              ].map((industry) => (
-                <span
-                  key={industry}
-                  className="flex items-center gap-1.5 text-sm text-muted-foreground"
-                >
-                  <CheckCircle2 className="w-4 h-4 text-primary" />
-                  {industry}
-                </span>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
