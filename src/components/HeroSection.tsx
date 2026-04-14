@@ -110,7 +110,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-sm px-6 py-5 rounded-2xl gap-2"
+                className="border-primary/30 text-primary hover:bg-primary/10 font-bold text-sm px-6 py-5 rounded-2xl gap-2"
               >
                 <Phone className="w-4 h-4" />
                 (614) 561-3358
