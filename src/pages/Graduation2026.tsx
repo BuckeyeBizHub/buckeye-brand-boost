@@ -128,19 +128,21 @@ const Graduation2026 = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {placeholderPhotos.map((photo) => (
+            {galleryPhotos.map((photo, i) => (
               <motion.div
-                key={photo.id}
+                key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: photo.id * 0.05 }}
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-muted/60 border-2 border-dashed border-muted-foreground/20 hover:border-primary/40 transition-colors duration-300"
+                transition={{ delay: i * 0.05 }}
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-muted border border-border hover:border-primary/40 transition-colors duration-300 shadow-md hover:shadow-xl"
               >
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                  <GraduationCap className="w-10 h-10 text-muted-foreground/30 mb-3 group-hover:text-primary/40 transition-colors" />
-                  <p className="text-sm font-bold text-muted-foreground/50 group-hover:text-muted-foreground/70 transition-colors">{photo.label}</p>
-                </div>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </motion.div>
             ))}
           </div>
