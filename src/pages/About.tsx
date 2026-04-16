@@ -157,21 +157,46 @@ const About = () => {
                 and manufacturing to sales, marketing, operations, and scaling
                 a company.
               </p>
-              <p>
-                One of the highlights I'm most known for is{" "}
-                <span className="font-bold text-foreground">
-                  co-inventing the beer tube
-                </span>{" "}
-                — that popular beer dispenser you see in bars and restaurants
-                all across the country. I took the idea from a simple basement
-                prototype all the way to a{" "}
-                <span className="text-primary font-bold">
-                  $5 million-a-year business
-                </span>
-                . That experience taught me how to turn a good idea into a
-                successful, scalable company while keeping quality high and
-                customers happy.
-              </p>
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-1">
+                  <p>
+                    One of the highlights I'm most known for is{" "}
+                    <span className="font-bold text-foreground">
+                      co-inventing the beer tube
+                    </span>{" "}
+                    — that popular beer dispenser you see in bars and restaurants
+                    all across the country. I took the idea from a simple basement
+                    prototype all the way to a{" "}
+                    <span className="text-primary font-bold">
+                      $5 million-a-year business
+                    </span>
+                    . That experience taught me how to turn a good idea into a
+                    successful, scalable company while keeping quality high and
+                    customers happy.
+                  </p>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full md:w-48 shrink-0"
+                >
+                  <div className="rounded-2xl overflow-hidden border-2 border-primary/20 shadow-lg">
+                    <img
+                      src={beerTubeImg}
+                      alt="Beer tube dispenser co-invented by David Stein"
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                      width={640}
+                      height={800}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground text-center mt-2 italic">
+                    The beer tube — co-invented by David
+                  </p>
+                </motion.div>
+              </div>
               <p>
                 After three decades of building, running, and growing
                 businesses, I decided to create something different — a{" "}
