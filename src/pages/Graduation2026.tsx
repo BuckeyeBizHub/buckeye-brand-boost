@@ -271,6 +271,37 @@ const Graduation2026 = () => {
         </div>
       </section>
 
+      {/* ── Featured Blog Post ─────────────────────────── */}
+      <section className="py-16 lg:py-24 bg-muted/20">
+        <div className="container max-w-5xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-4 bg-[hsl(45,70%,50%)/0.15] px-5 py-2 rounded-full border border-[hsl(45,70%,50%)/0.3] text-[hsl(45,70%,55%)]">
+              <BookOpen className="w-3.5 h-3.5" /> From Our Blog
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground">
+              Don't Miss Our <span className="text-primary">Ultimate Guide</span>
+            </h2>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <Link to="/blog/top-10-graduation-banners-class-of-2026" className="group block">
+              <div className="rounded-2xl overflow-hidden border border-border shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-primary/30">
+                <img
+                  src={blogFeatureBanner}
+                  alt="Top 10 Must-Have Custom Graduation Banners for the Class of 2026"
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-2 text-primary font-bold text-lg group-hover:gap-3 transition-all">
+                <span>Read: Top 10 Must-Have Custom Graduation Banners</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── Final CTA ────────────────────────────────────── */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
