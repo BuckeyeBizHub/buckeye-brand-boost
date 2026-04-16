@@ -118,13 +118,14 @@ const HeroSection = () => {
                 </Button>
               </a>
             </div>
-            <Link to="/graduation-2026">
+            <Link to="/graduation-2026" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.4)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.6)] transition-all duration-500 group tracking-wide animate-pulse hover:animate-none border-2 border-[hsl(45,70%,55%)/0.4]"
+                className="w-full bg-gradient-to-r from-primary via-ohio-red-light to-primary text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.55)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.75)] transition-all duration-500 group tracking-wide border-2 border-[hsl(45,70%,55%)] hover:scale-[1.02]"
               >
-                🎓 2026 Graduation Special – Save 20% on Banners & Party Printing
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <span className="text-lg sm:text-xl">🎓</span>
+                <span className="text-center leading-tight">2026 Graduation Special – Save 20% on Banners & Party Printing</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300 flex-shrink-0" />
               </Button>
             </Link>
           </motion.div>
