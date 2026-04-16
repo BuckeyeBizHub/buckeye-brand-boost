@@ -188,15 +188,47 @@ const HeroSection = () => {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Trust badges under showcase items */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1 }}
+            className="mt-2"
+          >
+            <TrustBadges variant="dark" size="sm" className="[&_img]:h-14 xl:[&_img]:h-16 gap-5" />
+          </motion.div>
         </motion.div>
       </div>
 
-      {/* Stats – in normal flow, not absolute */}
+      {/* Unified trust + stats row */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
-        className="relative z-10 grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4 mt-8 sm:mt-10"
+        className="relative z-10 w-full max-w-5xl mx-auto px-4 mt-8 sm:mt-10 lg:hidden"
+      >
+        <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-4 sm:gap-x-10">
+          <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 sm:[&_img]:h-14 gap-4 sm:gap-6" />
+          {[
+            { value: "500+", label: "Ohio Businesses" },
+            { value: "24hr", label: "Quote Turnaround" },
+            { value: "100%", label: "Satisfaction" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-2xl sm:text-3xl font-black text-primary text-glow-red leading-none mb-1">{stat.value}</div>
+              <div className="text-[0.55rem] sm:text-[0.65rem] text-primary-foreground/50 font-bold tracking-[0.15em] uppercase whitespace-nowrap">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Desktop stats only (badges already shown on right column) */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 1 }}
+        className="relative z-10 hidden lg:grid grid-cols-3 max-w-xl mx-auto px-4 mt-8"
       >
         {[
           { value: "500+", label: "Ohio Businesses" },
