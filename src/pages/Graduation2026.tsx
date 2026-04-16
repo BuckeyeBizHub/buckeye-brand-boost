@@ -323,13 +323,13 @@ const Graduation2026 = () => {
             <span className="text-[hsl(45,80%,60%)]">Class of 2026</span> in style?
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
-            Lock in your 20% early bird savings before May 1. Custom designs, premium materials, and Columbus-local service.
+            Custom banners from $37.50 and 8 yard signs for just $125. Premium materials, local Columbus service, and lower than national prices.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact?service=graduation-2026">
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
                 <GraduationCap className="w-6 h-6" />
-                Reserve Your Graduation Package — Save 20%
+                Reserve Your Graduation Package Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>
