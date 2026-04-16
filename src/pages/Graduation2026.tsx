@@ -7,6 +7,17 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
+import gradDecorSet from "@/assets/graduation/grad-decor-set.jpg";
+import gradYardSign from "@/assets/graduation/grad-yard-sign.jpg";
+import gradBanner2026 from "@/assets/graduation/grad-banner-2026.jpg";
+import gradFrostedCup from "@/assets/graduation/grad-frosted-cup.jpg";
+import gradPersonalizedCups from "@/assets/graduation/grad-personalized-cups.jpg";
+import gradCupcakeToppers from "@/assets/graduation/grad-cupcake-toppers.jpg";
+import gradCupsFrosted from "@/assets/graduation/grad-cups-frosted.jpg";
+import gradCupsPurple from "@/assets/graduation/grad-cups-purple.jpg";
+import gradCoasters from "@/assets/graduation/grad-coasters.jpg";
+import gradBackdrop from "@/assets/graduation/grad-backdrop-magazine.jpg";
+
 const pricingData = [
   { item: "Large Graduation Banner", details: '4ft × 6ft', regular: "$72", early: "$57.60" },
   { item: "Extra Large Banner", details: '4ft × 8ft', regular: "$95", early: "$76" },
@@ -14,28 +25,18 @@ const pricingData = [
   { item: "Graduation Party Package", details: "Banner + 2 Yard Signs + Table Cover", regular: "$249", early: "$199" },
 ];
 
-const trends = [
-  "Custom Photo Backdrops & Step & Repeat Banners",
-  "Personalized Plastic Cups & Drinkware",
-  "Custom Cutout Yard Signs (graduate photo cutouts)",
-  "Table Covers & Runners with names or school colors",
-  "Graduation Party Invitations & Thank You Cards",
-  "Branded T-Shirts, Hoodies & Caps for the graduate and family",
-  "Custom Stickers, Banners, and Balloon Packages",
+const galleryPhotos = [
+  { src: gradDecorSet, alt: "Red graduation decoration set with banners, balloons, and table covers" },
+  { src: gradBanner2026, alt: "Class of 2026 personalized graduation banner with photo" },
+  { src: gradYardSign, alt: "Custom graduation yard sign with graduate photo" },
+  { src: gradBackdrop, alt: "Magazine-style graduation backdrop with balloon arch" },
+  { src: gradFrostedCup, alt: "Personalized Senior 2026 frosted party cups" },
+  { src: gradPersonalizedCups, alt: "Custom congratulations graduation cups and koozies" },
+  { src: gradCupsFrosted, alt: "Cheers to the Class frosted graduation cups" },
+  { src: gradCupsPurple, alt: "Custom graduation party cups with names" },
+  { src: gradCoasters, alt: "Personalized graduation photo coasters - Class of 2026" },
+  { src: gradCupcakeToppers, alt: "Custom graduation cupcake toppers with graduate faces" },
 ];
-
-const whyReasons = [
-  { icon: Clock, text: "Fast turnaround — most orders ship in 3–5 business days, rush available" },
-  { icon: Heart, text: "Local, personal concierge service — David handles every detail for you" },
-  { icon: Shield, text: "Premium materials that last — weather-resistant, vibrant, and built to impress" },
-  { icon: Star, text: "100% satisfaction guaranteed — we don't rest until you love it" },
-  { icon: Sparkles, text: "One-stop shop — banners, signs, cups, apparel, invitations & more" },
-];
-
-const placeholderPhotos = Array.from({ length: 10 }, (_, i) => ({
-  id: i + 1,
-  label: `Grad Banner Photo ${i + 1}`,
-}));
 
 const Graduation2026 = () => {
   usePageSEO({
