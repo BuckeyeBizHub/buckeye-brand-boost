@@ -179,7 +179,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="max-w-sm mx-auto my-2"
+                className="max-w-xs mx-auto my-2"
               >
                 <div className="rounded-xl overflow-hidden shadow-md">
                   <img
@@ -226,7 +226,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="max-w-sm mx-auto mt-2"
+                className="max-w-xs mx-auto mt-2"
               >
                 <div className="rounded-xl overflow-hidden shadow-md">
                   <img
