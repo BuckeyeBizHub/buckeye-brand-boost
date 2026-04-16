@@ -3,17 +3,13 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Phone,
-  Heart,
-  Clock,
-  Shield,
-  Handshake,
+  CheckCircle2,
   MapPin,
   Users,
-  DollarSign,
-  Award,
-  TrendingUp,
-  CheckCircle2,
-  Star,
+  Heart,
+  Shield,
+  Clock,
+  Handshake,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -22,58 +18,51 @@ import davidHero from "@/assets/david-stein-hero.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" as const },
+    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const },
   }),
 };
 
-const whyDifferent = [
-  {
-    icon: Handshake,
-    title: "True Concierge Service",
-    desc: "We handle design, sourcing, printing, and delivery so you don't have to.",
-  },
-  {
-    icon: MapPin,
-    title: "Local to Columbus, Ohio",
-    desc: "We understand the Central Ohio market and what works here.",
-  },
-  {
-    icon: DollarSign,
-    title: "Honest, Transparent Pricing",
-    desc: "No hidden fees — ever. You see exactly what you're paying for.",
-  },
-  {
-    icon: Clock,
-    title: "Fast 24-Hour Quotes",
-    desc: "Quick quotes and reliable turnaround times you can count on.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Built for Small Business",
-    desc: "Focused on helping small businesses compete and shine like the big guys.",
-  },
+const differentiators = [
+  "We give you fast, honest quotes — usually within 24 hours",
+  "We offer clear, transparent pricing with no hidden fees or surprise charges",
+  "We personally manage every project from design to delivery",
+  "We prioritize USA-made materials whenever possible",
+  "We treat every client like a neighbor, not just another transaction",
 ];
 
 const coreValues = [
-  { icon: Shield, label: "Honesty and transparency in everything we do" },
-  { icon: Clock, label: "Fast, reliable service you can count on" },
-  { icon: Heart, label: "Helping small businesses look professional without breaking the bank" },
-  { icon: Users, label: "Building long-term relationships with our clients" },
+  { icon: Shield, text: "Honesty and transparency in every interaction" },
+  { icon: Clock, text: "Fast, reliable service you can actually count on" },
+  { icon: Heart, text: "Helping small and medium businesses compete and shine without breaking the bank" },
+  { icon: Handshake, text: "Building long-term relationships based on trust and results" },
 ];
 
-const communities = [
-  "Columbus",
-  "Powell",
-  "Lewis Center",
-  "Dublin",
-  "Westerville",
-  "Hilliard",
-  "Delaware",
-  "Grove City",
+const cities = [
+  "Columbus", "Powell", "Lewis Center", "Dublin", "Westerville", "Hilliard",
+  "Delaware", "Grove City", "New Albany", "Gahanna", "Reynoldsburg",
+  "Pickerington", "Canal Winchester", "Pataskala", "Marysville", "London",
+  "Circleville", "Lancaster", "Newark",
+];
+
+const industries = [
+  "Real Estate Agents & Property Management",
+  "Restaurants, Cafés & Food Trucks",
+  "Contractors & Construction Companies",
+  "HVAC, Plumbing & Electrical Services",
+  "Auto Repair Shops & Automotive Businesses",
+  "Retail Stores & Boutiques",
+  "Professional Services (Law, Accounting, Consulting)",
+  "Healthcare & Medical Offices",
+  "Non-Profits & Charitable Organizations",
+  "Schools, Colleges & Educational Institutions",
+  "Churches & Religious Organizations",
+  "Hotels, Hospitality & Event Venues",
+  "Manufacturing & Industrial Companies",
+  "Local Events, Festivals & Sports Teams",
 ];
 
 const About = () => {
@@ -87,11 +76,10 @@ const About = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* ── Hero ─────────────────────────────────────────── */}
+      {/* Hero */}
       <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/90 via-ohio-grey-dark to-ohio-navy/80" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-
         <div className="container relative">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -107,8 +95,9 @@ const About = () => {
                 <span className="text-primary">Buckeye Branding Concierge</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed max-w-lg">
-                Rooted in Ohio. Built to help local businesses look professional
-                and grow — without the stress or high prices.
+                Local. Personal. Built to help Columbus and Central Ohio
+                businesses look professional and grow — without the stress or
+                high prices.
               </p>
             </motion.div>
 
@@ -136,7 +125,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* ── Our Story ────────────────────────────────────── */}
+      {/* Our Story — narrative */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container">
           <motion.div
@@ -154,39 +143,38 @@ const About = () => {
 
             <div className="prose prose-lg max-w-none text-muted-foreground leading-[1.9] space-y-6">
               <p>
-                Hi, I'm <span className="font-bold text-foreground">David Stein</span>, founder of Buckeye Biz Hub.
-                After spending years in the printing and promotional products
-                industry, I saw how frustrating it was for small businesses in
-                Columbus and Central Ohio to get high-quality work done quickly
-                and affordably.
+                Hi, I'm{" "}
+                <span className="font-bold text-foreground">David Stein</span>,
+                founder of Buckeye Biz Hub.
               </p>
               <p>
-                So I started Buckeye Biz Hub as a true local concierge service —
-                one place where you can get everything from business cards and
-                flyers to yard signs, vehicle wraps, and promotional products,
-                all handled with care and transparency.
+                After years working in the printing and promotional products
+                industry, I kept seeing the same frustrating story play out for
+                small and medium-sized businesses here in Columbus. They were
+                stuck choosing between slow responses, hidden fees, inconsistent
+                quality, or dealing with big impersonal online printers that
+                treated them like just another order number.
+              </p>
+              <p className="text-foreground font-semibold text-xl">
+                I knew there had to be a better way.
               </p>
               <p>
-                I'm a third-generation entrepreneur. I grew up watching my
-                family build and run businesses right here in Ohio, so I know
-                exactly how hard it is to make every single dollar count. Every
-                expense matters. Every decision can mean the difference between
-                just surviving and actually thriving.
-              </p>
-              <p>
-                Over the years I've personally consulted with more than{" "}
-                <span className="text-primary font-bold">35 local Ohio companies</span>,
-                helping them save over{" "}
-                <span className="text-primary font-bold">$1.3 million</span>{" "}
-                in unnecessary spending — not by cutting corners, but by guiding
-                them to the best options with complete honesty and transparency.
+                So I started Buckeye Biz Hub as a{" "}
+                <span className="text-primary font-bold">
+                  true local concierge service
+                </span>{" "}
+                — your single trusted partner for everything branding-related.
+                From premium business cards and promotional products to yard
+                signs, vehicle wraps, door hangers, banners, branded apparel,
+                and large-format signage, we handle it all with care, speed, and
+                complete transparency.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── Why We're Different ──────────────────────────── */}
+      {/* What Makes Us Different */}
       <section className="py-20 lg:py-28 bg-ohio-cream">
         <div className="container">
           <motion.div
@@ -195,91 +183,42 @@ const About = () => {
             viewport={{ once: true, margin: "-60px" }}
             custom={0}
             variants={fadeUp}
-            className="text-center mb-14"
+            className="max-w-3xl mx-auto"
           >
-            <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-              The Buckeye Difference
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
-              Why We're <span className="text-primary">Different</span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-foreground leading-tight">
+              What Makes Us{" "}
+              <span className="text-primary">Different</span>
             </h2>
-          </motion.div>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-12" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {whyDifferent.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                custom={idx + 1}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                className="bg-background border border-border rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <item.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-display text-lg font-black mb-3 text-foreground">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+            <p className="text-center text-lg text-muted-foreground mb-10">
+              What makes us different is simple:
+            </p>
+
+            <div className="space-y-4">
+              {differentiators.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  custom={idx + 1}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-30px" }}
+                  className="flex items-start gap-4 bg-background border border-border rounded-xl p-5"
+                >
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <p className="text-foreground font-medium leading-relaxed">
+                    {item}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ── Impact Stats ─────────────────────────────────── */}
+      {/* Core Values */}
       <section className="py-20 lg:py-28 bg-background">
-        <div className="container">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            custom={0}
-            variants={fadeUp}
-            className="text-center mb-14"
-          >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
-              Our <span className="text-primary">Impact</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              { icon: Users, number: "35+", label: "Ohio Companies Helped" },
-              { icon: DollarSign, number: "$1.3M+", label: "Saved for Clients" },
-              { icon: Award, number: "3rd Gen", label: "Entrepreneur" },
-              { icon: TrendingUp, number: "100%", label: "Transparent Pricing" },
-            ].map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                custom={idx + 1}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                className="bg-ohio-cream border border-border rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl md:text-3xl font-black text-primary mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Core Values ──────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-ohio-cream">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -300,19 +239,19 @@ const About = () => {
           <div className="max-w-2xl mx-auto space-y-5">
             {coreValues.map((value, idx) => (
               <motion.div
-                key={value.label}
+                key={idx}
                 custom={idx + 1}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
-                className="flex items-start gap-4 bg-background border border-border rounded-xl p-6"
+                className="flex items-start gap-4 bg-ohio-cream border border-border rounded-xl p-6"
               >
                 <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                   <value.icon className="w-5 h-5 text-primary" />
                 </div>
                 <p className="text-foreground font-medium leading-relaxed">
-                  {value.label}
+                  {value.text}
                 </p>
               </motion.div>
             ))}
@@ -320,8 +259,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* ── Who We Serve ─────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Who We Serve */}
+      <section className="py-20 lg:py-28 bg-ohio-cream">
         <div className="container">
           <motion.div
             initial="hidden"
@@ -348,78 +287,62 @@ const About = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Cities column */}
               <motion.div
                 custom={1}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
-                className="bg-ohio-cream border border-border rounded-2xl p-8"
+                className="bg-background border border-border rounded-2xl p-8"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="font-display text-xl font-black text-foreground">
-                    Cities & Communities We Serve
+                    Cities & Communities
                   </h3>
                 </div>
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
-                  {[
-                    "Columbus", "Powell", "Lewis Center", "Dublin",
-                    "Westerville", "Hilliard", "Delaware", "Grove City",
-                    "New Albany", "Gahanna", "Reynoldsburg", "Pickerington",
-                    "Canal Winchester", "Pataskala", "Marysville", "London",
-                    "Circleville", "Lancaster", "Newark",
-                  ].map((city) => (
-                    <li key={city} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {cities.map((city) => (
+                    <li
+                      key={city}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
                       {city}
                     </li>
                   ))}
                   <li className="col-span-2 flex items-center gap-2 text-sm text-primary font-semibold mt-1">
                     <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                    And throughout Central Ohio (including Dayton &amp; Springfield)
+                    And throughout Central Ohio (including Dayton &amp;
+                    Springfield)
                   </li>
                 </ul>
               </motion.div>
 
-              {/* Industries column */}
               <motion.div
                 custom={2}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
-                className="bg-ohio-cream border border-border rounded-2xl p-8"
+                className="bg-background border border-border rounded-2xl p-8"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Users className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="font-display text-xl font-black text-foreground">
-                    Industries & Business Types
+                    Industries We Serve
                   </h3>
                 </div>
                 <ul className="space-y-2.5">
-                  {[
-                    "Real Estate Agents & Property Management",
-                    "Restaurants, Cafés & Food Trucks",
-                    "Contractors & Construction Companies",
-                    "HVAC, Plumbing & Electrical Services",
-                    "Auto Repair Shops & Automotive Businesses",
-                    "Retail Stores & Boutiques",
-                    "Professional Services (Law, Accounting, Consulting)",
-                    "Healthcare & Medical Offices",
-                    "Non-Profits & Charitable Organizations",
-                    "Schools, Colleges & Educational Institutions",
-                    "Churches & Religious Organizations",
-                    "Hotels, Hospitality & Event Venues",
-                    "Manufacturing & Industrial Companies",
-                    "Local Events, Festivals & Sports Teams",
-                  ].map((industry) => (
-                    <li key={industry} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {industries.map((industry) => (
+                    <li
+                      key={industry}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
                       <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0" />
                       {industry}
                     </li>
@@ -437,7 +360,34 @@ const About = () => {
         </div>
       </section>
 
-      {/* ── Final CTA ────────────────────────────────────── */}
+      {/* Social Proof */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container max-w-3xl mx-auto text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            custom={0}
+            variants={fadeUp}
+          >
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              We've already helped{" "}
+              <span className="text-primary font-bold">
+                hundreds of local Ohio businesses
+              </span>{" "}
+              get the professional materials they need to stand out and grow.
+              Many of our clients tell us the biggest difference is finally
+              having a partner who{" "}
+              <span className="font-semibold text-foreground">
+                truly cares about their success
+              </span>
+              .
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/60 via-ohio-grey-dark to-ohio-navy/40" />
         <div className="container relative text-center">
@@ -446,14 +396,18 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="max-w-3xl mx-auto"
           >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-primary-foreground mb-6 leading-tight max-w-4xl mx-auto">
-              Ready to Work with Your Local{" "}
-              <span className="text-primary">Branding Partner?</span>
+            <p className="text-primary-foreground/70 text-lg md:text-xl mb-6 leading-relaxed">
+              Ready to work with a local team that makes branding simple,
+              affordable, and even enjoyable?
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-primary-foreground mb-4 leading-tight">
+              Let's <span className="text-primary">Talk.</span>
             </h2>
-            <p className="text-lg md:text-xl text-primary-foreground/50 mb-10 max-w-2xl mx-auto">
-              Let's have a real conversation about how we can help your business
-              grow.
+            <p className="text-primary-foreground/50 text-lg mb-10">
+              Get your free quote today — no pressure, just honest advice and
+              great work.
             </p>
             <Link to="/contact">
               <Button
@@ -461,35 +415,11 @@ const About = () => {
                 className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] transition-all duration-300 group uppercase tracking-wider"
               >
                 <Phone className="w-6 h-6" />
-                Get Your Free Quote Today
+                Get Your Free Quote in 24 Hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
           </motion.div>
-        </div>
-      </section>
-
-      {/* ── Trust Bar ────────────────────────────────────── */}
-      <section className="py-6 bg-ohio-navy">
-        <div className="container">
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-primary-foreground/60 text-sm font-medium">
-            {[
-              "Ohio Owned & Operated",
-              "35+ Companies Helped",
-              "$1.3M+ Saved",
-              "24-Hour Quotes",
-              "Columbus, Ohio",
-            ].map((item, idx) => (
-              <span key={item} className="flex items-center gap-2">
-                {idx > 0 && (
-                  <span className="hidden sm:inline text-primary-foreground/20">
-                    •
-                  </span>
-                )}
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
