@@ -17,7 +17,7 @@ const showcaseItems = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[85vh] max-h-[900px] md:min-h-[80vh] md:max-h-[850px] lg:min-h-[75vh] lg:max-h-[800px] flex flex-col overflow-hidden bg-ohio-grey-dark">
+    <section className="relative w-full flex flex-col overflow-hidden bg-ohio-grey-dark pt-20 sm:pt-24 pb-10 sm:pb-12 lg:min-h-[88vh]">
       {/* Background: product collage */}
       <div className="absolute inset-0">
         <img
