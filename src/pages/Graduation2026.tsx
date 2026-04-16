@@ -17,6 +17,7 @@ import gradCupsFrosted from "@/assets/graduation/grad-cups-frosted.jpg";
 import gradCupsPurple from "@/assets/graduation/grad-cups-purple.jpg";
 import gradCoasters from "@/assets/graduation/grad-coasters.jpg";
 import gradBackdrop from "@/assets/graduation/grad-backdrop-magazine.jpg";
+import blogFeatureBanner from "@/assets/graduation/blog-feature-banner.png";
 
 const pricingData = [
   { item: "Large Graduation Banner", details: '4ft × 6ft', regular: "$72", early: "$57.60" },
