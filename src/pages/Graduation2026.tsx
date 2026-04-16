@@ -175,11 +175,12 @@ const Graduation2026 = () => {
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-4 bg-primary/10 px-5 py-2 rounded-full border border-primary/20 text-primary">
-              <Sparkles className="w-3.5 h-3.5" /> Early Bird Pricing
+              <Sparkles className="w-3.5 h-3.5" /> Beat National Big-Box Prices
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Featured 2026 Graduation Products <span className="text-[hsl(45,70%,50%)]">& Pricing</span>
+              Featured 2026 Graduation Pricing <span className="text-[hsl(45,70%,50%)]">– Beat National Prices</span>
             </h2>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">Local Columbus printing at lower prices than the big national online printers. Always.</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-border overflow-hidden shadow-xl">
@@ -187,25 +188,27 @@ const Graduation2026 = () => {
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-ohio-navy text-primary-foreground">
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider">Item</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider">Size / Details</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider text-right">Regular</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider text-right">
-                      <span className="inline-flex items-center gap-1.5 bg-[hsl(45,70%,50%)/0.2] px-3 py-1 rounded-full text-[hsl(45,70%,55%)]">
-                        🎓 2026 Early Bird
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Product</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Size</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">
+                      <span className="inline-flex items-center gap-1.5 bg-[hsl(45,70%,50%)/0.2] px-3 py-1 rounded-full text-[hsl(45,70%,55%)] whitespace-nowrap">
+                        🎓 Our Price
                       </span>
                     </th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">National Big-Box</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right text-[hsl(120,60%,75%)]">You Save</th>
                   </tr>
                 </thead>
                 <tbody>
                   {pricingData.map((row, i) => (
-                    <tr key={row.item} className={`border-b border-border ${i % 2 === 0 ? "bg-muted/30" : "bg-background"} hover:bg-primary/5 transition-colors`}>
-                      <td className="px-6 py-5 font-bold text-foreground">{row.item}</td>
-                      <td className="px-6 py-5 text-muted-foreground">{row.details}</td>
-                      <td className="px-6 py-5 text-right text-muted-foreground line-through">{row.regular}</td>
-                      <td className="px-6 py-5 text-right">
-                        <span className="text-primary font-black text-lg">{row.early}</span>
+                    <tr key={`${row.item}-${row.details}`} className={`border-b border-border ${i % 2 === 0 ? "bg-muted/30" : "bg-background"} hover:bg-primary/5 transition-colors`}>
+                      <td className="px-4 sm:px-6 py-5 font-bold text-foreground text-sm sm:text-base">{row.item}</td>
+                      <td className="px-4 sm:px-6 py-5 text-muted-foreground text-sm">{row.details}</td>
+                      <td className="px-4 sm:px-6 py-5 text-right">
+                        <span className="text-primary font-black text-base sm:text-lg whitespace-nowrap">{row.ours}</span>
                       </td>
+                      <td className="px-4 sm:px-6 py-5 text-right text-muted-foreground text-sm whitespace-nowrap">{row.national}</td>
+                      <td className="px-4 sm:px-6 py-5 text-right font-bold text-[hsl(145,55%,40%)] text-sm whitespace-nowrap">{row.save}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -213,7 +216,7 @@ const Graduation2026 = () => {
             </div>
           </motion.div>
 
-          <p className="text-center text-sm text-muted-foreground mt-4">* Early Bird pricing valid for orders placed by May 1, 2026. Custom designs may vary.</p>
+          <p className="text-center text-sm text-muted-foreground mt-4">* National pricing based on standard online big-box printer rates. Custom designs and rush options available.</p>
         </div>
       </section>
 
