@@ -20,16 +20,18 @@ import gradBackdrop from "@/assets/graduation/grad-backdrop-magazine.jpg";
 import blogFeatureBanner from "@/assets/graduation/blog-feature-banner.png";
 
 const pricingData = [
-  { item: "Large Graduation Banner", details: '4ft × 6ft', regular: "$72", early: "$57.60" },
-  { item: "Extra Large Banner", details: '4ft × 8ft', regular: "$95", early: "$76" },
-  { item: "Personalized Yard Sign", details: '18" × 24"', regular: "$45", early: "$36" },
-  { item: "Graduation Party Package", details: "Banner + 2 Yard Signs + Table Cover", regular: "$249", early: "$199" },
+  { item: "Custom Graduation Banner", details: "2ft × 6ft", ours: "$37.50", national: "$45 – $75", save: "Up to $37.50" },
+  { item: "Custom Graduation Banner", details: "3ft × 6ft", ours: "$56.25", national: "$55 – $95", save: "Up to $38.75" },
+  { item: "Custom Graduation Banner", details: "4ft × 6ft", ours: "$70.00", national: "$70 – $125", save: "Up to $55" },
+  { item: "Custom Graduation Banner", details: "4ft × 8ft", ours: "$95.00", national: "$85 – $155", save: "Up to $60" },
+  { item: "Custom Graduation Yard Sign", details: '24" × 24"', ours: "$45 / sign", national: "$55 – $75 / sign", save: "Up to $30 / sign" },
+  { item: "Yard Sign Bundle (8 signs)", details: '24" × 24" with stakes', ours: "$125 for 8", national: "$160 – $240 for 8", save: "Up to $115" },
 ];
 
 const galleryPhotos = [
   { src: gradDecorSet, alt: "Red graduation decoration set with banners, balloons, and table covers" },
   { src: gradBanner2026, alt: "Class of 2026 personalized graduation banner with photo" },
-  { src: gradYardSign, alt: "Custom graduation yard sign with graduate photo" },
+  { src: gradYardSign, alt: "Custom 24x24 graduation yard sign with graduate photo" },
   { src: gradBackdrop, alt: "Magazine-style graduation backdrop with balloon arch" },
   { src: gradFrostedCup, alt: "Personalized Senior 2026 frosted party cups" },
   { src: gradPersonalizedCups, alt: "Custom congratulations graduation cups and koozies" },
@@ -40,21 +42,21 @@ const galleryPhotos = [
 ];
 
 const trends = [
-  "Custom Photo Backdrops & Step & Repeat Banners",
-  "Personalized Plastic Cups & Drinkware",
-  "Custom Cutout Yard Signs (graduate photo cutouts)",
-  "Table Covers & Runners with names or school colors",
-  "Graduation Party Invitations & Thank You Cards",
-  "Branded T-Shirts, Hoodies & Caps for the graduate and family",
-  "Custom Stickers, Banners, and Balloon Packages",
+  "Bold photo backdrop banners",
+  "Personalized photo cutout yard signs",
+  "Directional arrow open house signs",
+  "Custom graduation cups & drinkware",
+  "Branded graduation apparel & hoodies",
+  "Step-and-repeat party backdrops",
+  "Custom stickers, table covers, and favors",
 ];
 
 const whyReasons = [
-  { icon: Clock, text: "Fast turnaround — most orders ship in 3–5 business days, rush available" },
-  { icon: Heart, text: "Local, personal concierge service — David handles every detail for you" },
-  { icon: Shield, text: "Premium materials that last — weather-resistant, vibrant, and built to impress" },
-  { icon: Star, text: "100% satisfaction guaranteed — we don't rest until you love it" },
-  { icon: Sparkles, text: "One-stop shop — banners, signs, cups, apparel, invitations & more" },
+  { icon: Clock, text: "Local Columbus printing with fast turnaround — most orders ship in 3–5 business days" },
+  { icon: Shield, text: "Premium weatherproof materials built to look great rain or shine" },
+  { icon: Sparkles, text: "Full design help included at no extra charge — we make it look amazing" },
+  { icon: Star, text: "Much lower prices than national online printers — every single time" },
+  { icon: Heart, text: "Concierge service — David handles every detail so you don't have to" },
 ];
 
 const Graduation2026 = () => {
