@@ -61,24 +61,24 @@ const whyReasons = [
 
 const Graduation2026 = () => {
   usePageSEO({
-    title: "2026 Graduation Banners & Party Printing – Columbus, Ohio",
+    title: "2026 Graduation Banners & Yard Signs – Columbus, Ohio",
     description:
-      "Custom graduation banners, yard signs, party printing, and more for the Class of 2026. Proudly made in Columbus, Ohio. Save 20% when you order by May 1!",
+      "Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices.",
   });
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "2026 Graduation Banners & Party Printing",
-    description: "Custom graduation banners, yard signs, cups, cutouts and party printing for the Class of 2026.",
+    name: "2026 Graduation Banners & Yard Signs",
+    description: "Custom graduation banners and 24x24 yard signs for the Class of 2026. Lower than national online printer pricing.",
     brand: { "@type": "Brand", name: "Buckeye Biz Hub" },
     offers: {
       "@type": "AggregateOffer",
-      lowPrice: "36",
-      highPrice: "199",
+      lowPrice: "37.50",
+      highPrice: "125",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-      offerCount: "4",
+      offerCount: "6",
     },
     provider: {
       "@type": "LocalBusiness",
@@ -90,8 +90,8 @@ const Graduation2026 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="2026 Graduation Banners & Party Printing – Columbus, Ohio"
-        description="Custom graduation banners, yard signs, party printing, and more for the Class of 2026. Proudly made in Columbus, Ohio. Save 20% when you order by May 1!"
+        title="2026 Graduation Banners & Yard Signs – Columbus, Ohio"
+        description="Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices."
         structuredData={[jsonLd]}
       />
       <Navbar />
