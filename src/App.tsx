@@ -50,6 +50,7 @@ const MenusAndTableTents = lazy(() => import("./pages/MenusAndTableTents.tsx"));
 const LetterheadAndEnvelopes = lazy(() => import("./pages/LetterheadAndEnvelopes.tsx"));
 const LargeFormatPrinting = lazy(() => import("./pages/LargeFormatPrinting.tsx"));
 const DoorHangers = lazy(() => import("./pages/DoorHangers.tsx"));
+const Graduation2026 = lazy(() => import("./pages/Graduation2026.tsx"));
 
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));

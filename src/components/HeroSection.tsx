@@ -95,27 +95,38 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.55 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3"
+            className="flex flex-col items-center lg:items-start gap-3"
           >
-            <Link to="/contact">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
+                >
+                  Get Your Free Quote
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
+                </Button>
+              </Link>
+              <a href="tel:+16145613358">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary/30 text-primary hover:bg-primary/10 font-bold text-sm px-6 py-5 rounded-2xl gap-2"
+                >
+                  <Phone className="w-4 h-4" />
+                  (614) 561-3358
+                </Button>
+              </a>
+            </div>
+            <Link to="/graduation-2026">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.4)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.6)] transition-all duration-500 group tracking-wide animate-pulse hover:animate-none border-2 border-[hsl(45,70%,55%)/0.4]"
               >
-                Get Your Free Quote
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
+                🎓 2026 Graduation Special – Save 20% on Banners & Party Printing
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </Button>
             </Link>
-            <a href="tel:+16145613358">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary/30 text-primary hover:bg-primary/10 font-bold text-sm px-6 py-5 rounded-2xl gap-2"
-              >
-                <Phone className="w-4 h-4" />
-                (614) 561-3358
-              </Button>
-            </a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 15 }}
