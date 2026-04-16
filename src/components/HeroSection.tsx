@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       {/* Main content area */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-20 sm:pt-24 pb-4 flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
           {/* Concierge badge */}
