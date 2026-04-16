@@ -17,7 +17,7 @@ const showcaseItems = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[85vh] max-h-[900px] md:min-h-[80vh] md:max-h-[850px] lg:min-h-[75vh] lg:max-h-[800px] flex flex-col overflow-hidden bg-ohio-grey-dark">
+    <section className="relative w-full flex flex-col overflow-hidden bg-ohio-grey-dark pt-20 sm:pt-24 pb-10 sm:pb-12 lg:min-h-[88vh]">
       {/* Background: product collage */}
       <div className="absolute inset-0">
         <img
@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       {/* Main content area */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-20 sm:pt-24 pb-4 flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 flex-1 flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
         {/* Left: Text */}
         <div className="flex-1 text-center lg:text-left">
           {/* Concierge badge */}
@@ -118,13 +118,14 @@ const HeroSection = () => {
                 </Button>
               </a>
             </div>
-            <Link to="/graduation-2026">
+            <Link to="/graduation-2026" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.4)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.6)] transition-all duration-500 group tracking-wide animate-pulse hover:animate-none border-2 border-[hsl(45,70%,55%)/0.4]"
+                className="w-full bg-gradient-to-r from-primary via-ohio-red-light to-primary text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.55)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.75)] transition-all duration-500 group tracking-wide border-2 border-[hsl(45,70%,55%)] hover:scale-[1.02]"
               >
-                🎓 2026 Graduation Special – Save 20% on Banners & Party Printing
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <span className="text-lg sm:text-xl">🎓</span>
+                <span className="text-center leading-tight">2026 Graduation Special – Save 20% on Banners & Party Printing</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300 flex-shrink-0" />
               </Button>
             </Link>
           </motion.div>
@@ -203,7 +204,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
-        className="relative z-10 grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4 pb-6 sm:pb-8"
+        className="relative z-10 grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4 mt-8 sm:mt-10"
       >
         {[
           { value: "500+", label: "Ohio Businesses" },
