@@ -113,27 +113,27 @@ const Graduation2026 = () => {
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-6 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-            2026 Graduation Banners
+            2026 Graduation Banners <span className="text-[hsl(45,70%,55%)]">&</span> Yard Signs
             <br />
-            <span className="text-[hsl(45,70%,55%)]">&</span> Party Printing
+            <span className="text-[hsl(45,70%,55%)]">Make Their Big Day Stand Out</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8 font-semibold">
-            Make this graduation unforgettable with custom banners, signs, cups, cutouts, and more — proudly made in Columbus.
+            Custom banners and premium 24" × 24" yard signs proudly made in Columbus.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}>
             <Link to="/contact?service=graduation-2026">
-              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-12 py-7 sm:py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
-                <GraduationCap className="w-5 h-5" />
-                Get Your 2026 Graduation Package – Save 20% by May 1
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base lg:text-lg px-6 sm:px-10 py-7 sm:py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group tracking-wider transition-all duration-300 max-w-full whitespace-normal h-auto leading-tight">
+                <GraduationCap className="w-5 h-5 flex-shrink-0" />
+                <span className="text-center">Get Your 2026 Graduation Package – Banners from $37.50 • 8 Yard Signs Only $125</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
           </motion.div>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-sm text-[hsl(45,70%,55%)]/70 mt-4 font-semibold">
-            ⏰ Early Bird Ends May 1, 2026 — Don't Miss Out!
+            🏆 Beat National Big-Box Prices — Local Columbus Service
           </motion.p>
         </div>
       </section>
