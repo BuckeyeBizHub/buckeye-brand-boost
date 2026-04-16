@@ -7,11 +7,35 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
+import gradDecorSet from "@/assets/graduation/grad-decor-set.jpg";
+import gradYardSign from "@/assets/graduation/grad-yard-sign.jpg";
+import gradBanner2026 from "@/assets/graduation/grad-banner-2026.jpg";
+import gradFrostedCup from "@/assets/graduation/grad-frosted-cup.jpg";
+import gradPersonalizedCups from "@/assets/graduation/grad-personalized-cups.jpg";
+import gradCupcakeToppers from "@/assets/graduation/grad-cupcake-toppers.jpg";
+import gradCupsFrosted from "@/assets/graduation/grad-cups-frosted.jpg";
+import gradCupsPurple from "@/assets/graduation/grad-cups-purple.jpg";
+import gradCoasters from "@/assets/graduation/grad-coasters.jpg";
+import gradBackdrop from "@/assets/graduation/grad-backdrop-magazine.jpg";
+
 const pricingData = [
   { item: "Large Graduation Banner", details: '4ft × 6ft', regular: "$72", early: "$57.60" },
   { item: "Extra Large Banner", details: '4ft × 8ft', regular: "$95", early: "$76" },
   { item: "Personalized Yard Sign", details: '18" × 24"', regular: "$45", early: "$36" },
   { item: "Graduation Party Package", details: "Banner + 2 Yard Signs + Table Cover", regular: "$249", early: "$199" },
+];
+
+const galleryPhotos = [
+  { src: gradDecorSet, alt: "Red graduation decoration set with banners, balloons, and table covers" },
+  { src: gradBanner2026, alt: "Class of 2026 personalized graduation banner with photo" },
+  { src: gradYardSign, alt: "Custom graduation yard sign with graduate photo" },
+  { src: gradBackdrop, alt: "Magazine-style graduation backdrop with balloon arch" },
+  { src: gradFrostedCup, alt: "Personalized Senior 2026 frosted party cups" },
+  { src: gradPersonalizedCups, alt: "Custom congratulations graduation cups and koozies" },
+  { src: gradCupsFrosted, alt: "Cheers to the Class frosted graduation cups" },
+  { src: gradCupsPurple, alt: "Custom graduation party cups with names" },
+  { src: gradCoasters, alt: "Personalized graduation photo coasters - Class of 2026" },
+  { src: gradCupcakeToppers, alt: "Custom graduation cupcake toppers with graduate faces" },
 ];
 
 const trends = [
@@ -31,11 +55,6 @@ const whyReasons = [
   { icon: Star, text: "100% satisfaction guaranteed — we don't rest until you love it" },
   { icon: Sparkles, text: "One-stop shop — banners, signs, cups, apparel, invitations & more" },
 ];
-
-const placeholderPhotos = Array.from({ length: 10 }, (_, i) => ({
-  id: i + 1,
-  label: `Grad Banner Photo ${i + 1}`,
-}));
 
 const Graduation2026 = () => {
   usePageSEO({
@@ -127,19 +146,21 @@ const Graduation2026 = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {placeholderPhotos.map((photo) => (
+            {galleryPhotos.map((photo, i) => (
               <motion.div
-                key={photo.id}
+                key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: photo.id * 0.05 }}
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-muted/60 border-2 border-dashed border-muted-foreground/20 hover:border-primary/40 transition-colors duration-300"
+                transition={{ delay: i * 0.05 }}
+                className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-muted border border-border hover:border-primary/40 transition-colors duration-300 shadow-md hover:shadow-xl"
               >
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                  <GraduationCap className="w-10 h-10 text-muted-foreground/30 mb-3 group-hover:text-primary/40 transition-colors" />
-                  <p className="text-sm font-bold text-muted-foreground/50 group-hover:text-muted-foreground/70 transition-colors">{photo.label}</p>
-                </div>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </motion.div>
             ))}
           </div>
