@@ -15,7 +15,8 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
-import beerTubeImg from "@/assets/beer-tube-invention.jpg";
+import beerTubeProduct from "@/assets/beer-tube-product.jpg";
+import daveJasonPhoto from "@/assets/dave-jason-beer-tubes.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
@@ -180,19 +181,29 @@ const About = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="w-full md:w-48 shrink-0"
+                  className="w-full md:w-56 shrink-0 space-y-4"
                 >
                   <div className="rounded-2xl overflow-hidden border-2 border-primary/20 shadow-lg">
                     <img
-                      src={beerTubeImg}
-                      alt="Beer tube dispenser co-invented by David Stein"
+                      src={beerTubeProduct}
+                      alt="The beer tube dispenser co-invented by David Stein"
                       className="w-full h-auto object-cover"
                       loading="lazy"
-                      width={640}
-                      height={800}
+                      width={600}
+                      height={600}
                     />
                   </div>
-                  <p className="text-xs text-muted-foreground text-center mt-2 italic">
+                  <div className="rounded-2xl overflow-hidden border-2 border-primary/20 shadow-lg">
+                    <img
+                      src={daveJasonPhoto}
+                      alt="David Stein and Jason with their beer tube inventions at a bar"
+                      className="w-full h-auto object-cover"
+                      loading="lazy"
+                      width={600}
+                      height={900}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground text-center italic">
                     The beer tube — co-invented by David
                   </p>
                 </motion.div>
