@@ -50,6 +50,7 @@ const MenusAndTableTents = lazy(() => import("./pages/MenusAndTableTents.tsx"));
 const LetterheadAndEnvelopes = lazy(() => import("./pages/LetterheadAndEnvelopes.tsx"));
 const LargeFormatPrinting = lazy(() => import("./pages/LargeFormatPrinting.tsx"));
 const DoorHangers = lazy(() => import("./pages/DoorHangers.tsx"));
+const Graduation2026 = lazy(() => import("./pages/Graduation2026.tsx"));
 
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));
@@ -142,6 +143,7 @@ const App = () => (
             <Route path="/letterhead-and-envelopes" element={<LetterheadAndEnvelopes />} />
             <Route path="/large-format-printing" element={<LargeFormatPrinting />} />
             <Route path="/door-hangers" element={<DoorHangers />} />
+            <Route path="/graduation-2026" element={<Graduation2026 />} />
             <Route path="/research" element={<Research />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
