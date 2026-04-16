@@ -143,6 +143,7 @@ const App = () => (
             <Route path="/letterhead-and-envelopes" element={<LetterheadAndEnvelopes />} />
             <Route path="/large-format-printing" element={<LargeFormatPrinting />} />
             <Route path="/door-hangers" element={<DoorHangers />} />
+            <Route path="/graduation-2026" element={<Graduation2026 />} />
             <Route path="/research" element={<Research />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
