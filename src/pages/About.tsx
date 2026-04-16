@@ -148,26 +148,54 @@ const About = () => {
                 founder of Buckeye Biz Hub.
               </p>
               <p>
-                After years working in the printing and promotional products
-                industry, I kept seeing the same frustrating story play out for
-                small and medium-sized businesses here in Columbus. They were
-                stuck choosing between slow responses, hidden fees, inconsistent
-                quality, or dealing with big impersonal online printers that
-                treated them like just another order number.
-              </p>
-              <p className="text-foreground font-semibold text-xl">
-                I knew there had to be a better way.
+                My entrepreneurial journey spans more than 30 years. I've
+                started three different companies completely from scratch —
+                first in the hospitality industry, then in the beverage
+                industry, and later in the gasoline industry. Along the way
+                I've learned every facet of business: from product development
+                and manufacturing to sales, marketing, operations, and scaling
+                a company.
               </p>
               <p>
-                So I started Buckeye Biz Hub as a{" "}
+                One of the highlights I'm most known for is{" "}
+                <span className="font-bold text-foreground">
+                  co-inventing the beer tube
+                </span>{" "}
+                — that popular beer dispenser you see in bars and restaurants
+                all across the country. I took the idea from a simple basement
+                prototype all the way to a{" "}
+                <span className="text-primary font-bold">
+                  $5 million-a-year business
+                </span>
+                . That experience taught me how to turn a good idea into a
+                successful, scalable company while keeping quality high and
+                customers happy.
+              </p>
+              <p>
+                After three decades of building, running, and growing
+                businesses, I decided to create something different — a{" "}
                 <span className="text-primary font-bold">
                   true local concierge service
                 </span>{" "}
-                — your single trusted partner for everything branding-related.
-                From premium business cards and promotional products to yard
-                signs, vehicle wraps, door hangers, banners, branded apparel,
-                and large-format signage, we handle it all with care, speed, and
-                complete transparency.
+                for businesses in Columbus and Central Ohio. That's how Buckeye
+                Biz Hub was born.
+              </p>
+              <p>
+                Today, I bring all of that hard-earned knowledge — along with
+                our team's combined{" "}
+                <span className="font-bold text-foreground">
+                  50+ years of real-world business building experience
+                </span>{" "}
+                — to help small and medium-sized Ohio businesses get the
+                professional branding materials they need at fair prices. From
+                premium business cards and promotional products to yard signs,
+                vehicle wraps, door hangers, banners, and branded apparel, we
+                handle it all with honesty, speed, and genuine care.
+              </p>
+              <p className="text-foreground font-semibold text-xl">
+                Our goal is simple: use everything we've learned over the years
+                to help you save money, save time, and make your business stand
+                out — so you can focus on what you do best.
               </p>
             </div>
           </motion.div>
