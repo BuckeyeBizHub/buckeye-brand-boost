@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, GraduationCap, Star, Clock, Shield, Heart, Sparkles, CheckCircle } from "lucide-react";
+import { ArrowRight, Phone, GraduationCap, Star, Clock, Shield, Heart, Sparkles, CheckCircle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
