@@ -185,7 +185,7 @@ const About = () => {
                   <img
                     src={beerTubeProduct}
                     alt="The beer tube dispenser co-invented by David Stein"
-                    className="w-full h-48 md:h-56 object-cover"
+                    className="w-full h-64 md:h-80 object-contain bg-muted/30"
                     loading="lazy"
                     width={600}
                     height={600}
@@ -195,7 +195,7 @@ const About = () => {
                   <img
                     src={daveJasonPhoto}
                     alt="David Stein and Jason with their beer tube inventions"
-                    className="w-full h-48 md:h-56 object-cover object-top"
+                    className="w-full h-64 md:h-80 object-contain bg-muted/30"
                     loading="lazy"
                     width={600}
                     height={900}
