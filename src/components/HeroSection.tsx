@@ -129,14 +129,6 @@ const HeroSection = () => {
               </Button>
             </Link>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-5"
-          >
-            <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 [&_img]:sm:h-14 gap-4 sm:gap-6" />
-          </motion.div>
         </div>
 
         {/* Right: David headshot + Premium printing showcase */}
