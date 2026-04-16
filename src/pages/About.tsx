@@ -179,18 +179,8 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-2 gap-4 my-2"
+                className="max-w-sm mx-auto my-2"
               >
-                <div className="rounded-xl overflow-hidden shadow-md">
-                  <img
-                    src={beerTubeProduct}
-                    alt="The beer tube dispenser co-invented by David Stein"
-                    className="w-full h-auto object-cover rounded-xl"
-                    loading="lazy"
-                    width={600}
-                    height={600}
-                  />
-                </div>
                 <div className="rounded-xl overflow-hidden shadow-md">
                   <img
                     src={daveJasonPhoto}
@@ -201,8 +191,8 @@ const About = () => {
                     height={900}
                   />
                 </div>
-                <p className="col-span-2 text-xs text-muted-foreground text-center italic -mt-2">
-                  The beer tube — co-invented by David Stein
+                <p className="text-xs text-muted-foreground text-center italic mt-2">
+                  David &amp; Jason with their beer tube invention
                 </p>
               </motion.div>
               <p>
@@ -231,6 +221,27 @@ const About = () => {
                 to help you save money, save time, and make your business stand
                 out — so you can focus on what you do best.
               </p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="max-w-sm mx-auto mt-2"
+              >
+                <div className="rounded-xl overflow-hidden shadow-md">
+                  <img
+                    src={beerTubeProduct}
+                    alt="The beer tube dispenser co-invented by David Stein"
+                    className="w-full h-auto object-cover rounded-xl"
+                    loading="lazy"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground text-center italic mt-2">
+                  The beer tube — co-invented by David Stein
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
