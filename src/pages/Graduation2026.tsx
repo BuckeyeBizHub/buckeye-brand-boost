@@ -38,6 +38,24 @@ const galleryPhotos = [
   { src: gradCupcakeToppers, alt: "Custom graduation cupcake toppers with graduate faces" },
 ];
 
+const trends = [
+  "Custom Photo Backdrops & Step & Repeat Banners",
+  "Personalized Plastic Cups & Drinkware",
+  "Custom Cutout Yard Signs (graduate photo cutouts)",
+  "Table Covers & Runners with names or school colors",
+  "Graduation Party Invitations & Thank You Cards",
+  "Branded T-Shirts, Hoodies & Caps for the graduate and family",
+  "Custom Stickers, Banners, and Balloon Packages",
+];
+
+const whyReasons = [
+  { icon: Clock, text: "Fast turnaround — most orders ship in 3–5 business days, rush available" },
+  { icon: Heart, text: "Local, personal concierge service — David handles every detail for you" },
+  { icon: Shield, text: "Premium materials that last — weather-resistant, vibrant, and built to impress" },
+  { icon: Star, text: "100% satisfaction guaranteed — we don't rest until you love it" },
+  { icon: Sparkles, text: "One-stop shop — banners, signs, cups, apparel, invitations & more" },
+];
+
 const Graduation2026 = () => {
   usePageSEO({
     title: "2026 Graduation Banners & Party Printing – Columbus, Ohio",
