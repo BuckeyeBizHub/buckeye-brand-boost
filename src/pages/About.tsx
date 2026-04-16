@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
+import beerTubeImg from "@/assets/beer-tube-invention.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
