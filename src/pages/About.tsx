@@ -181,21 +181,21 @@ const About = () => {
                 transition={{ duration: 0.5 }}
                 className="grid grid-cols-2 gap-4 my-2"
               >
-                <div className="rounded-xl overflow-hidden border-2 border-primary/20 shadow-md">
+                <div className="rounded-xl overflow-hidden shadow-md">
                   <img
                     src={beerTubeProduct}
                     alt="The beer tube dispenser co-invented by David Stein"
-                    className="w-full h-64 md:h-80 object-contain bg-muted/30"
+                    className="w-full h-auto object-cover rounded-xl"
                     loading="lazy"
                     width={600}
                     height={600}
                   />
                 </div>
-                <div className="rounded-xl overflow-hidden border-2 border-primary/20 shadow-md">
+                <div className="rounded-xl overflow-hidden shadow-md">
                   <img
                     src={daveJasonPhoto}
                     alt="David Stein and Jason with their beer tube inventions"
-                    className="w-full h-64 md:h-80 object-contain bg-muted/30"
+                    className="w-full h-auto object-cover rounded-xl"
                     loading="lazy"
                     width={600}
                     height={900}
