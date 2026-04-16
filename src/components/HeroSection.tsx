@@ -204,7 +204,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
-        className="relative z-10 grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4 pb-6 sm:pb-8"
+        className="relative z-10 grid grid-cols-3 max-w-md sm:max-w-xl mx-auto px-4 mt-8 sm:mt-10"
       >
         {[
           { value: "500+", label: "Ohio Businesses" },
