@@ -20,16 +20,18 @@ import gradBackdrop from "@/assets/graduation/grad-backdrop-magazine.jpg";
 import blogFeatureBanner from "@/assets/graduation/blog-feature-banner.png";
 
 const pricingData = [
-  { item: "Large Graduation Banner", details: '4ft × 6ft', regular: "$72", early: "$57.60" },
-  { item: "Extra Large Banner", details: '4ft × 8ft', regular: "$95", early: "$76" },
-  { item: "Personalized Yard Sign", details: '18" × 24"', regular: "$45", early: "$36" },
-  { item: "Graduation Party Package", details: "Banner + 2 Yard Signs + Table Cover", regular: "$249", early: "$199" },
+  { item: "Custom Graduation Banner", details: "2ft × 6ft", ours: "$37.50", national: "$45 – $75", save: "Up to $37.50" },
+  { item: "Custom Graduation Banner", details: "3ft × 6ft", ours: "$56.25", national: "$55 – $95", save: "Up to $38.75" },
+  { item: "Custom Graduation Banner", details: "4ft × 6ft", ours: "$70.00", national: "$70 – $125", save: "Up to $55" },
+  { item: "Custom Graduation Banner", details: "4ft × 8ft", ours: "$95.00", national: "$85 – $155", save: "Up to $60" },
+  { item: "Custom Graduation Yard Sign", details: '24" × 24"', ours: "$45 / sign", national: "$55 – $75 / sign", save: "Up to $30 / sign" },
+  { item: "Yard Sign Bundle (8 signs)", details: '24" × 24" with stakes', ours: "$125 for 8", national: "$160 – $240 for 8", save: "Up to $115" },
 ];
 
 const galleryPhotos = [
   { src: gradDecorSet, alt: "Red graduation decoration set with banners, balloons, and table covers" },
   { src: gradBanner2026, alt: "Class of 2026 personalized graduation banner with photo" },
-  { src: gradYardSign, alt: "Custom graduation yard sign with graduate photo" },
+  { src: gradYardSign, alt: "Custom 24x24 graduation yard sign with graduate photo" },
   { src: gradBackdrop, alt: "Magazine-style graduation backdrop with balloon arch" },
   { src: gradFrostedCup, alt: "Personalized Senior 2026 frosted party cups" },
   { src: gradPersonalizedCups, alt: "Custom congratulations graduation cups and koozies" },
@@ -40,43 +42,43 @@ const galleryPhotos = [
 ];
 
 const trends = [
-  "Custom Photo Backdrops & Step & Repeat Banners",
-  "Personalized Plastic Cups & Drinkware",
-  "Custom Cutout Yard Signs (graduate photo cutouts)",
-  "Table Covers & Runners with names or school colors",
-  "Graduation Party Invitations & Thank You Cards",
-  "Branded T-Shirts, Hoodies & Caps for the graduate and family",
-  "Custom Stickers, Banners, and Balloon Packages",
+  "Bold photo backdrop banners",
+  "Personalized photo cutout yard signs",
+  "Directional arrow open house signs",
+  "Custom graduation cups & drinkware",
+  "Branded graduation apparel & hoodies",
+  "Step-and-repeat party backdrops",
+  "Custom stickers, table covers, and favors",
 ];
 
 const whyReasons = [
-  { icon: Clock, text: "Fast turnaround — most orders ship in 3–5 business days, rush available" },
-  { icon: Heart, text: "Local, personal concierge service — David handles every detail for you" },
-  { icon: Shield, text: "Premium materials that last — weather-resistant, vibrant, and built to impress" },
-  { icon: Star, text: "100% satisfaction guaranteed — we don't rest until you love it" },
-  { icon: Sparkles, text: "One-stop shop — banners, signs, cups, apparel, invitations & more" },
+  { icon: Clock, text: "Local Columbus printing with fast turnaround — most orders ship in 3–5 business days" },
+  { icon: Shield, text: "Premium weatherproof materials built to look great rain or shine" },
+  { icon: Sparkles, text: "Full design help included at no extra charge — we make it look amazing" },
+  { icon: Star, text: "Much lower prices than national online printers — every single time" },
+  { icon: Heart, text: "Concierge service — David handles every detail so you don't have to" },
 ];
 
 const Graduation2026 = () => {
   usePageSEO({
-    title: "2026 Graduation Banners & Party Printing – Columbus, Ohio",
+    title: "2026 Graduation Banners & Yard Signs – Columbus, Ohio",
     description:
-      "Custom graduation banners, yard signs, party printing, and more for the Class of 2026. Proudly made in Columbus, Ohio. Save 20% when you order by May 1!",
+      "Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices.",
   });
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "2026 Graduation Banners & Party Printing",
-    description: "Custom graduation banners, yard signs, cups, cutouts and party printing for the Class of 2026.",
+    name: "2026 Graduation Banners & Yard Signs",
+    description: "Custom graduation banners and 24x24 yard signs for the Class of 2026. Lower than national online printer pricing.",
     brand: { "@type": "Brand", name: "Buckeye Biz Hub" },
     offers: {
       "@type": "AggregateOffer",
-      lowPrice: "36",
-      highPrice: "199",
+      lowPrice: "37.50",
+      highPrice: "125",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-      offerCount: "4",
+      offerCount: "6",
     },
     provider: {
       "@type": "LocalBusiness",
@@ -88,8 +90,8 @@ const Graduation2026 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="2026 Graduation Banners & Party Printing – Columbus, Ohio"
-        description="Custom graduation banners, yard signs, party printing, and more for the Class of 2026. Proudly made in Columbus, Ohio. Save 20% when you order by May 1!"
+        title="2026 Graduation Banners & Yard Signs – Columbus, Ohio"
+        description="Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices."
         structuredData={[jsonLd]}
       />
       <Navbar />
@@ -111,27 +113,27 @@ const Graduation2026 = () => {
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-6 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-            2026 Graduation Banners
+            2026 Graduation Banners <span className="text-[hsl(45,70%,55%)]">&</span> Yard Signs
             <br />
-            <span className="text-[hsl(45,70%,55%)]">&</span> Party Printing
+            <span className="text-[hsl(45,70%,55%)]">Make Their Big Day Stand Out</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8 font-semibold">
-            Make this graduation unforgettable with custom banners, signs, cups, cutouts, and more — proudly made in Columbus.
+            Custom banners and premium 24" × 24" yard signs proudly made in Columbus.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}>
             <Link to="/contact?service=graduation-2026">
-              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-12 py-7 sm:py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
-                <GraduationCap className="w-5 h-5" />
-                Get Your 2026 Graduation Package – Save 20% by May 1
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base lg:text-lg px-6 sm:px-10 py-7 sm:py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group tracking-wider transition-all duration-300 max-w-full whitespace-normal h-auto leading-tight">
+                <GraduationCap className="w-5 h-5 flex-shrink-0" />
+                <span className="text-center">Get Your 2026 Graduation Package – Banners from $37.50 • 8 Yard Signs Only $125</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
           </motion.div>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-sm text-[hsl(45,70%,55%)]/70 mt-4 font-semibold">
-            ⏰ Early Bird Ends May 1, 2026 — Don't Miss Out!
+            🏆 Beat National Big-Box Prices — Local Columbus Service
           </motion.p>
         </div>
       </section>
@@ -173,11 +175,12 @@ const Graduation2026 = () => {
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-4 bg-primary/10 px-5 py-2 rounded-full border border-primary/20 text-primary">
-              <Sparkles className="w-3.5 h-3.5" /> Early Bird Pricing
+              <Sparkles className="w-3.5 h-3.5" /> Beat National Big-Box Prices
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Featured 2026 Graduation Products <span className="text-[hsl(45,70%,50%)]">& Pricing</span>
+              Featured 2026 Graduation Pricing <span className="text-[hsl(45,70%,50%)]">– Beat National Prices</span>
             </h2>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">Local Columbus printing at lower prices than the big national online printers. Always.</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-border overflow-hidden shadow-xl">
@@ -185,25 +188,27 @@ const Graduation2026 = () => {
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-ohio-navy text-primary-foreground">
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider">Item</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider">Size / Details</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider text-right">Regular</th>
-                    <th className="px-6 py-4 font-bold text-sm uppercase tracking-wider text-right">
-                      <span className="inline-flex items-center gap-1.5 bg-[hsl(45,70%,50%)/0.2] px-3 py-1 rounded-full text-[hsl(45,70%,55%)]">
-                        🎓 2026 Early Bird
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Product</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Size</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">
+                      <span className="inline-flex items-center gap-1.5 bg-[hsl(45,70%,50%)/0.2] px-3 py-1 rounded-full text-[hsl(45,70%,55%)] whitespace-nowrap">
+                        🎓 Our Price
                       </span>
                     </th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">National Big-Box</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right text-[hsl(120,60%,75%)]">You Save</th>
                   </tr>
                 </thead>
                 <tbody>
                   {pricingData.map((row, i) => (
-                    <tr key={row.item} className={`border-b border-border ${i % 2 === 0 ? "bg-muted/30" : "bg-background"} hover:bg-primary/5 transition-colors`}>
-                      <td className="px-6 py-5 font-bold text-foreground">{row.item}</td>
-                      <td className="px-6 py-5 text-muted-foreground">{row.details}</td>
-                      <td className="px-6 py-5 text-right text-muted-foreground line-through">{row.regular}</td>
-                      <td className="px-6 py-5 text-right">
-                        <span className="text-primary font-black text-lg">{row.early}</span>
+                    <tr key={`${row.item}-${row.details}`} className={`border-b border-border ${i % 2 === 0 ? "bg-muted/30" : "bg-background"} hover:bg-primary/5 transition-colors`}>
+                      <td className="px-4 sm:px-6 py-5 font-bold text-foreground text-sm sm:text-base">{row.item}</td>
+                      <td className="px-4 sm:px-6 py-5 text-muted-foreground text-sm">{row.details}</td>
+                      <td className="px-4 sm:px-6 py-5 text-right">
+                        <span className="text-primary font-black text-base sm:text-lg whitespace-nowrap">{row.ours}</span>
                       </td>
+                      <td className="px-4 sm:px-6 py-5 text-right text-muted-foreground text-sm whitespace-nowrap">{row.national}</td>
+                      <td className="px-4 sm:px-6 py-5 text-right font-bold text-[hsl(145,55%,40%)] text-sm whitespace-nowrap">{row.save}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -211,7 +216,7 @@ const Graduation2026 = () => {
             </div>
           </motion.div>
 
-          <p className="text-center text-sm text-muted-foreground mt-4">* Early Bird pricing valid for orders placed by May 1, 2026. Custom designs may vary.</p>
+          <p className="text-center text-sm text-muted-foreground mt-4">* National pricing based on standard online big-box printer rates. Custom designs and rush options available.</p>
         </div>
       </section>
 
@@ -318,13 +323,13 @@ const Graduation2026 = () => {
             <span className="text-[hsl(45,80%,60%)]">Class of 2026</span> in style?
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
-            Lock in your 20% early bird savings before May 1. Custom designs, premium materials, and Columbus-local service.
+            Custom banners from $37.50 and 8 yard signs for just $125. Premium materials, local Columbus service, and lower than national prices.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact?service=graduation-2026">
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
                 <GraduationCap className="w-6 h-6" />
-                Reserve Your Graduation Package — Save 20%
+                Reserve Your Graduation Package Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>

@@ -124,7 +124,7 @@ const HeroSection = () => {
                 className="w-full bg-gradient-to-r from-primary via-ohio-red-light to-primary text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.55)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.75)] transition-all duration-500 group tracking-wide border-2 border-[hsl(45,70%,55%)] hover:scale-[1.02]"
               >
                 <span className="text-lg sm:text-xl">🎓</span>
-                <span className="text-center leading-tight">2026 Graduation Special – Save 20% on Banners & Party Printing</span>
+                <span className="text-center leading-tight">2026 Graduation Special – Banners from $37.50 • 8 Yard Signs Only $125</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300 flex-shrink-0" />
               </Button>
             </Link>
