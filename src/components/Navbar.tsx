@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, ExternalLink, Facebook, Instagram } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
@@ -178,16 +178,49 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* CTA */}
-          <Link to="/contact" className="hidden lg:block flex-shrink-0">
-            <Button
-              size="sm"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black px-6 shadow-[0_0_25px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_40px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider text-xs"
-            >
-              Get 24-Hour Quote
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            </Button>
-          </Link>
+          {/* Social + CTA */}
+          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <div className="flex items-center gap-1.5 pr-1 border-r border-primary-foreground/10 mr-1">
+              <a
+                href="https://www.facebook.com/BuckeyeBizHub/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/buckeyebizhub"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.pinterest.com/BuckeyeBizHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Pinterest"
+                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+                </svg>
+              </a>
+            </div>
+            <Link to="/contact">
+              <Button
+                size="sm"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black px-6 shadow-[0_0_25px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_40px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider text-xs"
+              >
+                Get 24-Hour Quote
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </Button>
+            </Link>
+          </div>
 
           {/* Mobile toggle */}
           <button className="lg:hidden text-primary-foreground p-1" onClick={() => setOpen(!open)}>
@@ -274,6 +307,37 @@ const Navbar = () => {
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </Button>
               </Link>
+              <div className="flex items-center justify-center gap-4 mt-5">
+                <a
+                  href="https://www.facebook.com/BuckeyeBizHub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Facebook"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/buckeyebizhub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Instagram"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.pinterest.com/BuckeyeBizHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow us on Pinterest"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         )}
