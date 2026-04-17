@@ -59,6 +59,7 @@ export default {
           "grey-dark": "hsl(var(--ohio-grey-dark))",
           "red-glow": "hsl(var(--ohio-red-glow))",
           gold: "hsl(var(--ohio-gold))",
+          "gold-dark": "hsl(var(--ohio-gold-dark))",
           forest: "hsl(var(--ohio-forest))",
           navy: "hsl(var(--ohio-navy))",
           cream: "hsl(var(--ohio-cream))",
