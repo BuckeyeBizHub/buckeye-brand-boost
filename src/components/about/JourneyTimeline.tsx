@@ -11,42 +11,42 @@ import {
 
 const milestones = [
   {
-    year: "1990s",
+    year: "1990's",
     icon: UtensilsCrossed,
     title: "Hospitality Beginnings",
     description:
       "Launched my first company from scratch in the hospitality industry — learning the fundamentals of operations, service, and what it really takes to make customers happy.",
   },
   {
-    year: "Early 2000s",
+    year: "Early 2000's",
     icon: Beer,
     title: "Entered the Beverage Industry",
     description:
       "Pivoted into beverage, building a second company from the ground up while mastering product development, sales, and distribution.",
   },
   {
-    year: "Mid 2000s",
+    year: "Mid 2000's",
     icon: Lightbulb,
     title: "Co-Invented the Beer Tube",
     description:
       "From a basement prototype to bars and restaurants nationwide — co-invented the iconic beer tube dispenser that changed how people share drinks.",
   },
   {
-    year: "Late 2000s",
+    year: "Late 2000's",
     icon: TrendingUp,
     title: "Scaled to $5M / Year",
     description:
       "Grew the beer tube company into a $5 million-a-year business — proving I could turn an idea into a real, scalable operation while keeping quality high.",
   },
   {
-    year: "2010s",
+    year: "2010's",
     icon: Fuel,
     title: "Built a Gasoline Industry Company",
     description:
       "Started a third company in the gasoline industry — adding manufacturing, large-scale operations, and B2B leadership to my experience.",
   },
   {
-    year: "2020s",
+    year: "2020's",
     icon: Building2,
     title: "Founded Buckeye Biz Hub",
     description:
