@@ -5,32 +5,40 @@ const projects = [
   {
     icon: Home,
     client: "Local Real Estate Agent",
-    need: 'Needed 25 yard signs for new listings.',
+    need: "Needed 30 yard signs for open house listings.",
     solution:
       'We delivered custom 24"×24" signs with directional arrows in 6 days.',
-    price: "$125 total",
+    price: "$225 total",
     timeline: "6 days",
-    outcome: "Helped her get more showings immediately.",
+    outcomes: [
+      "New design created 42% more traffic than previous weeks in the same location",
+    ],
   },
   {
     icon: Truck,
     client: "Columbus Contractor",
-    need: "Wanted his entire fleet wrapped.",
+    need: "Needed 3 new Ford F-150 trucks wrapped with MC/DOT numbers plus partial company branding.",
     solution:
-      "We sourced premium 3M materials, designed the wrap, and completed professional installation.",
-    price: "Full fleet wrap",
-    timeline: "14 days",
-    outcome: "Turned his trucks into 24/7 rolling billboards.",
+      "We checked with 3 A+ local wrap companies to compare schedules and costs, then used our leverage to get the best combination of quality and pricing.",
+    price: "3 branded trucks",
+    timeline: "10 days",
+    outcomes: [
+      "Turned his trucks into 24/7 rolling billboards",
+      "Got him a 12% fleet discount on pricing",
+    ],
   },
   {
     icon: UtensilsCrossed,
     client: "Restaurant Owner",
-    need: "Needed 1,000 custom door hangers with tear-off coupons.",
+    need: "Needed 1,000 custom door hangers with tear-off coupons for a new store opening.",
     solution:
       "We helped design the coupon, printed them, and delivered them ready to distribute.",
     price: "1,000 hangers",
-    timeline: "5 days",
-    outcome: "Drove measurable weekend traffic.",
+    timeline: "6 days",
+    outcomes: [
+      "Largest new store opening to date",
+      "Saved $103.40 vs. big-box online printers",
+    ],
   },
 ];
 
@@ -90,10 +98,15 @@ const RealProjectExamples = () => (
                   <Clock className="w-4 h-4 text-primary flex-shrink-0" />
                   <span className="font-semibold">Delivered in {p.timeline}</span>
                 </div>
-                <div className="flex items-start gap-2 text-sm text-foreground/80">
-                  <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span>{p.outcome}</span>
-                </div>
+                {p.outcomes.map((o) => (
+                  <div
+                    key={o}
+                    className="flex items-start gap-2 text-sm text-foreground/80"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{o}</span>
+                  </div>
+                ))}
               </div>
             </motion.article>
           );

@@ -73,12 +73,16 @@ const WhyOurPricingIsDifferent = () => (
         viewport={{ once: true }}
         className="bg-ohio-grey-dark rounded-2xl p-8 md:p-10 text-center max-w-3xl mx-auto"
       >
-        <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
-          The result?{" "}
-          <span className="text-primary font-bold">
-            Fair, competitive pricing
-          </span>{" "}
-          plus the personal service that big companies simply can't match.
+        <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed italic">
+          "We keep our pricing fair and transparent because we're building{" "}
+          <span className="text-primary font-bold not-italic">
+            long-term partnerships
+          </span>
+          , not chasing one-time transactions. When you work with us, you know
+          you're getting honest value every single time."
+        </p>
+        <p className="mt-5 text-sm font-bold text-primary-foreground/80 uppercase tracking-wider">
+          — David Stein, Your Buckeye Branding Concierge
         </p>
       </motion.div>
     </div>
