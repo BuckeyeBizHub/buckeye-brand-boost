@@ -72,18 +72,22 @@ const JourneyTimeline = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-            30+ Years of Building
+          <span className="inline-block bg-ohio-gold/15 border border-ohio-gold/40 text-ohio-gold-dark text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+            ★ 30+ Years of Building ★
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">
-            David's Entrepreneurial{" "}
-            <span className="text-primary">Journey</span>
+            30+ Years of Building –{" "}
+            <span className="text-primary">David's Entrepreneurial Journey</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Three companies built from scratch. One iconic invention. Decades
             of lessons — all working for you.
           </p>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-6" />
+          <div className="flex items-center justify-center gap-2 mt-6">
+            <div className="w-12 h-1 bg-primary rounded-full" />
+            <div className="w-3 h-3 bg-ohio-gold rounded-full" />
+            <div className="w-12 h-1 bg-primary rounded-full" />
+          </div>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
