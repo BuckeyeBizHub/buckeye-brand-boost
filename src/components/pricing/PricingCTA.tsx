@@ -24,17 +24,18 @@ const PricingCTA = () => (
             className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6"
             style={{ textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
           >
-            Let's Build Something Great Together
+            Ready to see exactly what your project will cost?
           </h2>
-          <p className="text-primary-foreground/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Whether you need 50 t-shirts or a full rebrand, we'll find the best solution at the best price — and make the process easy. Reach out today and let's get started.
+          <p className="text-primary-foreground/85 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+            No pressure. No surprises. Just an honest quote from a local
+            partner who actually cares about your business.
           </p>
           <Link to="/contact">
             <Button
               size="lg"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-14 py-7 rounded-xl shadow-2xl group uppercase tracking-wider"
             >
-              Get Your Free Quote
+              Get Your Free Quote in 24 Hours
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

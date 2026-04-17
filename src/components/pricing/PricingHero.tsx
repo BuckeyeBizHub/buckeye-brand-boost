@@ -32,7 +32,7 @@ const PricingHero = () => (
           style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}
         >
           Transparent Pricing with{" "}
-          <span className="text-primary">Concierge Service Included</span>
+          <span className="text-primary">True Concierge Service</span>
         </motion.h1>
 
         <motion.p
@@ -42,7 +42,8 @@ const PricingHero = () => (
           className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-medium"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
         >
-          Clear pricing. Personal service. No stress.
+          No hidden fees. No surprise charges. Just honest, clear pricing
+          backed by personal attention from start to finish.
         </motion.p>
 
         <motion.div
