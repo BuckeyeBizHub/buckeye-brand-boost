@@ -30,17 +30,17 @@ const fadeUp = {
 
 const differentiators = [
   "We give you fast, honest quotes — usually within 24 hours",
-  "We offer clear, transparent pricing with no hidden fees or surprise charges",
+  "We offer completely transparent pricing with no hidden fees",
   "We personally manage every project from design to delivery",
   "We prioritize USA-made materials whenever possible",
-  "We treat every client like a neighbor, not just another transaction",
+  "We treat every client like a neighbor, not just another order",
 ];
 
 const coreValues = [
-  { icon: Shield, text: "Honesty and transparency in every interaction" },
-  { icon: Clock, text: "Fast, reliable service you can actually count on" },
-  { icon: Heart, text: "Helping small and medium businesses compete and shine without breaking the bank" },
-  { icon: Handshake, text: "Building long-term relationships based on trust and results" },
+  { icon: Shield, text: "Honesty and transparency in everything we do" },
+  { icon: Clock, text: "Fast, reliable service you can count on" },
+  { icon: Heart, text: "Helping small businesses look professional without breaking the bank" },
+  { icon: Handshake, text: "Building long-term relationships based on trust" },
 ];
 
 const cities = [
