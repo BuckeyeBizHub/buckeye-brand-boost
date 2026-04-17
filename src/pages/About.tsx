@@ -17,6 +17,7 @@ import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
 import beerTubeProduct from "@/assets/beer-tube-product.jpg";
 import daveJasonPhoto from "@/assets/dave-jason-beer-tubes.jpg";
+import JourneyTimeline from "@/components/about/JourneyTimeline";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const fadeUp = {
@@ -241,6 +242,9 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Journey Timeline */}
+      <JourneyTimeline />
 
       {/* What Makes Us Different */}
       <section className="py-20 lg:py-28 bg-ohio-cream">
