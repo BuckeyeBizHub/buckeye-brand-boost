@@ -196,25 +196,20 @@ const About = () => {
                 </p>
               </motion.div>
               <p>
-                After three decades of building, running, and growing
-                businesses, I decided to create something different — a{" "}
-                <span className="text-primary font-bold">
-                  true local concierge service
+                After three decades of building and running businesses, I
+                realized most small and medium-sized businesses in Columbus and
+                Central Ohio don't need another big, impersonal printer. They
+                need a{" "}
+                <span className="font-bold text-foreground">
+                  trusted local partner
                 </span>{" "}
-                for businesses in Columbus and Central Ohio. That's how Buckeye
-                Biz Hub was born.
+                who understands their challenges and genuinely cares about
+                their success.
               </p>
               <p>
-                Today, I bring all of that hard-earned knowledge — along with
-                our team's combined{" "}
-                <span className="font-bold text-foreground">
-                  50+ years of real-world business building experience
-                </span>{" "}
-                — to help small and medium-sized Ohio businesses get the
-                professional branding materials they need at fair prices. From
-                premium business cards and promotional products to yard signs,
-                vehicle wraps, door hangers, banners, and branded apparel, we
-                handle it all with honesty, speed, and genuine care.
+                That's why I started{" "}
+                <span className="text-primary font-bold">Buckeye Biz Hub</span>{" "}
+                — as a true concierge service for all your branding needs.
               </p>
               <p className="text-foreground font-semibold text-xl">
                 Our goal is simple: use everything we've learned over the years
