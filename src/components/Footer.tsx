@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp } from "lucide-react";
+import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
