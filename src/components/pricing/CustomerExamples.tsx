@@ -113,6 +113,7 @@ const CustomerExamples = () => (
                 </span>
               </div>
             </div>
+            </div>
           </motion.div>
         ))}
       </div>
