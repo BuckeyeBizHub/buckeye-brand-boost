@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import { TrendingDown, CheckCircle, ShieldCheck } from "lucide-react";
+import businessCardsImg from "@/assets/pricing-example-business-cards.jpg";
+import promoPensImg from "@/assets/pricing-example-promo-pens.jpg";
+import vehicleWrapImg from "@/assets/pricing-example-vehicle-wrap.jpg";
+import yardSignsImg from "@/assets/pricing-example-yard-signs.jpg";
 
 const examples = [
   {
     title: "Business Cards",
+    image: businessCardsImg,
+    imageAlt: "Premium red and black business cards stacked on a dark surface",
     description:
       "We sourced premium business cards through our supplier network — comparing options across multiple vendors to lock in the best quality at the lowest price for your brand.",
     ourPrice: "$420",
@@ -12,6 +18,8 @@ const examples = [
   },
   {
     title: "Promotional Products",
+    image: promoPensImg,
+    imageAlt: "Custom branded navy promotional pens with personalized engraving",
     description:
       "From custom pens to branded tote bags, we shopped across our 4,300+ supplier network to find the perfect mix of quality and value for your next event or campaign.",
     ourPrice: "$4,650",
@@ -20,6 +28,8 @@ const examples = [
   },
   {
     title: "Vehicle Wraps",
+    image: vehicleWrapImg,
+    imageAlt: "Full vehicle wrap on a blue roofing company truck with bold branding",
     description:
       "We coordinated design, high-quality print materials, and professional installation — all sourced competitively so your fleet looks incredible without the premium price tag.",
     ourPrice: "$5,250",
@@ -28,6 +38,8 @@ const examples = [
   },
   {
     title: "Outdoor Yard Signs",
+    image: yardSignsImg,
+    imageAlt: "Two custom 18x24 and 24x36 yard signs for Farmers Insurance staked in grass",
     description:
       "Whether it's a handful of signs or a large batch for an event, we compare pricing across trusted suppliers to deliver durable, eye-catching signs at a price that fits your budget.",
     ourPrice: "$1,350",
@@ -62,8 +74,19 @@ const CustomerExamples = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="bg-card rounded-2xl border-2 border-border p-8 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            className="bg-card rounded-2xl border-2 border-border shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden"
           >
+            <div className="relative w-full aspect-[16/10] overflow-hidden bg-muted">
+              <img
+                src={ex.image}
+                alt={ex.imageAlt}
+                loading="lazy"
+                width={800}
+                height={500}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-8 flex flex-col flex-1">
             <h3 className="font-display text-xl font-black text-foreground mb-3">
               {ex.title}
             </h3>
