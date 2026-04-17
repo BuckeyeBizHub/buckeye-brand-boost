@@ -171,7 +171,7 @@ const JourneyTimeline = () => {
                   )}
 
                   {/* Center icon node (desktop) */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg ring-4 ring-background z-10">
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-primary text-primary-foreground items-center justify-center shadow-lg ring-4 ring-ohio-gold/40 z-10">
                     <Icon className="w-6 h-6" />
                   </div>
                 </motion.li>
