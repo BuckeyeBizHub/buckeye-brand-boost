@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ValuePropsStrip from "@/components/ValuePropsStrip";
+import IndustryStrip from "@/components/IndustryStrip";
 import ServicesSection from "@/components/ServicesSection";
 import RealResultsSection from "@/components/RealResultsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
@@ -21,6 +22,7 @@ const Index = () => (
     />
     <Navbar />
     <HeroSection />
+    <IndustryStrip />
     <ValuePropsStrip />
     <ServicesSection />
     <RealResultsSection />
