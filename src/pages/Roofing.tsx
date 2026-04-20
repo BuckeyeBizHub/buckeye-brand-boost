@@ -366,8 +366,10 @@ const Roofing = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[hsl(0,0%,4%/0.9)] via-[hsl(0,0%,4%/0.5)] to-transparent">
-                  <p className="text-primary-foreground text-xs md:text-sm font-bold">{photo.label}</p>
+                <div className="absolute top-3 left-3 right-3 flex justify-start pointer-events-none">
+                  <span className="inline-block bg-primary text-primary-foreground text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg border border-primary-foreground/20">
+                    {photo.label}
+                  </span>
                 </div>
               </motion.div>
             ))}
