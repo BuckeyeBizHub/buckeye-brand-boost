@@ -45,48 +45,64 @@ const products = [
     title: "Full Vehicle Wraps & Fleet Graphics",
     description:
       "Turn every truck, van, and trailer into a 24/7 rolling billboard — designed for visibility, durability, and Ohio weather.",
+    image: `${PHOTO_BASE}/roofing-truck-wrap-bluepeaks.jpg`,
+    imageAlt: "Roofing contractor pickup truck with white and blue branded vehicle wrap",
   },
   {
     icon: Shirt,
     title: "Crew Apparel & Safety Wear",
     description:
       "Embroidered polos, t-shirts, hoodies, and high-vis safety vests built for the job site — comfortable, branded, and long-lasting.",
+    image: `${PHOTO_BASE}/roofing-trade-show-team.jpg`,
+    imageAlt: "Roofing team members wearing matching branded apparel at a trade show booth",
   },
   {
     icon: Palette,
     title: "Logo Design & Complete Branding Refresh",
     description:
       "From logo refinement to full visual identity systems — give your roofing company the polished look established competitors have.",
+    image: `${PHOTO_BASE}/roofing-trade-show-booth.jpg`,
+    imageAlt: "Cohesive roofing brand identity displayed across trade show booth signage",
   },
   {
     icon: Megaphone,
     title: "Door Hangers, Yard Signs & Fertilizer Signs",
     description:
       "High-impact neighborhood marketing that drives leads while you're on a job — printed weather-tough for outdoor use.",
+    image: `${PHOTO_BASE}/roofing-yard-sign-shingles.jpg`,
+    imageAlt: "Roofing contractors free estimates yard sign with shingles graphic",
   },
   {
     icon: FileText,
     title: "Sales Sheets, Folders, Cards & QR Stickers",
     description:
       "Sales sheets, presentation folders, business cards, and QR code stickers that close more bids and put your brand in every customer's hands.",
+    image: `${PHOTO_BASE}/roofing-door-hanger-knockknock.jpg`,
+    imageAlt: "Knock Knock roofing contractor door hanger with services list and call to action",
   },
   {
     icon: LayoutGrid,
     title: "Carbonless Contract & Job-Site Forms",
     description:
       "Estimates, work orders, invoices, inspection forms, and contracts — branded, numbered, and built for the field.",
+    image: `${PHOTO_BASE}/roofing-carbonless-form.jpg`,
+    imageAlt: "Multi-part carbonless contract forms for roofing job sites",
   },
   {
     icon: Users,
     title: "Trade Show Booths & Event Displays",
     description:
       "Retractable banners, table throws, branded backdrops, and giveaways for home shows, expos, and community events.",
+    image: `${PHOTO_BASE}/roofing-pull-up-banners-baron.jpg`,
+    imageAlt: "Pair of retractable roofing contractor trade show banners",
   },
   {
     icon: Mail,
     title: "Postcards & Direct-Mail Campaigns",
     description:
       "Targeted neighborhood postcard campaigns and direct-mail programs that fill your pipeline before storm season ramps up.",
+    image: `${PHOTO_BASE}/roofing-trade-show-bag.jpg`,
+    imageAlt: "Branded roofing company promotional bag handed out at events",
   },
 ];
 
@@ -286,13 +302,23 @@ const Roofing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
+                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
-                  <p.icon className="w-6 h-6 text-primary" />
+                <div className="aspect-[4/3] overflow-hidden bg-ohio-grey-light">
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                <div className="p-7 flex-1 flex flex-col">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                    <p.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
