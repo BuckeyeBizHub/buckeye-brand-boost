@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
-const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-summit.jpg`;
+const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
 const ROOFING_JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 
@@ -143,14 +143,15 @@ const Roofing = () => {
         <div className="absolute inset-0">
           <img
             src={ROOFING_HERO}
-            alt="Summit Roofing Pros branded apparel collection including hoodies, t-shirts, hats, and koozies"
+            alt="Roofing crew in safety vests and hard hats working on a residential roof at golden hour"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.78)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.55)] via-[hsl(0,0%,4%/0.7)] to-[hsl(0,0%,4%/0.95)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.35)_0%,_hsl(0,0%,4%/0.85)_75%)]" />
+          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.6)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.85)] via-[hsl(0,0%,4%/0.55)] to-[hsl(0,0%,4%/0.75)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.4)] via-transparent to-[hsl(0,0%,4%/0.95)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.25)_0%,_hsl(0,0%,4%/0.8)_80%)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
           <motion.div
@@ -163,14 +164,14 @@ const Roofing = () => {
           </motion.div>
           <h1
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
-            style={{ textShadow: "0 2px 4px rgba(0,0,0,0.95), 0 6px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7)" }}
+            style={{ textShadow: "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)" }}
           >
             Make Your Trucks, Crews, and Brand{" "}
             <span className="text-primary text-glow-red">Stand Out on Every Ohio Job Site</span>
           </h1>
           <p
-            className="text-lg md:text-xl text-primary-foreground/95 font-medium leading-relaxed max-w-3xl mx-auto mb-10"
-            style={{ textShadow: "0 2px 6px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85)" }}
+            className="text-lg md:text-xl text-primary-foreground font-medium leading-relaxed max-w-3xl mx-auto mb-10"
+            style={{ textShadow: "0 2px 6px rgba(0,0,0,0.98), 0 4px 18px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7)" }}
           >
             Vehicle wraps, durable crew apparel, door hangers, yard signs, and full marketing materials built for busy roofing companies.
           </p>
