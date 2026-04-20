@@ -53,8 +53,8 @@ const products = [
     title: "Crew Apparel & Safety Wear",
     description:
       "Embroidered polos, t-shirts, hoodies, and high-vis safety vests built for the job site — comfortable, branded, and long-lasting.",
-    image: `${PHOTO_BASE}/roofing-trade-show-team.jpg`,
-    imageAlt: "Roofing team members wearing matching branded apparel at a trade show booth",
+    image: `${PHOTO_BASE}/roofing-apparel-titan.jpg`,
+    imageAlt: "Titan Roofing branded blue polo shirt with embroidered logo, packed for crew delivery",
   },
   {
     icon: Palette,
