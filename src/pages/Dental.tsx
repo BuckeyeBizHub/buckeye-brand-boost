@@ -180,7 +180,7 @@ const Dental = () => {
                 "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)",
             }}
           >
-            Professional Branding & Procurement Partner for{" "}
+            Helping Ohio Dental Practices Look as Professional as the{" "}
             <span
               className="text-primary text-glow-red inline-block"
               style={{
@@ -190,7 +190,7 @@ const Dental = () => {
                 paintOrder: "stroke fill",
               }}
             >
-              Ohio Dental Practices
+              Care They Provide
             </span>
           </h1>
           <p
@@ -200,7 +200,7 @@ const Dental = () => {
                 "0 2px 6px rgba(0,0,0,0.95), 0 4px 18px rgba(0,0,0,0.85), 0 0 40px rgba(0,0,0,0.6)",
             }}
           >
-            We help dental offices look as polished and consistent as the exceptional care you provide — from staff scrubs and patient referral gifts to signage, printed materials, and full rebranding support.
+            Branded staff apparel, thoughtful patient referral gifts, professional signage, and printed materials — all sourced with real dental office experience.
           </p>
           <Link to="/contact">
             <Button
