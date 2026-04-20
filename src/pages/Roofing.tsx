@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
-const ROOFING_HERO = `${PHOTO_BASE}/roofing-truck-wrap-castles.jpg`;
+const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-protech.jpg`;
 const ROOFING_JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-truck-wrap-maspeth.jpg`;
 
@@ -127,7 +127,7 @@ const Roofing = () => {
         <div className="absolute inset-0">
           <img
             src={ROOFING_HERO}
-            alt="Branded red roofing contractor pickup truck with full vehicle wrap on residential job site"
+            alt="Pro Tech Roofing branded pickup truck with full black, red, and white vehicle wrap"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
