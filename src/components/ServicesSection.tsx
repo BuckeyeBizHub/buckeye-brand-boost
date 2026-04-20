@@ -8,7 +8,7 @@ import brochuresHero from "@/assets/trifold-brochure-sample.png";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
 import customApparelPolos from "@/assets/custom-apparel-polos-hoodies.jpg";
 import yardSignsProduct from "@/assets/yard-signs-product.jpg";
-import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
+import vehicleWrapProduct from "@/assets/vehicle-wrap-lumpia-queen-columbus.jpg";
 import serviceRebrandKit from "@/assets/service-rebrand-kit.jpg";
 import serviceWebsiteDesign from "@/assets/service-website-design.jpg";
 import serviceLocalSeo from "@/assets/service-local-seo.jpg";
