@@ -129,9 +129,9 @@ const differences = [
 
 const Dental = () => {
   usePageSEO({
-    title: "Branded Solutions for Ohio Dental Practices & Specialty Offices | Buckeye Biz Hub",
+    title: "Branded Solutions for Ohio Dental Practices & Specialty Offices",
     description:
-      "Professional branding and procurement partner for Ohio dental practices — staff scrubs, patient referral gifts, signage, printed materials, and full rebranding support. Backed by 15+ years inside a real Ohio endodontic practice.",
+      "Branded staff apparel, patient referral gifts, professional signage, and printed materials for Ohio dental practices — sourced with 15+ years of real dental office experience.",
   });
 
   const jsonLd = {
