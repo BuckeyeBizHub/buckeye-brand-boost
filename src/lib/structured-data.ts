@@ -502,6 +502,8 @@ export function howToSchema(opts: HowToOpts): JsonLd {
 export interface ReviewData {
   author: string;
   authorUrl?: string;
+  authorTitle?: string;
+  authorCompany?: string;
   reviewBody: string;
   ratingValue: number;
   datePublished?: string;
