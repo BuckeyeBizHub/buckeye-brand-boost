@@ -486,6 +486,61 @@ const Dental = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 lg:py-28 bg-background border-t border-border">
+        <div className="container max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <HelpCircle className="w-4 h-4" /> Frequently Asked Questions
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-5">
+              Honest Answers to the{" "}
+              <span className="text-primary">Questions Dental Offices Ask Most</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              No fine print, no pressure — just the kind of straight answers you'd want from a neighbor who happens to do this for a living.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((f, i) => (
+                <AccordionItem
+                  key={f.q}
+                  value={`faq-${i}`}
+                  className="bg-card border-2 border-border rounded-xl px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-md transition-all"
+                >
+                  <AccordionTrigger className="text-left font-display text-base md:text-lg font-bold text-foreground hover:no-underline py-5">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+
+          <p className="text-center text-sm text-muted-foreground mt-10">
+            Have a question that isn't covered here?{" "}
+            <Link to="/contact" className="text-primary font-bold hover:underline">
+              Just ask David directly
+            </Link>{" "}
+            — he answers every message personally.
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 lg:py-24 bg-ohio-grey-light">
         <div className="container max-w-4xl mx-auto">
