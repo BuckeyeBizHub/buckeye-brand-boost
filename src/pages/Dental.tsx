@@ -30,6 +30,7 @@ import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
 import dentalOfficeSignage from "@/assets/dental-office-signage.jpg";
 import dentalRebranding from "@/assets/dental-rebranding.jpg";
+import dentalTradeShow from "@/assets/dental-trade-show.jpg";
 
 const products = [
   {
@@ -77,6 +78,8 @@ const products = [
     title: "Trade Show & Community Event Displays",
     description:
       "Professional retractable banners, table throws, branded giveaways, and signage for dental society events, school visits, health fairs, and community outreach where your practice represents itself in person.",
+    image: dentalTradeShow,
+    imageAlt: "Large illuminated dental trade show booth with branded overhead truss signage and product displays",
   },
 ];
 
