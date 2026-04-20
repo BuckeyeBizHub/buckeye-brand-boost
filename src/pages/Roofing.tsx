@@ -61,8 +61,8 @@ const products = [
     title: "Logo Design & Complete Branding Refresh",
     description:
       "From logo refinement to full visual identity systems — give your roofing company the polished look established competitors have.",
-    image: `${PHOTO_BASE}/roofing-trade-show-booth.jpg`,
-    imageAlt: "Cohesive roofing brand identity displayed across trade show booth signage",
+    image: `${PHOTO_BASE}/roofing-business-cards-american.jpg`,
+    imageAlt: "American Roofing branded business cards showcasing complete logo and identity design",
   },
   {
     icon: Megaphone,
