@@ -7,7 +7,7 @@ const industries = [
     emoji: "🦷",
     title: "Dental Practices",
     description:
-      "Branded scrubs, patient referral gifts, office signage, printed materials, and rebranding kits — from someone who's run a dental practice from the inside for 15+ years.",
+      "Branded scrubs, patient referral gifts, office signage, and printed materials — from someone who's run a dental practice from the inside for 15+ years.",
     cta: "See Dental Solutions",
     href: "/dental",
     available: true,
@@ -16,10 +16,28 @@ const industries = [
     emoji: "🏠",
     title: "Roofing Contractors",
     description:
-      "Fleet wraps, crew apparel, door hangers, yard signs, carbonless contract forms, and marketing campaigns — built for the spring busy season and everything after.",
+      "Fleet wraps, crew apparel, door hangers, yard signs, and marketing materials — built for the spring busy season.",
     cta: "See Roofing Solutions",
     href: "/roofing",
     available: true,
+  },
+  {
+    emoji: "🏗️",
+    title: "Construction & GCs",
+    description:
+      "Branded workwear, vehicle graphics, jobsite banners, and safety gear — for crews that represent you on every job site.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
+  },
+  {
+    emoji: "🚛",
+    title: "Fleet & Logistics",
+    description:
+      "Fleet wraps, driver uniforms, safety vests, and branded materials that keep a growing fleet looking consistent.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
   {
     emoji: "🏡",
@@ -28,7 +46,7 @@ const industries = [
       "Business cards, yard signs, branded notepads, closing gifts, and postcards — everything to look sharp and stay top of mind.",
     cta: "Get a Quote",
     href: "/contact",
-    available: true,
+    available: false,
   },
   {
     emoji: "🌿",
@@ -37,24 +55,24 @@ const industries = [
       "Fleet graphics, crew shirts, door hangers, yard signs, and seasonal marketing materials — for companies where every truck is a rolling billboard.",
     cta: "Get a Quote",
     href: "/contact",
-    available: true,
-  },
-  {
-    emoji: "🏗️",
-    title: "Construction & GCs",
-    description:
-      "Branded workwear, vehicle graphics, jobsite banners, trade show booths, and safety gear — for crews that represent you on every job site.",
-    cta: "Coming Soon",
-    href: null,
     available: false,
   },
   {
-    emoji: "🚛",
-    title: "Fleet & Logistics",
+    emoji: "🏥",
+    title: "Medical & Specialty Practices",
     description:
-      "Fleet wraps, driver uniforms, safety vests, and branded materials that keep a growing fleet looking consistent from truck to truck.",
-    cta: "Coming Soon",
-    href: null,
+      "Branded scrubs, patient gift packages, office signage, and printed materials — for practices where professionalism matters.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
+  },
+  {
+    emoji: "🚗",
+    title: "Auto Dealers",
+    description:
+      "Fleet graphics, lot signage, employee polos, and branded customer gifts — for dealers where every detail of the customer experience matters.",
+    cta: "Get a Quote",
+    href: "/contact",
     available: false,
   },
 ];
@@ -87,35 +105,30 @@ const IndustryStrip = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {industries.map((ind, i) => {
             const inner = (
               <div
-                className={`group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 ${
-                  ind.available
-                    ? "hover:border-primary/60 hover:shadow-[0_15px_45px_-15px_hsl(0_85%_40%/0.35)] hover:-translate-y-1"
-                    : "opacity-90"
-                }`}
+                className="group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 hover:border-primary/60 hover:shadow-[0_15px_45px_-15px_hsl(0_85%_40%/0.35)] hover:-translate-y-1"
               >
+                {!ind.available && (
+                  <span className="absolute top-3 right-3 text-[10px] font-extrabold tracking-[0.15em] uppercase bg-muted text-muted-foreground px-2.5 py-1 rounded-full border border-border">
+                    Coming Soon
+                  </span>
+                )}
                 <div className="text-4xl mb-3" aria-hidden="true">
                   {ind.emoji}
                 </div>
-                <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-lg lg:text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
                   {ind.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
                   {ind.description}
                 </p>
-                {ind.available ? (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:gap-2.5 transition-all">
-                    {ind.cta}
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider bg-muted px-3 py-1.5 rounded-full self-start">
-                    {ind.cta}
-                  </span>
-                )}
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:gap-2.5 transition-all">
+                  {ind.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
             );
 
