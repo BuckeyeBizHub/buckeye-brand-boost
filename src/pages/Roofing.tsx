@@ -1,112 +1,252 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Hammer, Truck, Award, Shield } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Hammer,
+  Truck,
+  Award,
+  Shield,
+  Shirt,
+  Palette,
+  Megaphone,
+  FileText,
+  LayoutGrid,
+  Mail,
+  Users,
+  Sparkles,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 import industryConstruction from "@/assets/industry-construction.jpg";
+import bannerJobsite from "@/assets/banner-jobsite-construction.jpg";
+import vehicleWrapBeforeAfter from "@/assets/vehicle-wrap-before-after.jpg";
 
-const offerings = [
+const products = [
   {
-    title: "Full & Partial Fleet Wraps",
+    icon: Truck,
+    title: "Full Vehicle Wraps & Fleet Graphics",
     description:
       "Turn every truck, van, and trailer into a 24/7 rolling billboard — designed for visibility, durability, and Ohio weather.",
   },
   {
-    title: "Durable Crew Apparel",
+    icon: Shirt,
+    title: "Crew Apparel & Safety Wear",
     description:
-      "Embroidered hoodies, hi-vis shirts, hats, and jackets built for the job site — comfortable, branded, and long-lasting.",
+      "Embroidered polos, t-shirts, hoodies, and high-vis safety vests built for the job site — comfortable, branded, and long-lasting.",
   },
   {
-    title: "Door Hangers & Yard Signs",
+    icon: Palette,
+    title: "Logo Design & Complete Branding Refresh",
+    description:
+      "From logo refinement to full visual identity systems — give your roofing company the polished look established competitors have.",
+  },
+  {
+    icon: Megaphone,
+    title: "Door Hangers, Yard Signs & Fertilizer Signs",
     description:
       "High-impact neighborhood marketing that drives leads while you're on a job — printed weather-tough for outdoor use.",
   },
   {
-    title: "Carbonless Forms & Paperwork",
+    icon: FileText,
+    title: "Sales Sheets, Folders, Cards & QR Stickers",
     description:
-      "Estimates, work orders, invoices, and inspection forms — all branded and built for the field.",
+      "Sales sheets, presentation folders, business cards, and QR code stickers that close more bids and put your brand in every customer's hands.",
   },
   {
-    title: "Marketing Collateral",
+    icon: LayoutGrid,
+    title: "Carbonless Contract & Job-Site Forms",
     description:
-      "Brochures, business cards, presentation folders, and proposal kits that close more roofing bids.",
+      "Estimates, work orders, invoices, inspection forms, and contracts — branded, numbered, and built for the field.",
   },
   {
-    title: "Job-Site Signage & Banners",
+    icon: Users,
+    title: "Trade Show Booths & Event Displays",
     description:
-      "A-frames, banners, and lawn signs that build instant credibility every time you're on a project.",
+      "Retractable banners, table throws, branded backdrops, and giveaways for home shows, expos, and community events.",
   },
+  {
+    icon: Mail,
+    title: "Postcards & Direct-Mail Campaigns",
+    description:
+      "Targeted neighborhood postcard campaigns and direct-mail programs that fill your pipeline before storm season ramps up.",
+  },
+];
+
+const audiences = [
+  "Residential Roofers",
+  "Commercial Roofing Contractors",
+  "Industrial Roofing Contractors",
+  "Storm Restoration Specialists",
+  "Multi-Location Roofing Operations",
+  "Exterior & Siding Contractors",
 ];
 
 const Roofing = () => {
   usePageSEO({
-    title: "Roofing Contractor Branding & Marketing | Buckeye Biz Hub",
+    title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors | Buckeye Biz Hub",
     description:
-      "Fleet wraps, crew apparel, door hangers, yard signs, and marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
+      "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
   });
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Buckeye Biz Hub – Roofing Contractor Branding",
+    description:
+      "Vehicle wraps, fleet graphics, crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors.",
+    url: "https://www.buckeyebizhub.com/roofing",
+    areaServed: { "@type": "State", name: "Ohio" },
+    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
+  };
 
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-20 lg:pt-52 lg:pb-28 overflow-hidden">
+      <section className="relative pt-40 pb-24 lg:pt-52 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={industryConstruction}
-            alt="Professional roofing crew with branded truck on a job site"
+            alt="Branded roofing truck with crew wearing matching polos and high-vis vests on a job site"
             className="w-full h-full object-cover"
             loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.7)] via-[hsl(0,0%,4%/0.8)] to-[hsl(0,0%,4%/0.95)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm">
-            <Hammer className="w-4 h-4" /> Roofing & Exterior Contractors
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
+          >
+            <Hammer className="w-4 h-4" /> Central Ohio Roofing Contractors
+          </motion.div>
           <h1
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
             style={{ textShadow: "0 4px 30px rgba(0,0,0,0.8)" }}
           >
-            Branding That Books More{" "}
-            <span className="text-primary text-glow-red">Roofing Jobs</span>
+            Make Your Trucks, Crews, and Brand{" "}
+            <span className="text-primary text-glow-red">Stand Out on Every Ohio Job Site</span>
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/85 font-medium leading-relaxed max-w-3xl mx-auto">
-            Fleet wraps, crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials — built for Central Ohio roofing companies that want to look like the most professional crew on every job.
-          </p>
-        </div>
-      </section>
-
-      {/* Why us */}
-      <section className="py-16 lg:py-20 bg-ohio-grey-light">
-        <div className="container max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-card border-2 border-primary/20 rounded-2xl p-8 md:p-10 shadow-lg"
+          <p
+            className="text-lg md:text-xl text-primary-foreground/85 font-medium leading-relaxed max-w-3xl mx-auto mb-10"
+            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
           >
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-                <Award className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl font-black text-foreground mb-3">
-                  Hands-On Roofing Industry Experience
-                </h2>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  We've personally helped <span className="font-bold text-foreground">9 local roofing operations</span> across Central Ohio elevate their brand — and we doubled sales for a vehicle wrap company that served the roofing trade. We understand the rhythm of the season, the wear-and-tear demands of crew gear, and the marketing channels that actually generate roofing leads in this market.
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            Vehicle wraps, durable crew apparel, door hangers, yard signs, and full marketing materials built for busy roofing companies.
+          </p>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+            >
+              Get Your Free Roofing Branding Quote
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </section>
 
-      {/* What we offer */}
+      {/* Section 1 — Why Roofing Contractors Choose Us */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+                <Shield className="w-4 h-4" /> Why Roofing Contractors Choose Us
+              </span>
+              <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
+                Built for Crews That Work Hard{" "}
+                <span className="text-primary">All Season Long</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                Spring and summer are your busiest months. You need materials that survive the field, look professional on the road, and actually help generate leads — without chasing multiple vendors.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                One trusted point of contact for wraps, apparel, signage, print, and marketing. We move fast because we know your season won't wait.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            >
+              <img
+                src={bannerJobsite}
+                alt="Roofing crew working on a roof with clearly branded truck visible on the job site"
+                className="w-full h-full object-cover aspect-[4/3]"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2 — Our Story */}
+      <section className="py-20 lg:py-28 bg-ohio-grey-light">
+        <div className="container max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:order-2"
+            >
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+                <Award className="w-4 h-4" /> Our Story
+              </span>
+              <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
+                Real Experience with{" "}
+                <span className="text-primary">Fleet-Heavy, Crew-Based Businesses</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                In the last 20 months I helped a local vehicle wrap company <span className="font-bold text-foreground">double their sales</span> through their fleet branding division. I've also started <span className="font-bold text-foreground">3 businesses</span> from the ground up in Central Ohio. Combined with 15+ years supporting my wife Dr. Kerry Stein's endodontics practice, I've learned exactly what fleet-heavy, crew-based businesses need to look sharp every single day.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                We've already helped <span className="font-bold text-foreground">9 different Central Ohio roofing companies</span> with the products they need during peak season — from full truck wraps to last-minute door hangers before a neighborhood blitz.
+              </p>
+              <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
+                — David Stein, Your Buckeye Branding Concierge
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            >
+              <img
+                src={vehicleWrapBeforeAfter}
+                alt="Before and after photos of professional vehicle wraps on contractor trucks"
+                className="w-full h-full object-cover aspect-[4/5]"
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
+                <p className="text-primary-foreground font-bold text-lg">Before & After</p>
+                <p className="text-primary-foreground/70 text-sm">Real fleet branding transformations</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 — Products & Solutions */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -116,56 +256,108 @@ const Roofing = () => {
             className="text-center mb-14"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Truck className="w-4 h-4" /> What We Provide
+              <Sparkles className="w-4 h-4" /> Products & Solutions
             </span>
-            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight">
               Everything a Roofing Crew Needs to{" "}
               <span className="text-primary">Win More Work</span>
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {offerings.map((o, i) => (
+            {products.map((p, i) => (
               <motion.div
-                key={o.title}
+                key={p.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
               >
-                <Shield className="w-7 h-7 text-primary mb-4" />
-                <h3 className="font-display text-lg font-black text-foreground mb-2">{o.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{o.description}</p>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                  <p.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-24 bg-ohio-grey-light">
+      {/* Section 4 — Who We Serve */}
+      <section className="py-20 lg:py-28 bg-ohio-grey-light">
+        <div className="container max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <Users className="w-4 h-4" /> Who We Serve
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
+              Trusted by Roofing Contractors{" "}
+              <span className="text-primary">Across Central Ohio</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Residential roofers, commercial and industrial roofing contractors, storm restoration specialists, and growing multi-location operations across Central Ohio.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid sm:grid-cols-2 gap-3"
+          >
+            {audiences.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 bg-card border border-border rounded-xl px-5 py-4 hover:border-primary/40 hover:shadow-md transition-all"
+              >
+                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="font-semibold text-foreground">{item}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]">
-            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4 leading-tight">
-              Ready to Brand Your <span className="text-primary">Roofing Business?</span>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+          >
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
+              Spring is here — make sure your brand looks{" "}
+              <span className="text-primary">as strong as your workmanship.</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              From wrapping your first truck to outfitting your entire crew, we'll build you a quote in 24 hours. No pressure, just honest pricing and expert guidance.
+              Let's talk fleet wraps, crew apparel, door hangers, yard signs, or a complete marketing rollout. Free consultation, honest pricing, no pressure.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
               >
-                Get Your Free Quote
+                Start Your Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <p className="text-sm text-muted-foreground mt-6">
-              Or browse <Link to="/industries" className="text-primary font-bold hover:underline">all industries we serve</Link>.
+              Or browse{" "}
+              <Link to="/industries" className="text-primary font-bold hover:underline">
+                all industries we serve
+              </Link>
+              .
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
