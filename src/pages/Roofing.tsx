@@ -21,9 +21,23 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
-import industryConstruction from "@/assets/industry-construction.jpg";
-import bannerJobsite from "@/assets/banner-jobsite-construction.jpg";
-import vehicleWrapBeforeAfter from "@/assets/vehicle-wrap-before-after.jpg";
+const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
+const ROOFING_HERO = `${PHOTO_BASE}/roofing-truck-wrap-castles.jpg`;
+const ROOFING_JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
+const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-truck-wrap-maspeth.jpg`;
+
+const galleryPhotos = [
+  { src: `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`, alt: "Full roofing company van wrap with bold mascot graphics", label: "Full Van Wrap" },
+  { src: `${PHOTO_BASE}/roofing-truck-wrap-castles.jpg`, alt: "Red roofing contractor pickup truck with full vehicle graphics", label: "Pickup Truck Wrap" },
+  { src: `${PHOTO_BASE}/roofing-truck-wrap-maspeth.jpg`, alt: "Roofing pickup truck shown from multiple angles with branded graphics", label: "Multi-Angle Truck Wrap" },
+  { src: `${PHOTO_BASE}/roofing-yard-sign-fair.jpg`, alt: "Roofing yard signs staked in lawn for storm restoration marketing", label: "Yard Signs" },
+  { src: `${PHOTO_BASE}/roofing-yard-sign-spartan.jpg`, alt: "Large roofing contractor yard sign in residential lawn", label: "Large Format Yard Sign" },
+  { src: `${PHOTO_BASE}/roofing-yard-sign-contractors.jpg`, alt: "Stack of roofing contractor free estimates yard signs", label: "Bulk Yard Signs" },
+  { src: `${PHOTO_BASE}/roofing-door-hanger-knock.jpg`, alt: "Roofing company door hanger with services and free estimate offer", label: "Door Hangers" },
+  { src: `${PHOTO_BASE}/roofing-door-hanger-baker.jpg`, alt: "Front and back of professional roofing contractor door hanger", label: "Premium Door Hangers" },
+  { src: `${PHOTO_BASE}/roofing-carbonless-form.jpg`, alt: "Multi-part carbonless contract forms for roofing job sites", label: "Carbonless Contract Forms" },
+  { src: `${PHOTO_BASE}/roofing-pull-up-banners.jpg`, alt: "Retractable roofing trade show banners with services and offers", label: "Retractable Banners" },
+];
 
 const products = [
   {
@@ -112,8 +126,8 @@ const Roofing = () => {
       <section className="relative pt-40 pb-24 lg:pt-52 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={industryConstruction}
-            alt="Branded roofing truck with crew wearing matching polos and high-vis vests on a job site"
+            src={ROOFING_HERO}
+            alt="Branded red roofing contractor pickup truck with full vehicle wrap on residential job site"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -186,8 +200,8 @@ const Roofing = () => {
               className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
             >
               <img
-                src={bannerJobsite}
-                alt="Roofing crew working on a roof with clearly branded truck visible on the job site"
+                src={ROOFING_JOBSITE}
+                alt="Fully wrapped roofing service van with bold branding parked at job site"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
@@ -232,14 +246,14 @@ const Roofing = () => {
               className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
             >
               <img
-                src={vehicleWrapBeforeAfter}
-                alt="Before and after photos of professional vehicle wraps on contractor trucks"
+                src={ROOFING_BEFORE_AFTER}
+                alt="Professional fleet branding shown from multiple angles on roofing contractor pickup truck"
                 className="w-full h-full object-cover aspect-[4/5]"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
-                <p className="text-primary-foreground font-bold text-lg">Before & After</p>
-                <p className="text-primary-foreground/70 text-sm">Real fleet branding transformations</p>
+                <p className="text-primary-foreground font-bold text-lg">Real Fleet Branding</p>
+                <p className="text-primary-foreground/70 text-sm">The kind of look that stops traffic</p>
               </div>
             </motion.div>
           </div>
