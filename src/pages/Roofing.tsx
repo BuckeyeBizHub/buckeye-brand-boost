@@ -15,10 +15,17 @@ import {
   Mail,
   Users,
   Sparkles,
+  HelpCircle,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
@@ -106,6 +113,41 @@ const products = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Do you work with both residential and commercial roofing companies?",
+    a: "Yes. We help residential roofers with eye-catching door hangers, yard signs, and crew apparel that builds local trust, and we support commercial and industrial roofers with durable fleet wraps, high-vis safety gear, carbonless contract forms, and professional sales materials that hold up on job sites.",
+  },
+  {
+    q: "How quickly can you deliver fleet wraps or large orders during busy season?",
+    a: "Most standard crew apparel and printed materials ship within 1–3 business days. Full vehicle wraps and larger custom orders typically take 5–10 business days depending on complexity. We also offer rush options when you need something fast for a neighborhood blitz or a big bid.",
+  },
+  {
+    q: "Can you help with last-minute door hangers or yard signs?",
+    a: "Absolutely. Many roofing companies use us for quick-turnaround door hangers and yard signs before a targeted marketing push. We can usually deliver these in 2–3 days.",
+  },
+  {
+    q: "Do you offer volume discounts for larger crews or multi-location companies?",
+    a: "Yes. We provide meaningful discounts for orders of 10+ crew polos or hoodies, full fleet graphics packages, or larger quantities of printed materials. Just let us know your crew size and we'll put together customized pricing.",
+  },
+  {
+    q: "What makes your fleet wraps different from other shops?",
+    a: "We focus on durable, high-quality materials that stand up to Ohio weather, road salt, and job-site conditions. We also make sure the design looks professional both up close and from a distance — because your truck is a moving billboard.",
+  },
+  {
+    q: "Do you help with logo design or full branding refreshes?",
+    a: "Yes. Many roofing companies come to us when they're rebranding or want a more cohesive look across trucks, uniforms, signs, and sales materials. We can start from scratch or refine what you already have.",
+  },
+  {
+    q: "How does the free cost comparison work?",
+    a: "Send us a list or photos of what you're currently buying — uniforms, door hangers, signs, forms, and so on — and we'll provide a side-by-side breakdown showing what we can deliver for the same or better quality, often with noticeable savings.",
+  },
+  {
+    q: "Can we order just a few items to test quality?",
+    a: "Of course. Many contractors start with a small test order — crew polos, a batch of door hangers, or a single truck wrap — before committing to larger quantities. We'd rather earn the bigger order than push it.",
+  },
+];
+
 const audiences = [
   "Residential Roofers",
   "Commercial Roofing Contractors",
@@ -117,12 +159,12 @@ const audiences = [
 
 const Roofing = () => {
   usePageSEO({
-    title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors | Buckeye Biz Hub",
+    title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors",
     description:
       "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
   });
 
-  const jsonLd = {
+  const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Buckeye Biz Hub – Roofing Contractor Branding",
@@ -133,9 +175,26 @@ const Roofing = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}
@@ -429,6 +488,53 @@ const Roofing = () => {
                 <span className="font-semibold text-foreground">{item}</span>
               </div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 lg:py-28 bg-ohio-grey-light">
+        <div className="container max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <HelpCircle className="w-4 h-4" /> Frequently Asked Questions
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
+              Honest Answers for{" "}
+              <span className="text-primary">Roofing Contractors</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Real questions we hear from Central Ohio roofers — answered the way we'd answer them at the job site.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((f, i) => (
+                <AccordionItem
+                  key={f.q}
+                  value={`faq-${i}`}
+                  className="bg-card border-2 border-border rounded-2xl px-6 md:px-7 hover:border-primary/40 transition-all data-[state=open]:border-primary/50 data-[state=open]:shadow-md"
+                >
+                  <AccordionTrigger className="text-left font-display text-base md:text-lg font-black text-foreground hover:no-underline py-5">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-6">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </motion.div>
         </div>
       </section>
