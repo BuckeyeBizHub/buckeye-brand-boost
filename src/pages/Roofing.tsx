@@ -93,8 +93,8 @@ const products = [
     title: "Trade Show Booths & Event Displays",
     description:
       "Retractable banners, table throws, branded backdrops, and giveaways for home shows, expos, and community events.",
-    image: `${PHOTO_BASE}/roofing-pull-up-banners-baron.jpg`,
-    imageAlt: "Pair of retractable roofing contractor trade show banners",
+    image: `${PHOTO_BASE}/roofing-trade-show-shift.jpg`,
+    imageAlt: "Shift Roofing & Exteriors trade show booth with branded backdrop, retractable banner, and team",
   },
   {
     icon: Mail,
