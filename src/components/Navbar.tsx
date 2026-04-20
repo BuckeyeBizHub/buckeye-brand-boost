@@ -15,22 +15,28 @@ const serviceLinks = [
   { label: "Presentation Folders & Marketing Kits", href: "/presentation-folders" },
 ];
 
+const industryLinks = [
+  { label: "Dental Practices & Specialty Offices", href: "/dental" },
+  { label: "Roofing & Exterior Contractors", href: "/roofing" },
+  { label: "All Industries We Serve", href: "/industries" },
+];
+
 interface NavItem {
   label: string;
   href: string;
   external?: boolean;
   hasDropdown?: boolean;
+  dropdownType?: "services" | "industries";
 }
 
 const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services", hasDropdown: true },
+  { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
+  { label: "Industries Served", href: "/industries", hasDropdown: true, dropdownType: "industries" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Shop Online", href: "http://www.buckeyebizhub.store/", external: true },
   { label: "Blog", href: "/blog" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Research", href: "/research" },
 ];
 
 const Navbar = () => {
