@@ -10,53 +10,37 @@ import {
   DEFAULT_OG_IMAGE,
 } from "@/lib/structured-data";
 import {
-  PHOTO_VEHICLE_1, PHOTO_PRINT_2, PHOTO_APPAREL_1,
-  PHOTO_SIGNAGE_1, PHOTO_VEHICLE_5, PHOTO_PRINT_6,
+  PHOTO_APPAREL_1, PHOTO_VEHICLE_1, PHOTO_SIGNAGE_1,
 } from "@/lib/photos";
 
 /** Structured review data with author names and dates */
 export const testimonialReviews: (ReviewData & { image?: string })[] = [
   {
-    author: "Dr. Sarah Mitchell",
-    reviewBody: "Buckeye Biz Hub completely transformed our brand presence. The business cards and brochures they produced are absolutely stunning — our patients constantly compliment the quality. Best printing partner we've ever worked with in Columbus.",
+    author: "Sarah Thompson",
+    authorTitle: "Office Manager",
+    authorCompany: "Columbus Family Dental, Columbus OH",
+    reviewBody: "David made getting consistent branded scrubs across our team incredibly easy. The quality is excellent and the turnaround was fast. Highly recommend for any dental office.",
     ratingValue: 5,
-    datePublished: "2025-11-15",
-    image: PHOTO_PRINT_2,
-  },
-  {
-    author: "Mike Rodriguez",
-    reviewBody: "We wrapped our entire fleet of service vans and the results have been incredible. Our phone calls increased significantly within the first two months. The wraps look phenomenal and have held up perfectly through Ohio winters.",
-    ratingValue: 5,
-    datePublished: "2025-10-22",
-    image: PHOTO_VEHICLE_1,
-  },
-  {
-    author: "Jennifer Walsh",
-    reviewBody: "The custom uniforms and branded merchandise program has been a game-changer. Consistent branding across all locations, and the reorder process is seamless.",
-    ratingValue: 5,
-    datePublished: "2025-09-08",
+    datePublished: "2025-11-12",
     image: PHOTO_APPAREL_1,
   },
   {
-    author: "Tom Kessler",
-    reviewBody: "Our trade show presence went from forgettable to show-stopping. The custom tent, retractable banners, and table throws made our booth the busiest at the expo.",
+    author: "Mark Reynolds",
+    authorTitle: "Owner",
+    authorCompany: "Reynolds Roofing & Exteriors, Westerville OH",
+    reviewBody: "The fleet wraps and crew polos look fantastic on our trucks and job sites. The whole process was smooth, and the pricing was better than expected. We'll definitely be using them again.",
     ratingValue: 5,
-    datePublished: "2025-08-14",
+    datePublished: "2025-10-04",
+    image: PHOTO_VEHICLE_1,
+  },
+  {
+    author: "Jennifer Park",
+    authorTitle: "Marketing Coordinator",
+    authorCompany: "Central Ohio Construction Group, Columbus OH",
+    reviewBody: "From yard signs to branded workwear, everything has been top quality. David really understands what looks professional on a job site. Great partner to work with.",
+    ratingValue: 5,
+    datePublished: "2025-09-18",
     image: PHOTO_SIGNAGE_1,
-  },
-  {
-    author: "Amanda Chen",
-    reviewBody: "As a dealership, image is everything. Buckeye Biz Hub delivered premium signage, branded giveaways, and vehicle decals that elevated our showroom and customer experience.",
-    ratingValue: 5,
-    datePublished: "2025-07-30",
-    image: PHOTO_VEHICLE_5,
-  },
-  {
-    author: "Brian Foley",
-    reviewBody: "I've used Buckeye Biz Hub for yard signs, door hangers, and business cards for years now. Fast turnaround, wholesale pricing, and the quality never disappoints. They're my go-to for everything marketing-related.",
-    ratingValue: 5,
-    datePublished: "2025-06-19",
-    image: PHOTO_PRINT_6,
   },
 ];
 
