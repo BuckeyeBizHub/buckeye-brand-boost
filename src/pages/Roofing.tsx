@@ -78,7 +78,7 @@ const products = [
     description:
       "Sales sheets, presentation folders, business cards, and QR code stickers that close more bids and put your brand in every customer's hands.",
     image: `${PHOTO_BASE}/roofing-qr-sticker-scan.jpg`,
-    imageAlt: "Large &#39;Scan Me&#39; QR code window sticker on a glass storefront door",
+    imageAlt: "Large Scan Me QR code window sticker on a glass storefront door",
   },
   {
     icon: LayoutGrid,
