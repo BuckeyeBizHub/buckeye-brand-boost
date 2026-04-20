@@ -25,6 +25,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
+import dentalTeamGroup from "@/assets/dental-team-group.jpg";
 import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
@@ -239,8 +240,8 @@ const Dental = () => {
               className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
             >
               <img
-                src={industryMedical}
-                alt="Neatly organized dental reception area with branded materials and professional signage"
+                src={dentalTeamGroup}
+                alt="Friendly dental practice team in coordinated navy and light-blue scrubs and dresses"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
