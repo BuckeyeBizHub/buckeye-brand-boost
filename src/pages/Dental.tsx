@@ -129,9 +129,9 @@ const differences = [
 
 const Dental = () => {
   usePageSEO({
-    title: "Branded Solutions for Ohio Dental Practices & Specialty Offices | Buckeye Biz Hub",
+    title: "Branded Solutions for Ohio Dental Practices & Specialty Offices",
     description:
-      "Professional branding and procurement partner for Ohio dental practices — staff scrubs, patient referral gifts, signage, printed materials, and full rebranding support. Backed by 15+ years inside a real Ohio endodontic practice.",
+      "Branded staff apparel, patient referral gifts, professional signage, and printed materials for Ohio dental practices — sourced with 15+ years of real dental office experience.",
   });
 
   const jsonLd = {
@@ -180,7 +180,7 @@ const Dental = () => {
                 "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)",
             }}
           >
-            Professional Branding & Procurement Partner for{" "}
+            Helping Ohio Dental Practices Look as Professional as the{" "}
             <span
               className="text-primary text-glow-red inline-block"
               style={{
@@ -190,7 +190,7 @@ const Dental = () => {
                 paintOrder: "stroke fill",
               }}
             >
-              Ohio Dental Practices
+              Care They Provide
             </span>
           </h1>
           <p
@@ -200,7 +200,7 @@ const Dental = () => {
                 "0 2px 6px rgba(0,0,0,0.95), 0 4px 18px rgba(0,0,0,0.85), 0 0 40px rgba(0,0,0,0.6)",
             }}
           >
-            We help dental offices look as polished and consistent as the exceptional care you provide — from staff scrubs and patient referral gifts to signage, printed materials, and full rebranding support.
+            Branded staff apparel, thoughtful patient referral gifts, professional signage, and printed materials — all sourced with real dental office experience.
           </p>
           <Link to="/contact">
             <Button
@@ -225,20 +225,17 @@ const Dental = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Heart className="w-4 h-4" /> Why Ohio Dental Practices Choose Us
+                <Heart className="w-4 h-4" /> Why Dental Practices Trust Buckeye Biz Hub
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
                 You Focus on Patients.{" "}
                 <span className="text-primary">We Handle the Rest.</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                Running a successful dental practice means balancing outstanding patient care with the many behind-the-scenes details that keep everything running smoothly.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                Staff appearance, patient experience, referral relationships, and office professionalism all matter — and they all add up to how patients feel about your practice.
+                Running a dental practice is about far more than clinical excellence. It's also about creating a consistent, professional, and welcoming environment for patients and referring doctors.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We remove the frustration of sourcing and coordinating these items so you can focus on what you do best: caring for patients. One trusted point of contact for scrubs, signage, gifts, print, and everything in between.
+                We take the hassle out of sourcing staff uniforms, patient gifts, signage, and printed materials so you can focus on patient care instead of vendor coordination.
               </p>
             </motion.div>
             <motion.div
@@ -278,13 +275,13 @@ const Dental = () => {
                 <span className="text-primary">Ohio Dental Practice</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                My wife, <span className="font-bold text-foreground">Dr. Kerry Stein</span>, is a practicing endodontist and the owner of <span className="font-bold text-foreground">Marion Endodontics</span> in Marion, Ohio. For more than 15 years, I've been right beside her handling all the procurement and branding needs of a real working dental practice.
+                My wife, <span className="font-bold text-foreground">Dr. Kerry Stein</span>, is a practicing endodontist and owner of <span className="font-bold text-foreground">Marion Endodontics</span> in Marion, Ohio. For more than 15 years, I've worked alongside her managing every aspect of procurement and branding for a busy specialty practice.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've sourced high-quality staff scrubs and polos, created thoughtful referral thank-you gift packages using local Ohio favorites — Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, Al's Popcorn — and designed business cards, appointment cards, magnets, letterhead, envelopes, window decals, office hours signs, mailbox graphics, and helped with rebranding projects as the practice has grown.
+                I've sourced durable, professional staff scrubs and polos, created memorable referral thank-you packages using local Ohio favorites like <span className="font-semibold text-foreground">Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, and Al's Popcorn</span>, designed business cards, appointment cards, magnets, letterhead, window decals, office hours signs, and helped with rebranding as the practice grew.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                That daily, hands-on experience inside an actual dental office taught me what truly works — and what ends up sitting unused in a cabinet. It's why I founded Buckeye Biz Hub: to be the trusted, knowledgeable partner that Ohio dental practices can count on.
+                That daily, real-world experience inside an actual dental office taught me what products actually get used versus what ends up unused in a drawer. It's the reason I founded Buckeye Biz Hub — to be the knowledgeable, reliable partner that Ohio dental practices can truly count on.
               </p>
               <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
                 — David Stein, Your Buckeye Branding Concierge
