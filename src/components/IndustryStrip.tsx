@@ -105,35 +105,30 @@ const IndustryStrip = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {industries.map((ind, i) => {
             const inner = (
               <div
-                className={`group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 ${
-                  ind.available
-                    ? "hover:border-primary/60 hover:shadow-[0_15px_45px_-15px_hsl(0_85%_40%/0.35)] hover:-translate-y-1"
-                    : "opacity-90"
-                }`}
+                className="group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 hover:border-primary/60 hover:shadow-[0_15px_45px_-15px_hsl(0_85%_40%/0.35)] hover:-translate-y-1"
               >
+                {!ind.available && (
+                  <span className="absolute top-3 right-3 text-[10px] font-extrabold tracking-[0.15em] uppercase bg-muted text-muted-foreground px-2.5 py-1 rounded-full border border-border">
+                    Coming Soon
+                  </span>
+                )}
                 <div className="text-4xl mb-3" aria-hidden="true">
                   {ind.emoji}
                 </div>
-                <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-lg lg:text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
                   {ind.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
                   {ind.description}
                 </p>
-                {ind.available ? (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:gap-2.5 transition-all">
-                    {ind.cta}
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider bg-muted px-3 py-1.5 rounded-full self-start">
-                    {ind.cta}
-                  </span>
-                )}
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:gap-2.5 transition-all">
+                  {ind.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
             );
 
