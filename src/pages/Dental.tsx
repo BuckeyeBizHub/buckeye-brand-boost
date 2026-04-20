@@ -134,6 +134,29 @@ const differences = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Do you work with multi-location dental groups?",
+    a: "Yes — we specialize in helping multi-location practices maintain consistent branding across all offices while still allowing for local customization when an individual office needs it. One point of contact, one set of brand standards, and orders that ship straight to each location.",
+  },
+  {
+    q: "How long does it take to get orders?",
+    a: "Most printed materials and apparel ship within 1–3 business days. Custom signage and larger orders typically take 5–7 business days. If you have a hard deadline — a new hire starting Monday, an open house this weekend, a referral event — just tell us and we'll work backward from your date.",
+  },
+  {
+    q: "Can you help with referral thank-you gifts?",
+    a: "Absolutely. We curate gift packages featuring local Ohio brands like Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, and Al's Popcorn that make a memorable impression on referring doctors and patients. We can handle individual thank-yous, holiday batches, or year-round programs.",
+  },
+  {
+    q: "Do you offer volume discounts for larger practices?",
+    a: "Yes. We offer meaningful discounts for practices ordering 10+ staff uniforms or larger quantities of printed materials. Because we run on a true wholesale + transparent management fee model, the savings are passed directly to you — no hidden markups.",
+  },
+  {
+    q: "What if we're not sure exactly what we need?",
+    a: "No problem at all — that's the most common starting point. We offer free, no-pressure consultations where we review your current setup, ask about your team, your patients, and your goals, and recommend the best options for your practice size and budget.",
+  },
+];
+
 const Dental = () => {
   usePageSEO({
     title: "Branded Solutions for Ohio Dental Practices & Specialty Offices",
