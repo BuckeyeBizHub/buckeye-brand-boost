@@ -7,7 +7,7 @@ const industries = [
     emoji: "🦷",
     title: "Dental Practices",
     description:
-      "Branded scrubs, patient referral gifts, office signage, printed materials, and rebranding kits — from someone who's run a dental practice from the inside for 15+ years.",
+      "Branded scrubs, patient referral gifts, office signage, and printed materials — from someone who's run a dental practice from the inside for 15+ years.",
     cta: "See Dental Solutions",
     href: "/dental",
     available: true,
@@ -16,10 +16,28 @@ const industries = [
     emoji: "🏠",
     title: "Roofing Contractors",
     description:
-      "Fleet wraps, crew apparel, door hangers, yard signs, carbonless contract forms, and marketing campaigns — built for the spring busy season and everything after.",
+      "Fleet wraps, crew apparel, door hangers, yard signs, and marketing materials — built for the spring busy season.",
     cta: "See Roofing Solutions",
     href: "/roofing",
     available: true,
+  },
+  {
+    emoji: "🏗️",
+    title: "Construction & GCs",
+    description:
+      "Branded workwear, vehicle graphics, jobsite banners, and safety gear — for crews that represent you on every job site.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
+  },
+  {
+    emoji: "🚛",
+    title: "Fleet & Logistics",
+    description:
+      "Fleet wraps, driver uniforms, safety vests, and branded materials that keep a growing fleet looking consistent.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
   {
     emoji: "🏡",
@@ -28,7 +46,7 @@ const industries = [
       "Business cards, yard signs, branded notepads, closing gifts, and postcards — everything to look sharp and stay top of mind.",
     cta: "Get a Quote",
     href: "/contact",
-    available: true,
+    available: false,
   },
   {
     emoji: "🌿",
@@ -37,24 +55,24 @@ const industries = [
       "Fleet graphics, crew shirts, door hangers, yard signs, and seasonal marketing materials — for companies where every truck is a rolling billboard.",
     cta: "Get a Quote",
     href: "/contact",
-    available: true,
-  },
-  {
-    emoji: "🏗️",
-    title: "Construction & GCs",
-    description:
-      "Branded workwear, vehicle graphics, jobsite banners, trade show booths, and safety gear — for crews that represent you on every job site.",
-    cta: "Coming Soon",
-    href: null,
     available: false,
   },
   {
-    emoji: "🚛",
-    title: "Fleet & Logistics",
+    emoji: "🏥",
+    title: "Medical & Specialty Practices",
     description:
-      "Fleet wraps, driver uniforms, safety vests, and branded materials that keep a growing fleet looking consistent from truck to truck.",
-    cta: "Coming Soon",
-    href: null,
+      "Branded scrubs, patient gift packages, office signage, and printed materials — for practices where professionalism matters.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
+  },
+  {
+    emoji: "🚗",
+    title: "Auto Dealers",
+    description:
+      "Fleet graphics, lot signage, employee polos, and branded customer gifts — for dealers where every detail of the customer experience matters.",
+    cta: "Get a Quote",
+    href: "/contact",
     available: false,
   },
 ];
