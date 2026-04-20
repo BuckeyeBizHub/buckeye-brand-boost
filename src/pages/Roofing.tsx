@@ -77,8 +77,8 @@ const products = [
     title: "Sales Sheets, Folders, Cards & QR Stickers",
     description:
       "Sales sheets, presentation folders, business cards, and QR code stickers that close more bids and put your brand in every customer's hands.",
-    image: `${PHOTO_BASE}/roofing-door-hanger-knockknock.jpg`,
-    imageAlt: "Knock Knock roofing contractor door hanger with services list and call to action",
+    image: `${PHOTO_BASE}/roofing-qr-sticker-scan.jpg`,
+    imageAlt: "Large Scan Me QR code window sticker on a glass storefront door",
   },
   {
     icon: LayoutGrid,
