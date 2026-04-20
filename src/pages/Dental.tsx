@@ -27,6 +27,7 @@ import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
 import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
+import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
 
 const products = [
   {
@@ -50,6 +51,8 @@ const products = [
     title: "Professional Printed Materials",
     description:
       "Business cards, appointment and recall cards, refrigerator magnets, letterhead, envelopes, brochures, and patient education materials — all on-brand, professionally designed, and built for the daily flow of a busy dental office.",
+    image: dentalPrintedMaterials,
+    imageAlt: "Elegant dental practice business card with gold tooth logo and marble accent design",
   },
   {
     icon: Building2,
