@@ -97,13 +97,6 @@ const featuredServices = [
   },
 ];
 
-// Masonry height classes for visual variation
-const heightVariants = [
-  "h-56", "h-64", "h-56",
-  "h-60", "h-56", "h-64",
-  "h-56", "h-64", "h-60",
-];
-
 const ServicesSection = () => {
   return (
     <section id="services" className="py-12 lg:py-16 relative overflow-hidden">
@@ -134,11 +127,9 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Staggered masonry grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+        {/* Uniform grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {services.map((s, i) => {
-            const imgH = heightVariants[i % heightVariants.length];
-            const offset = i % 3 === 1 ? "lg:mt-6" : "";
             const hasShowcase = s.showcase && s.showcase.length > 0;
 
             return (
@@ -148,20 +139,20 @@ const ServicesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ delay: i * 0.04, duration: 0.5 }}
-                className={offset}
+                className="h-full"
               >
                 <Link
                   to={s.href}
-                  className="group flex flex-col bg-card/90 backdrop-blur-sm rounded-2xl border border-border/50 overflow-hidden hover:border-primary/25 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_-12px_hsl(0_85%_40%/0.14)] transition-all duration-500 hover:-translate-y-1.5"
+                  className="group h-full flex flex-col bg-card/90 backdrop-blur-sm rounded-2xl border border-border/50 overflow-hidden hover:border-primary/25 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_-12px_hsl(0_85%_40%/0.14)] transition-all duration-500 hover:-translate-y-1.5"
                 >
-                  <div className={`relative ${imgH} overflow-hidden`}>
+                  <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                     <img
                       src={s.img}
                       alt={s.title}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
 
                     {/* Showcase thumbnails overlay */}
                     {hasShowcase && (
