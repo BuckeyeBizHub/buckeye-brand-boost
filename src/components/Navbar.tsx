@@ -15,29 +15,36 @@ const serviceLinks = [
   { label: "Presentation Folders & Marketing Kits", href: "/presentation-folders" },
 ];
 
+const industryLinks = [
+  { label: "Dental Practices & Specialty Offices", href: "/dental" },
+  { label: "Roofing & Exterior Contractors", href: "/roofing" },
+  { label: "All Industries We Serve", href: "/industries" },
+];
+
 interface NavItem {
   label: string;
   href: string;
   external?: boolean;
   hasDropdown?: boolean;
+  dropdownType?: "services" | "industries";
 }
 
 const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services", hasDropdown: true },
+  { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
+  { label: "Industries Served", href: "/industries", hasDropdown: true, dropdownType: "industries" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Shop Online", href: "http://www.buckeyebizhub.store/", external: true },
   { label: "Blog", href: "/blog" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Research", href: "/research" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<"services" | "industries" | null>(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const location = useLocation();
 
@@ -49,16 +56,17 @@ const Navbar = () => {
 
   useEffect(() => {
     setOpen(false);
-    setDropdownOpen(false);
+    setOpenDropdown(null);
     setMobileServicesOpen(false);
+    setMobileIndustriesOpen(false);
   }, [location.pathname]);
 
-  const handleEnter = () => {
+  const handleEnter = (type: "services" | "industries") => {
     clearTimeout(timeoutRef.current);
-    setDropdownOpen(true);
+    setOpenDropdown(type);
   };
   const handleLeave = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setOpenDropdown(null), 150);
   };
 
   const isActive = (href: string) => {
@@ -68,6 +76,9 @@ const Navbar = () => {
 
   const isServicesActive = () =>
     isActive("/services") || serviceLinks.some((s) => isActive(s.href));
+
+  const isIndustriesActive = () =>
+    isActive("/industries") || industryLinks.some((s) => isActive(s.href));
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -91,65 +102,73 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
-            {navLinks.map((link) =>
-              link.hasDropdown ? (
-                /* Services with dropdown */
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={handleEnter}
-                  onMouseLeave={handleLeave}
-                >
-                  <Link
-                    to={link.href}
-                    className={`relative flex items-center gap-1 text-[0.7rem] xl:text-[0.75rem] font-bold tracking-[0.1em] uppercase px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isServicesActive()
-                        ? "text-primary-foreground bg-primary-foreground/[0.06]"
-                        : "text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/[0.04]"
-                    }`}
-                  >
-                    {link.label}
-                    <ChevronDown
-                      className={`w-3.5 h-3.5 transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`}
-                    />
-                  </Link>
-
-                  {/* Dropdown panel */}
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                const isServices = link.dropdownType === "services";
+                const items = isServices ? serviceLinks : industryLinks;
+                const active = isServices ? isServicesActive() : isIndustriesActive();
+                const isOpen = openDropdown === link.dropdownType;
+                return (
                   <div
-                    className={`absolute top-full left-0 mt-2 w-72 rounded-xl border border-primary/15 bg-[hsl(0,0%,6%)] backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-200 origin-top-left ${
-                      dropdownOpen
-                        ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
-                    }`}
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => handleEnter(link.dropdownType!)}
+                    onMouseLeave={handleLeave}
                   >
-                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-ohio-red-light to-primary" />
-                    <div className="py-2">
-                      {serviceLinks.map((item) => (
-                        <Link
-                          key={item.href}
-                          to={item.href}
-                          className={`block px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
-                            isActive(item.href)
-                              ? "text-primary bg-primary/[0.1]"
-                              : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/[0.06] hover:pl-7"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                      <div className="border-t border-primary/[0.1] mt-1 pt-1">
-                        <Link
-                          to="/services"
-                          className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-primary hover:bg-primary/[0.08] transition-all duration-200"
-                        >
-                          View All Services
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
+                    <Link
+                      to={link.href}
+                      className={`relative flex items-center gap-1 text-[0.7rem] xl:text-[0.75rem] font-bold tracking-[0.1em] uppercase px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 ${
+                        active
+                          ? "text-primary-foreground bg-primary-foreground/[0.06]"
+                          : "text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/[0.04]"
+                      }`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      />
+                    </Link>
+
+                    {/* Dropdown panel */}
+                    <div
+                      className={`absolute top-full left-0 mt-2 w-72 rounded-xl border border-primary/15 bg-[hsl(0,0%,6%)] backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-200 origin-top-left ${
+                        isOpen
+                          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+                          : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
+                      }`}
+                    >
+                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-ohio-red-light to-primary" />
+                      <div className="py-2">
+                        {items.map((item) => (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            className={`block px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
+                              isActive(item.href)
+                                ? "text-primary bg-primary/[0.1]"
+                                : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/[0.06] hover:pl-7"
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                        {isServices && (
+                          <div className="border-t border-primary/[0.1] mt-1 pt-1">
+                            <Link
+                              to="/services"
+                              className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-primary hover:bg-primary/[0.08] transition-all duration-200"
+                            >
+                              View All Services
+                              <ArrowRight className="w-3.5 h-3.5" />
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
-                </div>
-              ) : link.external ? (
+                );
+              }
+              return link.external ? (
                 /* Shop Online */
                 <a
                   key={link.label}
@@ -174,8 +193,8 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Link>
-              )
-            )}
+              );
+            })}
           </div>
 
           {/* Social + CTA */}
@@ -231,48 +250,61 @@ const Navbar = () => {
         {/* ══ Mobile Menu ══ */}
         {open && (
           <div className="lg:hidden bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl border-t border-primary/[0.1] pb-5 animate-fade-in max-h-[calc(100vh-72px)] overflow-y-auto">
-            {navLinks.map((link) =>
-              link.hasDropdown ? (
-                <div key={link.label}>
-                  <button
-                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
-                      isServicesActive() ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
-                    }`}
-                  >
-                    {link.label}
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  {mobileServicesOpen && (
-                    <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08] py-2">
-                      {serviceLinks.map((item) => (
-                        <Link
-                          key={item.href}
-                          to={item.href}
-                          onClick={() => setOpen(false)}
-                          className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
-                            isActive(item.href)
-                              ? "text-primary"
-                              : "text-primary-foreground/40 hover:text-primary"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                      <Link
-                        to="/services"
-                        onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 px-10 py-3 text-sm font-bold uppercase tracking-widest text-primary hover:text-ohio-red-light transition-colors"
-                      >
-                        View All Services
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              ) : link.external ? (
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                const isServices = link.dropdownType === "services";
+                const items = isServices ? serviceLinks : industryLinks;
+                const active = isServices ? isServicesActive() : isIndustriesActive();
+                const isMobileOpen = isServices ? mobileServicesOpen : mobileIndustriesOpen;
+                const toggle = () =>
+                  isServices
+                    ? setMobileServicesOpen(!mobileServicesOpen)
+                    : setMobileIndustriesOpen(!mobileIndustriesOpen);
+                return (
+                  <div key={link.label}>
+                    <button
+                      onClick={toggle}
+                      className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
+                        active ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
+                      }`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${isMobileOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    {isMobileOpen && (
+                      <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08] py-2">
+                        {items.map((item) => (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            onClick={() => setOpen(false)}
+                            className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
+                              isActive(item.href)
+                                ? "text-primary"
+                                : "text-primary-foreground/40 hover:text-primary"
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                        {isServices && (
+                          <Link
+                            to="/services"
+                            onClick={() => setOpen(false)}
+                            className="flex items-center gap-2 px-10 py-3 text-sm font-bold uppercase tracking-widest text-primary hover:text-ohio-red-light transition-colors"
+                          >
+                            View All Services
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return link.external ? (
                 <a
                   key={link.label}
                   href={link.href}
@@ -295,8 +327,8 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Link>
-              )
-            )}
+              );
+            })}
             <div className="px-6 pt-4">
               <Link to="/contact" onClick={() => setOpen(false)}>
                 <Button
