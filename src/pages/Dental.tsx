@@ -225,20 +225,17 @@ const Dental = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Heart className="w-4 h-4" /> Why Ohio Dental Practices Choose Us
+                <Heart className="w-4 h-4" /> Why Dental Practices Trust Buckeye Biz Hub
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
                 You Focus on Patients.{" "}
                 <span className="text-primary">We Handle the Rest.</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                Running a successful dental practice means balancing outstanding patient care with the many behind-the-scenes details that keep everything running smoothly.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                Staff appearance, patient experience, referral relationships, and office professionalism all matter — and they all add up to how patients feel about your practice.
+                Running a dental practice is about far more than clinical excellence. It's also about creating a consistent, professional, and welcoming environment for patients and referring doctors.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We remove the frustration of sourcing and coordinating these items so you can focus on what you do best: caring for patients. One trusted point of contact for scrubs, signage, gifts, print, and everything in between.
+                We take the hassle out of sourcing staff uniforms, patient gifts, signage, and printed materials so you can focus on patient care instead of vendor coordination.
               </p>
             </motion.div>
             <motion.div
