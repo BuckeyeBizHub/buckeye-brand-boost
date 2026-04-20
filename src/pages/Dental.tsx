@@ -316,13 +316,25 @@ const Dental = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
+                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
-                  <p.icon className="w-6 h-6 text-primary" />
+                {p.image && (
+                  <div className="aspect-[16/10] overflow-hidden bg-muted">
+                    <img
+                      src={p.image}
+                      alt={p.imageAlt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="p-7">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                    <p.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
                 </div>
-                <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
               </motion.div>
             ))}
           </div>
