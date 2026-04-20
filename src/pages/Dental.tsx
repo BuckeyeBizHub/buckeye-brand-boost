@@ -29,6 +29,7 @@ import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
 import dentalOfficeSignage from "@/assets/dental-office-signage.jpg";
+import dentalRebranding from "@/assets/dental-rebranding.jpg";
 
 const products = [
   {
@@ -68,6 +69,8 @@ const products = [
     title: "Rebranding Support",
     description:
       "Complete rebrand kits for growing practices, newly named offices, or practices joining a group. Logo refresh, color palette, and every printed and worn touchpoint coordinated so nothing feels out of place.",
+    image: dentalRebranding,
+    imageAlt: "Collection of modern dental clinic logo concepts in various colors and styles",
   },
   {
     icon: Users,
