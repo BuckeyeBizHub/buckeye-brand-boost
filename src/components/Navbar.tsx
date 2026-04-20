@@ -250,48 +250,61 @@ const Navbar = () => {
         {/* ══ Mobile Menu ══ */}
         {open && (
           <div className="lg:hidden bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl border-t border-primary/[0.1] pb-5 animate-fade-in max-h-[calc(100vh-72px)] overflow-y-auto">
-            {navLinks.map((link) =>
-              link.hasDropdown ? (
-                <div key={link.label}>
-                  <button
-                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
-                      isServicesActive() ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
-                    }`}
-                  >
-                    {link.label}
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  {mobileServicesOpen && (
-                    <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08] py-2">
-                      {serviceLinks.map((item) => (
-                        <Link
-                          key={item.href}
-                          to={item.href}
-                          onClick={() => setOpen(false)}
-                          className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
-                            isActive(item.href)
-                              ? "text-primary"
-                              : "text-primary-foreground/40 hover:text-primary"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                      <Link
-                        to="/services"
-                        onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 px-10 py-3 text-sm font-bold uppercase tracking-widest text-primary hover:text-ohio-red-light transition-colors"
-                      >
-                        View All Services
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              ) : link.external ? (
+            {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                const isServices = link.dropdownType === "services";
+                const items = isServices ? serviceLinks : industryLinks;
+                const active = isServices ? isServicesActive() : isIndustriesActive();
+                const isMobileOpen = isServices ? mobileServicesOpen : mobileIndustriesOpen;
+                const toggle = () =>
+                  isServices
+                    ? setMobileServicesOpen(!mobileServicesOpen)
+                    : setMobileIndustriesOpen(!mobileIndustriesOpen);
+                return (
+                  <div key={link.label}>
+                    <button
+                      onClick={toggle}
+                      className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
+                        active ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
+                      }`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${isMobileOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                    {isMobileOpen && (
+                      <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08] py-2">
+                        {items.map((item) => (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            onClick={() => setOpen(false)}
+                            className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
+                              isActive(item.href)
+                                ? "text-primary"
+                                : "text-primary-foreground/40 hover:text-primary"
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                        {isServices && (
+                          <Link
+                            to="/services"
+                            onClick={() => setOpen(false)}
+                            className="flex items-center gap-2 px-10 py-3 text-sm font-bold uppercase tracking-widest text-primary hover:text-ohio-red-light transition-colors"
+                          >
+                            View All Services
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return link.external ? (
                 <a
                   key={link.label}
                   href={link.href}
@@ -314,8 +327,8 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Link>
-              )
-            )}
+              );
+            })}
             <div className="px-6 pt-4">
               <Link to="/contact" onClick={() => setOpen(false)}>
                 <Button
