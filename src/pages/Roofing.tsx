@@ -113,6 +113,41 @@ const products = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Do you work with both residential and commercial roofing companies?",
+    a: "Yes. We help residential roofers with eye-catching door hangers, yard signs, and crew apparel that builds local trust, and we support commercial and industrial roofers with durable fleet wraps, high-vis safety gear, carbonless contract forms, and professional sales materials that hold up on job sites.",
+  },
+  {
+    q: "How quickly can you deliver fleet wraps or large orders during busy season?",
+    a: "Most standard crew apparel and printed materials ship within 1–3 business days. Full vehicle wraps and larger custom orders typically take 5–10 business days depending on complexity. We also offer rush options when you need something fast for a neighborhood blitz or a big bid.",
+  },
+  {
+    q: "Can you help with last-minute door hangers or yard signs?",
+    a: "Absolutely. Many roofing companies use us for quick-turnaround door hangers and yard signs before a targeted marketing push. We can usually deliver these in 2–3 days.",
+  },
+  {
+    q: "Do you offer volume discounts for larger crews or multi-location companies?",
+    a: "Yes. We provide meaningful discounts for orders of 10+ crew polos or hoodies, full fleet graphics packages, or larger quantities of printed materials. Just let us know your crew size and we'll put together customized pricing.",
+  },
+  {
+    q: "What makes your fleet wraps different from other shops?",
+    a: "We focus on durable, high-quality materials that stand up to Ohio weather, road salt, and job-site conditions. We also make sure the design looks professional both up close and from a distance — because your truck is a moving billboard.",
+  },
+  {
+    q: "Do you help with logo design or full branding refreshes?",
+    a: "Yes. Many roofing companies come to us when they're rebranding or want a more cohesive look across trucks, uniforms, signs, and sales materials. We can start from scratch or refine what you already have.",
+  },
+  {
+    q: "How does the free cost comparison work?",
+    a: "Send us a list or photos of what you're currently buying — uniforms, door hangers, signs, forms, and so on — and we'll provide a side-by-side breakdown showing what we can deliver for the same or better quality, often with noticeable savings.",
+  },
+  {
+    q: "Can we order just a few items to test quality?",
+    a: "Of course. Many contractors start with a small test order — crew polos, a batch of door hangers, or a single truck wrap — before committing to larger quantities. We'd rather earn the bigger order than push it.",
+  },
+];
+
 const audiences = [
   "Residential Roofers",
   "Commercial Roofing Contractors",
