@@ -26,6 +26,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
 import dentalTeamGroup from "@/assets/dental-team-group.jpg";
+import dentalMarionEndoBuilding from "@/assets/dental-marion-endo-building.jpg";
 import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
@@ -297,8 +298,8 @@ const Dental = () => {
               className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
             >
               <img
-                src={industryDentist}
-                alt="Dr. Kerry Stein, practicing endodontist and owner of Marion Endodontics in Marion, Ohio"
+                src={dentalMarionEndoBuilding}
+                alt="Marion Endodontics building exterior in Marion, Ohio — Dr. Kerry R. Stein, DDS, MS and Dr. Kristina J. Danislak, DDS"
                 className="w-full h-full object-cover aspect-[4/5]"
                 loading="lazy"
               />
