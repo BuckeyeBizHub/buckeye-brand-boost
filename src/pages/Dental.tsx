@@ -295,12 +295,12 @@ const Dental = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)] bg-ohio-grey-light"
             >
               <img
                 src={dentalMarionEndoBuilding}
                 alt="Marion Endodontics building exterior in Marion, Ohio — Dr. Kerry R. Stein, DDS, MS and Dr. Kristina J. Danislak, DDS"
-                className="w-full h-full object-cover aspect-[4/5]"
+                className="w-full h-auto object-contain"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
