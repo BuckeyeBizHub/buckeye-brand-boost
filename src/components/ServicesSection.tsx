@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Star, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import businessCardsProduct from "@/assets/luxury-gold-foil-cards.jpg";
+import businessCardsProduct from "@/assets/business-card-american-roofing.jpg";
 import brochuresHero from "@/assets/print-roofing-door-hanger.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
 import customApparelPolos from "@/assets/custom-apparel-polos-hoodies.jpg";
