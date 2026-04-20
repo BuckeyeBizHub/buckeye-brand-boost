@@ -539,6 +539,26 @@ const Roofing = () => {
         </div>
       </section>
 
+      {/* Free Cost Comparison */}
+      <section className="py-16 bg-muted/40">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="bg-card border border-border rounded-3xl p-10 shadow-sm">
+            <h3 className="font-display text-3xl font-bold text-foreground mb-4">
+              Free Cost Comparison — No Commitment
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              Tell us what you're currently spending on branded materials, uniforms, signage, or printed items and we'll show you exactly what we can provide for less — often with significant savings.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center bg-foreground text-background font-semibold px-10 py-4 rounded-2xl hover:bg-foreground/85 transition-colors"
+            >
+              Request Your Free Comparison
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-4xl mx-auto">
