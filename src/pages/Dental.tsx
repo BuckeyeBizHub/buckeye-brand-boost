@@ -28,6 +28,7 @@ import industryMedical from "@/assets/industry-medical.jpg";
 import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 import dentalPrintedMaterials from "@/assets/dental-printed-materials.jpg";
+import dentalOfficeSignage from "@/assets/dental-office-signage.jpg";
 
 const products = [
   {
@@ -59,6 +60,8 @@ const products = [
     title: "Office Signage & Branding",
     description:
       "Window decals, office hours signs, wall graphics, mailbox decals, lobby displays, and directional signage that build trust and recognition the moment a patient walks through your door.",
+    image: dentalOfficeSignage,
+    imageAlt: "Dental office storefront with full-color branded window decals showing logo, services, and contact info",
   },
   {
     icon: Sparkles,
