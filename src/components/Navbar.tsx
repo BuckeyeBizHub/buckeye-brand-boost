@@ -193,8 +193,8 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Link>
-              )
-            )}
+              );
+            })}
           </div>
 
           {/* Social + CTA */}
