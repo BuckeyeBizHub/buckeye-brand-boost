@@ -167,7 +167,17 @@ const Roofing = () => {
             style={{ textShadow: "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)" }}
           >
             Make Your Trucks, Crews, and Brand{" "}
-            <span className="text-primary text-glow-red">Stand Out on Every Ohio Job Site</span>
+            <span
+              className="text-primary text-glow-red inline-block"
+              style={{
+                WebkitTextStroke: "1.5px hsl(0 0% 100%)",
+                textShadow:
+                  "0 0 2px hsl(0 0% 100% / 0.9), 0 2px 8px rgba(0,0,0,0.95), 0 0 30px hsl(0 85% 40% / 0.7), 0 0 60px hsl(0 85% 40% / 0.4)",
+                paintOrder: "stroke fill",
+              }}
+            >
+              Stand Out on Every Ohio Job Site
+            </span>
           </h1>
           <p
             className="text-lg md:text-xl text-primary-foreground font-medium leading-relaxed max-w-3xl mx-auto mb-10"
