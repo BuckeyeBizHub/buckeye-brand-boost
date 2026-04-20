@@ -275,13 +275,13 @@ const Dental = () => {
                 <span className="text-primary">Ohio Dental Practice</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                My wife, <span className="font-bold text-foreground">Dr. Kerry Stein</span>, is a practicing endodontist and the owner of <span className="font-bold text-foreground">Marion Endodontics</span> in Marion, Ohio. For more than 15 years, I've been right beside her handling all the procurement and branding needs of a real working dental practice.
+                My wife, <span className="font-bold text-foreground">Dr. Kerry Stein</span>, is a practicing endodontist and owner of <span className="font-bold text-foreground">Marion Endodontics</span> in Marion, Ohio. For more than 15 years, I've worked alongside her managing every aspect of procurement and branding for a busy specialty practice.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've sourced high-quality staff scrubs and polos, created thoughtful referral thank-you gift packages using local Ohio favorites — Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, Al's Popcorn — and designed business cards, appointment cards, magnets, letterhead, envelopes, window decals, office hours signs, mailbox graphics, and helped with rebranding projects as the practice has grown.
+                I've sourced durable, professional staff scrubs and polos, created memorable referral thank-you packages using local Ohio favorites like <span className="font-semibold text-foreground">Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, and Al's Popcorn</span>, designed business cards, appointment cards, magnets, letterhead, window decals, office hours signs, and helped with rebranding as the practice grew.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                That daily, hands-on experience inside an actual dental office taught me what truly works — and what ends up sitting unused in a cabinet. It's why I founded Buckeye Biz Hub: to be the trusted, knowledgeable partner that Ohio dental practices can count on.
+                That daily, real-world experience inside an actual dental office taught me what products actually get used versus what ends up unused in a drawer. It's the reason I founded Buckeye Biz Hub — to be the knowledgeable, reliable partner that Ohio dental practices can truly count on.
               </p>
               <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
                 — David Stein, Your Buckeye Branding Concierge
