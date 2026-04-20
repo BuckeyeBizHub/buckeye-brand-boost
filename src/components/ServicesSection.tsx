@@ -12,7 +12,7 @@ import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
 import serviceRebrandKit from "@/assets/service-rebrand-kit.jpg";
 import serviceWebsiteDesign from "@/assets/service-website-design.jpg";
 import serviceLocalSeo from "@/assets/service-local-seo.jpg";
-import bannerFeatherFlags from "@/assets/banner-feather-blade.jpg";
+import bannerFeatherFlags from "@/assets/banner-retractable-roofing.jpg";
 import vehicleDecalCloseup from "@/assets/vehicle-decal-closeup.jpg";
 import { PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_VEHICLE_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
