@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Star, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import businessCardsProduct from "@/assets/luxury-gold-foil-cards.jpg";
+import businessCardsProduct from "@/assets/business-card-american-roofing.jpg";
 import brochuresHero from "@/assets/print-roofing-door-hanger.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
 import customApparelPolos from "@/assets/custom-apparel-polos-hoodies.jpg";
@@ -22,7 +22,7 @@ const services = [
     desc: "Premium cards on ultra-thick 32pt stock with gold foil stamping, spot UV, embossing, and custom die-cuts — designed to leave a lasting impression.",
     href: "/business-cards",
     img: businessCardsProduct,
-    showcase: [PHOTO_PRINT_1, PHOTO_PRINT_3],
+    showcase: [],
   },
   {
     title: "Brochures & Business Printing",
@@ -57,7 +57,7 @@ const services = [
     desc: "Transform your fleet into powerful 24/7 mobile advertisements with 3M/Avery materials and professional Ohio installers.",
     href: "/vehicle-wraps-and-fleet-branding",
     img: vehicleWrapProduct,
-    showcase: [PHOTO_VEHICLE_1, PHOTO_VEHICLE_3],
+    showcase: [],
   },
   {
     title: "Full Rebrand Kits",
