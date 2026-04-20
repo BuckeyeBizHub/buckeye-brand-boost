@@ -193,8 +193,11 @@ const Dental = () => {
             </span>
           </h1>
           <p
-            className="text-lg md:text-xl text-primary-foreground/90 font-medium leading-relaxed max-w-3xl mx-auto mb-10"
-            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+            className="text-lg md:text-xl text-primary-foreground font-semibold leading-relaxed max-w-3xl mx-auto mb-10"
+            style={{
+              textShadow:
+                "0 2px 6px rgba(0,0,0,0.95), 0 4px 18px rgba(0,0,0,0.85), 0 0 40px rgba(0,0,0,0.6)",
+            }}
           >
             We help dental offices look as polished and consistent as the exceptional care you provide — from staff scrubs and patient referral gifts to signage, printed materials, and full rebranding support.
           </p>
