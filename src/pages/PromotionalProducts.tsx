@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap, Printer, FileText, CreditCard, FolderOpen, Megaphone } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, ShoppingBag, Star, CheckCircle, Award, Eye, Heart, Zap, Printer, FileText, CreditCard, FolderOpen, Megaphone, ExternalLink, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3, PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_PRINT_6 } from "@/lib/photos";
@@ -191,6 +191,65 @@ const PromotionalProducts = () => {
                 <div className="text-xs font-bold text-primary-foreground/45 tracking-[0.2em] uppercase mt-2">{stat.label}</div>
               </div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Browse Catalog CTA — Shop Online */}
+      <section className="relative py-16 lg:py-20 bg-gradient-to-br from-ohio-grey-dark via-[hsl(0,40%,8%)] to-ohio-grey-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[180px]" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[160px]" />
+        </div>
+        <div className="container relative">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-8 md:p-12 lg:p-14 backdrop-blur-sm shadow-[0_20px_80px_hsl(0_80%_42%/0.25)] text-center">
+              <div className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-5 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
+                <Search className="w-4 h-4" /> Browse 1,000,000+ Items
+              </div>
+              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.05] mb-5">
+                Browse Our <span className="text-primary text-glow-red">Vast Catalog</span> of Promotional Items
+              </h2>
+              <p className="text-base md:text-xl text-primary-foreground/75 font-medium max-w-3xl mx-auto leading-relaxed mb-8">
+                Explore over a million promotional products in our online store. Find what catches your eye, then{" "}
+                <span className="text-primary-foreground font-bold">let us know what you'd like quoted</span> — we'll pull true wholesale pricing and find the best supplier for your project.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="http://www.buckeyebizhub.store/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-8 md:px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+                  >
+                    <ShoppingBag className="w-5 h-5" />
+                    Browse the Catalog
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-primary-foreground/30 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/60 font-bold text-base md:text-lg px-8 py-7 rounded-xl uppercase tracking-wider group"
+                  >
+                    Request a Quote
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+              <p className="text-xs text-primary-foreground/50 font-medium mt-6 tracking-wider uppercase">
+                See something you like? Send us the item name or link — we'll handle the rest.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
