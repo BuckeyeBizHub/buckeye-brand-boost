@@ -17,7 +17,14 @@ import {
   UserCheck,
   Package,
   MapPin,
+  HelpCircle,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -127,6 +134,29 @@ const differences = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Do you work with multi-location dental groups?",
+    a: "Yes — we specialize in helping multi-location practices maintain consistent branding across all offices while still allowing for local customization when an individual office needs it. One point of contact, one set of brand standards, and orders that ship straight to each location.",
+  },
+  {
+    q: "How long does it take to get orders?",
+    a: "Most printed materials and apparel ship within 1–3 business days. Custom signage and larger orders typically take 5–7 business days. If you have a hard deadline — a new hire starting Monday, an open house this weekend, a referral event — just tell us and we'll work backward from your date.",
+  },
+  {
+    q: "Can you help with referral thank-you gifts?",
+    a: "Absolutely. We curate gift packages featuring local Ohio brands like Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, and Al's Popcorn that make a memorable impression on referring doctors and patients. We can handle individual thank-yous, holiday batches, or year-round programs.",
+  },
+  {
+    q: "Do you offer volume discounts for larger practices?",
+    a: "Yes. We offer meaningful discounts for practices ordering 10+ staff uniforms or larger quantities of printed materials. Because we run on a true wholesale + transparent management fee model, the savings are passed directly to you — no hidden markups.",
+  },
+  {
+    q: "What if we're not sure exactly what we need?",
+    a: "No problem at all — that's the most common starting point. We offer free, no-pressure consultations where we review your current setup, ask about your team, your patients, and your goals, and recommend the best options for your practice size and budget.",
+  },
+];
+
 const Dental = () => {
   usePageSEO({
     title: "Branded Solutions for Ohio Dental Practices & Specialty Offices",
@@ -145,9 +175,20 @@ const Dental = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <Navbar />
 
       {/* Hero */}
@@ -442,6 +483,61 @@ const Dental = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 lg:py-28 bg-background border-t border-border">
+        <div className="container max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <HelpCircle className="w-4 h-4" /> Frequently Asked Questions
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-5">
+              Honest Answers to the{" "}
+              <span className="text-primary">Questions Dental Offices Ask Most</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              No fine print, no pressure — just the kind of straight answers you'd want from a neighbor who happens to do this for a living.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((f, i) => (
+                <AccordionItem
+                  key={f.q}
+                  value={`faq-${i}`}
+                  className="bg-card border-2 border-border rounded-xl px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-md transition-all"
+                >
+                  <AccordionTrigger className="text-left font-display text-base md:text-lg font-bold text-foreground hover:no-underline py-5">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+
+          <p className="text-center text-sm text-muted-foreground mt-10">
+            Have a question that isn't covered here?{" "}
+            <Link to="/contact" className="text-primary font-bold hover:underline">
+              Just ask David directly
+            </Link>{" "}
+            — he answers every message personally.
+          </p>
         </div>
       </section>
 
