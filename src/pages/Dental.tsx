@@ -25,6 +25,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
+import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 
 const products = [
   {
@@ -32,6 +33,8 @@ const products = [
     title: "Branded Staff Apparel",
     description:
       "High-quality scrubs, polos, jackets, and uniforms that maintain a consistent, professional look across single or multi-location offices. Embroidered or printed in your practice colors with options for every team member from the front desk to the operatory.",
+    image: dentalStaffScrubs,
+    imageAlt: "Dental practice team in matching branded navy scrubs with embroidered names and logo",
   },
   {
     icon: Gift,
@@ -313,13 +316,25 @@ const Dental = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl p-7 hover:shadow-lg transition-all duration-300"
+                className="bg-card border-2 border-border hover:border-primary/40 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
-                  <p.icon className="w-6 h-6 text-primary" />
+                {p.image && (
+                  <div className="aspect-[16/10] overflow-hidden bg-muted">
+                    <img
+                      src={p.image}
+                      alt={p.imageAlt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="p-7">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                    <p.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
                 </div>
-                <h3 className="font-display text-lg font-black text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
               </motion.div>
             ))}
           </div>
