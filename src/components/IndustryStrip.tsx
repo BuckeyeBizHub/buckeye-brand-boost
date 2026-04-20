@@ -22,6 +22,24 @@ const industries = [
     available: true,
   },
   {
+    emoji: "🏡",
+    title: "Real Estate",
+    description:
+      "Business cards, yard signs, branded notepads, closing gifts, and postcards — everything to look sharp and stay top of mind.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: true,
+  },
+  {
+    emoji: "🌿",
+    title: "Lawn Care & Landscaping",
+    description:
+      "Fleet graphics, crew shirts, door hangers, yard signs, and seasonal marketing materials — for companies where every truck is a rolling billboard.",
+    cta: "Get a Quote",
+    href: "/contact",
+    available: true,
+  },
+  {
     emoji: "🏗️",
     title: "Construction & GCs",
     description:
