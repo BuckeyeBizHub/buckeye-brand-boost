@@ -52,34 +52,32 @@ const HeroSection = () => {
           </motion.div>
 
           <h1
-            className="text-[clamp(2.75rem,8vw,5rem)] lg:text-[clamp(4rem,5.5vw,6rem)] font-black text-primary-foreground mb-3 tracking-tighter leading-[0.9]"
+            className="text-[clamp(2.25rem,6.5vw,4rem)] lg:text-[clamp(3rem,4.2vw,4.75rem)] font-black text-primary-foreground mb-4 tracking-tight leading-[0.95]"
             style={{
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
             }}
           >
-            Buckeye
+            <span className="text-primary text-glow-red">Buckeye Biz Hub:</span>
             <br />
-            <span className="text-primary text-glow-red">Biz Hub</span>
+            Branding Solutions Built for Ohio Businesses
           </h1>
 
           <p
-            className="text-[clamp(1.15rem,3.5vw,1.875rem)] text-primary-foreground font-bold mb-2 leading-tight max-w-2xl mx-auto lg:mx-0"
+            className="text-[clamp(1rem,2.6vw,1.25rem)] text-primary-foreground font-semibold mb-3 leading-snug max-w-2xl mx-auto lg:mx-0"
             style={{
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
             }}
           >
-            Rooted in Ohio.
-            <br />
-            Built to Grow Your Business.
+            Specialists in dental practices, roofing contractors, construction companies, and Ohio fleet businesses — we know your industry from the inside.
           </p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm sm:text-base text-primary-foreground/60 mb-2 max-w-lg mx-auto lg:mx-0 leading-relaxed"
+            className="text-sm sm:text-base text-primary-foreground/65 mb-2 max-w-lg mx-auto lg:mx-0 leading-relaxed"
           >
-            Your dedicated Ohio branding concierge — we handle every detail from premium business cards and vehicle wraps to custom apparel and signage, so you can focus on what you do best: growing your business.
+            Fast 24-hour quotes. Wholesale pricing. A partner who actually understands your world.
           </motion.p>
 
           <motion.p
@@ -103,7 +101,7 @@ const HeroSection = () => {
                   size="lg"
                   className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
                 >
-                  Get Your Free Quote
+                  Get Your Free 24-Hour Quote
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </Button>
               </Link>
@@ -118,16 +116,12 @@ const HeroSection = () => {
                 </Button>
               </a>
             </div>
-            <Link to="/graduation-2026" className="w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="w-full bg-gradient-to-r from-primary via-ohio-red-light to-primary text-primary-foreground font-black text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.55)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.75)] transition-all duration-500 group tracking-wide border-2 border-[hsl(45,70%,55%)] hover:scale-[1.02]"
-              >
-                <span className="text-lg sm:text-xl">🎓</span>
-                <span className="text-center leading-tight">2026 Graduation Special – Banners from $37.50 • 8 Yard Signs Only $125</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1.5 transition-transform duration-300 flex-shrink-0" />
-              </Button>
-            </Link>
+            <a
+              href="#industries-strip"
+              className="text-sm text-primary-foreground/70 hover:text-primary font-semibold underline-offset-4 hover:underline transition-colors"
+            >
+              See the industries we serve ↓
+            </a>
           </motion.div>
         </div>
 
