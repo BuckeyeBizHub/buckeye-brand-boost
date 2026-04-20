@@ -26,6 +26,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
 import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
+import dentalReferralGifts from "@/assets/dental-referral-gifts.jpg";
 
 const products = [
   {
@@ -41,6 +42,8 @@ const products = [
     title: "Patient & Referral Thank-You Gifts",
     description:
       "Curated gift packages featuring premium local Ohio brands — Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, Al's Popcorn, and more — that create memorable experiences for referring dentists, treatment-completion patients, and team appreciation.",
+    image: dentalReferralGifts,
+    imageAlt: "Curated Jeni's Ice Cream referral thank-you gift package with branded insulated tote",
   },
   {
     icon: FileText,
