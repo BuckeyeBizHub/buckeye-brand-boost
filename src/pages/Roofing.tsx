@@ -101,8 +101,8 @@ const products = [
     title: "Postcards & Direct-Mail Campaigns",
     description:
       "Targeted neighborhood postcard campaigns and direct-mail programs that fill your pipeline before storm season ramps up.",
-    image: `${PHOTO_BASE}/roofing-trade-show-bag.jpg`,
-    imageAlt: "Branded roofing company promotional bag handed out at events",
+    image: `${PHOTO_BASE}/roofing-direct-mail-postcard.jpg`,
+    imageAlt: "Roofing storm damage direct mail postcard delivered to a residential mailbox",
   },
 ];
 
