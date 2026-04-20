@@ -63,9 +63,16 @@ const ReviewCard = ({ review, image, className }: ReviewCardProps) => {
           />
         )}
         <div>
-          <span className="text-sm font-bold text-primary-foreground/70" itemProp="name">
+          <span className="text-sm font-bold text-primary-foreground/80" itemProp="name">
             {review.author}
           </span>
+          {(review.authorTitle || review.authorCompany) && (
+            <span className="block text-xs text-primary-foreground/50 font-medium">
+              {review.authorTitle}
+              {review.authorTitle && review.authorCompany ? " · " : ""}
+              {review.authorCompany}
+            </span>
+          )}
           {review.datePublished && (
             <time
               className="block text-xs text-primary-foreground/30"
