@@ -201,7 +201,7 @@ const ServicesSection = () => {
                 className="group relative flex flex-col bg-gradient-to-br from-card to-card/95 backdrop-blur-sm rounded-2xl border-2 border-primary/25 hover:border-primary/50 overflow-hidden shadow-[0_4px_24px_-6px_hsl(0_85%_40%/0.1)] hover:shadow-[0_20px_56px_-12px_hsl(0_85%_40%/0.2)] transition-all duration-500 hover:-translate-y-1.5"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50" />
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative aspect-[16/9] overflow-hidden bg-muted">
                   <img
                     src={s.img}
                     alt={s.title}
