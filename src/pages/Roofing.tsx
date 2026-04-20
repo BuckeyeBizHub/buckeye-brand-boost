@@ -159,7 +159,7 @@ const audiences = [
 
 const Roofing = () => {
   usePageSEO({
-    title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors | Buckeye Biz Hub",
+    title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors",
     description:
       "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
   });
