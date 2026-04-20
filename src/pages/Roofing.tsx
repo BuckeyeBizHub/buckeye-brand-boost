@@ -166,7 +166,7 @@ const Roofing = () => {
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
             style={{ textShadow: "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)" }}
           >
-            Make Your Trucks, Crews, and Brand{" "}
+            Make Your Trucks and Crews Look{" "}
             <span
               className="text-primary text-glow-red inline-block"
               style={{
@@ -176,14 +176,14 @@ const Roofing = () => {
                 paintOrder: "stroke fill",
               }}
             >
-              Stand Out on Every Ohio Job Site
+              as Strong as Your Work
             </span>
           </h1>
           <p
             className="text-lg md:text-xl text-primary-foreground font-medium leading-relaxed max-w-3xl mx-auto mb-10"
             style={{ textShadow: "0 2px 6px rgba(0,0,0,0.98), 0 4px 18px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7)" }}
           >
-            Vehicle wraps, durable crew apparel, door hangers, yard signs, and full marketing materials built for busy roofing companies.
+            Professional vehicle wraps, durable crew apparel, door hangers, yard signs, and full marketing materials built for busy Central Ohio roofing companies.
           </p>
           <Link to="/contact">
             <Button
