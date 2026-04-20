@@ -25,6 +25,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
+import dentalStaffScrubs from "@/assets/dental-staff-scrubs.jpg";
 
 const products = [
   {
@@ -32,6 +33,8 @@ const products = [
     title: "Branded Staff Apparel",
     description:
       "High-quality scrubs, polos, jackets, and uniforms that maintain a consistent, professional look across single or multi-location offices. Embroidered or printed in your practice colors with options for every team member from the front desk to the operatory.",
+    image: dentalStaffScrubs,
+    imageAlt: "Dental practice team in matching branded navy scrubs with embroidered names and logo",
   },
   {
     icon: Gift,
