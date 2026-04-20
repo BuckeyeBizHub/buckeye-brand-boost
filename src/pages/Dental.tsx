@@ -159,7 +159,9 @@ const Dental = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.7)] via-[hsl(0,0%,4%/0.8)] to-[hsl(0,0%,4%/0.95)]" />
+          {/* Multi-layer overlay for maximum text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.85)] via-[hsl(0,0%,4%/0.88)] to-[hsl(0,0%,4%/0.97)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0_0%_4%/0.35)_0%,_hsl(0_0%_4%/0.75)_70%,_hsl(0_0%_4%/0.92)_100%)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
           <motion.div
@@ -172,7 +174,10 @@ const Dental = () => {
           </motion.div>
           <h1
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
-            style={{ textShadow: "0 4px 30px rgba(0,0,0,0.8)" }}
+            style={{
+              textShadow:
+                "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)",
+            }}
           >
             Professional Branding & Procurement Partner for{" "}
             <span
@@ -188,8 +193,11 @@ const Dental = () => {
             </span>
           </h1>
           <p
-            className="text-lg md:text-xl text-primary-foreground/90 font-medium leading-relaxed max-w-3xl mx-auto mb-10"
-            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+            className="text-lg md:text-xl text-primary-foreground font-semibold leading-relaxed max-w-3xl mx-auto mb-10"
+            style={{
+              textShadow:
+                "0 2px 6px rgba(0,0,0,0.95), 0 4px 18px rgba(0,0,0,0.85), 0 0 40px rgba(0,0,0,0.6)",
+            }}
           >
             We help dental offices look as polished and consistent as the exceptional care you provide — from staff scrubs and patient referral gifts to signage, printed materials, and full rebranding support.
           </p>
