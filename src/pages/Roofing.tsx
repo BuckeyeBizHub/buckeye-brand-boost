@@ -245,10 +245,13 @@ const Roofing = () => {
                 <span className="text-primary">Fleet-Heavy, Crew-Based Businesses</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                In the last 20 months I helped a local vehicle wrap company <span className="font-bold text-foreground">double their sales</span> through their fleet branding division. I've also started <span className="font-bold text-foreground">3 businesses</span> from the ground up in Central Ohio. Combined with 15+ years supporting my wife Dr. Kerry Stein's endodontics practice, I've learned exactly what fleet-heavy, crew-based businesses need to look sharp every single day.
+                In the last 20 months I helped a local vehicle wrap company <span className="font-bold text-foreground">double their sales</span> through their fleet branding division. I've also started <span className="font-bold text-foreground">3 businesses</span> from the ground up right here in Central Ohio. That hands-on experience running fleet-heavy, crew-based operations taught me exactly what roofing companies actually need: materials that hold up on the job site, branding that looks sharp on the road, and a partner who can deliver quickly during the busiest months of the year.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+                We've already helped <span className="font-bold text-foreground">9 different Central Ohio roofing companies</span> strengthen their brand across every touchpoint — full vehicle wraps, crew uniforms and high-vis gear, door hangers, yard signs, carbonless contract forms, sales materials, and more.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We've already helped <span className="font-bold text-foreground">9 different Central Ohio roofing companies</span> with the products they need during peak season — from full truck wraps to last-minute door hangers before a neighborhood blitz.
+                At Buckeye Biz Hub, we don't just sell products. We act as your <span className="font-bold text-foreground">branding concierge</span> — making sure your trucks, crews, and marketing materials all work together so you can focus on running jobs instead of chasing vendors.
               </p>
               <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
                 — David Stein, Your Buckeye Branding Concierge
