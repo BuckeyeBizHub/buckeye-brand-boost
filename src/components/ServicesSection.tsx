@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 import businessCardsProduct from "@/assets/luxury-gold-foil-cards.jpg";
-import brochuresHero from "@/assets/trifold-brochure-sample.png";
+import brochuresHero from "@/assets/print-roofing-door-hanger.jpg";
 import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
 import customApparelPolos from "@/assets/custom-apparel-polos-hoodies.jpg";
 import yardSignsProduct from "@/assets/yard-signs-product.jpg";
