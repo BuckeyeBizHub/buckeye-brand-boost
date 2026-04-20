@@ -299,8 +299,55 @@ const Roofing = () => {
         </div>
       </section>
 
-      {/* Section 4 — Who We Serve */}
+      {/* Real Roofing Work Gallery */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
+        <div className="container max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <Sparkles className="w-4 h-4" /> Real Roofing Work
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
+              Examples of What We <span className="text-primary">Build for Roofers</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Truck wraps, yard signs, door hangers, carbonless contracts, and trade show banners — the exact mix Central Ohio roofing crews use every season.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {galleryPhotos.map((photo, i) => (
+              <motion.div
+                key={photo.src}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (i % 4) * 0.05 }}
+                className="group relative rounded-2xl overflow-hidden border-2 border-border hover:border-primary/40 shadow-sm hover:shadow-lg transition-all duration-300 bg-card"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[hsl(0,0%,4%/0.9)] via-[hsl(0,0%,4%/0.5)] to-transparent">
+                  <p className="text-primary-foreground text-xs md:text-sm font-bold">{photo.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 — Who We Serve */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
