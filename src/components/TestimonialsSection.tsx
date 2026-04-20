@@ -57,7 +57,7 @@ interface TestimonialsSectionProps {
 }
 
 const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
-  const items = showAll ? testimonialReviews : testimonialReviews.slice(0, 6);
+  const items = showAll ? testimonialReviews : testimonialReviews.slice(0, 3);
 
   // Generate review collection JSON-LD
   const schemaData = reviewCollectionSchema({
