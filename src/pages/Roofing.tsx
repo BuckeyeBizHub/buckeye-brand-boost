@@ -24,7 +24,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-protech.jpg`;
 const ROOFING_JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
-const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-truck-wrap-maspeth.jpg`;
+const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 
 const galleryPhotos = [
   { src: `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`, alt: "Full roofing company van wrap with bold mascot graphics", label: "Full Van Wrap" },
@@ -263,7 +263,7 @@ const Roofing = () => {
             >
               <img
                 src={ROOFING_BEFORE_AFTER}
-                alt="Professional fleet branding shown from multiple angles on roofing contractor pickup truck"
+                alt="Briggs Roofing branded fleet pickup truck with full green and white vehicle wrap"
                 className="w-full h-full object-cover aspect-[4/5]"
                 loading="lazy"
               />
