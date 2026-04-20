@@ -43,25 +43,25 @@ const About = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 overflow-hidden bg-ohio-grey-dark">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/90 via-ohio-grey-dark to-ohio-navy/80" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
         <div className="container relative">
-          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="lg:col-span-3"
+              className="lg:col-span-7 text-center lg:text-left"
             >
               <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
                 About Buckeye Biz Hub
               </span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
                 The Story Behind{" "}
                 <span className="text-primary text-glow-red">Buckeye Biz Hub</span>
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 We're not a catalog. We're not a generic vendor. We're a Central Ohio business owner who's been on your side of the table.
               </p>
             </motion.div>
@@ -70,20 +70,22 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.7 }}
-              className="lg:col-span-2 relative max-w-sm mx-auto lg:mx-0 lg:ml-auto"
+              className="lg:col-span-5 relative w-full max-w-[340px] mx-auto"
             >
-              <div className="rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl aspect-[4/5]">
                 <img
                   src={davidHero}
                   alt="David Stein, founder of Buckeye Biz Hub in Central Ohio"
-                  className="w-full h-[320px] md:h-[400px] object-cover object-top"
+                  className="w-full h-full object-cover object-top"
                 />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground rounded-2xl px-5 py-3 shadow-lg">
-                <p className="text-sm font-bold">David Stein</p>
-                <p className="text-xs text-primary-foreground/80">
-                  Founder, Buckeye Biz Hub
-                </p>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.95] via-[hsl(220,30%,3%)/0.7] to-transparent pt-16 pb-4 px-5">
+                  <p className="text-base font-black text-primary-foreground leading-tight">
+                    David Stein
+                  </p>
+                  <p className="text-xs text-primary-foreground/75 font-semibold">
+                    Founder · Buckeye Biz Hub
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
