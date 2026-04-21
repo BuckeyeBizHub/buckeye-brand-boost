@@ -200,10 +200,10 @@ const Construction = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.6)]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.85)] via-[hsl(0,0%,4%/0.55)] to-[hsl(0,0%,4%/0.75)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.4)] via-transparent to-[hsl(0,0%,4%/0.95)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.25)_0%,_hsl(0,0%,4%/0.8)_80%)]" />
+          <div className="absolute inset-0 bg-[hsl(0,0%,2%/0.78)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,2%/0.92)] via-[hsl(0,0%,2%/0.72)] to-[hsl(0,0%,2%/0.88)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,2%/0.65)] via-[hsl(0,0%,2%/0.55)] to-[hsl(0,0%,2%/0.98)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,2%/0.55)_0%,_hsl(0,0%,2%/0.92)_80%)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
           <motion.div
