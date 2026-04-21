@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServicesHero from "@/components/services/ServicesHero";
@@ -76,18 +77,6 @@ const services = [
     title: "Full Rebrand Kits",
     description: "Elevate your entire brand presence in one complete, coordinated package. We handle vehicle branding, signage, apparel, printing, promotional products, and digital assets to create a cohesive, professional image that helps your business compete — and win — at the highest level.",
     href: "/full-rebrand-kits",
-  },
-  {
-    image: websiteImg,
-    title: "Website Design & Development",
-    description: "Build a modern, fast-loading website that actually works for your business. We design mobile-friendly, lead-generating websites that attract customers, build trust, and convert visitors into loyal Ohio clients 24/7.",
-    href: "/website-design",
-  },
-  {
-    image: seoImg,
-    title: "Local SEO & Google Ranking",
-    description: "Get discovered by more local customers when they search online. Our local SEO strategies help you rank higher on Google, dominate the Map Pack, and appear exactly when potential customers in Columbus and Central Ohio are looking for you.",
-    href: "/local-seo",
   },
   {
     image: postcardsImg,
@@ -173,6 +162,35 @@ const Services = () => {
               <ServiceCard key={s.title} {...s} index={i} />
             ))}
           </div>
+
+          {/* Additional Services — available upon request, hidden from primary grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-20 pt-12 border-t border-border"
+          >
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground tracking-[0.3em] uppercase mb-4 bg-muted px-5 py-2 rounded-full">
+                Additional Services
+              </span>
+              <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-3">
+                Available Upon Request
+              </h3>
+              <p className="text-base text-muted-foreground">
+                We also support clients with{" "}
+                <Link to="/website-design" className="text-primary font-semibold hover:underline">
+                  website design
+                </Link>{" "}
+                and{" "}
+                <Link to="/local-seo" className="text-primary font-semibold hover:underline">
+                  local SEO
+                </Link>{" "}
+                when it fits the project. Just ask David — happy to discuss whether it's the right fit for your business.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
