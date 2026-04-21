@@ -17,7 +17,7 @@ const fadeUp = {
 };
 
 const stats = [
-  { value: "500+", label: "Ohio businesses served" },
+  { value: "Hundreds", label: "of Ohio businesses served" },
   { value: "15+ yrs", label: "Inside a real Ohio dental practice" },
   { value: "3", label: "Businesses built from scratch in Central Ohio" },
   { value: "9", label: "Roofing companies served in Central Ohio" },

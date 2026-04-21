@@ -205,12 +205,12 @@ const HeroSection = () => {
         <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-4 sm:gap-x-10">
           <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 sm:[&_img]:h-14 gap-4 sm:gap-6" />
           {[
-            { value: "500+", label: "Ohio Businesses" },
+            { value: "Hundreds", label: "Ohio Businesses Served" },
             { value: "24hr", label: "Quote Turnaround" },
             { value: "100%", label: "Satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-black text-primary text-glow-red leading-none mb-1">{stat.value}</div>
+              <div className="text-xl sm:text-2xl font-black text-primary text-glow-red leading-none mb-1">{stat.value}</div>
               <div className="text-[0.55rem] sm:text-[0.65rem] text-primary-foreground/50 font-bold tracking-[0.15em] uppercase whitespace-nowrap">{stat.label}</div>
             </div>
           ))}
@@ -225,7 +225,7 @@ const HeroSection = () => {
         className="relative z-10 hidden lg:grid grid-cols-3 max-w-xl mx-auto px-4 mt-8"
       >
         {[
-          { value: "500+", label: "Ohio Businesses" },
+          { value: "Hundreds", label: "Ohio Businesses Served" },
           { value: "24hr", label: "Quote Turnaround" },
           { value: "100%", label: "Satisfaction" },
         ].map((stat, i) => (
@@ -233,7 +233,7 @@ const HeroSection = () => {
             key={stat.label}
             className={`text-center py-2 ${i !== 2 ? "border-r border-primary-foreground/10" : ""}`}
           >
-            <div className="text-2xl sm:text-3xl font-black text-primary text-glow-red mb-1">{stat.value}</div>
+            <div className="text-xl sm:text-2xl font-black text-primary text-glow-red mb-1">{stat.value}</div>
             <div className="text-[0.55rem] sm:text-[0.6rem] text-primary-foreground/40 font-bold tracking-[0.15em] uppercase">{stat.label}</div>
           </div>
         ))}
