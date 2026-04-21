@@ -78,18 +78,6 @@ const services = [
     href: "/full-rebrand-kits",
   },
   {
-    image: websiteImg,
-    title: "Website Design & Development",
-    description: "Build a modern, fast-loading website that actually works for your business. We design mobile-friendly, lead-generating websites that attract customers, build trust, and convert visitors into loyal Ohio clients 24/7.",
-    href: "/website-design",
-  },
-  {
-    image: seoImg,
-    title: "Local SEO & Google Ranking",
-    description: "Get discovered by more local customers when they search online. Our local SEO strategies help you rank higher on Google, dominate the Map Pack, and appear exactly when potential customers in Columbus and Central Ohio are looking for you.",
-    href: "/local-seo",
-  },
-  {
     image: postcardsImg,
     title: "Postcards & Direct Mail",
     description: "Reach targeted neighborhoods with premium postcards and EDDM direct mail campaigns. Multiple sizes, paper stocks, and finishes — plus we coordinate mailing so you just sit back and watch the leads come in.",
