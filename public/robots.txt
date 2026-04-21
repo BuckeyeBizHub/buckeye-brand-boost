@@ -2,9 +2,6 @@
 # robots.txt — Buckeye Biz Hub (buckeyebizhub.com)
 # ============================================================
 
-# ── Search Engine Bots ──────────────────────────────────────
-# Full access to all public content for major search engines.
-
 User-agent: Googlebot
 Allow: /
 
@@ -20,15 +17,6 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# ── Social Media / Preview Bots ─────────────────────────────
-# Allow link previews for sharing on social platforms.
-
 User-agent: Twitterbot
 Allow: /
 
@@ -41,16 +29,7 @@ Allow: /
 User-agent: Slackbot
 Allow: /
 
-User-agent: WhatsApp
-Allow: /
-
-User-agent: Discordbot
-Allow: /
-
 # ── AI / LLM Crawlers — BLOCKED ────────────────────────────
-# These bots scrape content to train large language models.
-# We do not permit our content to be used for AI training.
-
 User-agent: GPTBot
 Disallow: /
 
@@ -78,35 +57,20 @@ Disallow: /
 User-agent: Cohere-ai
 Disallow: /
 
-User-agent: FacebookBot
-Disallow: /
-
 User-agent: Diffbot
 Disallow: /
 
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-# ── Default Rule (all other bots) ──────────────────────────
-# Allow public content but block internal/admin/API paths.
-
+# ── Default Rule ─────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-# Admin and internal areas
+# Block admin/internal paths only
 Disallow: /admin/
 Disallow: /api/
+Disallow: /admin-photos
+Disallow: /research
 
-# Prevent indexing duplicate or parameterized pages
-Disallow: /*?*
-Disallow: /search
-
-# Static assets that don't need indexing
-Disallow: /assets/
-
-# ── Sitemap ─────────────────────────────────────────────────
+# NOTE: /assets/ is intentionally allowed — Google needs JS/CSS to render the React app
+# NOTE: Query params are allowed — blog pagination and filters need indexing
 
 Sitemap: https://www.buckeyebizhub.com/sitemap.xml
