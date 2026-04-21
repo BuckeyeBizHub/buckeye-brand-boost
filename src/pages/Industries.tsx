@@ -43,8 +43,8 @@ const industries: Industry[] = [
       "Branded workwear and crew polos, vehicle graphics and fleet wraps, hard hat wraps, jobsite banners, trade show displays, and safety gear — for the field teams and fleets that represent your company on every job.",
     segments:
       "General contractors · Commercial builders · Specialty contractors · Industrial",
-    cta: "Get a Quote",
-    href: "/contact",
+    cta: "See Construction Solutions",
+    href: "/construction",
   },
   {
     emoji: "🚛",
