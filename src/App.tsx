@@ -16,7 +16,7 @@ import Index from "./pages/Index.tsx";
 
 // Lazy-loaded routes for smaller initial bundle
 const Services = lazy(() => import("./pages/Services.tsx"));
-const PromotionalProducts = lazy(() => import("./pages/PromotionalProducts.tsx"));
+// PromotionalProducts (legacy) removed — PromotionalProductsPage is the active /promotional-products route
 const BusinessPrinting = lazy(() => import("./pages/BusinessPrinting.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
 const About = lazy(() => import("./pages/About.tsx"));
