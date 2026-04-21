@@ -43,11 +43,8 @@ const industries: Industry[] = [
       "Branded workwear and crew polos, vehicle graphics and fleet wraps, hard hat wraps, jobsite banners, trade show displays, and safety gear — for the field teams and fleets that represent your company on every job.",
     segments:
       "General contractors · Commercial builders · Specialty contractors · Industrial",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-  {
-    emoji: "🚛",
+    cta: "See Construction Solutions",
+    href: "/construction",
     title: "Fleet & Logistics",
     description:
       "Fleet wraps, magnetic signs, driver uniforms and safety vests, branded employee gear, and materials that keep a growing fleet looking consistent from truck to truck across multiple locations and markets.",
