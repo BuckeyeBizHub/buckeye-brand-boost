@@ -205,7 +205,7 @@ const HeroSection = () => {
         <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-4 sm:gap-x-10">
           <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 sm:[&_img]:h-14 gap-4 sm:gap-6" />
           {[
-            { value: "Hundreds", label: "Ohio Businesses Served" },
+            { value: "100+", label: "Ohio Businesses Served" },
             { value: "24hr", label: "Quote Turnaround" },
             { value: "100%", label: "Satisfaction" },
           ].map((stat) => (
@@ -225,7 +225,7 @@ const HeroSection = () => {
         className="relative z-10 hidden lg:grid grid-cols-3 max-w-xl mx-auto px-4 mt-8"
       >
         {[
-          { value: "Hundreds", label: "Ohio Businesses Served" },
+          { value: "100+", label: "Ohio Businesses Served" },
           { value: "24hr", label: "Quote Turnaround" },
           { value: "100%", label: "Satisfaction" },
         ].map((stat, i) => (
