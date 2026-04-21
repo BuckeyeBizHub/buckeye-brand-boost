@@ -114,7 +114,7 @@ const AdminPhotos = () => {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-    usePageSEO({ title: "Admin Photos" });
+    usePageSEO({ title: "Admin Photos", noindex: true });
 
   return (
     <div className="min-h-screen bg-background">

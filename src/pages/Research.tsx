@@ -20,7 +20,7 @@ const RESEARCH_PAGE_QUESTIONS = [
 ];
 
 const Research = () => {
-  usePageSEO({ title: "Branding Research Assistant - Buckeye Biz Hub Columbus Ohio", description: "Get expert AI-powered answers about promotional products, printing, vehicle wraps, banners, costs, and timelines for your Ohio business." });
+  usePageSEO({ title: "Branding Research Assistant - Buckeye Biz Hub Columbus Ohio", description: "Get expert AI-powered answers about promotional products, printing, vehicle wraps, banners, costs, and timelines for your Ohio business.", noindex: true });
 
   const { messages, input, setInput, isLoading, askQuestion, clearMessages, messagesEndRef } = useResearchAssistant();
 

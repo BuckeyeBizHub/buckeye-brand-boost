@@ -66,21 +66,22 @@ const services = [
     img: serviceRebrandKit,
     showcase: [],
   },
+] as const;
+
+// Website Design & Local SEO are available upon request — kept live but de-emphasized
+// from the homepage Services grid and primary navigation.
+const additionalServices = [
   {
     title: "Website Design & Development",
-    desc: "Build a modern, fast-loading website that attracts customers and converts visitors into loyal clients 24/7.",
     href: "/website-design",
     img: serviceWebsiteDesign,
-    showcase: [],
   },
   {
     title: "Local SEO & Google Ranking",
-    desc: "Get discovered by more local customers when they search online and dominate the Google Map Pack.",
     href: "/local-seo",
     img: serviceLocalSeo,
-    showcase: [],
   },
-] as const;
+];
 
 const featuredServices = [
   {
@@ -232,6 +233,30 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Additional services — kept live but de-emphasized */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 pt-8 border-t border-border/60 text-center"
+        >
+          <p className="text-sm text-muted-foreground">
+            <span className="font-semibold text-foreground">Also available upon request:</span>{" "}
+            {additionalServices.map((s, i) => (
+              <span key={s.href}>
+                <Link
+                  to={s.href}
+                  className="text-primary font-semibold hover:underline"
+                >
+                  {s.title}
+                </Link>
+                {i < additionalServices.length - 1 && <span> &middot; </span>}
+              </span>
+            ))}
+          </p>
+        </motion.div>
 
         {/* CTA */}
         <motion.div
