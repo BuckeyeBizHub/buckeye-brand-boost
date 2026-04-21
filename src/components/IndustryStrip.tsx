@@ -26,9 +26,9 @@ const industries = [
     title: "Construction & GCs",
     description:
       "Branded workwear, vehicle graphics, jobsite banners, and safety gear — for crews that represent you on every job site.",
-    cta: "Get a Quote",
-    href: "/contact",
-    available: false,
+    cta: "See Construction Solutions",
+    href: "/construction",
+    available: true,
   },
   {
     emoji: "🚛",
