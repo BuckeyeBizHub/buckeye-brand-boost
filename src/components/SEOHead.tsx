@@ -12,6 +12,7 @@ export {
   SITE_NAME,
   SITE_URL,
   DEFAULT_OG_IMAGE,
+  BUCKEYE_LOCAL_BUSINESS_OPTS,
   organizationSchema,
   localBusinessSchema,
   webSiteSchema,

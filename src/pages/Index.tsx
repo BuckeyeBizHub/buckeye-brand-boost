@@ -11,7 +11,7 @@ import ElevateCtaSection from "@/components/ElevateCtaSection";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import SEOHead, { localBusinessSchema, organizationSchema } from "@/components/SEOHead";
+import SEOHead, { localBusinessSchema, organizationSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/components/SEOHead";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -19,23 +19,7 @@ const Index = () => (
       description="Buckeye Biz Hub is your local Ohio partner for premium business printing, promotional products, vehicle wraps, banners, and full branding solutions. Fast 24-hour quotes, wholesale pricing, and 100% satisfaction guaranteed."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
       structuredData={[
-        localBusinessSchema({
-          telephone: "+16145613358",
-          email: "david@buckeyebizhub.com",
-          address: {
-            city: "Columbus",
-            region: "OH",
-            country: "US",
-          },
-          geo: { latitude: 39.9612, longitude: -82.9988 },
-          openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
-          priceRange: "$",
-          sameAs: [
-            "https://www.facebook.com/BuckeyeBizHub",
-            "https://www.instagram.com/buckeyebizhub",
-            "https://www.pinterest.com/BuckeyeBizHub",
-          ],
-        }),
+        localBusinessSchema(BUCKEYE_LOCAL_BUSINESS_OPTS),
         organizationSchema(),
       ]}
     />
