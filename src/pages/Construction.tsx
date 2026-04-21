@@ -28,11 +28,12 @@ import {
 import { usePageSEO } from "@/hooks/usePageTitle";
 import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import constructionHero from "@/assets/construction-hero.jpg";
+import constructionTeam from "@/assets/construction-team.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing existing job-site / fleet photos from the bucket — same crews, hard hats, vests, and trucks.
 const HERO_IMG = constructionHero;
-const JOBSITE_IMG = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
+const JOBSITE_IMG = constructionTeam;
 const FLEET_IMG = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 
 const products = [
@@ -279,7 +280,7 @@ const Construction = () => {
             >
               <img
                 src={JOBSITE_IMG}
-                alt="Fully wrapped construction company van with bold branding parked at job site"
+                alt="Ohio construction crew in matching branded high-visibility safety vests and hard hats on a job site"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
