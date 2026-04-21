@@ -192,7 +192,7 @@ const Construction = () => {
         <div className="absolute inset-0">
           <img
             src={HERO_IMG}
-            alt="Ohio road construction crew in high-visibility vests and hard hats paving asphalt with a roller and heavy equipment"
+            alt="Orange Road Work Ahead sign with Ohio construction crew in high-visibility vests and a dump truck on a road job site at golden hour"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
