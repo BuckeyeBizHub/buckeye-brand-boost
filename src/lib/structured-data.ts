@@ -544,6 +544,7 @@ export interface ReviewSchemaOpts {
     name: string;
     url?: string;
     image?: string;
+    description?: string;
   };
   reviews: ReviewData[];
   aggregateRating?: AggregateRatingOpts;
