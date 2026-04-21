@@ -27,10 +27,11 @@ import {
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
 import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
+import constructionHero from "@/assets/construction-hero.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing existing job-site / fleet photos from the bucket — same crews, hard hats, vests, and trucks.
-const HERO_IMG = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
+const HERO_IMG = constructionHero;
 const JOBSITE_IMG = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const FLEET_IMG = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 
