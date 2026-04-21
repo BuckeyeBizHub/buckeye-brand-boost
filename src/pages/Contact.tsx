@@ -239,7 +239,7 @@ const Contact = () => {
         <div className="container">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-primary-foreground/60 text-sm font-medium">
             {[
-              "35+ Ohio Companies Helped",
+              "Hundreds of Ohio businesses served",
               "$1.3 Million+ Saved",
               "100% Satisfaction Guaranteed",
               "Columbus, Ohio",
