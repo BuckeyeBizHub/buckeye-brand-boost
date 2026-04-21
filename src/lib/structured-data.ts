@@ -455,13 +455,9 @@ export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
       },
     }),
     ...(opts?.openingHours && { openingHoursSpecification: opts.openingHours }),
-    aggregateRating: opts?.aggregateRating
-      ? { "@type": "AggregateRating", ...opts.aggregateRating }
-      : {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "500",
-        },
+    ...(opts?.aggregateRating && {
+      aggregateRating: { "@type": "AggregateRating", bestRating: "5", worstRating: "1", ...opts.aggregateRating },
+    }),
   };
 }
 
@@ -544,6 +540,7 @@ export interface ReviewSchemaOpts {
     name: string;
     url?: string;
     image?: string;
+    description?: string;
   };
   reviews: ReviewData[];
   aggregateRating?: AggregateRatingOpts;
@@ -603,11 +600,13 @@ export function aggregateRatingSchema(
 /** Generate a complete review collection with aggregate + individual reviews */
 export function reviewCollectionSchema(opts: ReviewSchemaOpts): JsonLd {
   const aggregate = opts.aggregateRating ?? calculateAggregateRating(opts.reviews);
+  const reviewCount = aggregate.reviewCount ?? aggregate.ratingCount ?? opts.reviews.length;
 
   return {
     "@context": "https://schema.org",
     "@type": opts.itemReviewed.type,
     name: opts.itemReviewed.name,
+    ...(opts.itemReviewed.description && { description: opts.itemReviewed.description }),
     ...(opts.itemReviewed.url && { url: opts.itemReviewed.url }),
     ...(opts.itemReviewed.image && { image: opts.itemReviewed.image }),
     aggregateRating: {
@@ -615,12 +614,19 @@ export function reviewCollectionSchema(opts: ReviewSchemaOpts): JsonLd {
       ratingValue: aggregate.ratingValue,
       bestRating: aggregate.bestRating ?? 5,
       worstRating: aggregate.worstRating ?? 1,
-      ratingCount: aggregate.ratingCount,
-      reviewCount: aggregate.reviewCount ?? aggregate.ratingCount,
+      ratingCount: reviewCount,
+      reviewCount: reviewCount,
     },
     review: opts.reviews.map((r) => ({
       "@type": "Review",
-      author: { "@type": "Person", name: r.author },
+      author: {
+        "@type": "Person",
+        name: r.author,
+        ...(r.authorTitle && { jobTitle: r.authorTitle }),
+        ...(r.authorCompany && {
+          worksFor: { "@type": "Organization", name: r.authorCompany },
+        }),
+      },
       reviewBody: r.reviewBody,
       reviewRating: {
         "@type": "Rating",
@@ -629,6 +635,10 @@ export function reviewCollectionSchema(opts: ReviewSchemaOpts): JsonLd {
         worstRating: 1,
       },
       ...(r.datePublished && { datePublished: r.datePublished }),
+      itemReviewed: {
+        "@type": opts.itemReviewed.type,
+        name: opts.itemReviewed.name,
+      },
     })),
   };
 }
