@@ -234,6 +234,30 @@ const ServicesSection = () => {
           ))}
         </div>
 
+        {/* Additional services — kept live but de-emphasized */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 pt-8 border-t border-border/60 text-center"
+        >
+          <p className="text-sm text-muted-foreground">
+            <span className="font-semibold text-foreground">Also available upon request:</span>{" "}
+            {additionalServices.map((s, i) => (
+              <span key={s.href}>
+                <Link
+                  to={s.href}
+                  className="text-primary font-semibold hover:underline"
+                >
+                  {s.title}
+                </Link>
+                {i < additionalServices.length - 1 && <span> &middot; </span>}
+              </span>
+            ))}
+          </p>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
