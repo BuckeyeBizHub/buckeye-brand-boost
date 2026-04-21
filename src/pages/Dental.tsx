@@ -560,7 +560,7 @@ const Dental = () => {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center bg-foreground text-background font-semibold px-10 py-4 rounded-2xl hover:bg-foreground/85 transition-colors"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-10 py-4 rounded-2xl hover:bg-ohio-red-light transition-colors"
             >
               Request Your Free Comparison
             </a>
