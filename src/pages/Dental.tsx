@@ -29,6 +29,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
+import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";

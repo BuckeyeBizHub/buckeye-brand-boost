@@ -56,7 +56,7 @@ export const BUCKEYE_LOCAL_BUSINESS_OPTS = {
   openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
   priceRange: "$",
   sameAs: SOCIAL_PROFILES,
-} as const;
+};
 
 // ── Helper types ───────────────────────────────────────────
 
