@@ -45,6 +45,9 @@ const industries: Industry[] = [
       "General contractors · Commercial builders · Specialty contractors · Industrial",
     cta: "See Construction Solutions",
     href: "/construction",
+  },
+  {
+    emoji: "🚛",
     title: "Fleet & Logistics",
     description:
       "Fleet wraps, magnetic signs, driver uniforms and safety vests, branded employee gear, and materials that keep a growing fleet looking consistent from truck to truck across multiple locations and markets.",
