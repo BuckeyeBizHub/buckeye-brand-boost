@@ -66,21 +66,22 @@ const services = [
     img: serviceRebrandKit,
     showcase: [],
   },
+] as const;
+
+// Website Design & Local SEO are available upon request — kept live but de-emphasized
+// from the homepage Services grid and primary navigation.
+const additionalServices = [
   {
     title: "Website Design & Development",
-    desc: "Build a modern, fast-loading website that attracts customers and converts visitors into loyal clients 24/7.",
     href: "/website-design",
     img: serviceWebsiteDesign,
-    showcase: [],
   },
   {
     title: "Local SEO & Google Ranking",
-    desc: "Get discovered by more local customers when they search online and dominate the Google Map Pack.",
     href: "/local-seo",
     img: serviceLocalSeo,
-    showcase: [],
   },
-] as const;
+];
 
 const featuredServices = [
   {
