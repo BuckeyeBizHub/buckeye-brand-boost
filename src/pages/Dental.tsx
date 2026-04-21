@@ -29,6 +29,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/usePageTitle";
+import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 import industryDentist from "@/assets/industry-dentist.jpg";
 import industryMedical from "@/assets/industry-medical.jpg";
@@ -164,16 +165,11 @@ const Dental = () => {
       "Branded staff apparel, patient referral gifts, professional signage, and printed materials for Ohio dental practices — sourced with 15+ years of real dental office experience.",
   });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+  const jsonLd = localBusinessSchema({
+    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
     name: "Buckeye Biz Hub – Dental Practice Branding & Procurement",
-    description:
-      "Branded staff apparel, patient and referral thank-you gifts, signage, printed materials, and rebranding support for Ohio dental practices including endodontists, periodontists, orthodontists, pediatric dentists, oral surgeons, and DSO-backed groups.",
     url: "https://www.buckeyebizhub.com/dental",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  };
+  });
 
   const faqJsonLd = {
     "@context": "https://schema.org",

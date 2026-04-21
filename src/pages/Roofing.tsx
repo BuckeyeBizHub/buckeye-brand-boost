@@ -27,6 +27,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
+import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
@@ -164,16 +165,11 @@ const Roofing = () => {
       "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
   });
 
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+  const localBusinessJsonLd = localBusinessSchema({
+    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
     name: "Buckeye Biz Hub – Roofing Contractor Branding",
-    description:
-      "Vehicle wraps, fleet graphics, crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors.",
     url: "https://www.buckeyebizhub.com/roofing",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  };
+  });
 
   const faqJsonLd = {
     "@context": "https://schema.org",

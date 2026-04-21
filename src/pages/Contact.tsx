@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import pricingHero from "@/assets/pricing-hero.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
+import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 const heroBadges = [
   { icon: ShieldCheck, label: "No Hidden Fees" },
@@ -32,8 +33,14 @@ const Contact = () => {
     }
   }, []);
 
+  const jsonLd = localBusinessSchema({
+    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
+    url: "https://www.buckeyebizhub.com/contact",
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero — kept as-is */}
