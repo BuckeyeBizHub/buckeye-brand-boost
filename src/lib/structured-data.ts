@@ -411,7 +411,7 @@ export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
     "@type": "LocalBusiness",
     name: opts?.name ?? SITE_NAME,
     url: opts?.url ?? SITE_URL,
-    telephone: opts?.telephone ?? "+1-614-300-3BMH",
+    telephone: opts?.telephone ?? "+16145613358",
     image: opts?.image ?? DEFAULT_OG_IMAGE,
     priceRange: opts?.priceRange ?? "$$",
     address: opts?.address
