@@ -455,13 +455,9 @@ export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
       },
     }),
     ...(opts?.openingHours && { openingHoursSpecification: opts.openingHours }),
-    aggregateRating: opts?.aggregateRating
-      ? { "@type": "AggregateRating", ...opts.aggregateRating }
-      : {
-          "@type": "AggregateRating",
-          ratingValue: "4.9",
-          reviewCount: "500",
-        },
+    ...(opts?.aggregateRating && {
+      aggregateRating: { "@type": "AggregateRating", bestRating: "5", worstRating: "1", ...opts.aggregateRating },
+    }),
   };
 }
 
