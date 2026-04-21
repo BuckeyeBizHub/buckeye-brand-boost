@@ -29,6 +29,7 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import constructionHero from "@/assets/construction-hero.jpg";
 import constructionTeam from "@/assets/construction-team.jpg";
+import constructionSafetyDecals from "@/assets/construction-safety-decals.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing existing job-site / fleet photos from the bucket — same crews, hard hats, vests, and trucks.
@@ -58,8 +59,8 @@ const products = [
     title: "Hard Hat Wraps & Safety Decals",
     description:
       "Custom hard hat wraps and helmet graphics that keep your crew identified and branded on multi-contractor job sites.",
-    image: `${PHOTO_BASE}/roofing-qr-sticker-scan.jpg`,
-    imageAlt: "Branded vinyl decals and stickers for hard hats and safety equipment",
+    image: constructionSafetyDecals,
+    imageAlt: "Reflective First Aid CPR Trained and Safety Officer vinyl hard hat decals for construction crews",
   },
   {
     icon: Megaphone,
