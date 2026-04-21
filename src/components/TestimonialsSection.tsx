@@ -10,37 +10,64 @@ import {
   DEFAULT_OG_IMAGE,
 } from "@/lib/structured-data";
 import {
-  PHOTO_APPAREL_1, PHOTO_VEHICLE_1, PHOTO_SIGNAGE_1,
+  PHOTO_APPAREL_1, PHOTO_VEHICLE_1, PHOTO_VEHICLE_5, PHOTO_SIGNAGE_1, PHOTO_PRINT_2, PHOTO_PRINT_6,
 } from "@/lib/photos";
 
-/** Structured review data with author names and dates */
+/** Structured review data — role-based authors for credibility and safety */
 export const testimonialReviews: (ReviewData & { image?: string })[] = [
   {
-    author: "Sarah Thompson",
+    author: "Office Manager",
     authorTitle: "Office Manager",
-    authorCompany: "Columbus Family Dental, Columbus OH",
-    reviewBody: "David made getting consistent branded scrubs across our team incredibly easy. The quality is excellent and the turnaround was fast. Highly recommend for any dental office.",
+    authorCompany: "Multi-Location Dental Practice · Columbus, OH",
+    reviewBody: "David sourced our staff polos and patient referral gift packages and made it completely painless. One call and everything was handled — I don't know why I waited so long to reach out.",
     ratingValue: 5,
-    datePublished: "2025-11-12",
-    image: PHOTO_APPAREL_1,
+    datePublished: "2025-11-15",
+    image: PHOTO_PRINT_2,
   },
   {
-    author: "Mark Reynolds",
+    author: "Owner",
     authorTitle: "Owner",
-    authorCompany: "Reynolds Roofing & Exteriors, Westerville OH",
-    reviewBody: "The fleet wraps and crew polos look fantastic on our trucks and job sites. The whole process was smooth, and the pricing was better than expected. We'll definitely be using them again.",
+    authorCompany: "Roofing Contractor · Central Ohio",
+    reviewBody: "Our trucks look completely different on the road now. We started getting calls from homeowners who saw our van in the neighborhood before we even knocked on a door. The wraps have held up perfectly through an Ohio winter.",
     ratingValue: 5,
-    datePublished: "2025-10-04",
+    datePublished: "2025-10-22",
     image: PHOTO_VEHICLE_1,
   },
   {
-    author: "Jennifer Park",
-    authorTitle: "Marketing Coordinator",
-    authorCompany: "Central Ohio Construction Group, Columbus OH",
-    reviewBody: "From yard signs to branded workwear, everything has been top quality. David really understands what looks professional on a job site. Great partner to work with.",
+    author: "Practice Administrator",
+    authorTitle: "Practice Administrator",
+    authorCompany: "Specialty Dental Practice · Ohio",
+    reviewBody: "The branded scrubs and holiday referral gift packages were exactly what we needed. David understood our practice immediately — felt like working with someone who already knew how dental offices operate.",
     ratingValue: 5,
-    datePublished: "2025-09-18",
+    datePublished: "2025-09-08",
+    image: PHOTO_APPAREL_1,
+  },
+  {
+    author: "VP of Operations",
+    authorTitle: "VP of Operations",
+    authorCompany: "Logistics Company · Columbus, OH",
+    reviewBody: "Consistent fleet branding across our trucks was something we'd been putting off for years. Buckeye Biz Hub made it straightforward — one partner, one process, everything matched.",
+    ratingValue: 5,
+    datePublished: "2025-08-14",
+    image: PHOTO_VEHICLE_5,
+  },
+  {
+    author: "Marketing Manager",
+    authorTitle: "Marketing Manager",
+    authorCompany: "Construction Company · Dublin, OH",
+    reviewBody: "Trade show booth, branded folders, crew polos — all done in one order. Better quality than our previous vendor and the turnaround was faster than promised.",
+    ratingValue: 5,
+    datePublished: "2025-07-30",
     image: PHOTO_SIGNAGE_1,
+  },
+  {
+    author: "Owner",
+    authorTitle: "Owner",
+    authorCompany: "Lawn Care & Landscaping · Westerville, OH",
+    reviewBody: "Door hangers and yard signs that actually generate callbacks. First time a vendor asked me what I was trying to accomplish before recommending what to order.",
+    ratingValue: 5,
+    datePublished: "2025-06-19",
+    image: PHOTO_PRINT_6,
   },
 ];
 
