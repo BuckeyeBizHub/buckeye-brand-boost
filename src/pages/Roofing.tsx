@@ -252,6 +252,17 @@ const Roofing = () => {
         </div>
       </section>
 
+      {/* Professional Courtesy Banner */}
+      <section className="bg-primary/10 border-b border-primary/20 py-4">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm font-medium text-primary">
+            Professional Courtesy for Ohio Businesses:{" "}
+            <span className="font-semibold">20% off your first order</span>{" "}
+            on our already wholesale pricing. No commitment required.
+          </p>
+        </div>
+      </section>
+
       {/* Section 1 — Why Roofing Contractors Choose Us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
