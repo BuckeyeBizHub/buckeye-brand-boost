@@ -31,6 +31,24 @@ const Index = () => (
     <TestimonialsSection />
     <LatestBlogSection />
     <ElevateCtaSection />
+    <section className="py-16 bg-muted">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="bg-card border border-border rounded-3xl p-10 shadow-sm">
+          <h3 className="text-3xl font-bold mb-4 text-card-foreground">
+            Free Cost Comparison — No Commitment
+          </h3>
+          <p className="text-lg text-muted-foreground mb-8">
+            Tell us what you're currently spending on branded materials, uniforms, signage, or printed items and we'll show you exactly what we can provide for less — often with significant savings.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-10 py-4 rounded-2xl hover:bg-primary/90 transition-colors"
+          >
+            Request Your Free Comparison
+          </a>
+        </div>
+      </div>
+    </section>
     <CTASection />
     <Footer />
   </div>
