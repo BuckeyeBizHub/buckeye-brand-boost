@@ -161,6 +161,35 @@ const Services = () => {
               <ServiceCard key={s.title} {...s} index={i} />
             ))}
           </div>
+
+          {/* Additional Services — available upon request, hidden from primary grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-20 pt-12 border-t border-border"
+          >
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground tracking-[0.3em] uppercase mb-4 bg-muted px-5 py-2 rounded-full">
+                Additional Services
+              </span>
+              <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-3">
+                Available Upon Request
+              </h3>
+              <p className="text-base text-muted-foreground">
+                We also support clients with{" "}
+                <Link to="/website-design" className="text-primary font-semibold hover:underline">
+                  website design
+                </Link>{" "}
+                and{" "}
+                <Link to="/local-seo" className="text-primary font-semibold hover:underline">
+                  local SEO
+                </Link>{" "}
+                when it fits the project. Just ask David — happy to discuss whether it's the right fit for your business.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
