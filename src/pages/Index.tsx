@@ -18,7 +18,26 @@ const Index = () => (
     <SEOHead
       description="Buckeye Biz Hub is your local Ohio partner for premium business printing, promotional products, vehicle wraps, banners, and full branding solutions. Fast 24-hour quotes, wholesale pricing, and 100% satisfaction guaranteed."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
-      structuredData={[localBusinessSchema(), organizationSchema()]}
+      structuredData={[
+        localBusinessSchema({
+          telephone: "+16145613358",
+          email: "david@buckeyebizhub.com",
+          address: {
+            city: "Columbus",
+            region: "OH",
+            country: "US",
+          },
+          geo: { latitude: 39.9612, longitude: -82.9988 },
+          openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+          priceRange: "$",
+          sameAs: [
+            "https://www.facebook.com/BuckeyeBizHub",
+            "https://www.instagram.com/buckeyebizhub",
+            "https://www.pinterest.com/BuckeyeBizHub",
+          ],
+        }),
+        organizationSchema(),
+      ]}
     />
     <Navbar />
     <HeroSection />
