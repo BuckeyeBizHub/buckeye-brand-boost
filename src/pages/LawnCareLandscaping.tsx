@@ -29,6 +29,7 @@ import {
 import { usePageSEO } from "@/hooks/usePageTitle";
 import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import lawncareHero from "@/assets/lawncare-hero.jpg";
+import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
@@ -303,8 +304,8 @@ const LawnCareLandscaping = () => {
               className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
             >
               <img
-                src={JOBSITE}
-                alt="Fully wrapped landscaping service truck with bold branding parked at job site"
+                src={lawncareTrailerWrap}
+                alt="Fully wrapped landscaping company trailer with full-color branding, services list, and contact info"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
