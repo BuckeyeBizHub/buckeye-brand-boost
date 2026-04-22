@@ -32,6 +32,7 @@ import lawncareHero from "@/assets/lawncare-hero.jpg";
 import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 import lawncareStoryVan from "@/assets/lawncare-story-van.jpg";
 import lawncarePostcard from "@/assets/lawncare-postcard.jpg";
+import lawncareYardSign from "@/assets/lawncare-yard-sign.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
@@ -82,8 +83,8 @@ const products = [
     title: "Yard Signs & Property Signage",
     description:
       "Bold, durable yard signs that advertise your work while you're doing it — turning every active job site into a lead magnet.",
-    image: `${PHOTO_BASE}/roofing-yard-sign-shingles.jpg`,
-    imageAlt: "Landscaping yard sign with company branding in residential lawn",
+    image: lawncareYardSign,
+    imageAlt: "Branded lawn care yard sign promoting fall clean up service staked in a residential lawn",
   },
   {
     icon: Mail,
