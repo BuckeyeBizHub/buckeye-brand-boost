@@ -205,15 +205,16 @@ const LawnCareLandscaping = () => {
         <div className="absolute inset-0">
           <img
             src={HERO}
-            alt="Lush, professionally maintained Central Ohio landscape with vibrant flower beds and manicured lawn"
+            alt="Lush, freshly mowed Central Ohio lawn at golden hour with soft tree line in the background"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.78)]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.92)] via-[hsl(0,0%,4%/0.7)] to-[hsl(0,0%,4%/0.88)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.7)] via-[hsl(0,0%,4%/0.55)] to-[hsl(0,0%,4%/0.97)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.4)_0%,_hsl(0,0%,4%/0.88)_85%)]" />
+          {/* Heavy contrast stack: ensures bright sky/grass don't wash out white headline */}
+          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.82)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.95)] via-[hsl(0,0%,4%/0.78)] to-[hsl(0,0%,4%/0.92)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.85)] via-[hsl(0,0%,4%/0.6)] to-[hsl(0,0%,4%/0.98)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.45)_0%,_hsl(0,0%,4%/0.92)_85%)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
           <motion.div
