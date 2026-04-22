@@ -33,6 +33,7 @@ import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 import lawncareStoryVan from "@/assets/lawncare-story-van.jpg";
 import lawncarePostcard from "@/assets/lawncare-postcard.jpg";
 import lawncareYardSign from "@/assets/lawncare-yard-sign.jpg";
+import lawncareTruckWrap from "@/assets/lawncare-truck-wrap.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
@@ -59,8 +60,8 @@ const products = [
     title: "Vehicle Wraps & Fleet Graphics",
     description:
       "Full wraps, partial wraps, and magnetic signs for trucks, trailers, and equipment that turn every mile into a neighborhood impression.",
-    image: `${PHOTO_BASE}/roofing-truck-wrap-bluepeaks.jpg`,
-    imageAlt: "Landscaping pickup truck with branded vehicle wrap",
+    image: lawncareTruckWrap,
+    imageAlt: "Full landscape management box truck wrap with green grass graphics, logo, phone number, and branded messaging",
   },
   {
     icon: Shirt,
