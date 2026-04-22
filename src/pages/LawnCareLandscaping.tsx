@@ -28,10 +28,11 @@ import {
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
 import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
+import lawncareHero from "@/assets/lawncare-hero.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
-const HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
+const HERO = lawncareHero;
 const JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const STORY = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 
@@ -204,15 +205,15 @@ const LawnCareLandscaping = () => {
         <div className="absolute inset-0">
           <img
             src={HERO}
-            alt="Lawn care crew in branded apparel working in a Central Ohio neighborhood at golden hour"
+            alt="Lush, professionally maintained Central Ohio landscape with vibrant flower beds and manicured lawn"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.6)]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.85)] via-[hsl(0,0%,4%/0.55)] to-[hsl(0,0%,4%/0.75)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.4)] via-transparent to-[hsl(0,0%,4%/0.95)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.25)_0%,_hsl(0,0%,4%/0.8)_80%)]" />
+          <div className="absolute inset-0 bg-[hsl(0,0%,4%/0.78)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,4%/0.92)] via-[hsl(0,0%,4%/0.7)] to-[hsl(0,0%,4%/0.88)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(0,0%,4%/0.7)] via-[hsl(0,0%,4%/0.55)] to-[hsl(0,0%,4%/0.97)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0,0%,4%/0.4)_0%,_hsl(0,0%,4%/0.88)_85%)]" />
         </div>
         <div className="container relative max-w-5xl mx-auto text-center">
           <motion.div
