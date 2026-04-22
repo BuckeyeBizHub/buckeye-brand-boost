@@ -31,6 +31,7 @@ import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } 
 import lawncareHero from "@/assets/lawncare-hero.jpg";
 import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 import lawncareStoryVan from "@/assets/lawncare-story-van.jpg";
+import lawncarePostcard from "@/assets/lawncare-postcard.jpg";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
@@ -89,8 +90,8 @@ const products = [
     title: "Seasonal Postcards & Direct Mail",
     description:
       "Targeted neighborhood postcard campaigns timed for spring startup, fall cleanup, and snow removal season.",
-    image: `${PHOTO_BASE}/roofing-direct-mail-postcard.jpg`,
-    imageAlt: "Seasonal lawn care postcard delivered to a residential mailbox",
+    image: lawncarePostcard,
+    imageAlt: "Spring landscaping promotional postcard with seasonal offers and free estimate callouts",
   },
   {
     icon: CreditCard,
