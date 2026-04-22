@@ -54,6 +54,7 @@ const Graduation2026 = lazy(() => import("./pages/Graduation2026.tsx"));
 const Dental = lazy(() => import("./pages/Dental.tsx"));
 const Roofing = lazy(() => import("./pages/Roofing.tsx"));
 const Construction = lazy(() => import("./pages/Construction.tsx"));
+const LawnCareLandscaping = lazy(() => import("./pages/LawnCareLandscaping.tsx"));
 
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));
@@ -150,6 +151,7 @@ const App = () => (
             <Route path="/dental" element={<Dental />} />
             <Route path="/roofing" element={<Roofing />} />
             <Route path="/construction" element={<Construction />} />
+            <Route path="/lawn-care-landscaping" element={<LawnCareLandscaping />} />
             <Route path="/research" element={<Research />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

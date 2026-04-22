@@ -53,9 +53,9 @@ const industries = [
     title: "Lawn Care & Landscaping",
     description:
       "Fleet graphics, crew shirts, door hangers, yard signs, and seasonal marketing materials — for companies where every truck is a rolling billboard.",
-    cta: "Get a Quote",
-    href: "/contact",
-    available: false,
+    cta: "See Landscaping Solutions",
+    href: "/lawn-care-landscaping",
+    available: true,
   },
   {
     emoji: "🏥",

@@ -19,6 +19,7 @@ const industryLinks = [
   { label: "Dental Practices & Specialty Offices", href: "/dental" },
   { label: "Roofing & Exterior Contractors", href: "/roofing" },
   { label: "Construction & General Contractors", href: "/construction" },
+  { label: "Lawn Care & Landscaping", href: "/lawn-care-landscaping" },
   { label: "All Industries We Serve", href: "/industries" },
 ];
 
