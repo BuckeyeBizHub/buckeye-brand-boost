@@ -28,8 +28,10 @@ const PUBLISHER = {
 
 const ADDRESS = {
   "@type": "PostalAddress" as const,
+  streetAddress: "1193 Virginia Ave",
   addressLocality: "Columbus",
   addressRegion: "OH",
+  postalCode: "43212",
   addressCountry: "US",
 };
 
@@ -48,8 +50,10 @@ export const BUCKEYE_LOCAL_BUSINESS_OPTS = {
   telephone: "+16145613358",
   email: "david@buckeyebizhub.com",
   address: {
+    street: "1193 Virginia Ave",
     city: "Columbus",
     region: "OH",
+    postalCode: "43212",
     country: "US",
   },
   geo: { latitude: 39.9612, longitude: -82.9988 },
