@@ -57,6 +57,10 @@ const Footer = () => {
             <p className="text-primary-foreground/30 text-xs font-bold uppercase tracking-[0.1em]">
               Proudly Ohio Owned & Operated | Columbus, Ohio
             </p>
+            <address className="not-italic mt-3 text-primary-foreground/25 text-[0.65rem] font-bold leading-relaxed">
+              1193 Virginia Ave<br />
+              Columbus, OH 43212
+            </address>
           </div>
 
           {/* Column 2 – Company */}
