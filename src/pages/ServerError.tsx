@@ -60,8 +60,8 @@ const ServerError = () => {
               Need help right away? Reach out and we'll get back to you within 24 hours.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="tel:6145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Phone className="w-3.5 h-3.5" /> 614-561-3358
+              <a href="tel:+16145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
+                <Phone className="w-3.5 h-3.5" /> (614) 561-3358
               </a>
               <a href="mailto:david@buckeyebizhub.com" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
                 <Mail className="w-3.5 h-3.5" /> david@buckeyebizhub.com

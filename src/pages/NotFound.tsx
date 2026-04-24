@@ -108,8 +108,8 @@ const NotFound = () => {
               If you believe this page should exist, please let us know so we can fix it.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="tel:6145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Phone className="w-3.5 h-3.5" /> 614-561-3358
+              <a href="tel:+16145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
+                <Phone className="w-3.5 h-3.5" /> (614) 561-3358
               </a>
               <a href="mailto:david@buckeyebizhub.com" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
                 <Mail className="w-3.5 h-3.5" /> david@buckeyebizhub.com

@@ -132,7 +132,7 @@ const Contact = () => {
             >
               {/* Phone prominent */}
               <a
-                href="tel:6145613358"
+                href="tel:+16145613358"
                 className="group flex items-center gap-4 bg-card border-2 border-primary/20 hover:border-primary/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
@@ -140,7 +140,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Call David Directly</p>
-                  <p className="text-2xl font-black text-foreground group-hover:text-primary transition-colors">614-561-3358</p>
+                  <p className="text-2xl font-black text-foreground group-hover:text-primary transition-colors">(614) 561-3358</p>
                 </div>
               </a>
 
