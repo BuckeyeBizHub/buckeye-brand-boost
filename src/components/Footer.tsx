@@ -115,11 +115,11 @@ const Footer = () => {
               Get In Touch
             </h4>
             <div className="space-y-4 mb-6">
-              <a href="tel:6145613358" className="flex items-center gap-3 group">
+              <a href="tel:+16145613358" className="flex items-center gap-3 group">
                 <div className="w-9 h-9 rounded-lg bg-primary/[0.1] border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
                   <Phone className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-sm font-bold text-primary-foreground/50 group-hover:text-primary transition-colors duration-300">614-561-3358</span>
+                <span className="text-sm font-bold text-primary-foreground/50 group-hover:text-primary transition-colors duration-300">(614) 561-3358</span>
               </a>
               <a href="mailto:david@buckeyebizhub.com" className="flex items-center gap-3 group">
                 <div className="w-9 h-9 rounded-lg bg-primary/[0.1] border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
