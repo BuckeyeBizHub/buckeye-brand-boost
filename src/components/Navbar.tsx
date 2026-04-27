@@ -105,8 +105,8 @@ const Navbar = () => {
             {navLinks.map((link) => {
               if (link.hasDropdown) {
                 const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : industryLinks;
-                const active = isServices ? isServicesActive() : isIndustriesActive();
+                const items = isServices ? serviceLinks : aboutLinks;
+                const active = isServices ? isServicesActive() : isAboutActive();
                 const isOpen = openDropdown === link.dropdownType;
                 return (
                   <div
