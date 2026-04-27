@@ -42,9 +42,9 @@ const navLinks: NavItem[] = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<"services" | "industries" | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<"services" | "about" | null>(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const location = useLocation();
 
@@ -58,10 +58,10 @@ const Navbar = () => {
     setOpen(false);
     setOpenDropdown(null);
     setMobileServicesOpen(false);
-    setMobileIndustriesOpen(false);
+    setMobileAboutOpen(false);
   }, [location.pathname]);
 
-  const handleEnter = (type: "services" | "industries") => {
+  const handleEnter = (type: "services" | "about") => {
     clearTimeout(timeoutRef.current);
     setOpenDropdown(type);
   };
@@ -77,8 +77,8 @@ const Navbar = () => {
   const isServicesActive = () =>
     isActive("/services") || serviceLinks.some((s) => isActive(s.href));
 
-  const isIndustriesActive = () =>
-    isActive("/industries") || industryLinks.some((s) => isActive(s.href));
+  const isAboutActive = () =>
+    isActive("/about") || aboutLinks.some((s) => isActive(s.href));
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
