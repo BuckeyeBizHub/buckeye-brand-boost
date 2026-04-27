@@ -34,9 +34,9 @@ const bestFitBullets = [
 
 const About = () => {
   usePageSEO({
-    title: "The Story Behind Buckeye Biz Hub | About David Stein",
+    title: "About Us",
     description:
-      "Buckeye Biz Hub is built by a Central Ohio business owner with 15+ years inside a real dental practice. Concierge branding, fleet wraps, and printed materials for Ohio businesses that want a real partner — not a catalog.",
+      "Learn the story behind Buckeye Biz Hub, Ohio's trusted local branding partner helping small businesses look professional and grow since day one.",
   });
 
   const jsonLd = localBusinessSchema({
