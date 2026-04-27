@@ -98,87 +98,103 @@ const featuredServices = [
   },
 ];
 
+// Masonry sizing — varied heights/spans create a flowing, premium rhythm
+// instead of a rigid uniform grid. Tuned for 12-col layout on lg+.
+const layout = [
+  { colSpan: "lg:col-span-5", aspect: "aspect-[4/5]",  size: "tall"  }, // Business Cards
+  { colSpan: "lg:col-span-7", aspect: "aspect-[16/10]", size: "wide" }, // Brochures
+  { colSpan: "lg:col-span-4", aspect: "aspect-[4/5]",  size: "tall"  }, // Promo
+  { colSpan: "lg:col-span-4", aspect: "aspect-[1/1]",  size: "square"}, // Apparel
+  { colSpan: "lg:col-span-4", aspect: "aspect-[4/5]",  size: "tall"  }, // Yard Signs
+  { colSpan: "lg:col-span-7", aspect: "aspect-[16/9]",  size: "hero" }, // Vehicle Wraps — hero card
+  { colSpan: "lg:col-span-5", aspect: "aspect-[4/5]",  size: "tall"  }, // Rebrand Kits
+] as const;
+
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-12 lg:py-16 relative overflow-hidden">
-      {/* Layered background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/40 to-background" />
-      <div className="absolute top-1/4 right-[-10%] w-[600px] h-[600px] bg-primary/[0.04] rounded-full blur-[200px]" />
-      <div className="absolute bottom-1/4 left-[-10%] w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[180px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-ohio-navy/[0.02] rounded-full blur-[250px]" />
+    <section id="services" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Flowing background — soft navy → white with red accent glows */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-ohio-grey-light/30 to-background" />
+      <div className="absolute top-[10%] right-[-15%] w-[700px] h-[700px] bg-primary/[0.05] rounded-full blur-[220px]" />
+      <div className="absolute bottom-[5%] left-[-15%] w-[600px] h-[600px] bg-ohio-navy/[0.06] rounded-full blur-[200px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-primary/[0.025] rounded-full blur-[260px]" />
 
-      <div className="container relative max-w-7xl mx-auto px-6">
-        {/* Header */}
+      <div className="container relative max-w-[1400px] mx-auto px-6">
+        {/* Header — bigger, airier, with elegant eyebrow */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 lg:mb-16"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16 lg:mb-24 max-w-4xl mx-auto"
         >
-          <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-5 bg-primary/[0.07] px-5 py-2 rounded-full">
+          <span className="inline-flex items-center gap-2.5 text-[0.7rem] font-extrabold text-primary tracking-[0.4em] uppercase mb-7 bg-primary/[0.08] px-6 py-2.5 rounded-full border border-primary/15">
             <Sparkles className="w-3.5 h-3.5" />
             What We Offer
           </span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight mb-4">
-            Our Core <span className="text-primary">Branding Services</span>
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-[1.02] mb-7 tracking-tight">
+            Our Core{" "}
+            <span className="relative inline-block text-primary">
+              Branding Services
+              <span className="absolute -bottom-2 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary/60 to-transparent rounded-full" />
+            </span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Premium business cards, brochures, postcards, catalogs, presentation folders, menus, vehicle wraps, banners, and custom decals — everything your Ohio business needs to look professional, stand out, and grow.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-[1.7] font-light">
+            Premium business cards, vehicle wraps, signage, apparel, and full rebrand kits — everything your Ohio business needs to look professional, stand out, and grow.
           </p>
         </motion.div>
 
-        {/* Uniform grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        {/* Masonry grid — 12-col with varied spans + heights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-7">
           {services.map((s, i) => {
-            const hasShowcase = s.showcase && s.showcase.length > 0;
-
+            const cfg = layout[i] ?? layout[0];
+            const isHero = cfg.size === "hero";
             return (
               <motion.div
                 key={s.title}
-                initial={{ opacity: 0, y: 36 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-30px" }}
-                transition={{ delay: i * 0.04, duration: 0.5 }}
-                className="h-full"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: i * 0.06, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                className={`${cfg.colSpan} ${i % 2 === 1 ? "lg:translate-y-8" : ""}`}
               >
                 <Link
                   to={s.href}
-                  className="group h-full flex flex-col bg-card/90 backdrop-blur-sm rounded-2xl border border-border/50 overflow-hidden hover:border-primary/25 shadow-[0_2px_20px_-6px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_-12px_hsl(0_85%_40%/0.14)] transition-all duration-500 hover:-translate-y-1.5"
+                  className={`group relative block h-full rounded-[28px] overflow-hidden bg-card shadow-[0_4px_30px_-8px_rgba(15,23,42,0.12)] hover:shadow-[0_30px_80px_-20px_hsl(0_85%_40%/0.28)] transition-all duration-700 hover:-translate-y-2 ${isHero ? "ring-1 ring-primary/20" : "ring-1 ring-border/40 hover:ring-primary/30"}`}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  {/* Large immersive image */}
+                  <div className={`relative ${cfg.aspect} overflow-hidden bg-muted`}>
                     <img
                       src={s.img}
                       alt={s.title}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.08]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+                    {/* Editorial gradient — image bleeds into card */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-ohio-navy/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                    {/* Showcase thumbnails overlay */}
-                    {hasShowcase && (
-                      <div className="absolute bottom-3 right-3 flex gap-1.5">
-                        {s.showcase.map((thumb, ti) => (
-                          <div key={ti} className="w-12 h-12 rounded-lg overflow-hidden border border-primary-foreground/20 shadow-md opacity-80 group-hover:opacity-100 transition-opacity">
-                            <img src={thumb} alt="" className="w-full h-full object-cover" loading="lazy" />
-                          </div>
-                        ))}
-                        <div className="w-12 h-12 rounded-lg bg-foreground/60 backdrop-blur-sm flex items-center justify-center border border-primary-foreground/20">
-                          <Eye className="w-4 h-4 text-primary-foreground" />
-                        </div>
+                    {isHero && (
+                      <div className="absolute top-5 left-5">
+                        <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-primary-foreground bg-primary/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full uppercase tracking-[0.18em] shadow-lg">
+                          <Star className="w-3 h-3 fill-current" />
+                          Signature
+                        </span>
                       </div>
                     )}
                   </div>
-                  <div className="p-5 lg:p-6 flex flex-col flex-grow">
-                    <h3 className="font-display text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
+
+                  {/* Floating content overlay */}
+                  <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
+                    <h3 className={`font-display font-black text-foreground leading-[1.1] mb-2.5 group-hover:text-primary transition-colors duration-500 ${isHero ? "text-2xl lg:text-3xl" : "text-xl lg:text-2xl"}`}>
                       {s.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2 max-w-md">
                       {s.desc}
                     </p>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                       Learn More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-500" />
                     </span>
                   </div>
                 </Link>
@@ -187,46 +203,45 @@ const ServicesSection = () => {
           })}
         </div>
 
-        {/* Featured services */}
-        <div className="grid sm:grid-cols-2 gap-4 lg:gap-5 mt-6 lg:mt-8">
+        {/* Featured row — wider editorial cards */}
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-7 mt-20 lg:mt-24">
           {featuredServices.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 36 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
+              transition={{ delay: i * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link
                 to={s.href}
-                className="group relative flex flex-col bg-gradient-to-br from-card to-card/95 backdrop-blur-sm rounded-2xl border-2 border-primary/25 hover:border-primary/50 overflow-hidden shadow-[0_4px_24px_-6px_hsl(0_85%_40%/0.1)] hover:shadow-[0_20px_56px_-12px_hsl(0_85%_40%/0.2)] transition-all duration-500 hover:-translate-y-1.5"
+                className="group relative block rounded-[28px] overflow-hidden bg-card shadow-[0_8px_40px_-10px_rgba(15,23,42,0.15)] hover:shadow-[0_30px_80px_-20px_hsl(0_85%_40%/0.3)] ring-1 ring-primary/15 hover:ring-primary/40 transition-all duration-700 hover:-translate-y-2"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50" />
-                <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+                <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                   <img
                     src={s.img}
                     alt={s.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.08]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/10 to-transparent" />
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-extrabold text-primary-foreground bg-primary px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                  <div className="absolute top-5 right-5">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-primary-foreground bg-primary/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full uppercase tracking-[0.18em] shadow-lg">
                       <Star className="w-3 h-3 fill-current" />
                       Popular
                     </span>
                   </div>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow">
-                  <h3 className="font-display text-xl font-black text-foreground leading-snug group-hover:text-primary transition-colors duration-300 mb-2">
+                <div className="absolute inset-x-0 bottom-0 p-7 lg:p-9">
+                  <h3 className="font-display text-2xl lg:text-3xl font-black text-foreground leading-[1.1] group-hover:text-primary transition-colors duration-500 mb-3">
                     {s.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 max-w-md">
                     {s.desc}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
                     Explore Options
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-500" />
                   </span>
                 </div>
               </Link>
@@ -234,22 +249,20 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Additional services — kept live but de-emphasized */}
+        {/* Additional services — gentle gradient divider, no hard border */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-10 pt-8 border-t border-border/60 text-center"
+          className="mt-20 text-center relative"
         >
-          <p className="text-sm text-muted-foreground">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <p className="pt-10 text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">Also available upon request:</span>{" "}
             {additionalServices.map((s, i) => (
               <span key={s.href}>
-                <Link
-                  to={s.href}
-                  className="text-primary font-semibold hover:underline"
-                >
+                <Link to={s.href} className="text-primary font-semibold hover:underline">
                   {s.title}
                 </Link>
                 {i < additionalServices.length - 1 && <span> &middot; </span>}
@@ -264,12 +277,12 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-center mt-12"
+          className="text-center mt-14"
         >
           <Link to="/services">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.3)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.5)] transition-all duration-300 group uppercase tracking-wider"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_70px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-[0.15em]"
             >
               View All Services
               <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1.5 transition-transform duration-300" />
