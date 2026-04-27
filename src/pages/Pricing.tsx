@@ -27,9 +27,9 @@ const Pricing = () => {
   };
 
   usePageSEO({
-    title: "Transparent Pricing with True Concierge Service | Buckeye Biz Hub",
+    title: "Pricing",
     description:
-      "No hidden fees. No surprise charges. Just honest, clear pricing backed by personal attention from start to finish — for Columbus and Central Ohio businesses.",
+      "Transparent pricing with no hidden fees. Get fast, honest quotes for all your printing, vehicle wrap, banner, and branding needs in Central Ohio.",
   });
 
   return (

@@ -15,7 +15,7 @@ const heroBadges = [
 ];
 
 const Contact = () => {
-  usePageSEO({ title: "Contact Us - Get Your Free 24-Hour Quote", description: "Contact Buckeye Biz Hub for a free 24-hour quote on business printing, promotional products, vehicle wraps, banners, and more. Serving Columbus and all of Ohio." });
+  usePageSEO({ title: "Contact", description: "Ready to get started? Contact Buckeye Biz Hub for a custom 24-hour quote on printing, vehicle wraps, banners, decals, and branding services." });
 
   // Load Tally embed script
   useEffect(() => {

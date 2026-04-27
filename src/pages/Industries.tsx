@@ -99,9 +99,9 @@ const industries: Industry[] = [
 
 const Industries = () => {
   usePageSEO({
-    title: "Industries We Serve | Buckeye Biz Hub",
+    title: "Industries",
     description:
-      "Dedicated branding programs for Ohio dental practices, roofing contractors, construction GCs, fleet & logistics, real estate, lawn care, medical, and auto dealers. Free 24-hour quotes from a partner who actually knows your industry.",
+      "We serve a wide range of Ohio industries with professional printing, signage, vehicle branding, and promotional products tailored to your business needs.",
   });
 
   const jsonLd = {
