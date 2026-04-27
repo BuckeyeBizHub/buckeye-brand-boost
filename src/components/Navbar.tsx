@@ -5,22 +5,21 @@ import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const serviceLinks = [
-  { label: "Promotional Products", href: "/promotional-products" },
-  { label: "Business Printing", href: "/business-printing" },
-  { label: "Door Hangers", href: "/door-hangers" },
-  { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
-  { label: "Banners & Large Format", href: "/banners-and-flags" },
-  { label: "Vehicle Wraps & Fleet Graphics", href: "/vehicle-wraps-and-fleet-branding" },
-  { label: "Branded Apparel", href: "/branded-apparel-and-uniforms" },
-  { label: "Presentation Folders & Marketing Kits", href: "/presentation-folders" },
+  { label: "Business Cards & Stationery", href: "/business-cards" },
+  { label: "Brochures & Business Printing", href: "/brochures-and-business-printing" },
+  { label: "Promotional Products & Giveaways", href: "/promotional-products" },
+  { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
+  { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
+  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding" },
+  { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
+  { label: "Website Design & Development", href: "/website-design" },
+  { label: "Local SEO & Google Ranking", href: "/local-seo" },
+  { label: "Banners & Flags", href: "/banners-and-flags" },
+  { label: "Decals", href: "/decals" },
 ];
 
-const industryLinks = [
-  { label: "Dental Practices & Specialty Offices", href: "/dental" },
-  { label: "Roofing & Exterior Contractors", href: "/roofing" },
-  { label: "Construction & General Contractors", href: "/construction" },
-  { label: "Lawn Care & Landscaping", href: "/lawn-care-landscaping" },
-  { label: "All Industries We Serve", href: "/industries" },
+const aboutLinks = [
+  { label: "About Us", href: "/about" },
 ];
 
 interface NavItem {
@@ -28,25 +27,24 @@ interface NavItem {
   href: string;
   external?: boolean;
   hasDropdown?: boolean;
-  dropdownType?: "services" | "industries";
+  dropdownType?: "services" | "about";
 }
 
 const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about", hasDropdown: true, dropdownType: "about" },
+  { label: "Industries", href: "/industries" },
   { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
-  { label: "Industries Served", href: "/industries", hasDropdown: true, dropdownType: "industries" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/blog" },
-  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<"services" | "industries" | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<"services" | "about" | null>(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const location = useLocation();
 
@@ -60,10 +58,10 @@ const Navbar = () => {
     setOpen(false);
     setOpenDropdown(null);
     setMobileServicesOpen(false);
-    setMobileIndustriesOpen(false);
+    setMobileAboutOpen(false);
   }, [location.pathname]);
 
-  const handleEnter = (type: "services" | "industries") => {
+  const handleEnter = (type: "services" | "about") => {
     clearTimeout(timeoutRef.current);
     setOpenDropdown(type);
   };
@@ -79,8 +77,8 @@ const Navbar = () => {
   const isServicesActive = () =>
     isActive("/services") || serviceLinks.some((s) => isActive(s.href));
 
-  const isIndustriesActive = () =>
-    isActive("/industries") || industryLinks.some((s) => isActive(s.href));
+  const isAboutActive = () =>
+    isActive("/about") || aboutLinks.some((s) => isActive(s.href));
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -107,8 +105,8 @@ const Navbar = () => {
             {navLinks.map((link) => {
               if (link.hasDropdown) {
                 const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : industryLinks;
-                const active = isServices ? isServicesActive() : isIndustriesActive();
+                const items = isServices ? serviceLinks : aboutLinks;
+                const active = isServices ? isServicesActive() : isAboutActive();
                 const isOpen = openDropdown === link.dropdownType;
                 return (
                   <div
@@ -255,13 +253,13 @@ const Navbar = () => {
             {navLinks.map((link) => {
               if (link.hasDropdown) {
                 const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : industryLinks;
-                const active = isServices ? isServicesActive() : isIndustriesActive();
-                const isMobileOpen = isServices ? mobileServicesOpen : mobileIndustriesOpen;
+                const items = isServices ? serviceLinks : aboutLinks;
+                const active = isServices ? isServicesActive() : isAboutActive();
+                const isMobileOpen = isServices ? mobileServicesOpen : mobileAboutOpen;
                 const toggle = () =>
                   isServices
                     ? setMobileServicesOpen(!mobileServicesOpen)
-                    : setMobileIndustriesOpen(!mobileIndustriesOpen);
+                    : setMobileAboutOpen(!mobileAboutOpen);
                 return (
                   <div key={link.label}>
                     <button
