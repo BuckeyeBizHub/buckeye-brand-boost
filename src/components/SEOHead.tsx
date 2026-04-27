@@ -235,9 +235,10 @@ const SEOHead = ({
 }: SEOHeadProps) => {
   const { pathname } = useLocation();
 
+  // Homepage (no title prop) gets the brand-led headline; all others get "[Page] | Brand"
   const fullTitle = title
     ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
+    : `${SITE_NAME} - Ohio Business Branding Partner | Printing, Promos & Vehicle Wraps`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
 
