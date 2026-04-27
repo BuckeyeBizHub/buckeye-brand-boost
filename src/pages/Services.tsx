@@ -127,7 +127,7 @@ const Services = () => {
     address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
   };
 
-    usePageSEO({ title: "All Services - Printing, Promos & Vehicle Branding Columbus Ohio", description: "Explore all branding services from Buckeye Biz Hub — business cards, brochures, promotional products, vehicle wraps, banners, flags, decals, signage, website design, and local SEO for Ohio businesses." });
+    usePageSEO({ title: "Services", description: "Explore our full range of branding services including business cards, vehicle wraps, banners & flags, custom decals, promotional products, and more. Get your quote in 24 hours." });
 
   return (
     <div className="min-h-screen">
