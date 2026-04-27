@@ -16,6 +16,7 @@ import SEOHead, { localBusinessSchema, organizationSchema, BUCKEYE_LOCAL_BUSINES
 const Index = () => (
   <div className="min-h-screen">
     <SEOHead
+      title="Ohio Business Branding Partner | Printing, Promos & Vehicle Wraps"
       description="Buckeye Biz Hub is your local Ohio partner for premium business printing, promotional products, vehicle wraps, banners, and full branding solutions. Fast 24-hour quotes, wholesale pricing, and 100% satisfaction guaranteed."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
       structuredData={[
