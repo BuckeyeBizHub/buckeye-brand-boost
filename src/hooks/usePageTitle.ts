@@ -37,7 +37,7 @@ export function usePageTitle(pageTitle?: string, metaDescription?: string) {
   useEffect(() => {
     document.title = pageTitle
       ? `${pageTitle} | ${SITE_NAME}`
-      : "Buckeye Biz Hub | Your Columbus Branding Concierge";
+      : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
 
     if (metaDescription) {
       setMeta("description", metaDescription);
@@ -49,7 +49,7 @@ export function usePageSEO(opts: SEOOptions) {
   useEffect(() => {
     const fullTitle = opts.title
       ? `${opts.title} | ${SITE_NAME}`
-      : "Buckeye Biz Hub | Your Columbus Branding Concierge";
+      : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
 
     document.title = fullTitle;
 
