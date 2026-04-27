@@ -5,22 +5,21 @@ import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const serviceLinks = [
-  { label: "Promotional Products", href: "/promotional-products" },
-  { label: "Business Printing", href: "/business-printing" },
-  { label: "Door Hangers", href: "/door-hangers" },
-  { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
-  { label: "Banners & Large Format", href: "/banners-and-flags" },
-  { label: "Vehicle Wraps & Fleet Graphics", href: "/vehicle-wraps-and-fleet-branding" },
-  { label: "Branded Apparel", href: "/branded-apparel-and-uniforms" },
-  { label: "Presentation Folders & Marketing Kits", href: "/presentation-folders" },
+  { label: "Business Cards & Stationery", href: "/business-cards" },
+  { label: "Brochures & Business Printing", href: "/brochures-and-business-printing" },
+  { label: "Promotional Products & Giveaways", href: "/promotional-products" },
+  { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
+  { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
+  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding" },
+  { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
+  { label: "Website Design & Development", href: "/website-design" },
+  { label: "Local SEO & Google Ranking", href: "/local-seo" },
+  { label: "Banners & Flags", href: "/banners-and-flags" },
+  { label: "Decals", href: "/decals" },
 ];
 
-const industryLinks = [
-  { label: "Dental Practices & Specialty Offices", href: "/dental" },
-  { label: "Roofing & Exterior Contractors", href: "/roofing" },
-  { label: "Construction & General Contractors", href: "/construction" },
-  { label: "Lawn Care & Landscaping", href: "/lawn-care-landscaping" },
-  { label: "All Industries We Serve", href: "/industries" },
+const aboutLinks = [
+  { label: "About Us", href: "/about" },
 ];
 
 interface NavItem {
@@ -28,16 +27,15 @@ interface NavItem {
   href: string;
   external?: boolean;
   hasDropdown?: boolean;
-  dropdownType?: "services" | "industries";
+  dropdownType?: "services" | "about";
 }
 
 const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about", hasDropdown: true, dropdownType: "about" },
+  { label: "Industries", href: "/industries" },
   { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
-  { label: "Industries Served", href: "/industries", hasDropdown: true, dropdownType: "industries" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/blog" },
-  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
