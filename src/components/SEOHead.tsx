@@ -237,7 +237,7 @@ const SEOHead = ({
 
   const fullTitle = title
     ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} | Your Columbus Branding Concierge`;
+    : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
 
