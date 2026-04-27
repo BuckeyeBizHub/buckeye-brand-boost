@@ -253,13 +253,13 @@ const Navbar = () => {
             {navLinks.map((link) => {
               if (link.hasDropdown) {
                 const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : industryLinks;
-                const active = isServices ? isServicesActive() : isIndustriesActive();
-                const isMobileOpen = isServices ? mobileServicesOpen : mobileIndustriesOpen;
+                const items = isServices ? serviceLinks : aboutLinks;
+                const active = isServices ? isServicesActive() : isAboutActive();
+                const isMobileOpen = isServices ? mobileServicesOpen : mobileAboutOpen;
                 const toggle = () =>
                   isServices
                     ? setMobileServicesOpen(!mobileServicesOpen)
-                    : setMobileIndustriesOpen(!mobileIndustriesOpen);
+                    : setMobileAboutOpen(!mobileAboutOpen);
                 return (
                   <div key={link.label}>
                     <button
