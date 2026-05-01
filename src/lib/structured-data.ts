@@ -196,16 +196,17 @@ const ROUTE_LABELS: Record<string, string> = {
   industries: "Industries",
   research: "Research Assistant",
   "privacy-policy": "Privacy Policy",
-  "business-cards": "Business Cards",
+  "business-cards": "Business Cards & Stationery",
   "business-printing": "Business Printing",
-  "promotional-products": "Promotional Products",
-  "branded-apparel-and-uniforms": "Branded Apparel",
-  "yard-signs-and-signage": "Yard Signs & Signage",
-  "vehicle-wraps-and-fleet-branding": "Vehicle Wraps",
+  "brochures-and-business-printing": "Brochures & Business Printing",
+  "promotional-products": "Promotional Products & Giveaways",
+  "branded-apparel-and-uniforms": "Branded Apparel & Uniforms",
+  "yard-signs-and-signage": "Yard Signs & Custom Signage",
+  "vehicle-wraps-and-fleet-branding": "Vehicle Wraps & Fleet Branding",
   "vehicle-branding": "Vehicle Branding",
   "full-rebrand-kits": "Full Rebrand Kits",
-  "website-design": "Website Design",
-  "local-seo": "Local SEO",
+  "website-design": "Website Design & Development",
+  "local-seo": "Local SEO & Google Ranking",
   "banners-and-flags": "Banners & Flags",
   decals: "Custom Decals",
   postcards: "Postcards & Direct Mail",
@@ -215,7 +216,35 @@ const ROUTE_LABELS: Record<string, string> = {
   "letterhead-and-envelopes": "Letterhead & Envelopes",
   "large-format-printing": "Large Format Printing",
   "door-hangers": "Door Hangers",
+  roofing: "Roofing Industry",
+  dental: "Dental Industry",
+  construction: "Construction Industry",
+  "lawn-care-landscaping": "Lawn Care & Landscaping",
 };
+
+/** Slugs that should be nested under /services in breadcrumbs */
+const SERVICE_SLUGS = new Set([
+  "business-cards",
+  "business-printing",
+  "brochures-and-business-printing",
+  "promotional-products",
+  "branded-apparel-and-uniforms",
+  "yard-signs-and-signage",
+  "vehicle-wraps-and-fleet-branding",
+  "vehicle-branding",
+  "full-rebrand-kits",
+  "website-design",
+  "local-seo",
+  "banners-and-flags",
+  "decals",
+  "postcards",
+  "catalogs-and-booklets",
+  "presentation-folders",
+  "menus-and-table-tents",
+  "letterhead-and-envelopes",
+  "large-format-printing",
+  "door-hangers",
+]);
 
 /** External blog (headless WordPress) URL */
 export const BLOG_URL = "https://buckeyebizhub.blog/";
@@ -226,6 +255,11 @@ export function breadcrumbFromPath(pathname: string): JsonLd {
 
   const segments = pathname.replace(/^\/|\/$/g, "").split("/");
   const crumbs: BreadcrumbItem[] = [{ name: "Home", url: `${SITE_URL}/` }];
+
+  // If first segment is a known service slug at root, inject Services parent
+  if (segments.length === 1 && SERVICE_SLUGS.has(segments[0])) {
+    crumbs.push({ name: "Services", url: `${SITE_URL}/services` });
+  }
 
   let accumulated = "";
   for (const seg of segments) {
