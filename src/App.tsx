@@ -164,6 +164,14 @@ const App = () => (
             <Route path="/construction" element={<Construction />} />
             <Route path="/lawn-care-landscaping" element={<LawnCareLandscaping />} />
             <Route path="/research" element={<Research />} />
+
+            {/* New focused, conversion-optimized service URLs */}
+            <Route path="/vehicle-wraps" element={<VehicleWraps />} />
+            <Route path="/business-cards-printing" element={<BusinessCardsPrinting />} />
+            <Route path="/decals-and-stickers" element={<DecalsAndStickers />} />
+            <Route path="/embroidered-apparel" element={<EmbroideredApparel />} />
+            <Route path="/trade-show-displays" element={<TradeShowDisplays />} />
+            {/* Spec also lists /banners-and-flags and /promotional-products — already routed above to existing rich pages. */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
