@@ -110,6 +110,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <RedirectHandler />
+        <SiteLocalBusinessJsonLd />
         <Breadcrumbs />
         <ErrorBoundary>
         <Suspense fallback={<PageLoader />}>
