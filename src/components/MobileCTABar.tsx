@@ -4,19 +4,30 @@ import { Button } from "@/components/ui/button";
 
 const MobileCTABar = () => {
   const { pathname } = useLocation();
-  // Hide on contact page since they're already there
   if (pathname === "/contact") return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-primary/95 backdrop-blur-lg border-t border-primary-foreground/10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)] safe-area-bottom">
-      <div className="flex items-center justify-between px-4 py-3">
-        <a href="tel:+16145551234" className="flex items-center gap-2 text-primary-foreground font-bold text-sm">
-          <Phone className="w-4 h-4" />
-          Call Now
+    <div
+      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white border-t border-border shadow-[0_-4px_30px_rgba(0,0,0,0.12)]"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+    >
+      <div className="grid grid-cols-2 gap-2 px-3 py-2.5">
+        <a href="tel:+16145613358" className="w-full">
+          <Button
+            size="sm"
+            variant="outline"
+            className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold text-xs uppercase tracking-wider"
+          >
+            <Phone className="w-3.5 h-3.5" />
+            Call Now
+          </Button>
         </a>
-        <Link to="/contact">
-          <Button size="sm" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xs px-5 py-2 rounded-full uppercase tracking-wider group">
-            Get 24-Hour Quote
+        <Link to="/contact" className="w-full">
+          <Button
+            size="sm"
+            className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-xs uppercase tracking-wider group"
+          >
+            Get a Free Quote
             <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
           </Button>
         </Link>

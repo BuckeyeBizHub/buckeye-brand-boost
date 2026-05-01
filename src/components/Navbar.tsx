@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowRight, ChevronDown, ExternalLink, Facebook, Instagram } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, ExternalLink, Facebook, Instagram, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
@@ -230,6 +230,15 @@ const Navbar = () => {
                 </svg>
               </a>
             </div>
+            <a href="tel:+16145613358" className="hidden xl:inline-flex">
+              <Button
+                size="sm"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold uppercase tracking-wider text-xs shadow-[0_0_20px_hsl(0_85%_40%/0.3)]"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                614-561-3358
+              </Button>
+            </a>
             <Link to="/contact">
               <Button
                 size="sm"
