@@ -451,11 +451,14 @@ export function faqSchema(questions: FAQItem[]): JsonLd {
 
 export interface LocalBusinessOpts {
   name?: string;
+  description?: string;
   url?: string;
   telephone?: string;
   email?: string;
   image?: string;
   priceRange?: string;
+  /** Schema.org @type. Pass an array to declare multiple types (e.g. ["LocalBusiness","PrintShop"]). */
+  types?: string | string[];
   address?: {
     street?: string;
     city?: string;
@@ -466,15 +469,17 @@ export interface LocalBusinessOpts {
   geo?: { latitude: number; longitude: number };
   openingHours?: string[];
   sameAs?: string[];
-  areaServed?: string | JsonLd;
+  /** A single string, JSON-LD object, or an array of place names/objects. */
+  areaServed?: string | JsonLd | Array<string | JsonLd>;
   aggregateRating?: { ratingValue: string; reviewCount: string };
 }
 
 export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": opts?.types ?? "LocalBusiness",
     name: opts?.name ?? SITE_NAME,
+    ...(opts?.description && { description: opts.description }),
     url: opts?.url ?? SITE_URL,
     telephone: opts?.telephone ?? "+16145613358",
     image: opts?.image ?? DEFAULT_OG_IMAGE,
