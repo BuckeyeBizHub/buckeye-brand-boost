@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, ShieldCheck, BadgeCheck, ThumbsUp, Clock, Star, CheckCircle } from "lucide-react";
+import { ArrowRight, Mail, Phone, ShieldCheck, BadgeCheck, ThumbsUp, Clock, Star, CheckCircle, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,6 +17,8 @@ const heroBadges = [
 const Contact = () => {
   usePageSEO({ title: "Contact", description: "Ready to get started? Contact Buckeye Biz Hub for a custom 24-hour quote on printing, vehicle wraps, banners, decals, and branding services." });
 
+  const [submitted, setSubmitted] = useState(false);
+
   // Load Tally embed script
   useEffect(() => {
     const existing = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
@@ -26,11 +28,23 @@ const Contact = () => {
       script.async = true;
       document.head.appendChild(script);
     } else {
-      // If script already loaded, trigger Tally to re-scan for new embeds
       if ((window as any).Tally) {
         (window as any).Tally.loadEmbeds();
       }
     }
+  }, []);
+
+  // Listen for Tally form submission via postMessage
+  useEffect(() => {
+    const handler = (event: MessageEvent) => {
+      if (typeof event.data !== "string") return;
+      if (event.data.includes("Tally.FormSubmitted") || event.data.includes("tally-form-submitted")) {
+        setSubmitted(true);
+        document.getElementById("quote-success")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
   }, []);
 
   const jsonLd = localBusinessSchema({
@@ -191,21 +205,48 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-card border-2 border-border rounded-3xl p-8 md:p-10 shadow-lg"
+              className="bg-card border-2 border-border rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg overflow-hidden"
             >
               <h2 className="font-display text-2xl md:text-3xl font-black text-foreground mb-2">Tell Us About Your Project</h2>
               <p className="text-muted-foreground mb-8">Fill out the form below and we'll get back to you with a custom quote within 24 hours.</p>
-              <iframe
-                data-tally-src="https://tally.so/embed/QKYlz8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                loading="lazy"
-                width="100%"
-                height="500"
-                frameBorder={0}
-                marginHeight={0}
-                marginWidth={0}
-                title="Buckeye Biz Hub Quote Request"
-                className="w-full min-h-[600px]"
-              />
+
+              {submitted && (
+                <div
+                  id="quote-success"
+                  role="status"
+                  aria-live="polite"
+                  className="mb-6 flex items-start gap-3 bg-primary/10 border-2 border-primary/40 rounded-2xl p-5"
+                >
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <p className="text-primary font-bold text-base leading-relaxed">
+                    Thank you! Your quote request has been received. We'll be in touch within 24 hours.
+                  </p>
+                </div>
+              )}
+
+              <div className="w-full max-w-full overflow-x-hidden">
+                <iframe
+                  data-tally-src="https://tally.so/embed/QKYlz8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height="500"
+                  frameBorder={0}
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="Buckeye Biz Hub Quote Request"
+                  className="w-full max-w-full block min-h-[600px]"
+                />
+              </div>
+
+              <p className="mt-6 pt-6 border-t border-border text-center text-sm sm:text-base font-semibold text-muted-foreground">
+                Prefer to call?{" "}
+                <a
+                  href="tel:+16145613358"
+                  className="text-primary font-black hover:underline whitespace-nowrap"
+                >
+                  Reach us at (614) 561-3358
+                </a>
+              </p>
             </motion.div>
           </div>
         </div>
