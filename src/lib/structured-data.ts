@@ -217,19 +217,26 @@ const ROUTE_LABELS: Record<string, string> = {
   "door-hangers": "Door Hangers",
 };
 
+/** External blog (headless WordPress) URL */
+export const BLOG_URL = "https://buckeyebizhub.blog/";
+
 /** Auto-generate breadcrumbs from a URL path */
 export function breadcrumbFromPath(pathname: string): JsonLd {
-  if (pathname === "/") return breadcrumbSchema([{ name: "Home", url: SITE_URL }]);
+  if (pathname === "/") return breadcrumbSchema([{ name: "Home", url: `${SITE_URL}/` }]);
 
   const segments = pathname.replace(/^\/|\/$/g, "").split("/");
-  const crumbs: BreadcrumbItem[] = [{ name: "Home", url: SITE_URL }];
+  const crumbs: BreadcrumbItem[] = [{ name: "Home", url: `${SITE_URL}/` }];
 
   let accumulated = "";
   for (const seg of segments) {
     accumulated += `/${seg}`;
+    const isBlogRoot = seg === "blog" && accumulated === "/blog";
     const label =
       ROUTE_LABELS[seg] || seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-    crumbs.push({ name: label, url: `${SITE_URL}${accumulated}` });
+    crumbs.push({
+      name: label,
+      url: isBlogRoot ? BLOG_URL : `${SITE_URL}${accumulated}`,
+    });
   }
   return breadcrumbSchema(crumbs);
 }
@@ -241,13 +248,13 @@ export function articleBreadcrumbSchema(opts: {
   category?: { name: string; slug: string };
 }): JsonLd {
   const crumbs: BreadcrumbItem[] = [
-    { name: "Home", url: SITE_URL },
-    { name: "Blog", url: `${SITE_URL}/blog` },
+    { name: "Home", url: `${SITE_URL}/` },
+    { name: "Blog", url: BLOG_URL },
   ];
   if (opts.category) {
     crumbs.push({
       name: opts.category.name,
-      url: `${SITE_URL}/blog?category=${opts.category.slug}`,
+      url: `${BLOG_URL}?category=${opts.category.slug}`,
     });
   }
   crumbs.push({ name: opts.articleTitle, url: opts.articleUrl });
