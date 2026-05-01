@@ -20,7 +20,7 @@ Bundling matters. When you order your trade show displays in Columbus Ohio with 
       { src: g3, alt: "Printed trade show booth materials for an Ohio company" },
     ]}
     startingFrom="$249"
-    pricingNote="for a 33\" retractable banner stand with full-color print"
+    pricingNote={'for a 33" retractable banner stand with full-color print'}
     benefits={[
       "Full booth kits — banners, backdrops, tents, table throws, and counters",
       "Color-matched across every piece for consistent brand presentation",
