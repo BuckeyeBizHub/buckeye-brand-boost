@@ -51,6 +51,14 @@ import GALLERY_SPORTS_FOOTBALL_URL from "@/assets/gallery/sports-yard-sign-footb
 import GALLERY_GRAD_YARD_SIGN_URL from "@/assets/gallery/graduation-yard-sign.jpg";
 import GALLERY_GRAD_INVITATION_URL from "@/assets/gallery/graduation-invitation-2026.jpg";
 import GALLERY_GRAD_BANNER_URL from "@/assets/gallery/graduation-banner-2026.jpg";
+import GALLERY_ROVER_GOLF_CART_URL from "@/assets/gallery/rover-xl-golf-cart.jpg";
+import GALLERY_LAWN_TRUCK_WRAP_URL from "@/assets/gallery/lawn-care-truck-wrap.jpg";
+import GALLERY_LAWN_YARD_SIGN_URL from "@/assets/gallery/lawn-care-yard-sign.jpg";
+import GALLERY_LANDSCAPE_MAILER_URL from "@/assets/gallery/landscaping-custom-mailer.png";
+import GALLERY_LAWN_VAN_WRAP_URL from "@/assets/gallery/lawn-care-van-wrap.png";
+import GALLERY_LANDSCAPE_TRAILER_URL from "@/assets/gallery/landscape-trailer-wrap.jpg";
+import GALLERY_GRASS_BG_URL from "@/assets/gallery/grass-lawncare-background.jpeg";
+import GALLERY_LAWNCARE_GENERAL_URL from "@/assets/gallery/lawncare-landscape-general.jpeg";
 
 export const PHOTO_CUSTOM_ENVELOPE = GALLERY_ENVELOPE_URL;
 export const PHOTO_GIFT_CERTIFICATE = GALLERY_GIFT_CERT_URL;
@@ -67,6 +75,14 @@ export const PHOTO_SPORTS_YARD_SIGN_FOOTBALL = GALLERY_SPORTS_FOOTBALL_URL;
 export const PHOTO_GRADUATION_YARD_SIGN = GALLERY_GRAD_YARD_SIGN_URL;
 export const PHOTO_GRADUATION_INVITATION = GALLERY_GRAD_INVITATION_URL;
 export const PHOTO_GRADUATION_BANNER = GALLERY_GRAD_BANNER_URL;
+export const PHOTO_ROVER_XL_GOLF_CART = GALLERY_ROVER_GOLF_CART_URL;
+export const PHOTO_LAWN_CARE_TRUCK_WRAP = GALLERY_LAWN_TRUCK_WRAP_URL;
+export const PHOTO_LAWN_CARE_YARD_SIGN = GALLERY_LAWN_YARD_SIGN_URL;
+export const PHOTO_LANDSCAPING_MAILER = GALLERY_LANDSCAPE_MAILER_URL;
+export const PHOTO_LAWN_CARE_VAN_WRAP = GALLERY_LAWN_VAN_WRAP_URL;
+export const PHOTO_LANDSCAPE_TRAILER_WRAP = GALLERY_LANDSCAPE_TRAILER_URL;
+export const PHOTO_GRASS_BACKGROUND = GALLERY_GRASS_BG_URL;
+export const PHOTO_LAWNCARE_GENERAL = GALLERY_LAWNCARE_GENERAL_URL;
 
 // Convenience grouped exports
 export const NEW_GALLERY_PHOTOS = [
@@ -85,4 +101,12 @@ export const NEW_GALLERY_PHOTOS = [
   { src: PHOTO_GRADUATION_YARD_SIGN, alt: "Class of 2024 graduation yard sign by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
   { src: PHOTO_GRADUATION_INVITATION, alt: "Custom graduation party invitation by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
   { src: PHOTO_GRADUATION_BANNER, alt: "Congrats Grad outdoor graduation banner by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
+  { src: PHOTO_ROVER_XL_GOLF_CART, alt: "Rover XL street-legal golf cart available through Buckeye Biz Hub in Columbus Ohio", category: "Vehicles" },
+  { src: PHOTO_LAWN_CARE_TRUCK_WRAP, alt: "Custom lawn and tree care box truck wrap by Buckeye Biz Hub in Columbus Ohio", category: "Vehicle Wraps" },
+  { src: PHOTO_LAWN_CARE_YARD_SIGN, alt: "Lawn care fall clean-up yard sign by Buckeye Biz Hub in Columbus Ohio", category: "Yard Signs & Signage" },
+  { src: PHOTO_LANDSCAPING_MAILER, alt: "Custom landscaping spring promotion mailer by Buckeye Biz Hub in Columbus Ohio", category: "Business Printing" },
+  { src: PHOTO_LAWN_CARE_VAN_WRAP, alt: "Custom lawn care service van wrap by Buckeye Biz Hub in Columbus Ohio", category: "Vehicle Wraps" },
+  { src: PHOTO_LANDSCAPE_TRAILER_WRAP, alt: "Custom landscape company trailer wrap by Buckeye Biz Hub in Columbus Ohio", category: "Vehicle Wraps" },
+  { src: PHOTO_GRASS_BACKGROUND, alt: "Fresh-cut green grass lawn care background by Buckeye Biz Hub in Columbus Ohio", category: "Backgrounds" },
+  { src: PHOTO_LAWNCARE_GENERAL, alt: "Manicured residential landscaping and lawn care in Columbus Ohio", category: "Backgrounds" },
 ] as const;
