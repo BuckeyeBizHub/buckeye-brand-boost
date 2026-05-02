@@ -16,9 +16,12 @@ import {
   PHOTO_CUSTOM_ENVELOPE, PHOTO_GIFT_CERTIFICATE, PHOTO_GIFT_CERTIFICATE_HOLDER,
   PHOTO_TRADESHOW_TENT_WALLS, PHOTO_TRADESHOW_TENT_BACKWALL,
   PHOTO_DESK_CALENDAR, PHOTO_TEAR_OFF_CALENDAR,
+  PHOTO_AMERICA_250_DECAL, PHOTO_BANNER_POSTER_MUSIC,
+  PHOTO_GRAD_PARTY_SIGN_IN, PHOTO_SPORTS_YARD_SIGN_TRACK, PHOTO_SPORTS_YARD_SIGN_FOOTBALL,
+  PHOTO_GRADUATION_YARD_SIGN, PHOTO_GRADUATION_INVITATION, PHOTO_GRADUATION_BANNER,
 } from "@/lib/photos";
 
-const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel"] as const;
+const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel", "Decals & Stickers", "Graduation 2026"] as const;
 type Category = (typeof categories)[number];
 
 const projects = [
