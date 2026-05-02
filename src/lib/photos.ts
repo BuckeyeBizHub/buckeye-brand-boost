@@ -59,6 +59,16 @@ import GALLERY_LAWN_VAN_WRAP_URL from "@/assets/gallery/lawn-care-van-wrap.png";
 import GALLERY_LANDSCAPE_TRAILER_URL from "@/assets/gallery/landscape-trailer-wrap.jpg";
 import GALLERY_GRASS_BG_URL from "@/assets/gallery/grass-lawncare-background.jpeg";
 import GALLERY_LAWNCARE_GENERAL_URL from "@/assets/gallery/lawncare-landscape-general.jpeg";
+import GALLERY_GRAD_BANNER_STFRANCIS_URL from "@/assets/gallery/custom-graduation-banner-st-francis.png";
+import GALLERY_GRAD_INVITE_PHOTO_URL from "@/assets/gallery/custom-graduation-invitation-photo.png";
+import GALLERY_GRAD_ACRYLIC_SIGN_URL from "@/assets/gallery/custom-graduation-acrylic-sign.png";
+import GALLERY_DM_THANK_YOU_URL from "@/assets/gallery/direct-mail-thank-you-postcard.jpg";
+import GALLERY_DM_RESULTS_URL from "@/assets/gallery/direct-mail-results-collage.jpg";
+import GALLERY_DM_ANATOMY_URL from "@/assets/gallery/direct-mail-anatomy-postcard.jpg";
+import GALLERY_DM_DELI_URL from "@/assets/gallery/direct-mail-deli-postcard.jpg";
+import GALLERY_SAFETY_UNIFORMS_URL from "@/assets/gallery/safety-uniforms-hi-vis.jpg";
+import GALLERY_SAFETY_DECALS_URL from "@/assets/gallery/safety-decals-reflective.jpg";
+import GALLERY_CONSTRUCTION_APPAREL_URL from "@/assets/gallery/construction-team-apparel.jpg";
 
 export const PHOTO_CUSTOM_ENVELOPE = GALLERY_ENVELOPE_URL;
 export const PHOTO_GIFT_CERTIFICATE = GALLERY_GIFT_CERT_URL;
@@ -83,6 +93,16 @@ export const PHOTO_LAWN_CARE_VAN_WRAP = GALLERY_LAWN_VAN_WRAP_URL;
 export const PHOTO_LANDSCAPE_TRAILER_WRAP = GALLERY_LANDSCAPE_TRAILER_URL;
 export const PHOTO_GRASS_BACKGROUND = GALLERY_GRASS_BG_URL;
 export const PHOTO_LAWNCARE_GENERAL = GALLERY_LAWNCARE_GENERAL_URL;
+export const PHOTO_GRAD_BANNER_STFRANCIS = GALLERY_GRAD_BANNER_STFRANCIS_URL;
+export const PHOTO_GRAD_INVITE_PHOTO = GALLERY_GRAD_INVITE_PHOTO_URL;
+export const PHOTO_GRAD_ACRYLIC_SIGN = GALLERY_GRAD_ACRYLIC_SIGN_URL;
+export const PHOTO_DM_THANK_YOU = GALLERY_DM_THANK_YOU_URL;
+export const PHOTO_DM_RESULTS = GALLERY_DM_RESULTS_URL;
+export const PHOTO_DM_ANATOMY = GALLERY_DM_ANATOMY_URL;
+export const PHOTO_DM_DELI = GALLERY_DM_DELI_URL;
+export const PHOTO_SAFETY_UNIFORMS = GALLERY_SAFETY_UNIFORMS_URL;
+export const PHOTO_SAFETY_DECALS = GALLERY_SAFETY_DECALS_URL;
+export const PHOTO_CONSTRUCTION_APPAREL = GALLERY_CONSTRUCTION_APPAREL_URL;
 
 // Convenience grouped exports
 export const NEW_GALLERY_PHOTOS = [
@@ -109,4 +129,14 @@ export const NEW_GALLERY_PHOTOS = [
   { src: PHOTO_LANDSCAPE_TRAILER_WRAP, alt: "Custom landscape company trailer wrap by Buckeye Biz Hub in Columbus Ohio", category: "Vehicle Wraps" },
   { src: PHOTO_GRASS_BACKGROUND, alt: "Fresh-cut green grass lawn care background by Buckeye Biz Hub in Columbus Ohio", category: "Backgrounds" },
   { src: PHOTO_LAWNCARE_GENERAL, alt: "Manicured residential landscaping and lawn care in Columbus Ohio", category: "Backgrounds" },
+  { src: PHOTO_GRAD_BANNER_STFRANCIS, alt: "Custom St. Francis DeSales graduation celebration banner by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
+  { src: PHOTO_GRAD_INVITE_PHOTO, alt: "Custom Class of 2026 photo graduation invitation by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
+  { src: PHOTO_GRAD_ACRYLIC_SIGN, alt: "Custom college commitment graduation acrylic sign by Buckeye Biz Hub in Columbus Ohio", category: "Graduation 2026" },
+  { src: PHOTO_DM_THANK_YOU, alt: "Custom thank-you direct mail postcard by Buckeye Biz Hub in Columbus Ohio", category: "Direct Mail" },
+  { src: PHOTO_DM_RESULTS, alt: "Direct mail postcard examples that generate results by Buckeye Biz Hub in Columbus Ohio", category: "Direct Mail" },
+  { src: PHOTO_DM_ANATOMY, alt: "Anatomy of an effective direct mail postcard by Buckeye Biz Hub in Columbus Ohio", category: "Direct Mail" },
+  { src: PHOTO_DM_DELI, alt: "Custom deli restaurant direct mail postcard by Buckeye Biz Hub in Columbus Ohio", category: "Direct Mail" },
+  { src: PHOTO_SAFETY_UNIFORMS, alt: "Hi-visibility safety uniforms and jackets by Buckeye Biz Hub in Columbus Ohio", category: "Branded Apparel" },
+  { src: PHOTO_SAFETY_DECALS, alt: "Reflective safety officer and CPR-trained decals by Buckeye Biz Hub in Columbus Ohio", category: "Decals & Stickers" },
+  { src: PHOTO_CONSTRUCTION_APPAREL, alt: "Custom construction team hi-vis branded apparel by Buckeye Biz Hub in Columbus Ohio", category: "Branded Apparel" },
 ] as const;
