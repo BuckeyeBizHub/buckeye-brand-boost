@@ -510,9 +510,22 @@ export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
         longitude: opts.geo.longitude,
       },
     }),
-    ...(opts?.openingHours && { openingHoursSpecification: opts.openingHours }),
+    ...(opts?.openingHours && { openingHours: opts.openingHours }),
     ...(opts?.aggregateRating && {
       aggregateRating: { "@type": "AggregateRating", bestRating: "5", worstRating: "1", ...opts.aggregateRating },
+    }),
+    ...(opts?.reviews?.length && {
+      review: opts.reviews.map((r) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: r.author },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: r.ratingValue,
+          bestRating: 5,
+        },
+        ...(r.reviewBody && { reviewBody: r.reviewBody }),
+        ...(r.datePublished && { datePublished: r.datePublished }),
+      })),
     }),
   };
 }
