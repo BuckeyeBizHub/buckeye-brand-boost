@@ -472,6 +472,12 @@ export interface LocalBusinessOpts {
   /** A single string, JSON-LD object, or an array of place names/objects. */
   areaServed?: string | JsonLd | Array<string | JsonLd>;
   aggregateRating?: { ratingValue: string; reviewCount: string };
+  reviews?: Array<{
+    author: string;
+    ratingValue: number | string;
+    reviewBody?: string;
+    datePublished?: string;
+  }>;
 }
 
 export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
