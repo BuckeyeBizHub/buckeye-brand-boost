@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
@@ -7,9 +7,23 @@ const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Industries", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Blog", href: "/blog" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+];
+
+interface ResourceLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+const resourceLinks: ResourceLink[] = [
+  { label: "Blog & Insights", href: "/blog" },
+  { label: "Visit Our Blog Site", href: "https://buckeyebizhub.blog", external: true },
+  { label: "Service Pricing Guide", href: "/pricing" },
+  { label: "Industry Solutions", href: "/industries" },
+  { label: "Portfolio & Case Studies", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];
 
