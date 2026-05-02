@@ -13,6 +13,9 @@ import {
   PHOTO_PRINT_1, PHOTO_PRINT_2,
   PHOTO_APPAREL_1, PHOTO_APPAREL_2,
   PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3,
+  PHOTO_CUSTOM_ENVELOPE, PHOTO_GIFT_CERTIFICATE, PHOTO_GIFT_CERTIFICATE_HOLDER,
+  PHOTO_TRADESHOW_TENT_WALLS, PHOTO_TRADESHOW_TENT_BACKWALL,
+  PHOTO_DESK_CALENDAR, PHOTO_TEAR_OFF_CALENDAR,
 } from "@/lib/photos";
 
 const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel"] as const;
@@ -82,6 +85,62 @@ const projects = [
     description: "Custom t-shirts, branded pint glasses, coasters, and bar mats that created a cohesive brand experience for a new craft brewery's grand opening.",
     results: ["Full branded merch line created", "Taproom identity established", "Revenue stream from merch sales"],
     tags: ["Brewery", "Merch", "Columbus"],
+  },
+  {
+    image: PHOTO_CUSTOM_ENVELOPE,
+    title: "Custom Designed Business Envelopes",
+    category: "Business Printing" as Category,
+    description: "Full-color custom envelopes with matching brand artwork — turning everyday mail into a branded touchpoint for a Central Ohio studio.",
+    results: ["Custom #10 envelopes printed full-color", "Coordinated with letterhead & business cards", "Premium 70lb bright white stock"],
+    tags: ["Envelopes", "Stationery", "Columbus"],
+  },
+  {
+    image: PHOTO_GIFT_CERTIFICATE,
+    title: "Custom Gift Certificates for Local Salon",
+    category: "Business Printing" as Category,
+    description: "Premium printed gift certificates that drove holiday revenue and made a memorable in-hand impression for a Columbus salon.",
+    results: ["Full-color premium card stock", "Sequential numbering available", "Boosted holiday gift sales"],
+    tags: ["Gift Certificates", "Salon", "Columbus"],
+  },
+  {
+    image: PHOTO_GIFT_CERTIFICATE_HOLDER,
+    title: "Branded Gift Certificate Holders",
+    category: "Business Printing" as Category,
+    description: "Custom folded gift certificate holders with thank-you messaging that elevated the gifting experience for a local coffee brand.",
+    results: ["Tri-fold custom holder", "Coordinated with gift certificate", "Premium soft-touch finish"],
+    tags: ["Print", "Gifting", "Central Ohio"],
+  },
+  {
+    image: PHOTO_TRADESHOW_TENT_WALLS,
+    title: "Full-Wrap Trade Show Tent with Side Walls",
+    category: "Promotional Products" as Category,
+    description: "10x10 custom-printed trade show tent with full canopy and side walls — turning a booth into an unmissable brand statement at Ohio expos.",
+    results: ["10x10 dye-sublimated canopy", "Branded side & back walls", "One-person setup in under 15 min"],
+    tags: ["Trade Show", "Tents", "Columbus"],
+  },
+  {
+    image: PHOTO_TRADESHOW_TENT_BACKWALL,
+    title: "Trade Show Tent with Custom Backwall",
+    category: "Promotional Products" as Category,
+    description: "Branded 10x10 tent paired with a full-color tension-frame backwall for an Ohio brand activation event.",
+    results: ["Coordinated canopy + backwall", "Vibrant full-color print", "Portable, single-case packing"],
+    tags: ["Trade Show", "Backwall", "Ohio"],
+  },
+  {
+    image: PHOTO_DESK_CALENDAR,
+    title: "Custom Branded Desk Calendar",
+    category: "Promotional Products" as Category,
+    description: "Spiral-bound desk calendars with QR codes and branded messaging — a year-long touchpoint sitting on every client's desk.",
+    results: ["365 days of brand visibility", "QR code 'scan to connect'", "Premium spiral binding"],
+    tags: ["Calendars", "Promo", "Columbus"],
+  },
+  {
+    image: PHOTO_TEAR_OFF_CALENDAR,
+    title: "Custom Tear-Off Daily Calendar",
+    category: "Promotional Products" as Category,
+    description: "365-page tear-off calendars with daily affirmations and branding — a unique, daily-engagement promo product for a Central Ohio brand.",
+    results: ["365 daily tear-off pages", "Custom messaging per day", "Stand-up easel back design"],
+    tags: ["Calendars", "Promo", "Ohio"],
   },
 ];
 
