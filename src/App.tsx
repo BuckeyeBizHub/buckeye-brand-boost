@@ -59,8 +59,6 @@ const LawnCareLandscaping = lazy(() => import("./pages/LawnCareLandscaping.tsx")
 
 // New focused service URLs
 const VehicleWraps = lazy(() => import("./pages/services/VehicleWraps.tsx"));
-const BannersAndFlagsSimple = lazy(() => import("./pages/services/BannersAndFlagsSimple.tsx"));
-const PromotionalProductsSimple = lazy(() => import("./pages/services/PromotionalProductsSimple.tsx"));
 const BusinessCardsPrinting = lazy(() => import("./pages/services/BusinessCardsPrinting.tsx"));
 const DecalsAndStickers = lazy(() => import("./pages/services/DecalsAndStickers.tsx"));
 const EmbroideredApparel = lazy(() => import("./pages/services/EmbroideredApparel.tsx"));
