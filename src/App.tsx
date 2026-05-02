@@ -11,6 +11,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SiteLocalBusinessJsonLd from "@/components/SiteLocalBusinessJsonLd";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import RedirectHandler from "@/components/RedirectHandler";
+import GA4PageTracker from "@/components/GA4PageTracker";
 
 // Critical route – no lazy load
 import Index from "./pages/Index.tsx";
@@ -117,6 +118,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <RedirectHandler />
+        <GA4PageTracker />
         <SiteLocalBusinessJsonLd />
         <Breadcrumbs />
         <ErrorBoundary>
