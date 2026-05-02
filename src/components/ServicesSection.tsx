@@ -166,7 +166,7 @@ const ServicesSection = () => {
                   <div className={`relative ${cfg.aspect} overflow-hidden bg-muted`}>
                     <img
                       src={s.img}
-                      alt={s.title}
+                      alt={`${s.title} by Buckeye Biz Hub in Columbus Ohio`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.08]"
                     />
@@ -220,7 +220,7 @@ const ServicesSection = () => {
                 <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                   <img
                     src={s.img}
-                    alt={s.title}
+                    alt={`${s.title} by Buckeye Biz Hub in Columbus Ohio`}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.08]"
                   />

@@ -547,7 +547,7 @@ const PromotionalProductsPage = () => {
                 className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.15)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={item.image} alt={`${item.title} promotional products by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
                   <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-[0_4px_20px_hsl(0_80%_42%/0.4)]">

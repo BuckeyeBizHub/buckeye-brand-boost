@@ -171,8 +171,8 @@ const Decals = () => {
             </Link>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex items-center justify-center gap-6 mt-8">
-            <img src={googleBadge} alt="Google 5-Star Rated" className="h-12 w-auto" loading="lazy" />
-            <img src={bbbBadge} alt="BBB A+ Accredited" className="h-12 w-auto" loading="lazy" />
+            <img src={googleBadge} alt="Google 5-star rated trust badge for Buckeye Biz Hub in Columbus Ohio" className="h-12 w-auto" loading="lazy" />
+            <img src={bbbBadge} alt="BBB A+ accredited trust badge for Buckeye Biz Hub in Columbus Ohio" className="h-12 w-auto" loading="lazy" />
           </motion.div>
         </div>
       </section>

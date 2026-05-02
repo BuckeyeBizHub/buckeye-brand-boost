@@ -207,7 +207,7 @@ const Portfolio = () => {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} by Buckeye Biz Hub in Columbus Ohio`}
                       loading="lazy"
                       width={400}
                       height={250}
