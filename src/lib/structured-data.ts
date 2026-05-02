@@ -472,6 +472,12 @@ export interface LocalBusinessOpts {
   /** A single string, JSON-LD object, or an array of place names/objects. */
   areaServed?: string | JsonLd | Array<string | JsonLd>;
   aggregateRating?: { ratingValue: string; reviewCount: string };
+  reviews?: Array<{
+    author: string;
+    ratingValue: number | string;
+    reviewBody?: string;
+    datePublished?: string;
+  }>;
 }
 
 export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
@@ -504,9 +510,22 @@ export function localBusinessSchema(opts?: LocalBusinessOpts): JsonLd {
         longitude: opts.geo.longitude,
       },
     }),
-    ...(opts?.openingHours && { openingHoursSpecification: opts.openingHours }),
+    ...(opts?.openingHours && { openingHours: opts.openingHours }),
     ...(opts?.aggregateRating && {
       aggregateRating: { "@type": "AggregateRating", bestRating: "5", worstRating: "1", ...opts.aggregateRating },
+    }),
+    ...(opts?.reviews?.length && {
+      review: opts.reviews.map((r) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: r.author },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: r.ratingValue,
+          bestRating: 5,
+        },
+        ...(r.reviewBody && { reviewBody: r.reviewBody }),
+        ...(r.datePublished && { datePublished: r.datePublished }),
+      })),
     }),
   };
 }
