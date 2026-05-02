@@ -34,3 +34,31 @@ export const PHOTO_PRINT_8 = `${STORAGE_BASE}/1774656234934-lzdi8u99lop.jpg`;
 export const PHOTO_PRINT_9 = `${STORAGE_BASE}/1774656226604-oxx5jbiwgoi.jpg`;
 export const PHOTO_PRINT_10 = `${STORAGE_BASE}/1774656226201-zt18i2wmcyd.jpg`;
 export const PHOTO_PRINT_11 = `${STORAGE_BASE}/1774656225519-e4pg03ju04d.jpg`;
+
+// Newly uploaded gallery additions (bundled assets)
+import GALLERY_ENVELOPE_URL from "@/assets/gallery/custom-design-envelope.jpg";
+import GALLERY_GIFT_CERT_URL from "@/assets/gallery/custom-gift-certificate.jpg";
+import GALLERY_GIFT_CERT_HOLDER_URL from "@/assets/gallery/custom-gift-certificate-holder.jpg";
+import GALLERY_TENT_WALLS_URL from "@/assets/gallery/trade-show-tent-walls-sides.jpg";
+import GALLERY_TENT_BACKWALL_URL from "@/assets/gallery/trade-show-tent-backwall.jpg";
+import GALLERY_DESK_CALENDAR_URL from "@/assets/gallery/custom-desk-calendar.png";
+import GALLERY_TEAR_OFF_CALENDAR_URL from "@/assets/gallery/custom-tear-off-calendar.jpg";
+
+export const PHOTO_CUSTOM_ENVELOPE = GALLERY_ENVELOPE_URL;
+export const PHOTO_GIFT_CERTIFICATE = GALLERY_GIFT_CERT_URL;
+export const PHOTO_GIFT_CERTIFICATE_HOLDER = GALLERY_GIFT_CERT_HOLDER_URL;
+export const PHOTO_TRADESHOW_TENT_WALLS = GALLERY_TENT_WALLS_URL;
+export const PHOTO_TRADESHOW_TENT_BACKWALL = GALLERY_TENT_BACKWALL_URL;
+export const PHOTO_DESK_CALENDAR = GALLERY_DESK_CALENDAR_URL;
+export const PHOTO_TEAR_OFF_CALENDAR = GALLERY_TEAR_OFF_CALENDAR_URL;
+
+// Convenience grouped exports
+export const NEW_GALLERY_PHOTOS = [
+  { src: PHOTO_CUSTOM_ENVELOPE, alt: "Custom designed business envelope by Buckeye Biz Hub in Columbus Ohio", category: "Business Printing" },
+  { src: PHOTO_GIFT_CERTIFICATE, alt: "Custom printed gift certificate by Buckeye Biz Hub in Columbus Ohio", category: "Business Printing" },
+  { src: PHOTO_GIFT_CERTIFICATE_HOLDER, alt: "Custom gift certificate holder folder by Buckeye Biz Hub in Columbus Ohio", category: "Business Printing" },
+  { src: PHOTO_TRADESHOW_TENT_WALLS, alt: "Custom trade show tent with full walls and sides by Buckeye Biz Hub in Columbus Ohio", category: "Trade Show Displays" },
+  { src: PHOTO_TRADESHOW_TENT_BACKWALL, alt: "Custom trade show tent with backwall by Buckeye Biz Hub in Columbus Ohio", category: "Trade Show Displays" },
+  { src: PHOTO_DESK_CALENDAR, alt: "Custom branded desk calendar by Buckeye Biz Hub in Columbus Ohio", category: "Promotional Products" },
+  { src: PHOTO_TEAR_OFF_CALENDAR, alt: "Custom tear-off daily calendar by Buckeye Biz Hub in Columbus Ohio", category: "Promotional Products" },
+] as const;
