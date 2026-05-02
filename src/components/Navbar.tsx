@@ -96,7 +96,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center group flex-shrink-0">
             <img
               src={buckeyeLogo}
-              alt="Buckeye Biz Hub"
+              alt="Buckeye Biz Hub logo — Columbus Ohio printing and branding concierge"
               className="h-14 w-auto drop-shadow-[0_0_15px_hsl(0_85%_40%/0.4)]"
             />
           </Link>

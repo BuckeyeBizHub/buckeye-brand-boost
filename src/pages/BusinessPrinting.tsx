@@ -351,7 +351,7 @@ const BusinessPrinting = () => {
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
                   <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
-                    <img src={fold.image} alt={`${fold.title} brochure`} className="max-h-full max-w-full object-contain" />
+                    <img src={fold.image} alt={`${fold.title} brochure by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="max-h-full max-w-full object-contain" />
                   </div>
                   <CardContent className="p-6">
                     <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
@@ -372,7 +372,7 @@ const BusinessPrinting = () => {
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
                   <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
-                    <img src={fold.image} alt={`${fold.title} brochure`} className="max-h-full max-w-full object-contain" />
+                    <img src={fold.image} alt={`${fold.title} brochure by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="max-h-full max-w-full object-contain" />
                   </div>
                   <CardContent className="p-6">
                     <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
@@ -393,7 +393,7 @@ const BusinessPrinting = () => {
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
                   <div className="aspect-[4/3] bg-muted/50 flex items-center justify-center p-4">
-                    <img src={fold.image} alt={`${fold.title} brochure`} className="max-h-full max-w-full object-contain" />
+                    <img src={fold.image} alt={`${fold.title} brochure by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="max-h-full max-w-full object-contain" />
                   </div>
                   <CardContent className="p-6">
                     <h4 className="font-display text-lg font-bold text-foreground mb-2">{fold.title}</h4>
@@ -449,7 +449,7 @@ const BusinessPrinting = () => {
               <div className="space-y-4">
                 {paperWeights.map((stock) => (
                   <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
-                    <img src={stock.image} alt={`${stock.name} paper`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                    <img src={stock.image} alt={`${stock.name} paper stock sample by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="w-24 h-16 object-contain rounded flex-shrink-0" />
                     <div>
                       <p className="font-bold text-foreground mb-1">{stock.name}</p>
                       <p className="text-muted-foreground text-sm leading-relaxed">{stock.desc}</p>
@@ -467,7 +467,7 @@ const BusinessPrinting = () => {
                 {cardstockWeights.map((stock) => (
                   <div key={stock.name} className="bg-card rounded-xl p-5 border border-border/50 flex items-center gap-4">
                     {stock.image ? (
-                      <img src={stock.image} alt={`${stock.name} cardstock`} className="w-24 h-16 object-contain rounded flex-shrink-0" />
+                      <img src={stock.image} alt={`${stock.name} cardstock sample by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="w-24 h-16 object-contain rounded flex-shrink-0" />
                     ) : (
                       <div className="w-24 h-16 bg-muted/50 rounded flex items-center justify-center flex-shrink-0">
                         <span className="text-xs font-bold text-muted-foreground">{stock.name}</span>

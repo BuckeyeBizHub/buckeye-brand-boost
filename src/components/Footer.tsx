@@ -49,7 +49,7 @@ const Footer = () => {
           {/* Column 1 – Company Info */}
           <div>
             <Link to="/" className="inline-block mb-5">
-              <img src={buckeyeLogo} alt="Buckeye Biz Hub" className="h-16 w-auto drop-shadow-[0_0_20px_hsl(0_85%_40%/0.4)]" />
+              <img src={buckeyeLogo} alt="Buckeye Biz Hub logo — Columbus Ohio printing and branding concierge" className="h-16 w-auto drop-shadow-[0_0_20px_hsl(0_85%_40%/0.4)]" />
             </Link>
             <p className="text-primary-foreground/50 text-sm font-bold leading-relaxed mb-3">
               Business Printing • Promotional Products • Vehicle Branding
