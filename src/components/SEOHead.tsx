@@ -238,7 +238,7 @@ const SEOHead = ({
   // Homepage (no title prop) gets the brand-led headline; all others get "[Page] | Brand"
   const fullTitle = title
     ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} - Ohio Business Branding Partner | Printing, Promos & Vehicle Wraps`;
+    : `${SITE_NAME} | Columbus Ohio Printing & Branding`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
 
