@@ -21,9 +21,12 @@ import {
   PHOTO_GRADUATION_YARD_SIGN, PHOTO_GRADUATION_INVITATION, PHOTO_GRADUATION_BANNER,
   PHOTO_LAWN_CARE_TRUCK_WRAP, PHOTO_LAWN_CARE_VAN_WRAP, PHOTO_LANDSCAPE_TRAILER_WRAP,
   PHOTO_LAWN_CARE_YARD_SIGN, PHOTO_LANDSCAPING_MAILER,
+  PHOTO_GRAD_BANNER_STFRANCIS, PHOTO_GRAD_INVITE_PHOTO, PHOTO_GRAD_ACRYLIC_SIGN,
+  PHOTO_DM_THANK_YOU, PHOTO_DM_DELI, PHOTO_DM_ANATOMY,
+  PHOTO_SAFETY_UNIFORMS, PHOTO_SAFETY_DECALS, PHOTO_CONSTRUCTION_APPAREL,
 } from "@/lib/photos";
 
-const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel", "Decals & Stickers", "Graduation 2026"] as const;
+const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel", "Decals & Stickers", "Graduation 2026", "Direct Mail"] as const;
 type Category = (typeof categories)[number];
 
 const projects = [
@@ -250,6 +253,78 @@ const projects = [
     description: "Oversized 6x9 EDDM-ready landscaping mailer with seasonal offers and clean photography — designed to drive spring sign-ups across Central Ohio neighborhoods.",
     results: ["EDDM-compliant 6x9 layout", "Full-color both sides on 14pt coated stock", "Seasonal promo offer hierarchy"],
     tags: ["Mailers", "Landscaping", "EDDM"],
+  },
+  {
+    image: PHOTO_GRAD_BANNER_STFRANCIS,
+    title: "St. Francis DeSales Graduation Celebration Banner",
+    category: "Graduation 2026" as Category,
+    description: "Custom 2x4 vinyl celebration banner for a Columbus St. Francis DeSales graduate — featuring photo, event details, and personalized design.",
+    results: ["Premium 13oz vinyl banner", "Reinforced grommets", "Photo-quality full-color print"],
+    tags: ["Graduation", "Banners", "Columbus"],
+  },
+  {
+    image: PHOTO_GRAD_INVITE_PHOTO,
+    title: "Class of 2026 Photo Graduation Invitation",
+    category: "Graduation 2026" as Category,
+    description: "Premium double-sided photo graduation invitation for a St. Francis DeSales senior — printed on luxe 110lb cardstock with matching envelopes.",
+    results: ["Double-sided full-color print", "110lb premium cardstock", "Coordinated envelopes available"],
+    tags: ["Invitations", "Graduation", "Class of 2026"],
+  },
+  {
+    image: PHOTO_GRAD_ACRYLIC_SIGN,
+    title: "Custom College Commitment Acrylic Sign",
+    category: "Graduation 2026" as Category,
+    description: "Premium 12x24 acrylic sign celebrating a senior's college commitment — perfect for graduation parties and lifelong keepsakes.",
+    results: ["1/4\" cast acrylic with UV print", "Frosted-edge premium finish", "Wall-mount or easel display"],
+    tags: ["Acrylic Signs", "Graduation", "Keepsake"],
+  },
+  {
+    image: PHOTO_DM_THANK_YOU,
+    title: "EDDM Thank-You Postcard Campaign",
+    category: "Direct Mail" as Category,
+    description: "Personalized thank-you direct mail postcards with QR-code follow-up — printed and mailed for a Central Ohio service business referral program.",
+    results: ["EDDM-ready 6x9 layout", "QR code referral tracking", "Heavy 14pt coated stock"],
+    tags: ["Direct Mail", "Postcards", "EDDM"],
+  },
+  {
+    image: PHOTO_DM_DELI,
+    title: "Restaurant Direct Mail Promo Postcard",
+    category: "Direct Mail" as Category,
+    description: "Bold full-color direct mail postcard for a local deli — driving foot traffic with a 'Free Sandwich' offer and QR-code redemption.",
+    results: ["Full-color photo postcard", "Trackable QR offer code", "EDDM-ready bulk pricing"],
+    tags: ["Direct Mail", "Restaurants", "Promo"],
+  },
+  {
+    image: PHOTO_DM_ANATOMY,
+    title: "High-Conversion Restaurant Postcard Design",
+    category: "Direct Mail" as Category,
+    description: "Strategically designed restaurant direct mail postcard balancing headline, image, offer, and CTA — built to convert mailbox impressions into reservations.",
+    results: ["Headline + offer + CTA structure", "Premium food photography", "Clear booking call-to-action"],
+    tags: ["Direct Mail", "Design", "Hospitality"],
+  },
+  {
+    image: PHOTO_SAFETY_UNIFORMS,
+    title: "Hi-Visibility Safety Uniform Program",
+    category: "Branded Apparel" as Category,
+    description: "ANSI-rated hi-visibility safety jackets, vests, and outerwear with custom logos — outfitting Central Ohio construction and utility crews.",
+    results: ["ANSI Class 2 & 3 hi-vis garments", "Heat-transfer or embroidered logos", "Reflective tape for low-light visibility"],
+    tags: ["Safety Apparel", "Hi-Vis", "Construction"],
+  },
+  {
+    image: PHOTO_SAFETY_DECALS,
+    title: "Reflective Safety Compliance Decals",
+    category: "Decals & Stickers" as Category,
+    description: "First-Aid, CPR-Trained, and Safety Officer reflective hard-hat decals — durable, weatherproof, and OSHA-friendly compliance markers.",
+    results: ["3M reflective vinyl", "Die-cut shapes for hard hats", "Weatherproof + chemical-resistant"],
+    tags: ["Decals", "Safety", "Compliance"],
+  },
+  {
+    image: PHOTO_CONSTRUCTION_APPAREL,
+    title: "Custom Construction Team Branded Apparel",
+    category: "Branded Apparel" as Category,
+    description: "Coordinated branded hi-vis safety vests and gear for a Central Ohio construction crew — turning every job site into a brand impression.",
+    results: ["Coordinated crew look", "Embroidered company logos", "ANSI-compliant safety colors"],
+    tags: ["Construction", "Apparel", "Crew Uniforms"],
   },
 ];
 
