@@ -5,17 +5,18 @@ import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const serviceLinks = [
-  { label: "Business Cards & Stationery", href: "/business-cards" },
+  { label: "Business Cards & Printing", href: "/business-cards-printing" },
   { label: "Brochures & Business Printing", href: "/brochures-and-business-printing" },
   { label: "Promotional Products & Giveaways", href: "/promotional-products" },
-  { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms" },
+  { label: "Embroidered Apparel & Uniforms", href: "/embroidered-apparel" },
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
-  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding" },
+  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps" },
+  { label: "Trade Show Displays", href: "/trade-show-displays" },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
   { label: "Website Design & Development", href: "/website-design" },
   { label: "Local SEO & Google Ranking", href: "/local-seo" },
   { label: "Banners & Flags", href: "/banners-and-flags" },
-  { label: "Decals", href: "/decals" },
+  { label: "Decals & Stickers", href: "/decals-and-stickers" },
 ];
 
 const aboutLinks = [

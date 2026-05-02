@@ -57,6 +57,13 @@ const Roofing = lazy(() => import("./pages/Roofing.tsx"));
 const Construction = lazy(() => import("./pages/Construction.tsx"));
 const LawnCareLandscaping = lazy(() => import("./pages/LawnCareLandscaping.tsx"));
 
+// New focused service URLs
+const VehicleWraps = lazy(() => import("./pages/services/VehicleWraps.tsx"));
+const BusinessCardsPrinting = lazy(() => import("./pages/services/BusinessCardsPrinting.tsx"));
+const DecalsAndStickers = lazy(() => import("./pages/services/DecalsAndStickers.tsx"));
+const EmbroideredApparel = lazy(() => import("./pages/services/EmbroideredApparel.tsx"));
+const TradeShowDisplays = lazy(() => import("./pages/services/TradeShowDisplays.tsx"));
+
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));
 
@@ -155,6 +162,14 @@ const App = () => (
             <Route path="/construction" element={<Construction />} />
             <Route path="/lawn-care-landscaping" element={<LawnCareLandscaping />} />
             <Route path="/research" element={<Research />} />
+
+            {/* New focused, conversion-optimized service URLs */}
+            <Route path="/vehicle-wraps" element={<VehicleWraps />} />
+            <Route path="/business-cards-printing" element={<BusinessCardsPrinting />} />
+            <Route path="/decals-and-stickers" element={<DecalsAndStickers />} />
+            <Route path="/embroidered-apparel" element={<EmbroideredApparel />} />
+            <Route path="/trade-show-displays" element={<TradeShowDisplays />} />
+            {/* Spec also lists /banners-and-flags and /promotional-products — already routed above to existing rich pages. */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
