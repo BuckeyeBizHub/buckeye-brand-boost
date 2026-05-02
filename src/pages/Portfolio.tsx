@@ -16,9 +16,12 @@ import {
   PHOTO_CUSTOM_ENVELOPE, PHOTO_GIFT_CERTIFICATE, PHOTO_GIFT_CERTIFICATE_HOLDER,
   PHOTO_TRADESHOW_TENT_WALLS, PHOTO_TRADESHOW_TENT_BACKWALL,
   PHOTO_DESK_CALENDAR, PHOTO_TEAR_OFF_CALENDAR,
+  PHOTO_AMERICA_250_DECAL, PHOTO_BANNER_POSTER_MUSIC,
+  PHOTO_GRAD_PARTY_SIGN_IN, PHOTO_SPORTS_YARD_SIGN_TRACK, PHOTO_SPORTS_YARD_SIGN_FOOTBALL,
+  PHOTO_GRADUATION_YARD_SIGN, PHOTO_GRADUATION_INVITATION, PHOTO_GRADUATION_BANNER,
 } from "@/lib/photos";
 
-const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel"] as const;
+const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel", "Decals & Stickers", "Graduation 2026"] as const;
 type Category = (typeof categories)[number];
 
 const projects = [
@@ -141,6 +144,70 @@ const projects = [
     description: "365-page tear-off calendars with daily affirmations and branding — a unique, daily-engagement promo product for a Central Ohio brand.",
     results: ["365 daily tear-off pages", "Custom messaging per day", "Stand-up easel back design"],
     tags: ["Calendars", "Promo", "Ohio"],
+  },
+  {
+    image: PHOTO_AMERICA_250_DECAL,
+    title: "America 250 Commemorative Custom Decal",
+    category: "Decals & Stickers" as Category,
+    description: "Premium die-cut vinyl decal celebrating America's 250th anniversary (1776–2026) — printed for Central Ohio civic groups, veterans organizations, and patriotic events.",
+    results: ["Premium die-cut vinyl decal", "UV-stable inks for outdoor use", "America 250 (1776–2026) commemorative"],
+    tags: ["Decals", "Commemorative", "Ohio"],
+  },
+  {
+    image: PHOTO_BANNER_POSTER_MUSIC,
+    title: "Custom Retirement Celebration Banner Poster",
+    category: "Banners & Large Format" as Category,
+    description: "Vintage-style 'Making Music for 30 Years' celebration banner printed for a beloved Central Ohio music teacher's retirement event.",
+    results: ["Vintage-style large-format poster", "Heavyweight matte finish", "Personalized retirement messaging"],
+    tags: ["Banners", "Celebration", "Columbus"],
+  },
+  {
+    image: PHOTO_GRAD_PARTY_SIGN_IN,
+    title: "Graduation Party Sign-In Sign",
+    category: "Graduation 2026" as Category,
+    description: "Elegant 8x10 framed graduation sign-in sign helping busy graduates collect addresses for thank-you notes — a Class of 2026 favorite.",
+    results: ["8x10 print, frame-ready", "Premium matte stock", "Custom graduate styling"],
+    tags: ["Graduation", "Sign-In", "Class of 2026"],
+  },
+  {
+    image: PHOTO_SPORTS_YARD_SIGN_TRACK,
+    title: "Track & Field Senior Athlete Yard Sign",
+    category: "Yard Signs & Signage" as Category,
+    description: "Bold 18x24 photo yard sign for a Class of 2025 track-and-field senior — printed on weatherproof corrugated plastic with H-stake.",
+    results: ["Full-color photo sign", "Weatherproof corrugated plastic", "Custom team mascot styling"],
+    tags: ["Yard Signs", "Senior Sports", "Ohio"],
+  },
+  {
+    image: PHOTO_SPORTS_YARD_SIGN_FOOTBALL,
+    title: "Football Senior Athlete Yard Sign",
+    category: "Yard Signs & Signage" as Category,
+    description: "Custom senior-night football yard sign with player photo, jersey number, and team mascot — printed for Central Ohio football families.",
+    results: ["Player photo + jersey number", "Team mascot color-matched", "Double-sided option available"],
+    tags: ["Yard Signs", "Football", "Senior Night"],
+  },
+  {
+    image: PHOTO_GRADUATION_YARD_SIGN,
+    title: "Class of 2024 Graduation Yard Sign",
+    category: "Graduation 2026" as Category,
+    description: "Elegant blue-and-gold graduation yard sign with cap-and-gown photo — a celebratory front-yard staple for proud Columbus families.",
+    results: ["Photo-quality full-color print", "Weatherproof corrugated plastic", "H-stake included"],
+    tags: ["Graduation", "Yard Signs", "Columbus"],
+  },
+  {
+    image: PHOTO_GRADUATION_INVITATION,
+    title: "Custom Graduation Party Invitation",
+    category: "Graduation 2026" as Category,
+    description: "Premium double-sided graduation party invitations with custom photos and full event details — printed on luxury cardstock for Class of 2026 grads.",
+    results: ["Double-sided full-color print", "Premium 110lb cardstock", "Matching envelopes available"],
+    tags: ["Invitations", "Graduation", "Class of 2026"],
+  },
+  {
+    image: PHOTO_GRADUATION_BANNER,
+    title: "Outdoor 'Congrats Grad' Photo Banner",
+    category: "Graduation 2026" as Category,
+    description: "Large-format outdoor 'Congrats Grad' photo banner with multiple grad photos — perfect for driveway and front-yard celebrations across Central Ohio.",
+    results: ["Large-format vinyl banner", "Reinforced grommets for outdoor hanging", "Multi-photo personalized layout"],
+    tags: ["Banners", "Graduation", "Ohio"],
   },
 ];
 
