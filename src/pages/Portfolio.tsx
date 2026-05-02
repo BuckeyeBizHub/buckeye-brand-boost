@@ -19,6 +19,8 @@ import {
   PHOTO_AMERICA_250_DECAL, PHOTO_BANNER_POSTER_MUSIC,
   PHOTO_GRAD_PARTY_SIGN_IN, PHOTO_SPORTS_YARD_SIGN_TRACK, PHOTO_SPORTS_YARD_SIGN_FOOTBALL,
   PHOTO_GRADUATION_YARD_SIGN, PHOTO_GRADUATION_INVITATION, PHOTO_GRADUATION_BANNER,
+  PHOTO_LAWN_CARE_TRUCK_WRAP, PHOTO_LAWN_CARE_VAN_WRAP, PHOTO_LANDSCAPE_TRAILER_WRAP,
+  PHOTO_LAWN_CARE_YARD_SIGN, PHOTO_LANDSCAPING_MAILER,
 } from "@/lib/photos";
 
 const categories = ["All", "Business Printing", "Promotional Products", "Vehicle Wraps", "Door Hangers", "Yard Signs & Signage", "Banners & Large Format", "Branded Apparel", "Decals & Stickers", "Graduation 2026"] as const;
@@ -208,6 +210,46 @@ const projects = [
     description: "Large-format outdoor 'Congrats Grad' photo banner with multiple grad photos — perfect for driveway and front-yard celebrations across Central Ohio.",
     results: ["Large-format vinyl banner", "Reinforced grommets for outdoor hanging", "Multi-photo personalized layout"],
     tags: ["Banners", "Graduation", "Ohio"],
+  },
+  {
+    image: PHOTO_LAWN_CARE_TRUCK_WRAP,
+    title: "Lawn & Tree Care Box Truck Wrap",
+    category: "Vehicle Wraps" as Category,
+    description: "Full-color box truck wrap for a Central Ohio lawn and tree care company — turning a service vehicle into a high-impact rolling billboard.",
+    results: ["Full box truck + cab wrap", "Photo-realistic lawn imagery", "Premium 3M cast vinyl"],
+    tags: ["Vehicle Wraps", "Lawn Care", "Columbus"],
+  },
+  {
+    image: PHOTO_LAWN_CARE_VAN_WRAP,
+    title: "Lawn Care Service Van Wrap",
+    category: "Vehicle Wraps" as Category,
+    description: "Bright, character-driven van wrap for a Columbus lawn care company — designed to stand out in every neighborhood it visits.",
+    results: ["Full van wrap with mascot artwork", "High-visibility color palette", "5–7 year durability rating"],
+    tags: ["Vehicle Wraps", "Lawn Care", "Central Ohio"],
+  },
+  {
+    image: PHOTO_LANDSCAPE_TRAILER_WRAP,
+    title: "Landscaping Company Trailer Wrap",
+    category: "Vehicle Wraps" as Category,
+    description: "Full-coverage enclosed trailer wrap with service list and contact info — a moving billboard that books jobs from the driveway.",
+    results: ["Both sides + rear fully wrapped", "Service list + phone prominently featured", "Weatherproof laminate finish"],
+    tags: ["Trailer Wrap", "Landscaping", "Ohio"],
+  },
+  {
+    image: PHOTO_LAWN_CARE_YARD_SIGN,
+    title: "Lawn Care Fall Clean-Up Yard Sign",
+    category: "Yard Signs & Signage" as Category,
+    description: "Bold seasonal lawn care yard sign promoting fall clean-up services — printed on weatherproof corrugated plastic with H-stake.",
+    results: ["Double-sided full-color print", "Weatherproof 4mm corrugated plastic", "Strong call-to-action layout"],
+    tags: ["Yard Signs", "Lawn Care", "Columbus"],
+  },
+  {
+    image: PHOTO_LANDSCAPING_MAILER,
+    title: "Spring Landscaping Promotional Mailer",
+    category: "Business Printing" as Category,
+    description: "Oversized 6x9 EDDM-ready landscaping mailer with seasonal offers and clean photography — designed to drive spring sign-ups across Central Ohio neighborhoods.",
+    results: ["EDDM-compliant 6x9 layout", "Full-color both sides on 14pt coated stock", "Seasonal promo offer hierarchy"],
+    tags: ["Mailers", "Landscaping", "EDDM"],
   },
 ];
 
