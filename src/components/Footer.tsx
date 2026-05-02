@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import buckeyeLogo from "@/assets/buckeye-logo.png";
 
@@ -7,9 +7,23 @@ const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Industries", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Blog", href: "/blog" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+];
+
+interface ResourceLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+const resourceLinks: ResourceLink[] = [
+  { label: "Blog & Insights", href: "/blog" },
+  { label: "Visit Our Blog Site", href: "https://buckeyebizhub.blog", external: true },
+  { label: "Service Pricing Guide", href: "/pricing" },
+  { label: "Industry Solutions", href: "/industries" },
+  { label: "Portfolio & Case Studies", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -45,7 +59,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container relative py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
           {/* Column 1 – Company Info */}
           <div>
             <Link to="/" className="inline-block mb-5">
@@ -108,7 +122,39 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4 – Get In Touch */}
+          {/* Column 5 – Resources */}
+          <div>
+            <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
+              <span className="w-6 h-[2px] bg-primary rounded-full" />
+              Resources
+            </h4>
+            <div className="flex flex-col gap-3">
+              {resourceLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300 inline-flex items-center gap-1.5"
+                  >
+                    {link.label}
+                    <ExternalLink className="w-3 h-3 opacity-70" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Column 6 – Get In Touch */}
           <div>
             <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
               <span className="w-6 h-[2px] bg-primary rounded-full" />
