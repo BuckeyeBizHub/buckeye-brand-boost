@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container relative py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
           {/* Column 1 – Company Info */}
           <div>
             <Link to="/" className="inline-block mb-5">
@@ -122,7 +122,39 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4 – Get In Touch */}
+          {/* Column 5 – Resources */}
+          <div>
+            <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
+              <span className="w-6 h-[2px] bg-primary rounded-full" />
+              Resources
+            </h4>
+            <div className="flex flex-col gap-3">
+              {resourceLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300 inline-flex items-center gap-1.5"
+                  >
+                    {link.label}
+                    <ExternalLink className="w-3 h-3 opacity-70" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-sm text-primary-foreground/35 hover:text-primary hover:translate-x-1 font-bold transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Column 6 – Get In Touch */}
           <div>
             <h4 className="font-display text-xs font-black text-primary-foreground/60 uppercase tracking-[0.25em] mb-6 flex items-center gap-2">
               <span className="w-6 h-[2px] bg-primary rounded-full" />
