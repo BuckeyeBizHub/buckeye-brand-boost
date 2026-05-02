@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, ShieldCheck, BadgeCheck, ThumbsUp, Clock, Star, CheckCircle, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Mail, Phone, ShieldCheck, BadgeCheck, ThumbsUp, Clock, Star, CheckCircle, CheckCircle2, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -252,33 +252,119 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Map */}
+      {/* Google Map + Contact Info — two-column on desktop, stacked on mobile (map first) */}
       <section className="py-16 lg:py-20 bg-background">
-        <div className="container max-w-4xl mx-auto">
+        <div className="container max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center mb-10"
           >
-            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8">
+            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground">
               Find Us in Columbus, Ohio
             </h3>
-            <div className="rounded-2xl overflow-hidden border-2 border-border shadow-lg">
-              <iframe
-                src="https://maps.google.com/maps?cid=5595316780144329459&output=embed"
-                loading="lazy"
-                width="100%"
-                height="300"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Buckeye Biz Hub on Google Maps"
-                allowFullScreen
-                style={{ border: 0 }}
-                className="w-full"
-              />
-            </div>
           </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* Left: Google Map (16:9) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-2xl overflow-hidden border-2 border-border shadow-lg bg-card"
+            >
+              <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+                <iframe
+                  src="https://maps.google.com/maps?cid=5595316780144329459&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Buckeye Biz Hub on Google Maps"
+                  allowFullScreen
+                  style={{ border: 0 }}
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </motion.div>
+
+            {/* Right: Contact info card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-card border-2 border-border rounded-2xl shadow-lg p-6 sm:p-8 flex flex-col"
+            >
+              <h4 className="font-display text-xl md:text-2xl font-black text-foreground mb-6">
+                Buckeye Biz Hub
+              </h4>
+
+              <ul className="space-y-5 flex-1">
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Address</p>
+                    <p className="text-base font-semibold text-foreground">1193 Virginia Ave</p>
+                    <p className="text-base font-semibold text-foreground">Columbus, OH 43212</p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Phone</p>
+                    <a
+                      href="tel:+16145613358"
+                      className="text-base font-bold text-foreground hover:text-primary transition-colors"
+                    >
+                      (614) 561-3358
+                    </a>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Email</p>
+                    <a
+                      href="mailto:david@buckeyebizhub.com"
+                      className="text-base font-bold text-foreground hover:text-primary transition-colors break-all"
+                    >
+                      david@buckeyebizhub.com
+                    </a>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Business Hours</p>
+                    <p className="text-base font-semibold text-foreground">Mon–Fri: 9am–5pm</p>
+                    <p className="text-base font-semibold text-foreground">Sat: By appointment</p>
+                    <p className="text-base font-semibold text-muted-foreground">Sun: Closed</p>
+                  </div>
+                </li>
+              </ul>
+
+              <a
+                href="https://www.google.com/maps/place/?q=place_id:ChIJN1t_tDeuQIgRsxXxNz7zfk0&cid=5595316780144329459"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black rounded-xl group"
+                >
+                  <Navigation className="w-5 h-5 mr-2" />
+                  Get Directions
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
