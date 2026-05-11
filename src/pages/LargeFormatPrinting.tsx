@@ -61,7 +61,7 @@ const jsonLd = {
 };
 
 const LargeFormatPrinting = () => {
-  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, floor graphics, retractable banners, and trade show displays. Premium quality for Ohio businesses.", noindex: true });
+  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, floor graphics, retractable banners, and trade show displays. Premium quality for Ohio businesses." });
 
   return (
     <div className="min-h-screen">
