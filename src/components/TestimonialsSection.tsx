@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 import ReviewCard from "@/components/ReviewCard";
 import type { ReviewData } from "@/lib/structured-data";
 import {
-  reviewCollectionSchema,
-  SITE_URL,
-  DEFAULT_OG_IMAGE,
-} from "@/lib/structured-data";
-import {
   PHOTO_APPAREL_1, PHOTO_VEHICLE_1, PHOTO_VEHICLE_5, PHOTO_SIGNAGE_1, PHOTO_PRINT_2, PHOTO_PRINT_6,
 } from "@/lib/photos";
 
