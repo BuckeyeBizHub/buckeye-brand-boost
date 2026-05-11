@@ -227,7 +227,6 @@ const SEOHead = ({
   ogImage,
   ogType = "website",
   noindex = false,
-  structuredData,
   article,
   pagination,
 }: SEOHeadProps) => {
