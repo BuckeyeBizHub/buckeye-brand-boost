@@ -11,7 +11,7 @@ import ElevateCtaSection from "@/components/ElevateCtaSection";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import SEOHead, { localBusinessSchema, organizationSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/components/SEOHead";
+import SEOHead from "@/components/SEOHead";
 
 /**
  * Subtle gradient divider — replaces hard section breaks with a soft,
