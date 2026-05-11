@@ -66,7 +66,6 @@ const Breadcrumbs = () => {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="Breadcrumb" className="fixed top-[60px] left-0 right-0 z-40 bg-background/90 backdrop-blur-sm border-b border-border/50">
         <div className="container py-2.5 px-6">
           <ol className="flex items-center gap-1.5 text-xs sm:text-sm flex-wrap">

@@ -79,7 +79,6 @@ const SimpleServicePage = ({
 
   return (
     <article className="min-h-screen bg-background">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero with H1 */}

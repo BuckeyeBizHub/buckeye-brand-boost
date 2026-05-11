@@ -650,20 +650,6 @@ const BusinessPrinting = () => {
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Business Printing Services - Buckeye Biz Hub",
-        "description": "Premium business cards, brochures, flyers, door hangers, letterhead, and custom printing services in Columbus, Ohio. Wholesale pricing with full transparency.",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "Buckeye Biz Hub",
-          "areaServed": { "@type": "State", "name": "Ohio" },
-          "address": { "@type": "PostalAddress", "addressLocality": "Columbus", "addressRegion": "OH" },
-        },
-        "serviceType": ["Business Card Printing", "Brochure Printing", "Flyer Printing", "Door Hanger Printing", "Letterhead Printing", "Banner Printing"],
-      }) }} />
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": faqItems.map((item) => ({
           "@type": "Question",

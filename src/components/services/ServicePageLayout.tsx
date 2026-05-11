@@ -54,7 +54,6 @@ const ServicePageLayout = ({
 
   return (
     <article className="min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* Hero */}
