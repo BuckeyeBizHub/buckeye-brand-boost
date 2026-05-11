@@ -28,10 +28,6 @@ const Index = () => (
     <SEOHead
       description="Ohio's trusted branding concierge. Custom printing, vehicle wraps, promotional products, banners & more. Free 24-hour quotes."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
-      structuredData={[
-        localBusinessSchema(BUCKEYE_LOCAL_BUSINESS_OPTS),
-        organizationSchema(),
-      ]}
     />
     <Navbar />
     <HeroSection />
