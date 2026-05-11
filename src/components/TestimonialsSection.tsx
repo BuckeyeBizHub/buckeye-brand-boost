@@ -66,30 +66,12 @@ export const testimonialReviews: (ReviewData & { image?: string })[] = [
   },
 ];
 
-/** The entity being reviewed — shared across pages */
-export const REVIEWED_ENTITY = {
-  type: "LocalBusiness",
-  name: "Buckeye Biz Hub",
-  url: SITE_URL,
-  image: DEFAULT_OG_IMAGE,
-  description:
-    "Ohio branding and promotional products concierge — printing, vehicle wraps, signage, and apparel for Columbus and Central Ohio businesses.",
-} as const;
-
 interface TestimonialsSectionProps {
   showAll?: boolean;
 }
 
 const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
   const items = showAll ? testimonialReviews : testimonialReviews.slice(0, 3);
-
-  // Generate review collection JSON-LD with an aggregate rating that
-  // matches the actual number of reviews emitted on the page (Google
-  // flags mismatched/inflated review counts as structured-data errors).
-  const avgRating =
-    Math.round(
-      (items.reduce((sum, r) => sum + r.ratingValue, 0) / items.length) * 10,
-    ) / 10;
 
   return (
     <section
