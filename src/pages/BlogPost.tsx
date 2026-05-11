@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import SEOHead, { articleSchema, articleBreadcrumbSchema, countWords, SITE_URL } from "@/components/SEOHead";
+import SEOHead, { countWords, SITE_URL } from "@/components/SEOHead";
 import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor } from "@/lib/wordpress";
 
 const BlogPost = () => {
