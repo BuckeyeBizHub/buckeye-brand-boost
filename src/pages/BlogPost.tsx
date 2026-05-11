@@ -85,24 +85,6 @@ const BlogPost = () => {
           tags: categories.map((c) => c.name),
           wordCount,
         }}
-        structuredData={[
-          articleSchema({
-            headline: title,
-            description: excerpt,
-            image: ogImage,
-            datePublished: post.date,
-            dateModified: post.modified,
-            authors: { name: author?.name || "David Stein" },
-            url: postUrl!,
-            wordCount,
-            isBlogPosting: true,
-          }),
-          articleBreadcrumbSchema({
-            articleTitle: title,
-            articleUrl: postUrl!,
-            category: primaryCategory ? { name: primaryCategory.name, slug: primaryCategory.slug || primaryCategory.name.toLowerCase().replace(/\s+/g, "-") } : undefined,
-          }),
-        ]}
       />
       <Navbar />
 
