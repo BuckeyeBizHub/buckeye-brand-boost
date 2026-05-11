@@ -248,13 +248,6 @@ const SEOHead = ({
   // Pagination prev/next links (Bing still uses these)
   const pagLinks = pagination ? getPaginationLinks(pagination) : undefined;
 
-  // Normalise structured data to array
-  const ldItems = structuredData
-    ? Array.isArray(structuredData)
-      ? structuredData
-      : [structuredData]
-    : [];
-
   // Normalise authors to array
   const authors = article
     ? Array.isArray(article.authors)
