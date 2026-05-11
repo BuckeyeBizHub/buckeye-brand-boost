@@ -1,6 +1,5 @@
 import { Home, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { breadcrumbFromPath } from "@/lib/structured-data";
 import { useHeadingHierarchy } from "@/hooks/useHeadingHierarchy";
 
 const routeLabels: Record<string, string> = {

@@ -27,7 +27,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;

@@ -26,7 +26,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import constructionHero from "@/assets/construction-hero.jpg";
 import constructionTeam from "@/assets/construction-team.jpg";
 import constructionSafetyDecals from "@/assets/construction-safety-decals.jpg";

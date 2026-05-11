@@ -27,7 +27,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import lawncareHero from "@/assets/lawncare-hero.jpg";
 import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 import lawncareStoryVan from "@/assets/lawncare-story-van.jpg";

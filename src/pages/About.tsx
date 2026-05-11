@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
