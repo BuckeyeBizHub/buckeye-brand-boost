@@ -325,12 +325,6 @@ const SEOHead = ({
         <meta name="twitter:data1" content={`${readingTime} min read`} />
       )}
 
-      {/* JSON-LD */}
-      {ldItems.map((item, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(item)}
-        </script>
-      ))}
     </Helmet>
   );
 };

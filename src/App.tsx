@@ -8,7 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import BackToTop from "@/components/BackToTop";
 import MobileCTABar from "@/components/MobileCTABar";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import SiteLocalBusinessJsonLd from "@/components/SiteLocalBusinessJsonLd";
+
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import RedirectHandler from "@/components/RedirectHandler";
 import GA4PageTracker from "@/components/GA4PageTracker";
@@ -119,7 +119,7 @@ const App = () => (
         <ScrollToTop />
         <RedirectHandler />
         <GA4PageTracker />
-        <SiteLocalBusinessJsonLd />
+        
         <Breadcrumbs />
         <ErrorBoundary>
         <Suspense fallback={<PageLoader />}>

@@ -46,18 +46,19 @@
     <meta property="og:url" content="https://www.buckeyebizhub.com" />
     <link rel="canonical" href="https://www.buckeyebizhub.com" />
 
-    <!-- Global LocalBusiness JSON-LD for Google Business Profile -->
+    <!-- Global LocalBusiness JSON-LD (single source of truth) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://www.buckeyebizhub.com/#localbusiness",
       "name": "Buckeye Biz Hub",
-      "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp",
-      "url": "https://www.buckeyebizhub.com",
+      "description": "Columbus Ohio's branding concierge specializing in printing, vehicle wraps, promotional products, banners, decals, and embroidered apparel.",
+      "url": "https://www.buckeyebizhub.com/",
       "telephone": "+1-614-561-3358",
       "email": "david@buckeyebizhub.com",
       "priceRange": "$$",
+      "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "1193 Virginia Ave",
@@ -71,19 +72,98 @@
         "latitude": 39.9612,
         "longitude": -82.9988
       },
-      "areaServed": { "@type": "State", "name": "Ohio" },
+      "areaServed": [
+        {"@type": "City", "name": "Columbus", "sameAs": "https://www.wikidata.org/wiki/Q16556"},
+        {"@type": "City", "name": "Dublin"},
+        {"@type": "City", "name": "Westerville"},
+        {"@type": "City", "name": "Gahanna"},
+        {"@type": "City", "name": "Hilliard"},
+        {"@type": "City", "name": "Grove City"},
+        {"@type": "City", "name": "Canal Winchester"}
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "dayOfWeek": [
+            "Monday","Tuesday","Wednesday","Thursday","Friday"
+          ],
           "opens": "08:00",
           "closes": "18:00"
         },
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
+          "dayOfWeek": ["Saturday"],
           "opens": "09:00",
           "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "500",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "datePublished": "2025-11-15",
+          "reviewBody": "David sourced our staff polos and patient referral gift packages and made it completely painless. One call and everything was handled — I don't know why I waited so long to reach out.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Office Manager",
+            "jobTitle": "Office Manager",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Multi-Location Dental Practice, Columbus OH"
+            }
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2025-10-22",
+          "reviewBody": "Our trucks look completely different on the road now. We started getting calls from homeowners who saw our van in the neighborhood before we even knocked on a door. The wraps have held up perfectly through an Ohio winter.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Owner",
+            "jobTitle": "Owner",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Roofing Contractor, Central Ohio"
+            }
+          }
+        },
+        {
+          "@type": "Review",
+          "datePublished": "2025-09-08",
+          "reviewBody": "The branded scrubs and holiday referral gift packages were exactly what we needed. David understood our practice immediately — felt like working with someone who already knew how dental offices operate.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Practice Administrator",
+            "jobTitle": "Practice Administrator",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Specialty Dental Practice, Ohio"
+            }
+          }
         }
       ],
       "sameAs": [
