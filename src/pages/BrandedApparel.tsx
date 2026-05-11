@@ -165,19 +165,6 @@ const faqItems = [
 ];
 
 const BrandedApparel = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Branded Apparel & Custom Uniforms",
-    description: "Custom embroidered polos, hoodies, jackets, hats, and uniforms for Ohio businesses. Wholesale pricing, 24-hour quotes, full transparency.",
-    url: "https://buckeye-brand-boost.lovable.app/branded-apparel-and-uniforms",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

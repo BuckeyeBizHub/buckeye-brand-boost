@@ -72,16 +72,6 @@ const Portfolio = () => {
     description: "Browse photo examples of printing, promotional products, vehicle wraps, signage, and branding projects completed for Columbus and Ohio businesses by Buckeye Biz Hub.",
   });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub – Portfolio",
-    description: "Photo gallery of work from Buckeye Biz Hub. Business printing, promotional products, and vehicle branding for Ohio businesses.",
-    url: "https://www.buckeyebizhub.com/portfolio",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  };
-
   return (
     <div className="min-h-screen">
       <Navbar />

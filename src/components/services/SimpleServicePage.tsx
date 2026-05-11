@@ -48,35 +48,6 @@ const SimpleServicePage = ({
     .map((p) => p.trim())
     .filter(Boolean);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `${service} in Columbus, Ohio`,
-    description: metaDescription,
-    url,
-    areaServed: { "@type": "City", name: "Columbus", addressRegion: "OH" },
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      url: SITE_URL,
-      telephone: "+16145613358",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "1193 Virginia Ave",
-        addressLocality: "Columbus",
-        addressRegion: "OH",
-        postalCode: "43212",
-        addressCountry: "US",
-      },
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      price: startingFrom.replace(/[^0-9.]/g, "") || undefined,
-      url: `${SITE_URL}/contact`,
-    },
-  };
-
   return (
     <article className="min-h-screen bg-background">
       <Navbar />

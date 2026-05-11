@@ -193,19 +193,6 @@ const faqItems = [
 ];
 
 const PromotionalProductsPage = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Promotional Products & Custom Giveaways",
-    description: "Over 1 million custom promotional products at true wholesale pricing. Branded drinkware, apparel, tech gadgets, and more for Ohio businesses.",
-    url: "https://buckeye-brand-boost.lovable.app/promotional-products",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

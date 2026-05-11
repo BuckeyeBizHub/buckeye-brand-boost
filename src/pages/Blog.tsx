@@ -45,15 +45,6 @@ const Blog = () => {
     setPage(1);
   };
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    name: "Buckeye Biz Hub – Resources & Insights",
-    description: "Ohio business tips, printing guides, promotional product ideas, and vehicle branding strategies from Buckeye Biz Hub.",
-    url: "https://www.buckeyebizhub.com/blog",
-    publisher: { "@type": "Organization", name: "Buckeye Biz Hub" },
-  };
-
   return (
     <div className="min-h-screen">
       <Navbar />

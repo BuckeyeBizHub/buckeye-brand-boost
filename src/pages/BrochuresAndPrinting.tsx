@@ -131,19 +131,6 @@ const faqItems = [
 ];
 
 const BrochuresAndPrinting = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Brochures & Professional Business Printing",
-    description: "Premium brochure printing, flyers, postcards, menus, and custom business printing services in Columbus, Ohio.",
-    url: "https://buckeye-brand-boost.lovable.app/brochures-and-business-printing",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

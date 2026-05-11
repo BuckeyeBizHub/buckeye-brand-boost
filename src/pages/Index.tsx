@@ -11,7 +11,7 @@ import ElevateCtaSection from "@/components/ElevateCtaSection";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import SEOHead, { localBusinessSchema, organizationSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/components/SEOHead";
+import SEOHead from "@/components/SEOHead";
 
 /**
  * Subtle gradient divider — replaces hard section breaks with a soft,
@@ -28,10 +28,6 @@ const Index = () => (
     <SEOHead
       description="Ohio's trusted branding concierge. Custom printing, vehicle wraps, promotional products, banners & more. Free 24-hour quotes."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
-      structuredData={[
-        localBusinessSchema(BUCKEYE_LOCAL_BUSINESS_OPTS),
-        organizationSchema(),
-      ]}
     />
     <Navbar />
     <HeroSection />

@@ -27,7 +27,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 import lawncareHero from "@/assets/lawncare-hero.jpg";
 import lawncareTrailerWrap from "@/assets/lawncare-trailer-wrap.jpg";
 import lawncareStoryVan from "@/assets/lawncare-story-van.jpg";
@@ -171,12 +170,6 @@ const LawnCareLandscaping = () => {
       "Fleet Wraps, Crew Apparel & Marketing Materials for Ohio Lawn Care & Landscaping Companies",
     description:
       "Vehicle wraps, crew t-shirts and polos, door hangers, yard signs, and seasonal marketing materials for Central Ohio lawn care and landscaping companies. Free 24-hour quotes.",
-  });
-
-  const localBusinessJsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Lawn Care & Landscaping Branding",
-    url: "https://www.buckeyebizhub.com/lawn-care-landscaping",
   });
 
   const faqJsonLd = {

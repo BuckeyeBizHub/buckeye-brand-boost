@@ -112,19 +112,6 @@ const faqItems = [
 ];
 
 const BannersAndFlags = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Custom Banners & Flags — Including Graduation Banners",
-    description: "Custom vinyl banners, mesh banners, feather flags, blade flags, retractable banners, graduation banners, and custom flags for Ohio businesses and schools. 24-hour quotes, wholesale pricing, fast turnaround.",
-    url: "https://buckeye-brand-boost.lovable.app/banners-and-flags",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

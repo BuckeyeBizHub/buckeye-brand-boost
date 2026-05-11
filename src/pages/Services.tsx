@@ -117,15 +117,6 @@ const services = [
 ];
 
 const Services = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    description: "Premium printing, promotional products, signage, vehicle branding & digital services for Ohio businesses.",
-    url: "https://www.buckeyebizhub.com/services",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  };
 
     usePageSEO({ title: "Services", description: "Explore our full range of branding services including business cards, vehicle wraps, banners & flags, custom decals, promotional products, and more. Get your quote in 24 hours." });
 

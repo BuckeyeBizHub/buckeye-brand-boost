@@ -45,14 +45,6 @@ const faqItems = [
   { q: "What finishes are available?", a: "Gloss UV, matte, soft-touch lamination, spot UV on specific areas, and even foil stamping for premium mailers. We'll recommend the best finish for your goals." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Custom Postcards & Direct Mail Printing",
-  description: "Premium postcard printing for direct mail campaigns, promotions, and events. Multiple sizes, paper stocks, and finishes available with 24-hour quotes.",
-  url: "https://www.buckeyebizhub.com/postcards",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const Postcards = () => {
   usePageSEO({ title: "Custom Postcards & Direct Mail Printing Columbus OH", description: "Premium postcard printing for direct mail, promotions, and events. Multiple sizes from 4×6 to 8.5×11, premium paper stocks, and EDDM mailing services. 24-hour quotes from Buckeye Biz Hub." });
 

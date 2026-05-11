@@ -53,20 +53,6 @@ const pricingData = [
   { value: "$20,000+", fee: "$1,000 – $2,000", market: "$23,000 – $26,000", savings: "$2,000 – $4,000+" },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Vehicle Wraps & Fleet Branding",
-  description: "Full wraps, partial wraps, and custom graphics for cars, trucks, vans, boats, RVs, ATVs, golf carts and more — with 24-hour quotes and full transparency.",
-  url: "https://buckeye-brand-boost.lovable.app/vehicle-wraps-and-fleet-branding",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  },
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

@@ -93,8 +93,6 @@ export interface SEOHeadProps {
   ogType?: "website" | "article" | "product" | string;
   /** Set true to add noindex,nofollow */
   noindex?: boolean;
-  /** JSON-LD structured data object(s) */
-  structuredData?: Record<string, unknown> | Record<string, unknown>[];
   /** Article-specific meta (only used when ogType is "article") */
   article?: ArticleMeta;
   /** Pagination info for rel prev/next and canonical handling */
@@ -229,7 +227,6 @@ const SEOHead = ({
   ogImage,
   ogType = "website",
   noindex = false,
-  structuredData,
   article,
   pagination,
 }: SEOHeadProps) => {
@@ -250,13 +247,6 @@ const SEOHead = ({
 
   // Pagination prev/next links (Bing still uses these)
   const pagLinks = pagination ? getPaginationLinks(pagination) : undefined;
-
-  // Normalise structured data to array
-  const ldItems = structuredData
-    ? Array.isArray(structuredData)
-      ? structuredData
-      : [structuredData]
-    : [];
 
   // Normalise authors to array
   const authors = article

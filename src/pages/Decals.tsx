@@ -113,18 +113,6 @@ const faqItems = [
 ];
 
 const Decals = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Custom Decals & Stickers - Buckeye Biz Hub",
-    description: "Custom decals, vehicle graphics, DOT numbers, reflective safety stickers, window clings, floor graphics, American flag decals, and 250th USA anniversary decals for Ohio businesses.",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-    },
-    url: "https://buckeye-brand-boost.lovable.app/decals",
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

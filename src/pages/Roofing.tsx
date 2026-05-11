@@ -27,7 +27,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS, breadcrumbFromPath } from "@/lib/structured-data";
 
 const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
 const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
@@ -163,12 +162,6 @@ const Roofing = () => {
     title: "Fleet, Crew & Marketing Solutions for Central Ohio Roofing Contractors",
     description:
       "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
-  });
-
-  const localBusinessJsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Roofing Contractor Branding",
-    url: "https://www.buckeyebizhub.com/roofing",
   });
 
   const faqJsonLd = {

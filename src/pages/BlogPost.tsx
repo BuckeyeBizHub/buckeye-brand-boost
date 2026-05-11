@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import SEOHead, { articleSchema, articleBreadcrumbSchema, countWords, SITE_URL } from "@/components/SEOHead";
+import SEOHead, { countWords, SITE_URL } from "@/components/SEOHead";
 import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor } from "@/lib/wordpress";
 
 const BlogPost = () => {
@@ -85,24 +85,6 @@ const BlogPost = () => {
           tags: categories.map((c) => c.name),
           wordCount,
         }}
-        structuredData={[
-          articleSchema({
-            headline: title,
-            description: excerpt,
-            image: ogImage,
-            datePublished: post.date,
-            dateModified: post.modified,
-            authors: { name: author?.name || "David Stein" },
-            url: postUrl!,
-            wordCount,
-            isBlogPosting: true,
-          }),
-          articleBreadcrumbSchema({
-            articleTitle: title,
-            articleUrl: postUrl!,
-            category: primaryCategory ? { name: primaryCategory.name, slug: primaryCategory.slug || primaryCategory.name.toLowerCase().replace(/\s+/g, "-") } : undefined,
-          }),
-        ]}
       />
       <Navbar />
 

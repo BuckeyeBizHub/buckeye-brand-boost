@@ -66,33 +66,11 @@ const Graduation2026 = () => {
       "Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices.",
   });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "2026 Graduation Banners & Yard Signs",
-    description: "Custom graduation banners and 24x24 yard signs for the Class of 2026. Lower than national online printer pricing.",
-    brand: { "@type": "Brand", name: "Buckeye Biz Hub" },
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: "37.50",
-      highPrice: "125",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      offerCount: "6",
-    },
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="2026 Graduation Banners & Yard Signs – Columbus, Ohio"
         description="Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices."
-        structuredData={[jsonLd]}
       />
       <Navbar />
 

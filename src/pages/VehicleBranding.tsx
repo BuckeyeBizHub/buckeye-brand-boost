@@ -71,15 +71,6 @@ const trustPoints = [
 ];
 
 const VehicleBranding = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub – Vehicle Branding & Wraps",
-    description: "Professional vehicle wraps, fleet branding, and custom decals for Central Ohio businesses. We shop your job to the best shops for premium quality at the best price.",
-    url: "https://buckeye-brand-boost.lovable.app/vehicle-branding",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  };
 
     usePageSEO({ title: "Vehicle Branding Columbus Ohio", description: "Professional vehicle branding services in Columbus Ohio. Custom wraps, decals, and fleet graphics that generate thousands of daily impressions for your business." });
 

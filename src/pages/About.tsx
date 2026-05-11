@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import davidHero from "@/assets/david-stein-hero.jpg";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { localBusinessSchema, BUCKEYE_LOCAL_BUSINESS_OPTS } from "@/lib/structured-data";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -37,11 +36,6 @@ const About = () => {
     title: "About Us",
     description:
       "Learn the story behind Buckeye Biz Hub, Ohio's trusted local branding partner helping small businesses look professional and grow since day one.",
-  });
-
-  const jsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    url: "https://www.buckeyebizhub.com/about",
   });
 
   return (

@@ -53,14 +53,6 @@ const faqItems = [
   { q: "Do you offer short-run printing?", a: "Yes! Digital printing allows cost-effective runs starting at just 25 copies. For larger quantities (500+), offset printing provides even better per-unit pricing with exceptional color consistency." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Catalog & Booklet Printing",
-  description: "Professional catalog and booklet printing with saddle-stitching, perfect binding, and wire-o options. Premium paper stocks and full-color printing for Ohio businesses.",
-  url: "https://www.buckeyebizhub.com/catalogs-and-booklets",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const CatalogsAndBooklets = () => {
   usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Professional catalog and booklet printing — saddle-stitched, perfect-bound, and wire-o binding. Full-color, premium paper stocks, and fast turnaround for Ohio businesses." });
 
