@@ -92,19 +92,6 @@ const trustItems = ["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned &
 
 /* ── component ── */
 const BusinessCards = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Business Cards & Stationery",
-    description: "Premium business cards with foil stamping, spot UV, and ultra-thick stocks for Ohio businesses.",
-    url: "https://buckeye-brand-boost.lovable.app/business-cards",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
     usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses." });
 

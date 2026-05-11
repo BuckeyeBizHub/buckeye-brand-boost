@@ -47,20 +47,6 @@ const faqItems = [
   { q: "Can I start with a partial rebrand and add later?", a: "Absolutely. Start with what you need most and expand over time. We keep your brand files and specs on file so adding new items later is seamless and consistent." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Full Rebrand Kits",
-  description: "Complete business rebrand packages for Ohio businesses including vehicle wraps, signage, apparel, printing, promotional products, website design, and SEO.",
-  url: "https://buckeye-brand-boost.lovable.app/full-rebrand-kits",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  },
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

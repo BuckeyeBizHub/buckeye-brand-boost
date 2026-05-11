@@ -46,20 +46,6 @@ const faqItems = [
   { q: "Do you provide hosting?", a: "We can recommend reliable, affordable hosting solutions and handle the setup for you. We also offer managed hosting packages if you prefer us to handle everything — including security, backups, and updates." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Website Design & Development Columbus Ohio",
-  description: "Professional website design and development for Ohio businesses. Modern, mobile-friendly, SEO-optimized websites with 24-hour quotes.",
-  url: "https://buckeye-brand-boost.lovable.app/website-design",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  },
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

@@ -53,14 +53,6 @@ const faqItems = [
   { q: "What about food photography?", a: "While we don't provide photography services directly, we can recommend trusted food photographers in Ohio. We do handle all photo retouching, color correction, and layout to make your dishes look irresistible on the printed menu." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Restaurant Menu & Table Tent Printing",
-  description: "Custom restaurant menu printing and table tents. Laminated, waterproof menus and promotional table displays for Ohio hospitality businesses.",
-  url: "https://www.buckeyebizhub.com/menus-and-table-tents",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const MenusAndTableTents = () => {
   usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom restaurant menu printing and table tents for Ohio restaurants, bars, and hospitality businesses. Durable, laminated, and beautifully designed." });
 

@@ -38,19 +38,6 @@ const ServicePageLayout = ({
   whyOhio,
   slug,
 }: ServicePageLayoutProps) => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: title,
-    description: subheadline,
-    url: `https://buckeye-brand-boost.lovable.app/${slug}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   return (
     <article className="min-h-screen">

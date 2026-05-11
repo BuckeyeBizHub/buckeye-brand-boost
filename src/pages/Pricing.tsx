@@ -11,20 +11,6 @@ import PricingCTA from "@/components/pricing/PricingCTA";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const Pricing = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub – Pricing",
-    description:
-      "Transparent pricing with true concierge service. No hidden fees. No surprise charges. Honest, clear pricing backed by personal attention from start to finish.",
-    url: "https://www.buckeyebizhub.com/pricing",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: {
-      "@type": "PostalAddress",
-      addressRegion: "OH",
-      addressCountry: "US",
-    },
-  };
 
   usePageSEO({
     title: "Pricing",

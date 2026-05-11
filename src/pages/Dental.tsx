@@ -165,12 +165,6 @@ const Dental = () => {
       "Branded staff apparel, patient referral gifts, professional signage, and printed materials for Ohio dental practices — sourced with 15+ years of real dental office experience.",
   });
 
-  const jsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Dental Practice Branding & Procurement",
-    url: "https://www.buckeyebizhub.com/dental",
-  });
-
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

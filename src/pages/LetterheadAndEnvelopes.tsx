@@ -56,14 +56,6 @@ const faqItems = [
   { q: "How fast can you print stationery?", a: "Standard turnaround is 3–5 business days for letterhead and envelopes. Foil stamping and embossing may add 2–3 additional business days. Rush options are available." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Letterhead & Envelope Printing",
-  description: "Custom letterhead and matching envelope printing for Ohio businesses. Premium paper stocks, foil stamping, and coordinated stationery sets.",
-  url: "https://www.buckeyebizhub.com/letterhead-and-envelopes",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const LetterheadAndEnvelopes = () => {
   usePageSEO({ title: "Letterhead & Envelope Printing Columbus OH", description: "Custom letterhead and matching envelope printing for Ohio businesses. Premium paper, full-color, and coordinated stationery sets. 24-hour quotes." });
 

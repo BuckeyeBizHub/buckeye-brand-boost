@@ -165,12 +165,6 @@ const Roofing = () => {
       "Vehicle wraps, durable crew apparel, door hangers, yard signs, carbonless forms, and full marketing materials for Central Ohio roofing contractors. Real-world experience helping 9 local roofing operations.",
   });
 
-  const localBusinessJsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Roofing Contractor Branding",
-    url: "https://www.buckeyebizhub.com/roofing",
-  });
-
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

@@ -51,14 +51,6 @@ const faqItems = [
   { q: "Do you offer design services?", a: "Absolutely! Our designers create folder layouts that match your existing brand identity. We'll incorporate your logo, colors, and messaging into a cohesive design with unlimited revisions." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Custom Presentation Folders",
-  description: "Custom presentation folders and pocket folders with foil stamping, spot UV, and premium finishes for Ohio businesses.",
-  url: "https://www.buckeyebizhub.com/presentation-folders",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const PresentationFolders = () => {
   usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders and pocket folders for Ohio businesses. Premium stocks, foil stamping, spot UV, and custom pockets. 24-hour quotes from Buckeye Biz Hub." });
 

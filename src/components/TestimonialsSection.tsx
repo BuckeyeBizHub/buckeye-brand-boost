@@ -96,18 +96,6 @@ const TestimonialsSection = ({ showAll = false }: TestimonialsSectionProps) => {
       (items.reduce((sum, r) => sum + r.ratingValue, 0) / items.length) * 10,
     ) / 10;
 
-  const schemaData = reviewCollectionSchema({
-    itemReviewed: REVIEWED_ENTITY,
-    reviews: items,
-    aggregateRating: {
-      ratingValue: avgRating,
-      ratingCount: items.length,
-      reviewCount: items.length,
-      bestRating: 5,
-      worstRating: 1,
-    },
-  });
-
   return (
     <section
       className="py-14 lg:py-20 bg-ohio-grey-dark relative overflow-hidden"

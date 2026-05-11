@@ -41,19 +41,6 @@ const whyUs = [
 const trustItems = ["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned & Operated"];
 
 const DoorHangers = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Custom Door Hangers",
-    description: "Custom door hanger printing on premium 14pt cardstock for Columbus and Ohio businesses.",
-    url: "https://www.buckeyebizhub.com/door-hangers",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   usePageSEO({
     title: "Door Hangers | Custom Door Hanger Printing – Buckeye Biz Hub",

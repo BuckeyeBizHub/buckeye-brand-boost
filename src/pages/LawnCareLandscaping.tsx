@@ -173,12 +173,6 @@ const LawnCareLandscaping = () => {
       "Vehicle wraps, crew t-shirts and polos, door hangers, yard signs, and seasonal marketing materials for Central Ohio lawn care and landscaping companies. Free 24-hour quotes.",
   });
 
-  const localBusinessJsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Lawn Care & Landscaping Branding",
-    url: "https://www.buckeyebizhub.com/lawn-care-landscaping",
-  });
-
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

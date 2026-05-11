@@ -39,11 +39,6 @@ const About = () => {
       "Learn the story behind Buckeye Biz Hub, Ohio's trusted local branding partner helping small businesses look professional and grow since day one.",
   });
 
-  const jsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    url: "https://www.buckeyebizhub.com/about",
-  });
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

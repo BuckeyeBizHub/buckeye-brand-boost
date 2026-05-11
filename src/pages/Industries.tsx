@@ -104,21 +104,6 @@ const Industries = () => {
       "We serve a wide range of Ohio industries with professional printing, signage, vehicle branding, and promotional products tailored to your business needs.",
   });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub – Industries We Serve",
-    description:
-      "Industry-specific branding, fleet graphics, crew apparel, and printed materials for Ohio businesses across dental, roofing, construction, fleet, real estate, lawn care, medical, and auto dealer sectors.",
-    url: "https://www.buckeyebizhub.com/industries",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: {
-      "@type": "PostalAddress",
-      addressRegion: "OH",
-      addressCountry: "US",
-    },
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

@@ -156,12 +156,6 @@ const Construction = () => {
       "Branded workwear, vehicle graphics, hard hat wraps, jobsite banners, trade show displays, and safety gear for Central Ohio general contractors and specialty contractors. Free 24-hour quotes.",
   });
 
-  const localBusinessJsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    name: "Buckeye Biz Hub – Construction Company Branding",
-    url: "https://www.buckeyebizhub.com/construction",
-  });
-
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -171,8 +165,6 @@ const Construction = () => {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
-
-  const breadcrumbJsonLd = breadcrumbFromPath("/construction");
 
   return (
     <div className="min-h-screen bg-background">

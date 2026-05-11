@@ -58,16 +58,6 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
-
 const FAQ = () => {
     usePageSEO({ title: "FAQ - Frequently Asked Questions", description: "Answers to common questions about Buckeye Biz Hub's printing, promotional products, vehicle wraps, pricing, turnaround times, and ordering process." });
 

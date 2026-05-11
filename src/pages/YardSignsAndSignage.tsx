@@ -119,19 +119,6 @@ const faqItems = [
 ];
 
 const YardSignsAndSignage = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Yard Signs & Custom Signage",
-    description: "Custom yard signs, banners, real estate signs, and job-site signage for Ohio businesses. Weatherproof coroplast, 24-hour quotes, wholesale pricing.",
-    url: "https://buckeye-brand-boost.lovable.app/yard-signs-and-signage",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Buckeye Biz Hub",
-      areaServed: { "@type": "State", name: "Ohio" },
-      address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-    },
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",

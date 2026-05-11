@@ -52,14 +52,6 @@ const faqItems = [
   { q: "Can I get a sample or proof?", a: "Yes — we offer printed proofs for color-critical projects and can provide material samples so you can see and feel the substrate before committing to a large order." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org", "@type": "Service",
-  name: "Large Format Printing",
-  description: "Large format printing for posters, banners, wall murals, trade show displays, and custom signage. UV-resistant, weatherproof printing for Ohio businesses.",
-  url: "https://www.buckeyebizhub.com/large-format-printing",
-  provider: { "@type": "LocalBusiness", name: "Buckeye Biz Hub", areaServed: { "@type": "State", name: "Ohio" } },
-};
-
 const LargeFormatPrinting = () => {
   usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, floor graphics, retractable banners, and trade show displays. Premium quality for Ohio businesses." });
 

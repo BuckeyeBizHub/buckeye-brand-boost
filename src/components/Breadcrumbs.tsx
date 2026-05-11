@@ -62,7 +62,6 @@ const Breadcrumbs = () => {
   ];
 
   // Use structured-data library for JSON-LD (consistent with SEOHead)
-  const jsonLd = breadcrumbFromPath(pathname);
 
   return (
     <>

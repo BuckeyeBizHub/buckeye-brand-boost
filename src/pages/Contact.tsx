@@ -47,11 +47,6 @@ const Contact = () => {
     return () => window.removeEventListener("message", handler);
   }, []);
 
-  const jsonLd = localBusinessSchema({
-    ...BUCKEYE_LOCAL_BUSINESS_OPTS,
-    url: "https://www.buckeyebizhub.com/contact",
-  });
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

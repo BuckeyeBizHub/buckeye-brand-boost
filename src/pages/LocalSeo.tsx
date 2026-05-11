@@ -45,20 +45,6 @@ const faqItems = [
   { q: "How much does local SEO cost?", a: "We offer simple flat-fee monthly plans that vary based on your market competitiveness and service area size. Every plan includes full transparency — you'll know exactly what you're paying for and what work is being done each month. Contact us for a custom quote." },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Local SEO Services Ohio",
-  description: "Local SEO services for businesses throughout Ohio and beyond. Google Map Pack optimization, citation building, review management, and flat-fee monthly plans. Serving Columbus, Cleveland, Cincinnati, Dayton, Toledo, and nationwide.",
-  url: "https://buckeye-brand-boost.lovable.app/local-seo",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "Buckeye Biz Hub",
-    areaServed: { "@type": "State", name: "Ohio" },
-    address: { "@type": "PostalAddress", addressRegion: "OH", addressCountry: "US" },
-  },
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
