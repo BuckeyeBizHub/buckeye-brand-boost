@@ -26,7 +26,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: "/door-hangers", changefreq: "monthly", priority: "0.85" },
   { loc: "/yard-signs-and-signage", changefreq: "monthly", priority: "0.85" },
   { loc: "/vehicle-wraps-and-fleet-branding", changefreq: "monthly", priority: "0.85" },
-  { loc: "/research", changefreq: "monthly", priority: "0.8" },
+  
   // ── Deeper service pages ──
   // "/business-cards" removed – covered by /business-printing hub
   { loc: "/branded-apparel-and-uniforms", changefreq: "monthly", priority: "0.6" },
