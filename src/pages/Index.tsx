@@ -29,7 +29,10 @@ const Index = () => (
     <SEOHead
       title="Buckeye Biz Hub | Columbus Ohio Printing, Vehicle Wraps & Promotional Products"
       description="Columbus and Central Ohio's trusted branding concierge. We shop our network of top vendors to get you the best quality and pricing on printing, vehicle wraps, promotional products, banners, embroidered apparel, and signage. Free 24-hour quotes. 100% satisfaction guaranteed."
-      keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
+      keywords={["Columbus Ohio printing", "vehicle wraps Columbus Ohio", "fleet wraps Columbus Ohio", "promotional products Columbus Ohio", "branding concierge Columbus", "business printing Columbus", "embroidered apparel Ohio", "banners Columbus Ohio"]}
+      canonicalUrl="https://www.buckeyebizhub.com"
+      ogImage="https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp"
+      ogType="website"
     />
     <Navbar />
     <HeroSection />
