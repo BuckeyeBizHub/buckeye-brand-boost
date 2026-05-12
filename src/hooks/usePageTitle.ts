@@ -36,7 +36,9 @@ function setLink(rel: string, href: string) {
 export function usePageTitle(pageTitle?: string, metaDescription?: string) {
   useEffect(() => {
     document.title = pageTitle
-      ? `${pageTitle} | ${SITE_NAME}`
+      ? pageTitle.endsWith(SITE_NAME)
+        ? pageTitle
+        : `${pageTitle} | ${SITE_NAME}`
       : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
 
     if (metaDescription) {
@@ -48,7 +50,9 @@ export function usePageTitle(pageTitle?: string, metaDescription?: string) {
 export function usePageSEO(opts: SEOOptions) {
   useEffect(() => {
     const fullTitle = opts.title
-      ? `${opts.title} | ${SITE_NAME}`
+      ? opts.title.endsWith(SITE_NAME)
+        ? opts.title
+        : `${opts.title} | ${SITE_NAME}`
       : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
 
     document.title = fullTitle;
