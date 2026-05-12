@@ -243,7 +243,7 @@ const SEOHead = ({
   // stripping, pagination, trailing slashes, and lowercase enforcement
   const canonical = canonicalUrl || getCanonicalUrl(pathname, undefined, pagination);
   const image = ogImage || buildDynamicOgUrl(fullTitle, desc, ogType, article);
-  const robots = noindex ? "noindex,nofollow" : "index, follow";
+  const robots = noindex ? "noindex, nofollow" : "index, follow";
 
   // Pagination prev/next links (Bing still uses these)
   const pagLinks = pagination ? getPaginationLinks(pagination) : undefined;
