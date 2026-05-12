@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp, X, Check, Wrench, Droplet, Zap, Leaf, HardHat, Home, Package, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -398,6 +399,235 @@ const FleetWraps = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — Process */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
+          >
+            How Our <span className="text-primary">Fleet Wrap Process</span> Works
+          </motion.h2>
+
+          <div className="relative space-y-6">
+            {[
+              { title: "Free Consultation and Quote (24-hour response)", body: "Tell us your fleet count, vehicle types, coverage goals, and budget. We respond with a detailed quote within 24 hours. No obligation, no pressure." },
+              { title: "We Shop Our Network", body: "We reach out to our vetted Central Ohio installer network, compare options on quality, pricing, and availability, and bring you the best match for your specific project." },
+              { title: "Custom Design Development", body: "Our design team creates a unified fleet branding system — consistent graphics, color matching, and logo placement across every vehicle. You receive a full digital proof before any vinyl is produced." },
+              { title: "Proof Approval", body: "Review your designs and request changes at no cost. We don't go to production until you're 100% satisfied." },
+              { title: "Premium Vinyl Production", body: "Your approved designs are printed on commercial-grade 3M or Avery Dennison vinyl with UV-resistant inks and protective laminates built for Ohio's seasonal conditions." },
+              { title: "Professional Installation and Delivery", body: "We coordinate installation scheduling to minimize downtime. For larger fleets, we phase installations so you're never without your full fleet. Every vehicle is inspected before delivery." },
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="flex gap-5 rounded-2xl p-6 bg-card border border-border hover:border-primary/40 transition-all"
+              >
+                <div className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-ohio-red-light text-primary-foreground font-display font-black text-2xl flex items-center justify-center shadow-[0_8px_25px_hsl(0_80%_42%/0.35)]">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="font-display text-lg md:text-xl font-black text-foreground mb-2 leading-tight">
+                    Step {i + 1} — {step.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {step.body}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — Pricing */}
+      <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
+        <div className="container max-w-5xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-12 text-foreground"
+          >
+            Fleet Wrap Investment —{" "}
+            <span className="text-primary">Columbus Ohio 2026 Pricing</span>
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-2xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.08)] bg-card"
+          >
+            <div className="grid grid-cols-12 bg-ohio-navy text-primary-foreground text-xs md:text-sm font-bold uppercase tracking-wider">
+              <div className="col-span-5 p-4 md:p-5 border-r border-primary-foreground/10">Service</div>
+              <div className="col-span-3 p-4 md:p-5 border-r border-primary-foreground/10">Price Range</div>
+              <div className="col-span-4 p-4 md:p-5">Best For</div>
+            </div>
+            {[
+              { s: "Spot Decals and Logo Graphics", p: "$150–$400 per vehicle", b: "Single vehicles, budget branding" },
+              { s: "Partial Wrap", p: "$800–$1,800 per vehicle", b: "Small fleets, leased vehicles" },
+              { s: "Full Wrap — Car or SUV", p: "$2,000–$3,000 per vehicle", b: "Company cars, agent vehicles" },
+              { s: "Full Wrap — Van or Truck", p: "$2,800–$4,000 per vehicle", b: "Service fleets, contractor vehicles" },
+              { s: "Full Wrap — Box Truck", p: "$3,500–$6,000 per vehicle", b: "Delivery fleets, large commercial" },
+            ].map((row, i) => (
+              <div
+                key={row.s}
+                className={`grid grid-cols-12 ${i % 2 === 0 ? "bg-background" : "bg-muted/40"} border-t border-border text-sm md:text-base`}
+              >
+                <div className="col-span-5 p-4 md:p-5 font-bold text-foreground border-r border-border">{row.s}</div>
+                <div className="col-span-3 p-4 md:p-5 text-primary font-bold border-r border-border">{row.p}</div>
+                <div className="col-span-4 p-4 md:p-5 text-muted-foreground">{row.b}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-10 rounded-2xl p-7 bg-gradient-to-br from-ohio-navy to-ohio-grey-dark border border-primary/25"
+          >
+            <h3 className="font-display text-xl md:text-2xl font-black text-primary-foreground mb-5">
+              Volume Discounts
+            </h3>
+            <ul className="space-y-3">
+              {[
+                "3–5 vehicles: 10% off total",
+                "6–10 vehicles: 15% off total",
+                "11+ vehicles: Custom fleet pricing — contact us",
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-3 text-primary-foreground/90 text-base md:text-lg">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          <p className="text-xs text-muted-foreground italic text-center mt-6 max-w-3xl mx-auto leading-relaxed">
+            Pricing estimates for Columbus Ohio market 2026. Final pricing confirmed in your free 24-hour quote based on vehicle condition, design complexity, and coverage.
+          </p>
+
+          <div className="text-center mt-10">
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.55)] transition-all duration-300 group uppercase tracking-wider"
+              >
+                Get My Exact Fleet Quote — Free in 24 Hours
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7 — FAQ */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-3xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-12 text-foreground"
+          >
+            Fleet Wrap FAQs —{" "}
+            <span className="text-primary">Columbus Ohio</span>
+          </motion.h2>
+
+          <Accordion type="single" collapsible className="space-y-4">
+            {[
+              { q: "How much do fleet vehicle wraps cost in Columbus Ohio?", a: "Fleet wrap pricing in Columbus ranges from $150–$400 per vehicle for spot decals, $800–$1,800 for partial wraps, and $2,800–$4,000+ for full wraps on vans and trucks. Multi-vehicle fleets receive volume discounts starting at 10% for 3+ vehicles. We provide exact pricing in your free 24-hour quote." },
+              { q: "How long do commercial fleet wraps last in Ohio?", a: "A professionally installed fleet wrap using commercial-grade 3M or Avery Dennison vinyl typically lasts 5–7 years with proper care. Hand washing is recommended — avoid automated car washes with abrasive brushes to maximize lifespan in Ohio's weather conditions." },
+              { q: "Will a vehicle wrap damage my fleet vehicle's paint?", a: "No — when installed and removed properly, commercial vinyl wraps protect your paint from UV damage, minor scratches, and road debris. This is especially valuable for leased fleet vehicles where paint condition affects end-of-lease costs." },
+              { q: "How long does fleet wrap installation take?", a: "Individual vehicles typically take 1–3 business days depending on size and coverage. For larger fleets, we schedule installations in phases so you're never without your full operational fleet." },
+              { q: "Do you offer fleet pricing for multiple vehicles?", a: "Yes. Volume discounts start at 10% for 3–5 vehicles, 15% for 6–10 vehicles, and custom pricing for 11+ vehicles. Because we work with a network of Central Ohio installers, we can also shop for the most competitive fleet pricing available for your specific project." },
+              { q: "Can you match branding across different vehicle types?", a: "Absolutely. We create unified fleet branding systems that maintain consistent colors, logo placement, and messaging across every vehicle type — vans, trucks, box trucks, trailers, and company cars — regardless of size or shape differences." },
+            ].map((item, i) => (
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="rounded-2xl border border-border bg-card px-6 data-[state=open]:border-primary/40"
+              >
+                <AccordionTrigger className="font-display text-base md:text-lg font-black text-foreground text-left hover:no-underline py-5">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="relative py-20 lg:py-28 bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-ohio-red-light to-primary opacity-90" />
+        <div className="absolute inset-0 opacity-[0.08]" style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }} />
+        <div className="container relative text-center max-w-3xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight"
+            style={{ textShadow: "0 4px 20px rgba(0,0,0,0.3)" }}
+          >
+            Ready to Brand Your Columbus Ohio Fleet?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-primary-foreground/90 font-semibold mb-10 leading-relaxed"
+          >
+            Get a free fleet wrap quote within 24 hours. No obligation. No pressure. Just a clear, detailed proposal for turning your vehicles into your best marketing asset.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-background text-foreground hover:bg-background/90 font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] group uppercase tracking-wider w-full sm:w-auto"
+              >
+                Get My Free Fleet Quote
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <a href="tel:6145613358">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-black text-base md:text-lg px-10 py-7 rounded-2xl uppercase tracking-wider w-full sm:w-auto"
+              >
+                Call 614-561-3358
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
