@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp, X, Check } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp, X, Check, Wrench, Droplet, Zap, Leaf, HardHat, Home, Package, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -274,6 +274,130 @@ const FleetWraps = () => {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION 3 — Fleet Options */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
+          >
+            Fleet Branding Options for{" "}
+            <span className="text-primary">Every Budget</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Full Fleet Wraps",
+                h3: "Maximum Impact — Full Vehicle Coverage",
+                body: "The most powerful branding statement available. Full wraps cover the entire painted surface in custom-printed commercial vinyl. Bold graphics, your logo, phone number, website, and service list wrap every visible surface.",
+                meta: [
+                  { k: "Best for", v: "HVAC, plumbing, electrical, landscaping, moving companies, delivery fleets" },
+                  { k: "Lifespan", v: "5–7 years" },
+                  { k: "Materials", v: "3M Series 1080, Avery Dennison MPI 1005" },
+                ],
+              },
+              {
+                title: "Partial Fleet Wraps",
+                h3: "High-Impact Branding at a Lower Investment",
+                body: "Partial wraps focus on your vehicle's highest-visibility zones — sides, doors, and rear panel. Combined with professional vinyl lettering, partial wraps deliver exceptional results at significantly lower cost than full coverage.",
+                meta: [
+                  { k: "Best for", v: "Smaller fleets, leased vehicles, businesses wanting flexibility to update messaging" },
+                  { k: "Most popular for", v: "Real estate agents, property managers, professional services" },
+                ],
+              },
+              {
+                title: "Fleet Decals and Spot Graphics",
+                h3: "Professional Branding for Every Budget",
+                body: "Door decals, logo graphics, contact information vinyl, and spot graphics that transform plain work vehicles into branded assets — without the full-wrap investment.",
+                meta: [
+                  { k: "Best for", v: "Single vehicles, company cars, small fleets, vehicles that change hands frequently" },
+                  { k: "Starting at", v: "$150–$400 per vehicle" },
+                ],
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-2xl p-7 bg-card border border-border hover:border-primary/40 hover:shadow-[0_10px_40px_rgba(0,0,0,0.1)] transition-all flex flex-col"
+              >
+                <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-3">
+                  {card.title}
+                </div>
+                <h3 className="font-display text-xl md:text-2xl font-black text-foreground mb-4 leading-tight">
+                  {card.h3}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-5">
+                  {card.body}
+                </p>
+                <div className="mt-auto space-y-2 pt-4 border-t border-border">
+                  {card.meta.map((m) => (
+                    <div key={m.k} className="text-sm">
+                      <span className="font-bold text-foreground">{m.k}:</span>{" "}
+                      <span className="text-muted-foreground">{m.v}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — Industries */}
+      <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
+        <div className="container max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
+          >
+            Fleet Wraps for Every{" "}
+            <span className="text-primary">Central Ohio Industry</span>
+          </motion.h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { icon: Wrench, title: "HVAC and Mechanical", body: "Your service vans are in neighborhoods all day. A professionally wrapped fleet gets you noticed by homeowners who need you — before they ever search online." },
+              { icon: Droplet, title: "Plumbing and Drain Services", body: "Emergency calls come from reputation and visibility. Fleet wraps build both simultaneously across every Columbus suburb you service." },
+              { icon: Zap, title: "Electrical Contractors", body: "Stand out on every job site and in every neighborhood. Your wrapped vehicles signal professionalism before your technician rings the doorbell." },
+              { icon: Leaf, title: "Landscaping and Lawn Care", body: "Seasonal visibility when it counts most. Your branded trucks and trailers in subdivisions during spring and summer are your most powerful marketing tool." },
+              { icon: HardHat, title: "Construction and Roofing", body: "Parked at job sites for days at a time — your fleet is a neighborhood billboard with zero additional cost per impression." },
+              { icon: Home, title: "Real Estate and Property Management", body: "Professional vehicle branding builds name recognition across your farm area and signals to buyers and sellers that you're an established local expert." },
+              { icon: Package, title: "Delivery and Logistics", body: "Turn your delivery route into a branding route. Every stop is a marketing moment for the businesses watching your van arrive." },
+              { icon: Heart, title: "Healthcare and Dental", body: "Mobile health services and dental practices use fleet branding to reach patients and build community presence." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (i % 4) * 0.08 }}
+                className="rounded-2xl p-6 bg-card border border-border hover:border-primary/40 hover:-translate-y-1 transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/25 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-black text-foreground mb-2 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
