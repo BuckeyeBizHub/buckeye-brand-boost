@@ -12,6 +12,7 @@ const serviceLinks = [
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
   { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps" },
   { label: "Fleet Wraps", href: "/fleet-wraps" },
+  { label: "Vehicle Decals", href: "/vehicle-decals" },
   { label: "Trade Show Displays", href: "/trade-show-displays" },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
   { label: "Website Design & Development", href: "/website-design" },
