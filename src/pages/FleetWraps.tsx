@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -117,6 +117,162 @@ const FleetWraps = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION 1 — Why Fleet Wraps */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
+          >
+            Why Columbus Businesses Invest in{" "}
+            <span className="text-primary">Fleet Wraps</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
+            {[
+              { stat: "30,000–70,000", label: "Daily impressions per wrapped vehicle in the Columbus market" },
+              { stat: "$0.04", label: "Estimated cost per thousand impressions — lower than any other advertising medium" },
+              { stat: "5–7 Years", label: "Average lifespan using 3M or Avery Dennison commercial vinyl" },
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-2xl p-8 bg-gradient-to-br from-ohio-navy to-ohio-grey-dark border border-primary/20 text-center shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
+              >
+                <div className="font-display text-4xl md:text-5xl font-black text-primary mb-4 text-glow-red">
+                  {card.stat}
+                </div>
+                <p className="text-sm md:text-base text-primary-foreground/75 font-semibold leading-relaxed">
+                  {card.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed"
+          >
+            <p>
+              Unlike digital ads that disappear when your budget runs out, a fleet wrap is a one-time investment that works every day — on the road, parked at job sites, sitting in driveways, and driving through neighborhoods where your next customer lives.
+            </p>
+            <p>
+              For service businesses in Columbus, fleet branding does something digital advertising cannot: it puts your brand physically in front of your ideal customer at the exact moment they need you. A homeowner watching your wrapped HVAC van pull up to their neighbor's house is already a warm lead.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION 2 — Concierge Network */}
+      <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
+        <div className="container max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl md:text-5xl font-black mb-6 text-foreground leading-tight">
+              Why Work With Buckeye Biz Hub Instead of Going{" "}
+              <span className="text-primary">Directly to a Wrap Shop?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed">
+              We Shop Central Ohio's Best Wrap Installers on Your Behalf — So You Get Better Quality, Better Pricing, and Zero Runaround.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-10"
+          >
+            <p>
+              Here's something most wrap shops won't tell you: the best price and the best quality for your specific vehicle and budget aren't always at the same place. Different installers specialize in different vehicle types. Fleet pricing varies significantly between shops. And the shop with the nicest website isn't always the one that will do the best work on your box truck.
+            </p>
+            <p>
+              That's exactly why Buckeye Biz Hub operates as your branding concierge rather than a single-shop installer.
+            </p>
+            <p>
+              We've built working relationships with a curated network of Central Ohio's top-rated wrap installers, specialty graphic shops, and independent vinyl specialists. When you bring us a fleet wrap project, we go to work on your behalf — just like a mortgage broker shops lenders to get you the best rate, we shop our installer network to get you:
+            </p>
+            <ul className="space-y-3 pl-1">
+              {[
+                "The right specialist for your vehicle type and scope",
+                "Competitive pricing without single-shop markups",
+                "Quality guarantees backed by our concierge oversight",
+                "A single point of contact throughout the entire project",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
+                  <span className="text-foreground font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-bold text-foreground text-lg md:text-xl pt-2">
+              You deal with us. We deal with the shops. You get the best outcome.
+            </p>
+          </motion.div>
+
+          {/* Comparison Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-2xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.08)] bg-card"
+          >
+            <div className="grid grid-cols-3 bg-ohio-navy text-primary-foreground">
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider border-r border-primary-foreground/10">
+                &nbsp;
+              </div>
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center border-r border-primary-foreground/10 flex items-center justify-center gap-2">
+                <X className="w-4 h-4 text-primary-foreground/50" />
+                Going Direct to a Wrap Shop
+              </div>
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center bg-primary flex items-center justify-center gap-2">
+                <Check className="w-4 h-4" />
+                Working with Buckeye Biz Hub
+              </div>
+            </div>
+
+            {[
+              { label: "Pricing", left: "One shop's price", right: "Shopped across multiple installers" },
+              { label: "Options", left: "Limited to that shop's capabilities", right: "Full Central Ohio installer network" },
+              { label: "Your time", left: "Multiple consultations at multiple shops", right: "One conversation with us" },
+              { label: "Design", left: "Varies by shop", right: "Included and consistent across all pieces" },
+              { label: "Your advocate", left: "The shop", right: "Us — always working for your best outcome" },
+            ].map((row, i) => (
+              <div
+                key={row.label}
+                className={`grid grid-cols-3 ${i % 2 === 0 ? "bg-background" : "bg-muted/40"} border-t border-border`}
+              >
+                <div className="p-4 md:p-5 font-bold text-sm md:text-base text-foreground border-r border-border">
+                  {row.label}
+                </div>
+                <div className="p-4 md:p-5 text-sm md:text-base text-muted-foreground border-r border-border">
+                  {row.left}
+                </div>
+                <div className="p-4 md:p-5 text-sm md:text-base text-foreground font-semibold bg-primary/[0.04]">
+                  {row.right}
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
