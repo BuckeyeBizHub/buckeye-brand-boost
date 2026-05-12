@@ -92,7 +92,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Section 1 — The Origin */}
+      {/* Section 1 — Our Story */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div
@@ -103,25 +103,51 @@ const About = () => {
             variants={fadeUp}
           >
             <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              The Origin
+              Our Story
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              I didn't start Buckeye Biz Hub because I wanted to{" "}
-              <span className="text-primary">sell promotional products.</span>
+              Why We Built a Branding Concierge{" "}
+              <span className="text-primary">— Not Just Another Print Shop</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I started it because for 15+ years, I watched my wife{" "}
-                <span className="font-bold text-foreground">Dr. Kerry Stein</span>{" "}
-                build and run Marion Endodontics in Marion, Ohio — and I handled everything on the operations and procurement side. Branded scrubs. Staff uniforms. Holiday referral gift packages with Jeni's Ice Cream, Cheryl's Cookies, Velvet Ice Cream, and Al's Popcorn. Business cards, appointment cards, window decals, office signage, letterhead, exam room materials — all of it.
+                After years of working in branding and business services across Central Ohio, we kept seeing the same problem: business owners were overpaying for mediocre work because they didn't know the market, didn't have the time to shop multiple vendors, and ended up going with whoever came up first in a Google search.
               </p>
               <p>
-                I learned what Ohio businesses actually need when they're trying to look professional, keep costs reasonable, and find a partner they can trust to get it right without having to explain themselves from scratch every time.
+                A plumber in Hilliard shouldn't have to spend three afternoons getting quotes from four different wrap shops to find out who does the best fleet work at a fair price. A restaurant owner in Westerville shouldn't have to wonder if the promotional products company they found online is actually going to deliver quality merchandise on time.
+              </p>
+              <p>
+                That's why Buckeye Biz Hub was built around the concierge model.
+              </p>
+              <p>
+                We've spent years building relationships with Central Ohio's best wrap installers, print specialists, embroiderers, and promotional product vendors. We know who does exceptional fleet work. We know who has the best pricing for large-format banner runs. We know which embroidery shop turns around uniform orders fastest without sacrificing quality.
+              </p>
+              <p>
+                When you work with us, you get access to that entire network — managed, coordinated, and quality-checked by a single accountable partner. We shop on your behalf, negotiate on your behalf, and stand behind the results on your behalf.
               </p>
               <p className="text-foreground font-semibold">
-                That experience is what Buckeye Biz Hub is built on.
+                That's the Buckeye Biz Hub difference. And it's why our clients keep coming back for every branding need — not just the first one.
               </p>
             </div>
+
+            {/* Pull Quote Callout */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="mt-10 relative bg-ohio-navy rounded-2xl p-8 md:p-10 border border-primary/20"
+            >
+              <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary rounded-full" />
+              <blockquote className="relative">
+                <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed italic font-display">
+                  "Think of us as your personal branding broker. We work for you — not for any single wrap shop. Our job is to make sure you get the best quality work at the best price Central Ohio has to offer."
+                </p>
+                <footer className="mt-5">
+                  <p className="font-bold text-primary text-base">— David, Buckeye Biz Hub</p>
+                </footer>
+              </blockquote>
+            </motion.div>
           </motion.div>
         </div>
       </section>
