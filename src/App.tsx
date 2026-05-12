@@ -168,6 +168,7 @@ const App = () => (
 
             {/* New focused, conversion-optimized service URLs */}
             <Route path="/vehicle-wraps" element={<VehicleWraps />} />
+            <Route path="/fleet-wraps" element={<FleetWraps />} />
             <Route path="/business-cards-printing" element={<BusinessCardsPrinting />} />
             <Route path="/decals-and-stickers" element={<DecalsAndStickers />} />
             <Route path="/embroidered-apparel" element={<EmbroideredApparel />} />
