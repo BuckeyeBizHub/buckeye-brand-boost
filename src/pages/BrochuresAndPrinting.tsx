@@ -142,7 +142,7 @@ const BrochuresAndPrinting = () => {
     })),
   };
 
-    usePageSEO({ title: "Brochures & Business Printing Columbus Ohio", description: "Custom brochures, flyers, and print materials for Columbus Ohio businesses. We source from top local printers for best quality and pricing. Free 24-hour quote." });
+    usePageSEO({ title: "Brochures & Business Printing Columbus Ohio", description: "Custom brochures, flyers, and print materials for Columbus Ohio businesses. We source from top local printers for best quality and pricing." });
 
   return (
     <div className="min-h-screen">

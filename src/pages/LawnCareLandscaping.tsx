@@ -169,7 +169,7 @@ const LawnCareLandscaping = () => {
     title:
       "Fleet Wraps, Crew Apparel & Marketing Materials for Ohio Lawn Care & Landscaping Companies",
     description:
-      "Vehicle wraps, crew apparel, door hangers, and yard signs for Central Ohio lawn care companies. We shop top vendors for best quality and pricing. Free quote.",
+      "Vehicle wraps, crew apparel, door hangers, and yard signs for Central Ohio lawn care companies. We shop top vendors for best pricing.",
   });
 
   const faqJsonLd = {
