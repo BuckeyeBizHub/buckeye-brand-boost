@@ -38,6 +38,8 @@ const Index = () => (
     {/* Centerpiece */}
     <ServicesSection />
     <FlowDivider />
+    <ConciergeModelSection />
+    <FlowDivider />
     <RealResultsSection />
     <WhyChooseSection />
     <FlowDivider />
