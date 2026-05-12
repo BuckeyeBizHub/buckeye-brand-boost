@@ -69,6 +69,7 @@ const TradeShowDisplays = lazy(() => import("./pages/services/TradeShowDisplays.
 
 const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));
+const DomainCheck = lazy(() => import("./pages/DomainCheck.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -175,6 +176,7 @@ const App = () => (
             <Route path="/decals-and-stickers" element={<DecalsAndStickers />} />
             <Route path="/embroidered-apparel" element={<EmbroideredApparel />} />
             <Route path="/trade-show-displays" element={<TradeShowDisplays />} />
+            <Route path="/domain-check" element={<DomainCheck />} />
             {/* Spec also lists /banners-and-flags and /promotional-products — already routed above to existing rich pages. */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
