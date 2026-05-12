@@ -632,6 +632,7 @@ const FleetWraps = () => {
       </section>
 
       <Footer />
+    </div>
   );
 };
 
