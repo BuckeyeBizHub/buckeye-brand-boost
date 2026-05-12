@@ -54,7 +54,7 @@ const faqItems = [
 ];
 
 const CatalogsAndBooklets = () => {
-  usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Professional catalog and booklet printing — saddle-stitched, perfect-bound, and wire-o binding. Full-color, premium paper stocks, and fast turnaround for Ohio businesses." });
+  usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Custom catalog and booklet printing for Ohio businesses. Saddle-stitched, perfect-bound, wire-o binding. We source from top printers for best pricing." });
 
   return (
     <div className="min-h-screen">

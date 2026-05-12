@@ -72,7 +72,7 @@ const trustPoints = [
 
 const VehicleBranding = () => {
 
-    usePageSEO({ title: "Vehicle Branding Columbus Ohio", description: "Professional vehicle branding services in Columbus Ohio. Custom wraps, decals, and fleet graphics that generate thousands of daily impressions for your business." });
+    usePageSEO({ title: "Vehicle Branding Columbus Ohio", description: "Professional vehicle branding in Columbus Ohio. We shop Central Ohio's top wrap installers and vinyl specialists to get you the best quality and price." });
 
   return (
     <div className="min-h-screen">

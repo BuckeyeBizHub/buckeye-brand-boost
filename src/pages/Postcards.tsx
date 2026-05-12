@@ -46,7 +46,7 @@ const faqItems = [
 ];
 
 const Postcards = () => {
-  usePageSEO({ title: "Custom Postcards & Direct Mail Printing Columbus OH", description: "Premium postcard printing for direct mail, promotions, and events. Multiple sizes from 4×6 to 8.5×11, premium paper stocks, and EDDM mailing services. 24-hour quotes from Buckeye Biz Hub." });
+  usePageSEO({ title: "Custom Postcards & Direct Mail Printing Columbus OH", description: "Premium postcard printing for direct mail, promotions, and events in Ohio. Multiple sizes, EDDM mailing services. We source from top printers. Free 24-hour quote." });
 
   return (
     <div className="min-h-screen">

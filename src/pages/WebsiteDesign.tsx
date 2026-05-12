@@ -57,7 +57,7 @@ const faqJsonLd = {
 };
 
 const WebsiteDesign = () => {
-  usePageSEO({ title: "Website Design & Development Columbus Ohio", description: "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites that attract customers and build trust 24/7." });
+  usePageSEO({ title: "Website Design & Development Columbus Ohio", description: "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites built to attract customers and grow your brand 24/7." });
 
   return (
   <div className="min-h-screen">

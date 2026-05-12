@@ -93,7 +93,7 @@ const trustItems = ["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned &
 /* ── component ── */
 const BusinessCards = () => {
 
-    usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards with gold foil, spot UV, custom die-cuts, and luxurious paper stocks. Fast turnaround and wholesale pricing for Ohio businesses." });
+    usePageSEO({ title: "Business Cards Columbus Ohio", description: "Premium business cards for Ohio businesses — foil, spot UV, soft-touch, and custom die-cuts. We shop top printers to get you the best quality and price." });
 
   return (
     <div className="min-h-screen">

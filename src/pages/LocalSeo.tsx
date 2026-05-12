@@ -56,7 +56,7 @@ const faqJsonLd = {
 };
 
 const LocalSeo = () => {
-  usePageSEO({ title: "Local SEO & Google Ranking Columbus Ohio", description: "Local SEO services to help your Ohio business rank higher on Google and dominate the Map Pack. Get found by more local customers in Columbus and Central Ohio." });
+  usePageSEO({ title: "Local SEO & Google Ranking Columbus Ohio", description: "Local SEO services to help your Columbus Ohio business rank higher on Google and dominate the Map Pack. Get found by more local customers in Central Ohio." });
 
   return (
   <div className="min-h-screen">

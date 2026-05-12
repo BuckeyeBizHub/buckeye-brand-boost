@@ -53,7 +53,7 @@ const faqItems = [
 ];
 
 const LargeFormatPrinting = () => {
-  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, floor graphics, retractable banners, and trade show displays. Premium quality for Ohio businesses." });
+  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, banners, and trade show displays. We source from top Ohio print specialists for best quality and pricing." });
 
   return (
     <div className="min-h-screen">

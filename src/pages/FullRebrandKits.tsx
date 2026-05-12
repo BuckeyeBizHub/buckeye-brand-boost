@@ -58,7 +58,7 @@ const faqJsonLd = {
 };
 
 const FullRebrandKits = () => {
-  usePageSEO({ title: "Full Rebrand Kits Columbus Ohio", description: "Complete rebrand kits for Ohio businesses. Coordinated vehicle branding, signage, apparel, printing, and digital assets in one professional package." });
+  usePageSEO({ title: "Full Rebrand Kits Columbus Ohio", description: "Complete rebrand kits for Ohio businesses — vehicle wraps, signage, apparel, and print all coordinated. We shop top vendors so you get one price, one contact." });
 
   return (
   <div className="min-h-screen">

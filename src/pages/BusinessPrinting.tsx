@@ -195,7 +195,7 @@ const trustPoints = [
 const BusinessPrinting = () => {
   usePageSEO({
     title: "Business Printing – Flyers, Brochures, Business Cards & More",
-    description: "Professional business printing in Columbus Ohio. Flyers, brochures, business cards, door hangers, and more with premium quality, wholesale pricing, and 24-hour quotes.",
+    description: "Full-service business printing in Columbus Ohio. We shop our network of top local printers to get you the best quality and pricing. Free 24-hour quotes.",
   });
 
   return (

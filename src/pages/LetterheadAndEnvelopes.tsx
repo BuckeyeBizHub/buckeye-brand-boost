@@ -57,7 +57,7 @@ const faqItems = [
 ];
 
 const LetterheadAndEnvelopes = () => {
-  usePageSEO({ title: "Letterhead & Envelope Printing Columbus OH", description: "Custom letterhead and matching envelope printing for Ohio businesses. Premium paper, full-color, and coordinated stationery sets. 24-hour quotes." });
+  usePageSEO({ title: "Letterhead & Envelope Printing Columbus OH", description: "Custom letterhead and envelope printing for Ohio businesses. Coordinated stationery sets with premium paper. We source from top printers. Free 24-hour quotes." });
 
   return (
     <div className="min-h-screen">

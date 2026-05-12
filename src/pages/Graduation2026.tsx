@@ -63,7 +63,7 @@ const Graduation2026 = () => {
   usePageSEO({
     title: "2026 Graduation Banners & Yard Signs – Columbus, Ohio",
     description:
-      "Custom graduation banners from $37.50 and 24x24 yard signs (8-pack only $125) for the Class of 2026. Proudly made in Columbus, Ohio. Beat national big-box prices.",
+      "Custom graduation banners from $37.50 and yard signs 8-pack for $125 for Class of 2026. Made in Columbus Ohio. Better quality and pricing than big-box stores.",
   });
 
   return (

@@ -130,7 +130,7 @@ const YardSignsAndSignage = () => {
     })),
   };
 
-    usePageSEO({ title: "Yard Signs & Custom Signage Columbus Ohio", description: "Bold, weather-resistant yard signs and custom signage for Columbus and Central Ohio businesses. Real estate signs, job site signs, and event signage with fast turnaround." });
+    usePageSEO({ title: "Yard Signs & Custom Signage Columbus Ohio", description: "Bold yard signs and custom signage for Columbus and Central Ohio businesses. We source from top local sign specialists for best quality and fast turnaround." });
 
   return (
     <div className="min-h-screen">

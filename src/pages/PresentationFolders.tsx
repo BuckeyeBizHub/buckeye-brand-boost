@@ -52,7 +52,7 @@ const faqItems = [
 ];
 
 const PresentationFolders = () => {
-  usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders and pocket folders for Ohio businesses. Premium stocks, foil stamping, spot UV, and custom pockets. 24-hour quotes from Buckeye Biz Hub." });
+  usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders for Ohio businesses — foil stamping, spot UV, custom pockets. We source from top printers for best quality and pricing." });
 
   return (
     <div className="min-h-screen">

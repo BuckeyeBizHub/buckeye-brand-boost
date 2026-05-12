@@ -44,7 +44,7 @@ const DoorHangers = () => {
 
   usePageSEO({
     title: "Door Hangers | Custom Door Hanger Printing – Buckeye Biz Hub",
-    description: "Custom door hanger printing on premium 14pt cardstock. Perfect for local promotions, coupons, menus, and service reminders. Fast turnaround and transparent pricing for Ohio businesses.",
+    description: "Custom door hanger printing on premium cardstock for Ohio businesses. Local marketing that works. We source from top printers for best quality and pricing.",
   });
 
   return (

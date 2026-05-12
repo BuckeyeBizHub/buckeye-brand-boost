@@ -54,7 +54,7 @@ const faqItems = [
 ];
 
 const MenusAndTableTents = () => {
-  usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom restaurant menu printing and table tents for Ohio restaurants, bars, and hospitality businesses. Durable, laminated, and beautifully designed." });
+  usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom menu printing and table tents for Ohio restaurants and hospitality businesses. We source from top local printers for durable, beautiful results." });
 
   return (
     <div className="min-h-screen">

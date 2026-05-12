@@ -152,7 +152,7 @@ const Construction = () => {
   usePageSEO({
     title: "Branded Workwear, Fleet Wraps & Job Site Materials for Ohio Construction Companies",
     description:
-      "Branded workwear, vehicle graphics, hard hat wraps, jobsite banners, trade show displays, and safety gear for Central Ohio general contractors and specialty contractors. Free 24-hour quotes.",
+      "Branded workwear, vehicle graphics, jobsite banners, and trade show displays for Central Ohio contractors. We shop top vendors for best quality and pricing.",
   });
 
   const faqJsonLd = {
