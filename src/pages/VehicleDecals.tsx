@@ -64,7 +64,7 @@ const VehicleDecals = () => {
   usePageSEO({
     title: "Vehicle Decals and Spot Graphics Columbus Ohio | Business Vehicle Branding | Buckeye Biz Hub",
     description:
-      "Custom vehicle decals, door graphics, and logo vinyl for Columbus Ohio businesses. Professional branding starting at $150. Fast turnaround, free 24-hour quote.",
+      "Custom vehicle decals and spot graphics for Columbus Ohio businesses. We source from top local vinyl specialists. Starting at $150. Free quote.",
   });
 
   return (

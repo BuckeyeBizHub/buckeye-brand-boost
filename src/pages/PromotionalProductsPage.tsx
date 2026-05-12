@@ -204,7 +204,7 @@ const PromotionalProductsPage = () => {
     })),
   };
 
-    usePageSEO({ title: "Promotional Products Columbus Ohio", description: "Browse custom promotional products for your Ohio business. Branded merchandise, corporate gifts, and trade show giveaways with fast turnaround." });
+    usePageSEO({ title: "Promotional Products Columbus Ohio", description: "Promotional products and branded merchandise for Columbus Ohio businesses. We shop top vendors for best pricing. Corporate gifts, trade show giveaways." });
 
   return (
     <div className="min-h-screen">

@@ -18,7 +18,7 @@ const FleetWraps = () => {
   usePageSEO({
     title: "Fleet Vehicle Wraps Columbus Ohio | Commercial Fleet Branding | Buckeye Biz Hub",
     description:
-      "Columbus Ohio's fleet wrap specialists. Full-fleet and partial-fleet vehicle branding for HVAC, plumbing, landscaping, construction and service businesses. Free 24-hour quote. Serving Central Ohio.",
+      "Columbus Ohio fleet wrap specialists. We shop Central Ohio's best installers to get you the best quality and price. Free 24-hour quote.",
   });
 
   return (

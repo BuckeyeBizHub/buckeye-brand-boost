@@ -123,7 +123,7 @@ const BannersAndFlags = () => {
     })),
   };
 
-    usePageSEO({ title: "Custom Banners & Flags Columbus Ohio", description: "Custom vinyl banners, feather flags, retractable banners, and graduation banners in Columbus Ohio. Perfect for events, grand openings, job sites, and celebrations." });
+    usePageSEO({ title: "Custom Banners & Flags Columbus Ohio", description: "Custom banners, flags, and signs for Columbus Ohio businesses and events. We source from top local print specialists. Fast turnaround, free quote." });
 
   return (
     <div className="min-h-screen">
