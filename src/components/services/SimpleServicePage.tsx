@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { SITE_URL } from "@/lib/structured-data";
 
 export interface SimpleServicePageProps {
   /** Service name shown in H1 ("[Service] in Columbus, Ohio"). */
@@ -42,7 +41,6 @@ const SimpleServicePage = ({
 }: SimpleServicePageProps) => {
   usePageSEO({ title: metaTitle, description: metaDescription });
 
-  const url = `${SITE_URL}${slug}`;
   const paragraphs = description
     .split(/\n\s*\n/)
     .map((p) => p.trim())
