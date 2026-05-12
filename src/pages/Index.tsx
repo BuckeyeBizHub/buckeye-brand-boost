@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ValuePropsStrip from "@/components/ValuePropsStrip";
 import IndustryStrip from "@/components/IndustryStrip";
 import ServicesSection from "@/components/ServicesSection";
+import ConciergeModelSection from "@/components/ConciergeModelSection";
 import RealResultsSection from "@/components/RealResultsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ProductCarousel from "@/components/ProductCarousel";
