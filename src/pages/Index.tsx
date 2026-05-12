@@ -27,7 +27,8 @@ const FlowDivider = () => (
 const Index = () => (
   <div className="min-h-screen bg-gradient-to-b from-background via-ohio-grey-light/15 to-background">
     <SEOHead
-      description="Ohio's trusted branding concierge. Custom printing, vehicle wraps, promotional products, banners & more. Free 24-hour quotes."
+      title="Buckeye Biz Hub | Columbus Ohio Printing, Vehicle Wraps & Promotional Products"
+      description="Columbus and Central Ohio's trusted branding concierge. We shop our network of top vendors to get you the best quality and pricing on printing, vehicle wraps, promotional products, banners, embroidered apparel, and signage. Free 24-hour quotes. 500+ five-star reviews."
       keywords={["Ohio business printing", "promotional products Ohio", "vehicle wraps Columbus", "branding solutions"]}
     />
     <Navbar />
