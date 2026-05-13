@@ -5,7 +5,7 @@ import davidHeadshot from "@/assets/david-stein-headshot.jpg";
 import luxuryCards from "@/assets/luxury-gold-foil-cards.jpg";
 import trifoldBrochure from "@/assets/trifold-brochure-sample.png";
 import customDecals from "@/assets/usa-250th-anniversary-decal.jpeg";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import TrustBadges from "@/components/TrustBadges";
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
             className="mb-4"
           >
             <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-extrabold text-primary tracking-[0.2em] uppercase bg-primary/[0.08] border border-primary/15 px-4 py-2 rounded-full">
-              Your Buckeye Branding Concierge
+              Columbus Ohio's Fleet Spot Graphics Specialists
             </span>
           </motion.div>
 
@@ -57,9 +57,9 @@ const HeroSection = () => {
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
             }}
           >
-            <span className="text-primary text-glow-red">Buckeye Biz Hub:</span>
+            Brand Every Vehicle in Your Fleet —
             <br />
-            Branding Solutions Built for Ohio Businesses
+            <span className="text-primary text-glow-red">Without the Full-Wrap Price Tag</span>
           </h1>
 
           <p
@@ -68,7 +68,7 @@ const HeroSection = () => {
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
             }}
           >
-            Specialists in dental practices, roofing contractors, construction companies, and Ohio fleet businesses — we know your industry from the inside.
+            Professional fleet branding starting at $150 per vehicle. Spot graphics, door decals, and logo packages that turn every truck and van into a moving billboard — for a fraction of the cost of a full wrap.
           </p>
 
           <motion.p
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   size="lg"
                   className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
                 >
-                  Get Your Free 24-Hour Quote
+                  Get My Free Fleet Quote
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </Button>
               </Link>
@@ -195,46 +195,48 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Unified trust + stats row */}
+      {/* Unified trust + items row (mobile/tablet) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
         className="relative z-10 w-full max-w-5xl mx-auto px-4 mt-8 sm:mt-10 lg:hidden"
       >
-        <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-4 sm:gap-x-10">
+        <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-4 sm:gap-x-8">
           <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 sm:[&_img]:h-14 gap-4 sm:gap-6" />
           {[
-            { value: "100+", label: "Ohio Businesses Served" },
-            { value: "24hr", label: "Quote Turnaround" },
-            { value: "100%", label: "Satisfaction" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-xl sm:text-2xl font-black text-primary text-glow-red leading-none mb-1">{stat.value}</div>
-              <div className="text-[0.55rem] sm:text-[0.65rem] text-primary-foreground/50 font-bold tracking-[0.15em] uppercase whitespace-nowrap">{stat.label}</div>
+            "Free 24-Hour Quote",
+            "Starting at $150 per Vehicle",
+            "Serving All of Central Ohio",
+            "We Shop the Market for Best Pricing",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+              <span className="text-xs sm:text-sm text-primary-foreground/80 font-bold whitespace-nowrap">{item}</span>
             </div>
           ))}
         </div>
       </motion.div>
 
-      {/* Desktop stats only (badges already shown on right column) */}
+      {/* Desktop trust items (badges already shown on right column) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
-        className="relative z-10 hidden lg:grid grid-cols-3 max-w-xl mx-auto px-4 mt-8"
+        className="relative z-10 hidden lg:grid grid-cols-4 max-w-5xl mx-auto px-4 mt-8"
       >
         {[
-          { value: "100+", label: "Ohio Businesses Served" },
-          { value: "24hr", label: "Quote Turnaround" },
-          { value: "100%", label: "Satisfaction" },
-        ].map((stat, i) => (
+          "Free 24-Hour Quote",
+          "Starting at $150 per Vehicle",
+          "Serving All of Central Ohio",
+          "We Shop the Market for Best Pricing",
+        ].map((item, i) => (
           <div
-            key={stat.label}
-            className={`text-center py-2 ${i !== 2 ? "border-r border-primary-foreground/10" : ""}`}
+            key={item}
+            className={`flex items-center justify-center gap-2 py-2 px-3 ${i !== 3 ? "border-r border-primary-foreground/10" : ""}`}
           >
-            <div className="text-xl sm:text-2xl font-black text-primary text-glow-red mb-1">{stat.value}</div>
-            <div className="text-[0.55rem] sm:text-[0.6rem] text-primary-foreground/40 font-bold tracking-[0.15em] uppercase">{stat.label}</div>
+            <Check className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+            <span className="text-xs xl:text-sm text-primary-foreground/75 font-bold text-center leading-tight">{item}</span>
           </div>
         ))}
       </motion.div>
