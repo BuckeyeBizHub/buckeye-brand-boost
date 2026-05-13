@@ -33,17 +33,13 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const AdminPhotos = lazy(() => import("./pages/AdminPhotos.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
-const BusinessCards = lazy(() => import("./pages/BusinessCards.tsx"));
 // BrochuresAndPrinting removed — merged into BusinessPrinting
 const PromotionalProductsPage = lazy(() => import("./pages/PromotionalProductsPage.tsx"));
-const BrandedApparel = lazy(() => import("./pages/BrandedApparel.tsx"));
 const YardSignsAndSignage = lazy(() => import("./pages/YardSignsAndSignage.tsx"));
-const VehicleWrapsAndFleet = lazy(() => import("./pages/VehicleWrapsAndFleet.tsx"));
 const FullRebrandKits = lazy(() => import("./pages/FullRebrandKits.tsx"));
 const WebsiteDesign = lazy(() => import("./pages/WebsiteDesign.tsx"));
 const LocalSeo = lazy(() => import("./pages/LocalSeo.tsx"));
 const BannersAndFlags = lazy(() => import("./pages/BannersAndFlags.tsx"));
-const Decals = lazy(() => import("./pages/Decals.tsx"));
 const Research = lazy(() => import("./pages/Research.tsx"));
 const Postcards = lazy(() => import("./pages/Postcards.tsx"));
 const CatalogsAndBooklets = lazy(() => import("./pages/CatalogsAndBooklets.tsx"));
@@ -144,16 +140,12 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/business-cards" element={<BusinessCards />} />
             {/* /brochures-and-business-printing removed — redirects to /business-printing via RedirectHandler */}
-            <Route path="/branded-apparel-and-uniforms" element={<BrandedApparel />} />
             <Route path="/yard-signs-and-signage" element={<YardSignsAndSignage />} />
-            <Route path="/vehicle-wraps-and-fleet-branding" element={<VehicleWrapsAndFleet />} />
             <Route path="/full-rebrand-kits" element={<FullRebrandKits />} />
             <Route path="/website-design" element={<WebsiteDesign />} />
             <Route path="/local-seo" element={<LocalSeo />} />
             <Route path="/banners-and-flags" element={<BannersAndFlags />} />
-            <Route path="/decals" element={<Decals />} />
             <Route path="/postcards" element={<Postcards />} />
             <Route path="/catalogs-and-booklets" element={<CatalogsAndBooklets />} />
             <Route path="/presentation-folders" element={<PresentationFolders />} />
