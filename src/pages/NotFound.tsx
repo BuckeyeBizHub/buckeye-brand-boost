@@ -9,8 +9,8 @@ import { track404 } from "@/lib/error-tracking";
 
 const popularPages = [
   { label: "Our Services", href: "/services", icon: Briefcase, description: "Browse our full range of printing, branding, and marketing solutions." },
-  { label: "Business Cards", href: "/business-cards", icon: Star, description: "Premium business cards with gold foil, raised print, and custom finishes." },
-  { label: "Vehicle Wraps", href: "/vehicle-wraps-and-fleet-branding", icon: MapPin, description: "Full and partial vehicle wraps for fleet branding across Ohio." },
+  { label: "Business Cards", href: "/business-cards-printing", icon: Star, description: "Premium business cards with gold foil, raised print, and custom finishes." },
+  { label: "Vehicle Wraps", href: "/vehicle-wraps", icon: MapPin, description: "Full and partial vehicle wraps for fleet branding across Ohio." },
   { label: "Get a Quote", href: "/contact", icon: Phone, description: "Request your free 24-hour quote — no obligation, wholesale pricing." },
   { label: "Blog", href: "/blog", icon: BookOpen, description: "Tips, guides, and Ohio business branding insights." },
   { label: "Pricing", href: "/pricing", icon: DollarSign, description: "Transparent pricing with no hidden fees." },

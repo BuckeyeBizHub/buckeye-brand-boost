@@ -205,9 +205,9 @@ const Blog = () => {
               {[
                 { to: "/services", label: "All Services" },
                 { to: "/promotional-products", label: "Promotional Products" },
-                { to: "/business-cards", label: "Business Cards" },
-                { to: "/vehicle-wraps-and-fleet", label: "Vehicle Wraps" },
-                { to: "/branded-apparel", label: "Branded Apparel" },
+                { to: "/business-cards-printing", label: "Business Cards" },
+                { to: "/vehicle-wraps", label: "Vehicle Wraps" },
+                { to: "/embroidered-apparel", label: "Branded Apparel" },
                 { to: "/large-format-printing", label: "Large Format Printing" },
                 { to: "/banners-and-flags", label: "Banners & Flags" },
               ].map((s) => (

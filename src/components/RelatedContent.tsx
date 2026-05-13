@@ -15,7 +15,7 @@ interface ServiceInfo {
 }
 
 const allServices: ServiceInfo[] = [
-  { label: "Business Cards & Stationery", href: "/business-cards", icon: CreditCard, description: "Premium business cards with specialty finishes for a lasting first impression." },
+  { label: "Business Cards & Stationery", href: "/business-cards-printing", icon: CreditCard, description: "Premium business cards with specialty finishes for a lasting first impression." },
   { label: "Brochures & Business Printing", href: "/business-printing", icon: BookOpen, description: "Professional brochures and printed materials to showcase your services." },
   { label: "Postcards & Direct Mail", href: "/postcards", icon: Mail, description: "Eye-catching postcards and direct mail campaigns that drive local response." },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets", icon: BookMarked, description: "Multi-page catalogs and booklets to present your full product line." },
@@ -24,11 +24,11 @@ const allServices: ServiceInfo[] = [
   { label: "Large Format Printing", href: "/large-format-printing", icon: Maximize, description: "Banners, posters, and large displays for events and storefronts." },
   { label: "Menus & Table Tents", href: "/menus-and-table-tents", icon: UtensilsCrossed, description: "Durable, attractive menus and table tents for restaurants and events." },
   { label: "Promotional Products", href: "/promotional-products", icon: Gift, description: "Branded giveaways and promotional items that keep your name top of mind." },
-  { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms", icon: Shirt, description: "Custom apparel and uniforms to unify your team's professional look." },
+  { label: "Branded Apparel & Uniforms", href: "/embroidered-apparel", icon: Shirt, description: "Custom apparel and uniforms to unify your team's professional look." },
   { label: "Banners & Flags", href: "/banners-and-flags", icon: Flag, description: "Weather-resistant banners and flags for outdoor visibility and events." },
-  { label: "Custom Decals", href: "/decals", icon: Sticker, description: "Custom vinyl decals for vehicles, windows, and branded surfaces." },
+  { label: "Custom Decals", href: "/decals-and-stickers", icon: Sticker, description: "Custom vinyl decals for vehicles, windows, and branded surfaces." },
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage", icon: Signpost, description: "Corrugated yard signs and custom signage for maximum local visibility." },
-  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding", icon: Car, description: "Full and partial vehicle wraps turning your fleet into mobile billboards." },
+  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps", icon: Car, description: "Full and partial vehicle wraps turning your fleet into mobile billboards." },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits", icon: Package, description: "Complete branding packages with logo, stationery, and collateral." },
   { label: "Website Design & Development", href: "/website-design", icon: Monitor, description: "Modern, mobile-first websites designed to convert Ohio customers." },
   { label: "Local SEO & Google Ranking", href: "/local-seo", icon: Search, description: "Improve your Google visibility and attract more local Ohio customers." },

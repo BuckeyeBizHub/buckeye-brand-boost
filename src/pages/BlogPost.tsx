@@ -145,9 +145,9 @@ const BlogPost = () => {
             <div className="flex flex-wrap gap-3">
               {[
                 { to: "/promotional-products", label: "Promotional Products" },
-                { to: "/business-cards", label: "Business Cards" },
-                { to: "/vehicle-wraps-and-fleet-branding", label: "Vehicle Wraps" },
-                { to: "/branded-apparel-and-uniforms", label: "Branded Apparel" },
+                { to: "/business-cards-printing", label: "Business Cards" },
+                { to: "/vehicle-wraps", label: "Vehicle Wraps" },
+                { to: "/embroidered-apparel", label: "Branded Apparel" },
                 { to: "/banners-and-flags", label: "Banners & Flags" },
                 { to: "/yard-signs-and-signage", label: "Signage" },
               ].map((s) => (

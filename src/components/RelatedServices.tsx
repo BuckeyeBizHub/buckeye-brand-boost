@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 const allServices = [
-  { label: "Business Cards & Stationery", href: "/business-cards", icon: CreditCard },
+  { label: "Business Cards & Stationery", href: "/business-cards-printing", icon: CreditCard },
   { label: "Brochures & Business Printing", href: "/business-printing", icon: BookOpen },
   { label: "Postcards & Direct Mail", href: "/postcards", icon: Mail },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets", icon: BookMarked },
@@ -16,11 +16,11 @@ const allServices = [
   { label: "Large Format Printing", href: "/large-format-printing", icon: Maximize },
   { label: "Menus & Table Tents", href: "/menus-and-table-tents", icon: UtensilsCrossed },
   { label: "Promotional Products & Giveaways", href: "/promotional-products", icon: Gift },
-  { label: "Branded Apparel & Uniforms", href: "/branded-apparel-and-uniforms", icon: Shirt },
+  { label: "Branded Apparel & Uniforms", href: "/embroidered-apparel", icon: Shirt },
   { label: "Banners & Flags", href: "/banners-and-flags", icon: Flag },
-  { label: "Custom Decals", href: "/decals", icon: Sticker },
+  { label: "Custom Decals", href: "/decals-and-stickers", icon: Sticker },
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage", icon: Signpost },
-  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps-and-fleet-branding", icon: Car },
+  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps", icon: Car },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits", icon: Package },
   { label: "Website Design & Development", href: "/website-design", icon: Monitor },
   { label: "Local SEO & Google Ranking", href: "/local-seo", icon: Search },

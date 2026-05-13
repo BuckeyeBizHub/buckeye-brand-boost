@@ -7,24 +7,24 @@ import MessageBubble from "@/components/research/MessageBubble";
 import { useState, useMemo, useCallback } from "react";
 
 const VISIBLE_PATHS = new Set([
-  "/", "/services", "/business-cards", "/business-printing",
-  "/promotional-products", "/branded-apparel-and-uniforms", "/yard-signs-and-signage",
-  "/vehicle-wraps-and-fleet-branding", "/full-rebrand-kits", "/website-design",
-  "/local-seo", "/banners-and-flags", "/decals", "/pricing", "/industries",
+  "/", "/services", "/business-cards-printing", "/business-printing",
+  "/promotional-products", "/embroidered-apparel", "/yard-signs-and-signage",
+  "/vehicle-wraps", "/full-rebrand-kits", "/website-design",
+  "/local-seo", "/banners-and-flags", "/decals-and-stickers", "/pricing", "/industries",
   "/postcards", "/catalogs-and-booklets", "/presentation-folders",
   "/menus-and-table-tents", "/letterhead-and-envelopes", "/large-format-printing",
   "/blog",
 ]);
 
 const PAGE_LABELS: Record<string, string> = {
-  "/vehicle-wraps-and-fleet-branding": "vehicle wraps & fleet branding",
-  "/business-cards": "business cards & stationery",
+  "/vehicle-wraps": "vehicle wraps & fleet branding",
+  "/business-cards-printing": "business cards & stationery",
   "/business-printing": "brochures & printing",
   "/promotional-products": "promotional products",
-  "/branded-apparel-and-uniforms": "branded apparel & uniforms",
+  "/embroidered-apparel": "branded apparel & uniforms",
   "/yard-signs-and-signage": "yard signs & signage",
   "/banners-and-flags": "banners & flags",
-  "/decals": "decals",
+  "/decals-and-stickers": "decals",
   "/full-rebrand-kits": "full rebrand kits",
   "/website-design": "website design",
   "/local-seo": "local SEO",

@@ -40,7 +40,7 @@ const sections: DetailSection[] = [
       "Your business card is often the very first thing a potential customer holds in their hand. We help you make that moment count with premium stocks, luxurious finishes, and eye-catching details that say 'I mean business.'",
     image: businessCardsImg,
     imageAlt: "Premium gold foil business cards printed by Buckeye Biz Hub",
-    href: "/business-cards",
+    href: "/business-cards-printing",
     columns: [
       {
         heading: "Popular Paper Stocks",

@@ -20,7 +20,7 @@ const services = [
   {
     title: "Business Cards & Stationery",
     desc: "Premium cards on ultra-thick 32pt stock with gold foil stamping, spot UV, embossing, and custom die-cuts — designed to leave a lasting impression.",
-    href: "/business-cards",
+    href: "/business-cards-printing",
     img: businessCardsProduct,
     showcase: [],
   },
@@ -41,7 +41,7 @@ const services = [
   {
     title: "Branded Apparel & Uniforms",
     desc: "Build instant credibility and team unity with sharp, professional branded apparel that makes your staff look proud and consistent.",
-    href: "/branded-apparel-and-uniforms",
+    href: "/embroidered-apparel",
     img: customApparelPolos,
     showcase: [],
   },
@@ -55,7 +55,7 @@ const services = [
   {
     title: "Vehicle Wraps & Fleet Branding",
     desc: "Transform your fleet into powerful 24/7 mobile advertisements with 3M/Avery materials and professional Ohio installers.",
-    href: "/vehicle-wraps-and-fleet-branding",
+    href: "/vehicle-wraps",
     img: vehicleWrapProduct,
     showcase: [],
   },
@@ -93,7 +93,7 @@ const featuredServices = [
   {
     title: "Decals",
     desc: "Custom vehicle decals, equipment numbering, reflective safety stickers, window clings, and patriotic decals that promote your brand everywhere.",
-    href: "/decals",
+    href: "/decals-and-stickers",
     img: vehicleDecalCloseup,
   },
 ];

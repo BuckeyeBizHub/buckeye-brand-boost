@@ -503,7 +503,7 @@ const PromotionalProductsPage = () => {
                 title: "Business Cards & Stationery",
                 image: PHOTO_PRINT_1,
                 description: "First impressions start in the hand. Choose from premium stocks, foil stamping, spot UV, and soft-touch finishes that make your card the one they keep. We match every detail to your brand's personality.",
-                link: "/business-cards",
+                link: "/business-cards-printing",
                 linkLabel: "Explore Business Cards",
               },
               {

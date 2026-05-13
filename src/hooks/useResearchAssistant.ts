@@ -19,12 +19,12 @@ export const SUGGESTED_QUESTIONS = [
 ];
 
 export const PAGE_QUESTIONS: Record<string, string[]> = {
-  "/vehicle-wraps-and-fleet-branding": [
+  "/vehicle-wraps": [
     "How much does a full vehicle wrap cost for a work truck?",
     "How long do vehicle wraps last in Ohio weather?",
     "What's the ROI of fleet branding vs. digital ads?",
   ],
-  "/business-cards": [
+  "/business-cards-printing": [
     "What paper stock is best for premium business cards?",
     "How much do gold foil business cards cost in bulk?",
     "What finishes make business cards stand out?",
@@ -39,7 +39,7 @@ export const PAGE_QUESTIONS: Record<string, string[]> = {
     "Which giveaway items get kept the longest?",
     "What's trending for corporate promotional gifts in 2025?",
   ],
-  "/branded-apparel-and-uniforms": [
+  "/embroidered-apparel": [
     "Embroidered vs. screen-printed logos — which is better?",
     "How much do custom polo shirts cost in bulk?",
     "What fabrics work best for outdoor work uniforms?",
@@ -54,7 +54,7 @@ export const PAGE_QUESTIONS: Record<string, string[]> = {
     "How tall should a feather flag be for roadside visibility?",
     "What are the best banner options for a grand opening?",
   ],
-  "/decals": [
+  "/decals-and-stickers": [
     "What's the difference between vinyl decals and stickers?",
     "How long do outdoor decals last in sun and rain?",
     "Do you offer reflective decals for DOT compliance?",

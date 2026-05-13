@@ -28,7 +28,7 @@ const resourceLinks: ResourceLink[] = [
 ];
 
 const printingLinks = [
-  { label: "Business Cards", href: "/business-cards" },
+  { label: "Business Cards", href: "/business-cards-printing" },
   { label: "Brochures & Printing", href: "/business-printing" },
   { label: "Postcards & Direct Mail", href: "/postcards" },
   { label: "Catalogs & Booklets", href: "/catalogs-and-booklets" },
@@ -40,10 +40,10 @@ const printingLinks = [
 
 const brandingLinks = [
   { label: "Promotional Products", href: "/promotional-products" },
-  { label: "Branded Apparel", href: "/branded-apparel-and-uniforms" },
-  { label: "Vehicle Wraps & Fleet", href: "/vehicle-wraps-and-fleet-branding" },
+  { label: "Branded Apparel", href: "/embroidered-apparel" },
+  { label: "Vehicle Wraps & Fleet", href: "/vehicle-wraps" },
   { label: "Banners & Flags", href: "/banners-and-flags" },
-  { label: "Custom Decals", href: "/decals" },
+  { label: "Custom Decals", href: "/decals-and-stickers" },
   { label: "Yard Signs & Signage", href: "/yard-signs-and-signage" },
   { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
 ];

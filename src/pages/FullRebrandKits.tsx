@@ -23,10 +23,10 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const kitItems = [
-  { title: "Vehicle Wraps & Fleet Branding", image: vehicleWrapImg, href: "/vehicle-wraps-and-fleet-branding" },
+  { title: "Vehicle Wraps & Fleet Branding", image: vehicleWrapImg, href: "/vehicle-wraps" },
   { title: "Yard Signs & Custom Signage", image: yardSignImg, href: "/yard-signs-and-signage" },
-  { title: "Branded Apparel & Uniforms", image: apparelImg, href: "/branded-apparel-and-uniforms" },
-  { title: "Business Cards & Stationery", image: businessCardsImg, href: "/business-cards" },
+  { title: "Branded Apparel & Uniforms", image: apparelImg, href: "/embroidered-apparel" },
+  { title: "Business Cards & Stationery", image: businessCardsImg, href: "/business-cards-printing" },
   { title: "Brochures & Business Printing", image: brochuresImg, href: "/business-printing" },
   { title: "Promotional Products & Giveaways", image: promoImg, href: "/promotional-products" },
   { title: "Website Design & Development", image: websiteImg, href: "/website-design" },
