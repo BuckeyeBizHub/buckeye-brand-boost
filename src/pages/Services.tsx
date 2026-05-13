@@ -34,7 +34,7 @@ const services = [
     image: businessCardsImg,
     title: "Business Cards & Stationery",
     description: "Make a powerful first impression that lasts. Our premium business cards feature luxurious paper stocks, elegant gold foil stamping, spot UV finishes, and custom die-cuts — designed to make your brand feel professional, memorable, and high-end from the very first handshake.",
-    href: "/business-cards",
+    href: "/business-cards-printing",
   },
   {
     image: brochuresImg,
@@ -52,7 +52,7 @@ const services = [
     image: apparelImg,
     title: "Branded Apparel & Uniforms",
     description: "Build instant credibility and team unity with sharp, professional branded apparel. From embroidered polos and hoodies to jackets and safety vests, your entire staff will look consistent, proud, and ready to represent your Ohio business at the highest level.",
-    href: "/branded-apparel-and-uniforms",
+    href: "/embroidered-apparel",
   },
   {
     image: yardSignsImg,
@@ -70,7 +70,7 @@ const services = [
     image: vehicleWrapImg,
     title: "Vehicle Wraps & Fleet Branding",
     description: "Transform your fleet into powerful 24/7 mobile advertisements. Our custom vehicle wraps create thousands of daily impressions while protecting your vehicles and making your brand unforgettable on every Ohio road.",
-    href: "/vehicle-wraps-and-fleet-branding",
+    href: "/vehicle-wraps",
   },
   {
     image: rebrandImg,
