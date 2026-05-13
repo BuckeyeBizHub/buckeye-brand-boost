@@ -86,7 +86,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xs sm:text-sm text-primary-foreground/40 mb-6 max-w-lg mx-auto lg:mx-0 italic"
           >
-            "Think of us as your personal branding department — without the overhead." — David Stein
+            "Think of us as your personal fleet branding specialist — and your one-stop branding concierge for everything else you need." — David Stein
           </motion.p>
 
           <motion.div
@@ -136,7 +136,7 @@ const HeroSection = () => {
             <div className="w-64 xl:w-72 aspect-[3/3.7] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
-                alt="David Stein – Your Buckeye Branding Concierge, Buckeye Biz Hub, Columbus Ohio"
+                alt="David Stein, Columbus Ohio Fleet Branding Specialist"
                 width={300}
                 height={370}
                 className="w-full h-full object-cover object-top"
@@ -146,7 +146,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-5 xl:px-7 py-2 xl:py-2.5 rounded-xl shadow-lg">
               <p className="text-primary-foreground font-bold text-xs xl:text-sm tracking-wide uppercase whitespace-nowrap">
-                David Stein · Branding Concierge
+                David Stein · Fleet Branding Specialist & Branding Concierge
               </p>
             </div>
           </div>
