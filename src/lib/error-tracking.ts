@@ -27,11 +27,6 @@ const REDIRECT_MAP: Record<string, RedirectEntry> = {
   "/signage": { to: "/yard-signs-and-signage", permanent: true },
   "/rebrand": { to: "/full-rebrand-kits", permanent: true },
   "/web-design": { to: "/website-design", permanent: true },
-  // Broader pages → focused conversion-optimized service URLs
-  "/vehicle-wraps-and-fleet-branding": { to: "/vehicle-wraps", permanent: true },
-  "/branded-apparel-and-uniforms": { to: "/embroidered-apparel", permanent: true },
-  "/decals": { to: "/decals-and-stickers", permanent: true },
-  "/business-cards": { to: "/business-cards-printing", permanent: true },
 };
 
 /**
