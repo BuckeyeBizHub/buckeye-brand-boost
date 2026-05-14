@@ -42,6 +42,7 @@ const VehicleWrapsAndFleet = lazy(() => import("./pages/VehicleWrapsAndFleet.tsx
 const FullRebrandKits = lazy(() => import("./pages/FullRebrandKits.tsx"));
 const WebsiteDesign = lazy(() => import("./pages/WebsiteDesign.tsx"));
 const LocalSeo = lazy(() => import("./pages/LocalSeo.tsx"));
+const BusinessConsulting = lazy(() => import("./pages/BusinessConsulting.tsx"));
 const BannersAndFlags = lazy(() => import("./pages/BannersAndFlags.tsx"));
 const Decals = lazy(() => import("./pages/Decals.tsx"));
 const Research = lazy(() => import("./pages/Research.tsx"));
@@ -152,6 +153,7 @@ const App = () => (
             <Route path="/full-rebrand-kits" element={<FullRebrandKits />} />
             <Route path="/website-design" element={<WebsiteDesign />} />
             <Route path="/local-seo" element={<LocalSeo />} />
+            <Route path="/business-consulting" element={<BusinessConsulting />} />
             <Route path="/banners-and-flags" element={<BannersAndFlags />} />
             <Route path="/decals" element={<Decals />} />
             <Route path="/postcards" element={<Postcards />} />
