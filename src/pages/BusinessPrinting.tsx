@@ -605,6 +605,36 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
+      {/* Built by an Operator — credibility insert above final CTA */}
+      <section className="py-16 lg:py-20 bg-ohio-cream">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+              Built by an Operator
+            </span>
+            <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
+              This Isn't Theory. It's Built by{" "}
+              <span className="text-primary">Someone Who's Done It.</span>
+            </h3>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+            </p>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:gap-2 transition-all"
+            >
+              Learn more about David
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-28 lg:py-36 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--ohio-grey-dark))] via-[hsl(var(--ohio-navy))] to-[hsl(var(--ohio-grey-dark))]" />
