@@ -6,7 +6,7 @@ import buckeyeLogo from "@/assets/buckeye-logo.png";
 
 const serviceLinks = [
   { label: "Business Cards & Printing", href: "/business-cards-printing" },
-  { label: "Brochures & Business Printing", href: "/brochures-and-business-printing" },
+  { label: "Brochures & Business Printing", href: "/business-printing" },
   { label: "Promotional Products & Giveaways", href: "/promotional-products" },
   { label: "Embroidered Apparel & Uniforms", href: "/embroidered-apparel" },
   { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
