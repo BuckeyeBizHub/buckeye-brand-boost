@@ -136,7 +136,7 @@ const HeroSection = () => {
             <div className="w-64 xl:w-72 aspect-[3/3.7] rounded-3xl overflow-hidden border-2 border-primary/25 shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
               <img
                 src={davidHeadshot}
-                alt="David Stein, Columbus Ohio Fleet Branding Specialist"
+                alt="David Stein, Columbus Ohio Branding Concierge & 3-Time Business Founder"
                 width={300}
                 height={370}
                 className="w-full h-full object-cover object-top"
@@ -146,7 +146,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary px-5 xl:px-7 py-2 xl:py-2.5 rounded-xl shadow-lg">
               <p className="text-primary-foreground font-bold text-xs xl:text-sm tracking-wide uppercase whitespace-nowrap">
-                David Stein · Fleet Branding Specialist & Branding Concierge
+                David Stein · Branding Concierge & 3-Time Founder
               </p>
             </div>
           </div>
