@@ -38,6 +38,7 @@ const navLinks: NavItem[] = [
   { label: "About", href: "/about", hasDropdown: true, dropdownType: "about" },
   { label: "Industries", href: "/industries" },
   { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
+  { label: "Consulting", href: "/business-consulting" },
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
