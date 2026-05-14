@@ -47,7 +47,7 @@ const HeroSection = () => {
             className="mb-4"
           >
             <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-extrabold text-primary tracking-[0.2em] uppercase bg-primary/[0.08] border border-primary/15 px-4 py-2 rounded-full">
-              Columbus Ohio's Fleet Spot Graphics Specialists
+              Columbus Ohio's Branding Concierge — Built by a 3-Time Founder
             </span>
           </motion.div>
 
@@ -57,9 +57,9 @@ const HeroSection = () => {
               textShadow: "0 6px 40px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,1)",
             }}
           >
-            Brand Every Vehicle in Your Fleet —
+            Branding That Actually Works —
             <br />
-            <span className="text-primary text-glow-red">Without the Full-Wrap Price Tag</span>
+            <span className="text-primary text-glow-red">From Printing to Promotional Products to Fleet Vehicles</span>
           </h1>
 
           <p
@@ -68,7 +68,7 @@ const HeroSection = () => {
               textShadow: "0 3px 25px rgba(0,0,0,0.8)",
             }}
           >
-            Professional fleet branding starting at $150 per vehicle. Spot graphics, door decals, and logo packages that turn every truck and van into a moving billboard — for a fraction of the cost of a full wrap.
+            Buckeye Biz Hub is your one-stop branding partner for Central Ohio businesses. Custom printing, promotional products, embroidered apparel, banners, signage, and fleet vehicle branding — all coordinated through our vendor network for the best quality and pricing. Plus strategic consulting from an operator who's actually built businesses.
           </p>
 
           <motion.p
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   size="lg"
                   className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base sm:text-lg px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-[0_0_50px_hsl(0_85%_40%/0.5)] hover:shadow-[0_0_80px_hsl(0_85%_40%/0.7)] transition-all duration-500 group uppercase tracking-wider"
                 >
-                  Get My Free Fleet Quote
+                  Get a Free Quote
                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </Button>
               </Link>
@@ -206,7 +206,7 @@ const HeroSection = () => {
           <TrustBadges variant="dark" size="sm" className="[&_img]:h-12 sm:[&_img]:h-14 gap-4 sm:gap-6" />
           {[
             "Free 24-Hour Quote",
-            "Starting at $150 per Vehicle",
+            "100% Satisfaction Guaranteed",
             "Serving All of Central Ohio",
             "We Shop the Market for Best Pricing",
           ].map((item) => (
@@ -227,7 +227,7 @@ const HeroSection = () => {
       >
         {[
           "Free 24-Hour Quote",
-          "Starting at $150 per Vehicle",
+          "100% Satisfaction Guaranteed",
           "Serving All of Central Ohio",
           "We Shop the Market for Best Pricing",
         ].map((item, i) => (
