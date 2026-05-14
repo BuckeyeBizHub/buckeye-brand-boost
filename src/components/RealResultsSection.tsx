@@ -31,7 +31,12 @@ const results = [
   },
 ];
 
-const photos = [vehicleWrapFleet, brandedApparel, yardSignReal, bannerEvent];
+const photos = [
+  { src: vehicleWrapFleet, alt: "Wrapped service fleet for an Ohio business" },
+  { src: brandedApparel, alt: "Custom embroidered polos and hoodies for Ohio crews" },
+  { src: yardSignReal, alt: "Real estate yard sign installed in a Central Ohio yard" },
+  { src: bannerEvent, alt: "Grand opening banner for an Ohio business" },
+];
 
 const RealResultsSection = () => (
   <section className="relative py-14 lg:py-20 overflow-hidden">
@@ -63,11 +68,11 @@ const RealResultsSection = () => (
         transition={{ duration: 0.6 }}
         className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12 rounded-2xl overflow-hidden"
       >
-        {photos.map((src, i) => (
+        {photos.map((photo, i) => (
           <div key={i} className="relative h-48 md:h-60 overflow-hidden rounded-xl">
             <img
-              src={src}
-              alt={`Ohio business branding result ${i + 1}`}
+              src={photo.src}
+              alt={photo.alt}
               loading="lazy"
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
             />
