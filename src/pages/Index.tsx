@@ -13,6 +13,10 @@ import LatestBlogSection from "@/components/LatestBlogSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 /**
  * Subtle gradient divider — replaces hard section breaks with a soft,
@@ -44,6 +48,60 @@ const Index = () => (
     <FlowDivider />
     <ConciergeModelSection />
     <FlowDivider />
+
+    {/* Built by an Operator — credibility before proof */}
+    <section className="py-24 lg:py-28 bg-ohio-cream">
+      <div className="container max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            Why Buckeye Biz Hub Exists
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
+            This Isn't Just Another Print Shop. It's Built by{" "}
+            <span className="text-primary">an Operator</span> Who's Been Where You Are.
+          </h2>
+          <div className="space-y-5 text-lg text-muted-foreground leading-relaxed mb-10">
+            <p>
+              Buckeye Biz Hub was founded by David Stein — a third-generation Ohio operator and three-time business founder. Before launching Buckeye Biz Hub, David built and sold BeerTubes — a patented product company that placed in the on-premise catalogs of InBev, Anheuser-Busch, MillerCoors, and Constellation Brands. He also founded a multi-concept restaurant group and ran one of Columbus's largest independent automotive service businesses.
+            </p>
+            <p>
+              That operating experience changes everything about how Buckeye Biz Hub serves clients. The branding recommendations come from someone who's spent his own money on marketing. The strategic guidance comes from someone who's lived the problems other consultants only read about.
+            </p>
+            <p className="text-foreground font-semibold">
+              For business owners who want a partner who actually understands what it takes to build something — this is it.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <Link to="/about">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+              >
+                Read David's Full Story
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </Link>
+            <Link to="/business-consulting">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary/40 text-foreground hover:bg-primary/10 font-bold text-base md:text-lg px-9 py-7 rounded-2xl"
+              >
+                Explore Consulting Services
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+    <FlowDivider />
+
     <RealResultsSection />
     <WhyChooseSection />
     <FlowDivider />
