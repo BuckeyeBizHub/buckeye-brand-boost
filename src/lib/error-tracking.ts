@@ -30,7 +30,6 @@ const REDIRECT_MAP: Record<string, RedirectEntry> = {
   "/business-cards": { to: "/business-cards-printing", permanent: true },
   "/branded-apparel-and-uniforms": { to: "/embroidered-apparel", permanent: true },
   "/vehicle-wraps-and-fleet-branding": { to: "/vehicle-wraps", permanent: true },
-  "/decals": { to: "/decals-and-stickers", permanent: true },
 };
 
 /**
