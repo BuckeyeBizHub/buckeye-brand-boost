@@ -24,7 +24,6 @@ const resourceLinks: ResourceLink[] = [
   { label: "Service Pricing Guide", href: "/pricing" },
   { label: "Industry Solutions", href: "/industries" },
   { label: "Portfolio & Case Studies", href: "/portfolio" },
-  { label: "FAQ", href: "/faq" },
 ];
 
 const printingLinks = [
