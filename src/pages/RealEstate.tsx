@@ -17,10 +17,12 @@ const fadeUp = {
 
 const RealEstate = () => {
   // TODO: replace SEO title/description with finalized copy
+  // TODO: remove noindex once placeholder TODO content is populated
   usePageSEO({
     title: "Real Estate Agent Branding & Marketing | Columbus Ohio | Buckeye Biz Hub",
     description:
       "TODO: Final SEO description for Ohio real estate agents — business cards, yard signs, branded notepads, closing gifts, postcards.",
+    noindex: true,
   });
 
   return (

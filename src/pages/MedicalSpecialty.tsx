@@ -17,10 +17,12 @@ const fadeUp = {
 
 const MedicalSpecialty = () => {
   // TODO: replace SEO title/description with finalized copy
+  // TODO: remove noindex once placeholder TODO content is populated
   usePageSEO({
     title: "Medical & Specialty Practice Branding | Columbus Ohio | Buckeye Biz Hub",
     description:
       "TODO: Final SEO description for Ohio medical and specialty practices — branded scrubs, patient gift packages, office signage, printed materials.",
+    noindex: true,
   });
 
   return (

@@ -35,18 +35,18 @@ const industries = [
     title: "Fleet & Logistics",
     description:
       "Fleet wraps, driver uniforms, safety vests, and branded materials that keep a growing fleet looking consistent.",
-    cta: "See Fleet & Logistics Solutions",
-    href: "/fleet-and-logistics",
-    available: true,
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
   {
     emoji: "🏡",
     title: "Real Estate",
     description:
       "Business cards, yard signs, branded notepads, closing gifts, and postcards — everything to look sharp and stay top of mind.",
-    cta: "See Real Estate Solutions",
-    href: "/real-estate",
-    available: true,
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
   {
     emoji: "🌿",
@@ -62,18 +62,18 @@ const industries = [
     title: "Medical & Specialty Practices",
     description:
       "Branded scrubs, patient gift packages, office signage, and printed materials — for practices where professionalism matters.",
-    cta: "See Medical & Specialty Solutions",
-    href: "/medical-specialty",
-    available: true,
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
   {
     emoji: "🚗",
     title: "Auto Dealers",
     description:
       "Fleet graphics, lot signage, employee polos, and branded customer gifts — for dealers where every detail of the customer experience matters.",
-    cta: "See Auto Dealer Solutions",
-    href: "/auto-dealers",
-    available: true,
+    cta: "Get a Quote",
+    href: "/contact",
+    available: false,
   },
 ];
 

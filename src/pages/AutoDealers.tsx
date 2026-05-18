@@ -17,10 +17,12 @@ const fadeUp = {
 
 const AutoDealers = () => {
   // TODO: replace SEO title/description with finalized copy
+  // TODO: remove noindex once placeholder TODO content is populated
   usePageSEO({
     title: "Auto Dealer Branding & Marketing | Columbus Ohio | Buckeye Biz Hub",
     description:
       "TODO: Final SEO description for Ohio auto dealers — fleet graphics, lot signage, employee polos, customer gift programs.",
+    noindex: true,
   });
 
   return (
