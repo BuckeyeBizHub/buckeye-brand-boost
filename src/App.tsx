@@ -58,6 +58,10 @@ const Dental = lazy(() => import("./pages/Dental.tsx"));
 const Roofing = lazy(() => import("./pages/Roofing.tsx"));
 const Construction = lazy(() => import("./pages/Construction.tsx"));
 const LawnCareLandscaping = lazy(() => import("./pages/LawnCareLandscaping.tsx"));
+const AutoDealers = lazy(() => import("./pages/AutoDealers.tsx"));
+const RealEstate = lazy(() => import("./pages/RealEstate.tsx"));
+const FleetAndLogistics = lazy(() => import("./pages/FleetAndLogistics.tsx"));
+const MedicalSpecialty = lazy(() => import("./pages/MedicalSpecialty.tsx"));
 
 // New focused service URLs
 const VehicleWraps = lazy(() => import("./pages/services/VehicleWraps.tsx"));
@@ -168,6 +172,10 @@ const App = () => (
             <Route path="/roofing" element={<Roofing />} />
             <Route path="/construction" element={<Construction />} />
             <Route path="/lawn-care-landscaping" element={<LawnCareLandscaping />} />
+            <Route path="/auto-dealers" element={<AutoDealers />} />
+            <Route path="/real-estate" element={<RealEstate />} />
+            <Route path="/fleet-and-logistics" element={<FleetAndLogistics />} />
+            <Route path="/medical-specialty" element={<MedicalSpecialty />} />
             <Route path="/research" element={<Research />} />
 
             {/* New focused, conversion-optimized service URLs */}
