@@ -68,7 +68,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /admin-photos
-Disallow: /research
+
 
 # NOTE: /assets/ is intentionally allowed — Google needs JS/CSS to render the React app
 # NOTE: Query params are allowed — blog pagination and filters need indexing
