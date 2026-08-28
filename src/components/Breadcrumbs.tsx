@@ -14,7 +14,7 @@ const routeLabels: Record<string, string> = {
   "/blog": "Blog",
   "/testimonials": "Testimonials",
   "/privacy-policy": "Privacy Policy",
-  "/research": "Research Assistant",
+  
   "/business-cards-printing": "Business Cards & Stationery",
   "/business-printing": "Business Printing",
   "/promotional-products": "Promotional Products & Giveaways",

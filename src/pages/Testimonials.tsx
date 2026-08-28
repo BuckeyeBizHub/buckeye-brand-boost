@@ -162,9 +162,6 @@ const Testimonials = () => {
             <Button asChild size="lg" className="text-lg px-10 py-6 font-bold">
               <Link to="/contact">Get in Touch</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-10 py-6 font-bold border-primary/30 text-primary-foreground hover:bg-primary/10">
-              <Link to="/research">Try the Research Assistant</Link>
-            </Button>
           </div>
         </div>
       </section>

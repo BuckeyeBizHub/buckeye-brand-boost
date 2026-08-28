@@ -45,7 +45,7 @@ const LocalSeo = lazy(() => import("./pages/LocalSeo.tsx"));
 const BusinessConsulting = lazy(() => import("./pages/BusinessConsulting.tsx"));
 const BannersAndFlags = lazy(() => import("./pages/BannersAndFlags.tsx"));
 const Decals = lazy(() => import("./pages/Decals.tsx"));
-const Research = lazy(() => import("./pages/Research.tsx"));
+
 const Postcards = lazy(() => import("./pages/Postcards.tsx"));
 const CatalogsAndBooklets = lazy(() => import("./pages/CatalogsAndBooklets.tsx"));
 const PresentationFolders = lazy(() => import("./pages/PresentationFolders.tsx"));
@@ -72,7 +72,7 @@ const DecalsAndStickers = lazy(() => import("./pages/services/DecalsAndStickers.
 const EmbroideredApparel = lazy(() => import("./pages/services/EmbroideredApparel.tsx"));
 const TradeShowDisplays = lazy(() => import("./pages/services/TradeShowDisplays.tsx"));
 
-const ResearchAssistant = lazy(() => import("./components/ResearchAssistant"));
+
 const ServerError = lazy(() => import("./pages/ServerError.tsx"));
 const DomainCheck = lazy(() => import("./pages/DomainCheck.tsx"));
 
@@ -176,7 +176,7 @@ const App = () => (
             <Route path="/real-estate" element={<RealEstate />} />
             <Route path="/fleet-and-logistics" element={<FleetAndLogistics />} />
             <Route path="/medical-specialty" element={<MedicalSpecialty />} />
-            <Route path="/research" element={<Research />} />
+            
 
             {/* New focused, conversion-optimized service URLs */}
             <Route path="/vehicle-wraps" element={<VehicleWraps />} />
@@ -196,9 +196,6 @@ const App = () => (
         </ErrorBoundary>
         <BackToTop />
         <MobileCTABar />
-        <Suspense fallback={null}>
-          <ResearchAssistant />
-        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
