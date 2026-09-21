@@ -88,8 +88,19 @@ const sections: { title: string; content: ReactNode[] }[] = [
     title: "Contact Us",
     content: [
       "If you have any questions about this Privacy Policy or our data practices, please contact us at:",
-      "Email: david@buckeyebizhub.com",
-      "Buckeye Biz Hub — Proudly serving Columbus, Ohio and businesses across the state.",
+      <strong key="name" className="text-card-foreground font-black">Buckeye Biz Hub</strong>,
+      <>
+        Email:{" "}
+        <a href="mailto:david@buckeyebizhub.com" className="text-primary font-bold hover:underline">
+          david@buckeyebizhub.com
+        </a>
+      </>,
+      <>
+        Phone:{" "}
+        <a href="tel:+16145613358" className="text-primary font-bold hover:underline">
+          (614) 561-3358
+        </a>
+      </>,
     ],
   },
 ];
