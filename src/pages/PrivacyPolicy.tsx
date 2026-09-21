@@ -52,7 +52,7 @@ const sections: { title: string; content: ReactNode[] }[] = [
     ],
   },
   {
-    title: "Data Security",
+    title: "Data Security & Protection",
     content: [
       "We implement reasonable administrative, technical, and physical security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.",
       "We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law.",
@@ -108,7 +108,7 @@ const PrivacyPolicy = () => {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
           className="text-primary-foreground/40 font-bold text-sm uppercase tracking-[0.2em]">
-          Last Updated: March 28, 2026
+          Last Updated: September 21, 2026
         </motion.p>
       </div>
     </section>
