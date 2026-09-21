@@ -123,6 +123,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.buckeyebizhub.com/sms-terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.buckeyebizhub.com/dental</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>

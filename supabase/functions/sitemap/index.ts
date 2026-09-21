@@ -46,6 +46,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: "/testimonials", changefreq: "monthly", priority: "0.6" },
   { loc: "/faq", changefreq: "monthly", priority: "0.6" },
   { loc: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
+  { loc: "/sms-terms", changefreq: "yearly", priority: "0.3" },
 ];
 
 // ── Fetch all WP blog posts (paginated) ────────────────────

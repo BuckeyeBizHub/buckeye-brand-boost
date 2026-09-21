@@ -30,6 +30,7 @@ const FAQ = lazy(() => import("./pages/FAQ.tsx"));
 const Blog = lazy(() => import("./pages/Blog.tsx"));
 const BlogPost = lazy(() => import("./pages/BlogPost.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
+const SmsTerms = lazy(() => import("./pages/SmsTerms.tsx"));
 const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const AdminPhotos = lazy(() => import("./pages/AdminPhotos.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));

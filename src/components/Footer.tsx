@@ -249,6 +249,8 @@ const Footer = () => {
               <Link to="/privacy-policy" className="text-primary-foreground/25 hover:text-primary transition-colors duration-300">Privacy Policy</Link>
               <span className="text-primary-foreground/10">|</span>
               <Link to="/contact" className="text-primary-foreground/25 hover:text-primary transition-colors duration-300">Terms of Service</Link>
+              <span className="text-primary-foreground/10">|</span>
+              <Link to="/sms-terms" className="text-primary-foreground/25 hover:text-primary transition-colors duration-300">SMS Terms</Link>
             </div>
             <p className="text-primary-foreground/20 text-[0.65rem] font-bold uppercase tracking-[0.1em]">
               500+ Happy Ohio Businesses • A+ Rating • 24-Hour Quotes
