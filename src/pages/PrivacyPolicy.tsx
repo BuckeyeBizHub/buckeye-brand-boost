@@ -29,6 +29,22 @@ const sections: { title: string; content: ReactNode[] }[] = [
     ],
   },
   {
+    title: "Text Messaging (SMS)",
+    content: [
+      <>
+        If you opt in to receive text messages from us, we collect your mobile phone
+        number and your consent to receive messages. No mobile information will be
+        shared with third parties or affiliates for marketing or promotional purposes.
+        Text messaging opt-in data and consent will not be shared with any third
+        parties. You can opt out at any time by replying STOP. See our{" "}
+        <Link to="/sms-terms" className="text-primary font-bold hover:underline">
+          SMS Terms &amp; Conditions
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     title: "Cookies & Tracking Technologies",
     content: [
       "Our website uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. Cookies are small text files stored on your device that help us recognize your browser and capture certain information.",
