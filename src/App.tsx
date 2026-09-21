@@ -149,6 +149,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/sms-terms" element={<SmsTerms />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/business-cards" element={<BusinessCards />} />
             {/* /brochures-and-business-printing removed — redirects to /business-printing via RedirectHandler */}

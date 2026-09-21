@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Sparkles, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
-const sections = [
+const sections: { title: string; content: ReactNode[] }[] = [
   {
     title: "Information We Collect",
     content: [
