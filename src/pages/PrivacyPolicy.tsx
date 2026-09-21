@@ -141,6 +141,15 @@ const PrivacyPolicy = () => {
     <section className="py-20 lg:py-28 bg-ohio-grey-light relative overflow-hidden">
       <div className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[150px]" />
       <div className="container relative max-w-4xl">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5 }}
+          className="text-muted-foreground leading-[1.85] text-base mb-12"
+        >
+          {intro}
+        </motion.p>
         <div className="space-y-12">
           {sections.map((s, i) => (
             <motion.div
