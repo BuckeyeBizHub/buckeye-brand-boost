@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Sparkles, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
-const sections = [
+const sections: { title: string; content: ReactNode[] }[] = [
   {
     title: "Information We Collect",
     content: [
@@ -27,6 +29,22 @@ const sections = [
     ],
   },
   {
+    title: "Text Messaging (SMS)",
+    content: [
+      <>
+        If you opt in to receive text messages from us, we collect your mobile phone
+        number and your consent to receive messages. No mobile information will be
+        shared with third parties or affiliates for marketing or promotional purposes.
+        Text messaging opt-in data and consent will not be shared with any third
+        parties. You can opt out at any time by replying STOP. See our{" "}
+        <Link to="/sms-terms" className="text-primary font-bold hover:underline">
+          SMS Terms &amp; Conditions
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
     title: "Cookies & Tracking Technologies",
     content: [
       "Our website uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. Cookies are small text files stored on your device that help us recognize your browser and capture certain information.",
@@ -34,7 +52,7 @@ const sections = [
     ],
   },
   {
-    title: "Data Security",
+    title: "Data Security & Protection",
     content: [
       "We implement reasonable administrative, technical, and physical security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of internet transmission or electronic storage is 100% secure, and we cannot guarantee absolute security.",
       "We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law.",
@@ -90,7 +108,7 @@ const PrivacyPolicy = () => {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
           className="text-primary-foreground/40 font-bold text-sm uppercase tracking-[0.2em]">
-          Last Updated: March 28, 2026
+          Last Updated: September 21, 2026
         </motion.p>
       </div>
     </section>
