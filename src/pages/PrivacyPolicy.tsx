@@ -6,12 +6,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
+const intro =
+  'Buckeye Biz Hub ("we," "us") respects your privacy. This policy explains what we collect and how we use it, including for our SMS text programs.';
+
 const sections: { title: string; content: ReactNode[] }[] = [
   {
     title: "Information We Collect",
     content: [
       "We collect information you voluntarily provide when you contact us, request a quote, place an order, or subscribe to our communications. This may include your name, email address, phone number, business name, mailing address, and project details.",
       "We also automatically collect certain technical information when you visit our website, including your IP address, browser type, operating system, referring URLs, pages viewed, and the dates and times of your visits. This data is collected through cookies and similar tracking technologies.",
+      "When you register for or participate in our calendar and Prize Day text program, we may also collect your name, firm or business, email address, mailing address, mobile phone number, and any photo or message you send us.",
     ],
   },
   {
@@ -19,28 +23,37 @@ const sections: { title: string; content: ReactNode[] }[] = [
     content: [
       "We use the information we collect to respond to your inquiries and quote requests, process and fulfill your orders for printing, promotional products, and vehicle branding services, communicate with you about your projects and orders, send you marketing communications (with your consent), improve our website and services, and comply with legal obligations.",
       "We do not sell your personal information to third parties. Your data is used solely to provide and improve our services to Ohio businesses.",
+      "For our calendar and Prize Day text program, we use your information to operate the program: to confirm entries, run prize drawings, deliver prizes, and communicate with you about the program. Photos you text in may be used in our marketing or on social media only where you have agreed to that use.",
     ],
   },
   {
     title: "Sharing of Information",
     content: [
-      "We may share your information with trusted third-party service providers who assist us in operating our website, conducting our business, or servicing you — including payment processors, shipping partners, and print fulfillment providers. These parties are obligated to keep your information confidential.",
-      "We may also disclose your information when required by law, to enforce our site policies, or to protect our or others' rights, property, or safety.",
+      "We do not sell your information.",
+      <strong key="mobile" className="text-card-foreground font-black">
+        No mobile information (including your phone number and SMS opt-in) will be shared with or sold to third parties or affiliates for their marketing or promotional purposes.
+      </strong>,
+      "We share information only with service providers who help us operate our business and programs — such as payment processors, shipping and print fulfillment partners, and our text-messaging and mailing vendors — and only as needed to provide those services. These parties are obligated to keep your information confidential. We may also disclose information when required by law, to enforce our site policies, or to protect our or others' rights, property, or safety.",
     ],
   },
   {
-    title: "Text Messaging (SMS)",
+    title: "Opting Out of Text Messages",
     content: [
       <>
-        If you opt in to receive text messages from us, we collect your mobile phone
-        number and your consent to receive messages. No mobile information will be
-        shared with third parties or affiliates for marketing or promotional purposes.
-        Text messaging opt-in data and consent will not be shared with any third
-        parties. You can opt out at any time by replying STOP. See our{" "}
+        Text STOP to any message to stop receiving texts. Text HELP for help. You may
+        also contact us at{" "}
+        <a href="mailto:david@buckeyebizhub.com" className="text-primary font-bold hover:underline">
+          david@buckeyebizhub.com
+        </a>{" "}
+        or{" "}
+        <a href="tel:+16145613358" className="text-primary font-bold hover:underline">
+          (614) 561-3358
+        </a>
+        . See our{" "}
         <Link to="/sms-terms" className="text-primary font-bold hover:underline">
           SMS Terms &amp; Conditions
-        </Link>
-        .
+        </Link>{" "}
+        for full program terms.
       </>,
     ],
   },
