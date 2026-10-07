@@ -98,12 +98,10 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-36">
         <div>
           <p className="mb-6 text-[0.95rem] font-medium text-fog">Columbus and Central Ohio</p>
-          <h1 className="font-display text-[clamp(2.75rem,6.4vw,5.5rem)] font-extrabold text-stock">
-            Wrap the fleet.
-            <br />
-            Print the rest.
-            <br />
-            One call.
+          <h1 className="font-display text-[clamp(2.4rem,4.9vw,4.6rem)] font-extrabold text-stock">
+            <span className="block whitespace-nowrap">Wrap the fleet.</span>
+            <span className="block whitespace-nowrap">Print the rest.</span>
+            <span className="block whitespace-nowrap">One call.</span>
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-stock/80 sm:text-xl">
             Buckeye Biz Hub handles fleet wraps, printing and branded gear for Central Ohio businesses. You tell David what
@@ -126,16 +124,18 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
           </div>
         </div>
 
-        <figure className="crop mx-5 sm:mx-6 lg:mx-0">
-          <img
-            src={img.fleet}
-            alt="Three white work vans with matching Buckeye Biz Hub logos on the doors"
-            width={1168}
-            height={784}
-            fetchPriority="high"
-            className="aspect-[3/2] w-full rounded-sm object-cover"
-          />
-          <figcaption className="mt-9 text-sm text-fog">One logo. Every van. Matching.</figcaption>
+        <figure className="mx-5 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.fleet}
+              alt="Three white work vans with matching Buckeye Biz Hub logos on the doors"
+              width={1168}
+              height={784}
+              fetchPriority="high"
+              className="block aspect-[3/2] w-full rounded-sm object-cover"
+            />
+          </div>
+          <figcaption className="mt-8 text-sm text-fog">One logo. Every van. Matching.</figcaption>
         </figure>
       </div>
 
@@ -179,16 +179,18 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
     {/* Vehicles: asphalt. */}
     <section className="border-t border-seam bg-graphite/60">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:py-28">
-        <figure className="crop order-last mx-5 sm:mx-6 lg:order-first lg:mx-0">
-          <img
-            src={img.boxTruck}
-            alt="Box truck wrapped with a lawn and tree company's graphics"
-            width={1200}
-            height={630}
-            loading="lazy"
-            className="aspect-[1200/630] w-full rounded-sm object-cover"
-          />
-          <figcaption className="mt-9 text-sm text-fog">Example of a full box truck wrap.</figcaption>
+        <figure className="order-last mx-5 sm:mx-6 lg:order-first lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.boxTruck}
+              alt="Box truck wrapped with a lawn and tree company's graphics"
+              width={1200}
+              height={630}
+              loading="lazy"
+              className="block aspect-[1200/630] w-full rounded-sm object-cover"
+            />
+          </div>
+          <figcaption className="mt-8 text-sm text-fog">Example of a full box truck wrap.</figcaption>
         </figure>
         <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
@@ -231,16 +233,18 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
               Cards, door hangers, yard signs, postcards. The stuff you reorder all year. Send your file or let us design
               it. You pay wholesale.
             </p>
-            <figure className="crop mx-5 mt-14 sm:mx-6 lg:mx-0">
-              <img
-                src={img.doorHanger}
-                alt="Printed door hanger on a front door handle"
-                width={1920}
-                height={800}
-                loading="lazy"
-                className="aspect-[12/5] w-full rounded-sm object-cover"
-              />
-            </figure>
+            <figure className="mx-5 mt-14 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+                  src={img.doorHanger}
+                  alt="Printed door hanger on a front door handle"
+                  width={1920}
+                  height={800}
+                  loading="lazy"
+                  className="block aspect-[12/5] w-full rounded-sm object-cover"
+                />
+          </div>
+        </figure>
           </div>
           <ul className="self-start border-b border-border">
             {printLinks.map((l) => (
@@ -275,15 +279,17 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
             ))}
           </ul>
         </div>
-        <figure className="crop mx-5 sm:mx-6 lg:mx-0">
-          <img
-            src={img.gear}
-            alt="Red polos, hats, t-shirts and business cards with the Buckeye Biz Hub logo"
-            width={1168}
-            height={784}
-            loading="lazy"
-            className="aspect-[3/2] w-full rounded-sm object-cover"
-          />
+        <figure className="mx-5 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.gear}
+              alt="Red polos, hats, t-shirts and business cards with the Buckeye Biz Hub logo"
+              width={1168}
+              height={784}
+              loading="lazy"
+              className="block aspect-[3/2] w-full rounded-sm object-cover"
+            />
+          </div>
         </figure>
       </div>
     </section>
@@ -319,7 +325,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
           width={1920}
           height={1081}
           loading="lazy"
-          className="aspect-[4/3] w-full rounded-sm object-cover object-[60%_center]"
+          className="block aspect-[4/3] w-full rounded-sm object-cover object-[60%_center]"
         />
         <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">You deal with me.</h2>
@@ -361,7 +367,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
                     width={600}
                     height={400}
                     loading="lazy"
-                    className="aspect-[3/2] w-full rounded-sm object-cover"
+                    className="block aspect-[3/2] w-full rounded-sm object-cover"
                   />
                 )}
                 <p className="mt-4 text-sm text-fog">{formatDate(post.date)}</p>

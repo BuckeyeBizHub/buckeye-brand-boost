@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, CheckCircle2, Clock, Award, MapPin, TrendingUp, X, Check, Wrench, Droplet, Zap, Leaf, HardHat, Home, Package, Heart } from "lucide-react";
+import { ArrowRight, CheckCircle2, X, Check, Wrench, Droplet, Zap, Leaf, HardHat, Home, Package, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "@/lib/compat/router";
@@ -9,10 +9,10 @@ import Footer from "@/components/Footer";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const trustItems = [
-  { icon: Clock, label: "Free quote in 24 hours" },
-  { icon: Award, label: "3M and Avery Dennison vinyl" },
-  { icon: MapPin, label: "Serving Central Ohio since 2018" },
-  { icon: TrendingUp, label: "Volume fleet pricing" },
+  { term: "Free quote", detail: "within 24 hours" },
+  { term: "Commercial vinyl", detail: "3M and Avery Dennison" },
+  { term: "Volume pricing", detail: "the more units, the better" },
+  { term: "100% guarantee", detail: "not happy, we make it right" },
 ];
 
 const FleetWraps = () => {
@@ -26,100 +26,56 @@ const FleetWraps = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero: matches /portfolio styling */}
-      <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] hidden" />
-        </div>
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="w-[700px] h-[500px] rounded-full bg-ohio-red-glow/[0.12] hidden" />
-        </div>
-        <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)",
-            backgroundSize: "52px 52px",
-          }}
-        />
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
-
-        <div className="container relative text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 "
-          >
-            <Sparkles className="w-4 h-4" /> Fleet wraps <Sparkles className="w-4 h-4" />
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.1 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.95] mb-10"
-            style={{ textShadow: "0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)" }}
-          >
-            Fleet wraps for{" "}
-            <span className="text-primary text-glow-red relative">
-              Columbus businesses
-              <motion.span
-                className="absolute -bottom-3 left-0 w-full h-[5px] bg-gradient-to-r from-transparent via-ohio-red-glow to-transparent rounded-full"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-              />
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-lg md:text-xl lg:text-2xl text-primary-foreground/60 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed"
-          >
-            Every van, truck and work vehicle becomes a rolling billboard. One clean, consistent look across your whole fleet.
-          </motion.p>
-
-          {/* Trust bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto"
-          >
-            {trustItems.map((item) => (
-              <div
-                key={item.label}
-                className="flex items-center gap-3 bg-primary-foreground/[0.04] border border-primary-foreground/10 rounded-xl p-4 text-left"
+      {/* Hero: same build as the homepage. Words left, truck right. */}
+      <section className="border-b border-seam">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-14 pt-32 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-8 lg:pb-20 lg:pt-40">
+          <div>
+            <p className="mb-6 text-[0.95rem] font-medium text-fog">Fleet wraps in Columbus and Central Ohio</p>
+            <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold text-stock">
+              Every truck. Same look. Working all day.
+            </h1>
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-stock/80 sm:text-xl">
+              Every van, truck and work vehicle becomes a rolling billboard. One clean, consistent look across your
+              whole fleet, installed by the shop that does your kind of vehicle best.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-ohio-red-light"
               >
-                <item.icon className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-xs md:text-sm font-bold text-primary-foreground/85 leading-tight">
-                  {item.label}
-                </span>
+                Get my fleet quote
+              </Link>
+              <a
+                href="tel:+16145613358"
+                className="inline-flex items-center justify-center rounded-md border border-seam px-7 py-4 text-base font-semibold text-stock transition-colors hover:border-fog"
+              >
+                (614) 561-3358
+              </a>
+            </div>
+          </div>
+          <figure className="mx-5 sm:mx-6 lg:mx-0">
+            <div className="crop">
+              <img
+                src="/assets/vehicle-wrap-hero.jpg"
+                alt="Pickup and cargo vans with matching red and green fleet graphics"
+                width={1920}
+                height={1080}
+                fetchPriority="high"
+                className="block aspect-[16/10] w-full rounded-sm object-cover"
+              />
+            </div>
+            <figcaption className="mt-8 text-sm text-fog">Example of matching fleet graphics.</figcaption>
+          </figure>
+        </div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <dl className="grid grid-cols-2 gap-px border-t border-seam bg-seam lg:grid-cols-4">
+            {trustItems.map((item) => (
+              <div key={item.term} className="bg-background py-6 pr-4 [&:nth-child(even)]:pl-5 lg:[&:not(:first-child)]:pl-6">
+                <dt className="font-display text-lg font-bold text-stock">{item.term}</dt>
+                <dd className="mt-1 text-[0.95rem] text-fog">{item.detail}</dd>
               </div>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="mt-12"
-          >
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl transition-all duration-300 group "
-              >
-                <CheckCircle2 className="w-5 h-5" />
-                Get my fleet quote
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </Link>
-          </motion.div>
+          </dl>
         </div>
       </section>
 

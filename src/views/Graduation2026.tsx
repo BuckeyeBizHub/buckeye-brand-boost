@@ -69,7 +69,7 @@ const Graduation2026 = () => {
 
       {/* Hero */}
       <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy via-[hsl(0,0%,5%)] to-[hsl(45,60%,8%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy via-[hsl(216,14%,6%)] to-[hsl(45,60%,8%)]" />
         {/* Gold shimmer accents */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.06] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.08] rounded-full blur-[100px]" />
@@ -280,7 +280,7 @@ const Graduation2026 = () => {
 
       {/* Final CTA */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.08] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-foreground/[0.04] rounded-full blur-[100px]" />
 

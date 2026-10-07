@@ -12,7 +12,7 @@ const trustItems = [
 
 const IndustriesCTA = () => (
   <section className="py-28 lg:py-36 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(0,78%,32%)] to-ohio-navy" />
+    <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(216,14%,12%)] to-ohio-navy" />
     <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at 25% 50%, rgba(255,255,255,0.2) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)' }} />
 
     <div className="container relative text-center">

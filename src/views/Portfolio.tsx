@@ -79,7 +79,7 @@ const Portfolio = () => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] hidden" />
         </div>
@@ -220,7 +220,7 @@ const Portfolio = () => {
 
       {/* Bottom CTA */}
       <section className="py-32 lg:py-44 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,92%,33%)] via-primary to-[hsl(0,78%,28%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
 

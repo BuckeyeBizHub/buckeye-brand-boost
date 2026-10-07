@@ -110,7 +110,7 @@ const Industries = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 bg-gradient-to-br from-ohio-grey-dark via-[hsl(0,40%,8%)] to-ohio-grey-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 bg-gradient-to-br from-ohio-grey-dark via-[hsl(216,14%,8%)] to-ohio-grey-dark overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full hidden" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full hidden" />

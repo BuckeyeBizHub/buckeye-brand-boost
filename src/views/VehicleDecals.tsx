@@ -74,7 +74,7 @@ const VehicleDecals = () => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] hidden" />
         </div>

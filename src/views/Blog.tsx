@@ -59,7 +59,7 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-28 lg:pt-52 lg:pb-36 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] hidden" />
         </div>
@@ -210,7 +210,7 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
 
       {/* Bottom CTA */}
       <section className="py-32 lg:py-44 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,92%,33%)] via-primary to-[hsl(0,78%,28%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
         <div className="container relative text-center">

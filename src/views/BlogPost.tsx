@@ -64,7 +64,7 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         {image && <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(40px)" }} />}
         <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
         <div className="container relative max-w-4xl">
@@ -134,7 +134,7 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(0,78%,28%)] text-center">
+          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(216,14%,12%)] text-center">
             <h3 className="font-display text-3xl font-black text-primary-foreground mb-4">Need Help With Your Project?</h3>
             <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto">David Stein · Your Buckeye Branding Concierge is ready to help you bring your ideas to life.</p>
             <Link to="/contact">
