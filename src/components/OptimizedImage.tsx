@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, useEffect, ImgHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 

@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { ShieldCheck, Users, DollarSign, Phone, Palette, MapPin } from "lucide-react";
 

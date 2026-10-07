@@ -1,10 +1,10 @@
+"use client";
 import { motion } from "framer-motion";
 import { TrendingDown, CheckCircle, ShieldCheck } from "lucide-react";
-import businessCardsImg from "@/assets/pricing-example-business-cards.jpg";
-import promoPensImg from "@/assets/pricing-example-promo-pens.jpg";
-import vehicleWrapImg from "@/assets/pricing-example-vehicle-wrap.jpg";
-import yardSignsImg from "@/assets/pricing-example-yard-signs.jpg";
-
+const businessCardsImg = "/assets/pricing-example-business-cards.jpg";
+const promoPensImg = "/assets/pricing-example-promo-pens.jpg";
+const vehicleWrapImg = "/assets/pricing-example-vehicle-wrap.jpg";
+const yardSignsImg = "/assets/pricing-example-yard-signs.jpg";
 const examples = [
   {
     title: "Business Cards",

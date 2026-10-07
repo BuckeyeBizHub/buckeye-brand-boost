@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+"use client";
+import { Helmet } from "@/lib/compat/helmet";
+import { useLocation } from "@/lib/compat/router";
 import {
   SITE_NAME,
   SITE_URL,
@@ -179,7 +180,7 @@ function buildDynamicOgUrl(
   type: string,
   article?: ArticleMeta
 ): string {
-  const base = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/og`;
+  const base = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/og`;
   const params = new URLSearchParams({ title, type });
   if (description) params.set("description", description);
   if (article) {
@@ -234,7 +235,9 @@ const SEOHead = ({
 
   // Homepage (no title prop) gets the brand-led headline; all others get "[Page] | Brand"
   const fullTitle = title
-    ? `${title} | ${SITE_NAME}`
+    ? title.includes(SITE_NAME)
+      ? title
+      : `${title} | ${SITE_NAME}`
     : `${SITE_NAME} | Columbus Ohio Printing & Branding`;
 
   const desc = (description || DEFAULT_DESCRIPTION).slice(0, 160);
@@ -242,7 +245,7 @@ const SEOHead = ({
   // Build canonical using the utility — handles normalisation, tracking param
   // stripping, pagination, trailing slashes, and lowercase enforcement
   const canonical = canonicalUrl || getCanonicalUrl(pathname, undefined, pagination);
-  const image = ogImage || buildDynamicOgUrl(fullTitle, desc, ogType, article);
+  const image = ogImage || DEFAULT_OG_IMAGE;
   const robots = noindex ? "noindex, nofollow" : "index, follow";
 
   // Pagination prev/next links (Bing still uses these)

@@ -1,10 +1,11 @@
+"use client";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Layers, Palette, Ruler, Sparkles, FileText, FolderOpen, Maximize, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
-import businessCardsImg from "@/assets/luxury-gold-foil-cards.jpg";
-import brochuresImg from "@/assets/trifold-brochure-sample.png";
+const businessCardsImg = "/assets/luxury-gold-foil-cards.jpg";
+const brochuresImg = "/assets/trifold-brochure-sample.png";
 import { PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_SIGNAGE_1, PHOTO_SIGNAGE_3 } from "@/lib/photos";
 
 /* ─── Data ────────────────────────────────────────────────────────────── */

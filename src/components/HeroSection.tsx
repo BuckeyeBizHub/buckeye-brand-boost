@@ -1,12 +1,13 @@
+"use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import productCollage from "@/assets/product-collage-hero.jpg";
-import davidHeadshot from "@/assets/david-stein-headshot.jpg";
-import luxuryCards from "@/assets/luxury-gold-foil-cards.jpg";
-import trifoldBrochure from "@/assets/trifold-brochure-sample.png";
-import customDecals from "@/assets/usa-250th-anniversary-decal.jpeg";
+const productCollage = "/assets/product-collage-hero.jpg";
+const davidHeadshot = "/assets/david-stein-headshot.jpg";
+const luxuryCards = "/assets/luxury-gold-foil-cards.jpg";
+const trifoldBrochure = "/assets/trifold-brochure-sample.png";
+const customDecals = "/assets/usa-250th-anniversary-decal.jpeg";
 import { ArrowRight, Phone, Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 import TrustBadges from "@/components/TrustBadges";
 
 const showcaseItems = [

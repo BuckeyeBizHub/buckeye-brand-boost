@@ -1,5 +1,6 @@
+"use client";
 import { Phone, ArrowRight } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/compat/router";
 import { Button } from "@/components/ui/button";
 
 const MobileCTABar = () => {

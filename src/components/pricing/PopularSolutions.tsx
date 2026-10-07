@@ -1,13 +1,13 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
-import pricingVehicle from "@/assets/pricing-vehicle-wrap.jpg";
-import pricingApparel from "@/assets/pricing-apparel.jpg";
-import pricingSignage from "@/assets/pricing-signage.jpg";
-import pricingRebrand from "@/assets/pricing-rebrand.jpg";
-
+const pricingVehicle = "/assets/pricing-vehicle-wrap.jpg";
+const pricingApparel = "/assets/pricing-apparel.jpg";
+const pricingSignage = "/assets/pricing-signage.jpg";
+const pricingRebrand = "/assets/pricing-rebrand.jpg";
 const solutions: { image: string; title: string; price: string | null; popular?: boolean; bullets: string[] }[] = [
   {
     image: pricingVehicle,

@@ -1,9 +1,9 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, ShieldCheck, BadgeCheck, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import pricingHero from "@/assets/pricing-hero.jpg";
-
+import { Link } from "@/lib/compat/router";
+const pricingHero = "/assets/pricing-hero.jpg";
 const ServicesHero = () => (
   <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
     <div className="absolute inset-0">

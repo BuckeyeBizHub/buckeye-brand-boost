@@ -1,17 +1,17 @@
+"use client";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
-import vehicleWrapProduct from "@/assets/vehicle-wrap-product.jpg";
-import businessPrintingProduct from "@/assets/business-printing-product.jpg";
-import businessCardsProduct from "@/assets/business-cards-product.jpg";
-import customHatsProduct from "@/assets/custom-hats-product.jpg";
-import brandedDrinkwareProduct from "@/assets/branded-drinkware-product.jpg";
-import eventTentProduct from "@/assets/event-tent-product.jpg";
-import yardSignsProduct from "@/assets/yard-signs-product.jpg";
-
+const vehicleWrapProduct = "/assets/vehicle-wrap-product.jpg";
+const businessPrintingProduct = "/assets/business-printing-product.jpg";
+const businessCardsProduct = "/assets/business-cards-product.jpg";
+const customHatsProduct = "/assets/custom-hats-product.jpg";
+const brandedDrinkwareProduct = "/assets/branded-drinkware-product.jpg";
+const eventTentProduct = "/assets/event-tent-product.jpg";
+const yardSignsProduct = "/assets/yard-signs-product.jpg";
 const products = [
   { img: customHatsProduct, label: "Custom Shirts & Hats", tag: "Apparel" },
   { img: businessCardsProduct, label: "Business Cards", tag: "Print" },

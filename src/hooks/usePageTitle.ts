@@ -1,8 +1,9 @@
+"use client";
 import { useEffect } from "react";
 
 const SITE_NAME = "Buckeye Biz Hub";
 const SITE_URL = "https://www.buckeyebizhub.com";
-const DEFAULT_OG_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp";
+const DEFAULT_OG_IMAGE = "https://www.buckeyebizhub.com/og-image.webp";
 
 interface SEOOptions {
   title?: string;
@@ -47,38 +48,7 @@ export function usePageTitle(pageTitle?: string, metaDescription?: string) {
   }, [pageTitle, metaDescription]);
 }
 
-export function usePageSEO(opts: SEOOptions) {
-  useEffect(() => {
-    const fullTitle = opts.title
-      ? opts.title.endsWith(SITE_NAME)
-        ? opts.title
-        : `${opts.title} | ${SITE_NAME}`
-      : `${SITE_NAME} | Ohio Business Printing, Promotional Products & Vehicle Branding`;
-
-    document.title = fullTitle;
-
-    if (opts.description) setMeta("description", opts.description);
-
-    // Canonical
-    const canonicalUrl = opts.canonical || `${SITE_URL}${window.location.pathname}`;
-    setLink("canonical", canonicalUrl);
-
-    // Open Graph
-    setMeta("og:title", fullTitle, "property");
-    if (opts.description) setMeta("og:description", opts.description, "property");
-    setMeta("og:url", canonicalUrl, "property");
-    setMeta("og:type", opts.ogType || "website", "property");
-    setMeta("og:image", opts.ogImage || DEFAULT_OG_IMAGE, "property");
-    setMeta("og:site_name", SITE_NAME, "property");
-
-    // Robots
-    setMeta("robots", opts.noindex ? "noindex, follow" : "index, follow");
-
-    // Twitter
-    setMeta("twitter:card", "summary_large_image");
-    setMeta("twitter:title", fullTitle);
-    if (opts.description) setMeta("twitter:description", opts.description);
-    setMeta("twitter:image", opts.ogImage || DEFAULT_OG_IMAGE);
-    setMeta("twitter:site", "@BuckeyeBizHub");
-  }, [opts.title, opts.description, opts.canonical, opts.ogImage, opts.ogType, opts.noindex]);
-}
+// Titles, descriptions and canonicals now come from each route's `metadata`
+// export (src/lib/page-metadata.ts), so they are in the server HTML. Kept as a
+// no-op so the page components did not need rewriting.
+export function usePageSEO(_opts: SEOOptions) {}

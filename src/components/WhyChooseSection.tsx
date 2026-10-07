@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { MapPin, ShoppingBag, DollarSign, Zap, Star, ArrowRight } from "lucide-react";
 import TrustBadges from "@/components/TrustBadges";

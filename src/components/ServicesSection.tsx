@@ -1,19 +1,20 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Star, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
-import businessCardsProduct from "@/assets/business-card-american-roofing.jpg";
-import brochuresHero from "@/assets/print-roofing-door-hanger.jpg";
-import servicePromoGiveaways from "@/assets/service-promo-giveaways.jpg";
-import customApparelPolos from "@/assets/custom-apparel-polos-hoodies.jpg";
-import yardSignsProduct from "@/assets/yard-signs-product.jpg";
-import vehicleWrapProduct from "@/assets/vehicle-wrap-lumpia-queen-columbus.jpg";
-import serviceRebrandKit from "@/assets/service-rebrand-kit.jpg";
-import serviceWebsiteDesign from "@/assets/service-website-design.jpg";
-import serviceLocalSeo from "@/assets/service-local-seo.jpg";
-import bannerFeatherFlags from "@/assets/banner-retractable-roofing.jpg";
-import vehicleDecalCloseup from "@/assets/decal-realestate-qr-window.jpg";
+const businessCardsProduct = "/assets/business-card-american-roofing.jpg";
+const brochuresHero = "/assets/print-roofing-door-hanger.jpg";
+const servicePromoGiveaways = "/assets/service-promo-giveaways.jpg";
+const customApparelPolos = "/assets/custom-apparel-polos-hoodies.jpg";
+const yardSignsProduct = "/assets/yard-signs-product.jpg";
+const vehicleWrapProduct = "/assets/vehicle-wrap-lumpia-queen-columbus.jpg";
+const serviceRebrandKit = "/assets/service-rebrand-kit.jpg";
+const serviceWebsiteDesign = "/assets/service-website-design.jpg";
+const serviceLocalSeo = "/assets/service-local-seo.jpg";
+const bannerFeatherFlags = "/assets/banner-retractable-roofing.jpg";
+const vehicleDecalCloseup = "/assets/decal-realestate-qr-window.jpg";
 import { PHOTO_PRINT_1, PHOTO_PRINT_3, PHOTO_VEHICLE_1, PHOTO_VEHICLE_3 } from "@/lib/photos";
 
 const services = [

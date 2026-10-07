@@ -47,7 +47,7 @@ function sendToAnalytics(metric: Metric) {
   }
 
   // Alert in dev for poor values
-  if (import.meta.env.DEV && rating === "poor") {
+  if ((process.env.NODE_ENV !== "production") && rating === "poor") {
     console.warn(
       `⚠️ [Web Vitals] POOR ${metric.name}: ${metric.value.toFixed(2)}. ` +
       `Threshold: ≤${THRESHOLDS[metric.name]?.[0]}. Check performance.`

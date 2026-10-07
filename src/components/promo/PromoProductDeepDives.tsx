@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, ShoppingBag, PenTool, Monitor, Coffee, Flag, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 interface DeepDive {
   id: string;

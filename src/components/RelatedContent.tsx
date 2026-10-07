@@ -1,6 +1,7 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/compat/router";
 import {
   CreditCard, BookOpen, Gift, Shirt, Signpost, Car, Package, Monitor, Search,
   Flag, Sticker, Mail, BookMarked, FolderOpen, UtensilsCrossed, FileText, Maximize,

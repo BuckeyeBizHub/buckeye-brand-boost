@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 const ElevateCtaSection = () => (
   <section className="relative py-14 lg:py-20 overflow-hidden">

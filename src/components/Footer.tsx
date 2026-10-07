@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
+"use client";
+import { Link } from "@/lib/compat/router";
 import { Mail, Phone, ArrowRight, Shield, Clock, ThumbsUp, Facebook, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import buckeyeLogo from "@/assets/buckeye-logo.png";
-
+const buckeyeLogo = "/assets/buckeye-logo.png";
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Industries", href: "/industries" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Testimonials", href: "/testimonials" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
 ];

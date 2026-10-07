@@ -1,5 +1,6 @@
+"use client";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 import { ArrowRight } from "lucide-react";
 
 const industries = [

@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 const ServicesCTA = () => (
   <section className="py-24 lg:py-32 relative overflow-hidden">

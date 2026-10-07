@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Home, Truck, UtensilsCrossed, Clock, DollarSign, CheckCircle2 } from "lucide-react";
 

@@ -1,13 +1,13 @@
+"use client";
 import { motion } from "framer-motion";
 import { PhoneCall, Award, Wallet, BadgeCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
-import vehicleWrapFleet from "@/assets/vehicle-wrap-fleet-real.jpg";
-import brandedApparel from "@/assets/custom-apparel-polos-hoodies.jpg";
-import yardSignReal from "@/assets/yard-sign-realestate-real.jpg";
-import bannerEvent from "@/assets/banner-event-grandopening.jpg";
-
+const vehicleWrapFleet = "/assets/vehicle-wrap-fleet-real.jpg";
+const brandedApparel = "/assets/custom-apparel-polos-hoodies.jpg";
+const yardSignReal = "/assets/yard-sign-realestate-real.jpg";
+const bannerEvent = "/assets/banner-event-grandopening.jpg";
 const results = [
   {
     icon: PhoneCall,
