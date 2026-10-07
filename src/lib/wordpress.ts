@@ -35,16 +35,39 @@ export interface WPPaginatedResult<T> {
   total: number;
 }
 
-function stripHtml(html: string): string {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
-}
+// These run on the server during the build as well as in the browser,
+// so they cannot touch `document`. Plain string work only.
+const NAMED_ENTITIES: Record<string, string> = {
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+  nbsp: " ",
+  hellip: "…",
+  mdash: "—",
+  ndash: "–",
+  lsquo: "‘",
+  rsquo: "’",
+  ldquo: "“",
+  rdquo: "”",
+  copy: "©",
+  reg: "®",
+  trade: "™",
+};
 
 function decodeHtmlEntities(text: string): string {
-  const tmp = document.createElement("div");
-  tmp.innerHTML = text;
-  return tmp.textContent || tmp.innerText || text;
+  return text.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (match, code: string) => {
+    if (code[0] === "#") {
+      const n = code[1].toLowerCase() === "x" ? parseInt(code.slice(2), 16) : parseInt(code.slice(1), 10);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : match;
+    }
+    return NAMED_ENTITIES[code.toLowerCase()] ?? match;
+  });
+}
+
+function stripHtml(html: string): string {
+  return decodeHtmlEntities(html.replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
 }
 
 export function getExcerpt(post: WPPost, maxLen = 160): string {
