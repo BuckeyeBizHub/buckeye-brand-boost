@@ -51,76 +51,29 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Hero: kept as-is */}
-      <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={pricingHero}
-            alt="Branded Ohio vehicles, apparel, signage and promotional products"
-            className="w-full h-full object-cover"
-            width={1920}
-            height={800}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-ohio-navy/80 via-[hsl(0,0%,0%,0.75)] to-[hsl(0,0%,0%,0.92)]" />
-        </div>
-
-        <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-foreground mb-8 leading-[0.9]"
-              style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6), 0 0 60px rgba(0,0,0,0.3)" }}
+      {/* Hero: short. The form is the point of this page. */}
+      <section className="border-b border-seam">
+        <div className="mx-auto max-w-7xl px-4 pb-14 pt-32 sm:px-6 lg:px-8 lg:pb-20 lg:pt-40">
+          <h1 className="max-w-4xl font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold text-stock">
+            Get a quote.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-stock/80 sm:text-xl">
+            Tell me what you need and I&apos;ll have a price back to you within 24 hours. Every fee up front. Nothing
+            hidden.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#quote-form"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-ohio-red-light"
             >
-              Let's Bring Your Ohio Business to{" "}
-              <span className="text-primary">Life</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide"
-              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
+              Fill out the form
+            </a>
+            <a
+              href="tel:+16145613358"
+              className="inline-flex items-center justify-center rounded-md border border-seam px-7 py-4 text-base font-semibold text-stock transition-colors hover:border-fog"
             >
-              24-hour quotes • Every fee up front • Nothing hidden
-            </motion.p>
-
-            {/* Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="flex flex-wrap justify-center gap-3 mb-10"
-            >
-              {heroBadges.map((b) => (
-                <span
-                  key={b.label}
-                  className="inline-flex items-center gap-2 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/25 rounded-full px-5 py-2.5 text-sm font-bold text-primary-foreground"
-                >
-                  <b.icon className="w-4 h-4 text-primary" />
-                  {b.label}
-                </span>
-              ))}
-            </motion.div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.5 }}
-            >
-              <a href="#quote-form">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl group transition-all duration-300"
-                >
-                  Tell Us About Your Project
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
-            </motion.div>
+              Or call (614) 561-3358
+            </a>
           </div>
         </div>
       </section>
@@ -199,9 +152,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-card border-2 border-border rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg overflow-hidden"
+              className="paper rounded-lg p-6 sm:p-8 md:p-10 overflow-hidden"
             >
-              <h2 className="font-display text-2xl md:text-3xl font-black text-foreground mb-2">Tell Us About Your Project</h2>
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-2">Tell us about your project</h2>
               <p className="text-muted-foreground mb-8">Fill out the form and you'll have a custom quote within 24 hours.</p>
 
               {submitted && (
