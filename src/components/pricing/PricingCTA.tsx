@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, ShieldCheck, Zap, MapPin, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 const trustItems = [
   { icon: Star, label: "500+ Happy Ohio Businesses" },

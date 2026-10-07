@@ -10,7 +10,7 @@
 export const SITE_NAME = "Buckeye Biz Hub";
 export const SITE_URL = "https://www.buckeyebizhub.com";
 export const DEFAULT_OG_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/hrXUMAbOK1TQRKQtPFJP1P5NDPp1/social-images/social-1775753483930-Buckeye_Biz_Hub_Logo.webp";
+  "https://www.buckeyebizhub.com/og-image.webp";
 
 // ── Shared fragments ───────────────────────────────────────
 

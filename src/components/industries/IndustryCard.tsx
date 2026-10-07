@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Quote } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 interface IndustryCardProps {
   industry: {

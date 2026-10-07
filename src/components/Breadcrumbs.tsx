@@ -1,5 +1,6 @@
+"use client";
 import { Home, ChevronRight } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/compat/router";
 import { useHeadingHierarchy } from "@/hooks/useHeadingHierarchy";
 
 const routeLabels: Record<string, string> = {

@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { MapPin, Info } from "lucide-react";
 import {

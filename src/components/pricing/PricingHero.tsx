@@ -1,8 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Heart, ShieldCheck, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import pricingHero from "@/assets/pricing-hero.jpg";
-
+const pricingHero = "/assets/pricing-hero.jpg";
 const badges = [
   { icon: ShieldCheck, label: "No Hidden Fees" },
   { icon: BadgeCheck, label: "Concierge Service Included" },

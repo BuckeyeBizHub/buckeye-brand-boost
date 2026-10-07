@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { CreditCard, Info } from "lucide-react";
 import {

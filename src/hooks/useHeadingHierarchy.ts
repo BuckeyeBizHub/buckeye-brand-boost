@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 /**
@@ -9,7 +10,7 @@ import { useEffect } from "react";
  */
 export function useHeadingHierarchy() {
   useEffect(() => {
-    if (import.meta.env.PROD) return;
+    if ((process.env.NODE_ENV === "production")) return;
 
     // Delay to let the page render fully
     const timer = setTimeout(() => {

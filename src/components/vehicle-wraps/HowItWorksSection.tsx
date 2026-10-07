@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { ClipboardCheck, Paintbrush, Layers, Printer, Wrench, HeartHandshake } from "lucide-react";
 

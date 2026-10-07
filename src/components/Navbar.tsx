@@ -1,9 +1,9 @@
+"use client";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ArrowRight, ChevronDown, ExternalLink, Facebook, Instagram, Phone } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/compat/router";
 import { Button } from "@/components/ui/button";
-import buckeyeLogo from "@/assets/buckeye-logo.png";
-
+const buckeyeLogo = "/assets/buckeye-logo.png";
 const serviceLinks = [
   { label: "Business Cards & Printing", href: "/business-cards-printing" },
   { label: "Brochures & Business Printing", href: "/business-printing" },
@@ -51,7 +51,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<"services" | "about" | null>(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const location = useLocation();
 
   useEffect(() => {

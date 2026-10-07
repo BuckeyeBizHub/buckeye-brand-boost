@@ -1,5 +1,6 @@
+"use client";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { fetchPosts, getFeaturedImage, getCategories } from "@/lib/wordpress";
 

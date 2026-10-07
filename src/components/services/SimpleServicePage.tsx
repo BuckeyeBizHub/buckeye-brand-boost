@@ -1,11 +1,12 @@
+"use client";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone, Tag } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RelatedServices from "@/components/RelatedServices";
-import { usePageSEO } from "@/hooks/usePageTitle";
+import SEOHead from "@/components/SEOHead";
 
 export interface SimpleServicePageProps {
   /** Service name shown in H1 ("[Service] in Columbus, Ohio"). */
@@ -39,8 +40,6 @@ const SimpleServicePage = ({
   pricingNote,
   benefits,
 }: SimpleServicePageProps) => {
-  usePageSEO({ title: metaTitle, description: metaDescription });
-
   const paragraphs = description
     .split(/\n\s*\n/)
     .map((p) => p.trim())
@@ -48,6 +47,7 @@ const SimpleServicePage = ({
 
   return (
     <article className="min-h-screen bg-background">
+      <SEOHead title={metaTitle} description={metaDescription} />
       <Navbar />
 
       {/* Hero with H1 */}

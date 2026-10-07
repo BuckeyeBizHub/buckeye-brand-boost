@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+"use client";
+import { Link } from "@/lib/compat/router";
 import { Clock, Tag } from "lucide-react";
 import { WPPost, getExcerpt, getFeaturedImage, getCategories } from "@/lib/wordpress";
 import { format } from "date-fns";

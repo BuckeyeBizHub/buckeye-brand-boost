@@ -1,13 +1,13 @@
+"use client";
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 
-import hvacImg from "@/assets/gallery-hvac-before-after.jpg";
-import landscapingImg from "@/assets/gallery-landscaping-fleet.jpg";
-import deliveryImg from "@/assets/gallery-delivery-truck.jpg";
-import magneticImg from "@/assets/gallery-magnetic-decal.jpg";
-import fleetImg from "@/assets/gallery-fleet-consistency.jpg";
-import boxTruckImg from "@/assets/gallery-box-truck-360.jpg";
-
+const hvacImg = "/assets/gallery-hvac-before-after.jpg";
+const landscapingImg = "/assets/gallery-landscaping-fleet.jpg";
+const deliveryImg = "/assets/gallery-delivery-truck.jpg";
+const magneticImg = "/assets/gallery-magnetic-decal.jpg";
+const fleetImg = "/assets/gallery-fleet-consistency.jpg";
+const boxTruckImg = "/assets/gallery-box-truck-360.jpg";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const galleryItems = [

@@ -1,11 +1,11 @@
+"use client";
 import { motion } from "framer-motion";
 import { TrendingUp, MapPin, Truck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-import hvacImg from "@/assets/gallery-hvac-before-after.jpg";
-import landscapingImg from "@/assets/gallery-landscaping-fleet.jpg";
-import deliveryImg from "@/assets/gallery-delivery-truck.jpg";
-
+const hvacImg = "/assets/gallery-hvac-before-after.jpg";
+const landscapingImg = "/assets/gallery-landscaping-fleet.jpg";
+const deliveryImg = "/assets/gallery-delivery-truck.jpg";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const stories = [

@@ -1,6 +1,6 @@
-import google5StarBadge from "@/assets/google-5-star-badge.png";
-import bbbBadge from "@/assets/bbb-a-plus-badge.png";
-
+"use client";
+const google5StarBadge = "/assets/google-5-star-badge.png";
+const bbbBadge = "/assets/bbb-a-plus-badge.png";
 interface TrustBadgesProps {
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";

@@ -1,6 +1,7 @@
+"use client";
 import { motion } from "framer-motion";
 import { Search, Handshake, CheckCircle2, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/compat/router";
 
 const steps = [
   {
