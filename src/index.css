@@ -85,6 +85,12 @@
   html {
     color-scheme: dark;
   }
+  /* Some blocks slide in from the side when scrolled to; never let that
+     make the whole page scroll sideways on a phone. */
+  html,
+  body {
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
