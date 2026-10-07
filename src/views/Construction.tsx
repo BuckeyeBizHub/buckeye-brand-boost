@@ -31,7 +31,7 @@ const constructionHero = "/assets/construction-hero.jpg";
 const constructionTeam = "/assets/construction-team.jpg";
 const constructionSafetyDecals = "/assets/construction-safety-decals.jpg";
 const constructionHivisUniforms = "/assets/construction-hivis-uniforms.jpg";
-const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
+const PHOTO_BASE = "/photos";
 // Reusing existing job-site / fleet photos from the bucket — same crews, hard hats, vests, and trucks.
 const HERO_IMG = constructionHero;
 const JOBSITE_IMG = constructionHivisUniforms;

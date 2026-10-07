@@ -34,7 +34,7 @@ const lawncareStoryVan = "/assets/lawncare-story-van.jpg";
 const lawncarePostcard = "/assets/lawncare-postcard.jpg";
 const lawncareYardSign = "/assets/lawncare-yard-sign.jpg";
 const lawncareTruckWrap = "/assets/lawncare-truck-wrap.jpg";
-const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
+const PHOTO_BASE = "/photos";
 // Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
 const HERO = lawncareHero;
 const JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;

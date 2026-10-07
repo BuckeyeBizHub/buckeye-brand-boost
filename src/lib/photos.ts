@@ -1,5 +1,5 @@
-// Real uploaded photos from cloud storage - NEVER use AI-generated images
-const STORAGE_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
+// Real job photos (copied off Lovable storage into public/photos) - NEVER use AI-generated images
+const STORAGE_BASE = "/photos";
 
 // Apparel
 export const PHOTO_APPAREL_1 = `${STORAGE_BASE}/1774655725467-1jgr9908ywq.jpeg`;

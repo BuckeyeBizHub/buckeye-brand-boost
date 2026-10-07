@@ -29,7 +29,7 @@ import {
 } from "@/components/ui/accordion";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
-const PHOTO_BASE = "https://ustxmgctwrjdzcpsrewb.supabase.co/storage/v1/object/public/photos";
+const PHOTO_BASE = "/photos";
 const ROOFING_HERO = `${PHOTO_BASE}/roofing-hero-sunset-crew.jpg`;
 const ROOFING_JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const ROOFING_BEFORE_AFTER = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;

@@ -29,36 +29,31 @@ Allow: /
 User-agent: Slackbot
 Allow: /
 
-# ── AI / LLM Crawlers — BLOCKED ────────────────────────────
+# ── AI / LLM Crawlers — ALLOWED ────────────────────────────
+# So ChatGPT, Claude, Perplexity and Google AI answers can read and cite BBH.
 User-agent: GPTBot
-Disallow: /
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
-User-agent: Google-Extended
-Disallow: /
+User-agent: ClaudeBot
+Allow: /
 
-User-agent: CCBot
-Disallow: /
+User-agent: Claude-User
+Allow: /
 
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
+User-agent: Claude-SearchBot
+Allow: /
 
 User-agent: PerplexityBot
-Disallow: /
+Allow: /
 
-User-agent: Cohere-ai
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
+User-agent: Google-Extended
+Allow: /
 
 # ── Default Rule ─────────────────────────────────────────────
 User-agent: *
@@ -70,7 +65,6 @@ Disallow: /api/
 Disallow: /admin-photos
 
 
-# NOTE: /assets/ is intentionally allowed — Google needs JS/CSS to render the React app
 # NOTE: Query params are allowed — blog pagination and filters need indexing
 
 Sitemap: https://www.buckeyebizhub.com/sitemap.xml
