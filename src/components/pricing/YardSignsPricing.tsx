@@ -91,7 +91,7 @@ const YardSignsPricing = () => (
           <span className="text-primary">Pricing Guide</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Per-sign pricing that gets better the more you order — simple, transparent, no surprises.
+          The more you order, the less each sign costs. Simple, no surprises.
         </p>
       </motion.div>
 
@@ -174,7 +174,7 @@ const YardSignsPricing = () => (
       >
         <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Basic design and simple file setup are included at no extra charge. Premium graphic design or complex custom artwork may incur an additional design fee. Up to 10% quantity discount available on orders of $1,500 or more. Shipping costs are additional and calculated per delivery location.
+          Basic design and simple file setup are included. Complex custom artwork may cost extra. Orders of $1,500 or more can get up to a 10% quantity discount. Shipping is extra and depends on where it's going.
         </p>
       </motion.div>
     </div>

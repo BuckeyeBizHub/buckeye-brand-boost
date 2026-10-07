@@ -15,12 +15,12 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const menuStyles = [
-  { style: "Single-Page Laminated", desc: "One sheet, front and back, sealed in heavy-duty lamination. Waterproof, wipeable, and virtually indestructible for daily restaurant use.", best: "Quick-service restaurants, diners, cafes, food trucks" },
-  { style: "Bi-Fold Menu", desc: "Two panels (4 pages) with a center fold. The most popular format for sit-down restaurants with a moderate-sized menu.", best: "Family restaurants, bistros, pubs, casual dining" },
-  { style: "Tri-Fold Menu", desc: "Three panels (6 pages) with plenty of room for appetizers, entrees, desserts, and drink menus all in one piece.", best: "Full-service restaurants, bars with food, catering menus" },
-  { style: "Booklet Menu", desc: "Multi-page saddle-stitched booklet for extensive menus. Perfect for wine lists, tasting menus, and restaurants with large offerings.", best: "Fine dining, wine bars, breweries with extensive drink lists" },
-  { style: "Table Tents", desc: "Free-standing tent-fold displays that sit on tables, counters, and bar tops. Perfect for promoting specials, happy hours, and seasonal items.", best: "Drink specials, dessert features, QR code ordering" },
-  { style: "Disposable Menus", desc: "Cost-effective single-use menus on lighter paper stocks. Ideal for high-turnover establishments or situations requiring fresh menus for each guest.", best: "High-volume restaurants, events, catering, room service" },
+  { style: "Single-page laminated", desc: "One sheet, front and back, sealed in heavy lamination. Waterproof, wipeable and tough enough for daily use.", best: "Quick-service restaurants, diners, cafes, food trucks" },
+  { style: "Bi-fold menu", desc: "Two panels (4 pages) with a center fold. The most popular format for sit-down restaurants with a mid-size menu.", best: "Family restaurants, bistros, pubs, casual dining" },
+  { style: "Tri-fold menu", desc: "Three panels (6 pages). Room for apps, entrees, desserts and drinks in one piece.", best: "Full-service restaurants, bars with food, catering menus" },
+  { style: "Booklet menu", desc: "A stapled multi-page booklet for big menus. Good for wine lists, tasting menus and long drink lists.", best: "Fine dining, wine bars, breweries with extensive drink lists" },
+  { style: "Table tents", desc: "Folded cards that stand on tables, counters and bar tops. Use them to push specials, happy hour and seasonal items.", best: "Drink specials, dessert features, QR code ordering" },
+  { style: "Disposable menus", desc: "Single-use menus on lighter paper. Cheap to run and fresh for every guest.", best: "High-volume restaurants, events, catering, room service" },
 ];
 
 const paperOptions = [
@@ -31,31 +31,31 @@ const paperOptions = [
 ];
 
 const tableTentSizes = [
-  { size: '4" × 6"', use: "Compact — bar tops, small tables, counter displays" },
-  { size: '5" × 7"', use: "Standard — most popular for restaurant table tents" },
-  { size: '4" × 9"', use: "Tall format — drink specials, dessert features" },
-  { size: '6" × 8"', use: "Large — detailed promotions, QR code menus" },
+  { size: '4" × 6"', use: "Compact: bar tops, small tables, counters" },
+  { size: '5" × 7"', use: "Standard: the most popular restaurant size" },
+  { size: '4" × 9"', use: "Tall: drink specials, desserts" },
+  { size: '6" × 8"', use: "Large: detailed promos, QR code menus" },
 ];
 
 const useCases = [
-  { icon: UtensilsCrossed, title: "Restaurant Menus", desc: "From casual diners to fine dining — we create menus that are both beautiful and durable enough to survive daily use, spills, and constant handling." },
-  { icon: Lightbulb, title: "Seasonal Specials & Inserts", desc: "Swap out seasonal items without reprinting your entire menu. We print matching inserts and clip-in pages that integrate seamlessly." },
-  { icon: FileText, title: "Catering & Event Menus", desc: "Elegant menus for weddings, corporate events, and private parties. From simple cards to multi-course tasting menus on premium stock." },
-  { icon: Layers, title: "Bar & Drink Menus", desc: "Cocktail menus, wine lists, and beer menus designed to match your establishment's atmosphere. Laminated for bartop durability." },
+  { icon: UtensilsCrossed, title: "Restaurant menus", desc: "Diners to fine dining. Menus that look good and survive spills and constant handling." },
+  { icon: Lightbulb, title: "Seasonal specials & inserts", desc: "Change seasonal items without reprinting the whole menu. We print matching inserts and clip-in pages." },
+  { icon: FileText, title: "Catering & event menus", desc: "Menus for weddings, corporate events and private parties. Simple cards up to multi-course tasting menus on heavy stock." },
+  { icon: Layers, title: "Bar & drink menus", desc: "Cocktail, wine and beer menus that fit your place. Laminated so they hold up on the bar." },
 ];
 
 const faqItems = [
-  { q: "What lamination should I choose for restaurant menus?", a: "For menus that see daily use, we recommend heavy-duty lamination (10 mil or thicker) on 14pt or 16pt card stock. This creates a waterproof, wipeable menu that can withstand spills, grease, and constant handling for months." },
-  { q: "How often should we reprint our menus?", a: "Most restaurants reprint menus every 6–12 months to refresh pricing and seasonal items. With our seasonal insert system, you can keep your core menu and swap out specials pages quarterly without reprinting everything." },
-  { q: "Can you add QR codes to our menus?", a: "Absolutely! We can integrate QR codes that link to your online ordering system, digital menu, social media, or review pages. QR codes on table tents are especially effective for driving online orders." },
-  { q: "What size menus do you recommend?", a: "For most restaurants, 8.5×11 or 8.5×14 bi-fold menus are the sweet spot. They're large enough to showcase your offerings but compact enough for comfortable table use. For bars, a single laminated page or tall table tent works great." },
-  { q: "Do you offer menu design services?", a: "Yes — our design team specializes in menu layouts that drive higher average order values. We use strategic placement, photography integration, and typography to highlight your most profitable items." },
-  { q: "Can you match our restaurant's branding?", a: "Absolutely. We match your existing brand colors, fonts, and style. If you're starting fresh, we'll design a complete menu system that reflects your restaurant's personality and atmosphere." },
-  { q: "What about food photography?", a: "While we don't provide photography services directly, we can recommend trusted food photographers in Ohio. We do handle all photo retouching, color correction, and layout to make your dishes look irresistible on the printed menu." },
+  { q: "What lamination should I choose for restaurant menus?", a: "For daily use, go with heavy lamination (10 mil or thicker) on 14pt or 16pt card stock. It's waterproof and wipeable, and it handles spills, grease and constant handling for months." },
+  { q: "How often should we reprint our menus?", a: "Most restaurants reprint every 6–12 months to update prices and seasonal items. With inserts, you keep your core menu and swap the specials pages each quarter." },
+  { q: "Can you add QR codes to our menus?", a: "Yes. A QR code can link to online ordering, a digital menu, your social pages or your reviews. QR codes on table tents work well for online orders." },
+  { q: "What size menus do you recommend?", a: "For most restaurants, an 8.5×11 or 8.5×14 bi-fold is the sweet spot. Big enough to show your food, small enough for the table. For bars, a single laminated page or a tall table tent works well." },
+  { q: "Do you offer menu design services?", a: "Yes. We lay out menus to push your most profitable items, using placement, photos and type." },
+  { q: "Can you match our restaurant's branding?", a: "Yes. We match your colors, fonts and style. Starting fresh? We'll design a full menu set that fits your place." },
+  { q: "What about food photography?", a: "We don't shoot photos ourselves, but we can point you to good food photographers in Ohio. We handle retouching, color correction and layout so your dishes look great in print." },
 ];
 
 const MenusAndTableTents = () => {
-  usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom menu printing and table tents for Ohio restaurants and hospitality businesses. We source from top local printers for durable, beautiful results." });
+  usePageSEO({ title: "Menu Printing & Table Tents Columbus OH", description: "Custom menu printing and table tents for Ohio restaurants, bars and cafes. We source from top local printers for menus that last." });
 
   return (
     <div className="min-h-screen">
@@ -76,7 +76,7 @@ const MenusAndTableTents = () => {
               Custom Menu Printing & Table Tents That Make Customers Hungry
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold">
-              Durable, vibrant, and professionally designed menus for restaurants, bars, cafes, and hospitality businesses across Ohio.
+              Tough, good-looking menus for restaurants, bars and cafes across Ohio.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
               {[{ icon: ShieldCheck, label: "Waterproof Options" }, { icon: BadgeCheck, label: "Wholesale Pricing" }, { icon: ThumbsUp, label: "100% Satisfaction" }].map((b) => (
@@ -96,9 +96,9 @@ const MenusAndTableTents = () => {
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Your Menu Is Your Most Important Sales Tool</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Your menu is the one piece of marketing that every single customer reads. It's not just a list of food — it's a sales tool that directly influences what people order and how much they spend. Studies show that strategic menu design can boost average order value by 10–15% through smart placement, photography, and highlighting profitable items.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">A well-designed, professionally printed menu also communicates quality. Customers subconsciously judge food quality by the menu that presents it. A laminated, full-color menu with beautiful typography tells diners they're in for a great experience — before the first course even arrives.</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Your Menu Is Your Best Salesperson</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Every customer reads your menu. It decides what they order and how much they spend. Studies show smart menu design can raise average order value by 10–15% through placement, photos and featuring your profitable items.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">People judge the food by the menu. A clean, laminated, full-color menu tells them they're in for a good meal before anything hits the table.</p>
           </motion.div>
         </div>
       </section>
@@ -200,8 +200,8 @@ const MenusAndTableTents = () => {
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-8 text-center">Design Tips from David</h2>
             <div className="bg-card rounded-2xl p-8 md:p-10 border-l-4 border-primary shadow-lg">
               <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The number one thing I tell restaurant owners: don't list prices in a column. When prices are aligned vertically, customers scan down to find the cheapest item. Instead, place the price right after the description in the same font — it makes people choose based on what sounds delicious, not what's cheapest. Also, always laminate your menus. The cost difference is minimal, but laminated menus last 10x longer and always look clean."</p>
-              <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The number one thing I tell restaurant owners: don't line prices up in a column. People scan down and pick the cheapest thing. Put the price right after the description in the same font. They'll order what sounds good. And laminate your menus. It costs a little more, but they last 10x longer and always look clean."</p>
+              <p className="font-bold text-foreground">David Stein, co-founder, Buckeye Biz Hub</p>
             </div>
           </motion.div>
         </div>
@@ -226,7 +226,7 @@ const MenusAndTableTents = () => {
       <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl font-black text-primary-foreground mb-6" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>Ready for menus that make mouths water?</motion.h2>
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl font-black text-primary-foreground mb-6" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>Ready for menus that sell?</motion.h2>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact"><Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] group uppercase tracking-widest"><Phone className="w-6 h-6" />Get Your Menu Quote in 24 Hours<ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" /></Button></Link>
           </motion.div>

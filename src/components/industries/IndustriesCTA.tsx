@@ -33,7 +33,7 @@ const IndustriesCTA = () => (
         transition={{ delay: 0.15 }}
         className="text-xl text-primary-foreground/60 mb-12 max-w-2xl mx-auto font-medium"
       >
-        Tailored printing, promotional products, and vehicle branding solutions for every Ohio industry. Let's build your brand together.
+        Printing, promo products and vehicle branding built around how your industry works. Let's get started.
       </motion.p>
 
       <motion.div

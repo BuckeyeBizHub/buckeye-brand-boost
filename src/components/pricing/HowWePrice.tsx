@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Paintbrush, Zap, ShieldCheck, Heart, Eye, CheckCircle } from "lucide-react";
 
 const included = [
-  { icon: Paintbrush, text: "Expert design guidance and unlimited revisions" },
-  { icon: Zap, text: "Fast, honest quotes — usually within one business day" },
-  { icon: ShieldCheck, text: "High-quality materials and craftsmanship" },
-  { icon: Heart, text: "100% satisfaction guarantee" },
+  { icon: Paintbrush, text: "Design help and unlimited revisions" },
+  { icon: Zap, text: "Fast, honest quotes, usually within one business day" },
+  { icon: ShieldCheck, text: "Quality materials and workmanship" },
+  { icon: Heart, text: "100% satisfaction guarantee. If you're not happy, we make it right" },
   { icon: Eye, text: "No hidden fees or surprise upcharges" },
 ];
 
@@ -32,16 +32,16 @@ const HowWePrice = () => (
           viewport={{ once: true }}
         >
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            We use a concierge-style model where{" "}
-            <span className="font-bold text-foreground">one dedicated contact</span>{" "}
-            handles your entire project from design through delivery.
+            You get{" "}
+            <span className="font-bold text-foreground">one point of contact</span>{" "}
+            from design to delivery. We coordinate the partner shops, installers and print vendors.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Our goal is simple:{" "}
+            The goal is simple:{" "}
             <span className="font-bold text-foreground">
-              remove the stress of branding and printing
+              take branding and printing off your plate
             </span>{" "}
-            so you can focus on growing your business.
+            so you can run your business.
           </p>
         </motion.div>
 

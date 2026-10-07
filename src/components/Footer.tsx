@@ -19,7 +19,6 @@ interface ResourceLink {
 
 const resourceLinks: ResourceLink[] = [
   { label: "Blog & Insights", href: "/blog" },
-  { label: "Visit Our Blog Site", href: "https://buckeyebizhub.blog", external: true },
   { label: "Service Pricing Guide", href: "/pricing" },
   { label: "Industry Solutions", href: "/industries" },
   { label: "Portfolio & Case Studies", href: "/portfolio" },

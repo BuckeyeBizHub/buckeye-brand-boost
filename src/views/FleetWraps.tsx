@@ -9,24 +9,24 @@ import Footer from "@/components/Footer";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const trustItems = [
-  { icon: Clock, label: "Free 24-Hour Quote" },
-  { icon: Award, label: "3M and Avery Dennison Vinyl" },
-  { icon: MapPin, label: "Serving Central Ohio Since 2018" },
-  { icon: TrendingUp, label: "Volume Fleet Pricing Available" },
+  { icon: Clock, label: "Free quote in 24 hours" },
+  { icon: Award, label: "3M and Avery Dennison vinyl" },
+  { icon: MapPin, label: "Serving Central Ohio since 2018" },
+  { icon: TrendingUp, label: "Volume fleet pricing" },
 ];
 
 const FleetWraps = () => {
   usePageSEO({
     title: "Fleet Vehicle Wraps Columbus Ohio | Commercial Fleet Branding | Buckeye Biz Hub",
     description:
-      "Columbus Ohio fleet wrap specialists. We shop Central Ohio's best installers to get you the best quality and price. Free 24-hour quote.",
+      "Fleet wraps in Columbus, Ohio. We shop Central Ohio's best installers so you get the right quality at the right price. Free quote in 24 hours.",
   });
 
   return (
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero — matches /portfolio styling */}
+      {/* Hero: matches /portfolio styling */}
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -52,7 +52,7 @@ const FleetWraps = () => {
             transition={{ duration: 0.6, type: "spring" }}
             className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]"
           >
-            <Sparkles className="w-4 h-4" /> Fleet Wraps <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4" /> Fleet wraps <Sparkles className="w-4 h-4" />
           </motion.div>
 
           <motion.h1
@@ -62,9 +62,9 @@ const FleetWraps = () => {
             className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.95] mb-10"
             style={{ textShadow: "0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)" }}
           >
-            Fleet Vehicle Wraps for{" "}
+            Fleet wraps for{" "}
             <span className="text-primary text-glow-red relative">
-              Columbus Ohio Businesses
+              Columbus businesses
               <motion.span
                 className="absolute -bottom-3 left-0 w-full h-[5px] bg-gradient-to-r from-transparent via-ohio-red-glow to-transparent rounded-full"
                 initial={{ scaleX: 0 }}
@@ -80,7 +80,7 @@ const FleetWraps = () => {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/60 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed"
           >
-            Turn Every Van, Truck and Work Vehicle Into a Rolling Billboard — Consistent, Professional Branding Across Your Entire Fleet
+            Every van, truck and work vehicle becomes a rolling billboard. One clean, consistent look across your whole fleet.
           </motion.p>
 
           {/* Trust bar */}
@@ -115,7 +115,7 @@ const FleetWraps = () => {
                 className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
               >
                 <CheckCircle2 className="w-5 h-5" />
-                Get My Fleet Quote
+                Get my fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
@@ -123,7 +123,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 1 — Why Fleet Wraps */}
+      {/* SECTION 1: Why Fleet Wraps */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl">
           <motion.h2
@@ -133,15 +133,15 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
           >
-            Why Columbus Businesses Invest in{" "}
-            <span className="text-primary">Fleet Wraps</span>
+            Why Columbus businesses wrap{" "}
+            <span className="text-primary">their fleets</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-14">
             {[
               { stat: "30,000–70,000", label: "Daily impressions per wrapped vehicle in the Columbus market" },
-              { stat: "$0.04", label: "Estimated cost per thousand impressions — lower than any other advertising medium" },
-              { stat: "5–7 Years", label: "Average lifespan using 3M or Avery Dennison commercial vinyl" },
+              { stat: "$0.04", label: "Estimated cost per thousand impressions. Lower than any other ad you can buy." },
+              { stat: "5–7 years", label: "Average lifespan using 3M or Avery Dennison commercial vinyl" },
             ].map((card, i) => (
               <motion.div
                 key={i}
@@ -169,16 +169,16 @@ const FleetWraps = () => {
             className="max-w-3xl mx-auto space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed"
           >
             <p>
-              Unlike digital ads that disappear when your budget runs out, a fleet wrap is a one-time investment that works every day — on the road, parked at job sites, sitting in driveways, and driving through neighborhoods where your next customer lives.
+              Digital ads stop the day your budget runs out. A wrap is paid for once and works every day. On the road, at job sites, in driveways, in the neighborhoods where your next customer lives.
             </p>
             <p>
-              For service businesses in Columbus, fleet branding does something digital advertising cannot: it puts your brand physically in front of your ideal customer at the exact moment they need you. A homeowner watching your wrapped HVAC van pull up to their neighbor's house is already a warm lead.
+              For a service business, a wrap puts your name in front of the right customer at the right moment. The homeowner watching your HVAC van pull into the neighbor's driveway is already a warm lead.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* SECTION 2 — Concierge Network */}
+      {/* SECTION 2: Concierge Network */}
       <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
         <div className="container max-w-5xl">
           <motion.div
@@ -189,11 +189,11 @@ const FleetWraps = () => {
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl md:text-5xl font-black mb-6 text-foreground leading-tight">
-              Why Work With Buckeye Biz Hub Instead of Going{" "}
-              <span className="text-primary">Directly to a Wrap Shop?</span>
+              Why use Buckeye Biz Hub instead of going{" "}
+              <span className="text-primary">straight to a wrap shop?</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed">
-              We Shop Central Ohio's Best Wrap Installers on Your Behalf — So You Get Better Quality, Better Pricing, and Zero Runaround.
+              We shop Central Ohio's best wrap installers for you. Better quality, better price, no runaround.
             </p>
           </motion.div>
 
@@ -205,20 +205,20 @@ const FleetWraps = () => {
             className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-10"
           >
             <p>
-              Here's something most wrap shops won't tell you: the best price and the best quality for your specific vehicle and budget aren't always at the same place. Different installers specialize in different vehicle types. Fleet pricing varies significantly between shops. And the shop with the nicest website isn't always the one that will do the best work on your box truck.
+              Most wrap shops won't tell you this. The best price and the best work for your vehicle are often at two different shops. Installers specialize. Fleet pricing swings a lot from shop to shop. And the nicest website doesn't mean the best work on your box truck.
             </p>
             <p>
-              That's exactly why Buckeye Biz Hub operates as your branding concierge rather than a single-shop installer.
+              So we act as your branding concierge. We coordinate the job and match it to the right shop.
             </p>
             <p>
-              We've built working relationships with a curated network of Central Ohio's top-rated wrap installers, specialty graphic shops, and independent vinyl specialists. When you bring us a fleet wrap project, we go to work on your behalf — just like a mortgage broker shops lenders to get you the best rate, we shop our installer network to get you:
+              We work with trusted partner shops, independent installers and vinyl specialists across Central Ohio. Bring us your fleet project and we shop it, the way a mortgage broker shops lenders. You get:
             </p>
             <ul className="space-y-3 pl-1">
               {[
-                "The right specialist for your vehicle type and scope",
-                "Competitive pricing without single-shop markups",
-                "Quality guarantees backed by our concierge oversight",
-                "A single point of contact throughout the entire project",
+                "The right specialist for your vehicles and the job",
+                "Competitive pricing without one shop's markup",
+                "Our 100% satisfaction guarantee. If you're not happy, we make it right.",
+                "One point of contact from start to finish",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
@@ -245,7 +245,7 @@ const FleetWraps = () => {
               </div>
               <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center border-r border-primary-foreground/10 flex items-center justify-center gap-2">
                 <X className="w-4 h-4 text-primary-foreground/50" />
-                Going Direct to a Wrap Shop
+                Going direct to a wrap shop
               </div>
               <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center bg-primary flex items-center justify-center gap-2">
                 <Check className="w-4 h-4" />
@@ -258,7 +258,7 @@ const FleetWraps = () => {
               { label: "Options", left: "Limited to that shop's capabilities", right: "Full Central Ohio installer network" },
               { label: "Your time", left: "Multiple consultations at multiple shops", right: "One conversation with us" },
               { label: "Design", left: "Varies by shop", right: "Included and consistent across all pieces" },
-              { label: "Your advocate", left: "The shop", right: "Us — always working for your best outcome" },
+              { label: "Your advocate", left: "The shop", right: "Us. We work for you, not the shop." },
             ].map((row, i) => (
               <div
                 key={row.label}
@@ -279,7 +279,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 3 — Fleet Options */}
+      {/* SECTION 3: Fleet Options */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl">
           <motion.h2
@@ -289,16 +289,16 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
           >
-            Fleet Branding Options for{" "}
-            <span className="text-primary">Every Budget</span>
+            Fleet branding for{" "}
+            <span className="text-primary">every budget</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Full Fleet Wraps",
-                h3: "Maximum Impact — Full Vehicle Coverage",
-                body: "The most powerful branding statement available. Full wraps cover the entire painted surface in custom-printed commercial vinyl. Bold graphics, your logo, phone number, website, and service list wrap every visible surface.",
+                title: "Full fleet wraps",
+                h3: "Full coverage, biggest impact",
+                body: "The loudest option you have. A full wrap covers every painted surface in printed commercial vinyl. Your logo, phone number, website and services, on every side.",
                 meta: [
                   { k: "Best for", v: "HVAC, plumbing, electrical, landscaping, moving companies, delivery fleets" },
                   { k: "Lifespan", v: "5–7 years" },
@@ -306,20 +306,20 @@ const FleetWraps = () => {
                 ],
               },
               {
-                title: "Partial Fleet Wraps",
-                h3: "High-Impact Branding at a Lower Investment",
-                body: "Partial wraps focus on your vehicle's highest-visibility zones — sides, doors, and rear panel. Combined with professional vinyl lettering, partial wraps deliver exceptional results at significantly lower cost than full coverage.",
+                title: "Partial fleet wraps",
+                h3: "Strong branding for less",
+                body: "A partial wrap covers the spots people see most: sides, doors and the rear. Add vinyl lettering and you get most of the impact for a lot less than a full wrap.",
                 meta: [
-                  { k: "Best for", v: "Smaller fleets, leased vehicles, businesses wanting flexibility to update messaging" },
+                  { k: "Best for", v: "Smaller fleets, leased vehicles, businesses that want to change their message later" },
                   { k: "Most popular for", v: "Real estate agents, property managers, professional services" },
                 ],
               },
               {
-                title: "Fleet Decals and Spot Graphics",
-                h3: "Professional Branding for Every Budget",
-                body: "Door decals, logo graphics, contact information vinyl, and spot graphics that transform plain work vehicles into branded assets — without the full-wrap investment.",
+                title: "Fleet decals and spot graphics",
+                h3: "Branding on a tight budget",
+                body: "Door decals, logos, contact info and spot graphics. A plain work truck becomes a branded one, without paying for a full wrap.",
                 meta: [
-                  { k: "Best for", v: "Single vehicles, company cars, small fleets, vehicles that change hands frequently" },
+                  { k: "Best for", v: "Single vehicles, company cars, small fleets, vehicles that change hands often" },
                   { k: "Starting at", v: "$150–$400 per vehicle" },
                 ],
               },
@@ -355,7 +355,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 4 — Industries */}
+      {/* SECTION 4: Industries */}
       <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
         <div className="container max-w-6xl">
           <motion.h2
@@ -365,20 +365,20 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
           >
-            Fleet Wraps for Every{" "}
-            <span className="text-primary">Central Ohio Industry</span>
+            Fleet wraps for every{" "}
+            <span className="text-primary">Central Ohio trade</span>
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: Wrench, title: "HVAC and Mechanical", body: "Your service vans are in neighborhoods all day. A professionally wrapped fleet gets you noticed by homeowners who need you — before they ever search online." },
-              { icon: Droplet, title: "Plumbing and Drain Services", body: "Emergency calls come from reputation and visibility. Fleet wraps build both simultaneously across every Columbus suburb you service." },
-              { icon: Zap, title: "Electrical Contractors", body: "Stand out on every job site and in every neighborhood. Your wrapped vehicles signal professionalism before your technician rings the doorbell." },
-              { icon: Leaf, title: "Landscaping and Lawn Care", body: "Seasonal visibility when it counts most. Your branded trucks and trailers in subdivisions during spring and summer are your most powerful marketing tool." },
-              { icon: HardHat, title: "Construction and Roofing", body: "Parked at job sites for days at a time — your fleet is a neighborhood billboard with zero additional cost per impression." },
-              { icon: Home, title: "Real Estate and Property Management", body: "Professional vehicle branding builds name recognition across your farm area and signals to buyers and sellers that you're an established local expert." },
-              { icon: Package, title: "Delivery and Logistics", body: "Turn your delivery route into a branding route. Every stop is a marketing moment for the businesses watching your van arrive." },
-              { icon: Heart, title: "Healthcare and Dental", body: "Mobile health services and dental practices use fleet branding to reach patients and build community presence." },
+              { icon: Wrench, title: "HVAC and mechanical", body: "Your vans are in neighborhoods all day. A wrapped fleet gets you noticed by homeowners before they ever search online." },
+              { icon: Droplet, title: "Plumbing and drain", body: "Emergency calls go to the name people remember. A wrapped fleet builds that name in every suburb you serve." },
+              { icon: Zap, title: "Electrical contractors", body: "Stand out on every job site. A wrapped truck says professional before your tech rings the doorbell." },
+              { icon: Leaf, title: "Landscaping and lawn care", body: "Be seen when it counts. Branded trucks and trailers in subdivisions all spring and summer do more marketing than anything else you own." },
+              { icon: HardHat, title: "Construction and roofing", body: "Your trucks sit at job sites for days. That's a neighborhood billboard you already paid for." },
+              { icon: Home, title: "Real estate and property management", body: "A branded car builds your name across your farm area. Buyers and sellers see an established local agent." },
+              { icon: Package, title: "Delivery and logistics", body: "Your delivery route becomes an ad route. Every stop is a chance to be seen." },
+              { icon: Heart, title: "Healthcare and dental", body: "Mobile health services and dental practices use branded vehicles to reach patients and get known in town." },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -403,7 +403,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 5 — Process */}
+      {/* SECTION 5: Process */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-4xl">
           <motion.h2
@@ -413,17 +413,17 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-14 text-foreground"
           >
-            How Our <span className="text-primary">Fleet Wrap Process</span> Works
+            How our <span className="text-primary">fleet wrap process</span> works
           </motion.h2>
 
           <div className="relative space-y-6">
             {[
-              { title: "Free Consultation and Quote (24-hour response)", body: "Tell us your fleet count, vehicle types, coverage goals, and budget. We respond with a detailed quote within 24 hours. No obligation, no pressure." },
-              { title: "We Shop Our Network", body: "We reach out to our vetted Central Ohio installer network, compare options on quality, pricing, and availability, and bring you the best match for your specific project." },
-              { title: "Custom Design Development", body: "Our design team creates a unified fleet branding system — consistent graphics, color matching, and logo placement across every vehicle. You receive a full digital proof before any vinyl is produced." },
-              { title: "Proof Approval", body: "Review your designs and request changes at no cost. We don't go to production until you're 100% satisfied." },
-              { title: "Premium Vinyl Production", body: "Your approved designs are printed on commercial-grade 3M or Avery Dennison vinyl with UV-resistant inks and protective laminates built for Ohio's seasonal conditions." },
-              { title: "Professional Installation and Delivery", body: "We coordinate installation scheduling to minimize downtime. For larger fleets, we phase installations so you're never without your full fleet. Every vehicle is inspected before delivery." },
+              { title: "Free consult and quote (24-hour response)", body: "Tell us how many vehicles, what kind, how much coverage and your budget. You get a detailed quote within 24 hours. No obligation, no pressure." },
+              { title: "We shop our network", body: "We go to our vetted Central Ohio installers, compare quality, price and availability, and bring you the best fit for your job." },
+              { title: "Design", body: "We build one look for your whole fleet. Same graphics, same colors, same logo placement on every vehicle. You see a full digital proof before any vinyl gets printed." },
+              { title: "Proof approval", body: "Review the designs and ask for changes at no cost. Nothing gets printed until you're happy." },
+              { title: "Vinyl production", body: "Your approved design is printed on commercial 3M or Avery Dennison vinyl, with UV-resistant inks and a laminate built for Ohio weather." },
+              { title: "Installation and delivery", body: "We schedule installs to keep your downtime low. Bigger fleets get done in phases, so you never lose the whole fleet at once. Every vehicle is inspected before it goes back to you." },
             ].map((step, i) => (
               <motion.div
                 key={i}
@@ -438,7 +438,7 @@ const FleetWraps = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-lg md:text-xl font-black text-foreground mb-2 leading-tight">
-                    Step {i + 1} — {step.title}
+                    Step {i + 1}: {step.title}
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {step.body}
@@ -450,7 +450,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 6 — Pricing */}
+      {/* SECTION 6: Pricing */}
       <section className="py-20 lg:py-28 bg-muted/30 border-y border-border">
         <div className="container max-w-5xl">
           <motion.h2
@@ -460,8 +460,8 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-12 text-foreground"
           >
-            Fleet Wrap Investment —{" "}
-            <span className="text-primary">Columbus Ohio 2026 Pricing</span>
+            What fleet wraps cost:{" "}
+            <span className="text-primary">Columbus 2026 pricing</span>
           </motion.h2>
 
           <motion.div
@@ -473,15 +473,15 @@ const FleetWraps = () => {
           >
             <div className="grid grid-cols-12 bg-ohio-navy text-primary-foreground text-xs md:text-sm font-bold uppercase tracking-wider">
               <div className="col-span-5 p-4 md:p-5 border-r border-primary-foreground/10">Service</div>
-              <div className="col-span-3 p-4 md:p-5 border-r border-primary-foreground/10">Price Range</div>
-              <div className="col-span-4 p-4 md:p-5">Best For</div>
+              <div className="col-span-3 p-4 md:p-5 border-r border-primary-foreground/10">Price range</div>
+              <div className="col-span-4 p-4 md:p-5">Best for</div>
             </div>
             {[
-              { s: "Spot Decals and Logo Graphics", p: "$150–$400 per vehicle", b: "Single vehicles, budget branding" },
-              { s: "Partial Wrap", p: "$800–$1,800 per vehicle", b: "Small fleets, leased vehicles" },
-              { s: "Full Wrap — Car or SUV", p: "$2,000–$3,000 per vehicle", b: "Company cars, agent vehicles" },
-              { s: "Full Wrap — Van or Truck", p: "$2,800–$4,000 per vehicle", b: "Service fleets, contractor vehicles" },
-              { s: "Full Wrap — Box Truck", p: "$3,500–$6,000 per vehicle", b: "Delivery fleets, large commercial" },
+              { s: "Spot decals and logo graphics", p: "$150–$400 per vehicle", b: "Single vehicles, budget branding" },
+              { s: "Partial wrap", p: "$800–$1,800 per vehicle", b: "Small fleets, leased vehicles" },
+              { s: "Full wrap: car or SUV", p: "$2,000–$3,000 per vehicle", b: "Company cars, agent vehicles" },
+              { s: "Full wrap: van or truck", p: "$2,800–$4,000 per vehicle", b: "Service fleets, contractor vehicles" },
+              { s: "Full wrap: box truck", p: "$3,500–$6,000 per vehicle", b: "Delivery fleets, large commercial" },
             ].map((row, i) => (
               <div
                 key={row.s}
@@ -502,13 +502,13 @@ const FleetWraps = () => {
             className="mt-10 rounded-2xl p-7 bg-gradient-to-br from-ohio-navy to-ohio-grey-dark border border-primary/25"
           >
             <h3 className="font-display text-xl md:text-2xl font-black text-primary-foreground mb-5">
-              Volume Discounts
+              Volume discounts
             </h3>
             <ul className="space-y-3">
               {[
                 "3–5 vehicles: 10% off total",
                 "6–10 vehicles: 15% off total",
-                "11+ vehicles: Custom fleet pricing — contact us",
+                "11+ vehicles: custom fleet pricing. Call us.",
               ].map((line) => (
                 <li key={line} className="flex items-start gap-3 text-primary-foreground/90 text-base md:text-lg">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
@@ -519,7 +519,7 @@ const FleetWraps = () => {
           </motion.div>
 
           <p className="text-xs text-muted-foreground italic text-center mt-6 max-w-3xl mx-auto leading-relaxed">
-            Pricing estimates for Columbus Ohio market 2026. Final pricing confirmed in your free 24-hour quote based on vehicle condition, design complexity, and coverage.
+            Estimates for the Columbus market in 2026. Your free 24-hour quote sets the final price, based on vehicle condition, design and coverage.
           </p>
 
           <div className="text-center mt-10">
@@ -528,7 +528,7 @@ const FleetWraps = () => {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.55)] transition-all duration-300 group uppercase tracking-wider"
               >
-                Get My Exact Fleet Quote — Free in 24 Hours
+                Get my exact fleet quote, free in 24 hours
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -536,7 +536,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* SECTION 7 — FAQ */}
+      {/* SECTION 7: FAQ */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-3xl">
           <motion.h2
@@ -546,18 +546,18 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-12 text-foreground"
           >
-            Fleet Wrap FAQs —{" "}
-            <span className="text-primary">Columbus Ohio</span>
+            Fleet wrap questions,{" "}
+            <span className="text-primary">answered</span>
           </motion.h2>
 
           <Accordion type="single" collapsible className="space-y-4">
             {[
-              { q: "How much do fleet vehicle wraps cost in Columbus Ohio?", a: "Fleet wrap pricing in Columbus ranges from $150–$400 per vehicle for spot decals, $800–$1,800 for partial wraps, and $2,800–$4,000+ for full wraps on vans and trucks. Multi-vehicle fleets receive volume discounts starting at 10% for 3+ vehicles. We provide exact pricing in your free 24-hour quote." },
-              { q: "How long do commercial fleet wraps last in Ohio?", a: "A professionally installed fleet wrap using commercial-grade 3M or Avery Dennison vinyl typically lasts 5–7 years with proper care. Hand washing is recommended — avoid automated car washes with abrasive brushes to maximize lifespan in Ohio's weather conditions." },
-              { q: "Will a vehicle wrap damage my fleet vehicle's paint?", a: "No — when installed and removed properly, commercial vinyl wraps protect your paint from UV damage, minor scratches, and road debris. This is especially valuable for leased fleet vehicles where paint condition affects end-of-lease costs." },
-              { q: "How long does fleet wrap installation take?", a: "Individual vehicles typically take 1–3 business days depending on size and coverage. For larger fleets, we schedule installations in phases so you're never without your full operational fleet." },
-              { q: "Do you offer fleet pricing for multiple vehicles?", a: "Yes. Volume discounts start at 10% for 3–5 vehicles, 15% for 6–10 vehicles, and custom pricing for 11+ vehicles. Because we work with a network of Central Ohio installers, we can also shop for the most competitive fleet pricing available for your specific project." },
-              { q: "Can you match branding across different vehicle types?", a: "Absolutely. We create unified fleet branding systems that maintain consistent colors, logo placement, and messaging across every vehicle type — vans, trucks, box trucks, trailers, and company cars — regardless of size or shape differences." },
+              { q: "How much do fleet vehicle wraps cost in Columbus Ohio?", a: "In Columbus, spot decals run $150–$400 per vehicle. Partial wraps run $800–$1,800. Full wraps on vans and trucks run $2,800–$4,000+. Fleets of 3+ vehicles get volume discounts starting at 10%. Your free 24-hour quote gives you the exact number." },
+              { q: "How long do commercial fleet wraps last in Ohio?", a: "A properly installed wrap in commercial 3M or Avery Dennison vinyl usually lasts 5–7 years with care. Hand wash it. Skip automatic car washes with brushes. That's how it holds up to Ohio weather." },
+              { q: "Will a vehicle wrap damage my fleet vehicle's paint?", a: "No. Installed and removed the right way, vinyl protects your paint from sun, light scratches and road debris. That matters on leased vehicles, where paint condition hits your end-of-lease costs." },
+              { q: "How long does fleet wrap installation take?", a: "One vehicle usually takes 1–3 business days, depending on size and coverage. Bigger fleets get done in phases, so you're never without your whole fleet." },
+              { q: "Do you offer fleet pricing for multiple vehicles?", a: "Yes. 10% off for 3–5 vehicles, 15% off for 6–10, and custom pricing for 11+. And because we work with several Central Ohio installers, we shop your job for the best fleet price." },
+              { q: "Can you match branding across different vehicle types?", a: "Yes. We build one look that carries across vans, trucks, box trucks, trailers and company cars. Same colors, same logo placement, same message, whatever the size or shape." },
             ].map((item, i) => (
               <AccordionItem
                 key={i}
@@ -576,7 +576,7 @@ const FleetWraps = () => {
         </div>
       </section>
 
-      {/* Built by an Operator — credibility insert above final CTA */}
+      {/* Built by an Operator: credibility insert above final CTA */}
       <section className="py-16 lg:py-20 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -586,14 +586,14 @@ const FleetWraps = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Built by an Operator
+              Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
-              This Isn't Theory. It's Built by{" "}
-              <span className="text-primary">Someone Who's Done It.</span>
+              Advice from someone who{" "}
+              <span className="text-primary">has done it.</span>
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+              David Stein co-founded and runs Buckeye Biz Hub. Before that he co-founded BeerTubes, was named inventor on its patents, grew it from $79K in year one to $4.5M, and sold it in 2017. Then he built SBC Hospitality Group to 100+ employees. He's spent his own money on marketing. He knows what works.
             </p>
             <Link
               to="/about"
@@ -622,7 +622,7 @@ const FleetWraps = () => {
             className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight"
             style={{ textShadow: "0 4px 20px rgba(0,0,0,0.3)" }}
           >
-            Ready to Brand Your Columbus Ohio Fleet?
+            Ready to brand your fleet?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -631,7 +631,7 @@ const FleetWraps = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl text-primary-foreground/90 font-semibold mb-10 leading-relaxed"
           >
-            Get a free fleet wrap quote within 24 hours. No obligation. No pressure. Just a clear, detailed proposal for turning your vehicles into your best marketing asset.
+            Get a free fleet wrap quote within 24 hours. No obligation. No pressure. A clear, detailed plan to turn your trucks into your best ad.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -645,7 +645,7 @@ const FleetWraps = () => {
                 size="lg"
                 className="bg-background text-foreground hover:bg-background/90 font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] group uppercase tracking-wider w-full sm:w-auto"
               >
-                Get My Free Fleet Quote
+                Get my free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

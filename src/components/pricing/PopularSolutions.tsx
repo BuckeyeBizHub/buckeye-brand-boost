@@ -14,9 +14,9 @@ const solutions: { image: string; title: string; price: string | null; popular?:
     title: "Vehicle Wraps & Fleet Branding",
     price: null,
     bullets: [
-      "Full-color wraps & partial wraps",
+      "Full and partial wraps",
       "Magnetic signs & vehicle lettering",
-      "Fleet consistency across all vehicles",
+      "Every truck in the fleet matches",
       "All fees shown upfront",
     ],
   },
@@ -28,8 +28,8 @@ const solutions: { image: string; title: string; price: string | null; popular?:
     bullets: [
       "Custom polos, hoodies & tees",
       "Drinkware, hats & embroidery",
-      "Promotional giveaways & merch",
-      "Transparent pricing, no surprises",
+      "Giveaways & merch",
+      "Every fee up front, no surprises",
     ],
   },
   {
@@ -54,8 +54,8 @@ const solutions: { image: string; title: string; price: string | null; popular?:
       "Website creation & design",
       "Google Business Profile optimization",
       "SEO to boost your online visibility",
-      "Everything bundled with big savings",
-      "100% transparent – nothing hidden",
+      "Bundled together to save you money",
+      "Every cost up front. Nothing hidden",
     ],
   },
 ];
@@ -74,8 +74,7 @@ const PopularSolutions = () => (
           <span className="text-primary">Starting Prices</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Every quote includes full pricing transparency — all fees disclosed up
-          front so you know exactly what you're paying.
+          Every quote shows every fee up front, so you know exactly what you're paying.
         </p>
       </motion.div>
 

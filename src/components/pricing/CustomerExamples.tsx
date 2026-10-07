@@ -11,7 +11,7 @@ const examples = [
     image: businessCardsImg,
     imageAlt: "Premium red and black business cards stacked on a dark surface",
     description:
-      "We sourced premium business cards through our supplier network — comparing options across multiple vendors to lock in the best quality at the lowest price for your brand.",
+      "We sourced premium business cards through our supplier network, comparing options across multiple vendors to lock in the best quality at the lowest price for your brand.",
     ourPrice: "$420",
     typicalPrice: "$580–$750",
     savings: "$160–$330 saved",
@@ -31,7 +31,7 @@ const examples = [
     image: vehicleWrapImg,
     imageAlt: "Full vehicle wrap on a blue roofing company truck with bold branding",
     description:
-      "We coordinated design, high-quality print materials, and professional installation — all sourced competitively so your fleet looks incredible without the premium price tag.",
+      "We coordinated design, high-quality print materials, and professional installation, all sourced competitively so your fleet looks incredible without the premium price tag.",
     ourPrice: "$5,250",
     typicalPrice: "$6,800–$8,500",
     savings: "$1,550–$3,250 saved",
@@ -127,7 +127,7 @@ const CustomerExamples = () => (
         <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm">
           <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
           <span className="text-sm font-semibold text-foreground/80">
-            Every quote is transparent — you see our wholesale cost and management fee upfront.
+            Every quote is transparent: you see our wholesale cost and management fee upfront.
           </span>
         </div>
       </motion.div>

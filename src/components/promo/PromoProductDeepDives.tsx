@@ -22,32 +22,32 @@ const deepDives: DeepDive[] = [
     badge: "Trade Show #1",
     title: "Custom Printed Tote Bags & Bags",
     intro:
-      "Tote bags are one of the highest-ROI promotional items you can hand out. They're used repeatedly — at grocery stores, farmers markets, and gyms — generating thousands of impressions per bag. They also double as packaging: fill one with your other branded items for an instant 'swag kit.'",
+      "Totes are one of the best returns in promo. People reuse them at the grocery store, the farmers market, the gym. Thousands of looks per bag. They also work as packaging. Fill one with your other branded items and you have a swag kit.",
     columns: [
       {
-        heading: "Bag Types & Materials",
+        heading: "Bag types and materials",
         items: [
-          "Non-woven polypropylene — lightweight, from $1/unit",
-          "Cotton canvas (4–12 oz) — premium, durable, reusable",
-          "Recycled PET / RPET — eco-friendly, made from bottles",
-          "Jute / burlap — rustic, natural look for organic brands",
-          "Drawstring backpacks — popular with students & athletes",
-          "Insulated cooler bags — great for food & beverage brands",
+          "Non-woven polypropylene: lightweight, from $1/unit",
+          "Cotton canvas (4–12 oz): durable, reusable",
+          "Recycled PET / RPET: made from bottles",
+          "Jute / burlap: rustic look for natural brands",
+          "Drawstring backpacks: popular with students and athletes",
+          "Insulated cooler bags: good for food and drink brands",
         ],
       },
       {
-        heading: "Print Methods & Sizes",
+        heading: "Print methods and sizes",
         items: [
-          "Screen print — best for 1–3 color logos at volume",
-          "Full-color heat transfer — photo-quality, unlimited colors",
+          "Screen print: best for 1–3 color logos at volume",
+          "Full-color heat transfer: photo quality, any number of colors",
           "Standard tote: 15\" × 16\" (most popular grocery size)",
           "Large tote: 20\" × 15\" × 5\" with gusset for capacity",
-          "Drawstring: 14\" × 18\" — compact and portable",
-          "Print area typically 10\" × 10\" on front panel",
+          "Drawstring: 14\" × 18\", compact",
+          "Print area usually 10\" × 10\" on the front",
         ],
       },
       {
-        heading: "Pricing & Volume Guide",
+        heading: "Pricing and volume",
         items: [
           "Non-woven: $1.00–$2.50/unit (100+ qty)",
           "Cotton canvas: $3.00–$8.00/unit (50+ qty)",
@@ -59,11 +59,11 @@ const deepDives: DeepDive[] = [
       },
     ],
     useCases: [
-      { who: "Columbus Farmers Market vendor", how: "Custom canvas totes for loyal customers — they carry your brand through Short North every Saturday" },
+      { who: "Columbus Farmers Market vendor", how: "Custom canvas totes for loyal customers, they carry your brand through Short North every Saturday" },
       { who: "Real estate agency", how: "Welcome bags for new homeowners filled with local business coupons and branded items" },
-      { who: "Trade show exhibitor", how: "Non-woven totes as booth giveaways — attendees carry your branding through the entire convention hall" },
+      { who: "Trade show exhibitor", how: "Non-woven totes as booth giveaways, attendees carry your branding through the entire convention hall" },
     ],
-    tip: "Order an extra 10% beyond your planned quantity — leftover totes never go to waste. Use them at charity events, community days, or as surprise bonuses for walk-in customers.",
+    tip: "Order 10% more than you think you need. Leftover totes never go to waste. Use them at charity events, community days, or as a thank-you for good customers.",
   },
   {
     id: "notebooks",
@@ -71,32 +71,32 @@ const deepDives: DeepDive[] = [
     badge: "Executive Favorite",
     title: "Branded Notebooks & Journals",
     intro:
-      "A branded notebook sits on your client's desk or in their bag for weeks or months — far longer than any digital ad stays in memory. They're perfect for executive gifts, conference swag, employee onboarding, and client welcome kits. Choose from debossed leather to full-color printed covers.",
+      "A branded notebook sits on a client's desk for weeks or months. No digital ad lasts that long. Good for executive gifts, conference swag, onboarding kits and client welcome kits. Debossed leather to full-color printed covers.",
     columns: [
       {
-        heading: "Cover & Binding Options",
+        heading: "Covers and binding",
         items: [
-          "Hardcover leatherette — debossed or foil-stamped logo",
-          "Softcover cardstock — full-color printed wraparound",
-          "Spiral-bound — lay-flat for easy writing",
-          "Perfect-bound — clean, book-like finish",
-          "Elastic closure & ribbon bookmark included on premium",
+          "Hardcover leatherette: debossed or foil-stamped logo",
+          "Softcover cardstock: full-color wraparound print",
+          "Spiral-bound: lays flat for writing",
+          "Perfect-bound: clean, book-like finish",
+          "Elastic closure and ribbon bookmark on premium styles",
           "Pen loop built in (matches branded pen sets)",
         ],
       },
       {
-        heading: "Interior & Size Options",
+        heading: "Pages and sizes",
         items: [
-          "A5 (5.5\" × 8.5\") — most popular portable size",
-          "A4 (8.5\" × 11\") — full-page meeting notes",
-          "Pocket size (3.5\" × 5.5\") — easy to carry anywhere",
-          "Lined, dotted, grid, or blank pages available",
+          "A5 (5.5\" × 8.5\"): the most popular size",
+          "A4 (8.5\" × 11\"): full-page meeting notes",
+          "Pocket size (3.5\" × 5.5\"): fits anywhere",
+          "Lined, dotted, grid or blank pages",
           "80–160 pages depending on binding style",
-          "Custom interior headers possible (add your URL, tagline)",
+          "Custom page headers (add your URL or tagline)",
         ],
       },
       {
-        heading: "Pricing & Customization",
+        heading: "Pricing and customization",
         items: [
           "Softcover printed: $3.00–$6.00/unit (50+ qty)",
           "Hardcover debossed: $6.00–$15.00/unit (25+ qty)",
@@ -108,11 +108,11 @@ const deepDives: DeepDive[] = [
       },
     ],
     useCases: [
-      { who: "Columbus law firm", how: "Debossed leather journals as client gifts after closing — classy touch that generates referrals" },
+      { who: "Columbus law firm", how: "Debossed leather journals as client gifts after closing, classy touch that generates referrals" },
       { who: "Tech startup", how: "Custom notebooks in employee onboarding kits with company values printed inside the cover" },
-      { who: "Conference organizer", how: "Branded A5 notebooks in attendee bags — sponsors love seeing their logo used for months" },
+      { who: "Conference organizer", how: "Branded A5 notebooks in attendee bags, sponsors love seeing their logo used for months" },
     ],
-    tip: "Pair a branded notebook with a matching pen for a coordinated gift set. We can kit them together in a custom box or sleeve — it doubles the perceived value for just a few dollars more.",
+    tip: "Pair a notebook with a matching pen. We can box or sleeve them together. It feels like a much bigger gift for a few dollars more.",
   },
   {
     id: "desk-items",
@@ -120,32 +120,32 @@ const deepDives: DeepDive[] = [
     badge: "Daily Exposure",
     title: "Custom Mousepads, Desk Mats & Accessories",
     intro:
-      "Desk accessories are the promotional products with the highest daily impression count — your logo sits in front of your client or employee for every minute of their workday. Mousepads, desk mats, and coasters deliver unmatched, quiet brand reinforcement.",
+      "Desk items get seen more than any other promo product. Your logo sits in front of a client or employee all day long. Mousepads, desk mats and coasters do quiet, steady work.",
     columns: [
       {
-        heading: "Product Types",
+        heading: "Product types",
         items: [
-          "Standard mousepad — 9\" × 7\" (classic size)",
-          "Extended desk mat — 35\" × 16\" (covers keyboard + mouse)",
-          "Coaster sets — round or square, cork-backed",
-          "Desk organizers — printed or engraved",
-          "Wireless charging mousepads — tech + branding combined",
-          "Calendar mousepads — year-long daily exposure",
+          "Standard mousepad: 9\" × 7\"",
+          "Extended desk mat: 35\" × 16\" (covers keyboard + mouse)",
+          "Coaster sets: round or square, cork-backed",
+          "Desk organizers: printed or engraved",
+          "Wireless charging mousepads",
+          "Calendar mousepads: seen every day for a year",
         ],
       },
       {
-        heading: "Materials & Durability",
+        heading: "Materials and durability",
         items: [
-          "Fabric top + rubber base — standard, comfortable",
-          "Hard surface / plastic — ultra-smooth for gaming mice",
-          "Cork base — eco-friendly, natural look",
-          "Full-color sublimation — edge-to-edge vivid printing",
-          "Machine-washable options for long-term use",
+          "Fabric top + rubber base: the standard",
+          "Hard plastic surface: smooth for gaming mice",
+          "Cork base: natural look",
+          "Full-color sublimation: printed edge to edge",
+          "Machine-washable options",
           "Anti-fray stitched edges on premium models",
         ],
       },
       {
-        heading: "Pricing & Specs",
+        heading: "Pricing and specs",
         items: [
           "Standard mousepad: $2.00–$5.00/unit (50+ qty)",
           "Extended desk mat: $8.00–$18.00/unit (25+ qty)",
@@ -157,11 +157,11 @@ const deepDives: DeepDive[] = [
       },
     ],
     useCases: [
-      { who: "Insurance agency", how: "Branded mousepads mailed to clients after policy renewal — 8 hours of daily brand exposure" },
-      { who: "Columbus coworking space", how: "Custom desk mats on every desk with sponsor logos — premium, functional branding" },
-      { who: "IT company", how: "Wireless charging mousepads as holiday gifts to key accounts — high perceived value" },
+      { who: "Insurance agency", how: "Branded mousepads mailed to clients after policy renewal, 8 hours of daily brand exposure" },
+      { who: "Columbus coworking space", how: "Custom desk mats on every desk with sponsor logos, premium, functional branding" },
+      { who: "IT company", how: "Wireless charging mousepads as holiday gifts to key accounts, high perceived value" },
     ],
-    tip: "Extended desk mats are trending fast in 2025 — they look premium, cover the full workspace, and cost less than you'd think at volume. Great for impressing remote employees in home offices.",
+    tip: "Extended desk mats look high-end, cover the whole desk, and cost less than you'd think at volume. Good gift for remote employees.",
   },
   {
     id: "drinkware-deep",
@@ -169,32 +169,32 @@ const deepDives: DeepDive[] = [
     badge: "Highest Retention",
     title: "Printed Drinkware: Tumblers, Bottles & Beyond",
     intro:
-      "Drinkware consistently ranks as the #1 promotional product category for consumer retention — 78% of people keep a branded tumbler or bottle for over a year. From budget-friendly acrylic cups to premium stainless steel tumblers, drinkware delivers the best cost-per-impression of any promo item.",
+      "Drinkware ranks #1 in promo for how long people keep it. 78% of people keep a branded tumbler or bottle for over a year. Cheap acrylic cups to stainless tumblers. Hard to beat on cost per impression.",
     columns: [
       {
-        heading: "Drinkware Types",
+        heading: "Drinkware types",
         items: [
-          "Stainless steel tumblers (20 oz / 30 oz) — most popular",
-          "Insulated water bottles — double-wall vacuum",
-          "Ceramic coffee mugs — classic office staple",
-          "Acrylic cups with straw — budget-friendly, colorful",
-          "Stemless wine tumblers — event & hospitality favorite",
-          "Can coolers / koozies — ultra-affordable awareness",
+          "Stainless steel tumblers (20 oz / 30 oz): most popular",
+          "Insulated water bottles: double-wall vacuum",
+          "Ceramic coffee mugs: the office classic",
+          "Acrylic cups with straw: cheap and colorful",
+          "Stemless wine tumblers: events and hospitality",
+          "Can coolers / koozies: the cheapest way in",
         ],
       },
       {
-        heading: "Print & Branding Options",
+        heading: "Print and branding",
         items: [
-          "Full-color UV wrap printing — vivid, permanent",
-          "Laser engraving — elegant on stainless steel",
-          "Screen printing — cost-effective at high volume",
-          "Pad printing — great for curved mugs",
-          "Wrap-around designs for 360° brand exposure",
-          "Individual gift boxing available for premium gifts",
+          "Full-color UV wrap printing: bright, permanent",
+          "Laser engraving: sharp on stainless steel",
+          "Screen printing: cheapest at high volume",
+          "Pad printing: good for curved mugs",
+          "Wrap-around designs, seen from every side",
+          "Individual gift boxes available",
         ],
       },
       {
-        heading: "Pricing & Selection Guide",
+        heading: "Pricing guide",
         items: [
           "Can coolers: $0.75–$2.00/unit (100+ qty)",
           "Acrylic cups: $2.50–$5.00/unit (50+ qty)",
@@ -206,11 +206,11 @@ const deepDives: DeepDive[] = [
       },
     ],
     useCases: [
-      { who: "HVAC company", how: "Branded tumblers left at every service call — customers use them daily and think of you when they need service again" },
-      { who: "Columbus brewery", how: "Custom pint glasses and can coolers for taproom merch — customers buy AND advertise for you" },
-      { who: "Corporate HR team", how: "Premium insulated bottles in new-hire welcome kits — practical, appreciated, and used every day" },
+      { who: "HVAC company", how: "Branded tumblers left at every service call, customers use them daily and think of you when they need service again" },
+      { who: "Columbus brewery", how: "Custom pint glasses and can coolers for taproom merch, customers buy and advertise for you" },
+      { who: "Corporate HR team", how: "Premium insulated bottles in new-hire welcome kits, practical, appreciated, and used every day" },
     ],
-    tip: "Stainless steel tumblers in the $8–$12 range hit the sweet spot: they look and feel premium, they're used constantly, and they deliver the best cost-per-impression of any item in your promo arsenal.",
+    tip: "Stainless tumblers in the $8–$12 range are the sweet spot. They feel high-end, people use them every day, and they beat almost anything on cost per impression.",
   },
   {
     id: "banners-promo",
@@ -218,48 +218,48 @@ const deepDives: DeepDive[] = [
     badge: "Event Essential",
     title: "Custom Banners & Flags as Promotional Items",
     intro:
-      "Banners and flags aren't just signage — they're some of the most effective promotional products for events, trade shows, and retail spaces. A well-designed retractable banner or feather flag draws foot traffic, frames your booth, and creates a professional brand presence that builds immediate trust.",
+      "Banners and flags pull people in at events, trade shows and stores. A good retractable banner or feather flag draws foot traffic and frames your booth. People trust what looks professional.",
     columns: [
       {
-        heading: "Banner & Flag Types",
+        heading: "Banner and flag types",
         items: [
-          "Retractable / pull-up banners — portable, sets up in 30 seconds",
-          "Vinyl banners — indoor/outdoor, grommeted or pole-pocketed",
-          "Feather flags — tall, eye-catching, great for roadside",
-          "Teardrop flags — compact, wind-resistant design",
-          "Table throws / runners — branded tablecloths for events",
-          "Step & repeat backdrops — photo-op branding walls",
+          "Retractable pull-up banners: portable, sets up in 30 seconds",
+          "Vinyl banners: indoor or outdoor, grommets or pole pockets",
+          "Feather flags: tall, good for roadside",
+          "Teardrop flags: compact, handles wind",
+          "Table throws and runners: branded tablecloths",
+          "Step and repeat backdrops: photo walls",
         ],
       },
       {
-        heading: "Materials & Durability",
+        heading: "Materials and durability",
         items: [
-          "13 oz scrim vinyl — outdoor standard, weather-resistant",
-          "Fabric / dye-sublimation — wrinkle-free, machine-washable",
-          "Mesh banner — wind-resistant for outdoor use",
-          "Retractable hardware — aluminum with padded carry case",
-          "UV-resistant inks — no fading in direct sunlight",
+          "13 oz scrim vinyl: the outdoor standard",
+          "Fabric / dye-sublimation: wrinkle-free, machine-washable",
+          "Mesh banner: lets wind through outdoors",
+          "Retractable hardware: aluminum with padded carry case",
+          "UV-resistant inks: hold color in direct sun",
           "Fire-retardant options for indoor venues",
         ],
       },
       {
-        heading: "Sizes & Pricing Guide",
+        heading: "Sizes and pricing",
         items: [
-          "Retractable banner: 33\" × 80\" (most popular) — $99–$175",
+          "Retractable banner: 33\" × 80\" (most popular), $99–$175",
           "Vinyl banner (3' × 6'): $30–$60 per banner",
           "Feather flag (8–15 ft): $85–$200 with hardware",
-          "Table throw (6 ft): $99–$175 — fitted or draped",
+          "Table throw (6 ft): $99–$175, fitted or draped",
           "Step & repeat (8' × 8'): $200–$400",
           "Production: 5–10 business days standard",
         ],
       },
     ],
     useCases: [
-      { who: "Columbus food truck", how: "Feather flags and a retractable banner at every location — visible from 200+ feet, easy to set up and tear down" },
-      { who: "Nonprofit fundraiser", how: "Step & repeat backdrop for donor photos + table throws for registration — polished, professional look on a budget" },
-      { who: "Real estate open house", how: "A-frame signs outside + retractable banner in the foyer — cohesive branding that builds buyer confidence" },
+      { who: "Columbus food truck", how: "Feather flags and a retractable banner at every location, visible from 200+ feet, easy to set up and tear down" },
+      { who: "Nonprofit fundraiser", how: "Step & repeat backdrop for donor photos + table throws for registration, polished, professional look on a budget" },
+      { who: "Real estate open house", how: "A-frame signs outside + retractable banner in the foyer, cohesive branding that builds buyer confidence" },
     ],
-    tip: "The 'trade show starter kit' — one retractable banner + one 6ft table throw + 500 business cards — is the minimum for a professional booth presence. We bundle-price all three for significant savings over ordering separately.",
+    tip: "The minimum trade show kit: one retractable banner, one 6 ft table throw, 500 business cards. We bundle all three for less than ordering them one at a time.",
   },
 ];
 
@@ -332,7 +332,7 @@ const PromoProductDeepDives = () => (
             >
               <h3 className="font-display text-lg font-black text-foreground mb-5 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5 text-primary" />
-                Real-World Use Cases for Ohio Businesses
+                Ideas for Ohio businesses
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 {section.useCases.map((uc) => (

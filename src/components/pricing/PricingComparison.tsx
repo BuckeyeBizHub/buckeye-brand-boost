@@ -6,32 +6,32 @@ const reasons = [
   {
     icon: Users,
     title: "A Real Person, Not a Website",
-    text: "When you work with us, you get a dedicated concierge who knows your business, your brand, and your goals — not a faceless checkout page.",
+    text: "You work with David, who learns your business, your brand and your goals. No faceless checkout page.",
   },
   {
     icon: DollarSign,
     title: "We Shop 4,300+ Suppliers for You",
-    text: "Big online printers mark up a single supplier's prices. We compare across thousands of vendors to find the best quality at the lowest cost — and pass those savings to you.",
+    text: "Big online printers mark up one supplier's prices. We compare across thousands of vetted vendors for the best quality at the lowest cost, and you keep the savings.",
   },
   {
     icon: ShieldCheck,
-    title: "Transparent Pricing, Always",
-    text: "No hidden setup fees, no surprise shipping charges, no bait-and-switch. You see every cost upfront before you approve anything.",
+    title: "Every Fee Up Front",
+    text: "No hidden setup fees. No surprise shipping. No bait-and-switch. You see every cost before you approve anything.",
   },
   {
     icon: Palette,
     title: "Free Design Assistance",
-    text: "Need help with your artwork? We include design support at no extra charge — something most online printers charge $50–$150+ for.",
+    text: "Need help with your artwork? Design support is included. Most online printers charge $50–$150+ for that.",
   },
   {
     icon: Phone,
     title: "Fast, Personal Communication",
-    text: "Questions? Pick up the phone or send an email. You'll hear back from a real person — usually the same day. No ticket queues, no chatbots.",
+    text: "Questions? Call or email. A real person gets back to you, usually the same day. No ticket queues. No chatbots.",
   },
   {
     icon: MapPin,
     title: "Local & Invested in Your Success",
-    text: "We're Ohio-based and care about the businesses in our community. Your success is our success — and we treat every order like it matters, because it does.",
+    text: "We're based in Ohio and we care about the businesses here. Every order matters to us, because it matters to you.",
   },
 ];
 
@@ -56,7 +56,7 @@ const PricingComparison = () => (
         viewport={{ once: true }}
         className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-14 leading-relaxed"
       >
-        Big online printers promise low prices — but they make up for it with hidden fees, slow support, and one-size-fits-all service. We take a different approach: personal attention, honest pricing, and real savings you can see.
+        Big online printers promise low prices, then make it up with hidden fees, slow support and one-size-fits-all service. We do it differently: personal attention, honest pricing and savings you can see.
       </motion.p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

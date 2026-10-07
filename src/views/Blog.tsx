@@ -1,21 +1,27 @@
 "use client";
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, BookOpen, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Link } from "@/lib/compat/router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { fetchPosts, fetchCategories, WPCategory } from "@/lib/wordpress";
+import { toPlainText, type BlogCategory, type BlogPostSummary } from "@/lib/blog-utils";
 
-const Blog = () => {
+const PER_PAGE = 9;
+
+interface BlogProps {
+  /** All posts, newest first (loaded from content/blog by the server page). */
+  posts: BlogPostSummary[];
+  categories: BlogCategory[];
+}
+
+const Blog = ({ posts: allPosts, categories }: BlogProps) => {
   const [page, setPage] = useState(1);
-  const [activeCat, setActiveCat] = useState<number | undefined>(undefined);
+  const [activeCat, setActiveCat] = useState<string | undefined>(undefined);
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
@@ -25,20 +31,21 @@ const Blog = () => {
     canonical: "https://www.buckeyebizhub.com/blog",
   });
 
-  const { data: categories = [] } = useQuery({
-    queryKey: ["wp-categories"],
-    queryFn: fetchCategories,
-    staleTime: 10 * 60 * 1000,
-  });
+  // Filtering, search and paging all happen in the browser over the props.
+  const filtered = useMemo(() => {
+    const words = search.toLowerCase().split(/\s+/).filter(Boolean);
+    return allPosts.filter((p) => {
+      if (activeCat && !p.categories.some((c) => c.slug === activeCat)) return false;
+      if (words.length === 0) return true;
+      const haystack = [p.title, toPlainText(p.excerpt), ...p.categories.map((c) => c.name), ...p.tags.map((t) => t.name)]
+        .join(" ")
+        .toLowerCase();
+      return words.every((w) => haystack.includes(w));
+    });
+  }, [allPosts, activeCat, search]);
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["wp-posts", page, activeCat, search],
-    queryFn: () => fetchPosts(page, 9, activeCat, search || undefined),
-    staleTime: 2 * 60 * 1000,
-  });
-
-  const posts = data?.items || [];
-  const totalPages = data?.totalPages || 1;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  const posts = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,12 +98,12 @@ const Blog = () => {
               </button>
               {categories.filter((c) => c.slug !== "uncategorized").map((cat) => (
                 <button
-                  key={cat.id}
-                  onClick={() => { setActiveCat(cat.id); setPage(1); }}
+                  key={cat.slug}
+                  onClick={() => { setActiveCat(cat.slug); setPage(1); }}
                   className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 whitespace-nowrap ${
-                    activeCat === cat.id ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+                    activeCat === cat.slug ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
                   }`}>
-                  <span dangerouslySetInnerHTML={{ __html: cat.name }} />
+                  <span>{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -119,27 +126,7 @@ const Blog = () => {
         <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[150px]" />
 
         <div className="container relative">
-          {isLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="rounded-3xl border-2 border-border overflow-hidden">
-                  <Skeleton className="h-52 w-full" />
-                  <div className="p-7 space-y-3">
-                    <Skeleton className="h-4 w-1/3" />
-                    <Skeleton className="h-6 w-full" />
-                    <Skeleton className="h-4 w-full" />
-                    <Skeleton className="h-4 w-2/3" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : error ? (
-            <div className="text-center py-20">
-              <h2 className="text-2xl font-black text-foreground mb-4">Unable to Load Posts</h2>
-              <p className="text-muted-foreground mb-6">We're having trouble connecting to our blog. Please try again later.</p>
-              <Button onClick={() => window.location.reload()}>Retry</Button>
-            </div>
-          ) : posts.length === 0 ? (
+          {posts.length === 0 ? (
             <div className="text-center py-20 max-w-3xl mx-auto">
               <div className="mx-auto mb-8 w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
                 <BookOpen className="w-12 h-12 text-primary" />
@@ -181,7 +168,7 @@ const Blog = () => {
               {/* Grid of remaining */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.slice(1).map((post, i) => (
-                  <motion.div key={post.id} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
+                  <motion.div key={post.slug} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
                     <BlogCard post={post} />
                   </motion.div>
                 ))}

@@ -21,7 +21,7 @@ const industries: Industry[] = [
     emoji: "🦷",
     title: "Dental Practices",
     description:
-      "Branded scrubs and staff uniforms, patient referral gift packages using local Ohio brands, office signage and printed materials, rebranding kits, and more — from a team that's been running a dental practice from the inside for 15+ years.",
+      "Branded scrubs and uniforms, referral gift packages with local Ohio brands, office signage, printed materials and rebranding kits. From someone who's spent 15+ years helping run a dental practice.",
     segments:
       "General dentists · Endodontists · Orthodontists · Periodontists · Pediatric · Oral Surgery · Multi-location DSO groups",
     cta: "See Dental Solutions",
@@ -31,7 +31,7 @@ const industries: Industry[] = [
     emoji: "🏠",
     title: "Roofing Contractors",
     description:
-      "Fleet wraps and vehicle graphics, crew apparel (polos, t-shirts, hoodies, high-vis safety vests), logo design, door hangers, yard signs, carbonless contract forms, trade show booths, postcards, and full marketing campaigns — for the busy season and everything after.",
+      "Fleet wraps, crew apparel (polos, t-shirts, hoodies, high-vis vests), logos, door hangers, yard signs, carbonless contract forms, trade show booths, postcards and full campaigns. For the busy season and the rest of the year.",
     segments:
       "Residential · Commercial · Industrial · Storm restoration · Multi-location operations",
     cta: "See Roofing Solutions",
@@ -41,7 +41,7 @@ const industries: Industry[] = [
     emoji: "🏗️",
     title: "Construction & General Contractors",
     description:
-      "Branded workwear and crew polos, vehicle graphics and fleet wraps, hard hat wraps, jobsite banners, trade show displays, and safety gear — for the field teams and fleets that represent your company on every job.",
+      "Workwear and crew polos, fleet wraps, hard hat wraps, jobsite banners, trade show displays and safety gear. Your crews and trucks represent you on every job.",
     segments:
       "General contractors · Commercial builders · Specialty contractors · Industrial",
     cta: "See Construction Solutions",
@@ -51,7 +51,7 @@ const industries: Industry[] = [
     emoji: "🚛",
     title: "Fleet & Logistics",
     description:
-      "Fleet wraps, magnetic signs, driver uniforms and safety vests, branded employee gear, and materials that keep a growing fleet looking consistent from truck to truck across multiple locations and markets.",
+      "Fleet wraps, magnetic signs, driver uniforms, safety vests and employee gear. Every truck looks the same, at every location.",
     segments: "3PLs · Trucking · Warehousing · Distribution · Fleet management",
     cta: "Get a Quote",
     href: "/contact",
@@ -60,7 +60,7 @@ const industries: Industry[] = [
     emoji: "🏡",
     title: "Real Estate",
     description:
-      "Business cards, yard signs, branded notepads and folders, closing gift packages, postcards, direct mail campaigns, and signage — everything a real estate professional needs to look sharp and stay top of mind.",
+      "Business cards, yard signs, notepads, folders, closing gifts, postcards, direct mail and signage. Look sharp and stay top of mind.",
     segments:
       "Individual agents · Teams · Brokerages · Property management companies",
     cta: "Get a Quote",
@@ -70,7 +70,7 @@ const industries: Industry[] = [
     emoji: "🌿",
     title: "Lawn Care & Landscaping",
     description:
-      "Fleet graphics and truck wraps, crew t-shirts and polos, door hangers, yard signs, and seasonal marketing materials — built for companies where every truck on the road is a rolling billboard.",
+      "Truck wraps, crew shirts and polos, door hangers, yard signs and seasonal marketing. Every truck on the road should be a billboard.",
     segments:
       "Residential lawn care · Commercial landscaping · Snow removal · Tree service",
     cta: "Get a Quote",
@@ -80,7 +80,7 @@ const industries: Industry[] = [
     emoji: "🏥",
     title: "Medical & Specialty Practices",
     description:
-      "Branded scrubs and staff apparel, patient gift packages, office signage, printed materials, and rebranding kits — for practices where professionalism and patient experience are everything.",
+      "Branded scrubs and staff apparel, patient gifts, office signage, printed materials and rebranding kits. For practices where patient experience matters.",
     segments:
       "Physicians · Chiropractors · Physical therapists · Veterinary · Specialty practices",
     cta: "Get a Quote",
@@ -90,7 +90,7 @@ const industries: Industry[] = [
     emoji: "🚗",
     title: "Auto Dealers",
     description:
-      "Fleet graphics and lot signage, employee polos and branded apparel, showroom displays, trade show materials, and branded customer gifts — for dealers where every detail of the customer experience matters.",
+      "Fleet graphics, lot signage, staff polos and apparel, showroom displays, trade show materials and customer gifts. Every detail of the buying experience counts.",
     segments:
       "Franchise dealers · Independent dealers · Buy-here-pay-here · Auto groups",
     cta: "Get a Quote",
@@ -102,7 +102,7 @@ const Industries = () => {
   usePageSEO({
     title: "Industries",
     description:
-      "We serve a wide range of Ohio industries with professional printing, signage, vehicle branding, and promotional products tailored to your business needs.",
+      "Printing, signage, vehicle branding and promo products for Ohio businesses, built around how your industry works.",
   });
 
   return (
@@ -132,10 +132,10 @@ const Industries = () => {
             <span className="text-primary text-glow-red">Serve</span>
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/85 font-semibold leading-relaxed max-w-3xl mx-auto mb-4">
-            We don't do generic. Every industry we serve gets a dedicated approach — built around how that business actually operates, what their team needs in the field, and what their clients expect.
+            We don't do generic. Every industry gets its own approach, built around how the business runs, what the crew needs in the field and what customers expect.
           </p>
           <p className="text-base md:text-lg text-primary-foreground/65 leading-relaxed max-w-3xl mx-auto">
-            We've worked inside dental practices, roofing companies, construction operations, logistics fleets, and more. When you work with us, you're not starting from scratch — we already speak your language.
+            We've worked with dental practices, roofing companies, contractors, fleets and more. You don't start from scratch with us. We already speak your language.
           </p>
         </div>
       </section>
@@ -192,7 +192,7 @@ const Industries = () => {
               <span className="text-primary">industry here?</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              We work with Ohio businesses across dozens of sectors. If you have a team in the field, a fleet on the road, or clients who walk through your door — we can help. Every quote is free and takes less than 24 hours.
+              We work with Ohio businesses of all kinds. Got a crew in the field, trucks on the road or customers at your door? We can help. Every quote is free and back to you within 24 hours.
             </p>
             <Link to="/contact">
               <Button

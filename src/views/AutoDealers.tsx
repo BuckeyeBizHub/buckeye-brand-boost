@@ -22,7 +22,7 @@ const AutoDealers = () => {
   usePageSEO({
     title: "Auto Dealer Branding & Marketing | Columbus Ohio | Buckeye Biz Hub",
     description:
-      "TODO: Final SEO description for Ohio auto dealers — fleet graphics, lot signage, employee polos, customer gift programs.",
+      "TODO: Final SEO description for Ohio auto dealers: fleet graphics, lot signage, employee polos, customer gift programs.",
     noindex: true,
   });
 
@@ -42,22 +42,22 @@ const AutoDealers = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
-              <Car className="w-4 h-4" /> Ohio Auto Dealers
+              <Car className="w-4 h-4" /> Ohio auto dealers
             </span>
             {/* TODO: finalize H1 + subheadline */}
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
-              Branding That Sells —{" "}
-              <span className="text-primary text-glow-red">From Lot to Loyalty</span>
+              Branding that sells.{" "}
+              <span className="text-primary text-glow-red">On the lot and after the sale.</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto mb-8">
-              TODO: Hero subheadline — fleet graphics, lot signage, sales-team apparel, and customer gift programs for Ohio dealerships.
+              TODO: Hero subheadline: fleet graphics, lot signage, sales-team apparel, and customer gift programs for Ohio dealerships.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
               >
-                Get a Free Dealer Quote
+                Get a free dealer quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -65,33 +65,33 @@ const AutoDealers = () => {
         </div>
       </section>
 
-      {/* Section 1 — Why Ohio Dealers Choose Us */}
+      {/* Section 1: Why Ohio Dealers Choose Us */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Award className="w-4 h-4" /> Why Dealers Trust Buckeye Biz Hub
+              <Award className="w-4 h-4" /> Why dealers trust Buckeye Biz Hub
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Section 1 headline —{" "}
+              TODO: Section 1 headline:{" "}
               <span className="text-primary">value prop for dealers.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              TODO: Section 1 body — explain why we get the dealership business specifically (lot operations, sales-team coordination, customer-handoff moments).
+              TODO: Section 1 body: explain why we get the dealership business specifically (lot operations, sales-team coordination, customer-handoff moments).
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 2 — Products & Solutions */}
+      {/* Section 2: Products & Solutions */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Sparkles className="w-4 h-4" /> Products & Solutions for Dealerships
+              <Sparkles className="w-4 h-4" /> What we do for dealerships
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Section 2 headline — products grid intro.
+              TODO: Section 2 headline: products grid intro.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               TODO: Replace with product cards (fleet graphics, lot signage, employee polos, customer gifts, etc.).
@@ -100,15 +100,15 @@ const AutoDealers = () => {
         </div>
       </section>
 
-      {/* Section 3 — Who We Serve */}
+      {/* Section 3: Who We Serve */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Users className="w-4 h-4" /> Who We Serve
+              <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Dealer audiences —{" "}
+              TODO: Dealer audiences:{" "}
               <span className="text-primary">new-car franchises, used-car lots, multi-rooftop groups.</span>
             </h2>
             <ul className="space-y-3 text-lg text-muted-foreground">
@@ -120,12 +120,12 @@ const AutoDealers = () => {
         </div>
       </section>
 
-      {/* Section 4 — The Buckeye Biz Hub Difference */}
+      {/* Section 4: The Buckeye Biz Hub Difference */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Award className="w-4 h-4" /> The Buckeye Biz Hub Difference
+              <Award className="w-4 h-4" /> The Buckeye Biz Hub difference
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
               TODO: Differentiator headline.
@@ -137,7 +137,7 @@ const AutoDealers = () => {
         </div>
       </section>
 
-      {/* Operator credibility insert — above final CTA */}
+      {/* Operator credibility insert, above final CTA */}
       <section className="py-16 lg:py-20 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -147,14 +147,14 @@ const AutoDealers = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Built by an Operator
+              Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
-              This Isn't Theory. It's Built by{" "}
-              <span className="text-primary">Someone Who's Done It.</span>
+              Run by someone who's{" "}
+              <span className="text-primary">been in your seat.</span>
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+              David Stein co-founded Buckeye Biz Hub and runs it day to day. Before that, he co-founded BeerTubes, was named inventor on its patents, grew it from $79K in year one to $4.5M and sold it in 2017. Then he built SBC Hospitality Group to 100+ employees. He's spent his own money on marketing. He knows what works and what doesn't.
             </p>
             <Link
               to="/about"
@@ -180,17 +180,17 @@ const AutoDealers = () => {
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground mb-5 leading-tight">
               TODO: Final CTA headline for{" "}
-              <span className="text-primary text-glow-red">Auto Dealers.</span>
+              <span className="text-primary text-glow-red">auto dealers.</span>
             </h2>
             <p className="text-primary-foreground/70 text-lg md:text-xl mb-10 leading-relaxed">
-              TODO: Final CTA body — invitation to start a conversation.
+              TODO: Final CTA body: invitation to start a conversation.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
               >
-                Get a Free Dealer Quote
+                Get a free dealer quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

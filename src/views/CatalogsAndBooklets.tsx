@@ -15,18 +15,18 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const bindingTypes = [
-  { type: "Saddle-Stitched", pages: "8–64 pages", desc: "Stapled along the spine — the most affordable and popular binding for slim catalogs, programs, and newsletters. Lays relatively flat when open.", best: "Product lookbooks, event programs, newsletters, small catalogs" },
-  { type: "Perfect-Bound", pages: "28–200+ pages", desc: "Pages are glued to a flat spine, creating a professional book-like appearance. The spine can be printed with your title and branding — perfect for shelf display.", best: "Thick product catalogs, annual reports, company capabilities booklets" },
-  { type: "Wire-O (Spiral)", pages: "Any page count", desc: "Metal wire binding that allows pages to lay completely flat or fold back on themselves. Extremely durable and functional.", best: "Training manuals, recipe books, reference guides, presentations" },
-  { type: "Coil Binding", pages: "Any page count", desc: "Plastic coil binding similar to wire-o but more affordable. Available in multiple colors to match your brand.", best: "Workbooks, planners, instructional guides, internal documents" },
+  { type: "Saddle-stitched", pages: "8–64 pages", desc: "Stapled on the spine. The cheapest and most popular binding for slim catalogs, programs and newsletters. Lies fairly flat when open.", best: "Product lookbooks, event programs, newsletters, small catalogs" },
+  { type: "Perfect-bound", pages: "28–200+ pages", desc: "Pages glued to a flat spine, like a paperback. You can print your title on the spine so it reads on a shelf.", best: "Thick product catalogs, annual reports, company capabilities booklets" },
+  { type: "Wire-O (Spiral)", pages: "Any page count", desc: "Metal wire binding. Pages lie flat or fold all the way back. Very durable.", best: "Training manuals, recipe books, reference guides, presentations" },
+  { type: "Coil binding", pages: "Any page count", desc: "Plastic coil, like wire-o but cheaper. Comes in colors to match your brand.", best: "Workbooks, planners, instructional guides, internal documents" },
 ];
 
 const paperOptions = [
-  { stock: "70lb Text", finish: "Gloss or Matte", best: "Interior pages for catalogs and booklets — lightweight and cost-effective", feel: "Smooth, easy to flip through" },
-  { stock: "80lb Text", finish: "Gloss, Matte, or Satin", best: "Premium interior pages with extra heft and durability", feel: "Substantial without being stiff" },
-  { stock: "100lb Text", finish: "Gloss or Matte", best: "High-end catalogs where photo quality is paramount", feel: "Thick, magazine-quality pages" },
-  { stock: "80lb Cover", finish: "Gloss, Matte, or Soft-Touch", best: "Catalog covers that need to feel substantial and protective", feel: "Rigid cover with a professional look" },
-  { stock: "100lb Cover", finish: "Gloss, Matte, Soft-Touch, Spot UV", best: "Premium covers for perfect-bound catalogs and annual reports", feel: "Heavy, luxurious, book-quality cover" },
+  { stock: "70lb Text", finish: "Gloss or Matte", best: "Inside pages for catalogs and booklets. Light and affordable", feel: "Smooth, easy to flip through" },
+  { stock: "80lb Text", finish: "Gloss, Matte, or Satin", best: "Inside pages with more heft", feel: "Substantial without being stiff" },
+  { stock: "100lb Text", finish: "Gloss or Matte", best: "High-end catalogs where photos matter most", feel: "Thick, magazine-quality pages" },
+  { stock: "80lb Cover", finish: "Gloss, Matte, or Soft-Touch", best: "Covers that feel solid and protect the pages", feel: "Rigid cover with a professional look" },
+  { stock: "100lb Cover", finish: "Gloss, Matte, Soft-Touch, Spot UV", best: "Top covers for perfect-bound catalogs and annual reports", feel: "Heavy, book-quality cover" },
 ];
 
 const popularSizes = [
@@ -38,24 +38,24 @@ const popularSizes = [
 ];
 
 const useCases = [
-  { icon: BookOpen, title: "Product Catalogs", desc: "Showcase your entire product line with professional photography, detailed specifications, and pricing. A catalog puts your products in your customer's hands — literally." },
-  { icon: FileText, title: "Annual Reports", desc: "Present your company's achievements, financials, and vision with a polished, professional publication that stakeholders will keep and reference." },
-  { icon: Layers, title: "Capabilities Booklets", desc: "Show prospective clients everything your company can do. Perfect for B2B companies, contractors, and professional service firms." },
-  { icon: Lightbulb, title: "Training Manuals", desc: "Wire-o bound manuals that lay flat for easy reference. Ideal for employee onboarding, safety procedures, and technical training." },
+  { icon: BookOpen, title: "Product catalogs", desc: "Your whole product line with photos, specs and pricing. A catalog puts your products in the customer's hands. Literally." },
+  { icon: FileText, title: "Annual reports", desc: "Your year, your numbers and your plan in a report people keep on the desk." },
+  { icon: Layers, title: "Capabilities booklets", desc: "Show prospects everything you can do. Good for B2B companies, contractors and professional firms." },
+  { icon: Lightbulb, title: "Training manuals", desc: "Wire-o manuals that lie flat. Good for onboarding, safety procedures and technical training." },
 ];
 
 const faqItems = [
-  { q: "What binding style should I choose?", a: "For catalogs under 64 pages, saddle-stitching is the most cost-effective and professional option. For thicker publications (28+ pages), perfect binding gives you a book-like spine that can be printed with your title. For manuals and reference guides, wire-o binding allows pages to lay completely flat." },
-  { q: "What's the minimum page count?", a: "Saddle-stitched booklets start at 8 pages (2 sheets folded). Perfect-bound catalogs typically need a minimum of 28 pages to create a proper spine. Page counts must be in multiples of 4 for saddle-stitching." },
-  { q: "Can you design our catalog from scratch?", a: "Absolutely! Our design team can create your entire catalog layout from scratch — including product photography retouching, page layouts, typography, and cover design. We'll work with you on revisions until it's perfect." },
-  { q: "What paper stock should I use for interior pages?", a: "For most product catalogs with photos, 80lb gloss text provides excellent color reproduction and a premium feel. If your catalog is text-heavy (like a manual), 70lb matte text reduces glare and is easier to read." },
-  { q: "How quickly can you print catalogs?", a: "Standard turnaround is 5–7 business days after proof approval for saddle-stitched catalogs, and 7–10 business days for perfect-bound. Rush options are available for tight deadlines." },
-  { q: "What file format should I submit?", a: "We prefer print-ready PDFs with 300 DPI resolution and 0.125\" bleed. We also accept InDesign, Illustrator, and Photoshop files. If you need design help, just send us your content and images." },
-  { q: "Do you offer short-run printing?", a: "Yes! Digital printing allows cost-effective runs starting at just 25 copies. For larger quantities (500+), offset printing provides even better per-unit pricing with exceptional color consistency." },
+  { q: "What binding style should I choose?", a: "Under 64 pages, saddle-stitch. It's the best value and looks professional. For thicker books (28+ pages), perfect binding gives you a printed spine. For manuals and reference guides, wire-o lets pages lie flat." },
+  { q: "What's the minimum page count?", a: "Saddle-stitched starts at 8 pages (2 sheets folded), and the page count has to be a multiple of 4. Perfect-bound usually needs at least 28 pages to make a real spine." },
+  { q: "Can you design our catalog from scratch?", a: "Yes. We can build the whole thing: photo retouching, page layouts, type and cover. We revise until you're happy." },
+  { q: "What paper stock should I use for interior pages?", a: "For catalogs with photos, 80lb gloss text. Colors come out great and it feels premium. For text-heavy books like manuals, 70lb matte text cuts glare and reads easier." },
+  { q: "How quickly can you print catalogs?", a: "Saddle-stitched takes 5–7 business days after you approve the proof. Perfect-bound takes 7–10. Rush is available." },
+  { q: "What file format should I submit?", a: "Print-ready PDF at 300 DPI with 0.125\" bleed is best. We also take InDesign, Illustrator and Photoshop files. Need design help? Send us your content and images." },
+  { q: "Do you offer short-run printing?", a: "Yes. Digital printing makes runs as small as 25 copies affordable. At 500+, offset gets you a better price per copy and very consistent color." },
 ];
 
 const CatalogsAndBooklets = () => {
-  usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Custom catalog and booklet printing for Ohio businesses. Saddle-stitched, perfect-bound, wire-o binding. We source from top printers for best pricing." });
+  usePageSEO({ title: "Catalogs & Booklets Printing Columbus OH", description: "Custom catalog and booklet printing for Ohio businesses. Saddle-stitched, perfect-bound and wire-o. We source from top printers for the best price." });
 
   return (
     <div className="min-h-screen">
@@ -73,10 +73,10 @@ const CatalogsAndBooklets = () => {
               <Sparkles className="w-3.5 h-3.5" />Catalogs & Booklets<Sparkles className="w-3.5 h-3.5" />
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-              Professional Catalogs & Booklets That Showcase Your Products Beautifully
+              Catalogs & Booklets That Sell Your Products
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold">
-              Saddle-stitched, perfect-bound, and wire-o binding options with premium paper stocks and vibrant full-color printing.
+              Saddle-stitched, perfect-bound or wire-o. Good paper, full color.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
               {[{ icon: ShieldCheck, label: "No Hidden Fees" }, { icon: BadgeCheck, label: "Wholesale Pricing" }, { icon: ThumbsUp, label: "100% Satisfaction" }].map((b) => (
@@ -97,8 +97,8 @@ const CatalogsAndBooklets = () => {
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Printed Catalogs Still Drive Sales</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">In the age of websites and social media, printed catalogs remain one of the most effective sales tools available. Research shows that customers who receive a printed catalog spend 28% more than those who only browse online. A catalog puts your entire product line in your customer's hands — something a website simply can't replicate.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">Whether you're a manufacturer showcasing industrial parts, a retailer presenting seasonal collections, or a distributor listing thousands of SKUs — a professionally printed catalog gives your products the presentation they deserve and keeps your brand on desks, in workshops, and on coffee tables for months.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Websites are great. A printed catalog still sells. Research shows customers who get a printed catalog spend 28% more than those who only browse online. A catalog puts your whole line in the customer's hands. A website can't do that.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Manufacturer with industrial parts, retailer with seasonal lines, distributor with thousands of SKUs: a good catalog sits on desks, workbenches and coffee tables for months.</p>
           </motion.div>
         </div>
       </section>
@@ -108,7 +108,7 @@ const CatalogsAndBooklets = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4">Binding Options Explained</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Choose the right binding style for your page count, budget, and how your catalog will be used.</p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Pick your binding by page count, budget and how people will use it.</p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
             {bindingTypes.map((b, i) => (
@@ -198,8 +198,8 @@ const CatalogsAndBooklets = () => {
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-8 text-center">Design Tips from David</h2>
             <div className="bg-card rounded-2xl p-8 md:p-10 border-l-4 border-primary shadow-lg">
               <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The most common mistake I see with catalogs is using thin paper to save money. Your customers will notice — and it cheapens your brand. I always recommend 80lb gloss text for interiors and 100lb cover for the outside. And if you're doing perfect binding, invest in a spot UV or soft-touch cover — it's the first thing people touch, and that tactile impression sets the tone for everything inside."</p>
-              <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The most common catalog mistake I see is thin paper to save a few bucks. Customers notice, and it makes you look cheap. I recommend 80lb gloss text inside and 100lb cover outside. Doing perfect binding? Spend the money on a spot UV or soft-touch cover. It's the first thing people touch, and it sets the tone for everything inside."</p>
+              <p className="font-bold text-foreground">David Stein, co-founder, Buckeye Biz Hub</p>
             </div>
           </motion.div>
         </div>

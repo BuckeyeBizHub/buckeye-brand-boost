@@ -3,9 +3,9 @@ import { Clock } from "lucide-react";
 
 const trustItems = [
   "500+ Ohio Businesses Helped",
-  "Full Pricing Transparency",
-  "24-Hour Quotes",
-  "Ohio Owned & Operated",
+  "No hidden fees",
+  "Free quotes in 24 hours",
+  "Ohio owned and operated",
 ];
 
 const ServicesTrustBar = () => (

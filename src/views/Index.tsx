@@ -10,6 +10,7 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import ProductCarousel from "@/components/ProductCarousel";
 import ElevateCtaSection from "@/components/ElevateCtaSection";
 import LatestBlogSection from "@/components/LatestBlogSection";
+import type { BlogPostSummary } from "@/lib/blog-utils";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -28,7 +29,7 @@ const FlowDivider = () => (
   </div>
 );
 
-const Index = () => (
+const Index = ({ latestPosts }: { latestPosts?: BlogPostSummary[] }) => (
   <div className="min-h-screen bg-gradient-to-b from-background via-ohio-grey-light/15 to-background">
     <SEOHead
       title="Buckeye Biz Hub | Columbus Ohio Branding Concierge, Printing & Promotional Products"
@@ -107,7 +108,7 @@ const Index = () => (
     <FlowDivider />
     <ProductCarousel />
     <FlowDivider />
-    <LatestBlogSection />
+    <LatestBlogSection posts={latestPosts} />
     <ElevateCtaSection />
 
     {/* Free Cost Comparison — flowing, no hard box */}

@@ -15,14 +15,14 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const productCategories = [
-  { title: "Retractable Banner Stands", desc: "Portable, reusable displays that set up in 60 seconds. The #1 choice for trade shows, lobbies, and events. Includes carrying case for easy transport.", sizes: '33×80", 36×92", 48×92"' },
-  { title: "Posters & Mounted Prints", desc: "Photo-quality poster printing on premium paper, canvas, or mounted to foam board, Gator board, or aluminum composite for rigid display.", sizes: "Up to 120\" wide, any length" },
-  { title: "Wall Murals & Wallpaper", desc: "Transform any wall into a branded experience. Custom wallpaper and adhesive wall graphics printed on repositionable or permanent vinyl.", sizes: "Custom to any wall dimension" },
-  { title: "Floor Graphics & Decals", desc: "Anti-slip laminated floor graphics for retail wayfinding, event branding, and promotional displays. Indoor and outdoor options available.", sizes: "Custom sizes and shapes" },
-  { title: "Window Clings & Films", desc: "Static cling and adhesive window graphics, including perforated window film that allows one-way visibility from the inside.", sizes: "Custom cut to any window" },
-  { title: "Step-and-Repeat Backdrops", desc: "Custom photo backdrops with repeating logos for events, red carpets, press conferences, and social media photo opportunities.", sizes: '8×8\', 8×10\', 10×10\', custom' },
-  { title: "Trade Show Displays", desc: "Complete trade show solutions including pop-up displays, tabletop displays, hanging banners, and custom booth graphics.", sizes: "10×10, 10×20, custom" },
-  { title: "Yard Signs & A-Frames", desc: "Corrugated plastic yard signs and A-frame sidewalk signs for real estate, political campaigns, events, and directional signage.", sizes: '18×24", 24×36", custom' },
+  { title: "Retractable banner stands", desc: "Portable, reusable, sets up in 60 seconds. The go-to for trade shows, lobbies and events. Comes with a carrying case.", sizes: '33×80", 36×92", 48×92"' },
+  { title: "Posters & mounted prints", desc: "Photo-quality posters on paper or canvas, or mounted to foam board, Gator board or aluminum composite.", sizes: "Up to 120\" wide, any length" },
+  { title: "Wall murals & wallpaper", desc: "Put your brand on any wall. Custom wallpaper and wall graphics on repositionable or permanent vinyl.", sizes: "Custom to any wall dimension" },
+  { title: "Floor graphics & decals", desc: "Anti-slip laminated floor graphics for wayfinding, events and promotions. Indoor and outdoor.", sizes: "Custom sizes and shapes" },
+  { title: "Window clings & films", desc: "Static cling and adhesive window graphics, plus perforated film you can see out of from inside.", sizes: "Custom cut to any window" },
+  { title: "Step-and-repeat backdrops", desc: "Photo backdrops with your logo repeated. For events, press conferences and photo ops.", sizes: '8×8\', 8×10\', 10×10\', custom' },
+  { title: "Trade show displays", desc: "Pop-ups, tabletop displays, hanging banners and custom booth graphics.", sizes: "10×10, 10×20, custom" },
+  { title: "Yard signs & A-frames", desc: "Corrugated plastic yard signs and A-frame sidewalk signs for real estate, campaigns, events and directions.", sizes: '18×24", 24×36", custom' },
 ];
 
 const substrates = [
@@ -37,24 +37,24 @@ const substrates = [
 ];
 
 const useCases = [
-  { icon: Monitor, title: "Trade Shows & Conferences", desc: "Stand out on the show floor with professional displays that attract foot traffic and communicate your brand at a glance. We handle everything from retractable banners to full booth graphics." },
-  { icon: Lightbulb, title: "Retail & Point-of-Purchase", desc: "Window displays, floor graphics, wall murals, and hanging signs that drive foot traffic and promote products directly at the point of sale." },
-  { icon: FileText, title: "Corporate Offices & Lobbies", desc: "Transform your workspace with branded wall murals, lobby displays, mission statement walls, and directional signage that reflects your company culture." },
-  { icon: Layers, title: "Events & Celebrations", desc: "Step-and-repeat backdrops, welcome banners, directional signage, and photo opportunities that make any event look professional and Instagram-worthy." },
+  { icon: Monitor, title: "Trade shows & conferences", desc: "Stand out on the show floor and pull people into your booth. Retractable banners up to full booth graphics." },
+  { icon: Lightbulb, title: "Retail & point-of-purchase", desc: "Window displays, floor graphics, murals and hanging signs that sell right where people buy." },
+  { icon: FileText, title: "Offices & lobbies", desc: "Wall murals, lobby displays, mission statement walls and directional signs that show who you are." },
+  { icon: Layers, title: "Events & celebrations", desc: "Step-and-repeats, welcome banners, directional signs and photo spots. Your event looks good in person and online." },
 ];
 
 const faqItems = [
-  { q: "What resolution do I need for large format printing?", a: "For most large format prints, 150 DPI at the final print size produces excellent results. For prints viewed from a distance (like banners and wall murals), 100 DPI is sufficient. For close-up viewing (posters, trade show graphics), 300 DPI is ideal." },
-  { q: "What's the maximum size you can print?", a: "Our large format printers handle widths up to 120 inches (10 feet) with virtually unlimited length. For larger installations, we tile and seamlessly join panels. Custom sizes and shapes are our specialty." },
-  { q: "Are your prints weatherproof?", a: "Yes — we use UV-resistant, fade-proof inks and can print on weatherproof substrates like vinyl, Coroplast, and aluminum composite. Outdoor prints include UV lamination for maximum lifespan." },
-  { q: "Do you offer installation?", a: "Yes! We provide professional installation services throughout Ohio for wall murals, window graphics, floor decals, and large displays. Our installers ensure bubble-free, perfectly aligned results." },
-  { q: "How long do large format prints last?", a: "Lifespan varies by material and environment. Indoor prints on vinyl or canvas last 5–10+ years. Outdoor prints with UV lamination typically last 3–5 years. Aluminum composite signage can last 10+ years." },
-  { q: "What file formats do you accept?", a: "We accept AI, PSD, PDF, EPS, and high-resolution TIFF/JPEG files. For best results, submit vector files when possible. We provide free file checks and can help prepare your artwork for large format output." },
-  { q: "Can I get a sample or proof?", a: "Yes — we offer printed proofs for color-critical projects and can provide material samples so you can see and feel the substrate before committing to a large order." },
+  { q: "What resolution do I need for large format printing?", a: "Most large prints look great at 150 DPI at final size. Banners and murals seen from a distance are fine at 100 DPI. For close-up pieces like posters and trade show graphics, go 300 DPI." },
+  { q: "What's the maximum size you can print?", a: "Up to 120 inches (10 feet) wide, and nearly any length. Bigger than that, we tile panels and join them clean. Custom sizes and shapes are our specialty." },
+  { q: "Are your prints weatherproof?", a: "Yes. We use UV-resistant, fade-proof inks on weatherproof materials like vinyl, Coroplast and aluminum composite. Outdoor prints get UV lamination so they last." },
+  { q: "Do you offer installation?", a: "Yes. Our installer partners handle murals, window graphics, floor decals and large displays across Ohio. No bubbles, lined up right." },
+  { q: "How long do large format prints last?", a: "Depends on the material and where it lives. Indoor vinyl or canvas: 5–10+ years. Outdoor with UV lamination: usually 3–5 years. Aluminum composite signs: 10+ years." },
+  { q: "What file formats do you accept?", a: "AI, PSD, PDF, EPS and high-res TIFF or JPEG. Vector files work best. We check your files for free and can help prep your artwork." },
+  { q: "Can I get a sample or proof?", a: "Yes. We do printed proofs when color matters, and we can get you material samples to see and feel before a big order." },
 ];
 
 const LargeFormatPrinting = () => {
-  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, banners, and trade show displays. We source from top Ohio print specialists for best quality and pricing." });
+  usePageSEO({ title: "Large Format Printing Columbus OH", description: "Large format printing for posters, wall graphics, banners and trade show displays. We source from top Ohio print shops for the best quality and price." });
 
   return (
     <div className="min-h-screen">
@@ -72,10 +72,10 @@ const LargeFormatPrinting = () => {
               <Sparkles className="w-3.5 h-3.5" />Large Format Printing<Sparkles className="w-3.5 h-3.5" />
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-              Large Format Printing That Commands Attention From Across the Room
+              Large Format Printing People See From Across the Room
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold">
-              Posters, wall graphics, floor graphics, retractable banners, trade show displays, and more — printed big, bold, and beautiful.
+              Posters, wall and floor graphics, retractable banners, trade show displays and more. Printed big.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
               {[{ icon: ShieldCheck, label: "UV-Resistant Inks" }, { icon: BadgeCheck, label: "Wholesale Pricing" }, { icon: ThumbsUp, label: "100% Satisfaction" }].map((b) => (
@@ -96,8 +96,8 @@ const LargeFormatPrinting = () => {
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">When You Need to Make a Big Impression</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Large format printing transforms spaces, attracts attention, and communicates your brand message at scale. From a towering retractable banner at a trade show to a vivid wall mural in your office lobby — oversized printing creates experiences that small-format simply can't match.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">We print on every substrate imaginable — vinyl, fabric, canvas, foam board, corrugated plastic, aluminum composite, and more. Our large format printers produce photo-quality output up to 120 inches wide with UV-resistant, fade-proof inks that maintain their vibrancy for years, indoors and out.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Big prints change a room and get noticed. A tall banner at a trade show. A mural in your lobby. Small print can't do that.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Vinyl, fabric, canvas, foam board, corrugated plastic, aluminum composite and more. Our print partners run photo-quality output up to 120 inches wide with UV-resistant inks that hold color for years, inside and out.</p>
           </motion.div>
         </div>
       </section>
@@ -125,7 +125,7 @@ const LargeFormatPrinting = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <div className="flex items-center justify-center gap-3 mb-4"><Maximize className="w-8 h-8 text-primary" /></div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-10 text-center">Materials & Substrates Guide</h2>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-10 text-center">Materials Guide</h2>
             <div className="overflow-x-auto rounded-2xl border shadow-lg bg-card">
               <Table>
                 <TableHeader><TableRow className="bg-ohio-navy">
@@ -176,8 +176,8 @@ const LargeFormatPrinting = () => {
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-8 text-center">Design Tips from David</h2>
             <div className="bg-card rounded-2xl p-8 md:p-10 border-l-4 border-primary shadow-lg">
               <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The biggest mistake I see at trade shows is tiny text on banners. Remember — people are viewing your banner from 10 to 20 feet away. Your headline should be readable from across the aisle. Stick to your company name, one key message, and a clear call to action. And always invest in a retractable banner stand — they look 10x more professional than a banner draped over a table, and they last for years of shows."</p>
-              <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"The biggest mistake I see at trade shows is tiny text on banners. People read your banner from 10 to 20 feet away. Your headline needs to read from across the aisle. Stick to your company name, one message and a clear call to action. And buy a retractable stand. It looks 10x better than a banner draped over a table, and it lasts for years of shows."</p>
+              <p className="font-bold text-foreground">David Stein, co-founder, Buckeye Biz Hub</p>
             </div>
           </motion.div>
         </div>

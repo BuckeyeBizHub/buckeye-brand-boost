@@ -28,7 +28,7 @@ const ServicesCTA = () => (
         transition={{ delay: 0.15 }}
         className="text-xl md:text-2xl text-primary-foreground/80 mb-12 font-semibold"
       >
-        Tell us about your project and we'll recommend the perfect services for you.
+        Tell us what you're working on. We'll tell you what makes sense, and what doesn't.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ const ServicesCTA = () => (
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_70px_rgba(255,255,255,0.2)] transition-all duration-300 group uppercase tracking-widest"
           >
             <Phone className="w-6 h-6" />
-            Get Your Custom Quote in 24 Hours
+            Get your free quote in 24 hours
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
           </Button>
         </Link>

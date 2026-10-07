@@ -15,45 +15,45 @@ import { usePageSEO } from "@/hooks/usePageTitle";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const folderTypes = [
-  { type: "Standard Two-Pocket", desc: "The classic presentation folder with two interior pockets for holding documents, contracts, and brochures. Available in 9×12 to fit standard letter-size papers.", best: "Client proposals, welcome packets, sales kits" },
-  { type: "Single Pocket", desc: "One interior pocket — ideal when you need a sleek, streamlined look with minimal materials inside. Often used for event handouts.", best: "Conference handouts, single-document presentations" },
-  { type: "Capacity Folder", desc: "Features an expandable spine that holds up to 1 inch of documents. Perfect for thick proposals, training materials, or multi-document packages.", best: "Insurance packets, HR onboarding kits, thick proposals" },
-  { type: "Tri-Panel Folder", desc: "Three panels create additional space for organizing documents into sections. The extra flap keeps materials secure and organized.", best: "Real estate presentations, financial planning packets" },
+  { type: "Standard two-pocket", desc: "The classic. Two inside pockets for proposals, contracts and brochures. 9×12, so letter-size paper fits.", best: "Client proposals, welcome packets, sales kits" },
+  { type: "Single pocket", desc: "One inside pocket. Clean and simple when you're only handing over a few pages.", best: "Conference handouts, single-document presentations" },
+  { type: "Capacity folder", desc: "An expanding spine holds up to 1 inch of paper. Built for thick proposals and training binders.", best: "Insurance packets, HR onboarding kits, thick proposals" },
+  { type: "Tri-panel folder", desc: "Three panels let you split documents into sections. The extra flap keeps everything in.", best: "Real estate presentations, financial planning packets" },
 ];
 
 const finishOptions = [
-  { finish: "Gloss Lamination", desc: "High-shine coating that makes colors pop and adds a layer of protection against scuffing and moisture." },
-  { finish: "Matte Lamination", desc: "Smooth, non-reflective finish that looks elegant and sophisticated. Easy to write on with a pen." },
-  { finish: "Soft-Touch Lamination", desc: "A velvety, luxurious coating that feels like suede. The ultimate in premium tactile experience." },
-  { finish: "Spot UV Coating", desc: "Selective glossy coating applied to specific areas — like your logo — creating a dramatic raised contrast against matte backgrounds." },
-  { finish: "Gold/Silver Foil Stamping", desc: "Metallic foil pressed onto the folder for brilliant, reflective accents. Available in gold, silver, copper, and rose gold." },
-  { finish: "Embossing/Debossing", desc: "Raised or recessed impressions pressed into the card stock create a dimensional, tactile effect that communicates quality." },
+  { finish: "Gloss lamination", desc: "High shine. Colors pop, and it holds up to scuffs and moisture." },
+  { finish: "Matte lamination", desc: "Smooth, no glare, looks sharp. You can still write on it with a pen." },
+  { finish: "Soft-touch lamination", desc: "Feels like suede. People notice it the second they pick it up." },
+  { finish: "Spot UV coating", desc: "Raised gloss on just one spot, like your logo. It stands out hard against a matte background." },
+  { finish: "Gold/silver foil stamping", desc: "Metallic foil pressed into the folder. Gold, silver, copper or rose gold." },
+  { finish: "Embossing/debossing", desc: "Your logo pressed up or down into the stock. You can feel it, and it says quality." },
 ];
 
 const paperStocks = [
-  { stock: "14pt C2S", type: "Standard", feel: "Professional and sturdy — the industry standard for presentation folders" },
-  { stock: "16pt C2S", type: "Premium", feel: "Noticeably thicker and more rigid — ideal for high-end presentations" },
-  { stock: "18pt C2S", type: "Ultra-Premium", feel: "Maximum thickness for the most luxurious, substantial folder" },
+  { stock: "14pt C2S", type: "Standard", feel: "Sturdy and professional. The industry standard for folders" },
+  { stock: "16pt C2S", type: "Premium", feel: "Noticeably thicker and stiffer. Good for high-end presentations" },
+  { stock: "18pt C2S", type: "Ultra-Premium", feel: "The thickest we offer. Heavy and substantial in the hand" },
 ];
 
 const useCases = [
-  { icon: Briefcase, title: "Sales & Proposals", desc: "Package your proposals, pricing sheets, and company information into a polished presentation that builds trust before you even start talking." },
-  { icon: FileText, title: "Welcome & Onboarding Kits", desc: "HR departments use branded folders for new employee welcome packets. Real estate agents use them for buyer and seller packages." },
-  { icon: Gem, title: "Trade Shows & Events", desc: "Hand out branded folders filled with product sheets, business cards, and promotional materials at trade shows and conferences." },
-  { icon: Layers, title: "Client Deliverables", desc: "Attorneys, accountants, and consultants present reports and documents in branded folders that reinforce professionalism." },
+  { icon: Briefcase, title: "Sales & proposals", desc: "Put your proposal, pricing and company info in one sharp package. It builds trust before you say a word." },
+  { icon: FileText, title: "Welcome & onboarding kits", desc: "HR uses them for new hire packets. Real estate agents use them for buyer and seller packages." },
+  { icon: Gem, title: "Trade shows & events", desc: "Fill them with product sheets and business cards and hand them out at the booth." },
+  { icon: Layers, title: "Client deliverables", desc: "Attorneys, accountants and consultants hand over reports in a branded folder. It looks professional." },
 ];
 
 const faqItems = [
-  { q: "What size are standard presentation folders?", a: "The standard size is 9×12 inches, which holds letter-size (8.5×11) documents with a slight border. We also offer legal-size folders (9.5×14.5) and custom sizes for non-standard applications." },
-  { q: "Can I add business card slits?", a: "Yes! We can add business card slits to one or both interior pockets. This is one of our most popular add-ons — it turns every folder into a complete sales kit with your card right inside." },
-  { q: "What's the difference between foil stamping and spot UV?", a: "Foil stamping presses metallic foil (gold, silver, etc.) onto the folder for a brilliant reflective accent. Spot UV applies a clear, raised glossy coating to specific areas. Both add a premium tactile element, and they can be combined for maximum impact." },
-  { q: "What's the minimum order quantity?", a: "We can print as few as 100 folders for short runs, though the best per-unit pricing starts at 250+. For large corporate orders, we offer volume discounts on quantities of 1,000 and above." },
-  { q: "How long does printing take?", a: "Standard presentation folders take 7–10 business days from proof approval. Folders with foil stamping or embossing may take 10–14 business days. Rush options are available for most styles." },
-  { q: "Do you offer design services?", a: "Absolutely! Our designers create folder layouts that match your existing brand identity. We'll incorporate your logo, colors, and messaging into a cohesive design with unlimited revisions." },
+  { q: "What size are standard presentation folders?", a: "Standard is 9×12 inches. It holds letter-size (8.5×11) paper with a little room to spare. We also do legal size (9.5×14.5) and custom sizes." },
+  { q: "Can I add business card slits?", a: "Yes. We can add slits to one or both pockets. It's one of our most popular add-ons. Your card is right there when they open it." },
+  { q: "What's the difference between foil stamping and spot UV?", a: "Foil stamping presses metallic foil (gold, silver and so on) onto the folder. Spot UV puts a clear, raised gloss on one area. Both look and feel premium, and you can use them together." },
+  { q: "What's the minimum order quantity?", a: "We can print as few as 100. The best per-folder price starts at 250+. Orders of 1,000 and up get volume discounts." },
+  { q: "How long does printing take?", a: "Standard folders take 7–10 business days after you approve the proof. Foil or embossing can take 10–14. Most styles have a rush option." },
+  { q: "Do you offer design services?", a: "Yes. We lay out your folder to match your brand: your logo, your colors, your message. Unlimited revisions." },
 ];
 
 const PresentationFolders = () => {
-  usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders for Ohio businesses — foil stamping, spot UV, custom pockets. We source from top printers for best quality and pricing." });
+  usePageSEO({ title: "Presentation Folders Printing Columbus OH", description: "Custom presentation folders for Ohio businesses. Foil stamping, spot UV, custom pockets. We source from top printers for the best quality and price." });
 
   return (
     <div className="min-h-screen">
@@ -71,10 +71,10 @@ const PresentationFolders = () => {
               <Sparkles className="w-3.5 h-3.5" />Presentation Folders<Sparkles className="w-3.5 h-3.5" />
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-              Custom Presentation Folders That Make Your Brand Look Polished & Professional
+              Custom Presentation Folders That Make You Look Sharp
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold">
-              Premium pocket folders with foil stamping, spot UV, embossing, and custom pockets — designed to impress clients and close deals.
+              Pocket folders with foil, spot UV, embossing and custom pockets. Built to impress clients and help you close.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
               {[{ icon: ShieldCheck, label: "No Hidden Fees" }, { icon: BadgeCheck, label: "Wholesale Pricing" }, { icon: ThumbsUp, label: "100% Satisfaction" }].map((b) => (
@@ -94,9 +94,9 @@ const PresentationFolders = () => {
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Presentation Folders Are Your Secret Sales Weapon</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">A presentation folder is often the very first physical touchpoint a prospect has with your brand. When a client opens a folder filled with your proposals, contracts, or product sheets — the quality of that folder says everything about your business before they read a single word.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">Think about it: would you trust a $50,000 proposal handed to you in a plain manila folder? A custom-branded folder with foil stamping and a soft-touch finish communicates professionalism, attention to detail, and pride in your work. It transforms a stack of papers into a polished sales presentation.</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why a Good Folder Helps You Close</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">A folder is often the first thing a prospect holds from your company. They judge it before they read a word.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Would you trust a $50,000 proposal in a plain manila folder? A branded folder with foil and a soft-touch finish says you care about details. It turns a stack of paper into a real presentation.</p>
           </motion.div>
         </div>
       </section>
@@ -104,7 +104,7 @@ const PresentationFolders = () => {
       {/* Folder Types */}
       <section className="py-24 lg:py-32 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-6">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Folder Styles & Configurations</motion.h2>
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Folder Styles</motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {folderTypes.map((f, i) => (
               <motion.div key={f.type} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
@@ -149,7 +149,7 @@ const PresentationFolders = () => {
       {/* Finishes */}
       <section className="py-24 lg:py-32 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-6">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Premium Finishes & Enhancements</motion.h2>
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Finishes & Upgrades</motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {finishOptions.map((f, i) => (
               <motion.div key={f.finish} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
@@ -187,8 +187,8 @@ const PresentationFolders = () => {
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-8 text-center">Design Tips from David</h2>
             <div className="bg-card rounded-2xl p-8 md:p-10 border-l-4 border-primary shadow-lg">
               <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"I tell every client the same thing: your presentation folder is the suit your proposal wears to the meeting. A soft-touch folder with your logo in silver foil instantly elevates the perceived value of everything inside. Always add business card slits — it keeps your contact information right where the client can find it. And don't skip printing on the inside pockets — that's prime real estate for your tagline or a list of services."</p>
-              <p className="font-bold text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4 italic font-serif">"I tell every client the same thing: your folder is the suit your proposal wears to the meeting. Soft-touch with your logo in silver foil makes everything inside look worth more. Always add business card slits so your contact info stays with the paperwork. And print the inside pockets. That's prime space for your tagline or a list of services."</p>
+              <p className="font-bold text-foreground">David Stein, co-founder, Buckeye Biz Hub</p>
             </div>
           </motion.div>
         </div>
@@ -213,7 +213,7 @@ const PresentationFolders = () => {
       <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
-          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl font-black text-primary-foreground mb-6" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>Ready to elevate your next client presentation?</motion.h2>
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-5xl font-black text-primary-foreground mb-6" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>Ready to upgrade your next client presentation?</motion.h2>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact"><Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] group uppercase tracking-widest"><Phone className="w-6 h-6" />Get Your Folder Quote in 24 Hours<ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" /></Button></Link>
           </motion.div>

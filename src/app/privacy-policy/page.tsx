@@ -3,7 +3,7 @@ import Page from "@/views/PrivacyPolicy";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "Buckeye Biz Hub privacy policy. Learn how we collect, use, and protect your personal information when you use our printing and branding services.",
+  description: "How Buckeye Biz Hub collects, uses and protects your personal information when you use our printing and branding services.",
   path: "/privacy-policy",
 });
 

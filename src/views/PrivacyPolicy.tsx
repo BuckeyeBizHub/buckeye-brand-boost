@@ -34,7 +34,7 @@ const sections: { title: string; content: ReactNode[] }[] = [
       <strong key="mobile" className="text-card-foreground font-black">
         No mobile information (including your phone number and SMS opt-in) will be shared with or sold to third parties or affiliates for their marketing or promotional purposes.
       </strong>,
-      "We share information only with service providers who help us operate our business and programs — such as payment processors, shipping and print fulfillment partners, and our text-messaging and mailing vendors — and only as needed to provide those services. These parties are obligated to keep your information confidential. We may also disclose information when required by law, to enforce our site policies, or to protect our or others' rights, property, or safety.",
+      "We share information only with service providers who help us operate our business and programs, such as payment processors, shipping and print fulfillment partners, and our text-messaging and mailing vendors, and only as needed to provide those services. These parties are obligated to keep your information confidential. We may also disclose information when required by law, to enforce our site policies, or to protect our or others' rights, property, or safety.",
     ],
   },
   {

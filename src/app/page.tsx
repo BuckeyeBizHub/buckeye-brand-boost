@@ -1,3 +1,6 @@
-import Page from "@/views/Index";
+import Index from "@/views/Index";
+import { getAllPostSummaries } from "@/lib/blog";
 
-export default Page;
+export default function Page() {
+  return <Index latestPosts={getAllPostSummaries().slice(0, 3)} />;
+}

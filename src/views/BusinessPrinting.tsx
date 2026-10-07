@@ -63,140 +63,140 @@ const fadeUp = {
 };
 
 const foldTypes = [
-  { title: "Half-Fold", panels: "2-Panel", image: halfFoldImg, desc: "Popularly known as bifold brochures, this type is made up of two panels, folding the total space in half. This style works best for simple business presentations." },
-  { title: "Tri-Fold", panels: "3-Panel", image: trifoldImg, desc: "The trifold divides your brochure into three vertical panels, allowing your customer to take in information in a specific sequence. One of the most popular options." },
-  { title: "Z-Fold", panels: "3-Panel", image: zFoldImg, desc: "Each panel folds on top of one another in a distinctive \"Z\" shape. When unfolded, all panels create one whole unified page." },
-  { title: "Gate Fold", panels: "3-Panel", image: gateFoldImg, desc: "Two front panels fold inward to form the \"gate.\" Recommended for presentations that focus on design or a \"big reveal.\"" },
-  { title: "Accordion Fold", panels: "4-Panel", image: accordionFoldImg, desc: "Four panels that fold on top of one another. Use for event brochures with day-to-day schedules or maps." },
-  { title: "Double Parallel Fold", panels: "4-Panel", image: doubleParallelFoldImg, desc: "Four panels that are parallel and stand in the same direction. Great for detailed company overviews." },
-  { title: "French Fold", panels: "4-Panel", image: frenchFoldImg, desc: "Folded in half, then folded again perpendicular. Popular for programs and promotional pieces." },
-  { title: "Parallel Map Fold", panels: "4-Panel", image: parallelMapFoldImg, desc: "Four vertical panels directly adjacent when fully opened. Opens like a folder, then unfolds further." },
+  { title: "Half-Fold", panels: "2-Panel", image: halfFoldImg, desc: "Also called a bifold. Two panels, folded in half. Best for simple business presentations." },
+  { title: "Tri-Fold", panels: "3-Panel", image: trifoldImg, desc: "Three vertical panels that walk your customer through the info in order. One of the most popular folds." },
+  { title: "Z-Fold", panels: "3-Panel", image: zFoldImg, desc: "Panels fold back and forth in a \"Z\" shape. Open it up and you get one full page." },
+  { title: "Gate Fold", panels: "3-Panel", image: gateFoldImg, desc: "Two front panels fold in to form a \"gate.\" Good for design-heavy pieces or a \"big reveal.\"" },
+  { title: "Accordion Fold", panels: "4-Panel", image: accordionFoldImg, desc: "Four panels that fold back and forth. Use it for event schedules or maps." },
+  { title: "Double Parallel Fold", panels: "4-Panel", image: doubleParallelFoldImg, desc: "Four parallel panels facing the same way. Good for detailed company overviews." },
+  { title: "French Fold", panels: "4-Panel", image: frenchFoldImg, desc: "Folded in half, then in half again the other way. Popular for programs and promo pieces." },
+  { title: "Parallel Map Fold", panels: "4-Panel", image: parallelMapFoldImg, desc: "Four vertical panels side by side when open. Opens like a folder, then unfolds again." },
 ];
 
 const serviceCards = [
   {
     title: "Business Cards & Stationery",
-    headline: "Your First Impression, Perfected",
+    headline: "Your first impression, done right",
     image: businessCardsStack,
     bullets: [
-      "Premium stocks from 14pt standard to ultra-thick 32pt",
-      "Spot UV, gold foil stamping, embossing & soft-touch finishes",
+      "Stocks from 14pt standard to ultra-thick 32pt",
+      "Spot UV, gold foil, embossing and soft-touch finishes",
       "Wholesale pricing on 250 to 5,000+ card runs",
-      "Free design assistance to match your brand identity",
+      "Free design help to match your brand",
     ],
   },
   {
     title: "Banners, Yard Signs & Large Format",
-    headline: "Go Big — Without the Big Price Tag",
+    headline: "Go big without the big price tag",
     image: yardSignInstall,
     bullets: [
-      "Durable vinyl banners — wind, rain & UV resistant",
+      "Tough vinyl banners that handle wind, rain and sun",
       "Corrugated yard signs with H-wire stakes included",
       "Custom sizes from directional signs to building wraps",
-      "Bulk pricing for political campaigns, real estate & events",
+      "Bulk pricing for political campaigns, real estate and events",
     ],
   },
   {
     title: "Brochures, Flyers & Marketing Materials",
-    headline: "Marketing Collateral That Tells Your Story",
+    headline: "Marketing pieces that tell your story",
     image: brochuresFlyers,
     bullets: [
-      "Tri-fold, bi-fold, z-fold & gate-fold options",
-      "Glossy, matte & silk premium paper finishes",
-      "Multiple sizes: 4×6, 5×7, 8.5×11 & custom dimensions",
-      "Affordable runs from 250 to 100,000+ pieces",
+      "Tri-fold, bi-fold, z-fold and gate-fold",
+      "Gloss, matte and silk paper finishes",
+      "Sizes from 4×6, 5×7 and 8.5×11 to custom",
+      "Runs from 250 to 100,000+ pieces",
     ],
   },
   {
     title: "Letterhead, Envelopes & Corporate Stationery",
-    headline: "Establish Your Brand Authority",
+    headline: "Look like you mean business",
     image: businessCardsStack,
     bullets: [
-      "Matching letterhead, envelopes, notecards & notepads",
-      "Linen, cotton & recycled premium paper stocks",
+      "Matching letterhead, envelopes, notecards and notepads",
+      "Linen, cotton and recycled paper stocks",
       "Pantone-matched printing for exact brand colors",
-      "Ideal for law firms, medical offices & corporate headquarters",
+      "Built for law firms, medical offices and corporate offices",
     ],
   },
   {
     title: "Custom Printed Apparel & Branded Gear",
-    headline: "Branded Gear Your Team Will Actually Love",
+    headline: "Gear your team will actually wear",
     image: customApparel,
     bullets: [
-      "Screen printing — vibrant colors that last 100+ washes",
-      "DTG for small runs & complex full-color designs",
-      "Embroidery for polos, caps & corporate uniforms",
-      "No minimums on DTG — perfect for prototypes & samples",
+      "Screen printing with colors that last 100+ washes",
+      "DTG for small runs and full-color designs",
+      "Embroidery for polos, caps and uniforms",
+      "No minimums on DTG, good for samples and one-offs",
     ],
   },
 ];
 
 const paperStocks = [
-  { weight: "14pt", type: "Standard Gloss/Matte", best: "Everyday networking & handouts", feel: "Professional & affordable", icon: FileText },
-  { weight: "16pt", type: "Premium Gloss/Matte", best: "Client-facing professionals", feel: "Noticeably thicker & more substantial", icon: Layers },
-  { weight: "24pt", type: "Ultra-Thick", best: "Executives & luxury brands", feel: "Heavy, rigid & impressive", icon: Shield },
-  { weight: "32pt", type: "Ultra-Premium", best: "Maximum impact & prestige", feel: "The thickest card stock available", icon: Award },
-  { weight: "Linen", type: "Textured Linen", best: "Law firms & financial advisors", feel: "Classic woven texture with elegance", icon: Star },
-  { weight: "Cotton", type: "Cotton/Recycled", best: "Eco-conscious brands", feel: "Soft, natural & sustainable", icon: Heart },
+  { weight: "14pt", type: "Standard Gloss/Matte", best: "Everyday networking and handouts", feel: "Professional and affordable", icon: FileText },
+  { weight: "16pt", type: "Premium Gloss/Matte", best: "Client-facing professionals", feel: "Noticeably thicker in the hand", icon: Layers },
+  { weight: "24pt", type: "Ultra-Thick", best: "Executives and luxury brands", feel: "Heavy and rigid", icon: Shield },
+  { weight: "32pt", type: "Ultra-Premium", best: "Maximum impact", feel: "The thickest card stock available", icon: Award },
+  { weight: "Linen", type: "Textured Linen", best: "Law firms and financial advisors", feel: "Classic woven texture", icon: Star },
+  { weight: "Cotton", type: "Cotton/Recycled", best: "Eco-conscious brands", feel: "Soft, natural and sustainable", icon: Heart },
 ];
 
 const paperWeights = [
-  { name: "70 lb.", image: paper70lb, desc: "Our thinnest available paper stock, but still durable. Best used for inside pages of catalogs and booklets." },
-  { name: "80 lb.", image: paper80lb, desc: "Thicker than our 70 lb. paper, this stock works great for posters with added durability." },
-  { name: "100 lb.", image: paper100lb, desc: "The thickest available. Ideal for flyers and brochures, withstands increased handling." },
+  { name: "70 lb.", image: paper70lb, desc: "Our thinnest paper, still durable. Best for inside pages of catalogs and booklets." },
+  { name: "80 lb.", image: paper80lb, desc: "A step up from 70 lb. Good for posters that need to hold up." },
+  { name: "100 lb.", image: paper100lb, desc: "Our thickest paper. Best for flyers and brochures that get handled a lot." },
 ];
 
 const cardstockWeights = [
-  { name: "10 pt.", image: cardstock10pt, desc: "Our thinnest available cardstock — ideal for folding. Well-suited for greeting cards." },
-  { name: "14 pt.", desc: "Popularly used for business cards, presentation folders, and booklet covers." },
-  { name: "16 pt.", desc: "Slightly thicker cardstock option best suited for invitations." },
-  { name: "17 pt.", desc: "Our thickest and sturdiest cardstock — ideal for direct mail postcards." },
+  { name: "10 pt.", image: cardstock10pt, desc: "Our thinnest cardstock. Folds well. Good for greeting cards." },
+  { name: "14 pt.", desc: "Common for business cards, presentation folders and booklet covers." },
+  { name: "16 pt.", desc: "A bit thicker. Best for invitations." },
+  { name: "17 pt.", desc: "Our thickest, sturdiest cardstock. Best for direct mail postcards." },
 ];
 
 const coatings = [
-  { name: "Matte", desc: "Satin-like texture with a smooth surface that helps with reading through a lot of text." },
-  { name: "Gloss", desc: "Coating on both sides adds shine without glaring against the light." },
-  { name: "High-Gloss UV", desc: "Makes images pop and withstands repeated handling." },
+  { name: "Matte", desc: "Smooth, satin feel. Easy to read when there's a lot of text." },
+  { name: "Gloss", desc: "Coated on both sides. Adds shine without glare." },
+  { name: "High-Gloss UV", desc: "Makes photos pop and holds up to handling." },
 ];
 
 const laminates = [
-  { name: "Silk", desc: "Between matte and gloss. Soft to the touch with an elegant look." },
-  { name: "Soft Touch", desc: "Velvety finish — perfect for high-end and premium products." },
-  { name: "Gloss Antibacterial", desc: "High-gloss with germ-inhibiting properties. Great for brochures passed around often." },
+  { name: "Silk", desc: "Between matte and gloss. Soft to the touch." },
+  { name: "Soft Touch", desc: "Velvety finish for high-end pieces." },
+  { name: "Gloss Antibacterial", desc: "High gloss that helps stop germs. Good for brochures that get passed around." },
 ];
 
 const finishes = [
-  { name: "Gold/Silver Foil Stamping", desc: "Metallic accents that catch light and convey luxury. Perfect for logos, names, and borders." },
-  { name: "Spot UV Coating", desc: "Glossy raised coating applied to specific areas for contrast against matte backgrounds." },
-  { name: "Embossing / Debossing", desc: "Raised or pressed-in designs that add a three-dimensional texture." },
-  { name: "Soft-Touch Lamination", desc: "A velvety, suede-like coating that makes your piece feel luxurious and high-end." },
-  { name: "Edge Painting", desc: "Bold color applied to the edges of thick cards for a standout detail." },
-  { name: "Rounded Corners / Die-Cut", desc: "Custom-shaped cards and rounded corners that make your brand memorable." },
+  { name: "Gold/Silver Foil Stamping", desc: "Metallic accents that catch the light. Best on logos, names and borders." },
+  { name: "Spot UV Coating", desc: "A glossy coating on just the spots you pick, for contrast against a matte background." },
+  { name: "Embossing / Debossing", desc: "Raised or pressed-in designs you can feel." },
+  { name: "Soft-Touch Lamination", desc: "A velvety, suede-like coating that feels high-end." },
+  { name: "Edge Painting", desc: "Color on the edges of thick cards. A detail people notice." },
+  { name: "Rounded Corners / Die-Cut", desc: "Custom shapes and rounded corners that people remember." },
 ];
 
 const faqItems = [
-  { q: "What paper stock is best for business cards?", a: "14pt is great for everyday use, 16pt adds a premium feel, and 24pt–32pt makes a powerful statement for executives and luxury brands." },
-  { q: "What paper stock is best for brochures?", a: "For most brochures, we recommend 80lb or 100lb gloss text — it provides excellent color reproduction and a professional feel. For trade shows, 100lb gloss cover (10pt) gives extra stiffness." },
-  { q: "What is spot UV and foil stamping?", a: "Spot UV is a selective glossy coating applied to specific areas for dramatic contrast. Foil stamping presses metallic foil onto your piece for an eye-catching accent." },
-  { q: "Do you offer rush printing?", a: "Yes! Standard orders ship in 5–7 business days, with rush options in 2–3 days depending on the product." },
-  { q: "What file formats do you accept?", a: "We accept print-ready PDF, AI, EPS, and PSD files at 300 DPI with 0.125\" bleed. Our team can also prepare your artwork at no extra charge." },
-  { q: "What quantities can I order?", a: "From as few as 250 business cards up to 100,000+ for large campaigns. The more you order, the lower your per-unit cost." },
-  { q: "Can you help with design?", a: "Absolutely! We offer free design assistance on all orders — from scratch designs to minor tweaks to getting your files print-ready." },
-  { q: "How many brochures should I order?", a: "We recommend at least 500 for the best per-unit pricing. We accommodate runs from 250 to 100,000+. Our wholesale pricing saves you 30–50% vs. most competitors." },
-  { q: "Can I get samples first?", a: "Yes! We provide paper samples so you can feel the weight and texture. For large orders, we can arrange a printed proof before the full run." },
+  { q: "What paper stock is best for business cards?", a: "14pt for everyday use. 16pt if you want it to feel premium. 24pt–32pt if you want it to make a statement." },
+  { q: "What paper stock is best for brochures?", a: "For most brochures, 80lb or 100lb gloss text. Color looks great and it feels professional. For trade shows, 100lb gloss cover (10pt) gives you more stiffness." },
+  { q: "What is spot UV and foil stamping?", a: "Spot UV is a glossy coating on just the areas you pick, for contrast. Foil stamping presses metallic foil onto the piece so it catches the eye." },
+  { q: "Do you offer rush printing?", a: "Yes. Standard orders ship in 5–7 business days. Rush is 2–3 days, depending on the product." },
+  { q: "What file formats do you accept?", a: "Print-ready PDF, AI, EPS and PSD at 300 DPI with 0.125\" bleed. We can also get your artwork ready at no extra charge." },
+  { q: "What quantities can I order?", a: "From 250 business cards up to 100,000+ for big campaigns. The more you order, the less each piece costs." },
+  { q: "Can you help with design?", a: "Yes. Free design help on every order, from a new design to small tweaks to getting your files print-ready." },
+  { q: "How many brochures should I order?", a: "At least 500 for the best per-piece price. We can do runs from 250 to 100,000+. Our wholesale pricing saves you 30–50% vs. most competitors." },
+  { q: "Can I get samples first?", a: "Yes. We send paper samples so you can feel the weight and texture. On big orders, we can get you a printed proof before the full run." },
 ];
 
 const trustPoints = [
-  { icon: Shield, title: "Highest Quality Guaranteed", desc: "We source from 4,300+ suppliers to always find the best materials and printing quality." },
-  { icon: Eye, title: "Full Transparency", desc: "See the actual supplier cost on every project. No hidden markups, no games — ever." },
-  { icon: Award, title: "Best Possible Pricing", desc: "True wholesale pricing passed directly to you with only a small, transparent fee on top." },
-  { icon: Heart, title: "Passion for Small Business", desc: "David Stein built Buckeye Biz Hub because every Ohio business deserves premium branding without overpaying." },
+  { icon: Shield, title: "Quality, guaranteed", desc: "We source from 4,300+ suppliers to find the best materials and print quality." },
+  { icon: Eye, title: "Every cost shown", desc: "See the actual supplier cost on every project. No hidden markups. No games." },
+  { icon: Award, title: "Wholesale pricing", desc: "Wholesale pricing passed straight to you, with a small fee on top that you can see." },
+  { icon: Heart, title: "Small business people", desc: "David Stein co-founded Buckeye Biz Hub because Ohio businesses shouldn't overpay for good branding." },
 ];
 
 const BusinessPrinting = () => {
   usePageSEO({
-    title: "Business Printing – Flyers, Brochures, Business Cards & More",
-    description: "Full-service business printing in Columbus Ohio. We shop our network of top local printers to get you the best quality and pricing. Free 24-hour quotes.",
+    title: "Business Printing: Flyers, Brochures, Business Cards & More",
+    description: "Business printing in Columbus Ohio. We shop our network of printers to get you the best quality and price. Free quotes in 24 hours.",
   });
 
   return (
@@ -215,7 +215,7 @@ const BusinessPrinting = () => {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
             <div className="inline-flex items-center gap-3 bg-primary/20 border-2 border-primary/40 rounded-full px-6 py-2.5 mb-8 shadow-[0_0_25px_hsl(var(--primary)/0.2)]">
               <Printer className="w-5 h-5 text-primary" />
-              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Business Printing</span>
+              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Business printing</span>
             </div>
           </motion.div>
 
@@ -224,22 +224,22 @@ const BusinessPrinting = () => {
             className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] mb-8 max-w-5xl text-primary-foreground"
             style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}
           >
-            Premium Business Printing That Makes Your Brand{" "}
-            <span className="text-primary">Stand Out</span>
+            Business printing that makes you{" "}
+            <span className="text-primary">stand out</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.7 }}
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/70 max-w-3xl mb-12 font-medium leading-relaxed"
           >
-            Highest-quality materials, expert craftsmanship, and true wholesale pricing — all with 24-hour quotes and nothing ever hidden.
+            Top materials. Skilled printers. Wholesale pricing. Quotes in 24 hours, with nothing hidden.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
               <Button size="lg" className="bg-primary hover:bg-[hsl(var(--ohio-red-light))] text-primary-foreground font-black text-lg sm:text-xl px-12 py-7 rounded-xl shadow-[0_0_50px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_80px_hsl(var(--primary)/0.7)] transition-all duration-300 group uppercase tracking-wider" style={{ animation: "pulse-glow 3s infinite" }}>
                 <Phone className="w-5 h-5" />
-                Get Your Custom Quote in 24 Hours
+                Get your quote in 24 hours
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
@@ -251,7 +251,7 @@ const BusinessPrinting = () => {
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center">
-            From professional flyers and brochures to business cards, door hangers, and presentation folders — we handle all your business printing with concierge-level care. Local to Columbus, Ohio, and always focused on helping your business stand out without breaking the bank.
+            Flyers, brochures, business cards, door hangers, presentation folders. We handle all of it, start to finish. We're local to Columbus, and we help you stand out without overspending.
           </motion.p>
         </div>
       </section>
@@ -262,21 +262,21 @@ const BusinessPrinting = () => {
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-10 text-center">
-              We Do Business Printing <span className="text-primary">Differently</span>
+              How we do printing <span className="text-primary">differently</span>
             </h2>
             <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-              <p>At Buckeye Biz Hub we do business printing differently. With over 25 years of experience, David Stein, Your Buckeye Branding Concierge, understands exactly what it takes to grow a company — and how important it is to have high-quality branded materials without overpaying.</p>
-              <p>We maintain wholesale accounts with over <span className="text-primary font-bold">4,300 printing and item suppliers</span>. This gives us unmatched options and the ability to always find the highest quality materials at the best possible price.</p>
-              <p>We focus on two things above everything else: <span className="text-primary font-bold">Highest Quality</span> and <span className="text-primary font-bold">Best Pricing</span>. We offer full transparency on costs and are happy to show you exactly what we are charged.</p>
+              <p>David Stein has over 25 years in business. He knows what it takes to grow a company. He also knows good printed materials shouldn't cost you a fortune.</p>
+              <p>We have wholesale accounts with over <span className="text-primary font-bold">4,300 printing and product suppliers</span>. That gives us options. We find the best materials at the best price.</p>
+              <p>We focus on two things: <span className="text-primary font-bold">top quality</span> and <span className="text-primary font-bold">the best price</span>. Want to see what we pay? We'll show you.</p>
             </div>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-16 max-w-5xl mx-auto">
             {[
-              { stat: "4,300+", label: "Supplier Partners" },
-              { stat: "Best", label: "Possible Pricing" },
-              { stat: "100%", label: "Transparent Costs" },
-              { stat: "Premium", label: "Quality Always" },
+              { stat: "4,300+", label: "Supplier partners" },
+              { stat: "Wholesale", label: "Pricing" },
+              { stat: "100%", label: "Costs shown" },
+              { stat: "Top", label: "Quality" },
             ].map((item) => (
               <div key={item.label} className="text-center bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/40 transition-colors duration-300">
                 <div className="font-display text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-2">{item.stat}</div>
@@ -292,9 +292,9 @@ const BusinessPrinting = () => {
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black mb-4">
-              Our Business <span className="text-primary">Printing Services</span>
+              What we <span className="text-primary">print</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Premium products sourced from 4,300+ suppliers — always the highest quality at the best price.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Sourced from 4,300+ suppliers. Top quality at the best price.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -335,16 +335,16 @@ const BusinessPrinting = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Choose the Best Brochure Fold
+              Pick the right brochure fold
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The right fold style depends on your content, audience, and how you plan to distribute your brochures.
+              The right fold depends on your content, your audience and how you hand them out.
             </p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
             <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
-              <Columns2 className="w-5 h-5" /> 2-Panel Options
+              <Columns2 className="w-5 h-5" /> 2-panel options
             </h3>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
@@ -365,7 +365,7 @@ const BusinessPrinting = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
             <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
-              <LayoutGrid className="w-5 h-5" /> 3-Panel Options
+              <LayoutGrid className="w-5 h-5" /> 3-panel options
             </h3>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
@@ -386,7 +386,7 @@ const BusinessPrinting = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8">
             <h3 className="font-display text-xl font-bold text-primary mb-4 flex items-center gap-2">
-              <Layers className="w-5 h-5" /> 4-Panel Options
+              <Layers className="w-5 h-5" /> 4-panel options
             </h3>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -407,19 +407,19 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
-      {/* Paper Stocks & Finishes – Card Stocks */}
+      {/* Paper Stocks & Finishes: Card Stocks */}
       <section className="py-24 lg:py-32 bg-[hsl(var(--ohio-cream))] relative overflow-hidden">
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black mb-4 text-foreground">
-              Paper Stocks & <span className="text-primary">Finishes Explained</span>
+              Paper stocks and <span className="text-primary">finishes explained</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Not sure which stock or finish is right? Here's a clear breakdown.</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Not sure which stock or finish to pick? Here's the breakdown.</p>
           </motion.div>
 
           {/* Business Card Stocks */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp}>
-            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Popular Card Stocks</h3>
+            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Popular card stocks</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
               {paperStocks.map((stock) => (
                 <Card key={stock.weight} className="hover:border-primary/40 transition-colors duration-300">
@@ -445,7 +445,7 @@ const BusinessPrinting = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
-                <Layers className="w-6 h-6 text-primary" /> Paper Stock (Text Weight)
+                <Layers className="w-6 h-6 text-primary" /> Paper stock (text weight)
               </h3>
               <div className="space-y-4">
                 {paperWeights.map((stock) => (
@@ -462,7 +462,7 @@ const BusinessPrinting = () => {
 
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
-                <Layers className="w-6 h-6 text-primary" /> Cardstock (Cover Weight)
+                <Layers className="w-6 h-6 text-primary" /> Cardstock (cover weight)
               </h3>
               <div className="space-y-4">
                 {cardstockWeights.map((stock) => (
@@ -487,7 +487,7 @@ const BusinessPrinting = () => {
           {/* Coatings & Laminates */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
             <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
-              <Sparkles className="w-6 h-6 text-primary" /> Coating Options
+              <Sparkles className="w-6 h-6 text-primary" /> Coating options
             </h3>
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               {coatings.map((c) => (
@@ -497,7 +497,7 @@ const BusinessPrinting = () => {
                 </div>
               ))}
             </div>
-            <h4 className="font-display text-lg font-bold text-foreground mb-4">Premium Laminate Options</h4>
+            <h4 className="font-display text-lg font-bold text-foreground mb-4">Laminate options</h4>
             <div className="grid sm:grid-cols-3 gap-4">
               {laminates.map((l) => (
                 <div key={l.name} className="bg-card rounded-xl p-5 border border-border/50">
@@ -510,7 +510,7 @@ const BusinessPrinting = () => {
 
           {/* Finishes Grid */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={fadeUp}>
-            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Finishes & Enhancements That <span className="text-primary">Wow</span></h3>
+            <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Finishes people <span className="text-primary">notice</span></h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {finishes.map((finish) => (
                 <Card key={finish.name} className="hover:border-primary/40 transition-colors duration-300">
@@ -535,18 +535,18 @@ const BusinessPrinting = () => {
             <div className="flex items-center gap-3 justify-center mb-8">
               <Lightbulb className="w-8 h-8 text-primary" />
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground">
-                Design Tips from <span className="text-primary">David</span>
+                Design tips from <span className="text-primary">David</span>
               </h2>
             </div>
 
             <div className="border-l-4 border-primary bg-card rounded-r-2xl p-8 md:p-10 shadow-sm">
               <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
-                <p>"After 25+ years in business, I've handed out — and received — thousands of business cards. The ones I remember? They were the ones that <span className="text-primary font-bold">felt right</span>. A good weight, clean design, and a finish that made you look twice."</p>
-                <p>"The biggest mistake I see with brochures? Trying to cram too much information onto one page. Your brochure isn't a textbook — it's a conversation starter. Lead with your strongest benefit, use clean visuals, and always include a clear call to action."</p>
-                <p>"My advice: <span className="text-primary font-bold">keep it simple, keep it bold</span>. Use your brand colors consistently. Choose a stock that matches your industry. And don't skip the finish — a little spot UV on your logo can turn a $0.10 card into a $10 impression."</p>
+                <p>"In 25+ years in business, I've handed out and received thousands of business cards. The ones I remember <span className="text-primary font-bold">felt right</span>. Good weight, clean design and a finish that made you look twice."</p>
+                <p>"The biggest mistake I see with brochures? Cramming too much onto one page. A brochure starts a conversation. Lead with your strongest benefit, keep the visuals clean and always tell people what to do next."</p>
+                <p>"My advice: <span className="text-primary font-bold">keep it simple, keep it bold</span>. Use your brand colors every time. Pick a stock that fits your industry. And don't skip the finish. A little spot UV on your logo can turn a $0.10 card into a $10 impression."</p>
               </div>
               <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-display text-lg font-black text-foreground">— David Stein, Your Buckeye Branding Concierge</p>
+                <p className="font-display text-lg font-black text-foreground">David Stein, Your Buckeye Branding Concierge</p>
                 <p className="text-sm text-muted-foreground font-bold">Buckeye Biz Hub</p>
               </div>
             </div>
@@ -562,7 +562,7 @@ const BusinessPrinting = () => {
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black mb-4 text-foreground">
-              Why Ohio Businesses Choose <span className="text-primary">Buckeye Biz Hub</span>
+              Why Ohio businesses choose <span className="text-primary">Buckeye Biz Hub</span>
             </h2>
           </motion.div>
 
@@ -585,7 +585,7 @@ const BusinessPrinting = () => {
         <div className="container relative">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black mb-4 text-foreground">
-              Business Printing <span className="text-primary">FAQ</span>
+              Business printing <span className="text-primary">FAQ</span>
             </h2>
           </motion.div>
 
@@ -606,7 +606,7 @@ const BusinessPrinting = () => {
         </div>
       </section>
 
-      {/* Built by an Operator — credibility insert above final CTA */}
+      {/* Built by an Operator: credibility insert above final CTA */}
       <section className="py-16 lg:py-20 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -616,14 +616,14 @@ const BusinessPrinting = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Built by an Operator
+              Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
-              This Isn't Theory. It's Built by{" "}
-              <span className="text-primary">Someone Who's Done It.</span>
+              Run by someone who's{" "}
+              <span className="text-primary">been in your seat.</span>
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+              David Stein co-founded Buckeye Biz Hub and runs it day to day. Before that, he co-founded BeerTubes, was named inventor on its patents, grew it from $79K in year one to $4.5M and sold it in 2017. Then he built SBC Hospitality Group to 100+ employees. He's spent his own money on marketing. He knows what works and what doesn't.
             </p>
             <Link
               to="/about"
@@ -645,18 +645,18 @@ const BusinessPrinting = () => {
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-6 leading-[0.9]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
-              Ready for Premium Business Printing
+              Ready for better printing
               <br />
-              <span className="text-primary">at the Best Possible Price?</span>
+              <span className="text-primary">at a better price?</span>
             </h2>
           </motion.div>
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-lg md:text-xl text-primary-foreground/60 mb-12 font-medium max-w-3xl mx-auto">
-            Let David and the Buckeye Biz Hub team find you the highest quality materials at the best possible price. Full transparency, no markups, no surprises.
+            Let David and the Buckeye Biz Hub team find you top materials at the best price. Every cost shown. No surprises.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
             <Link to="/contact">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-[hsl(var(--ohio-red-light))] font-black text-xl sm:text-2xl px-14 py-8 rounded-xl shadow-[0_0_60px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_100px_hsl(var(--primary)/0.7)] transition-all duration-300 group uppercase tracking-wider" style={{ animation: "pulse-glow 3s infinite" }}>
-                Get Your 24-Hour Custom Quote
+                Get your quote in 24 hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>
@@ -668,7 +668,7 @@ const BusinessPrinting = () => {
       <section className="py-8 bg-ohio-navy">
         <div className="container">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
-            {["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned & Operated"].map((item, i) => (
+            {["24-hour quotes", "Every cost shown", "Ohio owned and operated"].map((item, i) => (
               <span key={i} className="flex items-center gap-2 text-sm font-bold text-primary-foreground/70 tracking-wide">
                 <Clock className="w-4 h-4 text-primary" />
                 {item}

@@ -16,7 +16,7 @@ const Pricing = () => {
   usePageSEO({
     title: "Pricing",
     description:
-      "Transparent pricing with no hidden fees. Get fast, honest quotes for all your printing, vehicle wrap, banner, and branding needs in Central Ohio.",
+      "Every fee up front, no hidden costs. Fast, honest quotes on printing, vehicle wraps, banners and branding in Central Ohio.",
   });
 
   return (

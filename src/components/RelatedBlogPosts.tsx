@@ -1,32 +1,25 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "@/lib/compat/router";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { fetchPosts, getFeaturedImage, getCategories } from "@/lib/wordpress";
+import { getExcerpt, type BlogPostSummary } from "@/lib/blog-utils";
 
 interface Props {
   /** Heading text */
   heading?: string;
   /** Number of posts to show */
   count?: number;
-  /** Optional search term to filter relevant posts */
-  searchTerm?: string;
+  /** Posts to show, chosen on the server (e.g. searchPosts() from "@/lib/blog") */
+  posts?: BlogPostSummary[];
 }
 
 const RelatedBlogPosts = ({
   heading = "Related Articles from Our Blog",
   count = 3,
-  searchTerm,
+  posts: allPosts = [],
 }: Props) => {
-  const { data, isLoading } = useQuery({
-    queryKey: ["wp-related-blog", searchTerm, count],
-    queryFn: () => fetchPosts(1, count, undefined, searchTerm),
-    staleTime: 10 * 60 * 1000,
-  });
+  const posts = allPosts.slice(0, count);
 
-  const posts = data?.items || [];
-
-  if (isLoading || posts.length === 0) return null;
+  if (posts.length === 0) return null;
 
   return (
     <section className="py-16 lg:py-20 bg-ohio-grey-light">
@@ -48,16 +41,14 @@ const RelatedBlogPosts = ({
 
         <div className="grid md:grid-cols-3 gap-6">
           {posts.map((post) => {
-            const image = getFeaturedImage(post);
-            const title = post.title.rendered.replace(/<[^>]*>/g, "");
-            const excerpt = post.excerpt.rendered
-              .replace(/<[^>]*>/g, "")
-              .slice(0, 120);
-            const cats = getCategories(post);
+            const image = post.featuredImage;
+            const title = post.title;
+            const excerpt = getExcerpt(post, 120);
+            const cats = post.categories;
 
             return (
               <Link
-                key={post.id}
+                key={post.slug}
                 to={`/blog/${post.slug}`}
                 className="group flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300"
               >
@@ -83,7 +74,7 @@ const RelatedBlogPosts = ({
                     {title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
-                    {excerpt}…
+                    {excerpt}
                   </p>
                   <span className="inline-flex items-center gap-1 text-sm font-bold text-primary mt-3 opacity-60 group-hover:opacity-100 transition-opacity">
                     Read More <ArrowRight className="w-3.5 h-3.5" />

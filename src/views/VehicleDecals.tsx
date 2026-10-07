@@ -16,38 +16,38 @@ const trustItems = [
 
 const decalCards = [
   {
-    title: "Door Decals",
-    body: "The most popular and cost-effective vehicle branding option. A professionally designed door decal with your logo, phone number, and website transforms a plain company car into a branded business vehicle. Visible from both sides, generating thousands of daily impressions.",
+    title: "Door decals",
+    body: "The most popular and cheapest way to brand a vehicle. Your logo, phone number and website on the doors turns a plain car into a business vehicle. Seen from both sides, thousands of times a day.",
     cost: "$150–$300 for a set of door decals",
     best: "Company cars, real estate agents, property managers, small business owners",
   },
   {
-    title: "Logo and Brand Graphics",
-    body: "A complete spot-graphic package: logo placement, brand colors, tagline, phone number, website URL, and service list across the doors, rear, and rear glass.",
+    title: "Logo and brand graphics",
+    body: "A full spot-graphic package: logo, brand colors, tagline, phone, website and service list on the doors, rear and back glass.",
     cost: "$250–$500 per vehicle",
     best: "Service businesses, contractors, professional services",
   },
   {
-    title: "Rear Window and Tailgate Graphics",
-    body: "Perforated rear window vinyl allows full outward visibility from inside the vehicle while displaying full-color graphics to everyone behind you.",
+    title: "Rear window and tailgate graphics",
+    body: "Perforated vinyl on the back glass. You can still see out, and everyone behind you sees full-color graphics.",
     cost: "$100–$300",
     best: "All business vehicles, especially delivery and service vehicles",
   },
   {
-    title: "Custom Cut Vinyl Lettering",
-    body: "Professional vinyl lettering for your business name, phone number, website, DOT numbers, and license information. Available in dozens of colors.",
+    title: "Custom cut vinyl lettering",
+    body: "Vinyl lettering for your business name, phone, website, DOT numbers and license info. Dozens of colors.",
     cost: "$50–$200",
     best: "Work trucks, service vans, trailers, box trucks",
   },
   {
-    title: "Magnetic Signs",
-    body: "Apply when working, remove when using the vehicle personally. Custom-printed in any size with the same professional quality as permanent decals.",
+    title: "Magnetic signs",
+    body: "On for work, off for the weekend. Any size, same print quality as permanent decals.",
     cost: "$75–$200 per pair",
     best: "Vehicles used for both personal and business purposes",
   },
   {
-    title: "Trailer and Box Truck Lettering",
-    body: "Large-format graphics and lettering for trailers and box trucks. High visibility at the most cost-effective price per square inch.",
+    title: "Trailer and box truck lettering",
+    body: "Big graphics and lettering for trailers and box trucks. Lots of visibility for the money.",
     cost: "$300–$800 depending on coverage",
     best: "Landscaping trailers, construction, moving companies",
   },
@@ -65,7 +65,7 @@ const VehicleDecals = () => {
   usePageSEO({
     title: "Vehicle Decals and Spot Graphics Columbus Ohio | Business Vehicle Branding | Buckeye Biz Hub",
     description:
-      "Custom vehicle decals and spot graphics for Columbus Ohio businesses. We source from top local vinyl specialists. Starting at $150. Free quote.",
+      "Custom vehicle decals and spot graphics for Columbus, Ohio businesses. Sourced from top local vinyl shops. Starting at $150. Free quote.",
   });
 
   return (
@@ -126,7 +126,7 @@ const VehicleDecals = () => {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/60 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed"
           >
-            Professional Vehicle Branding That Doesn't Require a Full Wrap — Starting at $150 Per Vehicle
+            Brand your vehicle without a full wrap. Starting at $150 per vehicle.
           </motion.p>
 
           <motion.div
@@ -179,13 +179,13 @@ const VehicleDecals = () => {
             className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed"
           >
             <p>
-              Not every vehicle needs a full wrap to look professional. For small businesses, company cars, leased vehicles, or fleets on a budget, spot decals and vehicle graphics deliver remarkable branding results at a fraction of the cost of full coverage.
+              Not every vehicle needs a full wrap. For company cars, leased vehicles or fleets on a budget, spot decals do the job for a fraction of the cost.
             </p>
             <p>
-              At Buckeye Biz Hub, we produce custom vehicle decals for Columbus and Central Ohio businesses — from a single logo door decal to a full spot-graphic package including your logo, phone number, website, tagline, and service list. Every piece is printed on commercial-grade vinyl built to handle Ohio's weather year-round.
+              We coordinate custom decals for Columbus and Central Ohio businesses. One logo on a door, or a full package with your logo, phone, website, tagline and services. Everything goes on commercial-grade vinyl that handles Ohio weather all year.
             </p>
             <p>
-              As your branding concierge, we also shop our Central Ohio vendor network to source the best quality and pricing for your specific decal project — you get more options and better pricing than going direct to a single shop.
+              We shop your job across our Central Ohio partner shops. You get more options and better pricing than going to one shop yourself.
             </p>
           </motion.div>
         </div>
@@ -201,7 +201,7 @@ const VehicleDecals = () => {
             transition={{ duration: 0.6 }}
             className="font-display text-3xl md:text-5xl font-black text-center mb-12 text-foreground"
           >
-            Spot Decals vs Full Wraps —{" "}
+            Spot Decals vs Full Wraps:{" "}
             <span className="text-primary">Which Is Right for Your Vehicle?</span>
           </motion.h2>
 
@@ -280,7 +280,7 @@ const VehicleDecals = () => {
             ))}
           </div>
 
-          {/* Built by an Operator — credibility callout, directly above CTA */}
+          {/* Built by an operator: credibility callout, directly above CTA */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -289,14 +289,14 @@ const VehicleDecals = () => {
             className="mt-14 max-w-3xl mx-auto bg-ohio-cream rounded-2xl p-8 md:p-10 border border-border"
           >
             <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Built by an Operator
+              Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl font-black mb-4 text-foreground leading-[1.15]">
-              This Isn't Theory. It's Built by{" "}
-              <span className="text-primary">Someone Who's Done It.</span>
+              Built by{" "}
+              <span className="text-primary">Someone Who's Done It</span>
             </h3>
             <p className="text-base text-muted-foreground leading-relaxed mb-4">
-              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+              David Stein co-founded and runs Buckeye Biz Hub. Before that he co-founded BeerTubes, a patented product company, grew it from $79K to $4.5M and sold it in 2017. Then he built a brewery and restaurant group with 100+ employees. The advice you get here comes from someone who spent his own money on marketing and knows what works.
             </p>
             <Link
               to="/about"

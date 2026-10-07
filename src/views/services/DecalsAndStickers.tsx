@@ -7,13 +7,13 @@ const DecalsAndStickers = () => (
   <SimpleServicePage
     service="Decals & Stickers"
     metaTitle="Decals & Stickers in Columbus, Ohio | Buckeye Biz Hub"
-    metaDescription="Custom decals and stickers in Columbus, Ohio — vehicle decals, window clings, floor graphics, DOT numbers, and bumper stickers printed on premium vinyl."
+    metaDescription="Custom decals and stickers in Columbus, Ohio. Vehicle decals, window clings, floor graphics, DOT numbers and bumper stickers on quality vinyl."
     slug="/decals-and-stickers"
-    description={`Custom decals and stickers are the swiss army knife of small-business marketing. They turn windows into ads, walls into wayfinding, vehicles into billboards, and laptops into walking referrals. Buckeye Biz Hub prints decals and stickers in Columbus, Ohio for every use case you can think of — and a few you probably haven't.
+    description={`Custom decals and stickers are the Swiss Army knife of small-business marketing. They turn windows into ads, walls into wayfinding, trucks into billboards and laptops into walking referrals. Buckeye Biz Hub handles decals and stickers in Columbus, Ohio for just about any use you can think of.
 
-We handle it all in-house: die-cut vinyl stickers, kiss-cut sticker sheets, weatherproof bumper stickers, transparent window clings, frosted privacy decals, reflective DOT and USDOT number decals for trucks, full-color vehicle decals, floor graphics with anti-slip laminate, wall decals for offices and retail spaces, and industrial machinery labels rated for outdoor and chemical exposure. Every product is printed on premium 3M, Avery, or Oracal vinyl with UV-stable inks built for Ohio's freeze-thaw cycles.
+Die-cut vinyl stickers, kiss-cut sheets, weatherproof bumper stickers, clear window clings, frosted privacy film, reflective DOT and USDOT numbers for trucks, full-color vehicle decals, anti-slip floor graphics, wall decals for offices and stores, and machinery labels rated for outdoor and chemical exposure. Our partner shops print on 3M, Avery or Oracal vinyl with UV-stable inks that hold up to Ohio's freeze-thaw cycles.
 
-Whether you're a Columbus contractor who needs DOT numbers for your fleet, a small-batch coffee roaster who wants product stickers, a real-estate agent who needs branded yard-sign decals, or a Central Ohio gym that wants floor graphics directing traffic, we'll match the right material to your application. Most decal and sticker orders in Columbus Ohio ship in 3–5 business days, with same-business-day proofs and free design help on every order. And like everything else we print, pricing is fully transparent — wholesale material cost plus a single flat management fee, never a markup hidden behind a "setup charge."`}
+Columbus contractor who needs DOT numbers on the fleet? Coffee roaster who wants product stickers? Realtor who needs yard-sign decals? Gym that wants floor graphics to direct traffic? We match the right material to the job. Most decal and sticker orders ship in 3–5 business days, with same-day proofs and free design help. Pricing is out in the open: wholesale material cost plus one flat management fee. No markup hiding behind a "setup charge."`}
     gallery={[
       { src: g1, alt: "Custom window clings for a Columbus, Ohio storefront" },
       { src: g2, alt: "Branded bumper stickers and die-cut decals" },
@@ -22,11 +22,11 @@ Whether you're a Columbus contractor who needs DOT numbers for your fleet, a sma
     startingFrom="$0.79"
     pricingNote="per die-cut vinyl sticker at quantity 250+"
     benefits={[
-      "Premium 3M, Avery, and Oracal vinyl rated for Ohio weather",
-      "Die-cut, kiss-cut, transparent, reflective, and floor-grade options",
-      "DOT and USDOT number decals shipped fast for Ohio commercial fleets",
-      "Free design help and same-business-day digital proofs",
-      "Transparent pricing — no hidden setup or art charges, ever",
+      "3M, Avery and Oracal vinyl rated for Ohio weather",
+      "Die-cut, kiss-cut, clear, reflective and floor-grade options",
+      "DOT and USDOT number decals, fast, for Ohio commercial fleets",
+      "Free design help and same-day digital proofs",
+      "No hidden setup or art charges",
     ]}
   />
 );

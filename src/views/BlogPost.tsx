@@ -1,55 +1,27 @@
 "use client";
-import { useParams, Link } from "@/lib/compat/router";
-import { useQuery } from "@tanstack/react-query";
+import { Link } from "@/lib/compat/router";
 import { ArrowLeft, ArrowRight, Calendar, User, Phone } from "lucide-react";
 import { format } from "date-fns";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import SEOHead, { countWords, SITE_URL } from "@/components/SEOHead";
-import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor, type WPPost } from "@/lib/wordpress";
+import { getExcerpt, type BlogPost as BlogPostData, type BlogPostSummary } from "@/lib/blog-utils";
 
-const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
-  const { slug } = useParams<{ slug: string }>();
+interface BlogPostProps {
+  /** Loaded from content/blog by the server page. */
+  post: BlogPostData | null;
+  related?: BlogPostSummary[];
+}
 
-  const { data: post, isLoading, error } = useQuery({
-    queryKey: ["wp-post", slug],
-    queryFn: () => fetchPost(slug!),
-    enabled: !!slug,
-    initialData: initialPost ?? undefined,
-  });
-
-  const { data: related = [] } = useQuery({
-    queryKey: ["wp-related", post?.id],
-    queryFn: () => fetchRelatedPosts(post!),
-    enabled: !!post,
-  });
-
-  const title = post ? post.title.rendered.replace(/<[^>]*>/g, "") : "Loading…";
-  const excerpt = post ? post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 155) : undefined;
-  const ogImage = post ? (getFeaturedImage(post) || undefined) : undefined;
+const BlogPost = ({ post, related = [] }: BlogPostProps) => {
+  const title = post ? post.title : "Post Not Found";
+  const excerpt = post ? getExcerpt(post, 155) : undefined;
+  const ogImage = post?.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined;
   const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : undefined;
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen">
-        <SEOHead title="Loading…" />
-        <Navbar />
-        <div className="pt-32 pb-20 container max-w-4xl">
-          <Skeleton className="h-10 w-3/4 mb-6" />
-          <Skeleton className="h-80 w-full mb-8 rounded-2xl" />
-          <Skeleton className="h-4 w-full mb-3" />
-          <Skeleton className="h-4 w-full mb-3" />
-          <Skeleton className="h-4 w-2/3" />
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (error || !post) {
+  if (!post) {
     return (
       <div className="min-h-screen">
         <SEOHead title="Post Not Found" noindex />
@@ -64,11 +36,11 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
     );
   }
 
-  const image = getFeaturedImage(post);
-  const categories = getCategories(post);
-  const author = getAuthor(post);
+  const image = post.featuredImage;
+  const categories = post.categories;
+  const author = post.author ? { name: post.author } : null;
   const date = format(new Date(post.date), "MMMM d, yyyy");
-  const wordCount = countWords(post.content.rendered);
+  const wordCount = countWords(post.content);
   const primaryCategory = categories[0];
 
   return (
@@ -101,14 +73,15 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
           </Link>
           <div className="flex flex-wrap items-center gap-4 mb-6">
             {categories.map((c) => (
-              <span key={c.id} className="text-[0.65rem] font-extrabold text-primary-foreground tracking-[0.15em] uppercase bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
+              <span key={c.slug} className="text-[0.65rem] font-extrabold text-primary-foreground tracking-[0.15em] uppercase bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
             ))}
           </div>
           <h1
             className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-6"
             style={{ textShadow: "0 0 60px rgba(255,255,255,0.2), 0 4px 20px rgba(0,0,0,0.8)" }}
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          >
+            {title}
+          </h1>
           <div className="flex items-center gap-6 text-primary-foreground/50 text-sm">
             <span className="flex items-center gap-2"><Calendar className="w-4 h-4" /> {date}</span>
             {author && <span className="flex items-center gap-2"><User className="w-4 h-4" /> {author.name}</span>}
@@ -121,7 +94,7 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
         <div className="container max-w-3xl">
           {image && (
             <img
-              src={image} alt={title}
+              src={image} alt={post.featuredAlt || title}
               className="w-full rounded-2xl mb-12 shadow-lg"
               loading="eager"
               fetchPriority="high"
@@ -137,7 +110,7 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
               prose-img:rounded-xl prose-img:shadow-md
               prose-strong:text-foreground
               prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           {/* Service cross-links */}
@@ -179,7 +152,7 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
           <div className="container">
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-12 text-center">Related Articles</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {related.map((r) => <BlogCard key={r.id} post={r} />)}
+              {related.map((r) => <BlogCard key={r.slug} post={r} />)}
             </div>
           </div>
         </section>

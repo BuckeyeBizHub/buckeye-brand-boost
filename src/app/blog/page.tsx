@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/page-metadata";
+import { getAllPostSummaries, getCategories } from "@/lib/blog";
 import Blog from "@/views/Blog";
 
 export const metadata = pageMetadata({
@@ -8,4 +9,7 @@ export const metadata = pageMetadata({
   path: "/blog",
 });
 
-export default Blog;
+// Posts come from content/blog/*.json, read at build time.
+export default function Page() {
+  return <Blog posts={getAllPostSummaries()} categories={getCategories()} />;
+}

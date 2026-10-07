@@ -26,42 +26,42 @@ interface GalleryPhoto {
   category: Exclude<Category, "All">;
 }
 
-// Placeholder Unsplash photos — to be replaced with real client work.
+// Placeholder Unsplash photos. Replace with real client work when available.
 const photos: GalleryPhoto[] = [
   // Vehicle Wraps
-  { src: "https://images.unsplash.com/photo-1597007066704-67bf2068d5b2?auto=format&fit=crop&w=1200&q=80", caption: "Full vehicle wrap — Columbus OH", category: "Vehicle Wraps" },
-  { src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80", caption: "Commercial van fleet wrap — Central Ohio", category: "Vehicle Wraps" },
-  { src: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80", caption: "Service van branding — Columbus OH", category: "Vehicle Wraps" },
+  { src: "https://images.unsplash.com/photo-1597007066704-67bf2068d5b2?auto=format&fit=crop&w=1200&q=80", caption: "Full vehicle wrap example", category: "Vehicle Wraps" },
+  { src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80", caption: "Commercial van fleet wrap example", category: "Vehicle Wraps" },
+  { src: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80", caption: "Service van branding example", category: "Vehicle Wraps" },
 
   // Business Printing
-  { src: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=1200&q=80", caption: "Premium business cards — Central Ohio", category: "Business Printing" },
-  { src: "https://images.unsplash.com/photo-1586282391129-76a6df230234?auto=format&fit=crop&w=1200&q=80", caption: "Tri-fold brochures — Columbus OH", category: "Business Printing" },
-  { src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=1200&q=80", caption: "Custom letterhead & stationery — Ohio", category: "Business Printing" },
+  { src: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=1200&q=80", caption: "Premium business card example", category: "Business Printing" },
+  { src: "https://images.unsplash.com/photo-1586282391129-76a6df230234?auto=format&fit=crop&w=1200&q=80", caption: "Tri-fold brochure example", category: "Business Printing" },
+  { src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=1200&q=80", caption: "Letterhead and stationery example", category: "Business Printing" },
 
   // Promotional Products
-  { src: "https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=1200&q=80", caption: "Branded merchandise kits — Columbus OH", category: "Promotional Products" },
-  { src: "https://images.unsplash.com/photo-1572584642822-6f8de0243c93?auto=format&fit=crop&w=1200&q=80", caption: "Custom drinkware & swag — Central Ohio", category: "Promotional Products" },
-  { src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80", caption: "Promo giveaway bundle — Ohio", category: "Promotional Products" },
+  { src: "https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=1200&q=80", caption: "Branded merch kit example", category: "Promotional Products" },
+  { src: "https://images.unsplash.com/photo-1572584642822-6f8de0243c93?auto=format&fit=crop&w=1200&q=80", caption: "Drinkware and swag example", category: "Promotional Products" },
+  { src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80", caption: "Promo giveaway bundle example", category: "Promotional Products" },
 
   // Door Hangers
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80", caption: "Custom door hangers — Columbus OH", category: "Door Hangers" },
-  { src: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1200&q=80", caption: "Tear-off coupon door hangers — Central Ohio", category: "Door Hangers" },
-  { src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80", caption: "Neighborhood marketing door hangers — Ohio", category: "Door Hangers" },
+  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80", caption: "Door hanger example", category: "Door Hangers" },
+  { src: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1200&q=80", caption: "Tear-off coupon door hanger example", category: "Door Hangers" },
+  { src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80", caption: "Neighborhood door hanger example", category: "Door Hangers" },
 
   // Yard Signs
-  { src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80", caption: "Real estate yard sign — Columbus OH", category: "Yard Signs" },
-  { src: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?auto=format&fit=crop&w=1200&q=80", caption: "Corrugated yard signs — Central Ohio", category: "Yard Signs" },
-  { src: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1200&q=80", caption: "Outdoor event signage — Ohio", category: "Yard Signs" },
+  { src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80", caption: "Real estate yard sign example", category: "Yard Signs" },
+  { src: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?auto=format&fit=crop&w=1200&q=80", caption: "Corrugated yard sign example", category: "Yard Signs" },
+  { src: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1200&q=80", caption: "Outdoor event sign example", category: "Yard Signs" },
 
   // Banners
-  { src: "https://images.unsplash.com/photo-1567593810070-7a3d471af022?auto=format&fit=crop&w=1200&q=80", caption: "Large-format vinyl banner — Columbus OH", category: "Banners" },
-  { src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80", caption: "Event banner display — Central Ohio", category: "Banners" },
-  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80", caption: "Storefront banner — Ohio", category: "Banners" },
+  { src: "https://images.unsplash.com/photo-1567593810070-7a3d471af022?auto=format&fit=crop&w=1200&q=80", caption: "Large-format vinyl banner example", category: "Banners" },
+  { src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80", caption: "Event banner display example", category: "Banners" },
+  { src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80", caption: "Storefront banner example", category: "Banners" },
 
   // Branded Apparel
-  { src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80", caption: "Custom embroidered polos — Central Ohio", category: "Branded Apparel" },
-  { src: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80", caption: "Embroidered hats — Columbus OH", category: "Branded Apparel" },
-  { src: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80", caption: "Team uniform program — Ohio", category: "Branded Apparel" },
+  { src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80", caption: "Embroidered polo example", category: "Branded Apparel" },
+  { src: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80", caption: "Embroidered hat example", category: "Branded Apparel" },
+  { src: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80", caption: "Team uniform example", category: "Branded Apparel" },
 ];
 
 const Portfolio = () => {
@@ -69,8 +69,8 @@ const Portfolio = () => {
   const filtered = active === "All" ? photos : photos.filter((p) => p.category === active);
 
   usePageSEO({
-    title: "Our Work & Portfolio",
-    description: "Browse photo examples of printing, promotional products, vehicle wraps, signage, and branding projects completed for Columbus and Ohio businesses by Buckeye Biz Hub.",
+    title: "Examples and Ideas",
+    description: "Photo examples of printing, promo products, vehicle wraps, signs and branded apparel. See what it can look like for your Columbus or Ohio business.",
   });
 
   return (
@@ -92,15 +92,15 @@ const Portfolio = () => {
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
             className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
-            <Sparkles className="w-4 h-4" /> Our Work & Portfolio <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4" /> Examples and ideas <Sparkles className="w-4 h-4" />
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-foreground leading-[0.88] mb-10"
             style={{ textShadow: '0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)' }}>
-            Real Results for Real{" "}
+            What it can look like for{" "}
             <span className="text-primary text-glow-red relative">
-              Columbus Businesses
+              your business
               <motion.span className="absolute -bottom-3 left-0 w-full h-[5px] bg-gradient-to-r from-transparent via-ohio-red-glow to-transparent rounded-full"
                 initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.8, duration: 0.6 }} />
             </span>
@@ -108,7 +108,7 @@ const Portfolio = () => {
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
             className="text-xl md:text-2xl text-primary-foreground/50 max-w-4xl mx-auto font-semibold tracking-wide leading-relaxed">
-            Here's a look at some of the printing, promotional, signage, and branding projects we've helped local Ohio businesses bring to life with concierge-level care.
+            Example photos of printing, promo products, signs, wraps and apparel. Use them for ideas. Then tell us what you need.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-14 flex flex-wrap justify-center gap-8 md:gap-14">
@@ -202,7 +202,7 @@ const Portfolio = () => {
                         className="bg-primary text-primary-foreground hover:bg-primary/90 font-black uppercase tracking-[0.18em] px-6 py-5 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                       >
                         <Phone className="w-4 h-4" />
-                        Get a Quote
+                        Get a quote
                         <ArrowRight className="w-4 h-4" />
                       </Button>
                     </Link>
@@ -212,7 +212,7 @@ const Portfolio = () => {
             </motion.div>
 
             {filtered.length === 0 && (
-              <p className="text-center text-muted-foreground py-12">No photos in this category yet — check back soon.</p>
+              <p className="text-center text-muted-foreground py-12">No photos in this category yet. Check back soon.</p>
             )}
           </AnimatePresence>
         </div>
@@ -233,19 +233,19 @@ const Portfolio = () => {
           <motion.h2 initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-10 leading-[0.88]"
             style={{ textShadow: '0 0 80px rgba(255,255,255,0.35), 0 6px 25px rgba(0,0,0,0.6)' }}>
-            Ready to See Results{" "}<br className="hidden md:block" />
-            <span className="text-primary-foreground/90">for Your Business?</span>
+            Ready to get{" "}<br className="hidden md:block" />
+            <span className="text-primary-foreground/90">yours started?</span>
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="text-xl md:text-2xl text-primary-foreground/60 mb-16 font-semibold italic font-display max-w-3xl mx-auto">
-            Join 500+ Ohio businesses that trust Buckeye Biz Hub for printing, branding, and promotional products that drive real growth.
+            Join 500+ Ohio businesses that use Buckeye Biz Hub for printing, branding and promo products.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
               <Button size="lg"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl sm:text-2xl px-16 py-10 rounded-2xl shadow-[0_20px_80px_rgba(0,0,0,0.4)] transition-all duration-500 group uppercase tracking-[0.2em]">
                 <Phone className="w-6 h-6" />
-                Get Your Free Quote
+                Get your free quote
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform duration-300" />
               </Button>
             </Link>

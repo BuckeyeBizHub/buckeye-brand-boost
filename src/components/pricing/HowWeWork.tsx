@@ -14,17 +14,17 @@ const steps = [
   {
     icon: MessageSquare,
     title: "You reach out with an idea or need",
-    text: "Send a quick message, email, or call — no pressure, no commitment.",
+    text: "Send a message, email or call. No pressure, no commitment.",
   },
   {
     icon: FileText,
     title: "I personally review and quote within 24 hours",
-    text: "You get a detailed, transparent quote — usually the next business day.",
+    text: "You get a detailed quote with every cost spelled out.",
   },
   {
     icon: Eye,
     title: "We discuss options, materials, and pricing",
-    text: "Full transparency on every cost so you can make the best decision for your budget.",
+    text: "You see every cost, so you can make the right call for your budget.",
   },
   {
     icon: CheckCircle2,
@@ -34,17 +34,17 @@ const steps = [
   {
     icon: Pencil,
     title: "Unlimited revisions until you're happy",
-    text: "No nickel-and-diming for design tweaks — we keep going until it's right.",
+    text: "No nickel-and-diming for design tweaks. We keep going until it's right.",
   },
   {
     icon: Package,
     title: "We produce and personally inspect your order",
-    text: "Every project is hand-checked before it leaves — no shortcuts.",
+    text: "Every job gets checked by hand before it goes out. No shortcuts.",
   },
   {
     icon: Truck,
-    title: "We deliver or install — you only pay when 100% satisfied",
-    text: "If it's not right, we make it right. That's the concierge promise.",
+    title: "We deliver or install. You only pay when you're 100% satisfied",
+    text: "If you're not happy, we make it right. That's the promise.",
   },
 ];
 
@@ -58,14 +58,13 @@ const HowWeWork = () => (
         className="text-center mb-12 max-w-3xl mx-auto"
       >
         <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-          The Concierge Process
+          How it works
         </span>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">
           How We Actually <span className="text-primary">Work</span>
         </h2>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          At Buckeye Biz Hub, we don't just print things — we partner with
-          you. Here's exactly how the process works:
+          We work with you start to finish. Here's how it goes:
         </p>
       </motion.div>
 
@@ -116,7 +115,7 @@ const HowWeWork = () => (
           , not one-time transactions.
         </p>
         <p className="mt-3 text-sm font-bold text-primary">
-          — David Stein, Your Buckeye Branding Concierge
+          David Stein, co-founder, Buckeye Biz Hub
         </p>
       </motion.div>
     </div>

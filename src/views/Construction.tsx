@@ -32,7 +32,7 @@ const constructionTeam = "/assets/construction-team.jpg";
 const constructionSafetyDecals = "/assets/construction-safety-decals.jpg";
 const constructionHivisUniforms = "/assets/construction-hivis-uniforms.jpg";
 const PHOTO_BASE = "/photos";
-// Reusing existing job-site / fleet photos from the bucket — same crews, hard hats, vests, and trucks.
+// Reusing existing job-site / fleet photos from the bucket: same crews, hard hats, vests, and trucks.
 const HERO_IMG = constructionHero;
 const JOBSITE_IMG = constructionHivisUniforms;
 const FLEET_IMG = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
@@ -40,65 +40,65 @@ const FLEET_IMG = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
 const products = [
   {
     icon: Shirt,
-    title: "Branded Workwear & Safety Gear",
+    title: "Branded workwear and safety gear",
     description:
-      "Embroidered polos, t-shirts, hoodies, and high-visibility safety vests that keep every crew member looking consistent and identifiable on every job site.",
+      "Embroidered polos, t-shirts, hoodies and hi-vis vests. Every crew member looks the same and is easy to spot on site.",
     image: `${PHOTO_BASE}/roofing-apparel-titan.jpg`,
     imageAlt: "Embroidered branded crew polo shirts packed for delivery to a construction company",
   },
   {
     icon: Truck,
-    title: "Vehicle Wraps & Fleet Graphics",
+    title: "Vehicle wraps and fleet graphics",
     description:
-      "Full wraps, partial wraps, and magnetic signs for trucks, vans, trailers, and heavy equipment that hold up through Ohio winters and job-site conditions.",
+      "Full wraps, partial wraps and magnetic signs for trucks, vans, trailers and heavy equipment. Built to last through Ohio winters and job-site abuse.",
     image: `${PHOTO_BASE}/roofing-truck-wrap-bluepeaks.jpg`,
     imageAlt: "Construction contractor pickup truck with full branded vehicle wrap",
   },
   {
     icon: HardHat,
-    title: "Hard Hat Wraps & Safety Decals",
+    title: "Hard hat wraps and safety decals",
     description:
-      "Custom hard hat wraps and helmet graphics that keep your crew identified and branded on multi-contractor job sites.",
+      "Custom hard hat wraps and helmet graphics. Your crew stands out on a site full of other contractors.",
     image: constructionSafetyDecals,
     imageAlt: "Reflective First Aid CPR Trained and Safety Officer vinyl hard hat decals for construction crews",
   },
   {
     icon: Megaphone,
-    title: "Jobsite Banners & Fence Signage",
+    title: "Jobsite banners and fence signs",
     description:
-      "Weather-resistant jobsite banners, construction fence wraps, and site signage that turn every project into a billboard for your company.",
+      "Weather-resistant banners, fence wraps and site signs. Every project becomes a billboard for your company.",
     image: `${PHOTO_BASE}/roofing-yard-sign-shingles.jpg`,
     imageAlt: "Large weather-resistant jobsite banner mounted on a construction fence",
   },
   {
     icon: Users,
-    title: "Trade Show Booths & Event Displays",
+    title: "Trade show booths and event displays",
     description:
-      "Retractable banners, table throws, branded backdrops, and materials for home shows, builders expos, and industry events.",
+      "Retractable banners, table throws and backdrops for home shows, builders expos and industry events.",
     image: `${PHOTO_BASE}/roofing-trade-show-shift.jpg`,
     imageAlt: "Construction company trade show booth with branded backdrop and retractable banners",
   },
   {
     icon: FileText,
-    title: "Business Cards, Sales Sheets & Folders",
+    title: "Business cards, sales sheets and folders",
     description:
-      "Professional business cards, proposal folders, and branded leave-behinds that make your bids look as polished as your work.",
+      "Business cards, proposal folders and leave-behinds. Your bids should look as sharp as your work.",
     image: `${PHOTO_BASE}/roofing-business-cards-american.jpg`,
     imageAlt: "Branded business cards and proposal folders for a construction contractor",
   },
   {
     icon: LayoutGrid,
-    title: "Carbonless Contract & Job-Site Forms",
+    title: "Carbonless contracts and job-site forms",
     description:
-      "Branded, numbered work orders, change orders, and inspection forms built for the field.",
+      "Branded, numbered work orders, change orders and inspection forms built for the field.",
     image: `${PHOTO_BASE}/roofing-carbonless-form.jpg`,
     imageAlt: "Multi-part carbonless contract and work order forms for construction job sites",
   },
   {
     icon: Gift,
-    title: "Promotional Products & Employee Gifts",
+    title: "Promo products and employee gifts",
     description:
-      "Branded drinkware, jackets, and appreciation gifts that build team loyalty and keep your company name visible.",
+      "Branded drinkware, jackets and thank-you gifts. Your crew feels appreciated and your name stays in front of people.",
     image: `${PHOTO_BASE}/roofing-direct-mail-postcard.jpg`,
     imageAlt: "Branded promotional products and employee appreciation gifts for a construction crew",
   },
@@ -107,52 +107,52 @@ const products = [
 const faqs = [
   {
     q: "Do you work with both small construction crews and large multi-location operations?",
-    a: "Yes. We help small specialty contractors with starter packages — branded polos, business cards, and a single truck wrap — and we support large general contractors and multi-location builders with full fleet graphics, large-volume safety gear orders, jobsite signage programs, and trade show materials.",
+    a: "Yes. Small specialty contractors often start with polos, business cards and one truck wrap. Big general contractors and multi-location builders get full fleet graphics, bulk safety gear, jobsite sign programs and trade show materials.",
   },
   {
     q: "How quickly can you turn around branded workwear and fleet graphics?",
-    a: "Most embroidered polos, t-shirts, and high-vis vests ship within 1–2 weeks. Full vehicle wraps and large fleet branding programs typically take 2–3 weeks depending on the design and number of vehicles. Rush options are available when you need crews outfitted before a project kickoff.",
+    a: "Most embroidered polos, t-shirts and hi-vis vests ship in 1–2 weeks. Full wraps and big fleet programs usually take 2–3 weeks, depending on the design and how many vehicles. Need crews outfitted before a project kicks off? Ask about rush options.",
   },
   {
     q: "Do you offer volume discounts for larger crews?",
-    a: "Yes. We provide meaningful discounts on orders of 10+ embroidered polos, hoodies, or safety vests, and on full fleet wrap packages. Tell us your crew size and the equipment list and we'll put together pricing tailored to the project.",
+    a: "Yes. Orders of 10+ embroidered polos, hoodies or safety vests get real discounts, and so do full fleet wrap packages. Send us your crew size and equipment list and we'll price the project.",
   },
   {
     q: "Can we order a small test batch before committing to a full crew rollout?",
-    a: "Absolutely. Many contractors start with a handful of polos, a single hard hat wrap, or one truck wrap to confirm the design and quality before scaling up to the whole crew or fleet. We'd rather earn the bigger order than push it.",
+    a: "Yes. Plenty of contractors start with a few polos, one hard hat wrap or one truck wrap to check the design and quality. Then they roll it out to the crew or fleet. We'd rather earn the bigger order than push it.",
   },
   {
     q: "Do you wrap heavy equipment like skid steers, excavators, and dump trucks?",
-    a: "Yes. Heavy equipment graphics and partial wraps are a strong fit for construction companies — they turn every piece of machinery on the site into branded advertising. We design for the curves, panels, and wear patterns of the specific equipment.",
+    a: "Yes. Equipment graphics and partial wraps turn every machine on your site into an ad. The design fits the curves, panels and wear points of each machine.",
   },
   {
-    q: "Can you help with a full rebrand — new logo, uniforms, fleet, and signage all at once?",
-    a: "That's one of our favorite projects. We coordinate logo refinement, color and font systems, vehicle wraps, crew apparel, business cards, jobsite signage, and trade show materials so everything launches together with a consistent look.",
+    q: "Can you help with a full rebrand: new logo, uniforms, fleet, and signage all at once?",
+    a: "Yes, and we like those jobs. We line up the logo, colors and fonts, wraps, crew apparel, business cards, jobsite signs and trade show materials so it all launches together and matches.",
   },
   {
     q: "How does the free cost comparison work?",
-    a: "Send us a list or photos of what you're currently buying — uniforms, hard hat wraps, jobsite banners, business cards, forms, and so on — and we'll provide a side-by-side breakdown showing what we can deliver for the same or better quality, often with noticeable savings.",
+    a: "Send us a list or photos of what you buy now: uniforms, hard hat wraps, banners, business cards, forms. We'll send back a side-by-side showing what we can do at the same or better quality. Often for less.",
   },
   {
     q: "Do you support construction companies outside Columbus?",
-    a: "Yes. We work with general contractors and specialty trades across Central Ohio — Columbus, Dublin, Westerville, Marion, Delaware, Newark, Lancaster, and the surrounding 50-mile radius. Most orders ship directly to your office or job site.",
+    a: "Yes. We work with contractors across Central Ohio: Columbus, Dublin, Westerville, Marion, Delaware, Newark, Lancaster and about 50 miles around. Most orders ship straight to your office or job site.",
   },
 ];
 
 const audiences = [
-  "General Contractors & Construction Managers",
-  "Commercial & Industrial Builders",
-  "Specialty & Subcontractors",
-  "Residential Builders & Remodelers",
-  "Multi-Location Construction Operations",
-  "Design-Build Firms",
+  "General contractors and construction managers",
+  "Commercial and industrial builders",
+  "Specialty trades and subcontractors",
+  "Residential builders and remodelers",
+  "Multi-location construction companies",
+  "Design-build firms",
 ];
 
 const Construction = () => {
   usePageSEO({
-    title: "Branded Workwear, Fleet Wraps & Job Site Materials for Ohio Construction Companies",
+    title: "Workwear, Fleet Wraps and Jobsite Signs for Ohio Contractors",
     description:
-      "Branded workwear, vehicle graphics, jobsite banners, and trade show displays for Central Ohio contractors. We shop top vendors for best pricing.",
+      "Branded workwear, vehicle graphics, jobsite banners and trade show displays for Central Ohio contractors. We shop top vendors so you get the best price.",
   });
 
   const faqJsonLd = {
@@ -191,13 +191,13 @@ const Construction = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
           >
-            <HardHat className="w-4 h-4" /> 🏗️ Ohio Construction & General Contractors
+            <HardHat className="w-4 h-4" /> Ohio construction and general contractors
           </motion.div>
           <h1
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
             style={{ textShadow: "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)" }}
           >
-            Make Every Job Site and Every Truck Look Like the{" "}
+            Make every job site and truck look like the{" "}
             <span
               className="text-primary text-glow-red inline-block"
               style={{
@@ -207,21 +207,21 @@ const Construction = () => {
                 paintOrder: "stroke fill",
               }}
             >
-              Company You've Built
+              company you've built
             </span>
           </h1>
           <p
             className="text-lg md:text-xl text-primary-foreground font-medium leading-relaxed max-w-3xl mx-auto mb-10"
             style={{ textShadow: "0 2px 6px rgba(0,0,0,0.98), 0 4px 18px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7)" }}
           >
-            Branded workwear, vehicle graphics, jobsite banners, trade show displays, and safety gear — for Ohio construction companies that know their crew's appearance is part of their reputation.
+            Workwear, vehicle graphics, jobsite banners, trade show displays and safety gear for Ohio contractors. How your crew looks is part of your reputation.
           </p>
           <Link to="/contact">
             <Button
               size="lg"
               className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
             >
-              Get Your Free Construction Branding Quote
+              Get a free construction branding quote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
@@ -232,14 +232,14 @@ const Construction = () => {
       <section className="bg-primary/10 border-b border-primary/20 py-4">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-sm font-medium text-primary">
-            Professional Courtesy for Ohio Businesses:{" "}
+            Professional courtesy for Ohio businesses:{" "}
             <span className="font-semibold">20% off your first order</span>{" "}
-            on our already wholesale pricing. No commitment required.
+            on top of wholesale pricing. No commitment.
           </p>
         </div>
       </section>
 
-      {/* Section 1 — Why Construction Companies Choose Us */}
+      {/* Section 1: Why construction companies choose us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -250,17 +250,17 @@ const Construction = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Shield className="w-4 h-4" /> Why Construction Companies Choose Us
+                <Shield className="w-4 h-4" /> Why construction companies choose us
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-                Your Crews Are On Job Sites Across Ohio Every Day.{" "}
-                <span className="text-primary">We Make Sure They Look the Part.</span>
+                Your crews are on Ohio job sites every day.{" "}
+                <span className="text-primary">We make sure they look the part.</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                In construction, your reputation is built one project at a time — and the way your crew shows up on that first day, before a single nail is driven, tells the owner and the site manager everything about your company.
+                In construction, you build your reputation one project at a time. How your crew shows up on day one, before a nail goes in, tells the owner and the site manager a lot about you.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We work with Central Ohio general contractors, commercial builders, and specialty contractors to make sure their field teams look consistent, professional, and identifiable on every job site. From the truck pulling up to the crew walking the site to the banner on the fence — every touchpoint is a chance to reinforce who you are.
+                We help Central Ohio general contractors, commercial builders and specialty trades get their field teams looking sharp and matching on every site. The truck that pulls up, the crew on the ground, the banner on the fence. Each one tells people who you are.
               </p>
             </motion.div>
             <motion.div
@@ -281,7 +281,7 @@ const Construction = () => {
         </div>
       </section>
 
-      {/* Section 2 — Our Story */}
+      {/* Section 2: Our story */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -293,23 +293,23 @@ const Construction = () => {
               className="lg:order-2"
             >
               <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Award className="w-4 h-4" /> Our Story
+                <Award className="w-4 h-4" /> Our story
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-                We Know Construction From the Inside —{" "}
-                <span className="text-primary">Not Just From a Catalog</span>
+                We know what holds up{" "}
+                <span className="text-primary">on a job site</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've started <span className="font-bold text-foreground">3 businesses</span> from the ground up here in Central Ohio. In the last 20 months, I helped a local vehicle wrap company <span className="font-bold text-foreground">double their fleet branding division's revenue</span> — working directly with contractors on fleet graphics, vehicle wraps, and branded crew gear that actually hold up on job sites.
+                I've helped build <span className="font-bold text-foreground">3 businesses</span> here in Central Ohio. In the last 20 months, I helped a local vehicle wrap company <span className="font-bold text-foreground">double their fleet branding division's revenue</span>. I worked directly with contractors on fleet graphics, wraps and crew gear that hold up on job sites.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've also spent <span className="font-bold text-foreground">15+ years</span> helping my wife, Dr. Kerry Stein, run Marion Endodontics in Marion, Ohio — handling all the procurement, branding, and materials for a busy professional practice. That experience taught me what it means to need things done right, on time, and by someone who actually understands your world.
+                I've also spent <span className="font-bold text-foreground">15+ years</span> helping my wife, Dr. Kerry Stein, run Marion Endodontics in Marion, Ohio. I handle procurement, branding and materials for a busy practice. I know what it means to need things done right, on time, by someone who gets your world.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                At Buckeye Biz Hub, we bring that same inside knowledge to Ohio construction companies. We know what holds up on a job site and what doesn't. We know the difference between a vendor who prints things and a partner who actually gets it.
+                We bring that to Ohio construction companies. We know what holds up on a job site and what doesn't. Some vendors just print things. We get it.
               </p>
               <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
-                — David Stein, Your Buckeye Branding Concierge
+                David Stein, co-founder, Buckeye Biz Hub
               </p>
             </motion.div>
             <motion.div
@@ -326,15 +326,15 @@ const Construction = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
-                <p className="text-primary-foreground font-bold text-lg">Real Fleet Branding</p>
-                <p className="text-primary-foreground/70 text-sm">The kind of look that wins bids before you say a word</p>
+                <p className="text-primary-foreground font-bold text-lg">Real fleet branding</p>
+                <p className="text-primary-foreground/70 text-sm">A look that helps win the bid before you say a word</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 — Products & Solutions */}
+      {/* Section 3: Products and solutions */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -344,14 +344,14 @@ const Construction = () => {
             className="text-center mb-14"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Sparkles className="w-4 h-4" /> Products & Solutions
+              <Sparkles className="w-4 h-4" /> Products and solutions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Everything Your Crews, Fleet, and Job Sites Need to{" "}
-              <span className="text-primary">Look Professional</span>
+              What your crews, fleet and job sites need to{" "}
+              <span className="text-primary">look professional</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From the first truck that pulls up to the last banner on the fence — we handle all of it.
+              The first truck that pulls up to the last banner on the fence. We handle all of it.
             </p>
           </motion.div>
 
@@ -386,7 +386,7 @@ const Construction = () => {
         </div>
       </section>
 
-      {/* Section 4 — Who We Serve */}
+      {/* Section 4: Who we serve */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-5xl mx-auto">
           <motion.div
@@ -396,14 +396,14 @@ const Construction = () => {
             className="text-center mb-12"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Users className="w-4 h-4" /> Who We Serve
+              <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-              Built for Every Type of{" "}
-              <span className="text-primary">Ohio Construction Operation</span>
+              Built for every kind of{" "}
+              <span className="text-primary">Ohio construction company</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From a 4-person specialty crew to a multi-location commercial builder — we scale to fit how your team actually works.
+              A 4-person specialty crew or a multi-location commercial builder. We fit how your team works.
             </p>
           </motion.div>
 
@@ -436,14 +436,14 @@ const Construction = () => {
             className="text-center mb-12"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <HelpCircle className="w-4 h-4" /> Frequently Asked Questions
+              <HelpCircle className="w-4 h-4" /> Frequently asked questions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Honest Answers for{" "}
-              <span className="text-primary">Construction Companies</span>
+              Straight answers for{" "}
+              <span className="text-primary">construction companies</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Real questions we hear from Central Ohio contractors — answered the way we'd answer them on the job site.
+              Questions we hear from Central Ohio contractors, answered like we would on the job site.
             </p>
           </motion.div>
 
@@ -478,16 +478,16 @@ const Construction = () => {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="bg-card border border-border rounded-3xl p-10 shadow-sm">
             <h3 className="font-display text-3xl font-bold text-foreground mb-4">
-              Free Cost Comparison — No Commitment
+              Free cost comparison. No commitment.
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
-              Tell us what you're currently spending on branded workwear, fleet graphics, jobsite signage, or printed materials and we'll show you exactly what we can provide for less — often with significant savings.
+              Tell us what you spend now on workwear, fleet graphics, jobsite signs or print. We'll show you what we can do for less.
             </p>
             <a
               href="/contact"
               className="inline-flex items-center justify-center bg-foreground text-background font-semibold px-10 py-4 rounded-2xl hover:bg-foreground/85 transition-colors"
             >
-              Request Your Free Comparison
+              Get your free comparison
             </a>
           </div>
         </div>
@@ -503,11 +503,11 @@ const Construction = () => {
             className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
           >
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Ready to Make Your Crews and Fleet Look Like{" "}
-              <span className="text-primary">the Company You've Built?</span>
+              Ready for your crews and fleet to look like{" "}
+              <span className="text-primary">the company you've built?</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              We offer free 24-hour quotes and a no-obligation cost comparison showing exactly what our wholesale network can provide versus what you're currently paying.
+              Free quotes within 24 hours. A no-obligation cost comparison shows what our wholesale network can do next to what you pay now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
@@ -515,7 +515,7 @@ const Construction = () => {
                   size="lg"
                   className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
                 >
-                  Get Your Free Construction Quote
+                  Get a free construction quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -525,7 +525,7 @@ const Construction = () => {
                   variant="outline"
                   className="border-2 border-foreground/20 hover:border-primary/40 text-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl uppercase tracking-wider"
                 >
-                  See All Industries We Serve
+                  See all industries we serve
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

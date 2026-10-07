@@ -5,19 +5,19 @@ import { ClipboardCheck, Paintbrush, Layers, Printer, Wrench, HeartHandshake } f
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const steps = [
-  { num: 1, icon: ClipboardCheck, title: "Free Consultation & Measurement", desc: "We visit your location in Central Ohio or use photos you send." },
-  { num: 2, icon: Paintbrush, title: "Custom Design Proof", desc: "Professional 3D mockups on your exact vehicles (delivered in 24 hours)." },
-  { num: 3, icon: Layers, title: "Premium Material Selection", desc: "3M or Avery high-performance vinyl engineered for Ohio winters, salt, and road debris." },
-  { num: 4, icon: Printer, title: "Precision Printing & Lamination", desc: "UV-resistant inks with high-gloss or matte finish for maximum durability." },
-  { num: 5, icon: Wrench, title: "Professional Installation", desc: "Certified Ohio installers (mobile service available at your shop or fleet yard)." },
-  { num: 6, icon: HeartHandshake, title: "Follow-Up & Maintenance Kit", desc: "Free touch-up tools + yearly inspection to keep your wrap looking new." },
+  { num: 1, icon: ClipboardCheck, title: "Free consult and measurement", desc: "We come to you in Central Ohio, or work from photos you send." },
+  { num: 2, icon: Paintbrush, title: "Design proof", desc: "3D mockups on your actual vehicles, delivered in 24 hours." },
+  { num: 3, icon: Layers, title: "Pick the material", desc: "3M or Avery vinyl built to handle Ohio winters, salt and road debris." },
+  { num: 4, icon: Printer, title: "Print and laminate", desc: "UV-resistant inks with a gloss or matte laminate so it lasts." },
+  { num: 5, icon: Wrench, title: "Installation", desc: "Certified Ohio installers. Mobile service at your shop or fleet yard." },
+  { num: 6, icon: HeartHandshake, title: "Follow-up and care kit", desc: "Free touch-up tools and a yearly inspection to keep your wrap looking new." },
 ];
 
 const HowItWorksSection = () => (
   <section className="py-24 lg:py-32 bg-background">
     <div className="container max-w-6xl mx-auto px-6">
       <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">
-        How It Works — 6 Simple Steps
+        How it works: 6 steps
       </motion.h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {steps.map((step, i) => (

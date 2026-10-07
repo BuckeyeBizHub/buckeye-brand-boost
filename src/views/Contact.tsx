@@ -15,7 +15,7 @@ const heroBadges = [
 ];
 
 const Contact = () => {
-  usePageSEO({ title: "Contact", description: "Ready to get started? Contact Buckeye Biz Hub for a custom 24-hour quote on printing, vehicle wraps, banners, decals, and branding services." });
+  usePageSEO({ title: "Contact", description: "Contact Buckeye Biz Hub for a custom quote within 24 hours on printing, vehicle wraps, banners, decals and branding." });
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -51,7 +51,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Hero — kept as-is */}
+      {/* Hero: kept as-is */}
       <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -84,7 +84,7 @@ const Contact = () => {
               className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide"
               style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
             >
-              24-Hour Quotes • Full Pricing Transparency Up Front • All Fees Known at Quote • Nothing Ever Hidden
+              24-hour quotes • Every fee up front • Nothing hidden
             </motion.p>
 
             {/* Badges */}
@@ -131,7 +131,7 @@ const Contact = () => {
 
         <div className="container relative max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-[340px_1fr] gap-10 items-start">
-            {/* Left sidebar — contact info & guarantees */}
+            {/* Left sidebar: contact info & guarantees */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -173,16 +173,16 @@ const Contact = () => {
                   <h3 className="font-display text-lg font-black text-foreground">We Respond Within 24 Hours</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Every quote request gets a personal response from David — usually the same business day. No bots, no runaround.
+                  David answers every quote request himself, usually the same business day. No bots. No runaround.
                 </p>
               </div>
 
               {/* Trust points */}
               <div className="space-y-3 pt-2">
                 {[
-                  { icon: CheckCircle, text: "Free quotes — no obligation" },
-                  { icon: ShieldCheck, text: "100% transparent pricing" },
-                  { icon: Star, text: "4,300+ supplier network for best value" },
+                  { icon: CheckCircle, text: "Free quotes, no obligation" },
+                  { icon: ShieldCheck, text: "Every fee up front" },
+                  { icon: Star, text: "4,300+ vetted suppliers for the best value" },
                   { icon: BadgeCheck, text: "Ohio owned & operated" },
                 ].map((item) => (
                   <div key={item.text} className="flex items-center gap-3">
@@ -193,7 +193,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Right — Tally form */}
+            {/* Right: Tally form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +202,7 @@ const Contact = () => {
               className="bg-card border-2 border-border rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg overflow-hidden"
             >
               <h2 className="font-display text-2xl md:text-3xl font-black text-foreground mb-2">Tell Us About Your Project</h2>
-              <p className="text-muted-foreground mb-8">Fill out the form below and we'll get back to you with a custom quote within 24 hours.</p>
+              <p className="text-muted-foreground mb-8">Fill out the form and you'll have a custom quote within 24 hours.</p>
 
               {submitted && (
                 <div
@@ -213,7 +213,7 @@ const Contact = () => {
                 >
                   <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-primary font-bold text-base leading-relaxed">
-                    Thank you! Your quote request has been received. We'll be in touch within 24 hours.
+                    Thanks. We got your quote request. You'll hear from us within 24 hours.
                   </p>
                 </div>
               )}
@@ -246,7 +246,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Map + Contact Info — two-column on desktop, stacked on mobile (map first) */}
+      {/* Google Map + Contact Info: two-column on desktop, stacked on mobile (map first) */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -257,8 +257,11 @@ const Contact = () => {
             className="text-center mb-10"
           >
             <h3 className="font-display text-2xl md:text-3xl font-black text-foreground">
-              Find Us in Columbus, Ohio
+              Based in Columbus, Ohio
             </h3>
+            <p className="mt-3 text-muted-foreground">
+              No walk-in showroom. David meets you on site, in person or by phone.
+            </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">

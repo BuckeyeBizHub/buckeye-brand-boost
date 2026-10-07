@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const pricingHero = "/assets/pricing-hero.jpg";
 const badges = [
   { icon: ShieldCheck, label: "No Hidden Fees" },
-  { icon: BadgeCheck, label: "Concierge Service Included" },
+  { icon: BadgeCheck, label: "One Point of Contact" },
   { icon: Heart, label: "Supporting Ohio Businesses" },
 ];
 
@@ -31,8 +31,8 @@ const PricingHero = () => (
           className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-[0.95]"
           style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}
         >
-          Transparent Pricing with{" "}
-          <span className="text-primary">True Concierge Service</span>
+          Honest Pricing.{" "}
+          <span className="text-primary">One Person to Call.</span>
         </motion.h1>
 
         <motion.p
@@ -42,8 +42,8 @@ const PricingHero = () => (
           className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-medium"
           style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}
         >
-          No hidden fees. No surprise charges. Just honest, clear pricing
-          backed by personal attention from start to finish.
+          No hidden fees. No surprise charges. Clear pricing and one person
+          who handles your job from start to finish.
         </motion.p>
 
         <motion.div

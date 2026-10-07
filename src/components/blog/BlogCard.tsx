@@ -1,17 +1,17 @@
 "use client";
 import { Link } from "@/lib/compat/router";
 import { Clock, Tag } from "lucide-react";
-import { WPPost, getExcerpt, getFeaturedImage, getCategories } from "@/lib/wordpress";
+import { getExcerpt, type BlogPostSummary } from "@/lib/blog-utils";
 import { format } from "date-fns";
 
 interface BlogCardProps {
-  post: WPPost;
+  post: BlogPostSummary;
   featured?: boolean;
 }
 
 const BlogCard = ({ post, featured = false }: BlogCardProps) => {
-  const image = getFeaturedImage(post);
-  const categories = getCategories(post);
+  const image = post.featuredImage;
+  const categories = post.categories;
   const excerpt = getExcerpt(post, featured ? 220 : 140);
   const date = format(new Date(post.date), "MMMM d, yyyy");
 
@@ -22,7 +22,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
           <div className="grid md:grid-cols-2">
             <div className="relative h-72 md:h-full min-h-[320px] overflow-hidden">
               {image ? (
-                <img src={image} alt={`${post.title.rendered.replace(/<[^>]*>/g, "")} — Buckeye Biz Hub blog, Columbus Ohio`} loading="eager" fetchPriority="high" width={640} height={400} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={image} alt={`${post.title} — Buckeye Biz Hub blog, Columbus Ohio`} loading="eager" fetchPriority="high" width={640} height={400} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">No Image</div>
               )}
@@ -38,11 +38,11 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
                 {categories[0] && <span className="text-xs font-bold text-primary uppercase tracking-[0.15em]">{categories[0].name}</span>}
                 <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="w-3 h-3" />{date}</span>
               </div>
-              <h2 className="font-display text-3xl lg:text-4xl font-black text-card-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+              <h2 className="font-display text-3xl lg:text-4xl font-black text-card-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">{post.title}</h2>
               <p className="text-muted-foreground leading-[1.8] mb-6">{excerpt}</p>
               <div className="flex flex-wrap gap-2">
                 {categories.map((c) => (
-                  <span key={c.id} className="text-[0.7rem] font-bold text-muted-foreground bg-muted border border-border rounded-full px-3 py-1.5">
+                  <span key={c.slug} className="text-[0.7rem] font-bold text-muted-foreground bg-muted border border-border rounded-full px-3 py-1.5">
                     <Tag className="w-3 h-3 inline mr-1 text-primary/60" />{c.name}
                   </span>
                 ))}
@@ -59,7 +59,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
       <div className="bg-card rounded-3xl border-2 border-border hover:border-primary/40 overflow-hidden card-lift shadow-sm hover:shadow-[0_25px_70px_-15px_hsl(0_85%_40%/0.18)] h-full flex flex-col">
         <div className="relative h-52 overflow-hidden">
           {image ? (
-            <img src={image} alt={`${post.title.rendered.replace(/<[^>]*>/g, "")} — Buckeye Biz Hub blog, Columbus Ohio`} loading="lazy" width={400} height={225} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src={image} alt={`${post.title} — Buckeye Biz Hub blog, Columbus Ohio`} loading="lazy" width={400} height={225} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-sm">No Image</div>
           )}
@@ -75,11 +75,11 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
         </div>
         <div className="p-7 flex flex-col flex-1">
           <span className="text-xs text-muted-foreground mb-3 flex items-center gap-1"><Clock className="w-3 h-3" />{date}</span>
-          <h3 className="font-display text-xl font-black text-card-foreground mb-3 leading-tight group-hover:text-primary transition-colors duration-300" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+          <h3 className="font-display text-xl font-black text-card-foreground mb-3 leading-tight group-hover:text-primary transition-colors duration-300">{post.title}</h3>
           <p className="text-muted-foreground text-sm leading-[1.8] mb-5 line-clamp-3 flex-1">{excerpt}</p>
           <div className="flex flex-wrap gap-1.5">
             {categories.slice(0, 2).map((c) => (
-              <span key={c.id} className="text-[0.65rem] font-bold text-muted-foreground bg-muted border border-border rounded-full px-2.5 py-1 group-hover:border-primary/20 transition-colors">{c.name}</span>
+              <span key={c.slug} className="text-[0.65rem] font-bold text-muted-foreground bg-muted border border-border rounded-full px-2.5 py-1 group-hover:border-primary/20 transition-colors">{c.name}</span>
             ))}
           </div>
         </div>

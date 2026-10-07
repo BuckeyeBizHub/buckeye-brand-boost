@@ -1,21 +1,18 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "@/lib/compat/router";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import BlogCard from "@/components/blog/BlogCard";
-import { fetchPosts } from "@/lib/wordpress";
+import type { BlogPostSummary } from "@/lib/blog-utils";
 
-const LatestBlogSection = () => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["wp-latest-posts"],
-    queryFn: () => fetchPosts(1, 6),
-    staleTime: 5 * 60 * 1000,
-  });
+interface LatestBlogSectionProps {
+  /** Latest posts, loaded from content/blog by the server page. */
+  posts?: BlogPostSummary[];
+}
 
-  if (error) return null;
+const LatestBlogSection = ({ posts = [] }: LatestBlogSectionProps) => {
+  if (posts.length === 0) return null;
 
   return (
     <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
@@ -31,35 +28,19 @@ const LatestBlogSection = () => {
           </h2>
         </motion.div>
 
-        {isLoading ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="rounded-3xl border-2 border-border overflow-hidden">
-                <Skeleton className="h-48 w-full" />
-                <div className="p-6 space-y-3">
-                  <Skeleton className="h-4 w-1/3" />
-                  <Skeleton className="h-6 w-full" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-2/3" />
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data?.items.slice(0, 6).map((post, i) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <BlogCard post={post} />
-              </motion.div>
-            ))}
-          </div>
-        )}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.slice(0, 6).map((post, i) => (
+            <motion.div
+              key={post.slug}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+            >
+              <BlogCard post={post} />
+            </motion.div>
+          ))}
+        </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-14">
           <Link to="/blog">

@@ -2,8 +2,8 @@ import { pageMetadata } from "@/lib/page-metadata";
 import Page from "@/views/AutoDealers";
 
 export const metadata = pageMetadata({
-  title: "Auto Dealer Branding & Marketing | Columbus Ohio | Buckeye Biz Hub",
-  description: "TODO: Final SEO description for Ohio auto dealers \u2014 fleet graphics, lot signage, employee polos, customer gift programs.",
+  title: "Auto Dealer Branding Columbus Ohio",
+  description: "Fleet graphics, lot signage, staff polos and customer gifts for Ohio auto dealers. One contact handles it all. Free quotes within 24 hours.",
   path: "/auto-dealers",
   noindex: true,
 });
