@@ -34,7 +34,7 @@ const PricingCTA = () => (
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-14 py-7 rounded-xl shadow-2xl group uppercase tracking-wider"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-14 py-7 rounded-xl shadow-2xl group "
             >
               Get Your Free Quote in 24 Hours
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

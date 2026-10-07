@@ -189,7 +189,7 @@ const Construction = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
           >
             <HardHat className="w-4 h-4" /> Ohio construction and general contractors
           </motion.div>
@@ -219,7 +219,7 @@ const Construction = () => {
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
             >
               Get a free construction branding quote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -249,7 +249,7 @@ const Construction = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
                 <Shield className="w-4 h-4" /> Why construction companies choose us
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -268,7 +268,7 @@ const Construction = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={JOBSITE_IMG}
@@ -292,7 +292,7 @@ const Construction = () => {
               transition={{ duration: 0.6 }}
               className="lg:order-2"
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
                 <Award className="w-4 h-4" /> Our story
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -308,7 +308,7 @@ const Construction = () => {
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 We bring that to Ohio construction companies. We know what holds up on a job site and what doesn't. Some vendors just print things. We get it.
               </p>
-              <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
+              <p className="mt-6 text-sm font-bold text-primary ">
                 David Stein, co-founder, Buckeye Biz Hub
               </p>
             </motion.div>
@@ -317,7 +317,7 @@ const Construction = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={FLEET_IMG}
@@ -343,7 +343,7 @@ const Construction = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Sparkles className="w-4 h-4" /> Products and solutions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
@@ -395,7 +395,7 @@ const Construction = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -435,7 +435,7 @@ const Construction = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <HelpCircle className="w-4 h-4" /> Frequently asked questions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
@@ -500,7 +500,7 @@ const Construction = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center "
           >
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
               Ready for your crews and fleet to look like{" "}
@@ -513,7 +513,7 @@ const Construction = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
                 >
                   Get a free construction quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -523,7 +523,7 @@ const Construction = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-foreground/20 hover:border-primary/40 text-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl uppercase tracking-wider"
+                  className="border-2 border-foreground/20 hover:border-primary/40 text-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl "
                 >
                   See all industries we serve
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -219,7 +219,7 @@ const PromotionalProductsPage = () => {
         </div>
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
               <Sparkles className="w-3.5 h-3.5" /> Promotional products and giveaways <Sparkles className="w-3.5 h-3.5" />
             </motion.div>
 
@@ -247,7 +247,7 @@ const PromotionalProductsPage = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
+                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-10 py-8 rounded-2xl group transition-all duration-300">
                   Get your promo products quote in 24 hours
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -261,7 +261,7 @@ const PromotionalProductsPage = () => {
       <section className="py-16 lg:py-20 bg-muted/40 border-y border-border/50">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <ShoppingBag className="w-4 h-4" /> Quick online ordering
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
@@ -275,7 +275,7 @@ const PromotionalProductsPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.5)] group uppercase tracking-wider transition-all duration-300 border-2 border-primary-foreground/10">
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-2xl group transition-all duration-300 border-2 border-primary-foreground/10">
                 <ShoppingBag className="w-5 h-5 mr-2" />
                 Shop ready-made products
                 <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
@@ -312,7 +312,7 @@ const PromotionalProductsPage = () => {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <ShoppingBag className="w-4 h-4" /> Product categories
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
@@ -340,7 +340,7 @@ const PromotionalProductsPage = () => {
                     <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{cat.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-5">{cat.desc}</p>
                     <Link to="/contact">
-                      <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider">
+                      <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl transition-all duration-300 group/btn ">
                         Get a Quote
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
@@ -355,10 +355,10 @@ const PromotionalProductsPage = () => {
 
       {/* Custom Printed Promotional Products */}
       <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
-        <div className="absolute bottom-[-200px] right-[-150px] w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[180px]" />
+        <div className="absolute bottom-[-200px] right-[-150px] w-[500px] h-[500px] bg-primary/[0.03] rounded-full hidden" />
         <div className="container relative max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Printer className="w-4 h-4" /> Custom printed products
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
@@ -416,7 +416,7 @@ const PromotionalProductsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.12)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 flex flex-col"
               >
                 <div className="p-7 flex flex-col flex-1">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
@@ -428,11 +428,11 @@ const PromotionalProductsPage = () => {
                   <p className="text-sm text-muted-foreground font-medium leading-[1.8] mb-4 flex-1">
                     {item.description}
                   </p>
-                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-5">
+                  <p className="text-xs font-bold text-primary mb-5">
                     {item.detail}
                   </p>
                   <Link to="/contact">
-                    <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)] transition-all duration-300 group/btn uppercase tracking-wider">
+                    <Button className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold rounded-xl transition-all duration-300 group/btn ">
                       Get a Quote
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -464,10 +464,10 @@ const PromotionalProductsPage = () => {
 
       {/* Printed Marketing Materials */}
       <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
-        <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[180px]" />
+        <div className="absolute top-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full hidden" />
         <div className="container relative max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Printer className="w-4 h-4" /> Custom printed materials
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
@@ -530,13 +530,13 @@ const PromotionalProductsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm hover:shadow-[0_20px_60px_hsl(0_80%_42%/0.15)] transition-all duration-500 hover:-translate-y-1 flex flex-col"
+                className="group bg-card rounded-2xl border-2 border-border hover:border-primary/40 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1 flex flex-col"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img src={item.image} alt={`${item.title} promotional products by Buckeye Biz Hub in Columbus Ohio`} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
-                  <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-[0_4px_20px_hsl(0_80%_42%/0.4)]">
+                  <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-primary/90 backdrop-blur-sm flex items-center justify-center ">
                     <item.icon className="w-5 h-5 text-primary-foreground" />
                   </div>
                 </div>
@@ -591,7 +591,7 @@ const PromotionalProductsPage = () => {
                         <span className="text-muted-foreground"><span className="font-semibold text-foreground">Cons:</span> {method.cons}</span>
                       </div>
                       <div className="pt-2 border-t border-border/50">
-                        <span className="font-bold text-primary text-xs uppercase tracking-wider">When to choose: </span>
+                        <span className="font-bold text-primary text-xs ">When to choose: </span>
                         <span className="text-muted-foreground">{method.when}</span>
                       </div>
                     </div>
@@ -667,7 +667,7 @@ const PromotionalProductsPage = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
@@ -691,8 +691,8 @@ const PromotionalProductsPage = () => {
       {/* Bottom CTA */}
       <section className="py-32 lg:py-44 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,92%,33%)] via-primary to-[hsl(0,78%,28%)]" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
 
         <div className="container relative text-center max-w-4xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }}
@@ -708,7 +708,7 @@ const PromotionalProductsPage = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
               <Button size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl md:text-2xl px-14 py-9 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl md:text-2xl px-14 py-9 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group "
                 style={{ animation: 'pulse-glow 3s ease-in-out infinite' }}>
                 <Phone className="w-6 h-6" />
                 Get your quote in 24 hours

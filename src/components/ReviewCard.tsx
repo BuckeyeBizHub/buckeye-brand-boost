@@ -18,7 +18,7 @@ const ReviewCard = ({ review, image, className }: ReviewCardProps) => {
   return (
     <div
       className={cn(
-        "group relative bg-primary-foreground/[0.03] border-2 border-primary-foreground/[0.06] hover:border-primary/30 rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:bg-primary-foreground/[0.05] hover:shadow-[0_25px_70px_-15px_hsl(0_85%_40%/0.15)]",
+ "group relative bg-primary-foreground/[0.03] border-2 border-primary-foreground/[0.06] hover:border-primary/30 rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:bg-primary-foreground/[0.05] ",
         className
       )}
       itemProp="review"

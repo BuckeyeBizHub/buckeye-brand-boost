@@ -138,7 +138,7 @@ const BannersAndFlags = () => {
         </div>
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
               <Sparkles className="w-3.5 h-3.5" /> Banners and flags <Sparkles className="w-3.5 h-3.5" />
             </motion.div>
 
@@ -166,7 +166,7 @@ const BannersAndFlags = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
+                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-10 py-8 rounded-2xl group transition-all duration-300">
                   Get your banner quote in 24 hours
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -201,7 +201,7 @@ const BannersAndFlags = () => {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4 bg-primary/[0.08] px-6 py-2.5 rounded-full">
               <Sparkles className="w-3.5 h-3.5" /> Our options
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
@@ -215,9 +215,9 @@ const BannersAndFlags = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCards.map((card, i) => (
               <motion.div key={card.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className={card.highlight ? "sm:col-span-2 lg:col-span-1" : ""}>
-                <Card className={`h-full hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group bg-card overflow-hidden ${card.highlight ? "border-2 border-primary ring-2 ring-primary/20 shadow-[0_0_30px_hsl(0_80%_42%/0.15)]" : "border-border/50 hover:border-primary/40"}`}>
+                <Card className={`h-full hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group bg-card overflow-hidden ${card.highlight ? "border-2 border-primary ring-2 ring-primary/20 " : "border-border/50 hover:border-primary/40"}`}>
                   {card.highlight && (
-                    <div className="bg-primary text-primary-foreground text-center py-2 text-sm font-black uppercase tracking-widest flex items-center justify-center gap-2">
+                    <div className="bg-primary text-primary-foreground text-center py-2 text-sm font-black flex items-center justify-center gap-2">
                       <GraduationCap className="w-4 h-4" />
                       Most popular this season
                     </div>
@@ -230,7 +230,7 @@ const BannersAndFlags = () => {
                     <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{card.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-grow">{card.desc}</p>
                     <Link to="/contact">
-                      <Button className={`w-full font-bold rounded-xl transition-all duration-300 group/btn uppercase tracking-wider ${card.highlight ? "bg-primary hover:bg-ohio-red-light text-primary-foreground shadow-[0_0_25px_hsl(0_80%_42%/0.3)] hover:shadow-[0_0_45px_hsl(0_80%_42%/0.5)]" : "bg-primary hover:bg-ohio-red-light text-primary-foreground shadow-[0_0_20px_hsl(0_80%_42%/0.2)] hover:shadow-[0_0_40px_hsl(0_80%_42%/0.4)]"}`}>
+                      <Button className={`w-full font-bold rounded-xl transition-all duration-300 group/btn ${card.highlight ? "bg-primary hover:bg-ohio-red-light text-primary-foreground " : "bg-primary hover:bg-ohio-red-light text-primary-foreground "}`}>
                         Get a Quote
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
@@ -327,7 +327,7 @@ const BannersAndFlags = () => {
       {/* Bottom CTA */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full hidden" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
             Ready for banners people{" "}
@@ -335,7 +335,7 @@ const BannersAndFlags = () => {
           </motion.h2>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group ">
                 <Phone className="w-6 h-6" />
                 Get your banner quote in 24 hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />

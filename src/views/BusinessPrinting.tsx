@@ -215,7 +215,7 @@ const BusinessPrinting = () => {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
             <div className="inline-flex items-center gap-3 bg-primary/20 border-2 border-primary/40 rounded-full px-6 py-2.5 mb-8 shadow-[0_0_25px_hsl(var(--primary)/0.2)]">
               <Printer className="w-5 h-5 text-primary" />
-              <span className="text-sm font-black text-primary tracking-[0.15em] uppercase">Business printing</span>
+              <span className="text-sm font-black text-primary ">Business printing</span>
             </div>
           </motion.div>
 
@@ -237,7 +237,7 @@ const BusinessPrinting = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-[hsl(var(--ohio-red-light))] text-primary-foreground font-black text-lg sm:text-xl px-12 py-7 rounded-xl shadow-[0_0_50px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_80px_hsl(var(--primary)/0.7)] transition-all duration-300 group uppercase tracking-wider" style={{ animation: "pulse-glow 3s infinite" }}>
+              <Button size="lg" className="bg-primary hover:bg-[hsl(var(--ohio-red-light))] text-primary-foreground font-black text-lg sm:text-xl px-12 py-7 rounded-xl shadow-[0_0_50px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_80px_hsl(var(--primary)/0.7)] transition-all duration-300 group " style={{ animation: "pulse-glow 3s infinite" }}>
                 <Phone className="w-5 h-5" />
                 Get your quote in 24 hours
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -280,7 +280,7 @@ const BusinessPrinting = () => {
             ].map((item) => (
               <div key={item.label} className="text-center bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/40 transition-colors duration-300">
                 <div className="font-display text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-2">{item.stat}</div>
-                <div className="text-muted-foreground font-bold uppercase tracking-wider text-xs md:text-sm">{item.label}</div>
+                <div className="text-muted-foreground font-bold text-xs md:text-sm">{item.label}</div>
               </div>
             ))}
           </motion.div>
@@ -306,7 +306,7 @@ const BusinessPrinting = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                   </div>
                   <CardContent className="p-7 pt-4">
-                    <h3 className="text-sm font-black text-primary tracking-[0.15em] uppercase mb-2">{card.title}</h3>
+                    <h3 className="text-sm font-black text-primary mb-2">{card.title}</h3>
                     <p className="font-display text-xl md:text-2xl font-black text-foreground mb-5 leading-tight">{card.headline}</p>
                     <div className="space-y-2.5 mb-7">
                       {card.bullets.map((b) => (
@@ -317,7 +317,7 @@ const BusinessPrinting = () => {
                       ))}
                     </div>
                     <Link to="/contact">
-                      <Button size="lg" className="w-full bg-primary hover:bg-[hsl(var(--ohio-red-light))] text-primary-foreground font-black text-base py-6 rounded-xl shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_50px_hsl(var(--primary)/0.5)] transition-all duration-300 group/btn uppercase tracking-wider">
+                      <Button size="lg" className="w-full bg-primary hover:bg-[hsl(var(--ohio-red-light))] text-primary-foreground font-black text-base py-6 rounded-xl shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_50px_hsl(var(--primary)/0.5)] transition-all duration-300 group/btn ">
                         Get a Quote
                         <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                       </Button>
@@ -615,7 +615,7 @@ const BusinessPrinting = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
@@ -639,8 +639,8 @@ const BusinessPrinting = () => {
       {/* Bottom CTA */}
       <section className="py-28 lg:py-36 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--ohio-grey-dark))] via-[hsl(var(--ohio-navy))] to-[hsl(var(--ohio-grey-dark))]" />
-        <div className="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] bg-primary/[0.1] rounded-full blur-[200px]" />
-        <div className="absolute bottom-[-200px] left-[-100px] w-[600px] h-[600px] bg-primary/[0.08] rounded-full blur-[180px]" />
+        <div className="absolute top-[-200px] right-[-100px] w-[800px] h-[800px] bg-primary/[0.1] rounded-full hidden" />
+        <div className="absolute bottom-[-200px] left-[-100px] w-[600px] h-[600px] bg-primary/[0.08] rounded-full hidden" />
 
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
@@ -655,7 +655,7 @@ const BusinessPrinting = () => {
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-[hsl(var(--ohio-red-light))] font-black text-xl sm:text-2xl px-14 py-8 rounded-xl shadow-[0_0_60px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_100px_hsl(var(--primary)/0.7)] transition-all duration-300 group uppercase tracking-wider" style={{ animation: "pulse-glow 3s infinite" }}>
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-[hsl(var(--ohio-red-light))] font-black text-xl sm:text-2xl px-14 py-8 rounded-xl shadow-[0_0_60px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_100px_hsl(var(--primary)/0.7)] transition-all duration-300 group " style={{ animation: "pulse-glow 3s infinite" }}>
                 Get your quote in 24 hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>

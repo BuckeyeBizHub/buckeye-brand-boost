@@ -61,13 +61,13 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
       <section className="relative pt-40 pb-28 lg:pt-52 lg:pb-36 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] blur-[200px]" />
+          <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] hidden" />
         </div>
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)", backgroundSize: "52px 52px" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
+            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 ">
             <BookOpen className="w-4 h-4" /> Resources & Insights <BookOpen className="w-4 h-4" />
           </motion.div>
           <h1
@@ -92,8 +92,8 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
               <button
                 onClick={() => { setActiveCat(undefined); setPage(1); }}
                 className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 ${
-                  !activeCat ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                }`}>
+ !activeCat ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+ }`}>
                 All Posts
               </button>
               {categories.filter((c) => c.slug !== "uncategorized").map((cat) => (
@@ -101,8 +101,8 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
                   key={cat.slug}
                   onClick={() => { setActiveCat(cat.slug); setPage(1); }}
                   className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 whitespace-nowrap ${
-                    activeCat === cat.slug ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                  }`}>
+ activeCat === cat.slug ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+ }`}>
                   <span>{cat.name}</span>
                 </button>
               ))}
@@ -122,8 +122,8 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
 
       {/* Blog Grid */}
       <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
-        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[180px]" />
-        <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[150px]" />
+        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full hidden" />
+        <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full hidden" />
 
         <div className="container relative">
           {posts.length === 0 ? (
@@ -211,8 +211,8 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
       {/* Bottom CTA */}
       <section className="py-32 lg:py-44 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,92%,33%)] via-primary to-[hsl(0,78%,28%)]" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
         <div className="container relative text-center">
           <motion.h2 initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-10 leading-[0.88]"
@@ -226,7 +226,7 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
               <Button size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest">
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group ">
                 <Phone className="w-7 h-7" /> Get Your Free Quote Today
                 <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
               </Button>

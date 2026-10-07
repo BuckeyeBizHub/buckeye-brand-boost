@@ -5,52 +5,67 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 25% 8%;
+    /* Material palette
+       asphalt  #16181B  base: the road the trucks drive on
+       graphite #202327  raised panels
+       seam     #363B41  lines and borders
+       stock    #ECE8E1  uncoated paper: print sections and main text
+       fog      #A3A9B0  secondary text
+       scarlet  #E0231B  the logo red, for actions only */
+    --asphalt: 216 9% 10%;
+    --graphite: 213 10% 14%;
+    --seam: 212 9% 23%;
+    --stock: 38 21% 90%;
+    --fog: 212 7% 66%;
+    --scarlet: 3 79% 49%;
+    --scarlet-text: 4 100% 66%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 8%;
+    --background: var(--asphalt);
+    --foreground: var(--stock);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 8%;
+    --card: var(--graphite);
+    --card-foreground: var(--stock);
 
-    --primary: 0 85% 40%;
+    --popover: var(--graphite);
+    --popover-foreground: var(--stock);
+
+    --primary: var(--scarlet);
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 94%;
-    --secondary-foreground: 220 25% 8%;
+    --secondary: 213 10% 18%;
+    --secondary-foreground: var(--stock);
 
-    --muted: 220 14% 94%;
-    --muted-foreground: 220 12% 38%;
+    --muted: 213 10% 16%;
+    --muted-foreground: var(--fog);
 
-    --accent: 0 85% 40%;
+    --accent: var(--scarlet);
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 88%;
-    --input: 220 18% 88%;
-    --ring: 0 85% 40%;
+    --border: var(--seam);
+    --input: var(--seam);
+    --ring: var(--scarlet-text);
 
-    --radius: 0.625rem;
+    --radius: 0.375rem;
 
-    /* Custom tokens */
-    --hero-bg: 220 25% 5%;
-    --ohio-red: 0 85% 40%;
-    --ohio-red-light: 0 80% 50%;
-    --ohio-red-glow: 0 95% 55%;
-    --ohio-grey: 220 14% 38%;
-    --ohio-grey-light: 220 25% 96%;
-    --ohio-grey-dark: 220 25% 5%;
-    --ohio-gold: 42 78% 52%;
-    --ohio-gold-dark: 38 75% 38%;
-    --ohio-forest: 145 45% 28%;
-    --ohio-navy: 0 0% 7%;
-    --ohio-cream: 0 0% 97%;
+    /* Old Lovable names, mapped onto the new palette so every page follows. */
+    --hero-bg: 216 14% 7%;
+    --ohio-red: var(--scarlet);
+    --ohio-red-light: 3 79% 56%;
+    --ohio-red-glow: var(--scarlet);
+    --ohio-grey: var(--fog);
+    --ohio-grey-light: var(--graphite);
+    --ohio-grey-dark: 216 14% 7%;
+    --ohio-gold: 42 70% 58%;
+    --ohio-gold-dark: 38 60% 45%;
+    --ohio-forest: 145 30% 40%;
+    --ohio-navy: 216 14% 7%;
+    --ohio-cream: var(--graphite);
 
-    --font-display: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-body: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: var(--font-archivo), 'Archivo', 'Arial Narrow', Arial, sans-serif;
+    --font-body: var(--font-archivo), 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -67,20 +82,66 @@
   * {
     @apply border-border;
   }
+  html {
+    color-scheme: dark;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    font-stretch: 100%;
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .font-display {
     font-family: var(--font-display);
+    font-stretch: 125%;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+  h3, h4, h5, h6 {
+    font-stretch: 112%;
+    line-height: 1.15;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: hsl(var(--scarlet));
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--scarlet-text));
+    outline-offset: 3px;
+  }
+  /* Small red text needs the brighter red to stay readable on asphalt. */
+  .text-primary:is(.text-xs, .text-sm, .text-base, p, span, a, li) {
+    color: hsl(var(--scarlet-text));
+  }
+
+  /* Paper stock: print sections flip to warm uncoated paper. Every token
+     flips with it, so components inside work unchanged. */
+  .paper {
+    --background: var(--stock);
+    --foreground: 216 9% 10%;
+    --card: 40 24% 95%;
+    --card-foreground: 216 9% 10%;
+    --muted: 38 16% 84%;
+    --muted-foreground: 214 8% 32%;
+    --border: 36 10% 76%;
+    --input: 36 10% 76%;
+    --scarlet-text: 359 81% 40%;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    color-scheme: light;
   }
 }
 
 @layer utilities {
   .text-glow-red {
-    text-shadow: 0 0 25px hsl(0 85% 40% / 0.6), 0 0 60px hsl(0 85% 40% / 0.3), 0 0 100px hsl(0 85% 40% / 0.1);
+    text-shadow: none;
   }
   .text-glow-white {
     text-shadow: 0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,255,255,0.2), 0 4px 16px rgba(0,0,0,0.8);
@@ -89,14 +150,36 @@
     transition: transform 0.4s cubic-bezier(.22,.68,0,1.2), box-shadow 0.4s ease;
   }
   .card-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px -12px hsl(0 85% 40% / 0.22), 0 10px 25px -8px rgba(0,0,0,0.15);
+    border-color: hsl(var(--fog) / 0.6);
   }
   .red-accent-bar {
     @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-ohio-red-light to-primary;
   }
   .section-glow {
-    @apply absolute rounded-full blur-[180px];
+    display: none;
+  }
+  /* Press-proof crop marks around a picture. */
+  .crop {
+    position: relative;
+    --crop: 14px;
+    --crop-gap: 6px;
+    --crop-color: hsl(var(--foreground) / 0.45);
+  }
+  .crop::before,
+  .crop::after {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * (var(--crop) + var(--crop-gap)));
+    pointer-events: none;
+    background:
+      linear-gradient(var(--crop-color), var(--crop-color)) top var(--crop-gap) left 0 / var(--crop) 1px,
+      linear-gradient(var(--crop-color), var(--crop-color)) top 0 left calc(var(--crop) + var(--crop-gap)) / 1px var(--crop),
+      linear-gradient(var(--crop-color), var(--crop-color)) top var(--crop-gap) right 0 / var(--crop) 1px,
+      linear-gradient(var(--crop-color), var(--crop-color)) top 0 right calc(var(--crop) + var(--crop-gap)) / 1px var(--crop);
+    background-repeat: no-repeat;
+  }
+  .crop::after {
+    transform: scaleY(-1);
   }
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -104,8 +187,7 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px hsl(0 85% 40% / 0.4), 0 0 60px hsl(0 85% 40% / 0.1); }
-  50% { box-shadow: 0 0 55px hsl(0 85% 40% / 0.65), 0 0 100px hsl(0 85% 40% / 0.2); }
+  0%, 100% { box-shadow: none; }
 }
 
 @keyframes shimmer {

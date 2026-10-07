@@ -66,7 +66,7 @@ const RelatedBlogPosts = ({
                 )}
                 <div className="p-5 flex flex-col flex-grow">
                   {cats.length > 0 && (
-                    <span className="text-[0.6rem] font-extrabold text-primary tracking-[0.15em] uppercase mb-2">
+                    <span className="text-[0.6rem] font-extrabold text-primary mb-2">
                       {cats[0].name}
                     </span>
                   )}

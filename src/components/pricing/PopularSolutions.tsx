@@ -87,13 +87,13 @@ const PopularSolutions = () => (
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className={`relative bg-card rounded-2xl overflow-hidden border-2 shadow-lg hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1 flex flex-col ${
-              sol.popular
-                ? "border-primary ring-2 ring-primary/20 scale-[1.02]"
-                : "border-border"
-            }`}
+ sol.popular
+ ? "border-primary ring-2 ring-primary/20 scale-[1.02]"
+ : "border-border"
+ }`}
           >
             {sol.popular && (
-              <span className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg">
+              <span className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
                 Most Popular
               </span>
             )}
@@ -119,7 +119,7 @@ const PopularSolutions = () => (
 
               {sol.price && (
                 <div className="mb-4">
-                  <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                  <span className="text-xs font-bold text-muted-foreground ">
                     From
                   </span>
                   <p className="text-3xl font-black text-primary">{sol.price}</p>

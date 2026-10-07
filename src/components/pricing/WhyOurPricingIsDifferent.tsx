@@ -29,7 +29,7 @@ const WhyOurPricingIsDifferent = () => (
         viewport={{ once: true, margin: "-60px" }}
         className="text-center mb-12 max-w-3xl mx-auto"
       >
-        <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+        <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
           The honest truth
         </span>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 leading-tight">
@@ -82,7 +82,7 @@ const WhyOurPricingIsDifferent = () => (
           . One-time sales don't interest me. When you work with us, you get
           honest value every time."
         </p>
-        <p className="mt-5 text-sm font-bold text-primary-foreground/80 uppercase tracking-wider">
+        <p className="mt-5 text-sm font-bold text-primary-foreground/80 ">
           David Stein, co-founder, Buckeye Biz Hub
         </p>
       </motion.div>

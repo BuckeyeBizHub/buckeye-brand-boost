@@ -30,10 +30,10 @@ const FleetWraps = () => {
       <section className="relative pt-40 pb-32 lg:pt-52 lg:pb-44 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] blur-[220px]" />
+          <div className="w-[1200px] h-[1200px] rounded-full bg-primary/[0.18] hidden" />
         </div>
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="w-[700px] h-[500px] rounded-full bg-ohio-red-glow/[0.12] blur-[140px]" />
+          <div className="w-[700px] h-[500px] rounded-full bg-ohio-red-glow/[0.12] hidden" />
         </div>
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -43,14 +43,14 @@ const FleetWraps = () => {
             backgroundSize: "52px 52px",
           }}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
 
         <div className="container relative text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]"
+            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 "
           >
             <Sparkles className="w-4 h-4" /> Fleet wraps <Sparkles className="w-4 h-4" />
           </motion.div>
@@ -112,7 +112,7 @@ const FleetWraps = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl transition-all duration-300 group "
               >
                 <CheckCircle2 className="w-5 h-5" />
                 Get my fleet quote
@@ -240,14 +240,14 @@ const FleetWraps = () => {
             className="rounded-2xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.08)] bg-card"
           >
             <div className="grid grid-cols-3 bg-ohio-navy text-primary-foreground">
-              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider border-r border-primary-foreground/10">
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm border-r border-primary-foreground/10">
                 &nbsp;
               </div>
-              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center border-r border-primary-foreground/10 flex items-center justify-center gap-2">
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm text-center border-r border-primary-foreground/10 flex items-center justify-center gap-2">
                 <X className="w-4 h-4 text-primary-foreground/50" />
                 Going direct to a wrap shop
               </div>
-              <div className="p-4 md:p-5 font-bold text-xs md:text-sm uppercase tracking-wider text-center bg-primary flex items-center justify-center gap-2">
+              <div className="p-4 md:p-5 font-bold text-xs md:text-sm text-center bg-primary flex items-center justify-center gap-2">
                 <Check className="w-4 h-4" />
                 Working with Buckeye Biz Hub
               </div>
@@ -332,7 +332,7 @@ const FleetWraps = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="rounded-2xl p-7 bg-card border border-border hover:border-primary/40 hover:shadow-[0_10px_40px_rgba(0,0,0,0.1)] transition-all flex flex-col"
               >
-                <div className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-3">
+                <div className="text-xs font-extrabold text-primary mb-3">
                   {card.title}
                 </div>
                 <h3 className="font-display text-xl md:text-2xl font-black text-foreground mb-4 leading-tight">
@@ -433,7 +433,7 @@ const FleetWraps = () => {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="flex gap-5 rounded-2xl p-6 bg-card border border-border hover:border-primary/40 transition-all"
               >
-                <div className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-ohio-red-light text-primary-foreground font-display font-black text-2xl flex items-center justify-center shadow-[0_8px_25px_hsl(0_80%_42%/0.35)]">
+                <div className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-ohio-red-light text-primary-foreground font-display font-black text-2xl flex items-center justify-center ">
                   {i + 1}
                 </div>
                 <div>
@@ -471,7 +471,7 @@ const FleetWraps = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden border border-border shadow-[0_10px_40px_rgba(0,0,0,0.08)] bg-card"
           >
-            <div className="grid grid-cols-12 bg-ohio-navy text-primary-foreground text-xs md:text-sm font-bold uppercase tracking-wider">
+            <div className="grid grid-cols-12 bg-ohio-navy text-primary-foreground text-xs md:text-sm font-bold ">
               <div className="col-span-5 p-4 md:p-5 border-r border-primary-foreground/10">Service</div>
               <div className="col-span-3 p-4 md:p-5 border-r border-primary-foreground/10">Price range</div>
               <div className="col-span-4 p-4 md:p-5">Best for</div>
@@ -526,7 +526,7 @@ const FleetWraps = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.35)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.55)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-10 py-7 rounded-2xl transition-all duration-300 group "
               >
                 Get my exact fleet quote, free in 24 hours
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -585,7 +585,7 @@ const FleetWraps = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
@@ -643,7 +643,7 @@ const FleetWraps = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-background text-foreground hover:bg-background/90 font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] group uppercase tracking-wider w-full sm:w-auto"
+                className="bg-background text-foreground hover:bg-background/90 font-black text-base md:text-lg px-10 py-7 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] group w-full sm:w-auto"
               >
                 Get my free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -653,7 +653,7 @@ const FleetWraps = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-black text-base md:text-lg px-10 py-7 rounded-2xl uppercase tracking-wider w-full sm:w-auto"
+                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-black text-base md:text-lg px-10 py-7 rounded-2xl w-full sm:w-auto"
               >
                 Call 614-561-3358
               </Button>

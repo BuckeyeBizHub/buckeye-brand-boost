@@ -137,7 +137,7 @@ const Services = ({ relatedPosts }: { relatedPosts?: BlogPostSummary[] }) => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
               What We Offer
             </span>
@@ -164,7 +164,7 @@ const Services = ({ relatedPosts }: { relatedPosts?: BlogPostSummary[] }) => {
             className="mt-20 pt-12 border-t border-border"
           >
             <div className="text-center max-w-2xl mx-auto">
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground tracking-[0.3em] uppercase mb-4 bg-muted px-5 py-2 rounded-full">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground mb-4 bg-muted px-5 py-2 rounded-full">
                 Additional Services
               </span>
               <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-3">

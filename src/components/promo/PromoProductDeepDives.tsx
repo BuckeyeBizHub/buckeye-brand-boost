@@ -285,7 +285,7 @@ const PromoProductDeepDives = () => (
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
                   <section.icon className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-[10px] font-extrabold text-primary-foreground bg-primary px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-[10px] font-extrabold text-primary-foreground bg-primary px-3 py-1 rounded-full ">
                   {section.badge}
                 </span>
               </div>
@@ -337,7 +337,7 @@ const PromoProductDeepDives = () => (
               <div className="grid md:grid-cols-3 gap-4">
                 {section.useCases.map((uc) => (
                   <div key={uc.who} className="bg-muted/50 rounded-xl p-4">
-                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1.5">{uc.who}</p>
+                    <p className="text-xs font-bold text-primary mb-1.5">{uc.who}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">{uc.how}</p>
                   </div>
                 ))}

@@ -410,7 +410,7 @@ const ServiceDetailSections = () => (
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-primary-foreground bg-primary px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold text-primary-foreground bg-primary px-3.5 py-1.5 rounded-full shadow-lg">
                       <Sparkles className="w-3 h-3" />
                       {s.badge}
                     </span>
@@ -520,7 +520,7 @@ const ServiceDetailSections = () => (
                 <div className="grid md:grid-cols-3 gap-4">
                   {s.useCases.map((uc) => (
                     <div key={uc.who} className="bg-muted/50 rounded-xl p-4">
-                      <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1.5">{uc.who}</p>
+                      <p className="text-xs font-bold text-primary mb-1.5">{uc.who}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">{uc.how}</p>
                     </div>
                   ))}

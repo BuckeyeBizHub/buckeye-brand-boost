@@ -37,7 +37,7 @@ const NotFound = () => {
       <div className="flex-1 pt-32 pb-20 lg:pt-44 lg:pb-28">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           {/* Error indicator */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-black px-5 py-2 rounded-full mb-8">
             <Search className="w-3.5 h-3.5" />
             Error 404
           </div>

@@ -57,7 +57,7 @@ const HowWeWork = () => (
         viewport={{ once: true, margin: "-60px" }}
         className="text-center mb-12 max-w-3xl mx-auto"
       >
-        <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+        <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
           How it works
         </span>
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">

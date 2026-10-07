@@ -41,7 +41,7 @@ const FleetAndLogistics = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
               <Truck className="w-4 h-4" /> Ohio fleet and logistics
             </span>
             {/* TODO: finalize H1 + subheadline */}
@@ -55,7 +55,7 @@ const FleetAndLogistics = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
               >
                 Get a free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -69,7 +69,7 @@ const FleetAndLogistics = () => {
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
               <Award className="w-4 h-4" /> Why fleet operators trust Buckeye Biz Hub
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -87,7 +87,7 @@ const FleetAndLogistics = () => {
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
               <Sparkles className="w-4 h-4" /> What we do for fleets
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -104,7 +104,7 @@ const FleetAndLogistics = () => {
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
               <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -124,7 +124,7 @@ const FleetAndLogistics = () => {
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
               <Award className="w-4 h-4" /> The Buckeye Biz Hub difference
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -146,7 +146,7 @@ const FleetAndLogistics = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
@@ -188,7 +188,7 @@ const FleetAndLogistics = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
               >
                 Get a free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

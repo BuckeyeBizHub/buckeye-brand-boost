@@ -71,7 +71,7 @@ const PricingHero = () => (
           <a href="#quote-cta">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl group transition-all duration-300"
             >
               Get Your Free Quote
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

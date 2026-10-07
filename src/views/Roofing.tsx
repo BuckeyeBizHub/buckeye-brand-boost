@@ -199,7 +199,7 @@ const Roofing = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
           >
             <Hammer className="w-4 h-4" /> Central Ohio roofing contractors
           </motion.div>
@@ -229,7 +229,7 @@ const Roofing = () => {
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
             >
               Get a free roofing branding quote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -259,7 +259,7 @@ const Roofing = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
                 <Shield className="w-4 h-4" /> Why roofing contractors choose us
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -278,7 +278,7 @@ const Roofing = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={ROOFING_JOBSITE}
@@ -302,7 +302,7 @@ const Roofing = () => {
               transition={{ duration: 0.6 }}
               className="lg:order-2"
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
                 <Award className="w-4 h-4" /> Our story
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -321,7 +321,7 @@ const Roofing = () => {
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Think of us as your <span className="font-bold text-foreground">branding concierge</span>. We handle the details. You run jobs and grow the business.
               </p>
-              <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
+              <p className="mt-6 text-sm font-bold text-primary ">
                 David Stein, co-founder, Buckeye Biz Hub
               </p>
             </motion.div>
@@ -330,7 +330,7 @@ const Roofing = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={ROOFING_BEFORE_AFTER}
@@ -356,7 +356,7 @@ const Roofing = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Sparkles className="w-4 h-4" /> Products and solutions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight">
@@ -405,7 +405,7 @@ const Roofing = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Sparkles className="w-4 h-4" /> Roofing work
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
@@ -435,7 +435,7 @@ const Roofing = () => {
                   />
                 </div>
                 <div className="absolute top-3 left-3 right-3 flex justify-start pointer-events-none">
-                  <span className="inline-block bg-primary text-primary-foreground text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg border border-primary-foreground/20">
+                  <span className="inline-block bg-primary text-primary-foreground text-[10px] md:text-xs font-black px-3 py-1.5 rounded-full shadow-lg border border-primary-foreground/20">
                     {photo.label}
                   </span>
                 </div>
@@ -454,7 +454,7 @@ const Roofing = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
@@ -494,7 +494,7 @@ const Roofing = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
               <HelpCircle className="w-4 h-4" /> Frequently asked questions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
@@ -559,7 +559,7 @@ const Roofing = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center "
           >
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
               Busy season comes fast. Make your brand look{" "}
@@ -571,7 +571,7 @@ const Roofing = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
               >
                 Get a free consult
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

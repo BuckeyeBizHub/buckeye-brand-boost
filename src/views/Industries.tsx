@@ -112,15 +112,15 @@ const Industries = () => {
       {/* Hero */}
       <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 bg-gradient-to-br from-ohio-grey-dark via-[hsl(0,40%,8%)] to-ohio-grey-dark overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[180px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[160px]" />
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full hidden" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full hidden" />
         </div>
         <div className="container relative max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30"
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30"
           >
             Industries We Serve
           </motion.div>
@@ -153,7 +153,7 @@ const Industries = () => {
                 transition={{ delay: (i % 4) * 0.08, duration: 0.5 }}
               >
                 <Link to={ind.href} className="block h-full">
-                  <div className="group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 hover:border-primary/60 hover:shadow-[0_15px_45px_-15px_hsl(0_85%_40%/0.35)] hover:-translate-y-1">
+                  <div className="group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 hover:border-primary/60 hover:-translate-y-1">
                     <div className="text-4xl mb-3" aria-hidden="true">
                       {ind.emoji}
                     </div>
@@ -185,7 +185,7 @@ const Industries = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center "
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-5">
               Don't see your{" "}
@@ -197,7 +197,7 @@ const Industries = () => {
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
               >
                 Get Your Free 24-Hour Quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

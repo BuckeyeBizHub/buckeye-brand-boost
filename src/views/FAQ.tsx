@@ -306,7 +306,7 @@ const FAQ = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+            <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
               Frequently asked questions
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
@@ -320,7 +320,7 @@ const FAQ = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
                   Get a free quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -346,7 +346,7 @@ const FAQ = () => {
               variants={fadeUp}
               className="mb-10"
             >
-              <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+              <span className="inline-block text-xs font-extrabold text-primary mb-3">
                 {category.eyebrow}
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
@@ -404,7 +404,7 @@ const FAQ = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
                   Get a free quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

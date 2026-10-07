@@ -76,7 +76,7 @@ const About = () => {
               transition={{ duration: 0.7 }}
               className="lg:col-span-7 text-center lg:text-left"
             >
-              <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+              <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
                 About Buckeye Biz Hub
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
@@ -124,7 +124,7 @@ const About = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               The operator behind Buckeye Biz Hub
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -181,7 +181,7 @@ const About = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Advice from an operator
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -214,7 +214,7 @@ const About = () => {
             variants={fadeUp}
             className="max-w-3xl mb-12"
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               How it works
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
@@ -264,7 +264,7 @@ const About = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
               Best-fit clients
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
@@ -318,7 +318,7 @@ const About = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
                   <Phone className="w-5 h-5" />
                   Get a free quote
@@ -354,7 +354,7 @@ const About = () => {
                 <div className="font-display text-2xl md:text-3xl font-black text-primary text-glow-red leading-none mb-2">
                   {s.value}
                 </div>
-                <div className="text-[0.7rem] md:text-xs text-primary-foreground/60 font-bold uppercase tracking-wider leading-snug">
+                <div className="text-[0.7rem] md:text-xs text-primary-foreground/60 font-bold leading-snug">
                   {s.label}
                 </div>
               </div>

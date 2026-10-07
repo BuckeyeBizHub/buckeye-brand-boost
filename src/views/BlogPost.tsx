@@ -66,14 +66,14 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
       <section className="relative pt-36 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
         {image && <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(40px)" }} />}
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
         <div className="container relative max-w-4xl">
           <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
           <div className="flex flex-wrap items-center gap-4 mb-6">
             {categories.map((c) => (
-              <span key={c.slug} className="text-[0.65rem] font-extrabold text-primary-foreground tracking-[0.15em] uppercase bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
+              <span key={c.slug} className="text-[0.65rem] font-extrabold text-primary-foreground bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
             ))}
           </div>
           <h1
@@ -104,12 +104,12 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
           )}
           <div
             className="prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
-              prose-p:text-muted-foreground prose-p:leading-[1.9]
-              prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
-              prose-img:rounded-xl prose-img:shadow-md
-              prose-strong:text-foreground
-              prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
+ prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
+ prose-p:text-muted-foreground prose-p:leading-[1.9]
+ prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
+ prose-img:rounded-xl prose-img:shadow-md
+ prose-strong:text-foreground
+ prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

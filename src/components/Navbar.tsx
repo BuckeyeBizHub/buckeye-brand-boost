@@ -1,394 +1,259 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowRight, ChevronDown, ExternalLink, Facebook, Instagram, Phone } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { Link, useLocation } from "@/lib/compat/router";
-import { Button } from "@/components/ui/button";
-const buckeyeLogo = "/assets/buckeye-logo.png";
-const serviceLinks = [
-  { label: "Business Cards & Printing", href: "/business-cards-printing" },
-  { label: "Brochures & Business Printing", href: "/business-printing" },
-  { label: "Promotional Products & Giveaways", href: "/promotional-products" },
-  { label: "Embroidered Apparel & Uniforms", href: "/embroidered-apparel" },
-  { label: "Yard Signs & Custom Signage", href: "/yard-signs-and-signage" },
-  { label: "Vehicle Wraps & Fleet Branding", href: "/vehicle-wraps" },
-  { label: "Fleet Wraps", href: "/fleet-wraps" },
-  { label: "Vehicle Decals", href: "/vehicle-decals" },
-  { label: "Trade Show Displays", href: "/trade-show-displays" },
-  { label: "Full Rebrand Kits", href: "/full-rebrand-kits" },
-  { label: "Website Design & Development", href: "/website-design" },
-  { label: "Local SEO & Google Ranking", href: "/local-seo" },
-  { label: "Banners & Flags", href: "/banners-and-flags" },
-  { label: "Decals & Stickers", href: "/decals-and-stickers" },
+
+const logo = "/assets/buckeye-logo-256.png";
+
+type NavLinkItem = { label: string; href: string };
+type Group = { title: string; links: NavLinkItem[] };
+
+// Grouped by what people come here to buy. Vehicles first: that's the lead.
+export const serviceGroups: Group[] = [
+  {
+    title: "Vehicles",
+    links: [
+      { label: "Fleet wraps", href: "/fleet-wraps" },
+      { label: "Vehicle wraps", href: "/vehicle-wraps" },
+      { label: "Vehicle decals and lettering", href: "/vehicle-decals" },
+    ],
+  },
+  {
+    title: "Print",
+    links: [
+      { label: "Business cards", href: "/business-cards-printing" },
+      { label: "Brochures and business printing", href: "/business-printing" },
+      { label: "Postcards and direct mail", href: "/postcards" },
+      { label: "Door hangers", href: "/door-hangers" },
+      { label: "Yard signs and signage", href: "/yard-signs-and-signage" },
+      { label: "Banners and flags", href: "/banners-and-flags" },
+      { label: "Large format", href: "/large-format-printing" },
+      { label: "Decals and stickers", href: "/decals-and-stickers" },
+    ],
+  },
+  {
+    title: "Branded gear",
+    links: [
+      { label: "Promotional products", href: "/promotional-products" },
+      { label: "Embroidered apparel", href: "/embroidered-apparel" },
+      { label: "Trade show displays", href: "/trade-show-displays" },
+      { label: "Full rebrand kits", href: "/full-rebrand-kits" },
+    ],
+  },
+  {
+    title: "Web and growth",
+    links: [
+      { label: "Website design", href: "/website-design" },
+      { label: "Local SEO", href: "/local-seo" },
+      { label: "Business consulting", href: "/business-consulting" },
+    ],
+  },
 ];
 
-const aboutLinks = [
-  { label: "About Us", href: "/about" },
-];
-
-interface NavItem {
-  label: string;
-  href: string;
-  external?: boolean;
-  hasDropdown?: boolean;
-  dropdownType?: "services" | "about";
-}
-
-const navLinks: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about", hasDropdown: true, dropdownType: "about" },
+const mainLinks: NavLinkItem[] = [
   { label: "Industries", href: "/industries" },
-  { label: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
-  { label: "Consulting", href: "/business-consulting" },
   { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
+  { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ];
+
+const allServiceHrefs = serviceGroups.flatMap((g) => g.links.map((l) => l.href));
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<"services" | "about" | null>(null);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-  const location = useLocation();
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-    setOpenDropdown(null);
-    setMobileServicesOpen(false);
-    setMobileAboutOpen(false);
-  }, [location.pathname]);
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
-  const handleEnter = (type: "services" | "about") => {
-    clearTimeout(timeoutRef.current);
-    setOpenDropdown(type);
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setServicesOpen(false);
+    };
+    const onClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setServicesOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, [servicesOpen]);
+
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : !!pathname?.startsWith(href));
+  const servicesActive = allServiceHrefs.some((h) => isActive(h)) || isActive("/services");
+
+  const openServices = () => {
+    clearTimeout(closeTimer.current);
+    setServicesOpen(true);
   };
-  const handleLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpenDropdown(null), 150);
+  const closeServicesSoon = () => {
+    closeTimer.current = setTimeout(() => setServicesOpen(false), 160);
   };
 
-  const isActive = (href: string) => {
-    if (href === "/") return location.pathname === "/";
-    return location.pathname.startsWith(href);
-  };
-
-  const isServicesActive = () =>
-    isActive("/services") || serviceLinks.some((s) => isActive(s.href));
-
-  const isAboutActive = () =>
-    isActive("/about") || aboutLinks.some((s) => isActive(s.href));
+  const linkClass = (active: boolean) =>
+    `relative px-3 py-2 text-[0.95rem] font-medium transition-colors ${
+      active
+        ? "text-stock after:absolute after:left-3 after:right-3 after:-bottom-[13px] after:h-[2px] after:bg-primary"
+        : "text-fog hover:text-stock"
+    }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <nav
-        aria-label="Main navigation"
-        className={`transition-all duration-500 ${
-          scrolled
-            ? "bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl shadow-[0_4px_40px_rgba(0,0,0,0.4)] border-b border-primary/[0.08]"
-            : "bg-transparent"
-        }`}
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-200 ${
+        scrolled || mobileOpen ? "border-seam bg-asphalt/95 backdrop-blur" : "border-transparent bg-asphalt/70 backdrop-blur-sm"
+      }`}
+    >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded focus:bg-stock focus:px-3 focus:py-2 focus:text-asphalt"
       >
-        <div className="container flex items-center justify-between py-3.5">
-          {/* Logo */}
-          <Link to="/" className="flex items-center group flex-shrink-0">
-            <img
-              src={buckeyeLogo}
-              alt="Buckeye Biz Hub logo — Columbus Ohio printing and branding concierge"
-              className="h-14 w-auto drop-shadow-[0_0_15px_hsl(0_85%_40%/0.4)]"
-            />
-          </Link>
+        Skip to content
+      </a>
+      <nav aria-label="Main" className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+        <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Buckeye Biz Hub home">
+          <img src={logo} alt="" width={44} height={44} className="h-10 w-10 lg:h-11 lg:w-11" />
+          <span className="font-display text-[1.05rem] font-extrabold leading-none text-stock">Buckeye Biz Hub</span>
+        </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
-            {navLinks.map((link) => {
-              if (link.hasDropdown) {
-                const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : aboutLinks;
-                const active = isServices ? isServicesActive() : isAboutActive();
-                const isOpen = openDropdown === link.dropdownType;
-                return (
-                  <div
-                    key={link.label}
-                    className="relative"
-                    onMouseEnter={() => handleEnter(link.dropdownType!)}
-                    onMouseLeave={handleLeave}
-                  >
-                    <Link
-                      to={link.href}
-                      className={`relative flex items-center gap-1 text-[0.7rem] xl:text-[0.75rem] font-bold tracking-[0.1em] uppercase px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 ${
-                        active
-                          ? "text-primary-foreground bg-primary-foreground/[0.06]"
-                          : "text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/[0.04]"
-                      }`}
-                    >
-                      {link.label}
-                      <ChevronDown
-                        className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                      />
-                    </Link>
-
-                    {/* Dropdown panel */}
-                    <div
-                      className={`absolute top-full left-0 mt-2 w-72 rounded-xl border border-primary/15 bg-[hsl(0,0%,6%)] backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden transition-all duration-200 origin-top-left ${
-                        isOpen
-                          ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
-                          : "opacity-0 scale-95 -translate-y-1 pointer-events-none"
-                      }`}
-                    >
-                      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-ohio-red-light to-primary" />
-                      <div className="py-2">
-                        {items.map((item) => (
+        <div className="hidden flex-1 items-center gap-1 lg:flex">
+          <div ref={menuRef} className="relative" onMouseEnter={openServices} onMouseLeave={closeServicesSoon}>
+            <button
+              type="button"
+              aria-expanded={servicesOpen}
+              aria-controls="services-menu"
+              onClick={() => setServicesOpen((v) => !v)}
+              className={`${linkClass(servicesActive)} inline-flex items-center gap-1`}
+            >
+              Services
+              <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} aria-hidden />
+            </button>
+            {servicesOpen && (
+              <div
+                id="services-menu"
+                className="absolute left-0 top-full mt-3 grid w-[min(860px,calc(100vw-4rem))] grid-cols-4 gap-8 rounded-lg border border-seam bg-graphite p-7 shadow-2xl shadow-black/40"
+              >
+                {serviceGroups.map((group) => (
+                  <div key={group.title}>
+                    <p className="mb-3 text-sm font-semibold text-fog">{group.title}</p>
+                    <ul className="space-y-2">
+                      {group.links.map((l) => (
+                        <li key={l.href}>
                           <Link
-                            key={item.href}
-                            to={item.href}
-                            className={`block px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
-                              isActive(item.href)
-                                ? "text-primary bg-primary/[0.1]"
-                                : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/[0.06] hover:pl-7"
+                            to={l.href}
+                            className={`block text-[0.95rem] leading-snug transition-colors ${
+                              isActive(l.href) ? "text-primary" : "text-stock hover:text-primary"
                             }`}
                           >
-                            {item.label}
+                            {l.label}
                           </Link>
-                        ))}
-                        {isServices && (
-                          <div className="border-t border-primary/[0.1] mt-1 pt-1">
-                            <Link
-                              to="/services"
-                              className="flex items-center gap-2 px-5 py-2.5 text-sm font-bold text-primary hover:bg-primary/[0.08] transition-all duration-200"
-                            >
-                              View All Services
-                              <ArrowRight className="w-3.5 h-3.5" />
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                );
-              }
-              return link.external ? (
-                /* Shop Online */
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative text-[0.7rem] xl:text-[0.75rem] font-bold tracking-[0.1em] uppercase px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 text-primary hover:text-primary-foreground hover:bg-primary/[0.12] border border-primary/30 hover:border-primary/60"
-                >
-                  {link.label}
-                  <ExternalLink className="w-3 h-3 inline-block ml-1 -mt-0.5" />
-                </a>
-              ) : (
-                /* Regular link */
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className={`relative text-[0.7rem] xl:text-[0.75rem] font-bold tracking-[0.1em] uppercase px-3 xl:px-4 py-2 rounded-lg transition-all duration-300 ${
-                    isActive(link.href)
-                      ? "text-primary-foreground bg-primary-foreground/[0.06]"
-                      : "text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/[0.04]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+                ))}
+                <div className="col-span-4 flex items-center justify-between border-t border-seam pt-4 text-sm text-fog">
+                  <span>Don&apos;t see it? Ask. If it can carry your logo, we can source it.</span>
+                  <Link to="/services" className="font-semibold text-stock hover:text-primary">
+                    All services
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
-
-          {/* Social + CTA */}
-          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <div className="flex items-center gap-1.5 pr-1 border-r border-primary-foreground/10 mr-1">
-              <a
-                href="https://www.facebook.com/BuckeyeBizHub/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on Facebook"
-                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.instagram.com/buckeyebizhub"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on Instagram"
-                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.pinterest.com/BuckeyeBizHub"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on Pinterest"
-                className="w-8 h-8 flex items-center justify-center rounded-md text-primary-foreground/50 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                </svg>
-              </a>
-            </div>
-            <a href="tel:+16145613358" className="hidden xl:inline-flex">
-              <Button
-                size="sm"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-bold uppercase tracking-wider text-xs shadow-[0_0_20px_hsl(0_85%_40%/0.3)]"
-              >
-                <Phone className="w-3.5 h-3.5" />
-                614-561-3358
-              </Button>
-            </a>
-            <Link to="/contact">
-              <Button
-                size="sm"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black px-6 shadow-[0_0_25px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_40px_hsl(0_85%_40%/0.55)] transition-all duration-300 group uppercase tracking-wider text-xs"
-              >
-                Get 24-Hour Quote
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-              </Button>
+          {mainLinks.map((l) => (
+            <Link key={l.href} to={l.href} className={linkClass(isActive(l.href))}>
+              {l.label}
             </Link>
-          </div>
-
-          {/* Mobile toggle */}
-          <button className="lg:hidden text-primary-foreground p-1" onClick={() => setOpen(!open)}>
-            {open ? <X size={26} /> : <Menu size={26} />}
-          </button>
+          ))}
         </div>
 
-        {/* ══ Mobile Menu ══ */}
-        {open && (
-          <div className="lg:hidden bg-[hsl(0,0%,4%)]/[0.98] backdrop-blur-2xl border-t border-primary/[0.1] pb-5 animate-fade-in max-h-[calc(100vh-72px)] overflow-y-auto">
-            {navLinks.map((link) => {
-              if (link.hasDropdown) {
-                const isServices = link.dropdownType === "services";
-                const items = isServices ? serviceLinks : aboutLinks;
-                const active = isServices ? isServicesActive() : isAboutActive();
-                const isMobileOpen = isServices ? mobileServicesOpen : mobileAboutOpen;
-                const toggle = () =>
-                  isServices
-                    ? setMobileServicesOpen(!mobileServicesOpen)
-                    : setMobileAboutOpen(!mobileAboutOpen);
-                return (
-                  <div key={link.label}>
-                    <button
-                      onClick={toggle}
-                      className={`flex items-center justify-between w-full px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
-                        active ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
-                      }`}
-                    >
-                      {link.label}
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${isMobileOpen ? "rotate-180" : ""}`}
-                      />
-                    </button>
-                    {isMobileOpen && (
-                      <div className="bg-primary-foreground/[0.03] border-y border-primary/[0.08] py-2">
-                        {items.map((item) => (
-                          <Link
-                            key={item.href}
-                            to={item.href}
-                            onClick={() => setOpen(false)}
-                            className={`block px-10 py-3 text-sm font-bold uppercase tracking-widest transition-colors ${
-                              isActive(item.href)
-                                ? "text-primary"
-                                : "text-primary-foreground/40 hover:text-primary"
-                            }`}
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                        {isServices && (
-                          <Link
-                            to="/services"
-                            onClick={() => setOpen(false)}
-                            className="flex items-center gap-2 px-10 py-3 text-sm font-bold uppercase tracking-widest text-primary hover:text-ohio-red-light transition-colors"
-                          >
-                            View All Services
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </Link>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-              return link.external ? (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                  className="block px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors text-primary hover:text-ohio-red-light"
-                >
-                  {link.label}
-                  <ExternalLink className="w-3.5 h-3.5 inline-block ml-1.5 -mt-0.5" />
-                </a>
-              ) : (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`block px-6 py-3.5 text-sm font-bold uppercase tracking-widest transition-colors ${
-                    isActive(link.href) ? "text-primary" : "text-primary-foreground/50 hover:text-primary"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-            <div className="px-6 pt-4">
-              <Link to="/contact" onClick={() => setOpen(false)}>
-                <Button
-                  size="sm"
-                  className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black shadow-[0_0_25px_hsl(0_85%_40%/0.35)] uppercase tracking-wider group"
-                >
-                  Get 24-Hour Quote
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </Button>
-              </Link>
-              <div className="flex items-center justify-center gap-4 mt-5">
-                <a
-                  href="https://www.facebook.com/BuckeyeBizHub/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Facebook"
-                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.instagram.com/buckeyebizhub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Instagram"
-                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.pinterest.com/BuckeyeBizHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow us on Pinterest"
-                  className="w-10 h-10 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        <div className="ml-auto hidden items-center gap-5 lg:flex">
+          <a href="tel:+16145613358" className="inline-flex items-center gap-2 text-[0.95rem] font-semibold text-stock hover:text-primary">
+            <Phone className="h-4 w-4" aria-hidden />
+            (614) 561-3358
+          </a>
+          <Link
+            to="/contact"
+            className="rounded-md bg-primary px-5 py-2.5 text-[0.95rem] font-semibold text-primary-foreground transition-colors hover:bg-ohio-red-light"
+          >
+            Get a quote
+          </Link>
+        </div>
+
+        <div className="ml-auto flex items-center gap-2 lg:hidden">
+          <a
+            href="tel:+16145613358"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-stock hover:bg-graphite"
+            aria-label="Call (614) 561-3358"
+          >
+            <Phone className="h-5 w-5" aria-hidden />
+          </a>
+          <button
+            type="button"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-stock hover:bg-graphite"
+          >
+            {mobileOpen ? <X className="h-6 w-6" aria-hidden /> : <Menu className="h-6 w-6" aria-hidden />}
+          </button>
+        </div>
       </nav>
+
+      {mobileOpen && (
+        <div
+          id="mobile-menu"
+          className="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-seam bg-asphalt px-4 pb-28 pt-2 sm:px-6 lg:hidden"
+        >
+          {serviceGroups.map((group) => (
+            <div key={group.title} className="border-b border-seam py-4">
+              <p className="mb-1 text-sm font-semibold text-fog">{group.title}</p>
+              <ul className="grid grid-cols-1 gap-x-4 sm:grid-cols-2">
+                {group.links.map((l) => (
+                  <li key={l.href}>
+                    <Link to={l.href} className={`block py-2 text-base ${isActive(l.href) ? "text-primary" : "text-stock"}`}>
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <ul className="py-4">
+            {[...mainLinks, { label: "FAQ", href: "/faq" }, { label: "Contact", href: "/contact" }].map((l) => (
+              <li key={l.href}>
+                <Link to={l.href} className="block py-2.5 font-display text-xl font-bold text-stock">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

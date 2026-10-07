@@ -59,7 +59,7 @@ const JourneyTimeline = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <span className="inline-block bg-ohio-gold/15 border border-ohio-gold/40 text-ohio-gold-dark text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
+          <span className="inline-block bg-ohio-gold/15 border border-ohio-gold/40 text-ohio-gold-dark text-xs font-black px-5 py-2 rounded-full mb-6">
             ★ 20+ years of building ★
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">
@@ -108,7 +108,7 @@ const JourneyTimeline = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="bg-ohio-cream border border-border rounded-2xl p-6">
-                      <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                      <span className="inline-block text-xs font-black text-primary mb-2">
                         {m.year}
                       </span>
                       <h3 className="font-display text-xl font-black text-foreground mb-2 leading-tight">
@@ -125,7 +125,7 @@ const JourneyTimeline = () => {
                     <>
                       <div className="hidden md:block text-right pr-12">
                         <div className="bg-ohio-cream border border-border rounded-2xl p-7 inline-block text-left max-w-md">
-                          <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                          <span className="inline-block text-xs font-black text-primary mb-2">
                             {m.year}
                           </span>
                           <h3 className="font-display text-xl lg:text-2xl font-black text-foreground mb-2 leading-tight">
@@ -143,7 +143,7 @@ const JourneyTimeline = () => {
                       <div className="hidden md:block" />
                       <div className="hidden md:block pl-12">
                         <div className="bg-ohio-cream border border-border rounded-2xl p-7 max-w-md">
-                          <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                          <span className="inline-block text-xs font-black text-primary mb-2">
                             {m.year}
                           </span>
                           <h3 className="font-display text-xl lg:text-2xl font-black text-foreground mb-2 leading-tight">

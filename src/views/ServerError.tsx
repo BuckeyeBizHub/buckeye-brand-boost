@@ -19,7 +19,7 @@ const ServerError = () => {
 
       <div className="flex-1 pt-32 pb-20 lg:pt-44 lg:pb-28">
         <div className="container max-w-3xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-destructive/10 border border-destructive/20 text-destructive text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-destructive/10 border border-destructive/20 text-destructive text-xs font-black px-5 py-2 rounded-full mb-8">
             <AlertTriangle className="w-3.5 h-3.5" />
             Error 500
           </div>

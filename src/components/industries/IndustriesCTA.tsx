@@ -46,7 +46,7 @@ const IndustriesCTA = () => (
         <Link to="/contact">
           <Button
             size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group uppercase tracking-widest"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group "
           >
             <Phone className="w-6 h-6 mr-2" />
             Get Your Quote in 24 Hours

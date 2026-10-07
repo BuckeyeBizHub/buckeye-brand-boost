@@ -37,7 +37,6 @@ const ADDRESS = {
 
 const SOCIAL_PROFILES = [
   "https://www.facebook.com/BuckeyeBizHub",
-  "https://www.instagram.com/buckeyebizhub",
   "https://www.pinterest.com/BuckeyeBizHub",
 ];
 

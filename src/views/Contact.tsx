@@ -114,7 +114,7 @@ const Contact = () => {
               <a href="#quote-form">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300"
+                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl group transition-all duration-300"
                 >
                   Tell Us About Your Project
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -127,7 +127,7 @@ const Contact = () => {
 
       {/* Quote Form Section */}
       <section id="quote-form" className="py-20 lg:py-28 bg-ohio-cream relative overflow-hidden">
-        <div className="absolute top-[-200px] right-[-100px] w-[700px] h-[700px] bg-primary/[0.04] rounded-full blur-[170px]" />
+        <div className="absolute top-[-200px] right-[-100px] w-[700px] h-[700px] bg-primary/[0.04] rounded-full hidden" />
 
         <div className="container relative max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-[340px_1fr] gap-10 items-start">
@@ -147,7 +147,7 @@ const Contact = () => {
                   <Phone className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Call David Directly</p>
+                  <p className="text-xs font-bold text-muted-foreground mb-0.5">Call David Directly</p>
                   <p className="text-2xl font-black text-foreground group-hover:text-primary transition-colors">(614) 561-3358</p>
                 </div>
               </a>
@@ -161,7 +161,7 @@ const Contact = () => {
                   <Mail className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Email Us</p>
+                  <p className="text-xs font-bold text-muted-foreground mb-0.5">Email Us</p>
                   <p className="text-base font-black text-foreground group-hover:text-primary transition-colors">david@buckeyebizhub.com</p>
                 </div>
               </a>
@@ -302,7 +302,7 @@ const Contact = () => {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Address</p>
+                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Address</p>
                     <p className="text-base font-semibold text-foreground">1193 Virginia Ave</p>
                     <p className="text-base font-semibold text-foreground">Columbus, OH 43212</p>
                   </div>
@@ -311,7 +311,7 @@ const Contact = () => {
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Phone</p>
+                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Phone</p>
                     <a
                       href="tel:+16145613358"
                       className="text-base font-bold text-foreground hover:text-primary transition-colors"
@@ -324,7 +324,7 @@ const Contact = () => {
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Email</p>
+                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Email</p>
                     <a
                       href="mailto:david@buckeyebizhub.com"
                       className="text-base font-bold text-foreground hover:text-primary transition-colors break-all"
@@ -337,7 +337,7 @@ const Contact = () => {
                 <li className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5">Business Hours</p>
+                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Business Hours</p>
                     <p className="text-base font-semibold text-foreground">Mon–Fri: 9am–5pm</p>
                     <p className="text-base font-semibold text-foreground">Sat: By appointment</p>
                     <p className="text-base font-semibold text-muted-foreground">Sun: Closed</p>

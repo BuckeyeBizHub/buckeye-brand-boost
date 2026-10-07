@@ -7,8 +7,8 @@ import { Link } from "@/lib/compat/router";
 const ServicesCTA = () => (
   <section className="py-24 lg:py-32 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
-    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-foreground/[0.05] rounded-full blur-[120px]" />
+    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full hidden" />
+    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-foreground/[0.05] rounded-full hidden" />
 
     <div className="container relative text-center max-w-3xl mx-auto px-6">
       <motion.h2
@@ -39,7 +39,7 @@ const ServicesCTA = () => (
         <Link to="/contact">
           <Button
             size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_70px_rgba(255,255,255,0.2)] transition-all duration-300 group uppercase tracking-widest"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_70px_rgba(255,255,255,0.2)] transition-all duration-300 group "
           >
             <Phone className="w-6 h-6" />
             Get your free quote in 24 hours

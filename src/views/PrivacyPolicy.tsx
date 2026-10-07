@@ -117,13 +117,13 @@ const PrivacyPolicy = () => {
     <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(220,30%,2%)] via-[hsl(0,50%,7%)] to-[hsl(220,30%,2%)]" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[800px] h-[800px] rounded-full bg-primary/[0.1] blur-[200px]" />
+        <div className="w-[800px] h-[800px] rounded-full bg-primary/[0.1] hidden" />
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_20px_hsl(0_80%_42%/0.4)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-primary to-transparent " />
 
       <div className="container relative text-center">
         <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
-          className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-8 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35">
+          className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-8 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35">
           <Shield className="w-4 h-4" /> Your Privacy Matters <Shield className="w-4 h-4" />
         </motion.div>
         <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
@@ -132,7 +132,7 @@ const PrivacyPolicy = () => {
           Privacy <span className="text-primary text-glow-red">Policy</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-          className="text-primary-foreground/40 font-bold text-sm uppercase tracking-[0.2em]">
+          className="text-primary-foreground/40 font-bold text-sm ">
           Last Updated: September 21, 2026
         </motion.p>
       </div>
@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
 
     {/* Content */}
     <section className="py-20 lg:py-28 bg-ohio-grey-light relative overflow-hidden">
-      <div className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[150px]" />
+      <div className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full hidden" />
       <div className="container relative max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
