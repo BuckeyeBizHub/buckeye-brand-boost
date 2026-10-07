@@ -83,7 +83,7 @@ const Contact = () => {
         <div className="absolute top-[-200px] right-[-100px] w-[700px] h-[700px] bg-primary/[0.04] rounded-full hidden" />
 
         <div className="container relative max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-[340px_1fr] gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10 items-start">
             {/* Left sidebar: contact info & guarantees */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -217,7 +217,7 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {/* Left: Google Map (16:9) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -191,6 +191,15 @@
   .crop::after {
     transform: scaleY(-1);
   }
+  /* Blog posts come from WordPress HTML: keep wide tables from pushing the page sideways. */
+  .blog-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .blog-body img {
+    height: auto;
+  }
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }

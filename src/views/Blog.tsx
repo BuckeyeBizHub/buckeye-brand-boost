@@ -85,10 +85,10 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
       </section>
 
       {/* Filter & Search Bar */}
-      <section className="relative py-5 bg-ohio-grey-light border-b border-border/50 sticky top-[72px] z-30 backdrop-blur-xl bg-ohio-grey-light/95">
+      <section className="relative py-5 bg-ohio-grey-light border-b border-border/50 sticky top-16 lg:top-[72px] z-30 backdrop-blur-xl bg-ohio-grey-light/95">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 md:flex-wrap scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
+            <div className="flex w-full min-w-0 gap-2 overflow-x-auto pb-2 md:w-auto md:pb-0 md:flex-wrap scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
               <button
                 onClick={() => { setActiveCat(undefined); setPage(1); }}
                 className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 ${

@@ -103,7 +103,7 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
             />
           )}
           <div
-            className="prose prose-lg max-w-none
+            className="blog-body prose prose-lg prose-invert max-w-none
  prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
  prose-p:text-muted-foreground prose-p:leading-[1.9]
  prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
