@@ -140,7 +140,7 @@ const LocalSeo = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {seoServices.map((svc, i) => (
             <motion.div key={svc.title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }}>
               <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
@@ -169,7 +169,7 @@ const LocalSeo = () => {
           <p className="text-muted-foreground text-lg leading-relaxed mb-6 text-center max-w-3xl mx-auto">
             One flat monthly fee, so you always know what you're paying. No hidden costs. No long-term contracts. We handle the work from setup to tracking. You watch your local visibility grow.
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
             {[
               { label: "No hidden costs", desc: "Your monthly fee covers it all. No surprise charges." },
               { label: "No long-term contracts", desc: "Month to month. Stay because you see results." },

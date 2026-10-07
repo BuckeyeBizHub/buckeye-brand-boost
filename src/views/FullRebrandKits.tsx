@@ -139,7 +139,7 @@ const FullRebrandKits = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {kitItems.map((item, i) => (
             <motion.div key={item.title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.07, duration: 0.5 }}>
               <Card className="overflow-hidden h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
@@ -168,7 +168,7 @@ const FullRebrandKits = () => {
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             Our management fee depends on the size of the project. You see it in the quote, up front. We run the whole rebrand through partners we trust in Central Ohio, so you get top quality at the lowest total price.
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
             {[
               { label: "Fees shown up front", desc: "Every cost in the quote. No surprises." },
               { label: "One point of contact", desc: "We manage every vendor and every deadline." },

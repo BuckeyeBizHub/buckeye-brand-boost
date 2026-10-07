@@ -79,7 +79,7 @@ const IndexRow = ({ label, href, note }: { label: string; href: string; note: st
   <li className="border-t border-border">
     <Link
       to={href}
-      className="group grid gap-1 py-4 sm:grid-cols-[minmax(0,15rem)_1fr] sm:gap-6"
+      className="group grid grid-cols-1 gap-1 py-4 sm:grid-cols-[minmax(0,15rem)_1fr] sm:gap-6"
     >
       <span className="font-display text-lg font-bold text-foreground transition-colors group-hover:text-primary">
         {label}
@@ -95,7 +95,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* Hero: the claim, the phone, the picture. */}
     <section className="relative overflow-hidden border-b border-seam">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-36">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-36">
         <div>
           <p className="mb-6 text-[0.95rem] font-medium text-fog">Columbus and Central Ohio</p>
           <h1 className="font-display text-[clamp(2.4rem,4.9vw,4.6rem)] font-extrabold text-stock">
@@ -153,7 +153,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* How it works: a real sequence, so it gets numbers. */}
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
             You make one call. I handle the rest.
@@ -162,7 +162,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
             No showroom, no runaround. I come to you, on site or by phone, and run the job from quote to install.
           </p>
         </div>
-        <ol className="grid gap-x-10 gap-y-10 sm:grid-cols-2">
+        <ol className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
           {steps.map((s, i) => (
             <li key={s.title} className="border-t border-seam pt-5">
               <span className="font-display text-sm font-bold text-primary" aria-hidden>
@@ -178,7 +178,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* Vehicles: asphalt. */}
     <section className="border-t border-seam bg-graphite/60">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:py-28">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:py-28">
         <figure className="order-last mx-5 sm:mx-6 lg:order-first lg:mx-0">
           <div className="crop">
             <img
@@ -224,7 +224,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
     {/* Print: paper stock. */}
     <section className="paper">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold">
               The printing that keeps the phone ringing.
@@ -257,7 +257,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* Branded gear. */}
     <section className="border-b border-seam">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
         <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
             Shirts, hats and giveaways people keep.
@@ -296,7 +296,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* Industries. */}
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
             We know your busy season.
@@ -318,7 +318,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
 
     {/* David. */}
     <section className="border-y border-seam bg-graphite/60">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
         <img
           src={img.david}
           alt="David Stein"
@@ -356,7 +356,7 @@ const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
             All posts
           </Link>
         </div>
-        <ul className="mt-10 grid gap-10 md:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
           {latestPosts.slice(0, 3).map((post) => (
             <li key={post.slug}>
               <Link to={`/blog/${post.slug}`} className="group block">

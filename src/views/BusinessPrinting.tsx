@@ -297,7 +297,7 @@ const BusinessPrinting = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Sourced from 4,300+ suppliers. Top quality at the best price.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCards.map((card, idx) => (
               <motion.div key={card.title} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={idx} variants={fadeUp}>
                 <Card className="group h-full overflow-hidden hover:border-primary/40 hover:shadow-[0_0_50px_hsl(var(--primary)/0.08)] transition-all duration-500 rounded-3xl">
@@ -347,7 +347,7 @@ const BusinessPrinting = () => {
               <Columns2 className="w-5 h-5" /> 2-panel options
             </h3>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
             {foldTypes.filter(f => f.panels === "2-Panel").map((fold, i) => (
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
@@ -368,7 +368,7 @@ const BusinessPrinting = () => {
               <LayoutGrid className="w-5 h-5" /> 3-panel options
             </h3>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
             {foldTypes.filter(f => f.panels === "3-Panel").map((fold, i) => (
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
@@ -389,7 +389,7 @@ const BusinessPrinting = () => {
               <Layers className="w-5 h-5" /> 4-panel options
             </h3>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {foldTypes.filter(f => f.panels === "4-Panel").map((fold, i) => (
               <motion.div key={fold.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <Card className="h-full border-border/50 hover:shadow-lg transition-shadow duration-300 bg-card overflow-hidden">
@@ -420,7 +420,7 @@ const BusinessPrinting = () => {
           {/* Business Card Stocks */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp}>
             <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Popular card stocks</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
               {paperStocks.map((stock) => (
                 <Card key={stock.weight} className="hover:border-primary/40 transition-colors duration-300">
                   <CardContent className="p-6">
@@ -442,7 +442,7 @@ const BusinessPrinting = () => {
           </motion.div>
 
           {/* Paper & Cardstock Weights */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
                 <Layers className="w-6 h-6 text-primary" /> Paper stock (text weight)
@@ -489,7 +489,7 @@ const BusinessPrinting = () => {
             <h3 className="font-display text-2xl font-black text-foreground mb-4 flex items-center gap-3">
               <Sparkles className="w-6 h-6 text-primary" /> Coating options
             </h3>
-            <div className="grid sm:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               {coatings.map((c) => (
                 <div key={c.name} className="bg-card rounded-xl p-5 border border-border/50">
                   <p className="font-bold text-foreground mb-1">{c.name}</p>
@@ -498,7 +498,7 @@ const BusinessPrinting = () => {
               ))}
             </div>
             <h4 className="font-display text-lg font-bold text-foreground mb-4">Laminate options</h4>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {laminates.map((l) => (
                 <div key={l.name} className="bg-card rounded-xl p-5 border border-border/50">
                   <p className="font-bold text-foreground mb-1">{l.name}</p>
@@ -511,7 +511,7 @@ const BusinessPrinting = () => {
           {/* Finishes Grid */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={fadeUp}>
             <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-8 text-center">Finishes people <span className="text-primary">notice</span></h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {finishes.map((finish) => (
                 <Card key={finish.name} className="hover:border-primary/40 transition-colors duration-300">
                   <CardContent className="p-6">
@@ -566,7 +566,7 @@ const BusinessPrinting = () => {
             </h2>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1} variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {trustPoints.map((item) => (
               <div key={item.title} className="text-center group">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">

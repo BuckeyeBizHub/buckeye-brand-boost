@@ -151,7 +151,7 @@ const BlogPost = ({ post, related = [] }: BlogPostProps) => {
         <section className="py-20 bg-ohio-grey-light">
           <div className="container">
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-12 text-center">Related Articles</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {related.map((r) => <BlogCard key={r.slug} post={r} />)}
             </div>
           </div>

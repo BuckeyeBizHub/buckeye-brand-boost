@@ -59,7 +59,7 @@ const PricingComparison = () => (
         Big online printers promise low prices, then make it up with hidden fees, slow support and one-size-fits-all service. We do it differently: personal attention, honest pricing and savings you can see.
       </motion.p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {reasons.map((reason, i) => (
           <motion.div
             key={reason.title}

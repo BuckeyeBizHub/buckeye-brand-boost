@@ -145,7 +145,7 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
                 </Button>
               )}
               <p className="text-muted-foreground mb-10 leading-relaxed">
-                In the meantime, explore our services or request a free quote — your Buckeye Branding Concierge is ready to help!
+                In the meantime, look through our services or ask for a free quote.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/services">
@@ -166,7 +166,7 @@ const Blog = ({ posts: allPosts, categories }: BlogProps) => {
               <BlogCard post={posts[0]} featured />
 
               {/* Grid of remaining */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.slice(1).map((post, i) => (
                   <motion.div key={post.slug} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
                     <BlogCard post={post} />

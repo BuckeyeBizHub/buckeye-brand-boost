@@ -76,7 +76,7 @@ const NotFound = () => {
             <h2 className="font-display text-2xl font-black text-foreground mb-6 text-center">
               Popular Pages
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {popularPages.map((page) => (
                 <Link
                   key={page.href}

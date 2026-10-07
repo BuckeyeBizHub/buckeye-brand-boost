@@ -149,7 +149,7 @@ const Services = ({ relatedPosts }: { relatedPosts?: BlogPostSummary[] }) => {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => (
               <ServiceCard key={s.title} {...s} index={i} />
             ))}

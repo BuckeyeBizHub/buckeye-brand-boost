@@ -107,7 +107,7 @@ const MenusAndTableTents = () => {
       <section className="py-24 lg:py-32 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Menu Styles We Offer</motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {menuStyles.map((m, i) => (
               <motion.div key={m.style} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                 <Card className="h-full border-none shadow-lg"><CardContent className="p-6">
@@ -180,7 +180,7 @@ const MenusAndTableTents = () => {
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">What We Print for Hospitality</motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((uc, i) => (
               <motion.div key={uc.title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                 <Card className="h-full border-none shadow-lg"><CardContent className="p-6 flex gap-4">

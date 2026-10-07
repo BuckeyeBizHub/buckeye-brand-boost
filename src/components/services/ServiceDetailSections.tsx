@@ -450,7 +450,7 @@ const ServiceDetailSections = () => (
             </motion.div>
 
             {/* Three-column detail grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {s.columns.map((col, ci) => (
                 <motion.div
                   key={col.heading}
@@ -478,7 +478,7 @@ const ServiceDetailSections = () => (
 
             {/* Extra columns - expanded educational content */}
             {s.extraColumns && (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {s.extraColumns.map((col, ci) => (
                   <motion.div
                     key={col.heading}
@@ -517,7 +517,7 @@ const ServiceDetailSections = () => (
                   <Lightbulb className="w-5 h-5 text-primary" />
                   How Columbus businesses use this
                 </h3>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {s.useCases.map((uc) => (
                     <div key={uc.who} className="bg-muted/50 rounded-xl p-4">
                       <p className="text-xs font-bold text-primary mb-1.5">{uc.who}</p>

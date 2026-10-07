@@ -78,7 +78,7 @@ const PopularSolutions = () => (
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
         {solutions.map((sol, i) => (
           <motion.div
             key={sol.title}

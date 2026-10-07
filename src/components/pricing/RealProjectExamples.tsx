@@ -63,7 +63,7 @@ const RealProjectExamples = () => (
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         {projects.map((p, i) => {
           const Icon = p.icon;
           return (

@@ -242,7 +242,7 @@ const Construction = () => {
       {/* Section 1: Why construction companies choose us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -284,7 +284,7 @@ const Construction = () => {
       {/* Section 2: Our story */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -355,7 +355,7 @@ const Construction = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p, i) => (
               <motion.div
                 key={p.title}
@@ -411,7 +411,7 @@ const Construction = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 gap-3"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
           >
             {audiences.map((item) => (
               <div

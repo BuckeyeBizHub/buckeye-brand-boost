@@ -19,10 +19,10 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
     return (
       <Link to={`/blog/${post.slug}`} className="block group">
         <div className="bg-card rounded-3xl border-2 border-border hover:border-primary/40 overflow-hidden card-lift shadow-sm mb-12">
-          <div className="grid md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="relative h-72 md:h-full min-h-[320px] overflow-hidden">
               {image ? (
-                <img src={image} alt={`${post.title} — Buckeye Biz Hub blog, Columbus Ohio`} loading="eager" fetchPriority="high" width={640} height={400} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={image} alt={post.featuredAlt || post.title} loading="eager" fetchPriority="high" width={640} height={400} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">No Image</div>
               )}
@@ -59,7 +59,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
       <div className="bg-card rounded-3xl border-2 border-border hover:border-primary/40 overflow-hidden card-lift shadow-sm h-full flex flex-col">
         <div className="relative h-52 overflow-hidden">
           {image ? (
-            <img src={image} alt={`${post.title} — Buckeye Biz Hub blog, Columbus Ohio`} loading="lazy" width={400} height={225} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src={image} alt={post.featuredAlt || post.title} loading="lazy" width={400} height={225} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-sm">No Image</div>
           )}

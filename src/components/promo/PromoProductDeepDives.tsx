@@ -298,7 +298,7 @@ const PromoProductDeepDives = () => (
             </motion.div>
 
             {/* Three-column detail grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               {section.columns.map((col, ci) => (
                 <motion.div
                   key={col.heading}
@@ -334,7 +334,7 @@ const PromoProductDeepDives = () => (
                 <Lightbulb className="w-5 h-5 text-primary" />
                 Ideas for Ohio businesses
               </h3>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {section.useCases.map((uc) => (
                   <div key={uc.who} className="bg-muted/50 rounded-xl p-4">
                     <p className="text-xs font-bold text-primary mb-1.5">{uc.who}</p>

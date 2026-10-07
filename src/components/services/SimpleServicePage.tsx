@@ -123,7 +123,7 @@ const SimpleServicePage = ({
 
       {/* Pricing + Benefits */}
       <section className="pb-16 lg:pb-24">
-        <div className="container max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div className="container max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Starting From */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

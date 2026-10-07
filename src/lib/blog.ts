@@ -17,6 +17,17 @@ export * from "@/lib/blog-utils";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
+// The page already has the post title as its one <h1>. WordPress bodies
+// sometimes repeat it: drop a leading copy and demote any other <h1>.
+function demoteHeadings(html: string, title: string): string {
+  const plain = (s: string) => s.replace(/<[^>]*>/g, "").replace(/&[^;]+;/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  let out = html.replace(/^\s*<h1[^>]*>([\s\S]*?)<\/h1>/i, (m, inner: string) =>
+    plain(inner) === plain(title) ? "" : m,
+  );
+  out = out.replace(/<h1(\s|>)/gi, "<h2$1").replace(/<\/h1>/gi, "</h2>");
+  return out;
+}
+
 interface RawTerm {
   name?: string;
   slug?: string;
@@ -44,9 +55,10 @@ function normalizeTerms(terms: RawTerm[] | undefined): BlogTerm[] {
 
 function normalizePost(raw: RawPost, file: string): BlogPost {
   const slug = raw.slug || path.basename(file, ".json");
+  const title = toPlainText(raw.title || slug);
   return {
     slug,
-    title: toPlainText(raw.title || slug),
+    title,
     date: raw.date || "",
     modified: raw.modified || raw.date || "",
     excerpt: raw.excerpt || "",
@@ -55,7 +67,7 @@ function normalizePost(raw: RawPost, file: string): BlogPost {
     author: raw.author || "David Stein",
     featuredImage: raw.featuredImage || null,
     featuredAlt: raw.featuredAlt ? decodeHtmlEntities(raw.featuredAlt) : "",
-    content: raw.content || "",
+    content: demoteHeadings(raw.content || "", title),
   };
 }
 

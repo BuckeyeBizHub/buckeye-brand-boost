@@ -28,7 +28,7 @@ const LatestBlogSection = ({ posts = [] }: LatestBlogSectionProps) => {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.slice(0, 6).map((post, i) => (
             <motion.div
               key={post.slug}

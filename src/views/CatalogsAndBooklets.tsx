@@ -110,7 +110,7 @@ const CatalogsAndBooklets = () => {
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4">Binding Options Explained</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Pick your binding by page count, budget and how people will use it.</p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {bindingTypes.map((b, i) => (
               <motion.div key={b.type} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                 <Card className="h-full border-none shadow-lg"><CardContent className="p-8">
@@ -132,7 +132,7 @@ const CatalogsAndBooklets = () => {
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-10 text-center">Paper Stocks & Cover Options</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {paperOptions.map((p) => (
                 <Card key={p.stock} className="border-none shadow-lg"><CardContent className="p-6">
                   <h3 className="font-display text-lg font-black text-foreground mb-2">{p.stock}</h3>
@@ -178,7 +178,7 @@ const CatalogsAndBooklets = () => {
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-14 text-center">Popular Use Cases</motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((uc, i) => (
               <motion.div key={uc.title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                 <Card className="h-full border-none shadow-lg"><CardContent className="p-6 flex gap-4">

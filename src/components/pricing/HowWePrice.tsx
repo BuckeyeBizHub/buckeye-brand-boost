@@ -25,7 +25,7 @@ const HowWePrice = () => (
         </h2>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

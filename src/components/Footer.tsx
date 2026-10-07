@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-seam bg-[hsl(var(--ohio-grey-dark))] pb-24 lg:pb-0">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_repeat(4,1fr)] lg:gap-10">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_repeat(4,1fr)] lg:gap-10">
           <div>
             <Link to="/" className="inline-flex items-center gap-3">
               <img src={logo} alt="" width={48} height={48} className="h-12 w-12" />

@@ -66,7 +66,7 @@ const CustomerExamples = () => (
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
         {examples.map((ex, i) => (
           <motion.div
             key={ex.title}

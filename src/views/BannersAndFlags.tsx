@@ -212,7 +212,7 @@ const BannersAndFlags = () => {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCards.map((card, i) => (
               <motion.div key={card.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className={card.highlight ? "sm:col-span-2 lg:col-span-1" : ""}>
                 <Card className={`h-full hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group bg-card overflow-hidden ${card.highlight ? "border-2 border-primary ring-2 ring-primary/20 " : "border-border/50 hover:border-primary/40"}`}>
@@ -255,7 +255,7 @@ const BannersAndFlags = () => {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {materialsInfo.map((item, i) => (
               <motion.div key={item.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                 <div className="bg-card rounded-2xl border border-border/50 p-6 h-full hover:border-primary/30 hover:shadow-lg transition-all duration-300">

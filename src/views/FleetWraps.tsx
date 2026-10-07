@@ -28,7 +28,7 @@ const FleetWraps = () => {
 
       {/* Hero: same build as the homepage. Words left, truck right. */}
       <section className="border-b border-seam">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-14 pt-32 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-8 lg:pb-20 lg:pt-40">
+        <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 pb-14 pt-32 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-8 lg:pb-20 lg:pt-40">
           <div>
             <p className="mb-6 text-[0.95rem] font-medium text-fog">Fleet wraps in Columbus and Central Ohio</p>
             <h1 className="font-display text-[clamp(2.4rem,5vw,4.5rem)] font-extrabold text-stock">
@@ -93,7 +93,7 @@ const FleetWraps = () => {
             <span className="text-primary">their fleets</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
             {[
               { stat: "30,000–70,000", label: "Daily impressions per wrapped vehicle in the Columbus market" },
               { stat: "$0.04", label: "Estimated cost per thousand impressions. Lower than any other ad you can buy." },
@@ -249,7 +249,7 @@ const FleetWraps = () => {
             <span className="text-primary">every budget</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 title: "Full fleet wraps",
@@ -325,7 +325,7 @@ const FleetWraps = () => {
             <span className="text-primary">Central Ohio trade</span>
           </motion.h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: Wrench, title: "HVAC and mechanical", body: "Your vans are in neighborhoods all day. A wrapped fleet gets you noticed by homeowners before they ever search online." },
               { icon: Droplet, title: "Plumbing and drain", body: "Emergency calls go to the name people remember. A wrapped fleet builds that name in every suburb you serve." },

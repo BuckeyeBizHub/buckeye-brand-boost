@@ -115,7 +115,7 @@ const ServicePageLayout = ({
       {/* Content */}
       <section className="py-24 lg:py-36 bg-background">
         <div className="container max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img src={image} alt={title} loading="lazy" width={800} height={600} className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
             </motion.div>

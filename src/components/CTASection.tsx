@@ -12,7 +12,7 @@ const CTASection = ({
   body = "Free quote within 24 hours. If you're not happy with the result, we make it right.",
 }: CTASectionProps) => (
   <section className="border-t border-seam bg-asphalt">
-    <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:items-end lg:px-8 lg:py-28">
+    <div className="mx-auto grid grid-cols-1 max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:items-end lg:px-8 lg:py-28">
       <div>
         <h2 className="font-display text-[clamp(2.25rem,5vw,4.25rem)] font-extrabold text-stock">{heading}</h2>
         <p className="mt-5 max-w-xl text-lg text-fog">{body}</p>
