@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/compat/router";
 
 const trustItems = [
-  { icon: Star, label: "500+ Happy Ohio Businesses" },
+  { icon: Star, label: "5-star rating on Google" },
   { icon: Heart, label: "One Point of Contact" },
   { icon: ShieldCheck, label: "100% Satisfaction Guarantee" },
   { icon: Zap, label: "24-Hour Quotes" },

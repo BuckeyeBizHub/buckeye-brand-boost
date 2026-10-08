@@ -11,12 +11,12 @@ const boxTruckImg = "/assets/gallery-box-truck-360.jpg";
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 
 const galleryItems = [
-  { image: hvacImg, alt: "Before and after HVAC van wrap in Columbus Ohio" },
-  { image: landscapingImg, alt: "Fleet of wrapped landscaping trucks on rural Ohio road" },
-  { image: deliveryImg, alt: "Delivery truck with perforated window graphics in downtown Columbus" },
-  { image: magneticImg, alt: "Magnetic door decal being applied to a business van" },
-  { image: fleetImg, alt: "Fleet consistency shot with matching wrapped vehicles at Ohio job site" },
-  { image: boxTruckImg, alt: "Wrapped box truck on construction site" },
+  { image: hvacImg, alt: "Example: before and after HVAC van wrap" },
+  { image: landscapingImg, alt: "Example: fleet of wrapped landscaping trucks" },
+  { image: deliveryImg, alt: "Example: delivery truck with perforated window graphics" },
+  { image: magneticImg, alt: "Example: magnetic door decal on a business van" },
+  { image: fleetImg, alt: "Example: matching wrapped vehicles at a job site" },
+  { image: boxTruckImg, alt: "Example: wrapped box truck on a construction site" },
 ];
 
 const GallerySection = () => (
@@ -25,7 +25,7 @@ const GallerySection = () => (
       <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex items-center justify-center gap-3 mb-14">
         <Camera className="w-8 h-8 text-primary" />
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground text-center">
-          Real Ohio Wraps in Action
+          What a wrap can look like
         </h2>
       </motion.div>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

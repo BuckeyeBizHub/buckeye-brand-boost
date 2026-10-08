@@ -10,7 +10,7 @@ const VehicleWraps = () => (
     metaTitle="Vehicle Wraps in Columbus, Ohio | Buckeye Biz Hub"
     metaDescription="Custom vehicle wraps in Columbus, Ohio. Turn your truck, van or fleet into a 24/7 billboard with 3M and Avery vinyl installed by trusted Ohio pros."
     slug="/vehicle-wraps"
-    description={`For most Columbus, Ohio businesses, a vehicle wrap is the best marketing money they'll ever spend. Industry studies show one wrapped vehicle gets between 30,000 and 70,000 views every day it's on the road. And you pay for it once. HVAC tech on I-270 every morning, landscaper rolling through Dublin and Westerville, contractor parked at job sites all week: your truck already goes where your customers live and work. We turn it into a billboard.
+    description={`For most Columbus, Ohio businesses, a vehicle wrap is the best marketing money they'll ever spend. It works every day it's on the road. And you pay for it once. HVAC tech on I-270 every morning, landscaper rolling through Dublin and Westerville, contractor parked at job sites all week: your truck already goes where your customers live and work. We turn it into a billboard.
 
 Buckeye Biz Hub runs vehicle wraps in Columbus, Ohio start to finish: design, materials and installation. We focus on commercial fleets. We use 3M and Avery vinyl rated for 5–7 years of Ohio weather, and we work with vetted Central Ohio installers who wrap vehicles every day. Pick a full wrap, partial wrap, decals, magnets for personal vehicles or perforated window graphics. Whatever fits your goals and budget.
 
@@ -23,7 +23,6 @@ Every wrap starts with a free consultation. David looks at your brand, your vehi
     startingFrom="$1,495"
     pricingNote="for a partial wrap; full wraps from $3,200"
     benefits={[
-      "30,000–70,000 daily impressions per wrapped vehicle in Central Ohio traffic",
       "3M and Avery cast vinyl built for Ohio winters and summers",
       "Design, print and install managed by one local point of contact",
       "Protects your factory paint and preserves vehicle resale value",

@@ -4,8 +4,6 @@ import Footer from "@/components/Footer";
 import PricingHero from "@/components/pricing/PricingHero";
 import HowWeWork from "@/components/pricing/HowWeWork";
 import HowWePrice from "@/components/pricing/HowWePrice";
-import RealProjectExamples from "@/components/pricing/RealProjectExamples";
-import CustomerExamples from "@/components/pricing/CustomerExamples";
 import WhyOurPricingIsDifferent from "@/components/pricing/WhyOurPricingIsDifferent";
 import PricingComparison from "@/components/pricing/PricingComparison";
 import PricingCTA from "@/components/pricing/PricingCTA";
@@ -25,8 +23,6 @@ const Pricing = () => {
       <PricingHero />
       <HowWeWork />
       <HowWePrice />
-      <RealProjectExamples />
-      <CustomerExamples />
       <WhyOurPricingIsDifferent />
       <PricingComparison />
       <PricingCTA />

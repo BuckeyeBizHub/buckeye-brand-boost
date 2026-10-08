@@ -299,7 +299,7 @@ const PromotionalProductsPage = () => {
               Why promo products work for <span className="text-primary">Ohio businesses</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Promo products are one of the cheapest ways for a local business to stay in front of people. A digital ad is gone in seconds. A branded tumbler, pen or tote stays with your customer for months, sometimes years. Studies show 85% of people remember the company that gave them a promo product, and nearly 50% use promo items daily.
+              Promo products are one of the cheapest ways for a local business to stay in front of people. A digital ad is gone in seconds. A branded tumbler, pen or tote stays with your customer for months, sometimes years.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Use them at trade shows, as client thank-yous, in new-hire kits, in mailers, at open houses and at community events. A Columbus HVAC company handing out pens at a home show. A Cleveland law firm sending tumblers to referral partners. The right item turns one meeting into a relationship.
@@ -615,7 +615,7 @@ const PromotionalProductsPage = () => {
             </div>
             <div className="bg-card rounded-2xl border-l-4 border-primary p-8 md:p-12 shadow-sm">
               <p className="text-muted-foreground text-lg leading-relaxed mb-6 italic font-serif">
-                "After helping hundreds of Ohio businesses with promo products, here's what I know. The best items are the ones people use. A good tumbler your client grabs every morning beats a thousand novelty items in a junk drawer."
+                "Here's what I've learned about promo products. The best items are the ones people use. A good tumbler your client grabs every morning beats a thousand novelty items in a junk drawer."
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6 italic font-serif">
                 "My advice? Focus on three things: useful, quality and relevant. Pick items your audience will actually want. A tech company's clients love wireless chargers. A dental office's patients love toothbrush kits. Match the product to the person and you get referrals and repeat business."
@@ -703,7 +703,7 @@ const PromotionalProductsPage = () => {
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-primary-foreground/60 mb-16 font-semibold italic font-display max-w-3xl mx-auto">
-            Over 1 million products. Wholesale pricing. Every cost shown. Let's find the right items to keep your name in front of customers.
+            Wholesale pricing. Every cost shown. Let's find the right items to keep your name in front of customers.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">

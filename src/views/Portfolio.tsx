@@ -113,9 +113,9 @@ const Portfolio = () => {
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="mt-14 flex flex-wrap justify-center gap-8 md:gap-14">
             {[
-              { icon: Eye, num: "1M+", label: "Brand Impressions Generated" },
-              { icon: Users, num: "500+", label: "Ohio Businesses Served" },
-              { icon: TrendingUp, num: "35%", label: "Avg. Client Growth" },
+              { icon: Eye, num: "24 hrs", label: "Free quotes" },
+              { icon: Users, num: "4,300+", label: "Vetted suppliers" },
+              { icon: TrendingUp, num: "100%", label: "Satisfaction guarantee" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-display text-3xl md:text-4xl font-black text-primary" style={{ textShadow: '0 0 25px hsl(0 80% 42% / 0.4)' }}>{stat.num}</div>
@@ -238,7 +238,7 @@ const Portfolio = () => {
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="text-xl md:text-2xl text-primary-foreground/60 mb-16 font-semibold italic font-display max-w-3xl mx-auto">
-            Join 500+ Ohio businesses that use Buckeye Biz Hub for printing, branding and promo products.
+            Printing, branding and promo products for Central Ohio businesses.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">

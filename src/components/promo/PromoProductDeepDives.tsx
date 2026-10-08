@@ -59,7 +59,7 @@ const deepDives: DeepDive[] = [
       },
     ],
     useCases: [
-      { who: "Columbus Farmers Market vendor", how: "Custom canvas totes for loyal customers, they carry your brand through Short North every Saturday" },
+      { who: "A farmers market vendor", how: "Custom canvas totes for loyal customers, they carry your brand through Short North every Saturday" },
       { who: "Real estate agency", how: "Welcome bags for new homeowners filled with local business coupons and branded items" },
       { who: "Trade show exhibitor", how: "Non-woven totes as booth giveaways, attendees carry your branding through the entire convention hall" },
     ],
@@ -169,7 +169,7 @@ const deepDives: DeepDive[] = [
     badge: "Highest Retention",
     title: "Printed Drinkware: Tumblers, Bottles & Beyond",
     intro:
-      "Drinkware ranks #1 in promo for how long people keep it. 78% of people keep a branded tumbler or bottle for over a year. Cheap acrylic cups to stainless tumblers. Hard to beat on cost per impression.",
+      "Drinkware sticks around. People use a good tumbler or bottle every day. Cheap acrylic cups to stainless tumblers. Hard to beat on cost per impression.",
     columns: [
       {
         heading: "Drinkware types",

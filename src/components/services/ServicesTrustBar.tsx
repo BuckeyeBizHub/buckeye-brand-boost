@@ -2,7 +2,7 @@
 import { Clock } from "lucide-react";
 
 const trustItems = [
-  "500+ Ohio Businesses Helped",
+  "5-star rating on Google",
   "No hidden fees",
   "Free quotes in 24 hours",
   "Ohio owned and operated",

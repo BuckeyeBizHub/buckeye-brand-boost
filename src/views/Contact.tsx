@@ -199,7 +199,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Google Map + Contact Info: two-column on desktop, stacked on mobile (map first) */}
+      {/* Contact info */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -217,29 +217,8 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            {/* Left: Google Map (16:9) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-2xl overflow-hidden border-2 border-border shadow-lg bg-card"
-            >
-              <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-                <iframe
-                  src="https://maps.google.com/maps?cid=5595316780144329459&output=embed"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Buckeye Biz Hub on Google Maps"
-                  allowFullScreen
-                  style={{ border: 0 }}
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
-            </motion.div>
-
-            {/* Right: Contact info card */}
+          <div className="max-w-xl mx-auto">
+            {/* Contact info card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -252,15 +231,6 @@ const Contact = () => {
               </h4>
 
               <ul className="space-y-5 flex-1">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <div>
-                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Address</p>
-                    <p className="text-base font-semibold text-foreground">1193 Virginia Ave</p>
-                    <p className="text-base font-semibold text-foreground">Columbus, OH 43212</p>
-                  </div>
-                </li>
-
                 <li className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
@@ -286,33 +256,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </li>
-
-                <li className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <div>
-                    <p className="text-xs font-bold text-muted-foreground mb-0.5">Business Hours</p>
-                    <p className="text-base font-semibold text-foreground">Mon–Fri: 9am–5pm</p>
-                    <p className="text-base font-semibold text-foreground">Sat: By appointment</p>
-                    <p className="text-base font-semibold text-muted-foreground">Sun: Closed</p>
-                  </div>
-                </li>
               </ul>
-
-              <a
-                href="https://www.google.com/maps/place/?q=place_id:ChIJN1t_tDeuQIgRsxXxNz7zfk0&cid=5595316780144329459"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8"
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-primary hover:bg-ohio-red-light text-primary-foreground font-black rounded-xl group"
-                >
-                  <Navigation className="w-5 h-5 mr-2" />
-                  Get Directions
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
             </motion.div>
           </div>
         </div>
@@ -323,10 +267,10 @@ const Contact = () => {
         <div className="container">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-primary-foreground/60 text-sm font-medium">
             {[
-              "100+ Ohio businesses served",
-              "$1.3 Million+ Saved",
+              "Free quotes within 24 hours",
+              "4,300+ vetted suppliers",
               "100% Satisfaction Guaranteed",
-              "Columbus, Ohio",
+              "5-star rating on Google",
             ].map((item, idx) => (
               <span key={item} className="flex items-center gap-2">
                 {idx > 0 && <span className="hidden sm:inline text-primary-foreground/20">•</span>}

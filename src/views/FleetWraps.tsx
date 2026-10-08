@@ -93,10 +93,8 @@ const FleetWraps = () => {
             <span className="text-primary">their fleets</span>
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+          <div className="grid grid-cols-1 max-w-md mx-auto gap-6 mb-14">
             {[
-              { stat: "30,000–70,000", label: "Daily impressions per wrapped vehicle in the Columbus market" },
-              { stat: "$0.04", label: "Estimated cost per thousand impressions. Lower than any other ad you can buy." },
               { stat: "5–7 years", label: "Average lifespan using 3M or Avery Dennison commercial vinyl" },
             ].map((card, i) => (
               <motion.div
