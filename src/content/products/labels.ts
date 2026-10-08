@@ -171,7 +171,7 @@ export const LABEL_PAGES: ProductPage[] = [
       },
       {
         heading: "QR code stickers people actually scan",
-        body: "A QR sticker on your front door, your invoice or the back of a job sign is a cheap way to get reviews, payments and booked calls. A roofer can put one on a yard sign so a neighbor scans straight to the quote form.\n\nA few things make them work. Use a QR service that lets you change where the code points later, so you don't have to reprint when your page moves. Print it big enough to scan from where people will actually stand. And put a reason to scan next to it. \"Scan for a free estimate\" beats a bare code every time.\n\nI scan the code on the proof before it goes to print. If it doesn't scan, it doesn't print.",
+        body: "A QR sticker on your front door, your invoice or the back of a job sign is a cheap way to get reviews, payments and booked calls. A roofer can put one on a yard sign so a neighbor scans straight to the quote form.\n\nA few things make them work. Use a QR service that lets you change where the code points later, so you don't have to reprint when your page moves. Print it big enough to scan from where people will actually stand. And put a reason to scan next to it. \"Scan for a free estimate\" beats a bare code every time.\n\nI scan the code on the proof before it goes to print.",
       },
     ],
     faqs: [

@@ -59,8 +59,11 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
                 {PHONE_DISPLAY}
               </ButtonLink>
             </div>
-            {page.prices?.[0] && (
-              <p className="mt-6 text-sm text-muted-foreground">Quote back within 24 hours. Small first orders welcome.</p>
+            {page.group !== "more" && (
+              <p className="mt-6 text-sm text-muted-foreground">
+                Quote back within 24 hours. Small first orders welcome.
+                {page.group !== "vehicles" && " First order? Design and setup are free."}
+              </p>
             )}
           </div>
           <div className="overflow-hidden rounded-2xl border border-border bg-cream">
@@ -90,7 +93,7 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
 
       {/* Options */}
       <Section bordered>
-        <SectionHead eyebrow={page.eyebrow} title={`What we make`} />
+        <SectionHead eyebrow={page.eyebrow} title="What we make" />
         <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
           {page.options.map((o) => (
             <div key={o.name} className="border-t border-border pt-5">

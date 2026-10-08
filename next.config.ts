@@ -22,6 +22,17 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/testimonials", "/about"],
   ["/admin/photos", "/"],
   ["/domain-check", "/"],
+  // Oct 2026 rebuild: pages merged or renamed.
+  ["/vehicle-decals", "/vehicle-lettering"],
+  ["/large-format-printing", "/banners-and-flags"],
+  ["/graduation-2026", "/banners-and-flags"],
+  ["/portfolio", "/services"],
+  ["/labels", "/custom-labels"],
+  ["/stickers", "/decals-and-stickers"],
+  ["/magnets", "/car-magnets"],
+  ["/eddm", "/eddm-postcards"],
+  ["/flyers", "/flyers-and-brochures"],
+  ["/brochures", "/flyers-and-brochures"],
 ];
 
 const nextConfig: NextConfig = {

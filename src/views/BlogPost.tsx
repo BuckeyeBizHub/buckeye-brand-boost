@@ -1,13 +1,11 @@
-"use client";
-import { Link } from "@/lib/compat/router";
-import { ArrowLeft, ArrowRight, Calendar, User, Phone } from "lucide-react";
+import Link from "next/link";
 import { format } from "date-fns";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
-import { Button } from "@/components/ui/button";
-import SEOHead, { countWords, SITE_URL } from "@/components/SEOHead";
-import { getExcerpt, type BlogPost as BlogPostData, type BlogPostSummary } from "@/lib/blog-utils";
+import { CtaBand, Crumbs } from "@/components/site/blocks";
+import { ButtonLink, Container, Eyebrow, JsonLd, Section, SectionHead } from "@/components/site/ui";
+import { breadcrumbLd } from "@/lib/schema";
+import { articleSchema, SITE_URL } from "@/lib/structured-data";
+import { getExcerpt, toPlainText, type BlogPost as BlogPostData, type BlogPostSummary } from "@/lib/blog-utils";
 
 interface BlogPostProps {
   /** Loaded from content/blog by the server page. */
@@ -15,152 +13,139 @@ interface BlogPostProps {
   related?: BlogPostSummary[];
 }
 
-const BlogPost = ({ post, related = [] }: BlogPostProps) => {
-  const title = post ? post.title : "Post Not Found";
-  const excerpt = post ? getExcerpt(post, 155) : undefined;
-  const ogImage = post?.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined;
-  const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : undefined;
+const SERVICE_LINKS = [
+  { href: "/promotional-products", label: "Promotional products" },
+  { href: "/business-cards-printing", label: "Business cards" },
+  { href: "/vehicle-wraps", label: "Vehicle wraps" },
+  { href: "/embroidered-apparel", label: "Embroidered apparel" },
+  { href: "/banners-and-flags", label: "Banners and flags" },
+  { href: "/yard-signs-and-signage", label: "Signs" },
+];
 
+export default function BlogPost({ post, related = [] }: BlogPostProps) {
   if (!post) {
     return (
-      <div className="min-h-screen">
-        <SEOHead title="Post Not Found" noindex />
-        <Navbar />
-        <div className="pt-40 pb-20 container text-center">
-          <h1 className="text-4xl font-black text-foreground mb-4">Post Not Found</h1>
-          <p className="text-muted-foreground mb-8">Sorry, we couldn't find that article.</p>
-          <Link to="/blog"><Button variant="default">← Back to Blog</Button></Link>
+      <Section>
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-[clamp(2.5rem,5.6vw,4rem)]">Post not found</h1>
+          <p className="mt-4 text-lg text-body">That article isn&apos;t here.</p>
+          <div className="mt-8">
+            <ButtonLink href="/blog" variant="outline">
+              Back to the blog
+            </ButtonLink>
+          </div>
         </div>
-        <Footer />
-      </div>
+      </Section>
     );
   }
 
+  const path = `/blog/${post.slug}`;
   const image = post.featuredImage;
   const categories = post.categories;
-  const author = post.author ? { name: post.author } : null;
+  const author = post.author || "David Stein";
   const date = format(new Date(post.date), "MMMM d, yyyy");
-  const wordCount = countWords(post.content);
-  const primaryCategory = categories[0];
+  const plain = toPlainText(post.content);
+  const wordCount = plain ? plain.split(" ").length : 0;
 
   return (
-    <div className="min-h-screen">
-      <SEOHead
-        title={title}
-        description={excerpt}
-        canonicalUrl={postUrl}
-        ogImage={ogImage}
-        ogType="article"
-        article={{
-          publishedTime: post.date,
-          modifiedTime: post.modified,
-          authors: { name: author?.name || "David Stein" },
-          section: primaryCategory?.name,
-          tags: categories.map((c) => c.name),
-          wordCount,
-        }}
+    <>
+      <JsonLd
+        data={[
+          articleSchema({
+            headline: post.title,
+            description: getExcerpt(post, 155),
+            image: image ? `${SITE_URL}${image}` : undefined,
+            datePublished: post.date,
+            dateModified: post.modified,
+            authors: { name: author },
+            url: `${SITE_URL}${path}`,
+            wordCount,
+            isBlogPosting: true,
+            articleSection: categories[0]?.name,
+            keywords: categories.map((c) => c.name),
+          }),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path },
+          ]),
+        ]}
       />
-      <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-36 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
-        {image && <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(40px)" }} />}
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
-        <div className="container relative max-w-4xl">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4" /> Back to Blog
-          </Link>
-          <div className="flex flex-wrap items-center gap-4 mb-6">
-            {categories.map((c) => (
-              <span key={c.slug} className="text-[0.65rem] font-extrabold text-primary-foreground bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
-            ))}
+      {/* Header */}
+      <section className="bg-paper">
+        <Container className="pb-10 pt-8 md:pb-14 md:pt-12">
+          <div className="mx-auto max-w-3xl">
+            <Crumbs items={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog" }, { name: post.title }]} />
+            {categories.length > 0 && <Eyebrow>{categories.map((c) => c.name).join(" · ")}</Eyebrow>}
+            <h1 className="text-[clamp(2.25rem,5vw,3.75rem)]">{post.title}</h1>
+            <p className="mt-6 text-sm text-muted-foreground">
+              <time dateTime={post.date}>{date}</time>
+              <span aria-hidden> · </span>
+              {author}
+            </p>
           </div>
-          <h1
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-6"
-            style={{ textShadow: "0 0 60px rgba(255,255,255,0.2), 0 4px 20px rgba(0,0,0,0.8)" }}
-          >
-            {title}
-          </h1>
-          <div className="flex items-center gap-6 text-primary-foreground/50 text-sm">
-            <span className="flex items-center gap-2"><Calendar className="w-4 h-4" /> {date}</span>
-            {author && <span className="flex items-center gap-2"><User className="w-4 h-4" /> {author.name}</span>}
-          </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Content */}
-      <article className="py-16 lg:py-24 bg-background">
-        <div className="container max-w-3xl">
-          {image && (
-            <img
-              src={image} alt={post.featuredAlt || title}
-              className="w-full rounded-2xl mb-12 shadow-lg"
-              loading="eager"
-              fetchPriority="high"
-              width={960}
-              height={540}
+      {/* Article */}
+      <article className="border-t border-border bg-white">
+        <Container className="py-12 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            {image && (
+              <img
+                src={image}
+                alt={post.featuredAlt || post.title}
+                loading="eager"
+                fetchPriority="high"
+                width={960}
+                height={540}
+                className="mb-10 w-full rounded-xl border border-border"
+              />
+            )}
+            <div
+              className="blog-body prose prose-lg max-w-none break-words
+                prose-headings:font-display prose-headings:font-normal prose-headings:text-ink
+                prose-p:text-body prose-li:text-body prose-strong:text-ink
+                prose-a:font-semibold prose-a:text-brand prose-a:underline-offset-4
+                prose-img:rounded-lg
+                prose-blockquote:border-l-brand prose-blockquote:font-normal prose-blockquote:text-ink"
+              dangerouslySetInnerHTML={{ __html: post.content }}
             />
-          )}
-          <div
-            className="blog-body prose prose-lg prose-invert max-w-none
- prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
- prose-p:text-muted-foreground prose-p:leading-[1.9]
- prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
- prose-img:rounded-xl prose-img:shadow-md
- prose-strong:text-foreground
- prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
 
-          {/* Service cross-links */}
-          <div className="mt-12 p-8 rounded-2xl bg-muted/40 border border-border">
-            <h3 className="font-display text-xl font-black text-foreground mb-4">Explore Our Services</h3>
-            <p className="text-muted-foreground text-sm mb-5">Looking for help with your next project? Browse our most popular services:</p>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { to: "/promotional-products", label: "Promotional Products" },
-                { to: "/business-cards-printing", label: "Business Cards" },
-                { to: "/vehicle-wraps", label: "Vehicle Wraps" },
-                { to: "/embroidered-apparel", label: "Branded Apparel" },
-                { to: "/banners-and-flags", label: "Banners & Flags" },
-                { to: "/yard-signs-and-signage", label: "Signage" },
-              ].map((s) => (
-                <Link key={s.to} to={s.to} className="text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors">
-                  {s.label}
-                </Link>
-              ))}
+            {/* Service cross-links */}
+            <div className="mt-14 rounded-xl border border-border bg-cream p-6 md:p-8">
+              <h2 className="text-[1.75rem]">Need this done?</h2>
+              <p className="mt-2 text-body">Here&apos;s what I make for Columbus and Central Ohio businesses.</p>
+              <ul className="mt-5 flex flex-wrap gap-2">
+                {SERVICE_LINKS.map((s) => (
+                  <li key={s.href}>
+                    <Link
+                      href={s.href}
+                      className="inline-flex min-h-[40px] items-center rounded-md border border-border bg-white px-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/40"
+                    >
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-
-          {/* CTA */}
-          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(216,14%,12%)] text-center">
-            <h3 className="font-display text-3xl font-black text-primary-foreground mb-4">Need Help With Your Project?</h3>
-            <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto">David Stein · Your Buckeye Branding Concierge is ready to help you bring your ideas to life.</p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-10 py-7 rounded-xl">
-                <Phone className="w-5 h-5" /> Get a Free Quote <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
+        </Container>
       </article>
 
-      {/* Related Posts */}
       {related.length > 0 && (
-        <section className="py-20 bg-ohio-grey-light">
-          <div className="container">
-            <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-12 text-center">Related Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {related.map((r) => <BlogCard key={r.slug} post={r} />)}
-            </div>
+        <Section bordered>
+          <SectionHead eyebrow="Keep reading" title="Related articles" />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((r) => (
+              <BlogCard key={r.slug} post={r} />
+            ))}
           </div>
-        </section>
+        </Section>
       )}
 
-      <Footer />
-    </div>
+      <CtaBand />
+    </>
   );
-};
-
-export default BlogPost;
+}

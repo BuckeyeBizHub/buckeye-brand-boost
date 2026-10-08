@@ -1,75 +1,77 @@
-"use client";
-import { Link } from "@/lib/compat/router";
-import { serviceGroups } from "@/components/Navbar";
+import Link from "next/link";
+import { GROUP_LABEL, GROUP_ORDER, INDUSTRIES, productsInGroup } from "@/content/catalog";
 
 const logo = "/assets/buckeye-logo-256.png";
 
-const companyLinks = [
+const company = [
   { label: "About David", href: "/about" },
-  { label: "Industries", href: "/industries" },
+  { label: "All products", href: "/services" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Examples", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
-const Footer = () => {
+// Server component: the full link list lives in the HTML for search engines,
+// not in the browser bundle.
+export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-seam bg-[hsl(var(--ohio-grey-dark))] pb-24 lg:pb-0">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_repeat(4,1fr)] lg:gap-10">
+    <footer className="on-ink pb-24 lg:pb-0">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid grid-cols-1 gap-10 border-b border-border pb-12 md:grid-cols-[1.4fr_1fr] md:items-end">
           <div>
-            <Link to="/" className="inline-flex items-center gap-3">
-              <img src={logo} alt="" width={48} height={48} className="h-12 w-12" />
-              <span className="font-display text-lg font-extrabold text-stock">Buckeye Biz Hub</span>
+            <Link href="/" className="inline-flex items-center gap-3">
+              <img src={logo} alt="" width={44} height={44} className="h-11 w-11" />
+              <span className="font-display text-[1.6rem] leading-none">Buckeye Biz Hub</span>
             </Link>
-            <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed text-fog">
-              Fleet wraps, printing and branded gear for Central Ohio businesses. One person to call, start to finish.
+            <p className="mt-5 max-w-md text-muted-foreground">
+              Labels, decals, lettering, signs, printing and fleet wraps for Central Ohio businesses. One person to call,
+              start to finish.
             </p>
-            <div className="mt-6 space-y-1.5 text-[0.95rem]">
-              <a href="tel:+16145613358" className="block font-semibold text-stock hover:text-primary">
-                (614) 561-3358
-              </a>
-              <a href="mailto:david@buckeyebizhub.com" className="block text-stock hover:text-primary">
-                david@buckeyebizhub.com
-              </a>
-              <p className="text-fog">Columbus, Ohio. We come to you.</p>
-            </div>
           </div>
+          <div className="space-y-1.5 md:text-right">
+            <a href="tel:+16145613358" className="block font-display text-[1.75rem] leading-tight hover:text-brand-bright">
+              (614) 561-3358
+            </a>
+            <a href="mailto:david@buckeyebizhub.com" className="block hover:text-brand-bright">
+              david@buckeyebizhub.com
+            </a>
+            <p className="text-muted-foreground">Columbus, Ohio. I come to you.</p>
+          </div>
+        </div>
 
-          {[serviceGroups[0], serviceGroups[1], serviceGroups[2]].map((group) => (
-            <div key={group.title}>
-              <p className="mb-4 text-sm font-semibold text-fog">{group.title}</p>
-              <ul className="space-y-2.5">
-                {group.links.map((l) => (
-                  <li key={l.href}>
-                    <Link to={l.href} className="text-[0.95rem] text-stock/85 hover:text-primary">
-                      {l.label}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-12 sm:grid-cols-3 lg:grid-cols-6">
+          {GROUP_ORDER.filter((g) => g !== "more").map((g) => (
+            <div key={g}>
+              <p className="eyebrow mb-4 text-[0.68rem]">{GROUP_LABEL[g]}</p>
+              <ul className="space-y-2">
+                {productsInGroup(g).map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/${p.slug}`} className="text-[0.92rem] text-paper/85 hover:text-paper">
+                      {p.navLabel}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-
           <div>
-            <p className="mb-4 text-sm font-semibold text-fog">Company</p>
-            <ul className="space-y-2.5">
-              {companyLinks.map((l) => (
-                <li key={l.href}>
-                  <Link to={l.href} className="text-[0.95rem] text-stock/85 hover:text-primary">
-                    {l.label}
+            <p className="eyebrow mb-4 text-[0.68rem]">Industries</p>
+            <ul className="space-y-2">
+              {INDUSTRIES.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/${p.slug}`} className="text-[0.92rem] text-paper/85 hover:text-paper">
+                    {p.navLabel}
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="mb-4 mt-8 text-sm font-semibold text-fog">{serviceGroups[3].title}</p>
-            <ul className="space-y-2.5">
-              {serviceGroups[3].links.map((l) => (
+            <p className="eyebrow mb-4 mt-8 text-[0.68rem]">Company</p>
+            <ul className="space-y-2">
+              {company.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} className="text-[0.95rem] text-stock/85 hover:text-primary">
+                  <Link href={l.href} className="text-[0.92rem] text-paper/85 hover:text-paper">
                     {l.label}
                   </Link>
                 </li>
@@ -78,16 +80,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-seam pt-6 text-sm text-fog sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} Buckeye Biz Hub, LLC</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="https://www.facebook.com/BuckeyeBizHub/" target="_blank" rel="noopener noreferrer" className="hover:text-stock">
+            <span>Also from David:</span>
+            {productsInGroup("more").map((p) => (
+              <Link key={p.slug} href={`/${p.slug}`} className="hover:text-paper">
+                {p.navLabel}
+              </Link>
+            ))}
+            <a href="https://www.facebook.com/BuckeyeBizHub/" target="_blank" rel="noopener noreferrer" className="hover:text-paper">
               Facebook
             </a>
-            <Link to="/privacy-policy" className="hover:text-stock">
-              Privacy policy
+            <Link href="/privacy-policy" className="hover:text-paper">
+              Privacy
             </Link>
-            <Link to="/sms-terms" className="hover:text-stock">
+            <Link href="/sms-terms" className="hover:text-paper">
               SMS terms
             </Link>
           </div>
@@ -95,6 +103,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

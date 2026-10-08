@@ -1,93 +1,72 @@
-"use client";
-import { motion } from "framer-motion";
-import { Helmet } from "@/lib/compat/helmet";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
-import { Link } from "@/lib/compat/router";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { usePageSEO } from "@/hooks/usePageTitle";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.06, duration: 0.5, ease: "easeOut" as const },
-  }),
-};
-
-interface FAQItem {
-  q: string;
-  a: string;
-}
+import { Phone } from "lucide-react";
+import type { Faq } from "@/content/types";
+import { breadcrumbLd, faqLd } from "@/lib/schema";
+import { CtaBand, Crumbs, FaqList } from "@/components/site/blocks";
+import { ButtonLink, Container, Eyebrow, JsonLd, PHONE_DISPLAY, PHONE_HREF, Section } from "@/components/site/ui";
 
 interface FAQCategory {
+  id: string;
   eyebrow: string;
   heading: string;
-  items: FAQItem[];
+  items: Faq[];
 }
 
 const categories: FAQCategory[] = [
   {
+    id: "getting-started",
     eyebrow: "Start here",
     heading: "Getting started and how we work",
     items: [
       {
         q: "What business printing services does Buckeye Biz Hub offer in Columbus, Ohio?",
-        a: "Business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays and custom apparel. Wholesale pricing and fast turnaround across Columbus, Cleveland, Cincinnati, Dayton and the rest of Ohio.",
+        a: "Business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays and custom apparel. Wholesale pricing for Columbus and Central Ohio businesses, with starting prices on the pricing page.",
       },
       {
         q: "Can you help with graphic design or do I need to provide my own artwork?",
-        a: "Either way works. We can design your business cards, banners, vehicle wraps and promo layouts from scratch. If you already have artwork, send print-ready PDF, AI, EPS or high-resolution PNG/JPG files. We check every file so it prints right.",
+        a: "Either way works. I can design your business cards, banners, vehicle graphics and promo layouts from scratch. First order? Design and setup are free. If you already have artwork, send print-ready PDF, AI, EPS or high-resolution PNG/JPG files. Every file gets checked, and you approve a proof before anything prints.",
       },
       {
         q: "What industries do you serve in Ohio?",
-        a: "HVAC contractors, auto dealers, dental and medical offices, restaurants and bars, real estate agencies, lawn care and landscaping companies, construction firms and more. If your Ohio business needs printing, branded gear or vehicle branding, we can help.",
+        a: "HVAC contractors, auto dealers, dental and medical offices, restaurants and bars, real estate agencies, lawn care and landscaping companies, construction firms and more. If your business needs printing, branded gear or vehicle branding, I can help.",
       },
       {
         q: "How is a branding concierge different from a regular print shop?",
-        a: "A print shop sells you what's in its catalog at its prices. We work for you, not for any one vendor. Need business cards? We shop the printers. Fleet decals? We shop the installers. Promo products? We shop the suppliers. You deal with one person, and the whole Central Ohio vendor market works for you.",
+        a: "A print shop sells you what's in its catalog at its prices. I work for you, not for any one vendor. Need business cards? I shop the printers. Fleet decals? I shop the installers. Promo products? I shop the suppliers. You deal with one person, and the whole Central Ohio vendor market works for you.",
       },
       {
         q: "Who is David Stein and why does that matter?",
-        a: "David co-founded and runs Buckeye Biz Hub. He was service manager at Clintonville Automotive Repair Service, his family's third-generation independent repair shop. He co-founded BeerTubes, was named inventor on its patents, and grew it from $79K in year one to $4.5M, selling to Anheuser-Busch InBev, MillerCoors, Constellation Brands and 100+ distributors. He sold the company in 2017. Then he founded SBC Hospitality Group: Stein Brewing Co. in Mount Vernon, a Newark brewery, The Joint diner, plus co-ownership of a Dave's Cosmic Subs franchise, with 100+ employees. Why it matters: every recommendation comes from someone who has spent his own money on marketing and made payroll.",
+        a: "David co-founded and runs Buckeye Biz Hub. He was service manager at his family's third-generation repair shop in Clintonville. He co-founded BeerTubes, is a named inventor on its patents, and grew it from $79K in year one to $4.5M before selling it in 2017. Then he founded SBC Hospitality Group, with Stein Brewing Co. in Mount Vernon, a Newark brewery and The Joint diner, and more than 100 employees. Why it matters: every recommendation comes from someone who has spent his own money on marketing and made payroll.",
       },
       {
         q: "Do you work with small businesses or only large companies?",
-        a: "Both. Most of our clients are Central Ohio service businesses between $500K and $10M in annual revenue. Owners who make their own calls and want a partner, not a vendor. We also work with solo contractors, professional practices and multi-location companies. Most services have no minimum order.",
+        a: "Both. Solo contractors, professional practices, growing service businesses and multi-location companies. Small first orders are welcome. Everything is custom, so try a short run first, and when it works, reorder bigger at a lower price per piece.",
       },
     ],
   },
   {
+    id: "pricing",
     eyebrow: "Investment",
     heading: "Pricing and quotes",
     items: [
       {
         q: "Do you have minimum order requirements?",
-        a: "It depends on the product. Business cards start at 100. Banners and signs have no minimum. Most promo products start at 12–25 pieces. Screen-printed apparel usually starts at 12 pieces. For embroidery, small runs are fine. Ask and we'll tell you the minimum for your item. We work with solo owners and big companies alike.",
+        a: "It depends on the item. Small first orders are welcome, and banners and signs can be a single piece. For embroidery and apparel, small runs are fine. Ask and I'll tell you the minimum for your item. Bigger runs cost less per piece.",
       },
       {
         q: "What are your pricing and wholesale rates?",
-        a: "We get wholesale pricing through our network of 4,300+ vetted suppliers. Volume discounts kick in on business cards (500+), apparel (24+) and promo items (50+). Every quote is custom. Ask for a free, no-obligation estimate for your project.",
+        a: "Starting prices for the most common jobs are on the pricing page. Your exact quote depends on size, quantity and finish, and bigger runs cost less per piece. Promo products come through 4,300+ vetted suppliers at wholesale pricing. Ask for a free quote on your project.",
       },
       {
         q: "How do I get a quote for my project?",
-        a: "Fill out the form on our Contact page or call us. We answer every quote request within 24 hours. Tell us the product, quantity, colors and any design ideas, and the estimate will be tighter. No obligation.",
+        a: "Fill out the form on the contact page or call. You'll have a free quote within 24 hours. Tell me the product, quantity, colors and any design ideas, and the quote will be tighter. No obligation.",
       },
       {
         q: "Do you charge for quotes or consultations?",
-        a: "No. Every first quote and consultation is free, with no obligation. Most quotes come back within 24 hours.",
+        a: "No. Every first quote and consultation is free, with no obligation. Your quote comes back within 24 hours.",
       },
       {
         q: "How is your pricing competitive if you're not the actual vendor?",
-        a: "We buy at wholesale through our vendor network and pass most of the savings to you. We're often cheaper than going to the same vendor yourself, because we buy for a lot of clients at once. The concierge part is built into the price you'd pay anyway.",
+        a: "I buy at wholesale through my print partners and suppliers and pass most of the savings to you. The concierge part is built into the price you'd pay anyway, not added on top.",
       },
       {
         q: "What payment methods do you accept?",
@@ -96,54 +75,56 @@ const categories: FAQCategory[] = [
     ],
   },
   {
+    id: "turnaround",
     eyebrow: "When it arrives",
     heading: "Timeline and turnaround",
     items: [
       {
         q: "How fast is your turnaround time for printing and promotional products?",
-        a: "Most standard print orders ship in 2–5 business days. Rush is available, 24–48 hours on select items like business cards, flyers and banners. Promo products usually take 7–14 business days, depending on the item and decoration. Vehicle wraps get scheduled within 1–2 weeks of design approval. Your quote always includes a delivery estimate.",
+        a: "It depends on the item, the quantity and the decoration. Your quote comes back within 24 hours with a delivery date you can plan around. If you have a hard deadline, say so up front and I'll tell you what's possible.",
       },
       {
         q: "How long does a custom vehicle wrap take?",
-        a: "A full wrap usually takes 2-3 weeks from design approval. About 1 week to produce, 2-3 days to install. Fleet spot graphics are faster, 5-7 business days per vehicle. We can phase fleet installs so you always have trucks on the road.",
+        a: "Design comes first, then printing, then installation. You'll get a schedule with the quote. Fleet installs can be phased so you always have trucks on the road.",
       },
       {
         q: "How long do banners and signs take?",
-        a: "Standard banners take 3-5 business days. Yard signs take 3-4. Large format work (trade show banners, building wraps, vehicle wraps) takes 5-10. Rush is available for events.",
+        a: "Banners and yard signs are some of the quicker jobs. Your quote includes a date. If it's for an event, give me the event date and I'll work back from it.",
       },
       {
         q: "What about embroidered apparel turnaround?",
-        a: "Embroidered apparel usually takes 7-10 business days from order. Logo digitizing is included on first orders and takes 1-2 days. Rush is available for events and trade shows.",
+        a: "Your quote includes a delivery date. Your logo gets digitized for stitching before the first run, and you approve a proof first. If the apparel is for an event or trade show, tell me the date up front.",
       },
     ],
   },
   {
+    id: "fleet",
     eyebrow: "On the road",
     heading: "Fleet and vehicle branding",
     items: [
       {
         q: "How does vehicle wrapping work and how long does it last?",
-        a: "A wrap is printed vinyl applied over your vehicle's paint. Our partner shops use 3M and Avery cast vinyl, installed by certified technicians. Full wraps usually last 5–7+ years with care, and they protect the factory paint underneath. One vehicle takes 3–5 days from design approval to done.",
+        a: "A wrap is printed vinyl applied over your vehicle's paint by trusted installers. How long it lasts depends on the material, how much sun it sees and how it's washed. A laminated wrap holds up for years and protects the factory paint underneath.",
       },
       {
         q: "Do you offer fleet branding for multiple vehicles?",
-        a: "Yes. Commercial fleet work is our focus, for Ohio businesses with 2 to 200+ vehicles. Fleet clients get volume pricing, one look across cars, vans, trucks and trailers, project management, and tracking for maintenance and replacements. On-site installation is available for Columbus-area fleets.",
+        a: "Yes. Commercial fleet work is the focus. You get one look across cars, vans, trucks and trailers, pricing that drops as the fleet grows, and one person managing it. On-site installation is available for Columbus-area fleets.",
       },
       {
         q: "What's the difference between vehicle wraps and spot graphics?",
-        a: "A full wrap covers the whole vehicle in printed vinyl, usually $2,800-$5,500 per vehicle. Spot graphics cover the spots people see most (doors, rear, accent panels) with decals, logos and contact info, usually $150-$650 per vehicle. Spot graphics get you about 80% of the visibility for 10-20% of the cost.",
+        a: "A full wrap covers the whole vehicle in printed vinyl. A full commercial van wrap starts at $2,800, installed. Spot graphics cover the spots people see most, like doors, the rear and accent panels, with your logo and contact info. Truck or van door lettering starts at $249, installed. A partial wrap, from $1,200, sits in between.",
       },
       {
         q: "Which is right for my business: wraps or spot graphics?",
-        a: "Depends on your fleet size and goals. Most service businesses get more from spot graphics on every truck than full wraps on a few. One full wrap costs about the same as spot graphics on 8-10 vehicles. That's 8x more trucks on the road with your name on them. We'll tell you what fits, not what costs the most.",
+        a: "It depends on your fleet size and goals. Most service businesses get more from lettering on every truck than from full wraps on a few. I'll tell you what fits, not what costs the most.",
       },
       {
         q: "Will vehicle graphics damage my paint?",
-        a: "No. That matters most on leased vehicles. Commercial vinyl, installed and removed the right way, protects your paint from sun and light scratches. It comes off clean at end of lease.",
+        a: "No. That matters most on leased vehicles. Commercial vinyl, installed and removed the right way, protects your paint from sun and light scratches. It comes off clean at the end of the lease.",
       },
       {
         q: "Do you do single-vehicle decals or only fleets?",
-        a: "Both. Single-vehicle decals for solo contractors, real estate agents and other professionals. Full fleet projects for multi-vehicle service businesses. Volume pricing starts at 3+ vehicles.",
+        a: "Both. Single-vehicle decals for solo contractors, real estate agents and other professionals. Full fleet projects for multi-vehicle service businesses, with pricing per vehicle that drops as the fleet grows.",
       },
       {
         q: "Can you install on location?",
@@ -152,50 +133,53 @@ const categories: FAQCategory[] = [
     ],
   },
   {
+    id: "printing",
     eyebrow: "On paper",
     heading: "Printing and business cards",
     items: [
       {
         q: "What kind of business cards do you offer?",
-        a: "Every kind. Standard 14pt stock up to 32pt ultra-thick. Gold and silver foil, spot UV, embossing and debossing, soft-touch and silk finishes, custom die-cuts and edge painting. Pricing starts at $39 and goes up with quality and quantity.",
+        a: "Standard 14pt stock up to ultra-thick. Gold and silver foil, spot UV, embossing and debossing, soft-touch and silk finishes, custom die-cuts and edge painting. 500 business cards start at $29, and the price goes up with paper and finish.",
       },
       {
         q: "Can you do small print runs or only bulk?",
-        a: "As few as 25 business cards or as many as 100,000+. Digital printing makes sense for small runs. Offset makes sense around 1,000+ pieces.",
+        a: "Small runs are fine. Digital printing makes sense for short runs. Offset starts to pay off on bigger runs, and the price per piece drops as quantity goes up.",
       },
       {
         q: "What's the difference between digital and offset printing?",
-        a: "Digital is cheaper for runs under 1,000 pieces and turns around fast. Offset gives sharper detail and richer color on bigger runs. For foil or embossing, we use offset.",
+        a: "Digital is cheaper on short runs and turns around fast. Offset gives sharper detail and richer color on bigger runs. Foil and embossing usually go offset.",
       },
       {
         q: "What file formats do you need for printing?",
-        a: "Print-ready PDFs are best. We also take high-resolution JPEGs, PNGs, AI files, PSDs and INDD files. No print-ready file? Send what you have. On most jobs we'll prep it for free.",
+        a: "Print-ready PDFs are best. I also take high-resolution JPEGs, PNGs, AI files, PSDs and INDD files. No print-ready file? Send what you have and I'll get it ready.",
       },
     ],
   },
   {
+    id: "apparel",
     eyebrow: "On your team",
     heading: "Embroidered apparel and uniforms",
     items: [
       {
         q: "What's the difference between embroidery and screen printing?",
-        a: "Embroidery stitches your logo in thread. It looks sharp and lasts, best for polos, hats, jackets and uniforms. Screen printing uses ink. Better for t-shirts, bigger designs and lower prices. We do both and will tell you which fits.",
+        a: "Embroidery stitches your logo in thread. It looks sharp and lasts, best for polos, hats, jackets and uniforms. Screen printing uses ink. Better for T-shirts, bigger designs and lower prices. I do both and will tell you which fits.",
       },
       {
         q: "Do you have minimum quantities for embroidered apparel?",
-        a: "Small runs are fine. Ask and we'll tell you the minimum for your item.",
+        a: "Small runs are fine. Ask and I'll tell you the minimum for your item.",
       },
       {
         q: "Can I see my logo before you embroider 50 shirts?",
-        a: "Yes. Every embroidery job comes with a digital proof before production. On big orders we can make one sample piece for you to approve first.",
+        a: "Yes. Every embroidery job comes with a digital proof before production. On big orders I can have one sample piece made for you to approve first.",
       },
       {
         q: "What apparel brands do you offer?",
-        a: "All the major commercial brands: Port Authority, Nike, Carhartt, Under Armour, Eddie Bauer, Sport-Tek, Adidas, Champion, Hanes and more. Tell us your preference and budget and we'll match it.",
+        a: "The major commercial apparel brands, from everyday tees to premium polos and jackets. Tell me your preference and budget and I'll match it.",
       },
     ],
   },
   {
+    id: "consulting",
     eyebrow: "Beyond print",
     heading: "Marketing and business consulting",
     items: [
@@ -205,7 +189,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "How is David's consulting different from other marketing consultants?",
-        a: "Most marketing consultants have never built a business. David has. He co-founded BeerTubes, grew it to $4.5M and sold it, then built a hospitality group with 100+ employees. His advice comes from spending his own money on marketing and making payroll.",
+        a: "Most marketing consultants have never built a business. David has. He co-founded BeerTubes, grew it to $4.5M and sold it, then built a hospitality group with more than 100 employees. His advice comes from spending his own money on marketing and making payroll.",
       },
       {
         q: "What industries do you consult for?",
@@ -217,217 +201,128 @@ const categories: FAQCategory[] = [
       },
       {
         q: "Do consulting clients also use your branding services?",
-        a: "Some do, some don't. You can hire David for strategy only and get branding done elsewhere. You can use the branding concierge without consulting. Or use both, strategy and execution from one person who sees the whole picture. Neither is required.",
+        a: "Some do, some don't. You can hire David for strategy only and get branding done elsewhere. You can use the branding concierge without consulting. Or use both, strategy and execution from one person who sees the whole picture.",
       },
     ],
   },
   {
+    id: "signs-promo",
     eyebrow: "Signage and swag",
     heading: "Banners, signs and promotional products",
     items: [
       {
         q: "What types of promotional products can you customize?",
-        a: "Over 5,000 products. T-shirts, embroidered polos, hoodies, hats, drinkware (tumblers, mugs, water bottles), tote bags, pens, notebooks, USB drives, lanyards, bar rail mats, coasters, pop-up tents, table throws, retractable banners and a lot more. If a logo fits on it, we can do it.",
+        a: "Thousands of products through 4,300+ vetted suppliers. T-shirts, embroidered polos, hoodies, hats, drinkware, tote bags, pens, notebooks, lanyards, bar rail mats, coasters, pop-up tents, table throws, retractable banners and a lot more. If a logo fits on it, I can get it done.",
       },
       {
         q: "What banner materials do you offer?",
-        a: "13oz vinyl for indoor or short-term outdoor use. 18oz vinyl for long-term outdoor use. Mesh for windy spots. Tension fabric for trade show displays. We'll match the material to the job and your budget.",
+        a: "13oz vinyl for indoor or short-term outdoor use. 18oz vinyl for long-term outdoor use. Mesh for windy spots. Tension fabric for trade show displays. I'll match the material to the job and your budget.",
       },
       {
         q: "What yard sign options do you have?",
-        a: "Standard 24x18 inch corrugated plastic (the go-to for real estate and contractors), heavy-duty 4mm corrugated for long-term use, aluminum for permanent signs, custom shapes and sizes, single or double-sided. H-frame wire stakes come with most orders.",
+        a: "The standard is an 18 x 24 inch sign on 4mm corrugated plastic, the go-to for real estate and contractors. 10 yard signs start at $95, printed both sides with H-stakes. Aluminum works for permanent signs, and custom shapes and sizes are available.",
       },
       {
         q: "What promotional products work best for trade shows?",
-        a: "Things people keep and use: drinkware, good pens, USB drives, tote bags, tech accessories. Skip the cheap stuff that ends up in the hotel trash. Better items cost more per piece but stay in use for months or years.",
+        a: "Things people keep and use: drinkware, good pens, tote bags, tech accessories. Skip the cheap stuff that ends up in the hotel trash. Better items cost more per piece but stay in use for months or years.",
       },
     ],
   },
   {
+    id: "working-with-us",
     eyebrow: "How we operate",
     heading: "Working with us",
     items: [
       {
         q: "Do you ship across Ohio or only serve Columbus?",
-        a: "All of Ohio. Our home base is Columbus and Central Ohio, but we ship printing, promo products and merch to every city in the state, including Cleveland, Cincinnati, Dayton, Toledo, Akron and Youngstown. Wrap installs happen at a partner shop or at your location for fleet jobs.",
+        a: "Home base is Columbus and Central Ohio, and that's where on-site visits and installs happen. Printing, promo products and apparel can ship to you anywhere in Ohio.",
       },
       {
         q: "Do you offer reorder programs or ongoing partnerships?",
-        a: "Yes. A lot of our Ohio clients set up reorders for things they buy often, like business cards, uniforms, giveaways and yard signs. We keep your artwork and specs on file, so reorders are quick. Larger clients can get dedicated account management.",
+        a: "Yes. A lot of clients set up reorders for things they buy often, like business cards, uniforms, giveaways and yard signs. Your artwork and specs stay on file, so reorders are quick, and bigger reorders cost less per piece.",
       },
       {
         q: "How do I get a quote?",
-        a: "Three ways. Fill out the contact form, call 614-561-3358, or email david@buckeyebizhub.com. We answer every inquiry within 24 hours with a quote or the questions we need answered.",
+        a: "Three ways. Fill out the contact form, call 614-561-3358, or email david@buckeyebizhub.com. You'll get a free quote within 24 hours, or the questions I need answered to build one.",
       },
       {
         q: "Do you have a showroom I can visit?",
-        a: "No. Buckeye Biz Hub is home-based, with no walk-in showroom. David works with you on site at your business, by phone or in person. Set up a time through the contact form or call 614-561-3358.",
+        a: "No. Buckeye Biz Hub is home-based, with no walk-in showroom. David comes to your business, or works with you by phone and email. Set up a time through the contact form or call 614-561-3358.",
       },
       {
         q: "What's your satisfaction guarantee?",
-        a: "100% satisfaction guarantee. If you're not happy, we make it right. That can mean a reprint, a redo or a refund. We stand behind the work.",
+        a: "If you're not happy with the result, we make it right. You also see and approve a proof before anything prints, so nothing comes as a surprise.",
       },
     ],
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: categories.flatMap((c) => c.items).map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
-  })),
-};
+const allFaqs = categories.flatMap((c) => c.items);
 
-const FAQ = () => {
-  usePageSEO({
-    title: "FAQ | Buckeye Biz Hub | Columbus Ohio Branding and Marketing Questions",
-    description:
-      "Answers about Buckeye Biz Hub in Columbus, Ohio. Pricing, turnaround, fleet branding, printing, consulting and how our concierge model works.",
-  });
-
+export default function FAQ() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
-      <Navbar />
+    <>
+      <JsonLd
+        data={[
+          faqLd(allFaqs),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "FAQ", path: "/faq" },
+          ]),
+        ]}
+      />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/90 via-ohio-grey-dark to-ohio-navy/80" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
-        <div className="container relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
-              Frequently asked questions
-            </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
-              Common questions about{" "}
-              <span className="text-primary text-glow-red">working with Buckeye Biz Hub</span>
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto mb-8">
-              Straight answers from someone who has run Ohio businesses. Don't see your question? Ask. David answers every inquiry himself within 24 hours.
-            </p>
-            <div className="flex justify-center">
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
-                >
-                  Get a free quote
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+      <section className="bg-paper">
+        <Container className="pb-12 pt-8 md:pb-16 md:pt-12">
+          <Crumbs items={[{ name: "Home", href: "/" }, { name: "FAQ" }]} />
+          <Eyebrow>Frequently asked questions</Eyebrow>
+          <h1 className="max-w-4xl text-[clamp(2.5rem,5.6vw,4.5rem)]">Common questions about working with Buckeye Biz Hub</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
+            Straight answers from someone who has run Ohio businesses. Don&apos;t see your question? Ask. David answers
+            every inquiry himself within 24 hours.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <ButtonLink href="/contact">Get a free quote</ButtonLink>
+            <ButtonLink href={PHONE_HREF} variant="outline">
+              <Phone className="h-4 w-4" aria-hidden />
+              {PHONE_DISPLAY}
+            </ButtonLink>
+          </div>
+
+          <nav aria-label="FAQ topics" className="mt-10 border-t border-border pt-6">
+            <ul className="flex flex-wrap gap-2">
+              {categories.map((c) => (
+                <li key={c.id}>
+                  <a
+                    href={`#${c.id}`}
+                    className="inline-flex min-h-[40px] items-center rounded-md border border-border bg-white px-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/40"
+                  >
+                    {c.heading}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </Container>
       </section>
 
-      {/* Category Sections */}
-      {categories.map((category, idx) => (
-        <section
-          key={category.heading}
-          className={`py-20 lg:py-24 ${idx % 2 === 0 ? "bg-background" : "bg-ohio-cream"}`}
-        >
-          <div className="container max-w-3xl">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              custom={0}
-              variants={fadeUp}
-              className="mb-10"
-            >
-              <span className="inline-block text-xs font-extrabold text-primary mb-3">
-                {category.eyebrow}
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
-                {category.heading}
-              </h2>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
-              custom={1}
-              variants={fadeUp}
-            >
-              <Accordion type="single" collapsible className="space-y-3">
-                {category.items.map((item, i) => (
-                  <AccordionItem
-                    key={`${category.heading}-${i}`}
-                    value={`${category.heading}-${i}`}
-                    className="bg-background border-2 border-border hover:border-primary/30 rounded-2xl px-6 py-1 shadow-sm transition-all duration-300 data-[state=open]:border-primary/40"
-                  >
-                    <AccordionTrigger className="text-left font-display text-base md:text-lg font-black text-foreground hover:text-primary transition-colors duration-300 py-5 [&[data-state=open]]:text-primary">
-                      {item.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-[0.95rem] leading-[1.85] pb-6">
-                      {item.a}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </motion.div>
+      {categories.map((c, i) => (
+        <Section key={c.id} id={c.id} tone={i % 2 === 0 ? "white" : "paper"} bordered>
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.6fr] md:gap-16">
+            <div>
+              <Eyebrow>{c.eyebrow}</Eyebrow>
+              <h2 className="text-[clamp(2rem,4vw,3rem)]">{c.heading}</h2>
+            </div>
+            <FaqList faqs={c.items} />
           </div>
-        </section>
+        </Section>
       ))}
 
-      {/* Final CTA */}
-      <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/60 via-ohio-grey-dark to-ohio-navy/40" />
-        <div className="container relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground mb-5 leading-tight">
-              Have a question{" "}
-              <span className="text-primary text-glow-red">we didn't answer?</span>
-            </h2>
-            <p className="text-primary-foreground/70 text-lg md:text-xl mb-10 leading-relaxed">
-              Every project is different. If it's not covered above, ask. David answers every inquiry himself within 24 hours.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
-                >
-                  Get a free quote
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </Link>
-              <a href="tel:+16145613358">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary/40 text-primary-foreground hover:bg-primary/10 font-bold text-base md:text-lg px-9 py-7 rounded-2xl gap-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call 614-561-3358
-                </Button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      <CtaBand
+        title="Have a question I didn't answer?"
+        body="Every project is different. If it's not covered here, ask. Free quote within 24 hours, and small first orders are welcome."
+      />
+    </>
   );
-};
-
-export default FAQ;
+}

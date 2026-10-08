@@ -1,10 +1,11 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import Page from "@/views/Industries";
+import Industries from "@/views/Industries";
 
 export const metadata = pageMetadata({
-  title: "Industries We Serve in Ohio",
-  description: "Printing, signage, vehicle branding and promotional products for Ohio businesses. We fit each order to how your industry actually works.",
+  title: "Industries We Serve in Central Ohio",
+  description:
+    "Labels, signs, printing, lettering and wraps for roofers, contractors, dental and medical practices, lawn care, real estate, auto dealers, fleets and food makers.",
   path: "/industries",
 });
 
-export default Page;
+export default Industries;

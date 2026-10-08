@@ -1,43 +1,22 @@
-// Every public page, for the sitemap. Add new pages here.
-export const SITE_ROUTES = [
+import { INDUSTRIES, PRODUCTS } from "@/content/catalog";
+
+// Every public page, for the sitemap. Product and industry pages come from
+// src/content, so adding a page there adds it here.
+export const STATIC_ROUTES = [
   "/",
-  "/about",
-  "/auto-dealers",
-  "/banners-and-flags",
-  "/blog",
-  "/business-cards-printing",
-  "/business-consulting",
-  "/business-printing",
-  "/catalogs-and-booklets",
-  "/construction",
-  "/contact",
-  "/decals-and-stickers",
-  "/dental",
-  "/door-hangers",
-  "/embroidered-apparel",
-  "/faq",
-  "/fleet-and-logistics",
-  "/fleet-wraps",
-  "/full-rebrand-kits",
-  "/graduation-2026",
-  "/industries",
-  "/large-format-printing",
-  "/lawn-care-landscaping",
-  "/letterhead-and-envelopes",
-  "/local-seo",
-  "/medical-specialty",
-  "/menus-and-table-tents",
-  "/portfolio",
-  "/postcards",
-  "/presentation-folders",
-  "/pricing",
-  "/promotional-products",
-  "/real-estate",
-  "/roofing",
   "/services",
-  "/trade-show-displays",
-  "/vehicle-decals",
-  "/vehicle-wraps",
-  "/website-design",
-  "/yard-signs-and-signage",
+  "/pricing",
+  "/industries",
+  "/about",
+  "/faq",
+  "/contact",
+  "/blog",
+  "/privacy-policy",
+  "/sms-terms",
+];
+
+export const SITE_ROUTES = [
+  ...STATIC_ROUTES,
+  ...PRODUCTS.map((p) => `/${p.slug}`),
+  ...INDUSTRIES.map((p) => `/${p.slug}`),
 ];

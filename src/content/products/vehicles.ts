@@ -171,8 +171,8 @@ export const VEHICLE_PAGES: ProductPage[] = [
         heading: "Do you have to wrap every truck in the fleet?",
         body: "No. Most fleets aren't all new. Put full or partial wraps on the vans you'll keep for years, and put matching door lettering on the older trucks you plan to replace. Same fonts, same colors, same logo. From the street it reads as one fleet.\n\nWhen an old truck gets replaced, the new one gets the full design. The file is already built, so adding a vehicle is print and install, not a new design project.\n\nFull van wraps start at $2,800, partial wraps at $1,200 and door lettering at $249, all installed. Send me a list of your vehicles and I'll price the whole fleet within 24 hours.",
         image: {
-          src: "/assets/vehicle-wrap-fleet-real.jpg",
-          alt: "Two box trucks with matching orange and white graphics parked side by side",
+          src: "/assets/gallery-fleet-consistency.jpg",
+          alt: "Two cargo vans in matching orange, red and black graphics parked in a snowy lot",
         },
       },
     ],

@@ -1,17 +1,9 @@
-"use client";
-import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Phone, BookOpen, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Link } from "@/lib/compat/router";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import BlogCard from "@/components/blog/BlogCard";
-import { usePageSEO } from "@/hooks/usePageTitle";
-import { toPlainText, type BlogCategory, type BlogPostSummary } from "@/lib/blog-utils";
-
-const PER_PAGE = 9;
+import Link from "next/link";
+import { breadcrumbLd } from "@/lib/schema";
+import { CtaBand, Crumbs } from "@/components/site/blocks";
+import { Container, Eyebrow, JsonLd, Section } from "@/components/site/ui";
+import type { BlogCategory, BlogPostSummary } from "@/lib/blog-utils";
+import BlogBrowser from "./BlogBrowser";
 
 interface BlogProps {
   /** All posts, newest first (loaded from content/blog by the server page). */
@@ -19,225 +11,69 @@ interface BlogProps {
   categories: BlogCategory[];
 }
 
-const Blog = ({ posts: allPosts, categories }: BlogProps) => {
-  const [page, setPage] = useState(1);
-  const [activeCat, setActiveCat] = useState<string | undefined>(undefined);
-  const [search, setSearch] = useState("");
-  const [searchInput, setSearchInput] = useState("");
+const SERVICE_LINKS = [
+  { href: "/services", label: "Everything we make" },
+  { href: "/custom-labels", label: "Custom labels" },
+  { href: "/business-cards-printing", label: "Business cards" },
+  { href: "/vehicle-wraps", label: "Vehicle wraps" },
+  { href: "/embroidered-apparel", label: "Embroidered apparel" },
+  { href: "/promotional-products", label: "Promotional products" },
+  { href: "/banners-and-flags", label: "Banners and flags" },
+];
 
-  usePageSEO({
-    title: "Blog - Ohio Business Branding Tips & News",
-    description: "Expert tips on business branding, printing, promotional products, vehicle wraps, and marketing strategies for Ohio small businesses.",
-    canonical: "https://www.buckeyebizhub.com/blog",
-  });
-
-  // Filtering, search and paging all happen in the browser over the props.
-  const filtered = useMemo(() => {
-    const words = search.toLowerCase().split(/\s+/).filter(Boolean);
-    return allPosts.filter((p) => {
-      if (activeCat && !p.categories.some((c) => c.slug === activeCat)) return false;
-      if (words.length === 0) return true;
-      const haystack = [p.title, toPlainText(p.excerpt), ...p.categories.map((c) => c.name), ...p.tags.map((t) => t.name)]
-        .join(" ")
-        .toLowerCase();
-      return words.every((w) => haystack.includes(w));
-    });
-  }, [allPosts, activeCat, search]);
-
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
-  const posts = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSearch(searchInput);
-    setPage(1);
-  };
-
+export default function Blog({ posts, categories }: BlogProps) {
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <>
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+        ])}
+      />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-28 lg:pt-52 lg:pb-36 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] hidden" />
-        </div>
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)", backgroundSize: "52px 52px" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
-        <div className="container relative text-center">
-          <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 ">
-            <BookOpen className="w-4 h-4" /> Resources & Insights <BookOpen className="w-4 h-4" />
-          </motion.div>
-          <h1
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground leading-[0.88] mb-10"
-            style={{ textShadow: "0 0 80px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.9)" }}>
-            Ohio Business Tips,{" "}<br className="hidden md:block" />
-            <span className="text-primary text-glow-red">Printing Guides</span>{" "}<br className="hidden md:block" />
-            & Branding Strategies
-          </h1>
-          <p
-            className="text-xl md:text-2xl text-primary-foreground/50 max-w-3xl mx-auto font-semibold tracking-wide leading-relaxed">
-            Expert insights to help Columbus and Ohio businesses grow through smart printing, branding, and promotional strategies.
+      <section className="bg-paper">
+        <Container className="pb-12 pt-8 md:pb-16 md:pt-12">
+          <Crumbs items={[{ name: "Home", href: "/" }, { name: "Blog" }]} />
+          <Eyebrow>Blog</Eyebrow>
+          <h1 className="max-w-4xl text-[clamp(2.5rem,5.6vw,4.5rem)]">Printing guides and branding tips for Ohio businesses</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
+            Practical answers on printing, vehicle graphics, promo products and marketing for Columbus and Central Ohio
+            businesses.
           </p>
-        </div>
+        </Container>
       </section>
 
-      {/* Filter & Search Bar */}
-      <section className="relative py-5 bg-ohio-grey-light border-b border-border/50 sticky top-16 lg:top-[72px] z-30 backdrop-blur-xl bg-ohio-grey-light/95">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex w-full min-w-0 gap-2 overflow-x-auto pb-2 md:w-auto md:pb-0 md:flex-wrap scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
-              <button
-                onClick={() => { setActiveCat(undefined); setPage(1); }}
-                className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 ${
- !activeCat ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
- }`}>
-                All Posts
-              </button>
-              {categories.filter((c) => c.slug !== "uncategorized").map((cat) => (
-                <button
-                  key={cat.slug}
-                  onClick={() => { setActiveCat(cat.slug); setPage(1); }}
-                  className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 whitespace-nowrap ${
- activeCat === cat.slug ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
- }`}>
-                  <span>{cat.name}</span>
-                </button>
-              ))}
-            </div>
-            <form onSubmit={handleSearch} className="flex gap-2 w-full md:w-auto shrink-0">
-              <Input
-                placeholder="Search articles…"
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                className="w-full md:w-56"
-              />
-              <Button type="submit" size="icon" variant="outline"><Search className="w-4 h-4" /></Button>
-            </form>
+      <Section tone="white" bordered>
+        <BlogBrowser posts={posts} categories={categories} />
+      </Section>
+
+      {/* Service cross-links */}
+      <Section bordered>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_1.6fr] md:gap-16">
+          <div>
+            <Eyebrow>What we make</Eyebrow>
+            <h2 className="text-[clamp(2rem,4vw,3rem)]">Browse the products</h2>
           </div>
-        </div>
-      </section>
-
-      {/* Blog Grid */}
-      <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
-        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full hidden" />
-        <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full hidden" />
-
-        <div className="container relative">
-          {posts.length === 0 ? (
-            <div className="text-center py-20 max-w-3xl mx-auto">
-              <div className="mx-auto mb-8 w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                <BookOpen className="w-12 h-12 text-primary" />
-              </div>
-              <h2 className="font-display text-4xl md:text-5xl font-black text-foreground mb-5 leading-tight">
-                {search || activeCat ? "No Articles Found" : "Fresh Content Coming Soon"}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                {search || activeCat
-                  ? "We couldn't find articles matching your search. Try a different keyword or browse all posts."
-                  : "We're crafting expert guides on promotional products, custom printing, vehicle branding, and strategies to help Ohio businesses thrive."}
-              </p>
-              {(search || activeCat) && (
-                <Button variant="ghost" className="text-primary font-bold mb-8" onClick={() => { setSearch(""); setSearchInput(""); setActiveCat(undefined); setPage(1); }}>
-                  ← Clear Filters & Show All Posts
-                </Button>
-              )}
-              <p className="text-muted-foreground mb-10 leading-relaxed">
-                In the meantime, look through our services or ask for a free quote.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/services">
-                  <Button size="lg" className="font-bold text-base px-8 py-6 rounded-xl">
-                    Explore Our Services <ArrowRight className="w-5 h-5" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="font-bold text-base px-8 py-6 rounded-xl border-2">
-                    <Phone className="w-4 h-4" /> Get a Free Quote
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          ) : (
-            <>
-              {/* Featured first post */}
-              <BlogCard post={posts[0]} featured />
-
-              {/* Grid of remaining */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {posts.slice(1).map((post, i) => (
-                  <motion.div key={post.slug} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
-                    <BlogCard post={post} />
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Pagination */}
-              {totalPages > 1 && (
-                <div className="flex justify-center items-center gap-3 mt-16">
-                  <Button variant="outline" disabled={page <= 1} onClick={() => setPage((p) => p - 1)}>← Previous</Button>
-                  <span className="text-sm font-bold text-muted-foreground">Page {page} of {totalPages}</span>
-                  <Button variant="outline" disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)}>Next →</Button>
-                </div>
-              )}
-            </>
-          )}
-
-          {/* Service cross-links for SEO */}
-          <div className="mt-16 p-8 rounded-2xl bg-card border border-border text-center">
-            <h2 className="font-display text-2xl font-black text-foreground mb-3">Browse Our Services</h2>
-            <p className="text-muted-foreground text-sm mb-6">Need help bringing your brand to life? Explore what we offer:</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { to: "/services", label: "All Services" },
-                { to: "/promotional-products", label: "Promotional Products" },
-                { to: "/business-cards-printing", label: "Business Cards" },
-                { to: "/vehicle-wraps", label: "Vehicle Wraps" },
-                { to: "/embroidered-apparel", label: "Branded Apparel" },
-                { to: "/large-format-printing", label: "Large Format Printing" },
-                { to: "/banners-and-flags", label: "Banners & Flags" },
-              ].map((s) => (
-                <Link key={s.to} to={s.to} className="text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors">
+          <ul className="flex flex-wrap content-start gap-2">
+            {SERVICE_LINKS.map((s) => (
+              <li key={s.href}>
+                <Link
+                  href={s.href}
+                  className="inline-flex min-h-[44px] items-center rounded-md border border-border bg-white px-4 text-[0.95rem] font-medium text-ink transition-colors hover:border-ink/40"
+                >
                   {s.label}
                 </Link>
-              ))}
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
+      </Section>
 
-      {/* Bottom CTA */}
-      <section className="py-32 lg:py-44 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
-        <div className="container relative text-center">
-          <motion.h2 initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-10 leading-[0.88]"
-            style={{ textShadow: "0 0 80px rgba(255,255,255,0.35), 0 6px 25px rgba(0,0,0,0.6)" }}>
-            Ready to Grow{" "}<br className="hidden md:block" />Your Ohio Brand?
-          </motion.h2>
-          <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-primary-foreground/60 mb-16 font-semibold italic font-display max-w-3xl mx-auto">
-            Put these strategies into action. Get a free quote for printing, promotional products, or vehicle branding today.
-          </motion.p>
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-            <Link to="/contact">
-              <Button size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group ">
-                <Phone className="w-7 h-7" /> Get Your Free Quote Today
-                <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      <CtaBand
+        title="Ready to put it to work?"
+        body="Get a free quote within 24 hours for printing, promo products or vehicle graphics. Small first orders are welcome."
+      />
+    </>
   );
-};
-
-export default Blog;
+}
