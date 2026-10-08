@@ -85,7 +85,7 @@ export const PRICES: Record<PriceKey, StartingPrice> = {
   "vinyl-banner": {
     item: "Vinyl banner",
     spec: "3 x 6 ft, 13oz, hemmed with grommets",
-    from: 55,
+    from: 39,
     quantity: 1,
   },
   "yard-signs": {

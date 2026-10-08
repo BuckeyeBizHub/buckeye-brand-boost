@@ -119,7 +119,7 @@ export const SIGN_PAGES: ProductPage[] = [
     blurb: "Vinyl and mesh banners, feather flags and large format prints in any size.",
     metaTitle: "Custom Banners and Flags in Columbus, Ohio",
     metaDescription:
-      "Vinyl banners, mesh fence banners, feather flags and large format posters for Columbus businesses. 3 x 6 ft vinyl banner from $55. Free quote in 24 hours.",
+      "Vinyl banners, mesh fence banners, feather flags and large format posters for Columbus businesses. 3 x 6 ft vinyl banner from $39. Free quote in 24 hours.",
     eyebrow: "Banners and large format",
     h1: "Banners, flags and big prints people see from the road.",
     lede: "Custom vinyl banners, mesh fence banners and feather flags for grand openings, job sites and events around Columbus. Plus large format posters and mounted prints when you need something big indoors.",
@@ -170,7 +170,7 @@ export const SIGN_PAGES: ProductPage[] = [
     sections: [
       {
         heading: "Vinyl or mesh: which banner do you need?",
-        body: "Vinyl is the default. 13oz vinyl is waterproof, prints sharp and holds grommets well. It's right for most banners on a building, a stage, a table or a fence that's out of the wind. A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $55.\n\nMesh is vinyl full of tiny holes. Wind passes through instead of pulling on the grommets, so it's the right call on chain-link fences, scaffolding and anything hung up high. Contractors use it to wrap a job site fence. The print looks a little lighter up close, but from the street it reads the same.\n\nTell me where the banner hangs and how long it stays up. I'll match the material, the hems and the grommets to the spot.",
+        body: "Vinyl is the default. 13oz vinyl is waterproof, prints sharp and holds grommets well. It's right for most banners on a building, a stage, a table or a fence that's out of the wind. A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39.\n\nMesh is vinyl full of tiny holes. Wind passes through instead of pulling on the grommets, so it's the right call on chain-link fences, scaffolding and anything hung up high. Contractors use it to wrap a job site fence. The print looks a little lighter up close, but from the street it reads the same.\n\nTell me where the banner hangs and how long it stays up. I'll match the material, the hems and the grommets to the spot.",
       },
       {
         heading: "Feather flags and grand opening banners that pull people in",
@@ -188,7 +188,7 @@ export const SIGN_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does a custom vinyl banner cost?",
-        a: "A 3 x 6 ft vinyl banner on 13oz material, hemmed with grommets, starts at $55. Bigger sizes, double-sided printing and pole pockets add to the price. I'll quote your exact size within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner on 13oz material, hemmed with grommets, starts at $39. Bigger sizes, double-sided printing and pole pockets add to the price. I'll quote your exact size within 24 hours.",
       },
       {
         q: "What size banner should I get?",

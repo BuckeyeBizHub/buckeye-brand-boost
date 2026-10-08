@@ -172,7 +172,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much does a jobsite banner cost?",
-        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $55. Bigger banners, mesh material and double-sided printing change the price. Send the size of the fence or wall and I'll quote it within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Bigger banners, mesh material and double-sided printing change the price. Send the size of the fence or wall and I'll quote it within 24 hours.",
       },
       {
         q: "What's the difference between a vinyl banner and a mesh banner?",
@@ -575,7 +575,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Lot banners, feather flags, showroom graphics, staff polos and gifts for car dealers.",
     metaTitle: "Car Dealer Banners and Lot Signs in Columbus",
     metaDescription:
-      "Lot banners, feather flags, showroom graphics, staff polos and customer gifts for Columbus car dealers. 3 x 6 ft vinyl banners from $55. Free quote in 24 hours.",
+      "Lot banners, feather flags, showroom graphics, staff polos and customer gifts for Columbus car dealers. 3 x 6 ft vinyl banners from $39. Free quote in 24 hours.",
     eyebrow: "Auto dealers",
     h1: "Banners, flags and gear for the lot and the showroom.",
     lede: "Car dealer signs and marketing for Columbus dealerships and independent lots: lot banners, feather flags, showroom graphics, staff polos and gifts for buyers. One person handles the whole list.",
@@ -618,7 +618,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     sections: [
       {
         heading: "Lot signs and banners that work from the road",
-        body: "Drivers pass your lot at speed. They get a second or two to notice a sale, a price or a brand. Big words, high contrast and one message per banner work better than a crowded design.\n\nA 3 x 6 ft vinyl banner, hemmed with grommets, starts at $55. Feather flags add motion along the frontage, and pole banners dress up the lot for a sale event. Swap the message for each event, and keep a set of evergreen pieces up the rest of the time.\n\nCheck the local sign code before you add a lot of temporary signs. Some Central Ohio cities limit banners and flags by size or by how many days they can stay up.",
+        body: "Drivers pass your lot at speed. They get a second or two to notice a sale, a price or a brand. Big words, high contrast and one message per banner work better than a crowded design.\n\nA 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Feather flags add motion along the frontage, and pole banners dress up the lot for a sale event. Swap the message for each event, and keep a set of evergreen pieces up the rest of the time.\n\nCheck the local sign code before you add a lot of temporary signs. Some Central Ohio cities limit banners and flags by size or by how many days they can stay up.",
       },
       {
         heading: "Showroom, service lane and staff",
@@ -642,7 +642,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much does a car lot banner cost?",
-        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $55. Bigger sizes, double-sided printing and mesh material change the price. Send the size and where it hangs and I'll quote it within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Bigger sizes, double-sided printing and mesh material change the price. Send the size and where it hangs and I'll quote it within 24 hours.",
       },
       {
         q: "Do you make feather flags for car lots?",
