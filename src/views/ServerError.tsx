@@ -1,80 +1,44 @@
 "use client";
-import { Link } from "@/lib/compat/router";
-import { Helmet } from "@/lib/compat/helmet";
-import { AlertTriangle, Home, RefreshCw, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// Client component: rendered by app/error.tsx, and the retry button needs a click handler.
+import { Mail, Phone, RefreshCw } from "lucide-react";
+import { ButtonLink, Container, EMAIL, Eyebrow, PHONE_DISPLAY, PHONE_HREF } from "@/components/site/ui";
 
-const ServerError = () => {
+export default function ServerError() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Something Went Wrong | Buckeye Biz Hub</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="description" content="Something went wrong on our end. Try again or contact us for help." />
-      </Helmet>
+    <section className="bg-paper">
+      <Container className="py-16 md:py-24">
+        <Eyebrow>Error 500</Eyebrow>
+        <h1 className="max-w-3xl text-[clamp(2.5rem,5.6vw,4.5rem)]">Something went wrong.</h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
+          Something broke on our end. It&apos;s temporary. Try again in a minute. Still not working? Call or email.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-[0.975rem] font-semibold text-white transition-colors hover:bg-brand-deep"
+          >
+            <RefreshCw className="h-4 w-4" aria-hidden />
+            Try again
+          </button>
+          <ButtonLink href="/" variant="outline">
+            Back to the homepage
+          </ButtonLink>
+        </div>
 
-      <Navbar />
-
-      <div className="flex-1 pt-32 pb-20 lg:pt-44 lg:pb-28">
-        <div className="container max-w-3xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-destructive/10 border border-destructive/20 text-destructive text-xs font-black px-5 py-2 rounded-full mb-8">
-            <AlertTriangle className="w-3.5 h-3.5" />
-            Error 500
-          </div>
-
-          <h1 className="font-display text-5xl md:text-7xl font-black text-foreground mb-6 leading-tight">
-            Something Went Wrong
-          </h1>
-
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
-            Something broke on our end. It's temporary, and we're on it.
-          </p>
-
-          <p className="text-muted-foreground mb-10">
-            Try again in a minute. Still not working? Call or email us.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-2"
-              onClick={() => window.location.reload()}
-            >
-              <RefreshCw className="w-4 h-4" />
-              Try Again
-            </Button>
-            <Link to="/">
-              <Button size="lg" variant="outline" className="font-bold gap-2">
-                <Home className="w-4 h-4" />
-                Back to Homepage
-              </Button>
-            </Link>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-muted/50 border border-border">
-            <h2 className="font-display text-lg font-bold text-foreground mb-3">
-              Contact Us Directly
-            </h2>
-            <p className="text-muted-foreground text-sm mb-4">
-              Need help now? Reach out and we'll get back to you within 24 hours.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="tel:+16145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Phone className="w-3.5 h-3.5" /> (614) 561-3358
-              </a>
-              <a href="mailto:david@buckeyebizhub.com" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Mail className="w-3.5 h-3.5" /> david@buckeyebizhub.com
-              </a>
-            </div>
+        <div className="mt-14 max-w-2xl rounded-xl border border-border bg-white p-6 md:p-8">
+          <h2 className="text-[1.75rem]">Need help now?</h2>
+          <p className="mt-2 text-body">Reach out and you&apos;ll hear back within 24 hours.</p>
+          <div className="mt-4 flex flex-col gap-3 text-[0.975rem] sm:flex-row sm:gap-6">
+            <a href={PHONE_HREF} className="inline-flex items-center gap-2 font-semibold text-ink hover:text-brand">
+              <Phone className="h-4 w-4" aria-hidden /> {PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 break-all font-semibold text-ink hover:text-brand">
+              <Mail className="h-4 w-4 shrink-0" aria-hidden /> {EMAIL}
+            </a>
           </div>
         </div>
-      </div>
-
-      <Footer />
-    </div>
+      </Container>
+    </section>
   );
-};
-
-export default ServerError;
+}

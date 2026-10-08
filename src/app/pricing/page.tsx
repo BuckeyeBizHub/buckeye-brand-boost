@@ -1,10 +1,11 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import Page from "@/views/Pricing";
+import Pricing from "@/views/Pricing";
 
 export const metadata = pageMetadata({
-  title: "Pricing: Printing, Wraps & Signs",
-  description: "No hidden fees. Fast, honest quotes on printing, vehicle wraps, banners and branding for Central Ohio businesses.",
+  title: "Printing, Sign and Label Prices in Columbus",
+  description:
+    "Starting prices for labels, decals, truck lettering, car magnets, yard signs, banners, business cards and wraps in Columbus, Ohio. Free exact quote in 24 hours.",
   path: "/pricing",
 });
 
-export default Page;
+export default Pricing;

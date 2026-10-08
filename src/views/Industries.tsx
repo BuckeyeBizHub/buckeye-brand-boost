@@ -1,215 +1,29 @@
-"use client";
-import { motion } from "framer-motion";
-import { Link } from "@/lib/compat/router";
-import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { usePageSEO } from "@/hooks/usePageTitle";
+import { INDUSTRIES } from "@/content/catalog";
+import { breadcrumbLd } from "@/lib/schema";
+import { CtaBand, Crumbs, LinkCards } from "@/components/site/blocks";
+import { Container, Eyebrow, JsonLd, Section } from "@/components/site/ui";
 
-type Industry = {
-  emoji: string;
-  title: string;
-  description: string;
-  segments: string;
-  cta: string;
-  href: string;
-};
-
-const industries: Industry[] = [
-  {
-    emoji: "🦷",
-    title: "Dental Practices",
-    description:
-      "Branded scrubs and uniforms, referral gift packages with local Ohio brands, office signage, printed materials and rebranding kits. From someone who's spent 15+ years helping run a dental practice.",
-    segments:
-      "General dentists · Endodontists · Orthodontists · Periodontists · Pediatric · Oral Surgery · Multi-location DSO groups",
-    cta: "See Dental Solutions",
-    href: "/dental",
-  },
-  {
-    emoji: "🏠",
-    title: "Roofing Contractors",
-    description:
-      "Fleet wraps, crew apparel (polos, t-shirts, hoodies, high-vis vests), logos, door hangers, yard signs, carbonless contract forms, trade show booths, postcards and full campaigns. For the busy season and the rest of the year.",
-    segments:
-      "Residential · Commercial · Industrial · Storm restoration · Multi-location operations",
-    cta: "See Roofing Solutions",
-    href: "/roofing",
-  },
-  {
-    emoji: "🏗️",
-    title: "Construction & General Contractors",
-    description:
-      "Workwear and crew polos, fleet wraps, hard hat wraps, jobsite banners, trade show displays and safety gear. Your crews and trucks represent you on every job.",
-    segments:
-      "General contractors · Commercial builders · Specialty contractors · Industrial",
-    cta: "See Construction Solutions",
-    href: "/construction",
-  },
-  {
-    emoji: "🚛",
-    title: "Fleet & Logistics",
-    description:
-      "Fleet wraps, magnetic signs, driver uniforms, safety vests and employee gear. Every truck looks the same, at every location.",
-    segments: "3PLs · Trucking · Warehousing · Distribution · Fleet management",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-  {
-    emoji: "🏡",
-    title: "Real Estate",
-    description:
-      "Business cards, yard signs, notepads, folders, closing gifts, postcards, direct mail and signage. Look sharp and stay top of mind.",
-    segments:
-      "Individual agents · Teams · Brokerages · Property management companies",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-  {
-    emoji: "🌿",
-    title: "Lawn Care & Landscaping",
-    description:
-      "Truck wraps, crew shirts and polos, door hangers, yard signs and seasonal marketing. Every truck on the road should be a billboard.",
-    segments:
-      "Residential lawn care · Commercial landscaping · Snow removal · Tree service",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-  {
-    emoji: "🏥",
-    title: "Medical & Specialty Practices",
-    description:
-      "Branded scrubs and staff apparel, patient gifts, office signage, printed materials and rebranding kits. For practices where patient experience matters.",
-    segments:
-      "Physicians · Chiropractors · Physical therapists · Veterinary · Specialty practices",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-  {
-    emoji: "🚗",
-    title: "Auto Dealers",
-    description:
-      "Fleet graphics, lot signage, staff polos and apparel, showroom displays, trade show materials and customer gifts. Every detail of the buying experience counts.",
-    segments:
-      "Franchise dealers · Independent dealers · Buy-here-pay-here · Auto groups",
-    cta: "Get a Quote",
-    href: "/contact",
-  },
-];
-
-const Industries = () => {
-  usePageSEO({
-    title: "Industries",
-    description:
-      "Printing, signage, vehicle branding and promo products for Ohio businesses, built around how your industry works.",
-  });
-
+export default function Industries() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-24 bg-gradient-to-br from-ohio-grey-dark via-[hsl(216,14%,8%)] to-ohio-grey-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full hidden" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full hidden" />
-        </div>
-        <div className="container relative max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30"
-          >
-            Industries We Serve
-          </motion.div>
-          <h1
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.05] mb-6"
-            style={{ textShadow: "0 4px 30px rgba(0,0,0,0.7)" }}
-          >
-            Industries We{" "}
-            <span className="text-primary text-glow-red">Serve</span>
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/85 font-semibold leading-relaxed max-w-3xl mx-auto mb-4">
-            We don't do generic. Every industry gets its own approach, built around how the business runs, what the crew needs in the field and what customers expect.
+    <>
+      <JsonLd data={breadcrumbLd([{ name: "Home", path: "/" }, { name: "Industries", path: "/industries" }])} />
+      <section className="bg-paper">
+        <Container className="pb-10 pt-8 md:pb-14 md:pt-12">
+          <Crumbs items={[{ name: "Home", href: "/" }, { name: "Industries" }]} />
+          <Eyebrow>Industries</Eyebrow>
+          <h1 className="max-w-4xl text-[clamp(2.5rem,5.6vw,4.5rem)]">Built around how your kind of business works.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
+            A roofer needs yard signs and door hangers. A bakery needs labels. A fleet needs every truck to match. Pick
+            yours and see what people in your line of work order most.
           </p>
-          <p className="text-base md:text-lg text-primary-foreground/65 leading-relaxed max-w-3xl mx-auto">
-            We've worked with dental practices, roofing companies, contractors, fleets and more. You don't start from scratch with us. We already speak your language.
-          </p>
-        </div>
+        </Container>
       </section>
-
-      {/* Industries grid */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-            {industries.map((ind, i) => (
-              <motion.div
-                key={ind.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 4) * 0.08, duration: 0.5 }}
-              >
-                <Link to={ind.href} className="block h-full">
-                  <div className="group relative h-full bg-card border-2 border-border rounded-2xl p-6 lg:p-7 flex flex-col transition-all duration-300 hover:border-primary/60 hover:-translate-y-1">
-                    <div className="text-4xl mb-3" aria-hidden="true">
-                      {ind.emoji}
-                    </div>
-                    <h3 className="font-display text-xl font-black text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {ind.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {ind.description}
-                    </p>
-                    <p className="text-xs text-foreground/70 font-semibold leading-relaxed mb-5 pt-4 border-t border-border">
-                      {ind.segments}
-                    </p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-primary group-hover:gap-2.5 transition-all">
-                      {ind.cta}
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="py-20 lg:py-24 bg-ohio-cream">
-        <div className="container max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center "
-          >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-5">
-              Don't see your{" "}
-              <span className="text-primary">industry here?</span>
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              We work with Ohio businesses of all kinds. Got a crew in the field, trucks on the road or customers at your door? We can help. Every quote is free and back to you within 24 hours.
-            </p>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
-              >
-                Get Your Free 24-Hour Quote
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      <Section tone="white" bordered>
+        <LinkCards
+          items={INDUSTRIES.map((p) => ({ href: `/${p.slug}`, title: p.navLabel, blurb: p.blurb, image: p.hero }))}
+        />
+      </Section>
+      <CtaBand />
+    </>
   );
-};
-
-export default Industries;
+}

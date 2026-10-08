@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Archivo } from "next/font/google";
+import { Hanken_Grotesk, Newsreader } from "next/font/google";
 import Providers from "./providers";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import Navbar, { type NavGroup } from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { GROUP_LABEL, GROUP_ORDER, productsInGroup } from "@/content/catalog";
 import ScrollToTop from "@/components/ScrollToTop";
 import GA4PageTracker from "@/components/GA4PageTracker";
 import BackToTop from "@/components/BackToTop";
@@ -10,9 +12,15 @@ import MobileCTABar from "@/components/MobileCTABar";
 import { SITE_URL } from "@/lib/structured-data";
 import "@/index.css";
 
-// One family, two widths: wide and heavy for headlines (truck-door lettering),
-// normal width for reading.
-const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
+// Sister look to referralens.com: Newsreader for headlines, Hanken Grotesk for reading.
+const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader", display: "swap", weight: ["400", "500"] });
+const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", display: "swap" });
+
+// Product menu, built on the server so the browser only gets labels and links.
+const navGroups: NavGroup[] = GROUP_ORDER.filter((g) => g !== "more").map((g) => ({
+  title: GROUP_LABEL[g],
+  links: productsInGroup(g).map((p) => ({ label: p.navLabel, href: `/${p.slug}` })),
+}));
 
 const GA4_ID = "G-WY6SCF05ZZ";
 
@@ -37,7 +45,7 @@ const localBusiness = {
   "@id": `${SITE_URL}/#localbusiness`,
   name: "Buckeye Biz Hub",
   description:
-    "Columbus Ohio's branding concierge specializing in printing, vehicle wraps, promotional products, banners, decals, and embroidered apparel.",
+    "Custom labels, decals, vehicle lettering, signs, business printing and fleet wraps for Columbus and Central Ohio businesses.",
   url: `${SITE_URL}/`,
   telephone: "+1-614-561-3358",
   email: "david@buckeyebizhub.com",
@@ -50,7 +58,9 @@ const localBusiness = {
     postalCode: "43212",
     addressCountry: "US",
   },
-  areaServed: ["Columbus", "Dublin", "Westerville", "Gahanna", "Hilliard", "Grove City", "Canal Winchester"].map(
+  image: `${SITE_URL}/assets/product-collage-hero.jpg`,
+  logo: `${SITE_URL}/assets/buckeye-logo.png`,
+  areaServed: ["Columbus", "Dublin", "Westerville", "Gahanna", "Hilliard", "Grove City", "Delaware", "Newark", "Mount Vernon"].map(
     (name) => ({ "@type": "City", name }),
   ),
   sameAs: [
@@ -60,7 +70,7 @@ const localBusiness = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={archivo.variable}>
+    <html lang="en" className={`${newsreader.variable} ${hanken.variable}`}>
       <body>
         <script
           type="application/ld+json"
@@ -69,8 +79,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <ScrollToTop />
           <GA4PageTracker />
-          <Breadcrumbs />
+          <Navbar groups={navGroups} />
           <main id="main-content">{children}</main>
+          <Footer />
           <BackToTop />
           <MobileCTABar />
         </Providers>

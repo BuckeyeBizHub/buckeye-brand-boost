@@ -10,12 +10,14 @@ export default {
       // Same gutters as the hand-built sections: 16px on phones.
       padding: { DEFAULT: "1rem", sm: "1.5rem", lg: "2rem" },
       screens: {
-        "2xl": "1400px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
         display: ["var(--font-display)"],
+        serif: ["var(--font-display)"],
+        sans: ["var(--font-body)"],
         body: ["var(--font-body)"],
       },
       colors: {
@@ -65,6 +67,13 @@ export default {
           navy: "hsl(var(--ohio-navy))",
           cream: "hsl(var(--ohio-cream))",
         },
+        paper: "hsl(var(--paper))",
+        cream: "hsl(var(--cream))",
+        ink: { DEFAULT: "hsl(var(--ink))", 2: "hsl(var(--ink-2))" },
+        line: { DEFAULT: "hsl(var(--line))", dark: "hsl(var(--line-dark))" },
+        body: "hsl(var(--body))",
+        quiet: { DEFAULT: "hsl(var(--quiet))", dark: "hsl(var(--quiet-dark))" },
+        brand: { DEFAULT: "hsl(var(--red))", deep: "hsl(var(--red-deep))", bright: "hsl(var(--red-bright))" },
         asphalt: "hsl(var(--asphalt))",
         graphite: "hsl(var(--graphite))",
         seam: "hsl(var(--seam))",
@@ -86,9 +95,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
         // Tighter corners site-wide: the old pill-and-bubble radii read as a template.
-        xl: "0.5rem",
-        "2xl": "0.5rem",
-        "3xl": "0.75rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.25rem",
       },
       keyframes: {
         "accordion-down": {

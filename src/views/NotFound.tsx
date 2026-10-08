@@ -1,128 +1,63 @@
-"use client";
-import { useLocation, Link } from "@/lib/compat/router";
-import { useEffect } from "react";
-import { Helmet } from "@/lib/compat/helmet";
-import { Home, ArrowRight, Search, Phone, Mail, BookOpen, Briefcase, Star, HelpCircle, DollarSign, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { track404 } from "@/lib/error-tracking";
+import Link from "next/link";
+import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ButtonLink, Container, EMAIL, Eyebrow, PHONE_DISPLAY, PHONE_HREF, Section } from "@/components/site/ui";
+import NotFoundTracker from "./NotFoundTracker";
 
 const popularPages = [
-  { label: "Our Services", href: "/services", icon: Briefcase, description: "Printing, branding and marketing, all in one place." },
-  { label: "Business Cards", href: "/business-cards-printing", icon: Star, description: "Business cards with gold foil, raised print and custom finishes." },
-  { label: "Vehicle Wraps", href: "/vehicle-wraps", icon: MapPin, description: "Full and partial wraps for fleets across Ohio." },
-  { label: "Get a Quote", href: "/contact", icon: Phone, description: "Free quote within 24 hours. No obligation. Wholesale pricing." },
-  { label: "Blog", href: "/blog", icon: BookOpen, description: "Tips and guides for Ohio business branding." },
-  { label: "Pricing", href: "/pricing", icon: DollarSign, description: "Every fee up front. No hidden costs." },
+  { label: "Everything we make", href: "/services", description: "Labels, signs, printing, vehicle graphics, apparel and promo." },
+  { label: "Pricing", href: "/pricing", description: "Starting prices for the most common jobs." },
+  { label: "Business cards", href: "/business-cards-printing", description: "Business cards with foil, raised print and custom finishes." },
+  { label: "Vehicle wraps", href: "/vehicle-wraps", description: "Full and partial wraps for commercial fleets." },
+  { label: "Get a quote", href: "/contact", description: "Free quote within 24 hours. No obligation." },
+  { label: "Blog", href: "/blog", description: "Guides and branding tips for Ohio businesses." },
 ];
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    track404(location.pathname, document.referrer);
-  }, [location.pathname]);
-
+export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Page Not Found | Buckeye Biz Hub</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="description" content="The page you're looking for doesn't exist. Browse our services or return to the homepage." />
-      </Helmet>
+    <>
+      <NotFoundTracker />
 
-      <Navbar />
-
-      <div className="flex-1 pt-32 pb-20 lg:pt-44 lg:pb-28">
-        <div className="container max-w-4xl mx-auto px-6 text-center">
-          {/* Error indicator */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-black px-5 py-2 rounded-full mb-8">
-            <Search className="w-3.5 h-3.5" />
-            Error 404
-          </div>
-
-          <h1 className="font-display text-5xl md:text-7xl font-black text-foreground mb-6 leading-tight">
-            Page Not Found
-          </h1>
-
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
-            We couldn't find <code className="bg-muted px-2 py-0.5 rounded text-sm font-mono">{location.pathname}</code>.
-            It may have moved, been renamed or been taken down.
+      <section className="bg-paper">
+        <Container className="pb-14 pt-12 md:pb-20 md:pt-20">
+          <Eyebrow>Error 404</Eyebrow>
+          <h1 className="max-w-3xl text-[clamp(2.5rem,5.6vw,4.5rem)]">That page isn&apos;t here.</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
+            It may have moved, been renamed or been taken down. Try one of these pages or head back home.
           </p>
-
-          <p className="text-muted-foreground mb-10">
-            Try one of these pages or head back home.
-          </p>
-
-          {/* CTA buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Link to="/">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-2">
-                <Home className="w-4 h-4" />
-                Back to Homepage
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="font-bold gap-2">
-                <Phone className="w-4 h-4" />
-                Contact Us
-              </Button>
-            </Link>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <ButtonLink href="/">Back to the homepage</ButtonLink>
+            <ButtonLink href="/contact" variant="outline">
+              Contact David
+            </ButtonLink>
           </div>
+        </Container>
+      </section>
 
-          {/* Popular pages grid */}
-          <div className="text-left">
-            <h2 className="font-display text-2xl font-black text-foreground mb-6 text-center">
-              Popular Pages
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {popularPages.map((page) => (
-                <Link
-                  key={page.href}
-                  to={page.href}
-                  className="group flex items-start gap-3 p-5 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <page.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-bold text-foreground group-hover:text-primary transition-colors text-sm">
-                      {page.label}
-                    </h3>
-                    <p className="text-muted-foreground text-xs leading-relaxed mt-0.5">
-                      {page.description}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
+      <Section tone="white" bordered>
+        <h2 className="mb-8 text-[clamp(1.85rem,3.6vw,2.5rem)]">Popular pages</h2>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {popularPages.map((p) => (
+            <Link key={p.href} href={p.href} className="card-lift group flex flex-col rounded-xl border border-border bg-white p-5">
+              <h3 className="font-display text-[1.45rem] leading-tight text-ink">{p.label}</h3>
+              <p className="mt-2 flex-1 text-[0.95rem] text-muted-foreground">{p.description}</p>
+              <ArrowRight className="mt-4 h-4 w-4 text-ink transition-transform group-hover:translate-x-1" aria-hidden />
+            </Link>
+          ))}
+        </div>
 
-          {/* Help section */}
-          <div className="mt-12 p-6 rounded-2xl bg-muted/50 border border-border">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <HelpCircle className="w-5 h-5 text-primary" />
-              <h3 className="font-display text-lg font-bold text-foreground">Need Help?</h3>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Think this page should be here? Let us know and we'll fix it.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="tel:+16145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Phone className="w-3.5 h-3.5" /> (614) 561-3358
-              </a>
-              <a href="mailto:david@buckeyebizhub.com" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">
-                <Mail className="w-3.5 h-3.5" /> david@buckeyebizhub.com
-              </a>
-            </div>
+        <div className="mt-12 rounded-xl border border-border bg-cream p-6 md:p-8">
+          <h2 className="text-[1.75rem]">Think this page should be here?</h2>
+          <p className="mt-2 text-body">Let me know and I&apos;ll fix it.</p>
+          <div className="mt-4 flex flex-col gap-3 text-[0.975rem] sm:flex-row sm:gap-6">
+            <a href={PHONE_HREF} className="inline-flex items-center gap-2 font-semibold text-ink hover:text-brand">
+              <Phone className="h-4 w-4" aria-hidden /> {PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 break-all font-semibold text-ink hover:text-brand">
+              <Mail className="h-4 w-4 shrink-0" aria-hidden /> {EMAIL}
+            </a>
           </div>
         </div>
-      </div>
-
-      <Footer />
-    </div>
+      </Section>
+    </>
   );
-};
-
-export default NotFound;
+}
