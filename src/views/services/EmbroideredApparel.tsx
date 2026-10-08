@@ -24,7 +24,7 @@ Digitizing is built into the per-piece price, so there are no surprise setup fee
     benefits={[
       "Garments from Carhartt, Nike, Port Authority and dozens more",
       "Logo digitizing included. No surprise setup fees",
-      "Low minimums: 1 piece for names, 12 pieces for crew orders",
+      "Small runs are fine. Ask and we'll tell you the minimum for your item.",
       "Most orders ship in 5–10 business days",
       "Wholesale pricing plus one flat management fee, all shown up front",
     ]}

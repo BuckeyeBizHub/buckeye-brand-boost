@@ -94,7 +94,7 @@ const sections: DetailSection[] = [
           "Envelopes: #10 or A7 with your return address",
           "Notecards: branded thank-you and follow-up notes",
           "Presentation folders: the full brand kit",
-          "Bundle all 4 for 15–20% savings over individual orders",
+          "Bundle all 4 and save over ordering them one at a time",
         ],
       },
       {

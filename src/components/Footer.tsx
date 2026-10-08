@@ -84,9 +84,6 @@ const Footer = () => {
             <a href="https://www.facebook.com/BuckeyeBizHub/" target="_blank" rel="noopener noreferrer" className="hover:text-stock">
               Facebook
             </a>
-            <a href="https://www.pinterest.com/BuckeyeBizHub" target="_blank" rel="noopener noreferrer" className="hover:text-stock">
-              Pinterest
-            </a>
             <Link to="/privacy-policy" className="hover:text-stock">
               Privacy policy
             </Link>

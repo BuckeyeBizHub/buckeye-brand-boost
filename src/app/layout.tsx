@@ -55,7 +55,6 @@ const localBusiness = {
   ),
   sameAs: [
     "https://www.facebook.com/BuckeyeBizHub",
-    "https://www.pinterest.com/BuckeyeBizHub",
   ],
 };
 

@@ -62,7 +62,7 @@ const products = [
     description:
       "Embroidered polos, t-shirts, hoodies and hi-vis vests made for the job site. Comfortable, branded and built to last.",
     image: `${PHOTO_BASE}/roofing-apparel-titan.jpg`,
-    imageAlt: "Titan Roofing branded blue polo shirt with embroidered logo, packed for crew delivery",
+    imageAlt: "Example: roofing crew polo with embroidered logo",
   },
   {
     icon: Palette,
@@ -70,7 +70,7 @@ const products = [
     description:
       "A cleaned-up logo or a full new look. Give your company the polish your established competitors already have.",
     image: `${PHOTO_BASE}/roofing-business-cards-american.jpg`,
-    imageAlt: "American Roofing branded business cards showcasing complete logo and identity design",
+    imageAlt: "Example: roofing company business cards with logo and identity design",
   },
   {
     icon: Megaphone,
@@ -102,7 +102,7 @@ const products = [
     description:
       "Retractable banners, table throws, backdrops and giveaways for home shows, expos and community events.",
     image: `${PHOTO_BASE}/roofing-trade-show-shift.jpg`,
-    imageAlt: "Shift Roofing & Exteriors trade show booth with branded backdrop, retractable banner, and team",
+    imageAlt: "Example: roofing trade show booth with branded backdrop and retractable banner",
   },
   {
     icon: Mail,
@@ -238,17 +238,6 @@ const Roofing = () => {
         </div>
       </section>
 
-      {/* Professional Courtesy Banner */}
-      <section className="bg-primary/10 border-b border-primary/20 py-4">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-medium text-primary">
-            Professional courtesy for Ohio businesses:{" "}
-            <span className="font-semibold">20% off your first order</span>{" "}
-            on top of wholesale pricing. No commitment.
-          </p>
-        </div>
-      </section>
-
       {/* Section 1: Why roofing contractors choose us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
@@ -306,17 +295,17 @@ const Roofing = () => {
                 <Award className="w-4 h-4" /> Our story
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-                Real experience with{" "}
-                <span className="text-primary">fleet-heavy, crew-based businesses</span>
+                Real experience{" "}
+                <span className="text-primary">building businesses</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                In the last 20 months, I helped a local vehicle wrap company <span className="font-bold text-foreground">double their sales</span> by improving their fleet branding. I've also helped build <span className="font-bold text-foreground">3 businesses</span> here in Central Ohio.
+                I co-founded BeerTubes and grew it from <span className="font-bold text-foreground">$79K to $4.5M</span>. Then I built a brewery and restaurant group to <span className="font-bold text-foreground">100+ employees</span>.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                That taught me what crew-based companies with fleets need. Materials that survive tough job sites. Branding that looks sharp on the road. One reliable partner who delivers fast when busy season hits.
+                I know what crew-based companies with fleets need. Materials that survive tough job sites. Branding that looks sharp on the road. One reliable partner who delivers fast when busy season hits.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                We've helped <span className="font-bold text-foreground">9 different Central Ohio roofing companies</span> with their branding: vehicle wraps, crew uniforms and hi-vis gear, door hangers, yard signs, carbonless contracts, sales materials and more.
+                We handle it all for roofers: vehicle wraps, crew uniforms and hi-vis gear, door hangers, yard signs, carbonless contracts, sales materials and more.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Think of us as your <span className="font-bold text-foreground">branding concierge</span>. We handle the details. You run jobs and grow the business.
@@ -334,12 +323,12 @@ const Roofing = () => {
             >
               <img
                 src={ROOFING_BEFORE_AFTER}
-                alt="Briggs Roofing branded fleet pickup truck with full green and white vehicle wrap"
+                alt="Example: roofing pickup truck with full green and white vehicle wrap"
                 className="w-full h-full object-cover aspect-[4/5]"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
-                <p className="text-primary-foreground font-bold text-lg">Real fleet branding</p>
+                <p className="text-primary-foreground font-bold text-lg">Fleet branding example</p>
                 <p className="text-primary-foreground/70 text-sm">A look that turns heads on the road</p>
               </div>
             </motion.div>
@@ -396,7 +385,7 @@ const Roofing = () => {
         </div>
       </section>
 
-      {/* Real Roofing Work Gallery */}
+      {/* Roofing examples gallery */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -406,7 +395,7 @@ const Roofing = () => {
             className="text-center mb-12"
           >
             <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
-              <Sparkles className="w-4 h-4" /> Roofing work
+              <Sparkles className="w-4 h-4" /> Examples
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
               Examples of what we <span className="text-primary">build for roofers</span>

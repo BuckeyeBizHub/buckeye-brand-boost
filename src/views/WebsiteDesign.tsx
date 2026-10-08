@@ -17,7 +17,7 @@ const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 const designServices = [
   { title: "Custom Website Design & Development", icon: Monitor, desc: "Built from scratch to match your brand, tell your story and turn visitors into paying customers." },
   { title: "Website Redesign & Refresh", icon: RefreshCw, desc: "Site looks dated? We give it a fresh design, faster load times and more leads." },
-  { title: "Mobile-First Responsive Websites", icon: Smartphone, desc: "Every site we build works on phones, tablets and desktops. Over 60% of your visitors are on a phone." },
+  { title: "Mobile-First Responsive Websites", icon: Smartphone, desc: "Every site we build works on phones, tablets and desktops. Most of your visitors are on a phone." },
   { title: "Lead-Generating Landing Pages", icon: Target, desc: "One page, one message, one job: catch the leads from your ads, social posts and emails." },
   { title: "E-commerce Websites", icon: ShoppingCart, desc: "Online stores that make it easy to browse, buy and come back. Secure payments and inventory tracking included." },
   { title: "SEO-Optimized Business Websites", icon: Search, desc: "Built with local SEO from the start, so Columbus and Ohio customers find you on Google on day one." },

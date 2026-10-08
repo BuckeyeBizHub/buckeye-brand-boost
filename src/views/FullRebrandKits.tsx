@@ -40,7 +40,7 @@ const faqItems = [
   { q: "How long does a full rebrand take?", a: "It depends on scope. A basic rebrand (cards, apparel, signage) takes 2–4 weeks. A full rebrand with vehicle wraps, website and SEO usually takes 6–12 weeks. You get a timeline with your quote." },
   { q: "Can I customize what is included?", a: "Yes. You pick the pieces you need. We help you decide what comes first based on your goals and budget." },
   { q: "Do you offer different package levels?", a: "Yes. We can build a package at any budget, from a starter kit (business cards, signage, apparel) to a full overhaul of everything with your name on it. We'll tell you what makes sense." },
-  { q: "How much can I save with a full rebrand kit?", a: "Bundling through our network typically saves 15–30% compared to buying each piece separately. On a $10,000+ rebrand, that can mean $1,500–$3,000+ back in your pocket, with work done by partners we trust." },
+  { q: "How much can I save with a full rebrand kit?", a: "Bundling through our network usually costs less than buying each piece on its own. You get volume pricing, one quote and work done by partners we trust." },
   { q: "Do you help with installation and rollout?", a: "Yes. We coordinate the whole rollout: wrap install dates, apparel delivery, sign placement. You get one point of contact for all of it." },
   { q: "Can I phase the rebrand over time?", a: "Yes. Most businesses start with the big-impact items (vehicle wraps, business cards, website) and add the rest over weeks or months. We'll lay out a plan that fits your cash flow." },
   { q: "Do you offer design services?", a: "Yes. Our design team handles everything from cleaning up a logo to building a full visual identity. Design is included in your rebrand quote, and we revise until you're happy." },
@@ -118,7 +118,7 @@ const FullRebrandKits = () => {
             Use one shop for cards, another for shirts and another for your website, and you get three shades of your color, mismatched fonts and three vendors to chase. A coordinated kit fixes that. Your truck, your card and your website all look like the same company.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            It also saves money. Our Central Ohio partners give us volume pricing, and we pass it to you. One contact, one timeline, one quote with every cost shown. Typically 15–30% less than buying everything separately.
+            It also saves money. Our Central Ohio partners give us volume pricing, and we pass it to you. One contact, one timeline, one quote with every cost shown.
           </p>
         </motion.div>
       </div>
@@ -172,7 +172,7 @@ const FullRebrandKits = () => {
             {[
               { label: "Fees shown up front", desc: "Every cost in the quote. No surprises." },
               { label: "One point of contact", desc: "We manage every vendor and every deadline." },
-              { label: "15–30% bundle savings", desc: "Volume pricing from our network, passed to you." },
+              { label: "Bundle pricing", desc: "Volume pricing from our network, passed to you." },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center text-center p-6 rounded-2xl bg-muted/50">
                 <CheckCircle className="w-8 h-8 text-primary mb-3" />

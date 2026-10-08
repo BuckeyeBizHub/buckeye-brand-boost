@@ -113,7 +113,7 @@ const LocalSeo = () => {
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why local SEO matters for your business</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            97% of consumers search online to find local businesses, and 46% of all Google searches are local. Someone in Columbus searches "HVAC repair near me." A homeowner in Cleveland looks up "best roofer near me." The businesses at the top of Google get most of the clicks, calls and customers. If you're not there, buyers can't see you.
+            Most people search online when they need a local business. Someone in Columbus searches "HVAC repair near me." A homeowner in Cleveland looks up "best roofer near me." The businesses at the top of Google get most of the clicks, calls and customers. If you're not there, buyers can't see you.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             For a service business, local SEO is one of the best uses of a marketing dollar. Paid ads stop the day you stop paying. Local SEO keeps building. The longer you stay with it, the stronger your spot and the harder it is for competitors to catch you. It's how local businesses get found now.

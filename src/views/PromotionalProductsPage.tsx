@@ -187,7 +187,7 @@ const faqItems = [
   { q: "What file formats do you accept?", a: "Vector files (AI, EPS, PDF) work best. High-res PNG and JPEG (300+ DPI) work too. Only have a low-res file? We can help you recreate it." },
   { q: "Do you offer rush options?", a: "Yes. Many products can be rushed. Depending on the item, we can often deliver in 5–7 business days. Rush fees may apply, and you'll see them up front." },
   { q: "Can I order different items in one order?", a: "Yes. Lots of clients bundle drinkware, apparel and office items in one order. We coordinate it all and look for volume discounts across the whole package." },
-  { q: "How do I choose the right product for my audience?", a: "That's our job. Tell us about your event, your audience and your goals. We'll recommend products based on our experience with hundreds of Ohio businesses. We pick items that get used, not tossed in a drawer." },
+  { q: "How do I choose the right product for my audience?", a: "That's our job. Tell us about your event, your audience and your goals. We'll recommend products that fit. We pick items that get used, not tossed in a drawer." },
   { q: "Do you help with design?", a: "Yes. Design advice is free, and we'll get your logo and artwork ready for any product. Need a brand-new design? Our design team can do it." },
   { q: "What is the best way to maximize ROI with promo products?", a: "Pick items your audience will use every day (drinkware, tech, apparel). Keep your logo clean and easy to see. Match the product to the occasion. A well-chosen $5 item can get more eyeballs than a $500 digital ad." },
   { q: "Can I get samples before placing a large order?", a: "Yes. We can get unbranded samples of most products so you can feel the quality before a big run. For some items, we can get a branded sample before production too." },
@@ -319,7 +319,7 @@ const PromotionalProductsPage = () => {
               Our most popular <span className="text-primary">promo products</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Everyday items to high-end executive gifts. We buy at wholesale through our SAGE and PPAI memberships.
+              Everyday items to high-end executive gifts. We buy at wholesale through 4,300+ vetted suppliers.
             </p>
           </motion.div>
 
@@ -723,7 +723,7 @@ const PromotionalProductsPage = () => {
       <section className="py-8 bg-muted/50 border-t border-border/50">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm font-bold text-muted-foreground tracking-wide">
-            {["24-hour quotes", "Every cost shown", "SAGE and PPAI members", "Ohio owned and operated"].map((item) => (
+            {["24-hour quotes", "Every cost shown", "4,300+ vetted suppliers", "Ohio owned and operated"].map((item) => (
               <span key={item} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
                 {item}

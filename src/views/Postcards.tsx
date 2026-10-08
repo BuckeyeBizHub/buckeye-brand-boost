@@ -89,7 +89,7 @@ const Postcards = () => {
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why postcards still work</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">A postcard lands in your customer's hand. An email lands in a spam folder. Studies show direct mail gets a 4.4% response rate. Email gets 0.12%. If you run an HVAC company, a real estate business, a restaurant or a dental office, postcards fill your schedule and bring people in the door.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">A postcard lands in your customer's hand. An email lands in a spam folder. Mail gets read. Email gets skipped. If you run an HVAC company, a real estate business, a restaurant or a dental office, postcards fill your schedule and bring people in the door.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">Emails get deleted. Posts get scrolled past. A postcard sits on the kitchen counter for days. Put a good offer on a clean design and it turns lookers into buyers. And it's one of the cheapest print tools you can buy.</p>
           </motion.div>
         </div>

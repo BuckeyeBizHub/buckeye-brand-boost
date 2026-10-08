@@ -228,17 +228,6 @@ const Construction = () => {
         </div>
       </section>
 
-      {/* Professional Courtesy Banner */}
-      <section className="bg-primary/10 border-b border-primary/20 py-4">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-medium text-primary">
-            Professional courtesy for Ohio businesses:{" "}
-            <span className="font-semibold">20% off your first order</span>{" "}
-            on top of wholesale pricing. No commitment.
-          </p>
-        </div>
-      </section>
-
       {/* Section 1: Why construction companies choose us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
@@ -300,7 +289,7 @@ const Construction = () => {
                 <span className="text-primary">on a job site</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've helped build <span className="font-bold text-foreground">3 businesses</span> here in Central Ohio. In the last 20 months, I helped a local vehicle wrap company <span className="font-bold text-foreground">double their fleet branding division's revenue</span>. I worked directly with contractors on fleet graphics, wraps and crew gear that hold up on job sites.
+                I co-founded BeerTubes and grew it from <span className="font-bold text-foreground">$79K to $4.5M</span>. Then I built a brewery and restaurant group to <span className="font-bold text-foreground">100+ employees</span>. I've worked directly with contractors on fleet graphics, wraps and crew gear that hold up on job sites.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
                 I've also spent <span className="font-bold text-foreground">15+ years</span> helping my wife, Dr. Kerry Stein, run Marion Endodontics in Marion, Ohio. I handle procurement, branding and materials for a busy practice. I know what it means to need things done right, on time, by someone who gets your world.
@@ -326,7 +315,7 @@ const Construction = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
-                <p className="text-primary-foreground font-bold text-lg">Real fleet branding</p>
+                <p className="text-primary-foreground font-bold text-lg">Fleet branding example</p>
                 <p className="text-primary-foreground/70 text-sm">A look that helps win the bid before you say a word</p>
               </div>
             </motion.div>

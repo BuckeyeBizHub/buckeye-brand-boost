@@ -71,7 +71,7 @@ const categories: FAQCategory[] = [
     items: [
       {
         q: "Do you have minimum order requirements?",
-        a: "It depends on the product. Business cards start at 100. Banners and signs have no minimum. Most promo products start at 12–25 pieces. Screen-printed apparel usually starts at 12 pieces, and embroidery can start at 1. We work with solo owners and big companies alike.",
+        a: "It depends on the product. Business cards start at 100. Banners and signs have no minimum. Most promo products start at 12–25 pieces. Screen-printed apparel usually starts at 12 pieces. For embroidery, small runs are fine. Ask and we'll tell you the minimum for your item. We work with solo owners and big companies alike.",
       },
       {
         q: "What are your pricing and wholesale rates?",
@@ -183,7 +183,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "Do you have minimum quantities for embroidered apparel?",
-        a: "Most embroidery orders have a 12-piece minimum so setup makes sense. Below 12, the price per piece goes up a lot.",
+        a: "Small runs are fine. Ask and we'll tell you the minimum for your item.",
       },
       {
         q: "Can I see my logo before you embroider 50 shirts?",

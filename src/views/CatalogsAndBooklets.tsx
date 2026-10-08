@@ -97,7 +97,7 @@ const CatalogsAndBooklets = () => {
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-8 text-center">Why Printed Catalogs Still Drive Sales</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Websites are great. A printed catalog still sells. Research shows customers who get a printed catalog spend 28% more than those who only browse online. A catalog puts your whole line in the customer's hands. A website can't do that.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Websites are great. A printed catalog still sells. A catalog puts your whole line in the customer's hands. A website can't do that.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">Manufacturer with industrial parts, retailer with seasonal lines, distributor with thousands of SKUs: a good catalog sits on desks, workbenches and coffee tables for months.</p>
           </motion.div>
         </div>

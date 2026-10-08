@@ -182,13 +182,13 @@ const faqItems = [
   { q: "What file formats do you accept?", a: "Print-ready PDF, AI, EPS and PSD at 300 DPI with 0.125\" bleed. We can also get your artwork ready at no extra charge." },
   { q: "What quantities can I order?", a: "From 250 business cards up to 100,000+ for big campaigns. The more you order, the less each piece costs." },
   { q: "Can you help with design?", a: "Yes. Free design help on every order, from a new design to small tweaks to getting your files print-ready." },
-  { q: "How many brochures should I order?", a: "At least 500 for the best per-piece price. We can do runs from 250 to 100,000+. Our wholesale pricing saves you 30–50% vs. most competitors." },
+  { q: "How many brochures should I order?", a: "At least 500 for the best per-piece price. We can do runs from 250 to 100,000+. Wholesale pricing keeps the per-piece cost down." },
   { q: "Can I get samples first?", a: "Yes. We send paper samples so you can feel the weight and texture. On big orders, we can get you a printed proof before the full run." },
 ];
 
 const trustPoints = [
   { icon: Shield, title: "Quality, guaranteed", desc: "We source from 4,300+ suppliers to find the best materials and print quality." },
-  { icon: Eye, title: "Every cost shown", desc: "See the actual supplier cost on every project. No hidden markups. No games." },
+  { icon: Eye, title: "Every cost shown", desc: "Every fee up front. No hidden markups." },
   { icon: Award, title: "Wholesale pricing", desc: "Wholesale pricing passed straight to you, with a small fee on top that you can see." },
   { icon: Heart, title: "Small business people", desc: "David Stein co-founded Buckeye Biz Hub because Ohio businesses shouldn't overpay for good branding." },
 ];
@@ -267,7 +267,7 @@ const BusinessPrinting = () => {
             <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
               <p>David Stein has over 25 years in business. He knows what it takes to grow a company. He also knows good printed materials shouldn't cost you a fortune.</p>
               <p>We have wholesale accounts with over <span className="text-primary font-bold">4,300 printing and product suppliers</span>. That gives us options. We find the best materials at the best price.</p>
-              <p>We focus on two things: <span className="text-primary font-bold">top quality</span> and <span className="text-primary font-bold">the best price</span>. Want to see what we pay? We'll show you.</p>
+              <p>We focus on two things: <span className="text-primary font-bold">top quality</span> and <span className="text-primary font-bold">the best price</span>.</p>
             </div>
           </motion.div>
 
