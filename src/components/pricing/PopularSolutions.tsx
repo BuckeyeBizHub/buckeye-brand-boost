@@ -14,9 +14,9 @@ const solutions: { image: string; title: string; price: string | null; popular?:
     title: "Vehicle Wraps & Fleet Branding",
     price: null,
     bullets: [
-      "Full-color wraps & partial wraps",
+      "Full and partial wraps",
       "Magnetic signs & vehicle lettering",
-      "Fleet consistency across all vehicles",
+      "Every truck in the fleet matches",
       "All fees shown upfront",
     ],
   },
@@ -28,8 +28,8 @@ const solutions: { image: string; title: string; price: string | null; popular?:
     bullets: [
       "Custom polos, hoodies & tees",
       "Drinkware, hats & embroidery",
-      "Promotional giveaways & merch",
-      "Transparent pricing, no surprises",
+      "Giveaways & merch",
+      "Every fee up front, no surprises",
     ],
   },
   {
@@ -54,8 +54,8 @@ const solutions: { image: string; title: string; price: string | null; popular?:
       "Website creation & design",
       "Google Business Profile optimization",
       "SEO to boost your online visibility",
-      "Everything bundled with big savings",
-      "100% transparent – nothing hidden",
+      "Bundled together to save you money",
+      "Every cost up front. Nothing hidden",
     ],
   },
 ];
@@ -74,12 +74,11 @@ const PopularSolutions = () => (
           <span className="text-primary">Starting Prices</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Every quote includes full pricing transparency — all fees disclosed up
-          front so you know exactly what you're paying.
+          Every quote shows every fee up front, so you know exactly what you're paying.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
         {solutions.map((sol, i) => (
           <motion.div
             key={sol.title}
@@ -88,13 +87,13 @@ const PopularSolutions = () => (
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className={`relative bg-card rounded-2xl overflow-hidden border-2 shadow-lg hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1 flex flex-col ${
-              sol.popular
-                ? "border-primary ring-2 ring-primary/20 scale-[1.02]"
-                : "border-border"
-            }`}
+ sol.popular
+ ? "border-primary ring-2 ring-primary/20 scale-[1.02]"
+ : "border-border"
+ }`}
           >
             {sol.popular && (
-              <span className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg">
+              <span className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
                 Most Popular
               </span>
             )}
@@ -120,7 +119,7 @@ const PopularSolutions = () => (
 
               {sol.price && (
                 <div className="mb-4">
-                  <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                  <span className="text-xs font-bold text-muted-foreground ">
                     From
                   </span>
                   <p className="text-3xl font-black text-primary">{sol.price}</p>

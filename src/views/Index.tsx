@@ -1,137 +1,386 @@
-"use client";
+import { Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ValuePropsStrip from "@/components/ValuePropsStrip";
-import IndustryStrip from "@/components/IndustryStrip";
-import ServicesSection from "@/components/ServicesSection";
-import ConciergeModelSection from "@/components/ConciergeModelSection";
-import RealResultsSection from "@/components/RealResultsSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import ProductCarousel from "@/components/ProductCarousel";
-import ElevateCtaSection from "@/components/ElevateCtaSection";
-import LatestBlogSection from "@/components/LatestBlogSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
-import { motion } from "framer-motion";
+import CTASection from "@/components/CTASection";
 import { Link } from "@/lib/compat/router";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import type { BlogPostSummary } from "@/lib/blog-utils";
 
-/**
- * Subtle gradient divider — replaces hard section breaks with a soft,
- * almost imperceptible transition that keeps the page flowing.
- */
-const FlowDivider = () => (
-  <div aria-hidden className="relative h-px max-w-6xl mx-auto">
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-foreground/[0.08] to-transparent" />
-  </div>
+const img = {
+  fleet: "/assets/branded-vehicle-fleet.jpg",
+  boxTruck: "/assets/lawncare-truck-wrap.jpg",
+  doorHanger: "/assets/door-hangers-hero.jpg",
+  gear: "/assets/product-collage-hero.jpg",
+  david: "/assets/david-stein-headshot.jpg",
+};
+
+// The four claims David confirmed. Nothing else gets stated as fact.
+const promises = [
+  { term: "Free quotes", detail: "within 24 hours" },
+  { term: "Wholesale pricing", detail: "through 4,300+ vetted suppliers" },
+  { term: "100% guarantee", detail: "not happy, we make it right" },
+  { term: "5-star", detail: "rating on Google" },
+];
+
+const steps = [
+  {
+    title: "Tell me what you need.",
+    body: "Call, text or send the quote form. Logo files, a vehicle list, quantities, a deadline. Whatever you have is enough to start.",
+  },
+  {
+    title: "I match it to the right shop.",
+    body: "I work with a short list of trusted wrap shops, independent installers and print vendors. Each job goes to the one that does that work best.",
+  },
+  {
+    title: "You get a clear quote in 24 hours.",
+    body: "Wholesale rates, one price, no surprises. Say yes and I schedule it.",
+  },
+  {
+    title: "I check it before you see it.",
+    body: "Proofs, install dates, delivery. I stay on it until it's done right.",
+  },
+];
+
+const vehicleLinks = [
+  { label: "Fleet wraps", href: "/fleet-wraps", note: "Matching graphics across every truck, van and trailer." },
+  { label: "Vehicle wraps", href: "/vehicle-wraps", note: "Full and partial wraps for work vehicles." },
+  { label: "Decals and lettering", href: "/vehicle-decals", note: "Door logos, phone numbers, DOT numbers." },
+];
+
+const printLinks = [
+  { label: "Business cards", href: "/business-cards-printing", note: "Hand one out at every estimate." },
+  { label: "Door hangers", href: "/door-hangers", note: "Work the street after a job." },
+  { label: "Yard signs", href: "/yard-signs-and-signage", note: "Put your name in front of the job site." },
+  { label: "Postcards and direct mail", href: "/postcards", note: "Reach every house on the route." },
+  { label: "Brochures and folders", href: "/business-printing", note: "Leave something behind after the pitch." },
+  { label: "Banners and flags", href: "/banners-and-flags", note: "Grand openings, events, the shop front." },
+  { label: "Large format", href: "/large-format-printing", note: "Wall graphics, window graphics, backdrops." },
+  { label: "Decals and stickers", href: "/decals-and-stickers", note: "Hard hats, toolboxes, windows, products." },
+];
+
+const gearLinks = [
+  { label: "Embroidered apparel", href: "/embroidered-apparel" },
+  { label: "Promotional products", href: "/promotional-products" },
+  { label: "Trade show displays", href: "/trade-show-displays" },
+  { label: "Full rebrand kits", href: "/full-rebrand-kits" },
+];
+
+const industries = [
+  { label: "Roofing contractors", href: "/roofing", note: "Truck wraps, yard signs, door hangers and crew shirts for storm season." },
+  { label: "Construction and GCs", href: "/construction", note: "Jobsite banners, vehicle graphics and workwear that holds up." },
+  { label: "Lawn care and landscaping", href: "/lawn-care-landscaping", note: "Trailer wraps, crew shirts and door hangers for the spring rush." },
+  { label: "Dental practices", href: "/dental", note: "Scrubs, referral gifts, office signage and printed materials." },
+];
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+
+/** A ruled list row: name on the left, what it's for on the right. */
+const IndexRow = ({ label, href, note }: { label: string; href: string; note: string }) => (
+  <li className="border-t border-border">
+    <Link
+      to={href}
+      className="group grid grid-cols-1 gap-1 py-4 sm:grid-cols-[minmax(0,15rem)_1fr] sm:gap-6"
+    >
+      <span className="font-display text-lg font-bold text-foreground transition-colors group-hover:text-primary">
+        {label}
+      </span>
+      <span className="text-[0.975rem] text-muted-foreground">{note}</span>
+    </Link>
+  </li>
 );
 
-const Index = () => (
-  <div className="min-h-screen bg-gradient-to-b from-background via-ohio-grey-light/15 to-background">
-    <SEOHead
-      title="Buckeye Biz Hub | Columbus Ohio Branding Concierge, Printing & Promotional Products"
-      description="Columbus Ohio's branding concierge — printing, promotional products, apparel, fleet branding. Built by a 3-time founder. Free 24-hour quotes."
-      keywords={["Columbus Ohio printing", "vehicle wraps Columbus Ohio", "fleet wraps Columbus Ohio", "promotional products Columbus Ohio", "branding concierge Columbus", "business printing Columbus", "embroidered apparel Ohio", "banners Columbus Ohio"]}
-      canonicalUrl="https://www.buckeyebizhub.com"
-      ogImage="https://www.buckeyebizhub.com/og-image.webp"
-      ogType="website"
-    />
+const Index = ({ latestPosts = [] }: { latestPosts?: BlogPostSummary[] }) => (
+  <div className="min-h-screen bg-background">
     <Navbar />
-    <HeroSection />
-    <IndustryStrip />
-    <ValuePropsStrip />
-    <FlowDivider />
-    {/* Centerpiece */}
-    <ServicesSection />
-    <FlowDivider />
-    <ConciergeModelSection />
-    <FlowDivider />
 
-    {/* Built by an Operator — credibility before proof */}
-    <section className="py-24 lg:py-28 bg-ohio-cream">
-      <div className="container max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-            Why Buckeye Biz Hub Exists
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-            This Isn't Just Another Print Shop. It's Built by{" "}
-            <span className="text-primary">an Operator</span> Who's Been Where You Are.
+    {/* Hero: the claim, the phone, the picture. */}
+    <section className="relative overflow-hidden border-b border-seam">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 pb-16 pt-28 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-36">
+        <div>
+          <p className="mb-6 text-[0.95rem] font-medium text-fog">Columbus and Central Ohio</p>
+          <h1 className="font-display text-[clamp(2.4rem,4.9vw,4.6rem)] font-extrabold text-stock">
+            <span className="block whitespace-nowrap">Wrap the fleet.</span>
+            <span className="block whitespace-nowrap">Print the rest.</span>
+            <span className="block whitespace-nowrap">One call.</span>
+          </h1>
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-stock/80 sm:text-xl">
+            Buckeye Biz Hub handles fleet wraps, printing and branded gear for Central Ohio businesses. You tell David what
+            you need. He finds the right shop, gets you wholesale pricing and stays on it until it&apos;s done right.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-ohio-red-light"
+            >
+              Get a free quote
+            </Link>
+            <a
+              href="tel:+16145613358"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-seam px-7 py-4 text-base font-semibold text-stock transition-colors hover:border-fog"
+            >
+              <Phone className="h-4 w-4" aria-hidden />
+              (614) 561-3358
+            </a>
+          </div>
+        </div>
+
+        <figure className="mx-5 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.fleet}
+              alt="Three white work vans with matching Buckeye Biz Hub logos on the doors"
+              width={1168}
+              height={784}
+              fetchPriority="high"
+              className="block aspect-[3/2] w-full rounded-sm object-cover"
+            />
+          </div>
+          <figcaption className="mt-8 text-sm text-fog">One logo. Every van. Matching.</figcaption>
+        </figure>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <dl className="grid grid-cols-2 gap-px border-t border-seam bg-seam lg:grid-cols-4">
+          {promises.map((p) => (
+            <div key={p.term} className="bg-background py-6 pr-4 [&:nth-child(even)]:pl-5 lg:[&:not(:first-child)]:pl-6">
+              <dt className="font-display text-lg font-bold text-stock">{p.term}</dt>
+              <dd className="mt-1 text-[0.95rem] text-fog">{p.detail}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    {/* How it works: a real sequence, so it gets numbers. */}
+    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+        <div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
+            You make one call. I handle the rest.
           </h2>
-          <div className="space-y-5 text-lg text-muted-foreground leading-relaxed mb-10">
-            <p>
-              Buckeye Biz Hub was founded by David Stein — a third-generation Ohio operator and three-time business founder. Before launching Buckeye Biz Hub, David built and sold BeerTubes — a patented product company that placed in the on-premise catalogs of InBev, Anheuser-Busch, MillerCoors, and Constellation Brands. He also founded a multi-concept restaurant group and ran one of Columbus's largest independent automotive service businesses.
-            </p>
-            <p>
-              That operating experience changes everything about how Buckeye Biz Hub serves clients. The branding recommendations come from someone who's spent his own money on marketing. The strategic guidance comes from someone who's lived the problems other consultants only read about.
-            </p>
-            <p className="text-foreground font-semibold">
-              For business owners who want a partner who actually understands what it takes to build something — this is it.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <Link to="/about">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
-              >
-                Read David's Full Story
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </Link>
-            <Link to="/business-consulting">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary/40 text-foreground hover:bg-primary/10 font-bold text-base md:text-lg px-9 py-7 rounded-2xl"
-              >
-                Explore Consulting Services
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
+          <p className="mt-5 max-w-md text-lg text-fog">
+            No showroom, no runaround. I come to you, on site or by phone, and run the job from quote to install.
+          </p>
+        </div>
+        <ol className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
+          {steps.map((s, i) => (
+            <li key={s.title} className="border-t border-seam pt-5">
+              <span className="font-display text-sm font-bold text-primary" aria-hidden>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-3 font-display text-xl font-bold text-stock">{s.title}</h3>
+              <p className="mt-2 text-[0.975rem] leading-relaxed text-fog">{s.body}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
-    <FlowDivider />
 
-    <RealResultsSection />
-    <WhyChooseSection />
-    <FlowDivider />
-    <ProductCarousel />
-    <FlowDivider />
-    <LatestBlogSection />
-    <ElevateCtaSection />
-
-    {/* Free Cost Comparison — flowing, no hard box */}
-    <section className="relative py-24 lg:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/[0.04] via-background to-primary/[0.04]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-primary/[0.05] rounded-full blur-[180px]" />
-      <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <span className="inline-flex items-center gap-2 text-[0.7rem] font-extrabold text-primary tracking-[0.4em] uppercase mb-6 bg-primary/[0.08] px-5 py-2 rounded-full border border-primary/15">
-          No Commitment
-        </span>
-        <h3 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-foreground leading-[1.05] tracking-tight">
-          Free <span className="text-primary">Cost Comparison</span>
-        </h3>
-        <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-[1.7] font-light max-w-2xl mx-auto">
-          Tell us what you're currently spending on branded materials, uniforms, signage, or printed items and we'll show you exactly what we can provide for less — often with significant savings.
-        </p>
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center bg-primary text-primary-foreground font-black px-12 py-5 rounded-2xl hover:bg-ohio-red-light transition-all duration-300 shadow-[0_0_50px_hsl(0_85%_40%/0.35)] hover:shadow-[0_0_70px_hsl(0_85%_40%/0.55)] uppercase tracking-[0.15em] text-sm"
-        >
-          Request Your Free Comparison
-        </a>
+    {/* Vehicles: asphalt. */}
+    <section className="border-t border-seam bg-graphite/60">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:py-28">
+        <figure className="order-last mx-5 sm:mx-6 lg:order-first lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.boxTruck}
+              alt="Box truck wrapped with a lawn and tree company's graphics"
+              width={1200}
+              height={630}
+              loading="lazy"
+              className="block aspect-[1200/630] w-full rounded-sm object-cover"
+            />
+          </div>
+          <figcaption className="mt-8 text-sm text-fog">Example of a full box truck wrap.</figcaption>
+        </figure>
+        <div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
+            Your trucks are the best ad you already pay for.
+          </h2>
+          <div className="mt-6 max-w-xl space-y-4 text-lg leading-relaxed text-stock/80">
+            <p>
+              They&apos;re out all day. Parked at job sites, stuck in traffic, sitting in driveways on every street you
+              work. A clean, matching wrap turns each one into a sign people remember.
+            </p>
+            <p>
+              We focus on commercial fleets: work trucks, cargo vans, box trucks and trailers. One vehicle or twenty,
+              they come out matching.
+            </p>
+          </div>
+          <ul className="mt-8">
+            {vehicleLinks.map((l) => (
+              <IndexRow key={l.href} {...l} />
+            ))}
+          </ul>
+          <Link
+            to="/contact"
+            className="mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-ohio-red-light"
+          >
+            Quote my fleet
+          </Link>
+        </div>
       </div>
     </section>
+
+    {/* Print: paper stock. */}
+    <section className="paper">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+          <div>
+            <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold">
+              The printing that keeps the phone ringing.
+            </h2>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              Cards, door hangers, yard signs, postcards. The stuff you reorder all year. Send your file or let us design
+              it. You pay wholesale.
+            </p>
+            <figure className="mx-5 mt-14 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+                  src={img.doorHanger}
+                  alt="Printed door hanger on a front door handle"
+                  width={1920}
+                  height={800}
+                  loading="lazy"
+                  className="block aspect-[12/5] w-full rounded-sm object-cover"
+                />
+          </div>
+        </figure>
+          </div>
+          <ul className="self-start border-b border-border">
+            {printLinks.map((l) => (
+              <IndexRow key={l.href} {...l} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Branded gear. */}
+    <section className="border-b border-seam">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
+        <div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
+            Shirts, hats and giveaways people keep.
+          </h2>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-stock/80">
+            Crew shirts that survive the wash. Hats your customers actually wear. Trade show booths that pull people in.
+            If it can carry your logo, we can source it.
+          </p>
+          <ul className="mt-8 flex flex-wrap gap-3">
+            {gearLinks.map((l) => (
+              <li key={l.href}>
+                <Link
+                  to={l.href}
+                  className="inline-block rounded-md border border-seam px-4 py-2.5 text-[0.975rem] font-medium text-stock transition-colors hover:border-primary hover:text-primary"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <figure className="mx-5 sm:mx-6 lg:mx-0">
+          <div className="crop">
+            <img
+              src={img.gear}
+              alt="Red polos, hats, t-shirts and business cards with the Buckeye Biz Hub logo"
+              width={1168}
+              height={784}
+              loading="lazy"
+              className="block aspect-[3/2] w-full rounded-sm object-cover"
+            />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    {/* Industries. */}
+    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+        <div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">
+            We know your busy season.
+          </h2>
+          <p className="mt-5 max-w-md text-lg text-fog">
+            Most of our work is for the trades and for practices. Here&apos;s what each one usually needs.
+          </p>
+          <Link to="/industries" className="mt-6 inline-block font-semibold text-stock underline decoration-seam underline-offset-4 hover:text-primary">
+            All industries
+          </Link>
+        </div>
+        <ul className="border-b border-seam">
+          {industries.map((l) => (
+            <IndexRow key={l.href} {...l} />
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    {/* David. */}
+    <section className="border-y border-seam bg-graphite/60">
+      <div className="mx-auto grid grid-cols-1 max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28">
+        <img
+          src={img.david}
+          alt="David Stein"
+          width={1920}
+          height={1081}
+          loading="lazy"
+          className="block aspect-[4/3] w-full rounded-sm object-cover object-[60%_center]"
+        />
+        <div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold text-stock">You deal with me.</h2>
+          <div className="mt-6 max-w-xl space-y-4 text-lg leading-relaxed text-stock/80">
+            <p>
+              I&apos;m David Stein. I co-founded Buckeye Biz Hub and I run it day to day. Before this I co-founded
+              BeerTubes and grew it from $79K in year one to $4.5M before we sold it. Then I built a brewery and
+              restaurant group in Mount Vernon and Newark to more than 100 employees.
+            </p>
+            <p>
+              I&apos;ve bought a lot of printing and branding with my own money. I know what it costs you when it shows
+              up late or looks cheap. I run every job the way I&apos;d want mine run.
+            </p>
+          </div>
+          <Link to="/about" className="mt-8 inline-block font-semibold text-stock underline decoration-seam underline-offset-4 hover:text-primary">
+            Read my story
+          </Link>
+        </div>
+      </div>
+    </section>
+
+    {/* Blog. */}
+    {latestPosts.length > 0 && (
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="flex items-end justify-between gap-6">
+          <h2 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] font-extrabold text-stock">From the blog</h2>
+          <Link to="/blog" className="shrink-0 font-semibold text-stock underline decoration-seam underline-offset-4 hover:text-primary">
+            All posts
+          </Link>
+        </div>
+        <ul className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
+          {latestPosts.slice(0, 3).map((post) => (
+            <li key={post.slug}>
+              <Link to={`/blog/${post.slug}`} className="group block">
+                {post.featuredImage && (
+                  <img
+                    src={post.featuredImage}
+                    alt={post.featuredAlt || ""}
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    className="block aspect-[3/2] w-full rounded-sm object-cover"
+                  />
+                )}
+                <p className="mt-4 text-sm text-fog">{formatDate(post.date)}</p>
+                <h3 className="mt-1 font-display text-xl font-bold text-stock transition-colors group-hover:text-primary">
+                  {post.title}
+                </h3>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
     <CTASection />
     <Footer />
   </div>

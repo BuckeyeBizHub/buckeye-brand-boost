@@ -49,8 +49,8 @@ const IndustryCard = ({ industry, index }: IndustryCardProps) => (
 
       {/* Bullets */}
       <div className="mb-5">
-        <h4 className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary mb-3">
-          What We Provide
+        <h4 className="text-xs font-extrabold text-primary mb-3">
+          What we provide
         </h4>
         <ul className="space-y-2">
           {industry.bullets.map((b) => (

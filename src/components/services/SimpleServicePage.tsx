@@ -52,14 +52,14 @@ const SimpleServicePage = ({
 
       {/* Hero with H1 */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-b from-ohio-navy via-ohio-navy/95 to-background overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full hidden" />
         <div className="container relative max-w-5xl mx-auto px-6 text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/10 px-5 py-2 rounded-full border border-primary/30"
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-6 bg-primary/10 px-5 py-2 rounded-full border border-primary/30"
           >
-            Buckeye Biz Hub Services
+            Buckeye Biz Hub services
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ const SimpleServicePage = ({
       <section className="pb-16 lg:pb-20">
         <div className="container max-w-6xl mx-auto px-6">
           <h2 className="font-display text-3xl md:text-4xl font-black text-foreground text-center mb-10">
-            Real Work for Real Columbus Businesses
+            What it can look like
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {gallery.slice(0, 3).map((img, i) => (
@@ -123,7 +123,7 @@ const SimpleServicePage = ({
 
       {/* Pricing + Benefits */}
       <section className="pb-16 lg:pb-24">
-        <div className="container max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div className="container max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Starting From */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -132,15 +132,15 @@ const SimpleServicePage = ({
             className="bg-gradient-to-br from-primary to-ohio-red-light rounded-3xl p-8 md:p-10 text-primary-foreground shadow-xl flex flex-col justify-center"
           >
             <Tag className="w-8 h-8 mb-4 opacity-80" />
-            <p className="text-sm font-black uppercase tracking-[0.25em] opacity-80 mb-2">
-              Starting From
+            <p className="text-sm font-black opacity-80 mb-2">
+              Starting from
             </p>
             <p className="font-display text-5xl md:text-6xl font-black mb-2">{startingFrom}</p>
             {pricingNote && (
               <p className="text-base font-semibold opacity-90 mb-6">{pricingNote}</p>
             )}
             <p className="text-sm opacity-80 leading-relaxed">
-              True wholesale cost + a transparent management fee. No setup fees on most orders, no hidden surprises.
+              Wholesale cost plus a management fee you can see. No setup fees on most orders. No surprises.
             </p>
           </motion.div>
 
@@ -151,7 +151,7 @@ const SimpleServicePage = ({
             viewport={{ once: true }}
             className="bg-card border-2 border-border rounded-3xl p-8 md:p-10 shadow-md"
           >
-            <h3 className="font-display text-2xl font-black text-foreground mb-6">Key Benefits</h3>
+            <h3 className="font-display text-2xl font-black text-foreground mb-6">What you get</h3>
             <ul className="space-y-3">
               {benefits.map((b, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -168,9 +168,9 @@ const SimpleServicePage = ({
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_85%_40%/0.4)] uppercase tracking-wider group"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-12 py-7 rounded-2xl group"
             >
-              Get a Free Quote
+              Get a free quote
               <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

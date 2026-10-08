@@ -1,55 +1,27 @@
 "use client";
-import { useParams, Link } from "@/lib/compat/router";
-import { useQuery } from "@tanstack/react-query";
+import { Link } from "@/lib/compat/router";
 import { ArrowLeft, ArrowRight, Calendar, User, Phone } from "lucide-react";
 import { format } from "date-fns";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import SEOHead, { countWords, SITE_URL } from "@/components/SEOHead";
-import { fetchPost, fetchRelatedPosts, getFeaturedImage, getCategories, getAuthor, type WPPost } from "@/lib/wordpress";
+import { getExcerpt, type BlogPost as BlogPostData, type BlogPostSummary } from "@/lib/blog-utils";
 
-const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
-  const { slug } = useParams<{ slug: string }>();
+interface BlogPostProps {
+  /** Loaded from content/blog by the server page. */
+  post: BlogPostData | null;
+  related?: BlogPostSummary[];
+}
 
-  const { data: post, isLoading, error } = useQuery({
-    queryKey: ["wp-post", slug],
-    queryFn: () => fetchPost(slug!),
-    enabled: !!slug,
-    initialData: initialPost ?? undefined,
-  });
-
-  const { data: related = [] } = useQuery({
-    queryKey: ["wp-related", post?.id],
-    queryFn: () => fetchRelatedPosts(post!),
-    enabled: !!post,
-  });
-
-  const title = post ? post.title.rendered.replace(/<[^>]*>/g, "") : "Loading…";
-  const excerpt = post ? post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 155) : undefined;
-  const ogImage = post ? (getFeaturedImage(post) || undefined) : undefined;
+const BlogPost = ({ post, related = [] }: BlogPostProps) => {
+  const title = post ? post.title : "Post Not Found";
+  const excerpt = post ? getExcerpt(post, 155) : undefined;
+  const ogImage = post?.featuredImage ? `${SITE_URL}${post.featuredImage}` : undefined;
   const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : undefined;
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen">
-        <SEOHead title="Loading…" />
-        <Navbar />
-        <div className="pt-32 pb-20 container max-w-4xl">
-          <Skeleton className="h-10 w-3/4 mb-6" />
-          <Skeleton className="h-80 w-full mb-8 rounded-2xl" />
-          <Skeleton className="h-4 w-full mb-3" />
-          <Skeleton className="h-4 w-full mb-3" />
-          <Skeleton className="h-4 w-2/3" />
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (error || !post) {
+  if (!post) {
     return (
       <div className="min-h-screen">
         <SEOHead title="Post Not Found" noindex />
@@ -64,11 +36,11 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
     );
   }
 
-  const image = getFeaturedImage(post);
-  const categories = getCategories(post);
-  const author = getAuthor(post);
+  const image = post.featuredImage;
+  const categories = post.categories;
+  const author = post.author ? { name: post.author } : null;
   const date = format(new Date(post.date), "MMMM d, yyyy");
-  const wordCount = countWords(post.content.rendered);
+  const wordCount = countWords(post.content);
   const primaryCategory = categories[0];
 
   return (
@@ -92,23 +64,24 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         {image && <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(40px)" }} />}
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
         <div className="container relative max-w-4xl">
           <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-primary transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
           <div className="flex flex-wrap items-center gap-4 mb-6">
             {categories.map((c) => (
-              <span key={c.id} className="text-[0.65rem] font-extrabold text-primary-foreground tracking-[0.15em] uppercase bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
+              <span key={c.slug} className="text-[0.65rem] font-extrabold text-primary-foreground bg-primary/90 px-4 py-1.5 rounded-full">{c.name}</span>
             ))}
           </div>
           <h1
             className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-6"
             style={{ textShadow: "0 0 60px rgba(255,255,255,0.2), 0 4px 20px rgba(0,0,0,0.8)" }}
-            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-          />
+          >
+            {title}
+          </h1>
           <div className="flex items-center gap-6 text-primary-foreground/50 text-sm">
             <span className="flex items-center gap-2"><Calendar className="w-4 h-4" /> {date}</span>
             {author && <span className="flex items-center gap-2"><User className="w-4 h-4" /> {author.name}</span>}
@@ -121,7 +94,7 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
         <div className="container max-w-3xl">
           {image && (
             <img
-              src={image} alt={title}
+              src={image} alt={post.featuredAlt || title}
               className="w-full rounded-2xl mb-12 shadow-lg"
               loading="eager"
               fetchPriority="high"
@@ -130,14 +103,14 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
             />
           )}
           <div
-            className="prose prose-lg max-w-none
-              prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
-              prose-p:text-muted-foreground prose-p:leading-[1.9]
-              prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
-              prose-img:rounded-xl prose-img:shadow-md
-              prose-strong:text-foreground
-              prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            className="blog-body prose prose-lg prose-invert max-w-none
+ prose-headings:font-display prose-headings:font-black prose-headings:text-foreground
+ prose-p:text-muted-foreground prose-p:leading-[1.9]
+ prose-a:text-primary prose-a:font-semibold hover:prose-a:underline
+ prose-img:rounded-xl prose-img:shadow-md
+ prose-strong:text-foreground
+ prose-blockquote:border-l-primary prose-blockquote:bg-muted/30 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:px-6"
+            dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           {/* Service cross-links */}
@@ -161,7 +134,7 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(0,78%,28%)] text-center">
+          <div className="mt-12 p-10 rounded-3xl bg-gradient-to-br from-primary to-[hsl(216,14%,12%)] text-center">
             <h3 className="font-display text-3xl font-black text-primary-foreground mb-4">Need Help With Your Project?</h3>
             <p className="text-primary-foreground/70 mb-8 max-w-lg mx-auto">David Stein · Your Buckeye Branding Concierge is ready to help you bring your ideas to life.</p>
             <Link to="/contact">
@@ -178,8 +151,8 @@ const BlogPost = ({ initialPost }: { initialPost?: WPPost | null }) => {
         <section className="py-20 bg-ohio-grey-light">
           <div className="container">
             <h2 className="font-display text-3xl md:text-4xl font-black text-foreground mb-12 text-center">Related Articles</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {related.map((r) => <BlogCard key={r.id} post={r} />)}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {related.map((r) => <BlogCard key={r.slug} post={r} />)}
             </div>
           </div>
         </section>

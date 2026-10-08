@@ -12,7 +12,7 @@ const trustItems = [
 
 const IndustriesCTA = () => (
   <section className="py-28 lg:py-36 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(0,78%,32%)] to-ohio-navy" />
+    <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(216,14%,12%)] to-ohio-navy" />
     <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at 25% 50%, rgba(255,255,255,0.2) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)' }} />
 
     <div className="container relative text-center">
@@ -33,7 +33,7 @@ const IndustriesCTA = () => (
         transition={{ delay: 0.15 }}
         className="text-xl text-primary-foreground/60 mb-12 max-w-2xl mx-auto font-medium"
       >
-        Tailored printing, promotional products, and vehicle branding solutions for every Ohio industry. Let's build your brand together.
+        Printing, promo products and vehicle branding built around how your industry works. Let's get started.
       </motion.p>
 
       <motion.div
@@ -46,7 +46,7 @@ const IndustriesCTA = () => (
         <Link to="/contact">
           <Button
             size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group uppercase tracking-widest"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_16px_70px_rgba(255,255,255,0.2)] transition-all duration-400 group "
           >
             <Phone className="w-6 h-6 mr-2" />
             Get Your Quote in 24 Hours

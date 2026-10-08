@@ -1,5 +1,6 @@
 import { pageMetadata } from "@/lib/page-metadata";
-import Page from "@/views/Services";
+import { searchPosts } from "@/lib/blog";
+import Services from "@/views/Services";
 
 export const metadata = pageMetadata({
   title: "Services",
@@ -7,4 +8,6 @@ export const metadata = pageMetadata({
   path: "/services",
 });
 
-export default Page;
+export default function Page() {
+  return <Services relatedPosts={searchPosts("branding printing", 3)} />;
+}

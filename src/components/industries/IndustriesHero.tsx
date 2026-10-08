@@ -34,7 +34,7 @@ const IndustriesHero = () => (
         className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-primary-foreground leading-[0.92] mb-6"
       >
         Industries We{" "}
-        <span className="text-primary">Proudly Serve</span>
+        <span className="text-primary">Serve</span>
       </motion.h1>
 
       <motion.p
@@ -43,7 +43,7 @@ const IndustriesHero = () => (
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-xl md:text-2xl text-primary-foreground/70 max-w-3xl mx-auto mb-10 font-medium"
       >
-        From small businesses to large organizations across Columbus and Central Ohio, we provide custom printing, promotional products, and vehicle branding with concierge-level care.
+        Small shops to big organizations across Columbus and Central Ohio. Custom printing, promo products and vehicle branding, with one person looking after your job.
       </motion.p>
 
       {/* Badges */}
@@ -73,7 +73,7 @@ const IndustriesHero = () => (
         <Link to="/contact">
           <Button
             size="lg"
-            className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_85%_40%/0.4)] hover:shadow-[0_0_60px_hsl(0_85%_40%/0.6)] transition-all duration-300 group uppercase tracking-wider"
+            className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
           >
             Get Your Free Industry Quote in 24 Hours
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

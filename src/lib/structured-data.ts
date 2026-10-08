@@ -37,12 +37,10 @@ const ADDRESS = {
 
 const SOCIAL_PROFILES = [
   "https://www.facebook.com/BuckeyeBizHub",
-  "https://www.instagram.com/buckeyebizhub",
-  "https://www.pinterest.com/BuckeyeBizHub",
 ];
 
 /**
- * Shared LocalBusiness defaults — single source of truth for telephone, email,
+ * Shared LocalBusiness defaults: single source of truth for telephone, email,
  * geo coords, opening hours, social profiles, and price range. Pass to
  * `localBusinessSchema()` and override `name`, `description`, or `url` per page.
  */
@@ -246,8 +244,8 @@ const SERVICE_SLUGS = new Set([
   "door-hangers",
 ]);
 
-/** External blog (headless WordPress) URL */
-export const BLOG_URL = "https://buckeyebizhub.blog/";
+/** Blog index on this site (posts live in content/blog) */
+export const BLOG_URL = `${SITE_URL}/blog`;
 
 /** Auto-generate breadcrumbs from a URL path */
 export function breadcrumbFromPath(pathname: string): JsonLd {

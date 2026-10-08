@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Archivo } from "next/font/google";
 import Providers from "./providers";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -10,8 +10,9 @@ import MobileCTABar from "@/components/MobileCTABar";
 import { SITE_URL } from "@/lib/structured-data";
 import "@/index.css";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "600", "700", "800"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700", "900"], variable: "--font-playfair" });
+// One family, two widths: wide and heavy for headlines (truck-door lettering),
+// normal width for reading.
+const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
 
 const GA4_ID = "G-WY6SCF05ZZ";
 
@@ -54,14 +55,12 @@ const localBusiness = {
   ),
   sameAs: [
     "https://www.facebook.com/BuckeyeBizHub",
-    "https://www.instagram.com/buckeyebizhub",
-    "https://www.pinterest.com/BuckeyeBizHub",
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={archivo.variable}>
       <body>
         <script
           type="application/ld+json"

@@ -35,7 +35,7 @@ const lawncarePostcard = "/assets/lawncare-postcard.jpg";
 const lawncareYardSign = "/assets/lawncare-yard-sign.jpg";
 const lawncareTruckWrap = "/assets/lawncare-truck-wrap.jpg";
 const PHOTO_BASE = "/photos";
-// Reusing roofing/contractor photos as visual placeholders — same fleet/crew/sign categories apply to landscaping
+// Reusing roofing/contractor photos as visual placeholders: same fleet/crew/sign categories apply to landscaping
 const HERO = lawncareHero;
 const JOBSITE = `${PHOTO_BASE}/roofing-van-wrap-titan.jpg`;
 const STORY = `${PHOTO_BASE}/roofing-fleet-briggs.jpg`;
@@ -56,65 +56,65 @@ const galleryPhotos = [
 const products = [
   {
     icon: Truck,
-    title: "Vehicle Wraps & Fleet Graphics",
+    title: "Vehicle wraps and fleet graphics",
     description:
-      "Full wraps, partial wraps, and magnetic signs for trucks, trailers, and equipment that turn every mile into a neighborhood impression.",
+      "Full wraps, partial wraps and magnetic signs for trucks, trailers and equipment. Every mile puts your name in front of a neighborhood.",
     image: lawncareTruckWrap,
     imageAlt: "Full landscape management box truck wrap with green grass graphics, logo, phone number, and branded messaging",
   },
   {
     icon: Shirt,
-    title: "Crew T-Shirts, Polos & Safety Gear",
+    title: "Crew t-shirts, polos and safety gear",
     description:
-      "Embroidered polos, branded t-shirts, hoodies, and high-visibility safety vests that keep every crew member looking consistent and professional.",
+      "Embroidered polos, branded t-shirts, hoodies and hi-vis vests. Every crew member looks the same and looks sharp.",
     image: `${PHOTO_BASE}/roofing-apparel-titan.jpg`,
     imageAlt: "Branded landscaping crew polo shirt with embroidered logo",
   },
   {
     icon: Megaphone,
-    title: "Door Hangers",
+    title: "Door hangers",
     description:
-      "High-impact, weather-resistant door hangers that generate callbacks from the neighborhoods you're already working in.",
+      "Weather-resistant door hangers that get callbacks from the neighborhoods you already work in.",
     image: `${PHOTO_BASE}/roofing-door-hanger-knock.jpg`,
     imageAlt: "Lawn care door hanger with services and seasonal offers",
   },
   {
     icon: Leaf,
-    title: "Yard Signs & Property Signage",
+    title: "Yard signs and property signs",
     description:
-      "Bold, durable yard signs that advertise your work while you're doing it — turning every active job site into a lead magnet.",
+      "Bold, tough yard signs that advertise while you work. Every active job brings in the next lead.",
     image: lawncareYardSign,
     imageAlt: "Branded lawn care yard sign promoting fall clean up service staked in a residential lawn",
   },
   {
     icon: Mail,
-    title: "Seasonal Postcards & Direct Mail",
+    title: "Seasonal postcards and direct mail",
     description:
-      "Targeted neighborhood postcard campaigns timed for spring startup, fall cleanup, and snow removal season.",
+      "Neighborhood postcards timed for spring startup, fall cleanup and snow season.",
     image: lawncarePostcard,
     imageAlt: "Spring landscaping promotional postcard with seasonal offers and free estimate callouts",
   },
   {
     icon: CreditCard,
-    title: "Business Cards & Leave-Behinds",
+    title: "Business cards and leave-behinds",
     description:
-      "Professional business cards and branded door cards that make every crew interaction a referral opportunity.",
+      "Business cards and branded door cards. Every time your crew talks to someone, they can hand over a referral.",
     image: `${PHOTO_BASE}/roofing-business-cards-american.jpg`,
     imageAlt: "Branded landscaping company business cards with logo",
   },
   {
     icon: FileText,
-    title: "Carbonless Estimate & Job-Site Forms",
+    title: "Carbonless estimates and job-site forms",
     description:
-      "Branded, numbered estimate forms, work orders, and service agreements built for the field.",
+      "Branded, numbered estimate forms, work orders and service agreements built for the field.",
     image: `${PHOTO_BASE}/roofing-carbonless-form.jpg`,
     imageAlt: "Multi-part carbonless estimate forms for landscaping job sites",
   },
   {
     icon: Gift,
-    title: "Promotional Products & Client Gifts",
+    title: "Promo products and client gifts",
     description:
-      "Branded drinkware, koozies, hats, and seasonal gifts that keep your company name visible with property managers and commercial clients.",
+      "Branded drinkware, koozies, hats and seasonal gifts. Keep your name in front of property managers and commercial clients.",
     image: `${PHOTO_BASE}/roofing-qr-sticker-scan.jpg`,
     imageAlt: "Branded landscaping promotional products and client gifts",
   },
@@ -123,53 +123,53 @@ const products = [
 const faqs = [
   {
     q: "Do you work with both residential lawn care companies and large commercial landscaping operations?",
-    a: "Yes. We help solo operators and small residential lawn care companies with eye-catching door hangers, yard signs, and branded crew shirts that build local trust, and we support commercial landscaping contractors and multi-crew operations with full fleet wraps, embroidered uniforms, high-vis safety gear, carbonless estimate forms, and seasonal marketing programs.",
+    a: "Yes. Solo operators and small residential companies get door hangers, yard signs and crew shirts that build local trust. Commercial contractors and multi-crew companies get full fleet wraps, embroidered uniforms, hi-vis gear, carbonless estimate forms and seasonal marketing programs.",
   },
   {
     q: "How quickly can you turn around fleet wraps and apparel before the spring rush?",
-    a: "Most standard crew apparel and printed materials ship within 1–3 business days. Full vehicle wraps and larger custom apparel orders typically take 5–10 business days depending on complexity. We strongly recommend planning fleet graphics and uniform orders in late winter so your trucks and crews are ready when spring startup hits.",
+    a: "Most crew apparel and printed materials ship in 1–3 business days. Full wraps and bigger custom apparel orders usually take 5–10 business days, depending on the job. Plan fleet graphics and uniforms in late winter so you're ready when spring startup hits.",
   },
   {
     q: "Do you offer volume discounts for multi-crew operations?",
-    a: "Yes. We provide meaningful discounts for orders of 10+ crew polos or t-shirts, full fleet graphics packages, or larger quantities of door hangers and yard signs. Tell us your crew size and seasonal volume and we'll put together customized pricing.",
+    a: "Yes. Orders of 10+ crew polos or t-shirts, full fleet graphics packages and bigger runs of door hangers and yard signs get real discounts. Tell us your crew size and seasonal volume and we'll price it.",
   },
   {
     q: "Can we order just a few items first to test the quality?",
-    a: "Absolutely. Many landscaping companies start with a small test order — a batch of crew polos, a stack of door hangers, or a single truck wrap — before committing to larger seasonal quantities. We'd rather earn the bigger order than push it.",
+    a: "Yes. Plenty of landscaping companies start small with a few polos, a stack of door hangers or one truck wrap. Then they order for the season. We'd rather earn the bigger order than push it.",
   },
   {
     q: "Do you do graphics for trailers, mowers, and smaller equipment?",
-    a: "Yes. We produce decals, partial wraps, and lettering for enclosed and open trailers, zero-turn mowers, skid steers, and smaller equipment so every piece of gear on the job site reinforces your brand.",
+    a: "Yes. Decals, partial wraps and lettering for enclosed and open trailers, zero-turns, skid steers and smaller equipment. Every piece of gear on the job carries your name.",
   },
   {
     q: "Can you help us plan a full seasonal marketing program?",
-    a: "Yes. We help lawn care and landscaping companies build out spring startup, fall cleanup, and snow removal marketing programs — combining door hangers, postcards, yard signs, and crew apparel into one coordinated rollout instead of last-minute one-offs.",
+    a: "Yes. We help you plan spring startup, fall cleanup and snow removal marketing. Door hangers, postcards, yard signs and crew apparel go out as one plan, not last-minute one-offs.",
   },
   {
     q: "How does the free cost comparison work?",
-    a: "Send us a list or photos of what you're currently buying — uniforms, door hangers, yard signs, estimate forms, and so on — and we'll provide a side-by-side breakdown showing what we can deliver for the same or better quality, often with noticeable savings.",
+    a: "Send us a list or photos of what you buy now: uniforms, door hangers, yard signs, estimate forms. We'll send back a side-by-side showing what we can do at the same or better quality. Often for less.",
   },
   {
     q: "Will the materials hold up to mud, rain, and heavy field use?",
-    a: "Yes. We spec materials specifically for field conditions — UV-stable wrap films, weather-resistant coroplast and aluminum yard signs, durable polyester polos, and waterproof carbonless forms — so everything survives the season instead of falling apart by July.",
+    a: "Yes. We pick materials for field use: UV-stable wrap film, weather-resistant coroplast and aluminum yard signs, tough polyester polos and waterproof carbonless forms. It all lasts the season instead of falling apart by July.",
   },
 ];
 
 const audiences = [
-  "Residential Lawn Care Companies",
-  "Commercial Landscaping Contractors",
-  "Snow Removal & Seasonal Services",
-  "Tree Service & Arborists",
-  "Irrigation & Outdoor Lighting Companies",
-  "Property Maintenance & Multi-Crew Operations",
+  "Residential lawn care companies",
+  "Commercial landscaping contractors",
+  "Snow removal and seasonal services",
+  "Tree services and arborists",
+  "Irrigation and outdoor lighting companies",
+  "Property maintenance and multi-crew companies",
 ];
 
 const LawnCareLandscaping = () => {
   usePageSEO({
     title:
-      "Fleet Wraps, Crew Apparel & Marketing Materials for Ohio Lawn Care & Landscaping Companies",
+      "Fleet Wraps, Crew Apparel and Marketing for Ohio Lawn Care and Landscaping",
     description:
-      "Vehicle wraps, crew apparel, door hangers, and yard signs for Central Ohio lawn care companies. We shop top vendors for best pricing.",
+      "Vehicle wraps, crew apparel, door hangers and yard signs for Central Ohio lawn care companies. We shop top vendors so you get the best price.",
   });
 
   const faqJsonLd = {
@@ -207,15 +207,15 @@ const LawnCareLandscaping = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30 backdrop-blur-sm"
           >
-            <Leaf className="w-4 h-4" /> Ohio Lawn Care & Landscaping Companies
+            <Leaf className="w-4 h-4" /> Ohio lawn care and landscaping companies
           </motion.div>
           <h1
             className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.05] mb-6"
             style={{ textShadow: "0 2px 4px rgba(0,0,0,0.98), 0 4px 16px rgba(0,0,0,0.95), 0 8px 40px rgba(0,0,0,0.85), 0 0 80px rgba(0,0,0,0.7)" }}
           >
-            Every Truck on the Road Is a Billboard —{" "}
+            Every truck on the road is a billboard.{" "}
             <span
               className="text-primary text-glow-red inline-block"
               style={{
@@ -225,60 +225,49 @@ const LawnCareLandscaping = () => {
                 paintOrder: "stroke fill",
               }}
             >
-              Make Sure It's Working for You
+              Make it work for you.
             </span>
           </h1>
           <p
             className="text-lg md:text-xl text-primary-foreground font-medium leading-relaxed max-w-3xl mx-auto mb-10"
             style={{ textShadow: "0 2px 6px rgba(0,0,0,0.98), 0 4px 18px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7)" }}
           >
-            Fleet graphics, crew apparel, door hangers, yard signs, and seasonal marketing materials — for Ohio lawn care and landscaping companies that grow by being seen.
+            Fleet graphics, crew apparel, door hangers, yard signs and seasonal marketing for Ohio lawn care and landscaping companies. You grow by being seen.
           </p>
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+              className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
             >
-              Get Your Free Landscaping Branding Quote
+              Get a free landscaping branding quote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
       </section>
 
-      {/* Professional Courtesy Banner */}
-      <section className="bg-primary/10 border-b border-primary/20 py-4">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-medium text-primary">
-            Professional Courtesy for Ohio Businesses:{" "}
-            <span className="font-semibold">20% off your first order</span>{" "}
-            on our already wholesale pricing. No commitment required.
-          </p>
-        </div>
-      </section>
-
-      {/* Section 1 — Why Ohio Lawn Care Companies Choose Us */}
+      {/* Section 1: Why Ohio lawn care companies choose us */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Leaf className="w-4 h-4" /> Why Ohio Lawn Care Companies Choose Us
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+                <Leaf className="w-4 h-4" /> Why Ohio lawn care companies choose us
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-                Your Trucks Are in Every Neighborhood.{" "}
-                <span className="text-primary">We Make Sure They're Remembered.</span>
+                Your trucks are in every neighborhood.{" "}
+                <span className="text-primary">We make sure people remember them.</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                In lawn care and landscaping, your trucks spend all day driving through the neighborhoods where your next customers live. Every vehicle is a lead-generation opportunity — if it's branded right.
+                Your trucks spend all day in the neighborhoods where your next customers live. Every one can bring in leads, if it's branded right.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                We work with Central Ohio lawn care companies, landscaping crews, and property maintenance operations to make sure every truck, every crew member, and every door hanger tells the same consistent story about your company.
+                We work with Central Ohio lawn care companies, landscaping crews and property maintenance outfits. Every truck, crew member and door hanger should tell the same story about you.
               </p>
             </motion.div>
             <motion.div
@@ -286,11 +275,11 @@ const LawnCareLandscaping = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={lawncareTrailerWrap}
-                alt="Fully wrapped landscaping company trailer with full-color branding, services list, and contact info"
+                alt="Fully wrapped landscaping company trailer with full-color branding, services list and contact info"
                 className="w-full h-full object-cover aspect-[4/3]"
                 loading="lazy"
               />
@@ -299,10 +288,10 @@ const LawnCareLandscaping = () => {
         </div>
       </section>
 
-      {/* Section 2 — Our Story */}
+      {/* Section 2: Our story */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -310,24 +299,24 @@ const LawnCareLandscaping = () => {
               transition={{ duration: 0.6 }}
               className="lg:order-2"
             >
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-                <Award className="w-4 h-4" /> Our Story
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+                <Award className="w-4 h-4" /> Our story
               </span>
               <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-                We Know What It Takes to Turn Trucks and Crews Into a{" "}
-                <span className="text-primary">Marketing Machine</span>
+                We know how to turn trucks and crews into a{" "}
+                <span className="text-primary">marketing machine</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've started <span className="font-bold text-foreground">3 businesses</span> from the ground up here in Central Ohio. In the last 20 months, I helped a local vehicle wrap company <span className="font-bold text-foreground">double their fleet branding division's revenue</span> — working directly with contractors on fleet graphics, vehicle wraps, and branded crew gear that actually hold up on job sites.
+                I co-founded BeerTubes and grew it from <span className="font-bold text-foreground">$79K to $4.5M</span>. Then I built a brewery and restaurant group to <span className="font-bold text-foreground">100+ employees</span>. I've worked directly with contractors on fleet graphics, wraps and crew gear that hold up on job sites.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                I've also spent <span className="font-bold text-foreground">15+ years</span> helping my wife, Dr. Kerry Stein, run Marion Endodontics in Marion, Ohio — handling all the procurement, branding, and materials for a busy professional practice. That experience taught me what it means to need a partner who delivers on time, every time, without excuses.
+                I've also spent <span className="font-bold text-foreground">15+ years</span> helping my wife, Dr. Kerry Stein, run Marion Endodontics in Marion, Ohio. I handle procurement, branding and materials for a busy practice. I know what it means to need a partner who delivers on time, every time, no excuses.
               </p>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                At Buckeye Biz Hub, we bring that same inside knowledge to Ohio lawn care and landscaping companies. We know what holds up in the field and what doesn't.
+                We bring that to Ohio lawn care and landscaping companies. We know what holds up in the field and what doesn't.
               </p>
-              <p className="mt-6 text-sm font-bold text-primary uppercase tracking-wider">
-                — David Stein, Your Buckeye Branding Concierge
+              <p className="mt-6 text-sm font-bold text-primary ">
+                David Stein, co-founder, Buckeye Biz Hub
               </p>
             </motion.div>
             <motion.div
@@ -335,7 +324,7 @@ const LawnCareLandscaping = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+              className="lg:order-1 relative rounded-2xl overflow-hidden border-2 border-border "
             >
               <img
                 src={lawncareStoryVan}
@@ -344,15 +333,15 @@ const LawnCareLandscaping = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[hsl(0,0%,4%/0.95)] to-transparent">
-                <p className="text-primary-foreground font-bold text-lg">Real Fleet Branding</p>
-                <p className="text-primary-foreground/70 text-sm">The kind of look that wins the next neighborhood</p>
+                <p className="text-primary-foreground font-bold text-lg">Fleet branding example</p>
+                <p className="text-primary-foreground/70 text-sm">A look that wins the next neighborhood</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 — Products & Solutions */}
+      {/* Section 3: Products and solutions */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -361,19 +350,19 @@ const LawnCareLandscaping = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Sparkles className="w-4 h-4" /> Products & Solutions
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+              <Sparkles className="w-4 h-4" /> Products and solutions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Everything Your Crews, Fleet, and Marketing Need to{" "}
-              <span className="text-primary">Look Professional</span>
+              What your crews, fleet and marketing need to{" "}
+              <span className="text-primary">look professional</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From the first truck that pulls up to the last yard sign in the ground — we handle all of it.
+              The first truck that pulls up to the last yard sign in the ground. We handle all of it.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p, i) => (
               <motion.div
                 key={p.title}
@@ -404,7 +393,7 @@ const LawnCareLandscaping = () => {
         </div>
       </section>
 
-      {/* Real Landscaping Work Gallery */}
+      {/* Landscaping examples gallery */}
       <section className="py-20 lg:py-28 bg-ohio-grey-light">
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -413,14 +402,14 @@ const LawnCareLandscaping = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Sparkles className="w-4 h-4" /> Real Field Work
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+              <Sparkles className="w-4 h-4" /> Examples
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Examples of What We <span className="text-primary">Build for Crews on the Ground</span>
+              Examples of what we <span className="text-primary">build for crews on the ground</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Truck wraps, yard signs, door hangers, carbonless forms, and event banners — the exact mix Central Ohio landscaping crews use every season.
+              Truck wraps, yard signs, door hangers, carbonless forms and event banners. The mix Central Ohio landscaping crews use every season.
             </p>
           </motion.div>
 
@@ -443,7 +432,7 @@ const LawnCareLandscaping = () => {
                   />
                 </div>
                 <div className="absolute top-3 left-3 right-3 flex justify-start pointer-events-none">
-                  <span className="inline-block bg-primary text-primary-foreground text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg border border-primary-foreground/20">
+                  <span className="inline-block bg-primary text-primary-foreground text-[10px] md:text-xs font-black px-3 py-1.5 rounded-full shadow-lg border border-primary-foreground/20">
                     {photo.label}
                   </span>
                 </div>
@@ -453,7 +442,7 @@ const LawnCareLandscaping = () => {
         </div>
       </section>
 
-      {/* Section 4 — Who We Serve */}
+      {/* Section 4: Who we serve */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container max-w-5xl mx-auto">
           <motion.div
@@ -462,15 +451,15 @@ const LawnCareLandscaping = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <Users className="w-4 h-4" /> Who We Serve
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+              <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-6">
-              Built for Every Type of{" "}
-              <span className="text-primary">Ohio Landscaping Operation</span>
+              Built for every kind of{" "}
+              <span className="text-primary">Ohio landscaping company</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From solo residential operators to multi-crew commercial landscaping contractors and seasonal snow removal teams across Central Ohio.
+              Solo residential operators, multi-crew commercial contractors and snow removal teams across Central Ohio.
             </p>
           </motion.div>
 
@@ -478,7 +467,7 @@ const LawnCareLandscaping = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 gap-3"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
           >
             {audiences.map((item) => (
               <div
@@ -502,15 +491,15 @@ const LawnCareLandscaping = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-4">
-              <HelpCircle className="w-4 h-4" /> Frequently Asked Questions
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-4">
+              <HelpCircle className="w-4 h-4" /> Frequently asked questions
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Honest Answers for{" "}
-              <span className="text-primary">Lawn Care & Landscaping Companies</span>
+              Straight answers for{" "}
+              <span className="text-primary">lawn care and landscaping companies</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Real questions we hear from Central Ohio landscaping crews — answered the way we'd answer them at the job site.
+              Questions we hear from Central Ohio landscaping crews, answered like we would at the job site.
             </p>
           </motion.div>
 
@@ -545,16 +534,16 @@ const LawnCareLandscaping = () => {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="bg-card border border-border rounded-3xl p-10 shadow-sm">
             <h3 className="font-display text-3xl font-bold text-foreground mb-4">
-              Free Cost Comparison — No Commitment
+              Free cost comparison. No commitment.
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
-              Tell us what you're currently spending on branded materials, uniforms, signage, or printed items and we'll show you exactly what we can provide for less — often with significant savings.
+              Tell us what you spend now on branded materials, uniforms, signs or print. We'll show you what we can do for less.
             </p>
             <a
               href="/contact"
               className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-10 py-4 rounded-2xl hover:bg-ohio-red-light transition-colors"
             >
-              Request Your Free Comparison
+              Get your free comparison
             </a>
           </div>
         </div>
@@ -567,22 +556,22 @@ const LawnCareLandscaping = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center shadow-[0_20px_60px_hsl(0_80%_42%/0.15)]"
+            className="bg-gradient-to-br from-primary/[0.12] to-primary/[0.04] border-2 border-primary/40 rounded-3xl p-10 md:p-14 text-center "
           >
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground leading-tight mb-4">
-              Ready to Turn Every Truck and Crew Into a{" "}
-              <span className="text-primary">Lead-Generating Machine?</span>
+              Ready to turn every truck and crew into a{" "}
+              <span className="text-primary">lead machine?</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              We offer free 24-hour quotes and a no-obligation cost comparison showing exactly what our wholesale network can provide versus what you're currently paying.
+              Free quotes within 24 hours. A no-obligation cost comparison shows what our wholesale network can do next to what you pay now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl shadow-[0_0_40px_hsl(0_80%_42%/0.5)] hover:shadow-[0_0_60px_hsl(0_80%_42%/0.7)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
                 >
-                  Get Your Free Landscaping Branding Quote
+                  Get a free landscaping branding quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -590,9 +579,9 @@ const LawnCareLandscaping = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-primary/40 hover:border-primary text-foreground hover:bg-primary/5 font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group uppercase tracking-wider"
+                  className="border-2 border-primary/40 hover:border-primary text-foreground hover:bg-primary/5 font-black text-base md:text-lg px-10 py-7 rounded-xl transition-all duration-300 group "
                 >
-                  See All Industries We Serve
+                  See all industries we serve
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

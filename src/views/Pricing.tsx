@@ -4,8 +4,6 @@ import Footer from "@/components/Footer";
 import PricingHero from "@/components/pricing/PricingHero";
 import HowWeWork from "@/components/pricing/HowWeWork";
 import HowWePrice from "@/components/pricing/HowWePrice";
-import RealProjectExamples from "@/components/pricing/RealProjectExamples";
-import CustomerExamples from "@/components/pricing/CustomerExamples";
 import WhyOurPricingIsDifferent from "@/components/pricing/WhyOurPricingIsDifferent";
 import PricingComparison from "@/components/pricing/PricingComparison";
 import PricingCTA from "@/components/pricing/PricingCTA";
@@ -16,7 +14,7 @@ const Pricing = () => {
   usePageSEO({
     title: "Pricing",
     description:
-      "Transparent pricing with no hidden fees. Get fast, honest quotes for all your printing, vehicle wrap, banner, and branding needs in Central Ohio.",
+      "Every fee up front, no hidden costs. Fast, honest quotes on printing, vehicle wraps, banners and branding in Central Ohio.",
   });
 
   return (
@@ -25,8 +23,6 @@ const Pricing = () => {
       <PricingHero />
       <HowWeWork />
       <HowWePrice />
-      <RealProjectExamples />
-      <CustomerExamples />
       <WhyOurPricingIsDifferent />
       <PricingComparison />
       <PricingCTA />

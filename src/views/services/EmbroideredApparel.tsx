@@ -7,13 +7,13 @@ const EmbroideredApparel = () => (
   <SimpleServicePage
     service="Embroidered Apparel"
     metaTitle="Embroidered Apparel in Columbus, Ohio | Buckeye Biz Hub"
-    metaDescription="Custom embroidered apparel in Columbus, Ohio — polos, hats, jackets, and uniforms with crisp, durable embroidery from a trusted local Central Ohio supplier."
+    metaDescription="Custom embroidered apparel in Columbus, Ohio. Polos, hats, jackets and uniforms with crisp embroidery that lasts, from a trusted Central Ohio team."
     slug="/embroidered-apparel"
-    description={`Embroidered apparel is the easiest way to make any Columbus, Ohio team look professional, unified, and ready to work. A clean, embroidered logo on a polo, jacket, or hat tells your customers — before anyone says a word — that you take pride in what you do. Buckeye Biz Hub provides custom embroidered apparel in Columbus Ohio for everyone: roofing crews, dental and medical offices, restaurants, real estate teams, churches, breweries, schools, and corporate teams across Central Ohio.
+    description={`Embroidered apparel is the easiest way to make a Columbus, Ohio team look sharp and like one crew. A clean logo on a polo, jacket or hat tells customers you take pride in your work before anyone says a word. Buckeye Biz Hub handles custom embroidered apparel for roofing crews, dental and medical offices, restaurants, real estate teams, churches, breweries, schools and companies across Central Ohio.
 
-We embroider on premium garments from brands you actually recognize — Carhartt, Nike, Under Armour, Cutter & Buck, Port Authority, Richardson, and dozens more. Polos, button-downs, fleece, vests, hoodies, sweatshirts, jackets, performance tees, hats, beanies, scrubs, aprons, and bags. Every logo is digitized in-house by a trained operator who proofs every stitch direction, color, and density before production starts. Embroidery isn't just a sticker that gets washed off — done right, it lasts the life of the garment.
+We embroider on garments from brands you know: Carhartt, Nike, Under Armour, Cutter & Buck, Port Authority, Richardson and dozens more. Polos, button-downs, fleece, vests, hoodies, sweatshirts, jackets, performance tees, hats, beanies, scrubs, aprons and bags. Every logo is digitized by a trained operator who checks stitch direction, color and density before production starts. Done right, embroidery lasts as long as the shirt. A printed logo can wash off. Stitching doesn't.
 
-Our embroidery setup fee is included in the per-piece price (no surprise digitizing fees), with low minimums starting at just 1 piece for personalized names and 12 pieces for full crew orders. Most embroidered apparel in Columbus Ohio ships within 5–10 business days, with rush production available. Need uniforms for a new hire mid-season? We keep popular blanks in stock so we can turn small reorders fast. Wholesale-plus-management-fee pricing means you always see exactly what you're paying for.`}
+Digitizing is built into the per-piece price, so there are no surprise setup fees. Minimums are low: 1 piece for personalized names, 12 for crew orders. Most orders ship within 5–10 business days, with rush available. New hire mid-season? Popular blanks are kept in stock so small reorders turn fast. Wholesale cost plus a management fee means you always see what you're paying for.`}
     gallery={[
       { src: g1, alt: "Embroidered polos for a Columbus, Ohio team" },
       { src: g2, alt: "Custom embroidered hoodies and polos for a Central Ohio company" },
@@ -22,11 +22,11 @@ Our embroidery setup fee is included in the per-piece price (no surprise digitiz
     startingFrom="$24"
     pricingNote="per embroidered polo at quantity 12+"
     benefits={[
-      "Premium garments from Carhartt, Nike, Port Authority, and dozens more",
-      "Logo digitizing included — no surprise setup fees",
-      "Low minimums: 1 piece for names, 12 pieces for crew orders",
-      "Most orders ship in 5–10 business days from Columbus, Ohio",
-      "Wholesale pricing with one flat management fee — fully transparent",
+      "Garments from Carhartt, Nike, Port Authority and dozens more",
+      "Logo digitizing included. No surprise setup fees",
+      "Small runs are fine. Ask and we'll tell you the minimum for your item.",
+      "Most orders ship in 5–10 business days",
+      "Wholesale pricing plus one flat management fee, all shown up front",
     ]}
   />
 );

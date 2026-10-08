@@ -28,98 +28,99 @@ const menusImg = "/assets/menus-hero.jpg";
 const letterheadImg = "/assets/letterhead-hero.jpg";
 const largeFormatImg = "/assets/large-format-hero.jpg";
 import RelatedBlogPosts from "@/components/RelatedBlogPosts";
+import type { BlogPostSummary } from "@/lib/blog-utils";
 import { usePageSEO } from "@/hooks/usePageTitle";
 
 const services = [
   {
     image: businessCardsImg,
     title: "Business Cards & Stationery",
-    description: "Make a powerful first impression that lasts. Our premium business cards feature luxurious paper stocks, elegant gold foil stamping, spot UV finishes, and custom die-cuts — designed to make your brand feel professional, memorable, and high-end from the very first handshake.",
+    description: "Your card is your first impression. Thick stocks, gold foil, spot UV and custom die-cuts. People remember a good card after the handshake.",
     href: "/business-cards-printing",
   },
   {
     image: brochuresImg,
     title: "Brochures & Business Printing",
-    description: "Communicate your message with clarity, impact, and professionalism. We create vibrant, high-quality brochures, flyers, menus, and printed materials that capture attention, build trust, and help your Ohio business stand out in a crowded market.",
+    description: "Brochures, flyers, menus and more. Clear, sharp print that gets read and helps your Ohio business stand out.",
     href: "/business-printing",
   },
   {
     image: promoImg,
     title: "Promotional Products & Giveaways",
-    description: "Turn every interaction into a lasting brand impression. Our custom promotional products — from drinkware and apparel to tech gadgets and office items — keep your name top-of-mind long after the conversation ends, driving referrals and repeat business across Ohio.",
+    description: "Drinkware, apparel, tech gear and office items with your name on them. They keep you top of mind long after the conversation ends, and that brings referrals and repeat business.",
     href: "/promotional-products",
   },
   {
     image: apparelImg,
     title: "Branded Apparel & Uniforms",
-    description: "Build instant credibility and team unity with sharp, professional branded apparel. From embroidered polos and hoodies to jackets and safety vests, your entire staff will look consistent, proud, and ready to represent your Ohio business at the highest level.",
+    description: "Embroidered polos, hoodies, jackets and safety vests. Your whole crew looks like one team, and customers trust a crew that looks the part.",
     href: "/embroidered-apparel",
   },
   {
     image: yardSignsImg,
     title: "Yard Signs & Custom Signage",
-    description: "Get noticed where it matters most. Our bold, weather-resistant yard signs, banners, and job-site signage generate immediate attention, phone calls, and new customers for local businesses throughout Central Ohio.",
+    description: "Bold, weatherproof yard signs, banners and job-site signs. They get attention and make the phone ring for Central Ohio businesses.",
     href: "/yard-signs-and-signage",
   },
   {
     image: bannersImg,
     title: "Banners & Flags",
-    description: "Eye-catching custom banners, feather flags, retractable banners, and graduation banners that grab attention and drive traffic for grand openings, events, job sites, real estate, and celebrations. Perfect for making your message impossible to miss.",
+    description: "Custom banners, feather flags, retractables and graduation banners. For grand openings, events, job sites, real estate and celebrations. Hard to miss.",
     href: "/banners-and-flags",
   },
   {
     image: vehicleWrapImg,
     title: "Vehicle Wraps & Fleet Branding",
-    description: "Transform your fleet into powerful 24/7 mobile advertisements. Our custom vehicle wraps create thousands of daily impressions while protecting your vehicles and making your brand unforgettable on every Ohio road.",
+    description: "Turn your fleet into ads that run 24/7. A wrap gets seen thousands of times a day and protects the paint underneath.",
     href: "/vehicle-wraps",
   },
   {
     image: rebrandImg,
     title: "Full Rebrand Kits",
-    description: "Elevate your entire brand presence in one complete, coordinated package. We handle vehicle branding, signage, apparel, printing, promotional products, and digital assets to create a cohesive, professional image that helps your business compete — and win — at the highest level.",
+    description: "Your whole brand, redone in one coordinated package. Vehicles, signage, apparel, printing, promo products and digital assets, all matching, so you can compete with the big guys.",
     href: "/full-rebrand-kits",
   },
   {
     image: postcardsImg,
     title: "Postcards & Direct Mail",
-    description: "Reach targeted neighborhoods with premium postcards and EDDM direct mail campaigns. Multiple sizes, paper stocks, and finishes — plus we coordinate mailing so you just sit back and watch the leads come in.",
+    description: "Hit the neighborhoods you want with postcards and EDDM direct mail. Pick your size, stock and finish. We coordinate the mailing too.",
     href: "/postcards",
   },
   {
     image: catalogsImg,
     title: "Catalogs & Booklets",
-    description: "Professional saddle-stitched, perfect-bound, and wire-o bound catalogs and booklets that showcase your products beautifully. From 8-page brochures to 200-page catalogs — we handle design, printing, and delivery.",
+    description: "Saddle-stitched, perfect-bound and wire-o catalogs and booklets. From 8 pages to 200. We handle design, printing and delivery.",
     href: "/catalogs-and-booklets",
   },
   {
     image: foldersImg,
     title: "Presentation Folders",
-    description: "Custom pocket folders with foil stamping, spot UV, and embossing that make your proposals and sales materials look polished and professional. Close more deals with folders that impress.",
+    description: "Pocket folders with foil, spot UV and embossing. Your proposals look sharp, and sharp proposals close.",
     href: "/presentation-folders",
   },
   {
     image: menusImg,
     title: "Menus & Table Tents",
-    description: "Durable, vibrant, and professionally designed menus and table tents for restaurants, bars, and hospitality businesses. Laminated, wipeable, and built to withstand daily use.",
+    description: "Menus and table tents for restaurants, bars and cafes. Laminated, wipeable and built for daily use.",
     href: "/menus-and-table-tents",
   },
   {
     image: letterheadImg,
     title: "Letterhead & Envelopes",
-    description: "Professional letterhead and matching printed envelopes that elevate every letter, invoice, and proposal. Coordinated stationery sets with premium paper stocks and optional foil accents.",
+    description: "Letterhead and matching envelopes for every letter, invoice and proposal. Good paper, optional foil.",
     href: "/letterhead-and-envelopes",
   },
   {
     image: largeFormatImg,
     title: "Large Format Printing",
-    description: "Posters, wall graphics, floor graphics, retractable banners, trade show displays, and custom wallpaper — printed big, bold, and beautiful on premium substrates with UV-resistant inks.",
+    description: "Posters, wall and floor graphics, retractable banners, trade show displays and custom wallpaper. Printed big on quality materials with UV-resistant inks.",
     href: "/large-format-printing",
   },
 ];
 
-const Services = () => {
+const Services = ({ relatedPosts }: { relatedPosts?: BlogPostSummary[] }) => {
 
-    usePageSEO({ title: "Services", description: "Explore our full range of branding services including business cards, vehicle wraps, banners & flags, custom decals, promotional products, and more. Get your quote in 24 hours." });
+    usePageSEO({ title: "Services", description: "Business cards, vehicle wraps, banners, flags, decals, promo products and more for Ohio businesses. Get your quote in 24 hours." });
 
   return (
     <div className="min-h-screen">
@@ -136,7 +137,7 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-6 bg-primary/[0.08] px-6 py-2.5 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
               What We Offer
             </span>
@@ -144,17 +145,17 @@ const Services = () => {
               Our Full Service Lineup
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From business cards to vehicle wraps, postcards to large format printing — everything your Ohio business needs to stand out and grow.
+              Business cards to vehicle wraps, postcards to large format. Everything your Ohio business needs to get noticed.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => (
               <ServiceCard key={s.title} {...s} index={i} />
             ))}
           </div>
 
-          {/* Additional Services — available upon request, hidden from primary grid */}
+          {/* Additional services: available on request, hidden from primary grid */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +164,7 @@ const Services = () => {
             className="mt-20 pt-12 border-t border-border"
           >
             <div className="text-center max-w-2xl mx-auto">
-              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground tracking-[0.3em] uppercase mb-4 bg-muted px-5 py-2 rounded-full">
+              <span className="inline-flex items-center gap-2 text-xs font-extrabold text-muted-foreground mb-4 bg-muted px-5 py-2 rounded-full">
                 Additional Services
               </span>
               <h3 className="font-display text-2xl md:text-3xl font-black text-foreground mb-3">
@@ -178,7 +179,7 @@ const Services = () => {
                 <Link to="/local-seo" className="text-primary font-semibold hover:underline">
                   local SEO
                 </Link>{" "}
-                when it fits the project. Just ask David — happy to discuss whether it's the right fit for your business.
+                when it fits the project. Ask David. He'll tell you straight if it makes sense for you.
               </p>
             </div>
           </motion.div>
@@ -186,7 +187,7 @@ const Services = () => {
       </section>
 
       <ServiceDetailSections />
-      <RelatedBlogPosts heading="Branding Tips from Our Blog" searchTerm="branding printing" />
+      <RelatedBlogPosts heading="Branding Tips from Our Blog" posts={relatedPosts} />
       <ServicesCTA />
       <ServicesTrustBar />
       <Footer />

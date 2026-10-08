@@ -1,48 +1,32 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogPost from "@/views/BlogPost";
-import { fetchPost, fetchPosts, getFeaturedImage, type WPPost } from "@/lib/wordpress";
+import { getAllPosts, getExcerpt, getPost, getRelatedPosts } from "@/lib/blog";
 import { pageMetadata } from "@/lib/page-metadata";
 
-// Posts still live in WordPress (buckeyebizhub.blog). They are fetched on the
-// server now, so each post's text is in the HTML, and refreshed hourly.
-export const revalidate = 3600;
+// Posts are read from content/blog/*.json at build time. Every slug is
+// pre-rendered; anything else is a 404.
+export const dynamicParams = false;
 
-const stripTags = (html: string) => html.replace(/<[^>]*>/g, "").trim();
-
-async function loadPost(slug: string): Promise<WPPost | null | undefined> {
-  try {
-    return await fetchPost(slug);
-  } catch {
-    // WordPress unreachable: let the page fetch it in the browser instead.
-    return undefined;
-  }
-}
-
-export async function generateStaticParams() {
-  try {
-    const { items } = await fetchPosts(1, 100);
-    return items.map((p) => ({ slug: p.slug }));
-  } catch {
-    return [];
-  }
+export function generateStaticParams() {
+  return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await loadPost(slug);
+  const post = getPost(slug);
   if (!post) return pageMetadata({ title: "Blog", path: `/blog/${slug}` });
   return pageMetadata({
-    title: stripTags(post.title.rendered),
-    description: stripTags(post.excerpt.rendered).slice(0, 155),
+    title: post.title,
+    description: getExcerpt(post, 155),
     path: `/blog/${post.slug}`,
-    ogImage: getFeaturedImage(post) || undefined,
+    ogImage: post.featuredImage || undefined,
   });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = await loadPost(slug);
-  if (post === null) notFound();
-  return <BlogPost initialPost={post} />;
+  const post = getPost(slug);
+  if (!post) notFound();
+  return <BlogPost post={post} related={getRelatedPosts(post.slug, 3)} />;
 }

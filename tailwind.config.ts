@@ -7,7 +7,8 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      // Same gutters as the hand-built sections: 16px on phones.
+      padding: { DEFAULT: "1rem", sm: "1.5rem", lg: "2rem" },
       screens: {
         "2xl": "1400px",
       },
@@ -64,6 +65,11 @@ export default {
           navy: "hsl(var(--ohio-navy))",
           cream: "hsl(var(--ohio-cream))",
         },
+        asphalt: "hsl(var(--asphalt))",
+        graphite: "hsl(var(--graphite))",
+        seam: "hsl(var(--seam))",
+        stock: "hsl(var(--stock))",
+        fog: "hsl(var(--fog))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -79,6 +85,10 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        // Tighter corners site-wide: the old pill-and-bubble radii read as a template.
+        xl: "0.5rem",
+        "2xl": "0.5rem",
+        "3xl": "0.75rem",
       },
       keyframes: {
         "accordion-down": {
@@ -96,5 +106,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;

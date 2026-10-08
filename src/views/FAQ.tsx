@@ -36,236 +36,236 @@ interface FAQCategory {
 
 const categories: FAQCategory[] = [
   {
-    eyebrow: "Start Here",
-    heading: "Getting Started & The Concierge Model",
+    eyebrow: "Start here",
+    heading: "Getting started and how we work",
     items: [
       {
         q: "What business printing services does Buckeye Biz Hub offer in Columbus, Ohio?",
-        a: "We offer a full range of professional printing services including business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays, and custom apparel printing. We deliver wholesale pricing with fast turnaround across Columbus, Cleveland, Cincinnati, Dayton, and all of Ohio.",
+        a: "Business cards, brochures, flyers, banners, yard signs, letterhead, envelopes, large format prints, trade show displays and custom apparel. Wholesale pricing and fast turnaround across Columbus, Cleveland, Cincinnati, Dayton and the rest of Ohio.",
       },
       {
         q: "Can you help with graphic design or do I need to provide my own artwork?",
-        a: "Both! We offer professional graphic design services to create your business cards, banners, vehicle wraps, and promotional product layouts from scratch. If you already have artwork, we accept print-ready files in PDF, AI, EPS, and high-resolution PNG/JPG formats. Our design team ensures every file is optimized for the best print quality.",
+        a: "Either way works. We can design your business cards, banners, vehicle wraps and promo layouts from scratch. If you already have artwork, send print-ready PDF, AI, EPS or high-resolution PNG/JPG files. We check every file so it prints right.",
       },
       {
         q: "What industries do you serve in Ohio?",
-        a: "We work with businesses across every industry including HVAC contractors, auto dealerships, dental and medical offices, restaurants and bars, real estate agencies, lawn care and landscaping companies, construction firms, and more. Any Ohio business that needs professional printing, branded merchandise, or vehicle branding — we've got you covered.",
+        a: "HVAC contractors, auto dealers, dental and medical offices, restaurants and bars, real estate agencies, lawn care and landscaping companies, construction firms and more. If your Ohio business needs printing, branded gear or vehicle branding, we can help.",
       },
       {
         q: "How is a branding concierge different from a regular print shop?",
-        a: "A typical print shop sells you what they have. Whatever's in their catalog at their pricing. A branding concierge works differently — we represent you, not any single vendor. When you need business cards, we shop the best printers. When you need fleet decals, we shop the best installers. When you need promotional products, we shop the best suppliers. You get one accountable partner, but you get the entire Central Ohio vendor market working for you.",
+        a: "A print shop sells you what's in its catalog at its prices. We work for you, not for any one vendor. Need business cards? We shop the printers. Fleet decals? We shop the installers. Promo products? We shop the suppliers. You deal with one person, and the whole Central Ohio vendor market works for you.",
       },
       {
         q: "Who is David Stein and why does that matter?",
-        a: "David Stein is a three-time Ohio business founder who started Buckeye Biz Hub after building, scaling, and selling other companies. He ran Clintonville Automotive Repair Service (third-generation family business). He founded BeerTubes — a patented product company with 28 patents that sold B2B to InBev, Anheuser-Busch, MillerCoors, and Constellation Brands before selling in 2017. He then founded SBC Hospitality Group with three restaurants. That operating experience matters because every marketing recommendation comes from someone who has spent his own money on marketing, made payroll, and built brands from scratch.",
+        a: "David co-founded and runs Buckeye Biz Hub. He was service manager at Clintonville Automotive Repair Service, his family's third-generation independent repair shop. He co-founded BeerTubes, was named inventor on its patents, and grew it from $79K in year one to $4.5M, selling to Anheuser-Busch InBev, MillerCoors, Constellation Brands and 100+ distributors. He sold the company in 2017. Then he founded SBC Hospitality Group: Stein Brewing Co. in Mount Vernon, a Newark brewery, The Joint diner, plus co-ownership of a Dave's Cosmic Subs franchise, with 100+ employees. Why it matters: every recommendation comes from someone who has spent his own money on marketing and made payroll.",
       },
       {
         q: "Do you work with small businesses or only large companies?",
-        a: "Both. Most of our clients are Central Ohio service businesses between $500K and $10M in annual revenue — owner-operators who make their own decisions and want a real partner, not a vendor. We also work with solo contractors, professional practices, and larger multi-location companies. There's no minimum order size for most services.",
+        a: "Both. Most of our clients are Central Ohio service businesses between $500K and $10M in annual revenue. Owners who make their own calls and want a partner, not a vendor. We also work with solo contractors, professional practices and multi-location companies. Most services have no minimum order.",
       },
     ],
   },
   {
     eyebrow: "Investment",
-    heading: "Pricing & Quotes",
+    heading: "Pricing and quotes",
     items: [
       {
         q: "Do you have minimum order requirements?",
-        a: "Minimums vary by product. Business cards start at just 100 units, banners and signs have no minimum, and most promotional products start at 12–25 pieces. Custom apparel orders typically start at 12 pieces for screen printing and 1 piece for embroidery. We work with businesses of all sizes — from solo entrepreneurs to large corporations across Ohio.",
+        a: "It depends on the product. Business cards start at 100. Banners and signs have no minimum. Most promo products start at 12–25 pieces. Screen-printed apparel usually starts at 12 pieces. For embroidery, small runs are fine. Ask and we'll tell you the minimum for your item. We work with solo owners and big companies alike.",
       },
       {
         q: "What are your pricing and wholesale rates?",
-        a: "We offer competitive wholesale pricing on all products through our trusted supplier network and top promotional product partners. Volume discounts are available on bulk orders of business cards (500+), apparel (24+), and promotional items (50+). Every quote is custom — contact us for a free, no-obligation price estimate tailored to your project and quantity.",
+        a: "We get wholesale pricing through our network of 4,300+ vetted suppliers. Volume discounts kick in on business cards (500+), apparel (24+) and promo items (50+). Every quote is custom. Ask for a free, no-obligation estimate for your project.",
       },
       {
         q: "How do I get a quote for my project?",
-        a: "Getting a quote is easy and free! Simply visit our Contact page and fill out the form with your project details, or call us directly. We respond to all quote requests within 24 hours. Include details like the product type, quantity, colors, and any design preferences to get the most accurate estimate. There's never any obligation.",
+        a: "Fill out the form on our Contact page or call us. We answer every quote request within 24 hours. Tell us the product, quantity, colors and any design ideas, and the estimate will be tighter. No obligation.",
       },
       {
         q: "Do you charge for quotes or consultations?",
-        a: "No. Every initial quote and consultation is free with no obligation. We typically turn around quotes within 24 hours of your request.",
+        a: "No. Every first quote and consultation is free, with no obligation. Most quotes come back within 24 hours.",
       },
       {
         q: "How is your pricing competitive if you're not the actual vendor?",
-        a: "Because we buy at wholesale rates through our vendor network and pass most of that savings to you. We're often less expensive than going directly to the same vendors yourself because we buy in volume across hundreds of clients. The concierge service is essentially free — built into the same pricing you'd pay anyway.",
+        a: "We buy at wholesale through our vendor network and pass most of the savings to you. We're often cheaper than going to the same vendor yourself, because we buy for a lot of clients at once. The concierge part is built into the price you'd pay anyway.",
       },
       {
         q: "What payment methods do you accept?",
-        a: "Credit card, ACH bank transfer, business check, and Zelle. Net 30 terms available for established clients with approved credit.",
+        a: "Credit card, ACH bank transfer, business check and Zelle. Net 30 terms for established clients with approved credit.",
       },
     ],
   },
   {
-    eyebrow: "When It Arrives",
-    heading: "Timeline & Turnaround",
+    eyebrow: "When it arrives",
+    heading: "Timeline and turnaround",
     items: [
       {
         q: "How fast is your turnaround time for printing and promotional products?",
-        a: "Most standard print orders ship within 2–5 business days. Rush options are available for 24–48 hour turnaround on select products like business cards, flyers, and banners. Promotional products typically take 7–14 business days depending on the item and customization method. Vehicle wraps are scheduled within 1–2 weeks of design approval. We always provide a delivery estimate with your quote.",
+        a: "Most standard print orders ship in 2–5 business days. Rush is available, 24–48 hours on select items like business cards, flyers and banners. Promo products usually take 7–14 business days, depending on the item and decoration. Vehicle wraps get scheduled within 1–2 weeks of design approval. Your quote always includes a delivery estimate.",
       },
       {
         q: "How long does a custom vehicle wrap take?",
-        a: "Full vehicle wrap timeline is typically 2-3 weeks from design approval — about 1 week for production and 2-3 days for installation. Fleet spot graphics are much faster at 5-7 business days per vehicle. We can often phase fleet installations so you're never without operational vehicles.",
+        a: "A full wrap usually takes 2-3 weeks from design approval. About 1 week to produce, 2-3 days to install. Fleet spot graphics are faster, 5-7 business days per vehicle. We can phase fleet installs so you always have trucks on the road.",
       },
       {
         q: "How long do banners and signs take?",
-        a: "Standard banner production is 3-5 business days. Yard signs are typically 3-4 business days. Large format printing (trade show banners, building wraps, vehicle wraps) takes 5-10 business days. Rush turnaround available for urgent events.",
+        a: "Standard banners take 3-5 business days. Yard signs take 3-4. Large format work (trade show banners, building wraps, vehicle wraps) takes 5-10. Rush is available for events.",
       },
       {
         q: "What about embroidered apparel turnaround?",
-        a: "Custom embroidered apparel typically takes 7-10 business days from order placement. Logo digitizing is included on first orders and takes 1-2 days. Rush turnaround available for events and trade shows.",
+        a: "Embroidered apparel usually takes 7-10 business days from order. Logo digitizing is included on first orders and takes 1-2 days. Rush is available for events and trade shows.",
       },
     ],
   },
   {
-    eyebrow: "On The Road",
-    heading: "Fleet & Vehicle Branding",
+    eyebrow: "On the road",
+    heading: "Fleet and vehicle branding",
     items: [
       {
         q: "How does vehicle wrapping work and how long does it last?",
-        a: "Vehicle wrapping involves applying premium vinyl graphics over your vehicle's existing paint. We use 3M and Avery cast vinyl with professional installation by certified technicians. Full wraps typically last 5–7+ years with proper care, and they actually protect your vehicle's factory paint underneath. The process takes 3–5 days from design approval to completion for a single vehicle.",
+        a: "A wrap is printed vinyl applied over your vehicle's paint. Our partner shops use 3M and Avery cast vinyl, installed by certified technicians. Full wraps usually last 5–7+ years with care, and they protect the factory paint underneath. One vehicle takes 3–5 days from design approval to done.",
       },
       {
         q: "Do you offer fleet branding for multiple vehicles?",
-        a: "Absolutely. We specialize in fleet branding programs for Ohio businesses with 2 to 200+ vehicles. Fleet clients receive volume pricing, consistent branding across all vehicle types (cars, vans, trucks, trailers), project management, and ongoing maintenance and replacement tracking. On-site installation is available for Columbus-area fleets.",
+        a: "Yes. Commercial fleet work is our focus, for Ohio businesses with 2 to 200+ vehicles. Fleet clients get volume pricing, one look across cars, vans, trucks and trailers, project management, and tracking for maintenance and replacements. On-site installation is available for Columbus-area fleets.",
       },
       {
         q: "What's the difference between vehicle wraps and spot graphics?",
-        a: "A full vehicle wrap covers the entire vehicle surface with custom-printed vinyl — typically $2,800-$5,500 per vehicle. Spot graphics focus on the highest-visibility zones (doors, rear, accent panels) with door decals, logo graphics, and contact info — typically $150-$650 per vehicle. Spot graphics deliver about 80% of full-wrap brand visibility for 10-20% of the cost.",
+        a: "A full wrap covers the whole vehicle in printed vinyl, usually $2,800-$5,500 per vehicle. Spot graphics cover the spots people see most (doors, rear, accent panels) with decals, logos and contact info, usually $150-$650 per vehicle. Spot graphics get you about 80% of the visibility for 10-20% of the cost.",
       },
       {
-        q: "Which is right for my business — wraps or spot graphics?",
-        a: "It depends on your fleet size and goals. Most service businesses get better ROI from spot graphics across their entire fleet than from full wraps on a few vehicles. For example, the cost of one full wrap can brand 8-10 vehicles with professional spot graphics — meaning 8x more brand visibility on the road. We'll honestly recommend what's best for your specific situation, not what's most expensive.",
+        q: "Which is right for my business: wraps or spot graphics?",
+        a: "Depends on your fleet size and goals. Most service businesses get more from spot graphics on every truck than full wraps on a few. One full wrap costs about the same as spot graphics on 8-10 vehicles. That's 8x more trucks on the road with your name on them. We'll tell you what fits, not what costs the most.",
       },
       {
         q: "Will vehicle graphics damage my paint?",
-        a: "No — and this is especially important for leased fleet vehicles. Properly installed and removed commercial vinyl actually protects your paint from UV damage and minor scratches. We use professional installation techniques that allow clean removal without paint damage at end-of-lease.",
+        a: "No. That matters most on leased vehicles. Commercial vinyl, installed and removed the right way, protects your paint from sun and light scratches. It comes off clean at end of lease.",
       },
       {
         q: "Do you do single-vehicle decals or only fleets?",
-        a: "Both. We do single-vehicle decals for solo contractors, real estate agents, and individual professionals, plus full fleet projects for multi-vehicle service businesses. Volume pricing kicks in at 3+ vehicles.",
+        a: "Both. Single-vehicle decals for solo contractors, real estate agents and other professionals. Full fleet projects for multi-vehicle service businesses. Volume pricing starts at 3+ vehicles.",
       },
       {
         q: "Can you install on location?",
-        a: "Yes — we offer mobile installation for spot graphics and decal work. Full wraps typically need a controlled shop environment but for spot graphics, door decals, and rear graphics, we can come to your business location to install.",
+        a: "Yes, for spot graphics and decals. Door decals and rear graphics can go on at your business. Full wraps usually need a controlled shop.",
       },
     ],
   },
   {
-    eyebrow: "On Paper",
-    heading: "Printing & Business Cards",
+    eyebrow: "On paper",
+    heading: "Printing and business cards",
     items: [
       {
         q: "What kind of business cards do you offer?",
-        a: "We offer every type from standard 14pt card stock to premium options including 32pt ultra-thick cards, gold and silver foil stamping, spot UV gloss accents, embossing and debossing, soft-touch and silk finishes, custom die-cuts and unique shapes, and edge painting. Pricing starts at $39 and scales by quality and quantity.",
+        a: "Every kind. Standard 14pt stock up to 32pt ultra-thick. Gold and silver foil, spot UV, embossing and debossing, soft-touch and silk finishes, custom die-cuts and edge painting. Pricing starts at $39 and goes up with quality and quantity.",
       },
       {
         q: "Can you do small print runs or only bulk?",
-        a: "We can produce as few as 25 business cards or as many as 100,000+. Digital printing is cost-effective for small runs; offset printing kicks in around 1,000+ pieces.",
+        a: "As few as 25 business cards or as many as 100,000+. Digital printing makes sense for small runs. Offset makes sense around 1,000+ pieces.",
       },
       {
         q: "What's the difference between digital and offset printing?",
-        a: "Digital printing is cost-effective for small runs under 1,000 pieces with quick turnaround. Offset printing produces sharper detail and richer colors for larger runs. For premium finishes like foil stamping or embossing, we use offset for the best results.",
+        a: "Digital is cheaper for runs under 1,000 pieces and turns around fast. Offset gives sharper detail and richer color on bigger runs. For foil or embossing, we use offset.",
       },
       {
         q: "What file formats do you need for printing?",
-        a: "Print-ready PDFs are preferred. We also accept high-resolution JPEGs, PNGs, AI files, PSDs, and INDD files. Don't have print-ready files? Send us what you have — we'll prepare them for production at no extra charge on most jobs.",
+        a: "Print-ready PDFs are best. We also take high-resolution JPEGs, PNGs, AI files, PSDs and INDD files. No print-ready file? Send what you have. On most jobs we'll prep it for free.",
       },
     ],
   },
   {
-    eyebrow: "On Your Team",
-    heading: "Embroidered Apparel & Uniforms",
+    eyebrow: "On your team",
+    heading: "Embroidered apparel and uniforms",
     items: [
       {
         q: "What's the difference between embroidery and screen printing?",
-        a: "Embroidery uses thread to create your logo design — premium look, extremely durable, best for polos, hats, jackets, and uniforms. Screen printing uses ink — better for t-shirts, larger designs, and lower price points. We offer both and recommend based on your specific use case.",
+        a: "Embroidery stitches your logo in thread. It looks sharp and lasts, best for polos, hats, jackets and uniforms. Screen printing uses ink. Better for t-shirts, bigger designs and lower prices. We do both and will tell you which fits.",
       },
       {
         q: "Do you have minimum quantities for embroidered apparel?",
-        a: "Most embroidered orders have a 12-piece minimum to make digitizing and setup cost-effective. Below 12 pieces, per-unit pricing increases significantly.",
+        a: "Small runs are fine. Ask and we'll tell you the minimum for your item.",
       },
       {
         q: "Can I see my logo before you embroider 50 shirts?",
-        a: "Yes — every embroidery project includes a digital proof of the embroidered logo before production begins. For very large orders, we can produce a single sample piece for approval before committing to the full run.",
+        a: "Yes. Every embroidery job comes with a digital proof before production. On big orders we can make one sample piece for you to approve first.",
       },
       {
         q: "What apparel brands do you offer?",
-        a: "We work with all major commercial apparel brands including Port Authority, Nike, Carhartt, Under Armour, Eddie Bauer, Sport-Tek, Adidas, Champion, Hanes, and many more. Tell us your preference and budget and we'll match the right product.",
+        a: "All the major commercial brands: Port Authority, Nike, Carhartt, Under Armour, Eddie Bauer, Sport-Tek, Adidas, Champion, Hanes and more. Tell us your preference and budget and we'll match it.",
       },
     ],
   },
   {
-    eyebrow: "Beyond Print",
-    heading: "Marketing & Business Consulting",
+    eyebrow: "Beyond print",
+    heading: "Marketing and business consulting",
     items: [
       {
         q: "What kind of consulting does David offer?",
-        a: "Marketing strategy and business consulting for Central Ohio businesses. Three engagement formats: Strategy Sessions (single focused conversations about a specific challenge), Marketing & Business Audits (comprehensive review of your marketing, brand, and go-to-market strategy with prioritized recommendations), and Ongoing Advisory Relationships (monthly engagement with regular check-ins and decision support).",
+        a: "Marketing strategy and business consulting for Central Ohio businesses, three ways. Strategy sessions: one focused conversation about one problem. Marketing and business audits: a full review of your marketing, brand and go-to-market plan, with a ranked list of what to fix. Ongoing advisory: monthly check-ins and help making decisions.",
       },
       {
         q: "How is David's consulting different from other marketing consultants?",
-        a: "Most marketing consultants have never built a business. David has built three — including a patented product company sold to industry leaders. That operating experience changes everything. Strategic recommendations come from someone who's spent his own money on marketing, made payroll, and lived the problems most consultants only read about.",
+        a: "Most marketing consultants have never built a business. David has. He co-founded BeerTubes, grew it to $4.5M and sold it, then built a hospitality group with 100+ employees. His advice comes from spending his own money on marketing and making payroll.",
       },
       {
         q: "What industries do you consult for?",
-        a: "Currently advising Central Ohio businesses across multiple industries including moving and relocation, roofing and home services, health and wellness, and legal services. The strategic principles transfer across industries.",
+        a: "Right now, Central Ohio businesses in moving and relocation, roofing and home services, health and wellness, and legal services. The principles carry across industries.",
       },
       {
         q: "How much does consulting cost?",
-        a: "Pricing varies by engagement scope and depth. Single strategy sessions, marketing audits, and ongoing advisory relationships each have different pricing structures. Every consulting engagement starts with a free conversation to determine fit and approach — at that point we'll discuss specific pricing for your situation.",
+        a: "It depends on scope. Strategy sessions, audits and ongoing advisory are each priced differently. Every engagement starts with a free conversation to see if it's a fit. We talk price then.",
       },
       {
         q: "Do consulting clients also use your branding services?",
-        a: "Some do, some don't. You can engage David for strategy only and execute branding elsewhere. You can use the branding concierge service for execution only without consulting. Or you can use both — strategy and execution from one partner who understands the whole picture. We don't bundle or require either.",
+        a: "Some do, some don't. You can hire David for strategy only and get branding done elsewhere. You can use the branding concierge without consulting. Or use both, strategy and execution from one person who sees the whole picture. Neither is required.",
       },
     ],
   },
   {
-    eyebrow: "Signage & Swag",
-    heading: "Banners, Signs & Promotional Products",
+    eyebrow: "Signage and swag",
+    heading: "Banners, signs and promotional products",
     items: [
       {
         q: "What types of promotional products can you customize?",
-        a: "We offer over 5,000 customizable promotional products including custom t-shirts, embroidered polos, branded hoodies, hats, drinkware (tumblers, mugs, water bottles), tote bags, pens, notebooks, USB drives, lanyards, bar rail mats, coasters, pop-up tents, table throws, retractable banners, and much more. If you can put a logo on it, we can do it.",
+        a: "Over 5,000 products. T-shirts, embroidered polos, hoodies, hats, drinkware (tumblers, mugs, water bottles), tote bags, pens, notebooks, USB drives, lanyards, bar rail mats, coasters, pop-up tents, table throws, retractable banners and a lot more. If a logo fits on it, we can do it.",
       },
       {
         q: "What banner materials do you offer?",
-        a: "Standard 13oz vinyl for indoor or short-term outdoor use, premium 18oz vinyl for long-term outdoor durability, mesh banners for high-wind locations, and tension fabric for trade show displays. We help you match the right material to your specific use case and budget.",
+        a: "13oz vinyl for indoor or short-term outdoor use. 18oz vinyl for long-term outdoor use. Mesh for windy spots. Tension fabric for trade show displays. We'll match the material to the job and your budget.",
       },
       {
         q: "What yard sign options do you have?",
-        a: "Standard 24x18 inch corrugated plastic (most popular for real estate and contractors), heavy-duty 4mm corrugated for long-term use, aluminum signs for permanent installations, custom shapes and sizes, and single or double-sided printing. H-frame wire stakes included with most orders.",
+        a: "Standard 24x18 inch corrugated plastic (the go-to for real estate and contractors), heavy-duty 4mm corrugated for long-term use, aluminum for permanent signs, custom shapes and sizes, single or double-sided. H-frame wire stakes come with most orders.",
       },
       {
         q: "What promotional products work best for trade shows?",
-        a: "Items that get kept and used regularly — branded drinkware, quality pens, USB drives, tote bags, and tech accessories. Avoid cheap throwaways that end up in hotel room trash cans. Higher per-piece cost on quality items but dramatically better return because they stay in use for months or years.",
+        a: "Things people keep and use: drinkware, good pens, USB drives, tote bags, tech accessories. Skip the cheap stuff that ends up in the hotel trash. Better items cost more per piece but stay in use for months or years.",
       },
     ],
   },
   {
-    eyebrow: "How We Operate",
-    heading: "Working With Us",
+    eyebrow: "How we operate",
+    heading: "Working with us",
     items: [
       {
         q: "Do you ship across Ohio or only serve Columbus?",
-        a: "We serve all of Ohio! While our primary service area is Columbus and Central Ohio, we ship printed materials, promotional products, and custom merchandise to every city in the state — including Cleveland, Cincinnati, Dayton, Toledo, Akron, and Youngstown. Vehicle wrap installations are performed at our Columbus-area facility or at your location for fleet jobs.",
+        a: "All of Ohio. Our home base is Columbus and Central Ohio, but we ship printing, promo products and merch to every city in the state, including Cleveland, Cincinnati, Dayton, Toledo, Akron and Youngstown. Wrap installs happen at a partner shop or at your location for fleet jobs.",
       },
       {
         q: "Do you offer reorder programs or ongoing partnerships?",
-        a: "Yes! Many of our Ohio business clients set up reorder programs for items they need regularly — like business cards, uniforms, promotional giveaways, and yard signs. We store your artwork and specs on file so reorders are fast and hassle-free. We also offer dedicated account management for larger clients with ongoing branding needs.",
+        a: "Yes. A lot of our Ohio clients set up reorders for things they buy often, like business cards, uniforms, giveaways and yard signs. We keep your artwork and specs on file, so reorders are quick. Larger clients can get dedicated account management.",
       },
       {
         q: "How do I get a quote?",
-        a: "Three options — fill out the contact form on our website with your project details, call 614-561-3358, or email david@buckeyebizhub.com directly. We respond to every inquiry within 24 hours with a detailed quote and any clarifying questions.",
+        a: "Three ways. Fill out the contact form, call 614-561-3358, or email david@buckeyebizhub.com. We answer every inquiry within 24 hours with a quote or the questions we need answered.",
       },
       {
         q: "Do you have a showroom I can visit?",
-        a: "Our operations are based at 1193 Virginia Ave, Columbus OH 43212. Visits are by appointment so we can give you focused time. Schedule via the contact form or by calling 614-561-3358.",
+        a: "No. Buckeye Biz Hub is home-based, with no walk-in showroom. David works with you on site at your business, by phone or in person. Set up a time through the contact form or call 614-561-3358.",
       },
       {
         q: "What's your satisfaction guarantee?",
-        a: "100% satisfaction guaranteed. If anything in your project doesn't meet expectations, we make it right — whether that means reprinting, reproducing, or refunding. We've built our reputation on standing behind the work.",
+        a: "100% satisfaction guarantee. If you're not happy, we make it right. That can mean a reprint, a redo or a refund. We stand behind the work.",
       },
     ],
   },
@@ -283,9 +283,9 @@ const faqJsonLd = {
 
 const FAQ = () => {
   usePageSEO({
-    title: "FAQ | Buckeye Biz Hub | Columbus Ohio Branding & Marketing Questions",
+    title: "FAQ | Buckeye Biz Hub | Columbus Ohio Branding and Marketing Questions",
     description:
-      "Frequently asked questions about Buckeye Biz Hub branding services in Columbus Ohio. Pricing, turnaround times, fleet branding, printing, consulting, and how our concierge model works.",
+      "Answers about Buckeye Biz Hub in Columbus, Ohio. Pricing, turnaround, fleet branding, printing, consulting and how our concierge model works.",
   });
 
   return (
@@ -306,23 +306,23 @@ const FAQ = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-              Frequently Asked Questions
+            <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
+              Frequently asked questions
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
-              Common Questions About{" "}
-              <span className="text-primary text-glow-red">Working With Buckeye Biz Hub</span>
+              Common questions about{" "}
+              <span className="text-primary text-glow-red">working with Buckeye Biz Hub</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto mb-8">
-              Real answers from a real Columbus Ohio business operator. If you don't see your question here, just ask — David personally responds to every inquiry within 24 hours.
+              Straight answers from someone who has run Ohio businesses. Don't see your question? Ask. David answers every inquiry himself within 24 hours.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
-                  Get a Free Quote
+                  Get a free quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </Link>
@@ -346,7 +346,7 @@ const FAQ = () => {
               variants={fadeUp}
               className="mb-10"
             >
-              <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
+              <span className="inline-block text-xs font-extrabold text-primary mb-3">
                 {category.eyebrow}
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
@@ -394,19 +394,19 @@ const FAQ = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground mb-5 leading-tight">
-              Have a Question{" "}
-              <span className="text-primary text-glow-red">We Didn't Answer?</span>
+              Have a question{" "}
+              <span className="text-primary text-glow-red">we didn't answer?</span>
             </h2>
             <p className="text-primary-foreground/70 text-lg md:text-xl mb-10 leading-relaxed">
-              Every project is different. If your question isn't covered above, just ask — David personally responds to every inquiry within 24 hours.
+              Every project is different. If it's not covered above, ask. David answers every inquiry himself within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
-                  Get a Free Quote
+                  Get a free quote
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </Link>

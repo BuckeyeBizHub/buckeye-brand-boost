@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/compat/router";
 
 const trustItems = [
-  { icon: Star, label: "500+ Happy Ohio Businesses" },
-  { icon: Heart, label: "Concierge Service Included" },
+  { icon: Star, label: "5-star rating on Google" },
+  { icon: Heart, label: "One Point of Contact" },
   { icon: ShieldCheck, label: "100% Satisfaction Guarantee" },
   { icon: Zap, label: "24-Hour Quotes" },
   { icon: MapPin, label: "Ohio Owned & Operated" },
@@ -28,13 +28,13 @@ const PricingCTA = () => (
             Ready to see exactly what your project will cost?
           </h2>
           <p className="text-primary-foreground/85 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            No pressure. No surprises. Just an honest quote from a local
-            partner who actually cares about your business.
+            No pressure. No surprises. An honest quote from someone local
+            who cares how your business does.
           </p>
           <Link to="/contact">
             <Button
               size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-14 py-7 rounded-xl shadow-2xl group uppercase tracking-wider"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg px-14 py-7 rounded-xl shadow-2xl group "
             >
               Get Your Free Quote in 24 Hours
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

@@ -28,15 +28,15 @@ const quantities = ["100", "250", "500", "1,000", "2,000"];
 
 const benefits = [
   "Hang them on doorknobs and they can't be missed",
-  "Perfect for local promotions, coupons, menus, service reminders, and special offers",
-  "Tear-off perforation option turns them into coupons or mini business cards",
-  "Premium 14 pt cardstock – durable and professional",
+  "Good for local promos, coupons, menus, service reminders and special offers",
+  "Add a tear-off and they double as coupons or mini business cards",
+  "Thick 14 pt cardstock. Holds up and looks professional",
 ];
 
 const whyUs = [
-  { icon: MapPin, title: "Local Columbus/Ohio Business", text: "We understand your market and your customers — because we're right here in Ohio, serving local businesses just like yours." },
-  { icon: Handshake, title: "Concierge Service", text: "We handle design, printing, and delivery — one dedicated contact manages your entire project so you don't have to juggle vendors." },
-  { icon: Zap, title: "Fast Turnaround & Honest Quotes", text: "You'll receive a clear, customized quote within 24 hours. No hidden fees, no surprises — just straightforward pricing." },
+  { icon: MapPin, title: "Local Columbus/Ohio business", text: "We're right here in Ohio. We know your market and your customers." },
+  { icon: Handshake, title: "One point of contact", text: "We handle design, printing and delivery. One person runs your whole project, so you don't juggle vendors." },
+  { icon: Zap, title: "Fast, honest quotes", text: "You get a clear quote within 24 hours. No hidden fees. No surprises." },
 ];
 
 const trustItems = ["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned & Operated"];
@@ -44,15 +44,15 @@ const trustItems = ["24-Hour Quotes", "Full Pricing Transparency", "Ohio Owned &
 const DoorHangers = () => {
 
   usePageSEO({
-    title: "Door Hangers | Custom Door Hanger Printing – Buckeye Biz Hub",
-    description: "Custom door hanger printing on premium cardstock for Ohio businesses. Local marketing that works. We source from top printers for best quality and pricing.",
+    title: "Door Hangers | Custom Door Hanger Printing | Buckeye Biz Hub",
+    description: "Custom door hanger printing on thick cardstock for Ohio businesses. Local marketing that works. We source from top printers for the best quality and price.",
   });
 
   return (
     <div className="min-h-screen">
       <Navbar />
 
-      {/* ═══ HERO ═══ */}
+      {/* Hero */}
       <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Custom branded door hanger on a doorknob" className="w-full h-full object-cover" width={1920} height={800} />
@@ -60,16 +60,16 @@ const DoorHangers = () => {
         </div>
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
           <div className="bg-ohio-navy/40 backdrop-blur-md border border-primary-foreground/10 rounded-3xl px-8 py-12 md:px-14 md:py-16 max-w-4xl mx-auto shadow-2xl">
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30">
               <Sparkles className="w-3.5 h-3.5" /> Door Hangers <Sparkles className="w-3.5 h-3.5" />
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-[0.92]" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}>
-              Custom Door Hangers — Columbus, Ohio
+              Custom Door Hangers in Columbus, Ohio
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/85 max-w-3xl mx-auto leading-relaxed mb-10 font-semibold tracking-wide" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
-              Get your message directly on every door handle — impossible to ignore.
+              Put your message on every door handle. Hard to ignore.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex flex-wrap justify-center gap-3 mb-10">
@@ -86,7 +86,7 @@ const DoorHangers = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
+                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl group transition-all duration-300">
                   Get Your Free Quote in 24 Hours
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -96,7 +96,7 @@ const DoorHangers = () => {
         </div>
       </section>
 
-      {/* ═══ WHY DOOR HANGERS WORK ═══ */}
+      {/* Why door hangers work */}
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
@@ -104,11 +104,11 @@ const DoorHangers = () => {
               Why Door Hangers <span className="text-primary">Work So Well</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Door hangers are one of the most effective — and most affordable — ways to reach customers right where they live.
+              Door hangers are one of the cheapest, most effective ways to reach customers right where they live.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
@@ -126,7 +126,7 @@ const DoorHangers = () => {
         </div>
       </section>
 
-      {/* ═══ PRICING GUIDE ═══ */}
+      {/* Pricing guide */}
       <section className="py-20 lg:py-28 bg-secondary/30">
         <div className="container max-w-6xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
@@ -188,13 +188,13 @@ const DoorHangers = () => {
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-6 flex items-start gap-3 bg-card border border-border rounded-xl px-5 py-4 shadow-sm">
             <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Prices are for full color printing on both sides. Free file creation and simple adjustments of your existing file are included. Creative or custom design work may incur an additional design fee. Up to 10% quantity discount available on orders of $1,500 or more. Shipping is additional and calculated per delivery location.
+              Prices are for full color on both sides. Free file setup and simple tweaks to your existing file are included. Custom design work may cost extra. Orders of $1,500 or more can get up to a 10% quantity discount. Shipping is extra and depends on where it's going.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* ═══ WHY CHOOSE US ═══ */}
+      {/* Why choose us */}
       <section className="py-24 lg:py-32 bg-background">
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
@@ -203,7 +203,7 @@ const DoorHangers = () => {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whyUs.map((item, i) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-card rounded-2xl border-2 border-border p-7 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
@@ -217,17 +217,17 @@ const DoorHangers = () => {
         </div>
       </section>
 
-      {/* ═══ BOTTOM CTA ═══ */}
+      {/* Bottom CTA */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full hidden" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
             Ready to get your message on every door in the neighborhood?
           </motion.h2>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group ">
                 <Phone className="w-6 h-6" />
                 Get Your 24-Hour Custom Quote
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
@@ -237,7 +237,7 @@ const DoorHangers = () => {
         </div>
       </section>
 
-      {/* ═══ TRUST BAR ═══ */}
+      {/* Trust bar */}
       <section className="py-8 bg-ohio-navy">
         <div className="container">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">

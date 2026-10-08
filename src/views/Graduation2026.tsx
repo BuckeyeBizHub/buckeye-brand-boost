@@ -51,33 +51,33 @@ const trends = [
 ];
 
 const whyReasons = [
-  { icon: Clock, text: "Local Columbus printing with fast turnaround — most orders ship in 3–5 business days" },
-  { icon: Shield, text: "Premium weatherproof materials built to look great rain or shine" },
-  { icon: Sparkles, text: "Full design help included at no extra charge — we make it look amazing" },
-  { icon: Star, text: "Much lower prices than national online printers — every single time" },
-  { icon: Heart, text: "Concierge service — David handles every detail so you don't have to" },
+  { icon: Clock, text: "Local Columbus service and fast turnaround. Most orders ship in 3–5 business days" },
+  { icon: Shield, text: "Weatherproof materials that look good rain or shine" },
+  { icon: Sparkles, text: "Design help included at no extra charge" },
+  { icon: Star, text: "Lower prices than the big national online printers" },
+  { icon: Heart, text: "David handles the details so you don't have to" },
 ];
 
 const Graduation2026 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="2026 Graduation Banners & Yard Signs – Columbus, Ohio"
-        description="Custom graduation banners from $37.50 and yard signs 8-pack for $125 for Class of 2026. Made in Columbus Ohio. Better pricing than big-box stores."
+        title="2026 Graduation Banners & Yard Signs in Columbus, Ohio"
+        description="Class of 2026 graduation banners from $37.50 and an 8-pack of yard signs for $125. Local Columbus, Ohio service. Better prices than big-box stores."
       />
       <Navbar />
 
-      {/* ── Hero ─────────────────────────────────────────── */}
+      {/* Hero */}
       <section className="relative pt-28 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy via-[hsl(0,0%,5%)] to-[hsl(45,60%,8%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy via-[hsl(216,14%,6%)] to-[hsl(45,60%,8%)]" />
         {/* Gold shimmer accents */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.06] rounded-full blur-[120px]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.06] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.08] rounded-full blur-[100px]" />
         {/* Confetti-like dots */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, hsl(45,80%,60%) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
         <div className="container relative z-10 text-center max-w-5xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-6 bg-[hsl(45,70%,50%)/0.15] px-6 py-2.5 rounded-full border border-[hsl(45,70%,50%)/0.3] text-[hsl(45,70%,55%)]">
+          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="inline-flex items-center gap-2 text-xs font-extrabold mb-6 bg-[hsl(45,70%,50%)/0.15] px-6 py-2.5 rounded-full border border-[hsl(45,70%,50%)/0.3] text-[hsl(45,70%,55%)]">
             <GraduationCap className="w-4 h-4" />
             Class of 2026
             <GraduationCap className="w-4 h-4" />
@@ -90,33 +90,33 @@ const Graduation2026 = () => {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }} className="text-lg md:text-2xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed mb-8 font-semibold">
-            Custom banners and premium 24" × 24" yard signs proudly made in Columbus.
+            Custom banners and sturdy 24" × 24" yard signs from a Columbus business.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.5 }}>
             <Link to="/contact?service=graduation-2026">
-              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base lg:text-lg px-6 sm:px-10 py-7 sm:py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group tracking-wider transition-all duration-300 max-w-full whitespace-normal h-auto leading-tight">
+              <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-sm sm:text-base lg:text-lg px-6 sm:px-10 py-7 sm:py-8 rounded-2xl group transition-all duration-300 max-w-full whitespace-normal h-auto leading-tight">
                 <GraduationCap className="w-5 h-5 flex-shrink-0" />
-                <span className="text-center">Get Your 2026 Graduation Package – Banners from $37.50 • 8 Yard Signs Only $125</span>
+                <span className="text-center">Get Your 2026 Graduation Package: Banners from $37.50 • 8 Yard Signs for $125</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
           </motion.div>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-sm text-[hsl(45,70%,55%)]/70 mt-4 font-semibold">
-            🏆 Beat National Big-Box Prices — Local Columbus Service
+            🏆 Beat big-box prices with local Columbus service
           </motion.p>
         </div>
       </section>
 
-      {/* ── Photo Gallery Grid ───────────────────────────── */}
+      {/* Photo gallery grid */}
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
               Graduation Banner <span className="text-[hsl(45,70%,50%)]">Gallery</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Every banner is custom-designed and printed right here in Columbus for the Class of 2026.</p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Every banner is custom-designed for your Class of 2026 grad.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -141,17 +141,17 @@ const Graduation2026 = () => {
         </div>
       </section>
 
-      {/* ── Pricing Table ────────────────────────────────── */}
+      {/* Pricing table */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-4 bg-primary/10 px-5 py-2 rounded-full border border-primary/20 text-primary">
-              <Sparkles className="w-3.5 h-3.5" /> Beat National Big-Box Prices
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold mb-4 bg-primary/10 px-5 py-2 rounded-full border border-primary/20 text-primary">
+              <Sparkles className="w-3.5 h-3.5" /> Beat big-box prices
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground mb-4">
-              Featured 2026 Graduation Pricing <span className="text-[hsl(45,70%,50%)]">– Beat National Prices</span>
+              2026 Graduation Pricing <span className="text-[hsl(45,70%,50%)]">That Beats National Prices</span>
             </h2>
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto">Local Columbus printing at lower prices than the big national online printers. Always.</p>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">Local Columbus service at lower prices than the big national online printers.</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-border overflow-hidden shadow-xl">
@@ -159,15 +159,15 @@ const Graduation2026 = () => {
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-ohio-navy text-primary-foreground">
-                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Product</th>
-                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider">Size</th>
-                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm ">Product</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm ">Size</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm text-right">
                       <span className="inline-flex items-center gap-1.5 bg-[hsl(45,70%,50%)/0.2] px-3 py-1 rounded-full text-[hsl(45,70%,55%)] whitespace-nowrap">
                         🎓 Our Price
                       </span>
                     </th>
-                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right">National Big-Box</th>
-                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm uppercase tracking-wider text-right text-[hsl(120,60%,75%)]">You Save</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm text-right">National Big-Box</th>
+                    <th className="px-4 sm:px-6 py-4 font-bold text-xs sm:text-sm text-right text-[hsl(120,60%,75%)]">You Save</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -187,11 +187,11 @@ const Graduation2026 = () => {
             </div>
           </motion.div>
 
-          <p className="text-center text-sm text-muted-foreground mt-4">* National pricing based on standard online big-box printer rates. Custom designs and rush options available.</p>
+          <p className="text-center text-sm text-muted-foreground mt-4">* National pricing based on standard rates from big online printers. Custom designs and rush options available.</p>
         </div>
       </section>
 
-      {/* ── Hot Trends ───────────────────────────────────── */}
+      {/* Hot trends */}
       <section className="py-16 lg:py-24 bg-muted/20">
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
@@ -200,7 +200,7 @@ const Graduation2026 = () => {
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {trends.map((trend, i) => (
               <motion.div
                 key={trend}
@@ -218,7 +218,7 @@ const Graduation2026 = () => {
         </div>
       </section>
 
-      {/* ── Why Families Choose Us ────────────────────────── */}
+      {/* Why families choose us */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container max-w-4xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
@@ -247,11 +247,11 @@ const Graduation2026 = () => {
         </div>
       </section>
 
-      {/* ── Featured Blog Post ─────────────────────────── */}
+      {/* Featured blog post */}
       <section className="py-16 lg:py-24 bg-muted/20">
         <div className="container max-w-5xl mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold tracking-[0.3em] uppercase mb-4 bg-[hsl(45,70%,50%)/0.15] px-5 py-2 rounded-full border border-[hsl(45,70%,50%)/0.3] text-[hsl(45,70%,55%)]">
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold mb-4 bg-[hsl(45,70%,50%)/0.15] px-5 py-2 rounded-full border border-[hsl(45,70%,50%)/0.3] text-[hsl(45,70%,55%)]">
               <BookOpen className="w-3.5 h-3.5" /> From Our Blog
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-black text-foreground">
@@ -278,10 +278,10 @@ const Graduation2026 = () => {
         </div>
       </section>
 
-      {/* ── Final CTA ────────────────────────────────────── */}
+      {/* Final CTA */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.08] rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[hsl(45,80%,55%)/0.08] rounded-full hidden" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-foreground/[0.04] rounded-full blur-[100px]" />
 
         <div className="container relative z-10 text-center max-w-3xl mx-auto px-6">
@@ -294,11 +294,11 @@ const Graduation2026 = () => {
             <span className="text-[hsl(45,80%,60%)]">Class of 2026</span> in style?
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
-            Custom banners from $37.50 and 8 yard signs for just $125. Premium materials, local Columbus service, and lower than national prices.
+            Custom banners from $37.50. Eight yard signs for $125. Good materials, local Columbus service, lower than national prices.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact?service=graduation-2026">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-lg sm:text-xl px-10 py-8 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group ">
                 <GraduationCap className="w-6 h-6" />
                 Reserve Your Graduation Package Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />

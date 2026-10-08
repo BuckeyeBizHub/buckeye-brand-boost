@@ -19,27 +19,27 @@ const fadeUp = {
 
 const engagementTypes = [
   {
-    title: "Strategy Sessions",
-    body: "A single focused conversation about a specific challenge or decision you're facing. Best for business owners who need an experienced outside perspective on a particular issue — a marketing investment, a hiring decision, a brand positioning question, a competitive threat, a pricing problem. You leave with clarity, a specific recommendation, and a clear path forward. No retainer, no long-term commitment.",
+    title: "Strategy sessions",
+    body: "One focused conversation about one decision. A marketing spend, a hire, how to position your brand, a new competitor, a pricing problem. You walk away with a clear recommendation and a next step. No retainer. No long-term commitment.",
     tagline: "Best for: I need to think through this one thing with someone who's been there.",
   },
   {
-    title: "Marketing & Business Audits",
-    body: "A comprehensive review of your current marketing, brand positioning, and go-to-market strategy. Includes competitive analysis, brand audit, marketing channel evaluation, and a written set of prioritized recommendations. You leave with a clear roadmap of what to fix first, what to invest in next, and what to stop doing.",
-    tagline: "Best for: I'm not getting the results I should be getting. I need someone to look at the whole picture and tell me what's actually broken.",
+    title: "Marketing and business audits",
+    body: "A full review of your marketing, brand and how you go to market. We look at competitors, your brand and every marketing channel. You get a written, ranked list: what to fix first, what to invest in next and what to stop doing.",
+    tagline: "Best for: I'm not getting the results I should. Look at the whole picture and tell me what's broken.",
   },
   {
-    title: "Ongoing Advisory Relationships",
-    body: "Monthly engagement for business owners who want a strategic partner walking alongside them. Includes regular check-ins, decision support, brand and marketing oversight, and the operational eye of someone who's built and sold companies. This is the deepest engagement and works best for businesses navigating growth, scaling decisions, or significant transitions.",
-    tagline: "Best for: I want someone I can call when something important comes up — and who actually knows my business.",
+    title: "Ongoing advisory",
+    body: "A monthly relationship. Regular check-ins, help with big decisions, oversight on brand and marketing, and the eye of someone who has built a company and sold it. This is the deepest option. It fits best when you're growing, scaling or going through a big change.",
+    tagline: "Best for: I want someone I can call when something big comes up, who already knows my business.",
   },
 ];
 
 const BusinessConsulting = () => {
   usePageSEO({
-    title: "Business Consulting Columbus Ohio | Strategic Guidance From a 3-Time Founder",
+    title: "Business Consulting Columbus Ohio | Advice From an Operator",
     description:
-      "Marketing and business consulting for Central Ohio companies from David Stein — third-generation operator and three-time founder including a patented product company sold to industry leaders. Operator-level strategy, not agency theory.",
+      "Marketing and business consulting for Central Ohio companies from David Stein. He co-founded BeerTubes, grew it to $4.5M and sold it in 2017. Operator strategy for owners who make real decisions.",
   });
 
   return (
@@ -51,30 +51,30 @@ const BusinessConsulting = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/90 via-ohio-grey-dark to-ohio-navy/80" />
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
         <div className="container relative">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               className="lg:col-span-7 text-center lg:text-left"
             >
-              <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-                Strategic Consulting for Central Ohio Businesses
+              <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-5 py-2 rounded-full mb-6">
+                Consulting for Central Ohio businesses
               </span>
               <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
-                Marketing Strategy From an Operator,{" "}
-                <span className="text-primary text-glow-red">Not an Agency</span>
+                Marketing strategy from an operator,{" "}
+                <span className="text-primary text-glow-red">not an agency</span>
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-                Most consultants have never built a business. David Stein has built three — including a patented product company sold to industry leaders. Buckeye Biz Hub offers Central Ohio business owners something rare: strategic guidance from someone who's actually lived the problems they're trying to solve.
+                Most consultants have never built a business. David Stein co-founded a patented product company, grew it from $79K to $4.5M and sold it. You get advice from someone who has lived the problems you're trying to solve.
               </p>
               <div className="flex justify-center lg:justify-start">
                 <Link to="/contact">
                   <Button
                     size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                    className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                   >
-                    Schedule a Consultation
+                    Schedule a consultation
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </Link>
@@ -90,7 +90,7 @@ const BusinessConsulting = () => {
               <div className="relative rounded-3xl overflow-hidden border-4 border-primary/30 shadow-2xl aspect-[4/5]">
                 <img
                   src={davidHero}
-                  alt="David Stein, 3-time business founder and Columbus Ohio operator"
+                  alt="David Stein, co-founder of Buckeye Biz Hub, Columbus Ohio"
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[hsl(220,30%,3%)/0.95] via-[hsl(220,30%,3%)/0.7] to-transparent pt-16 pb-4 px-5">
@@ -98,7 +98,7 @@ const BusinessConsulting = () => {
                     David Stein
                   </p>
                   <p className="text-xs text-primary-foreground/75 font-semibold">
-                    3-Time Business Founder · Columbus, Ohio
+                    Co-founder, Buckeye Biz Hub · Columbus, Ohio
                   </p>
                 </div>
               </div>
@@ -107,7 +107,7 @@ const BusinessConsulting = () => {
         </div>
       </section>
 
-      {/* Section 2 — The Problem */}
+      {/* Section 2: The problem */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div
@@ -117,32 +117,32 @@ const BusinessConsulting = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              The Problem With Most Marketing Advice
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              The problem with most marketing advice
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              Why Most Marketing Consultants{" "}
-              <span className="text-primary">Don't Actually Help</span>
+              Why most marketing consultants{" "}
+              <span className="text-primary">don't help</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Walk into any networking event in Columbus and you'll meet a dozen marketing consultants. Most of them have one thing in common: they've never owned a business.
+                Walk into any Columbus networking event and you'll meet a dozen marketing consultants. Most have never owned a business.
               </p>
               <p>
-                They've worked at agencies. They've sold software. They've taken courses. They give advice that sounds smart in a presentation but falls apart when you have to make payroll Friday.
+                They've worked at agencies, sold software and taken courses. Their advice sounds smart in a slide deck. It falls apart when you have to make payroll Friday.
               </p>
               <p>
-                That's not strategic guidance. That's theory dressed up as expertise.
+                That's theory dressed up as expertise.
               </p>
               <p>
-                When you're running a real business — making real decisions with real money — you don't need theory. You need someone who's been where you are and can tell you what actually moves the needle.
+                You're spending real money on real decisions. You need someone who's been where you are and will tell you what moves the needle.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 3 — Who David Is */}
+      {/* Section 3: Who David is */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -152,35 +152,35 @@ const BusinessConsulting = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Who You're Working With
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              Who you're working with
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              Three Companies Built. One Sold.{" "}
-              <span className="text-primary">Decades of Real Operating Experience.</span>
+              Three businesses. One sold.{" "}
+              <span className="text-primary">20+ years of operating.</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                David Stein has founded three companies across three industries before launching Buckeye Biz Hub:
+                Before co-founding Buckeye Biz Hub, David worked in three industries:
               </p>
               <p>
-                Clintonville Automotive Repair (2001-2006) — Third-generation family service business. Operations, customer service, and the realities of running a trades business in Central Ohio.
+                Clintonville Automotive Repair Service, 2001–2006. Service manager at his family's independent repair shop, a third-generation business. He learned customer service and how a trades business really runs.
               </p>
               <p>
-                BeerTubes (2005-2017) — A patented product company David started from his basement and built into a category-defining brand. 28 patents. B2B sales to InBev, Anheuser-Busch, MillerCoors, and Constellation Brands. Featured in their on-premise catalogs nationally. Sold to industry in 2017.
+                BeerTubes, 2005–2017. Co-founder, president and named inventor on its patents. He grew sales from $79K in year one to $4.5M, selling to Anheuser-Busch InBev, MillerCoors, Constellation Brands and 100+ distributors. He sold the company in 2017.
               </p>
               <p>
-                SBC Hospitality Group (2018-2024) — Three restaurants in one year: an independent classic diner (The Joint), a Dave's Cosmic Subs franchise in Mount Vernon Ohio, and Stein Brewing Company. Multi-concept operations at the same time.
+                SBC Hospitality Group, 2017–2023. Founder and president of Stein Brewing Co. in Mount Vernon, a Newark brewery and The Joint diner, plus co-owner of a Dave's Cosmic Subs franchise. More than 100 employees.
               </p>
               <p>
-                That's not a marketing background. That's an operator background. It's the difference between someone telling you what should work and someone showing you what actually does.
+                That's an operator background. Some people tell you what should work. David has seen what does.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 4 — Who David Works With */}
+      {/* Section 4: Who David works with */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div
@@ -190,38 +190,38 @@ const BusinessConsulting = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Who Benefits Most
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              Who benefits most
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              Who Benefits Most From{" "}
-              <span className="text-primary">Operator-Level Consulting</span>
+              Who gets the most from{" "}
+              <span className="text-primary">an operator's advice</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                The businesses David works with share a few common traits:
+                The businesses David works with tend to look like this:
               </p>
               <p>
-                Established Central Ohio businesses typically doing $500K to $10M in annual revenue who have outgrown DIY marketing but aren't ready for a full agency engagement.
+                Established Central Ohio businesses, usually $500K to $10M a year. You've outgrown DIY marketing but don't need a full agency.
               </p>
               <p>
-                Owner-operators who make their own decisions and want strategic input from someone they can trust to be honest.
+                Owners who make their own decisions and want honest input.
               </p>
               <p>
-                Companies stuck at a transition point — scaling up, launching a new service line, recovering from a setback, preparing for a sale, or trying to figure out why marketing isn't working.
+                Companies at a turning point: scaling up, adding a service, coming back from a setback, getting ready to sell, or figuring out why marketing isn't working.
               </p>
               <p>
-                Businesses where the owner is also the operator — meaning the advice has to be practical, not theoretical. You don't have time for a 90-day strategy deck.
+                Owners who also run the day to day. The advice has to be practical. You don't have time for a 90-day strategy deck.
               </p>
               <p>
-                David's current advisory work includes Central Ohio businesses in moving and relocation services, roofing and home services, health and wellness, and legal services. The industries vary. The strategic principles don't.
+                David's current advisory work covers Central Ohio businesses in moving, roofing and home services, health and wellness, and legal services. The industries change. The principles don't.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 5 — Three Ways to Work Together (cards) */}
+      {/* Section 5: Three ways to work together (cards) */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-6xl">
           <motion.div
@@ -232,19 +232,19 @@ const BusinessConsulting = () => {
             variants={fadeUp}
             className="max-w-3xl mb-12"
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Engagement Formats
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              How we work
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-foreground leading-[1.1]">
-              Three Ways to{" "}
-              <span className="text-primary">Work Together</span>
+              Three ways to{" "}
+              <span className="text-primary">work together</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every consulting engagement is built around your specific situation. There's no fixed template. That said, most engagements fall into one of three formats:
+              Every engagement fits your situation. No fixed template. Most land in one of these three:
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {engagementTypes.map((card, idx) => (
               <motion.div
                 key={card.title}
@@ -279,12 +279,12 @@ const BusinessConsulting = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-10 text-center text-base text-muted-foreground italic max-w-3xl mx-auto"
           >
-            Pricing is customized for each engagement based on scope and depth. Every consulting relationship starts with a free conversation to determine fit and approach.
+            Pricing depends on scope. Every engagement starts with a free conversation to see if it's a fit.
           </motion.p>
         </div>
       </section>
 
-      {/* Section 6 — The Buckeye Biz Hub Difference */}
+      {/* Section 6: The Buckeye Biz Hub difference */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div
@@ -294,35 +294,35 @@ const BusinessConsulting = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Strategy Plus Execution
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              Strategy plus execution
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              Strategy and Execution{" "}
-              <span className="text-primary">Under One Roof</span>
+              Strategy and execution{" "}
+              <span className="text-primary">in one place</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Most consultants give you strategy and leave. You're then on your own to execute — finding designers, printers, signage companies, promotional product vendors, and vehicle wrap installers.
+                Most consultants hand you a plan and leave. Then you're on your own, hunting for designers, printers, sign shops, promo vendors and wrap installers.
               </p>
               <p>
-                That's where most marketing strategies die. The plan is good but the execution is fragmented across vendors who don't talk to each other.
+                That's where most marketing plans die. The plan is fine. The work gets split across vendors who don't talk to each other.
               </p>
               <p>
-                Buckeye Biz Hub is different. Strategic guidance comes with the option of full execution through our branding concierge service — printing, promotional products, vehicle graphics, embroidered apparel, signage, all coordinated under one roof through our Central Ohio vendor network.
+                At Buckeye Biz Hub, the advice can come with the work. Our branding concierge handles printing, promo products, vehicle graphics, embroidered apparel and signs. We coordinate it all through trusted Central Ohio partner shops, installers and print vendors.
               </p>
               <p>
-                You can use David for strategy only. You can use the concierge service for execution only. Or you can have both — strategy and execution from the same partner who understands the whole picture.
+                Use David for strategy only. Use the concierge for execution only. Or get both from one person who sees the whole picture.
               </p>
               <p className="text-foreground font-semibold">
-                Few consultants offer this. None at this scale in Central Ohio.
+                Few consultants in Central Ohio offer both.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 7 — Honest Limitations */}
+      {/* Section 7: Honest limitations */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -332,32 +332,32 @@ const BusinessConsulting = () => {
             custom={0}
             variants={fadeUp}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              What David Doesn't Do
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              What David doesn't do
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              Honest Limitations{" "}
-              <span className="text-primary">Worth Knowing About</span>
+              The limits,{" "}
+              <span className="text-primary">up front</span>
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Operator-level consulting comes with some honest limits worth being upfront about:
+                You should know what you're not getting:
               </p>
               <p>
-                David isn't an enterprise consultant. This isn't for Fortune 500 strategy work or businesses with revenue above $25M. The advice is built for the businesses David actually understands — Central Ohio operators with real businesses, real revenue, and real challenges.
+                David isn't an enterprise consultant. This isn't for Fortune 500 work or companies over $25M in revenue. It's built for the businesses he knows: Central Ohio operators with real revenue and real problems.
               </p>
               <p>
-                David isn't a specialist agency. If you need deep technical SEO work, paid media campaigns at scale, or specialized digital marketing execution, you'll get strategic guidance on what to do and recommendations on specialists to execute — but David isn't running paid ad accounts.
+                David isn't a specialist agency. Need deep technical SEO, big paid media campaigns or specialized digital work? He'll tell you what to do and point you to the right specialists. He doesn't run paid ad accounts.
               </p>
               <p>
-                David doesn't do everything. What he does well is bring operating experience and strategic clarity to business owners who need both. That's the lane.
+                David doesn't do everything. He brings operating experience and a clear plan to owners who need both. That's the lane.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 8 — Final CTA */}
+      {/* Section 8: Final CTA */}
       <section className="py-20 lg:py-28 bg-ohio-grey-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-ohio-navy/60 via-ohio-grey-dark to-ohio-navy/40" />
         <div className="container relative">
@@ -369,19 +369,19 @@ const BusinessConsulting = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground mb-5 leading-tight">
-              Start With{" "}
-              <span className="text-primary text-glow-red">a Conversation</span>
+              Start with{" "}
+              <span className="text-primary text-glow-red">a conversation</span>
             </h2>
             <p className="text-primary-foreground/70 text-lg md:text-xl mb-10 leading-relaxed">
-              Every engagement starts the same way: a real conversation about what you're trying to do, what's working, and what isn't. There's no charge for the initial call. There's no pressure to commit to anything. If David is the right fit for what you need, he'll tell you. If you'd be better served by someone else or some other approach, he'll tell you that too.
+              We talk about what you're trying to do, what's working and what isn't. The first call is free. No pressure to commit. If David is the right fit, he'll tell you. If someone else would serve you better, he'll tell you that too.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                  className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
                 >
-                  Schedule a Free Consultation Call
+                  Schedule a free call
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </Link>
@@ -392,7 +392,7 @@ const BusinessConsulting = () => {
                   className="border-primary/40 text-primary-foreground hover:bg-primary/10 font-bold text-base md:text-lg px-9 py-7 rounded-2xl gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Call 614-561-3358
+                  Call (614) 561-3358
                 </Button>
               </a>
             </div>

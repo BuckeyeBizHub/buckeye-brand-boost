@@ -3,7 +3,7 @@ import Page from "@/views/LocalSeo";
 
 export const metadata = pageMetadata({
   title: "Local SEO & Google Ranking Columbus Ohio",
-  description: "Local SEO services to help your Columbus Ohio business rank higher on Google and dominate the Map Pack. Get found by more local customers in Central Ohio.",
+  description: "Local SEO for Columbus Ohio businesses. Rank higher on Google, show up in the Map Pack and get found by more customers in Central Ohio.",
   path: "/local-seo",
 });
 

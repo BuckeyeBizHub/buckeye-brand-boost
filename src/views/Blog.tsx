@@ -1,21 +1,27 @@
 "use client";
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, BookOpen, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Link } from "@/lib/compat/router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
 import { usePageSEO } from "@/hooks/usePageTitle";
-import { fetchPosts, fetchCategories, WPCategory } from "@/lib/wordpress";
+import { toPlainText, type BlogCategory, type BlogPostSummary } from "@/lib/blog-utils";
 
-const Blog = () => {
+const PER_PAGE = 9;
+
+interface BlogProps {
+  /** All posts, newest first (loaded from content/blog by the server page). */
+  posts: BlogPostSummary[];
+  categories: BlogCategory[];
+}
+
+const Blog = ({ posts: allPosts, categories }: BlogProps) => {
   const [page, setPage] = useState(1);
-  const [activeCat, setActiveCat] = useState<number | undefined>(undefined);
+  const [activeCat, setActiveCat] = useState<string | undefined>(undefined);
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
@@ -25,20 +31,21 @@ const Blog = () => {
     canonical: "https://www.buckeyebizhub.com/blog",
   });
 
-  const { data: categories = [] } = useQuery({
-    queryKey: ["wp-categories"],
-    queryFn: fetchCategories,
-    staleTime: 10 * 60 * 1000,
-  });
+  // Filtering, search and paging all happen in the browser over the props.
+  const filtered = useMemo(() => {
+    const words = search.toLowerCase().split(/\s+/).filter(Boolean);
+    return allPosts.filter((p) => {
+      if (activeCat && !p.categories.some((c) => c.slug === activeCat)) return false;
+      if (words.length === 0) return true;
+      const haystack = [p.title, toPlainText(p.excerpt), ...p.categories.map((c) => c.name), ...p.tags.map((t) => t.name)]
+        .join(" ")
+        .toLowerCase();
+      return words.every((w) => haystack.includes(w));
+    });
+  }, [allPosts, activeCat, search]);
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["wp-posts", page, activeCat, search],
-    queryFn: () => fetchPosts(page, 9, activeCat, search || undefined),
-    staleTime: 2 * 60 * 1000,
-  });
-
-  const posts = data?.items || [];
-  const totalPages = data?.totalPages || 1;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  const posts = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,15 +59,15 @@ const Blog = () => {
 
       {/* Hero */}
       <section className="relative pt-40 pb-28 lg:pt-52 lg:pb-36 overflow-hidden bg-ohio-grey-dark">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,0%,2%)] via-[hsl(0,50%,7%)] to-[hsl(0,0%,2%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,6%)] via-[hsl(216,14%,7%)] to-[hsl(216,14%,6%)]" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] blur-[200px]" />
+          <div className="w-[1000px] h-[1000px] rounded-full bg-primary/[0.15] hidden" />
         </div>
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)", backgroundSize: "52px 52px" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_hsl(0_80%_42%/0.5)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-gradient-to-r from-transparent via-primary to-transparent " />
         <div className="container relative text-center">
           <motion.div initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary tracking-[0.35em] uppercase mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 shadow-[0_0_40px_hsl(0_80%_42%/0.2)]">
+            className="inline-flex items-center gap-2.5 text-xs font-extrabold text-primary mb-10 bg-primary/[0.15] px-7 py-3 rounded-full border border-primary/35 ">
             <BookOpen className="w-4 h-4" /> Resources & Insights <BookOpen className="w-4 h-4" />
           </motion.div>
           <h1
@@ -78,25 +85,25 @@ const Blog = () => {
       </section>
 
       {/* Filter & Search Bar */}
-      <section className="relative py-5 bg-ohio-grey-light border-b border-border/50 sticky top-[72px] z-30 backdrop-blur-xl bg-ohio-grey-light/95">
+      <section className="relative py-5 bg-ohio-grey-light border-b border-border/50 sticky top-16 lg:top-[72px] z-30 backdrop-blur-xl bg-ohio-grey-light/95">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 md:flex-wrap scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
+            <div className="flex w-full min-w-0 gap-2 overflow-x-auto pb-2 md:w-auto md:pb-0 md:flex-wrap scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory">
               <button
                 onClick={() => { setActiveCat(undefined); setPage(1); }}
                 className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 ${
-                  !activeCat ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                }`}>
+ !activeCat ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+ }`}>
                 All Posts
               </button>
               {categories.filter((c) => c.slug !== "uncategorized").map((cat) => (
                 <button
-                  key={cat.id}
-                  onClick={() => { setActiveCat(cat.id); setPage(1); }}
+                  key={cat.slug}
+                  onClick={() => { setActiveCat(cat.slug); setPage(1); }}
                   className={`shrink-0 snap-start text-xs font-bold tracking-wide px-4 py-2 rounded-full border transition-all duration-200 whitespace-nowrap ${
-                    activeCat === cat.id ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
-                  }`}>
-                  <span dangerouslySetInnerHTML={{ __html: cat.name }} />
+ activeCat === cat.slug ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/40 hover:text-primary"
+ }`}>
+                  <span>{cat.name}</span>
                 </button>
               ))}
             </div>
@@ -115,31 +122,11 @@ const Blog = () => {
 
       {/* Blog Grid */}
       <section className="py-24 lg:py-32 bg-ohio-grey-light relative overflow-hidden">
-        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[180px]" />
-        <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-[150px]" />
+        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-primary/[0.05] rounded-full hidden" />
+        <div className="absolute bottom-[-200px] left-[-150px] w-[500px] h-[500px] bg-primary/[0.04] rounded-full hidden" />
 
         <div className="container relative">
-          {isLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="rounded-3xl border-2 border-border overflow-hidden">
-                  <Skeleton className="h-52 w-full" />
-                  <div className="p-7 space-y-3">
-                    <Skeleton className="h-4 w-1/3" />
-                    <Skeleton className="h-6 w-full" />
-                    <Skeleton className="h-4 w-full" />
-                    <Skeleton className="h-4 w-2/3" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : error ? (
-            <div className="text-center py-20">
-              <h2 className="text-2xl font-black text-foreground mb-4">Unable to Load Posts</h2>
-              <p className="text-muted-foreground mb-6">We're having trouble connecting to our blog. Please try again later.</p>
-              <Button onClick={() => window.location.reload()}>Retry</Button>
-            </div>
-          ) : posts.length === 0 ? (
+          {posts.length === 0 ? (
             <div className="text-center py-20 max-w-3xl mx-auto">
               <div className="mx-auto mb-8 w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
                 <BookOpen className="w-12 h-12 text-primary" />
@@ -158,7 +145,7 @@ const Blog = () => {
                 </Button>
               )}
               <p className="text-muted-foreground mb-10 leading-relaxed">
-                In the meantime, explore our services or request a free quote — your Buckeye Branding Concierge is ready to help!
+                In the meantime, look through our services or ask for a free quote.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/services">
@@ -179,9 +166,9 @@ const Blog = () => {
               <BlogCard post={posts[0]} featured />
 
               {/* Grid of remaining */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.slice(1).map((post, i) => (
-                  <motion.div key={post.id} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
+                  <motion.div key={post.slug} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.06, duration: 0.5 }}>
                     <BlogCard post={post} />
                   </motion.div>
                 ))}
@@ -223,9 +210,9 @@ const Blog = () => {
 
       {/* Bottom CTA */}
       <section className="py-32 lg:py-44 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,92%,33%)] via-primary to-[hsl(0,78%,28%)]" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full blur-[180px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-foreground/[0.06] rounded-full hidden" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-foreground/[0.06] rounded-full hidden" />
         <div className="container relative text-center">
           <motion.h2 initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground mb-10 leading-[0.88]"
@@ -239,7 +226,7 @@ const Blog = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
             <Link to="/contact">
               <Button size="lg"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group uppercase tracking-widest">
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-2xl px-16 py-10 rounded-2xl shadow-[0_12px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_80px_rgba(255,255,255,0.25)] transition-all duration-400 group ">
                 <Phone className="w-7 h-7" /> Get Your Free Quote Today
                 <ArrowRight className="w-7 h-7 group-hover:translate-x-2.5 transition-transform duration-300" />
               </Button>

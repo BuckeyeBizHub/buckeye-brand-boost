@@ -9,12 +9,12 @@ import Footer from "@/components/Footer";
 import { track404 } from "@/lib/error-tracking";
 
 const popularPages = [
-  { label: "Our Services", href: "/services", icon: Briefcase, description: "Browse our full range of printing, branding, and marketing solutions." },
-  { label: "Business Cards", href: "/business-cards-printing", icon: Star, description: "Premium business cards with gold foil, raised print, and custom finishes." },
-  { label: "Vehicle Wraps", href: "/vehicle-wraps", icon: MapPin, description: "Full and partial vehicle wraps for fleet branding across Ohio." },
-  { label: "Get a Quote", href: "/contact", icon: Phone, description: "Request your free 24-hour quote — no obligation, wholesale pricing." },
-  { label: "Blog", href: "/blog", icon: BookOpen, description: "Tips, guides, and Ohio business branding insights." },
-  { label: "Pricing", href: "/pricing", icon: DollarSign, description: "Transparent pricing with no hidden fees." },
+  { label: "Our Services", href: "/services", icon: Briefcase, description: "Printing, branding and marketing, all in one place." },
+  { label: "Business Cards", href: "/business-cards-printing", icon: Star, description: "Business cards with gold foil, raised print and custom finishes." },
+  { label: "Vehicle Wraps", href: "/vehicle-wraps", icon: MapPin, description: "Full and partial wraps for fleets across Ohio." },
+  { label: "Get a Quote", href: "/contact", icon: Phone, description: "Free quote within 24 hours. No obligation. Wholesale pricing." },
+  { label: "Blog", href: "/blog", icon: BookOpen, description: "Tips and guides for Ohio business branding." },
+  { label: "Pricing", href: "/pricing", icon: DollarSign, description: "Every fee up front. No hidden costs." },
 ];
 
 const NotFound = () => {
@@ -37,7 +37,7 @@ const NotFound = () => {
       <div className="flex-1 pt-32 pb-20 lg:pt-44 lg:pb-28">
         <div className="container max-w-4xl mx-auto px-6 text-center">
           {/* Error indicator */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-black px-5 py-2 rounded-full mb-8">
             <Search className="w-3.5 h-3.5" />
             Error 404
           </div>
@@ -48,11 +48,11 @@ const NotFound = () => {
 
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
             We couldn't find <code className="bg-muted px-2 py-0.5 rounded text-sm font-mono">{location.pathname}</code>.
-            It may have been moved, renamed, or no longer exists.
+            It may have moved, been renamed or been taken down.
           </p>
 
           <p className="text-muted-foreground mb-10">
-            Try one of these popular pages or head back to the homepage.
+            Try one of these pages or head back home.
           </p>
 
           {/* CTA buttons */}
@@ -76,7 +76,7 @@ const NotFound = () => {
             <h2 className="font-display text-2xl font-black text-foreground mb-6 text-center">
               Popular Pages
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {popularPages.map((page) => (
                 <Link
                   key={page.href}
@@ -106,7 +106,7 @@ const NotFound = () => {
               <h3 className="font-display text-lg font-bold text-foreground">Need Help?</h3>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              If you believe this page should exist, please let us know so we can fix it.
+              Think this page should be here? Let us know and we'll fix it.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a href="tel:+16145613358" className="inline-flex items-center gap-1.5 text-primary font-bold hover:underline">

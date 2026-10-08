@@ -37,7 +37,7 @@ const BrochuresPricing = () => (
           <span className="text-primary">Pricing Guide</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Straightforward pricing for flyers and brochures — no surprises, just honest numbers.
+          Straight pricing for flyers and brochures. Honest numbers, no surprises.
         </p>
       </motion.div>
 
@@ -80,7 +80,7 @@ const BrochuresPricing = () => (
                   {row.prices.map((price, j) => (
                     <TableCell
                       key={j}
-                      className={`text-center font-semibold ${price === "—" ? "text-muted-foreground" : "text-foreground"}`}
+                      className={`text-center font-semibold ${price === "N/A" ? "text-muted-foreground" : "text-foreground"}`}
                     >
                       {price}
                     </TableCell>
@@ -101,7 +101,7 @@ const BrochuresPricing = () => (
                 {row.prices.map((price, j) => (
                   <div key={j} className="text-center bg-secondary/50 rounded-lg py-2 px-1">
                     <span className="block text-[11px] text-muted-foreground">{quantities[j]}</span>
-                    <span className={`block text-sm font-bold ${price === "—" ? "text-muted-foreground" : "text-foreground"}`}>
+                    <span className={`block text-sm font-bold ${price === "N/A" ? "text-muted-foreground" : "text-foreground"}`}>
                       {price}
                     </span>
                   </div>
@@ -120,7 +120,7 @@ const BrochuresPricing = () => (
       >
         <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Prices are for full color printing on both sides. Basic file setup and simple design adjustments are included. Design time fee may apply for complex custom work. Up to 10% quantity discount available on orders of $1,500 or more. Exact pricing depends on quantity, paper choice, coating, and turnaround time. We'll provide a clear, customized quote within 24 hours — no obligation.
+          Prices are for full color on both sides. Basic file setup and simple design tweaks are included. Complex custom work may carry a design fee. Orders of $1,500 or more can get up to a 10% quantity discount. Exact price depends on quantity, paper, coating and turnaround. You'll get a clear quote within 24 hours. No obligation.
         </p>
       </motion.div>
     </div>

@@ -3,7 +3,7 @@ import Page from "@/views/WebsiteDesign";
 
 export const metadata = pageMetadata({
   title: "Website Design & Development Columbus Ohio",
-  description: "Modern, mobile-friendly website design for Ohio businesses. Fast-loading, lead-generating websites built to attract customers and grow your brand 24/7.",
+  description: "Mobile-friendly websites for Ohio businesses. Fast to load and built to bring in leads around the clock.",
   path: "/website-design",
 });
 

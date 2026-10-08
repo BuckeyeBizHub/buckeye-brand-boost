@@ -2,8 +2,8 @@ import { pageMetadata } from "@/lib/page-metadata";
 import Page from "@/views/Contact";
 
 export const metadata = pageMetadata({
-  title: "Contact",
-  description: "Ready to get started? Contact Buckeye Biz Hub for a custom 24-hour quote on printing, vehicle wraps, banners, decals, and branding services.",
+  title: "Contact Buckeye Biz Hub",
+  description: "Call (614) 561-3358 or send a note. Get a free quote within 24 hours on printing, vehicle wraps, banners, decals and branding.",
   path: "/contact",
 });
 

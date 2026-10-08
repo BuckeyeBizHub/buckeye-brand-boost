@@ -23,9 +23,9 @@ interface ServicePageLayoutProps {
 }
 
 const trustItems = [
-  "24-Hour Quotes",
-  "Full Pricing Transparency",
-  "Ohio Owned & Operated",
+  "Free quotes in 24 hours",
+  "No hidden fees",
+  "Ohio owned and operated",
 ];
 
 const ServicePageLayout = ({
@@ -55,7 +55,7 @@ const ServicePageLayout = ({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30"
+              className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-8 bg-primary/[0.12] px-6 py-2.5 rounded-full border border-primary/30"
             >
               <Sparkles className="w-3.5 h-3.5" />
               {title}
@@ -89,9 +89,9 @@ const ServicePageLayout = ({
               className="flex flex-wrap justify-center gap-3 mb-10"
             >
               {[
-                { icon: ShieldCheck, label: "No Hidden Fees" },
-                { icon: BadgeCheck, label: "Wholesale Pricing" },
-                { icon: ThumbsUp, label: "100% Satisfaction Guaranteed" },
+                { icon: ShieldCheck, label: "No hidden fees" },
+                { icon: BadgeCheck, label: "Wholesale pricing" },
+                { icon: ThumbsUp, label: "100% satisfaction guarantee" },
               ].map((b) => (
                 <span key={b.label} className="inline-flex items-center gap-2 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/25 rounded-full px-5 py-2.5 text-sm font-bold text-primary-foreground">
                   <b.icon className="w-4 h-4 text-primary" />
@@ -102,8 +102,8 @@ const ServicePageLayout = ({
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.5 }}>
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl shadow-[0_0_50px_hsl(0_80%_42%/0.4)] hover:shadow-[0_0_80px_hsl(0_80%_42%/0.6)] group uppercase tracking-wider transition-all duration-300">
-                  Get Your 24-Hour Quote
+                <Button size="lg" className="bg-primary hover:bg-ohio-red-light text-primary-foreground font-black text-lg sm:text-xl px-12 py-8 rounded-2xl group transition-all duration-300">
+                  Get a free quote in 24 hours
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -115,7 +115,7 @@ const ServicePageLayout = ({
       {/* Content */}
       <section className="py-24 lg:py-36 bg-background">
         <div className="container max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <img src={image} alt={title} loading="lazy" width={800} height={600} className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
             </motion.div>
@@ -125,7 +125,7 @@ const ServicePageLayout = ({
                 <p key={i} className="text-muted-foreground text-lg leading-relaxed mb-6">{p}</p>
               ))}
 
-              <h3 className="font-display text-2xl font-black text-foreground mb-6 mt-10">Key Benefits</h3>
+              <h3 className="font-display text-2xl font-black text-foreground mb-6 mt-10">What you get</h3>
               <ul className="space-y-4 mb-10">
                 {benefits.map((b, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -135,7 +135,7 @@ const ServicePageLayout = ({
                 ))}
               </ul>
 
-              <h3 className="font-display text-2xl font-black text-foreground mb-4">Why Ohio Businesses Choose Us</h3>
+              <h3 className="font-display text-2xl font-black text-foreground mb-4">Why Ohio businesses call us</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">{whyOhio}</p>
             </motion.div>
           </div>
@@ -144,17 +144,17 @@ const ServicePageLayout = ({
 
       {/* Bottom CTA */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(0,90%,35%)] via-primary to-[hsl(0,75%,30%)]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full blur-[150px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,14%,12%)] via-primary to-[hsl(216,14%,12%)]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-foreground/[0.05] rounded-full hidden" />
         <div className="container relative text-center max-w-3xl mx-auto px-6">
           <motion.h2 initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground mb-6 leading-tight" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.4)" }}>
-            Ready to get started with {title}?
+            Ready to talk {title}?
           </motion.h2>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Link to="/contact">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group uppercase tracking-widest">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black text-xl px-14 py-9 rounded-2xl shadow-[0_10px_50px_rgba(0,0,0,0.3)] transition-all duration-300 group ">
                 <Phone className="w-6 h-6" />
-                Get Your Custom Quote in 24 Hours
+                Get your free quote in 24 hours
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>

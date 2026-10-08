@@ -3,7 +3,7 @@ import Page from "@/views/FullRebrandKits";
 
 export const metadata = pageMetadata({
   title: "Full Rebrand Kits Columbus Ohio",
-  description: "Complete rebrand kits for Ohio businesses \u2014 vehicle wraps, signage, apparel, and print all coordinated. We shop top vendors. One contact.",
+  description: "Full rebrand kits for Ohio businesses. Vehicle wraps, signage, apparel and print, all coordinated. We shop top vendors. You deal with one person.",
   path: "/full-rebrand-kits",
 });
 

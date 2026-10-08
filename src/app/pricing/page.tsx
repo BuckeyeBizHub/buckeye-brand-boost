@@ -2,8 +2,8 @@ import { pageMetadata } from "@/lib/page-metadata";
 import Page from "@/views/Pricing";
 
 export const metadata = pageMetadata({
-  title: "Pricing",
-  description: "Transparent pricing with no hidden fees. Get fast, honest quotes for all your printing, vehicle wrap, banner, and branding needs in Central Ohio.",
+  title: "Pricing: Printing, Wraps & Signs",
+  description: "No hidden fees. Fast, honest quotes on printing, vehicle wraps, banners and branding for Central Ohio businesses.",
   path: "/pricing",
 });
 

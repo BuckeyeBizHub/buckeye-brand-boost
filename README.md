@@ -22,5 +22,5 @@ npm run build    # the strict build Vercel runs; do this before pushing
 - `next.config.ts` permanent (301) redirects for old and merged URLs.
 - `public/assets/` site images.
 
-Blog posts come from WordPress at buckeyebizhub.blog and are rendered on the
-server, refreshed hourly.
+Blog posts live in `content/blog/<slug>.json` (images in `public/media/blog/`)
+and are read at build time by `src/lib/blog.ts`. Add a JSON file to publish a post.

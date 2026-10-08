@@ -12,53 +12,39 @@ import {
 
 const milestones = [
   {
-    year: "1990's",
-    icon: UtensilsCrossed,
-    title: "Hospitality Beginnings",
-    description:
-      "Launched my first company from scratch in the hospitality industry — learning the fundamentals of operations, service, and what it really takes to make customers happy.",
-  },
-  {
-    year: "Early 2000's",
-    icon: Beer,
-    title: "Entered the Beverage Industry",
-    description:
-      "Pivoted into beverage, building a second company from the ground up while mastering product development, sales, and distribution.",
-  },
-  {
-    year: "Mid 2000's",
-    icon: Lightbulb,
-    title: "Co-Invented the Beer Tube",
-    description:
-      "From a basement prototype to bars and restaurants nationwide — co-invented the iconic beer tube dispenser that changed how people share drinks.",
-  },
-  {
-    year: "Late 2000's",
-    icon: TrendingUp,
-    title: "Scaled to $5M / Year",
-    description:
-      "Grew the beer tube company into a $5 million-a-year business — proving I could turn an idea into a real, scalable operation while keeping quality high.",
-  },
-  {
-    year: "2010's",
+    year: "2001–2006",
     icon: Fuel,
-    title: "Built a Gasoline Industry Company",
+    title: "Clintonville Automotive Repair Service",
     description:
-      "Started a third company in the gasoline industry — adding manufacturing, large-scale operations, and B2B leadership to my experience.",
+      "Service manager at my family's independent repair shop, a third-generation business. I learned how a trades business runs: take care of the customer and keep the bays moving.",
   },
   {
-    year: "2020's",
-    icon: Building2,
-    title: "Founded Buckeye Biz Hub",
+    year: "2005",
+    icon: Beer,
+    title: "Co-founded BeerTubes",
     description:
-      "After 30+ years of building businesses, I created Buckeye Biz Hub as a true concierge service for Columbus and Central Ohio small and medium businesses.",
+      "Co-founder and president. I'm a named inventor on the company's patents.",
+  },
+  {
+    year: "2005–2017",
+    icon: TrendingUp,
+    title: "Grew BeerTubes to $4.5M",
+    description:
+      "Sales went from $79K in year one to $4.5M. We sold to Anheuser-Busch InBev, MillerCoors, Constellation Brands and 100+ distributors. I sold the company in 2017.",
+  },
+  {
+    year: "2017–2023",
+    icon: UtensilsCrossed,
+    title: "Built SBC Hospitality Group",
+    description:
+      "Founder and president. Stein Brewing Co. in Mount Vernon, a Newark brewery and The Joint diner, plus a Dave's Cosmic Subs franchise I co-owned. More than 100 employees.",
   },
   {
     year: "Today",
-    icon: Sparkles,
-    title: "Your Buckeye Branding Concierge",
+    icon: Building2,
+    title: "Running Buckeye Biz Hub",
     description:
-      "Helping hundreds of local Ohio businesses look professional, save time, and grow — with honesty, transparency, and personal care on every project.",
+      "I co-founded Buckeye Biz Hub and run it day to day. I line up your branding, print and fleet graphics through trusted partner shops, installers and print vendors.",
   },
 ];
 
@@ -73,16 +59,16 @@ const JourneyTimeline = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <span className="inline-block bg-ohio-gold/15 border border-ohio-gold/40 text-ohio-gold-dark text-xs font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-6">
-            ★ 30+ Years of Building ★
+          <span className="inline-block bg-ohio-gold/15 border border-ohio-gold/40 text-ohio-gold-dark text-xs font-black px-5 py-2 rounded-full mb-6">
+            ★ 20+ years of building ★
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight mb-4">
-            30+ Years of Building –{" "}
-            <span className="text-primary">David's Entrepreneurial Journey</span>
+            20+ years of building.{" "}
+            <span className="text-primary">Here's the road so far.</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Three companies built from scratch. One iconic invention. Decades
-            of lessons — all working for you.
+            A family repair shop, a patented product company and a
+            hospitality group. Every lesson goes to work for you.
           </p>
           <div className="flex items-center justify-center gap-2 mt-6">
             <div className="w-12 h-1 bg-primary rounded-full" />
@@ -122,7 +108,7 @@ const JourneyTimeline = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="bg-ohio-cream border border-border rounded-2xl p-6">
-                      <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                      <span className="inline-block text-xs font-black text-primary mb-2">
                         {m.year}
                       </span>
                       <h3 className="font-display text-xl font-black text-foreground mb-2 leading-tight">
@@ -139,7 +125,7 @@ const JourneyTimeline = () => {
                     <>
                       <div className="hidden md:block text-right pr-12">
                         <div className="bg-ohio-cream border border-border rounded-2xl p-7 inline-block text-left max-w-md">
-                          <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                          <span className="inline-block text-xs font-black text-primary mb-2">
                             {m.year}
                           </span>
                           <h3 className="font-display text-xl lg:text-2xl font-black text-foreground mb-2 leading-tight">
@@ -157,7 +143,7 @@ const JourneyTimeline = () => {
                       <div className="hidden md:block" />
                       <div className="hidden md:block pl-12">
                         <div className="bg-ohio-cream border border-border rounded-2xl p-7 max-w-md">
-                          <span className="inline-block text-xs font-black uppercase tracking-wider text-primary mb-2">
+                          <span className="inline-block text-xs font-black text-primary mb-2">
                             {m.year}
                           </span>
                           <h3 className="font-display text-xl lg:text-2xl font-black text-foreground mb-2 leading-tight">

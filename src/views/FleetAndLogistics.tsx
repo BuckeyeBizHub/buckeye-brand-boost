@@ -22,7 +22,7 @@ const FleetAndLogistics = () => {
   usePageSEO({
     title: "Fleet & Logistics Branding | Columbus Ohio | Buckeye Biz Hub",
     description:
-      "TODO: Final SEO description for Ohio fleet and logistics companies — fleet wraps, driver uniforms, safety vests, branded materials.",
+      "TODO: Final SEO description for Ohio fleet and logistics companies: fleet wraps, driver uniforms, safety vests, branded materials.",
     noindex: true,
   });
 
@@ -41,23 +41,23 @@ const FleetAndLogistics = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.3em] uppercase mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
-              <Truck className="w-4 h-4" /> Ohio Fleet & Logistics
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-7 bg-primary/15 px-5 py-2 rounded-full border border-primary/30">
+              <Truck className="w-4 h-4" /> Ohio fleet and logistics
             </span>
             {/* TODO: finalize H1 + subheadline */}
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] xl:text-6xl font-black leading-[1.05] mb-6 text-primary-foreground">
-              Consistent Branding Across{" "}
-              <span className="text-primary text-glow-red">Every Vehicle & Driver</span>
+              One look across{" "}
+              <span className="text-primary text-glow-red">every truck and every driver</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/75 leading-relaxed max-w-2xl mx-auto mb-8">
-              TODO: Hero subheadline — fleet wraps, driver uniforms, safety vests, and branded materials for Ohio fleet operators.
+              TODO: Hero subheadline: fleet wraps, driver uniforms, safety vests, and branded materials for Ohio fleet operators.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
               >
-                Get a Free Fleet Quote
+                Get a free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -65,33 +65,33 @@ const FleetAndLogistics = () => {
         </div>
       </section>
 
-      {/* Section 1 — Why Ohio Fleet Operators Choose Us */}
+      {/* Section 1: Why Ohio Fleet Operators Choose Us */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Award className="w-4 h-4" /> Why Fleet Operators Trust Buckeye Biz Hub
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
+              <Award className="w-4 h-4" /> Why fleet operators trust Buckeye Biz Hub
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Section 1 headline —{" "}
+              TODO: Section 1 headline:{" "}
               <span className="text-primary">value prop for fleet operators.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              TODO: Section 1 body — why we get fleet operations (vehicle downtime cost, phased installation, brand consistency across a growing fleet).
+              TODO: Section 1 body: why we get fleet operations (vehicle downtime cost, phased installation, brand consistency across a growing fleet).
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 2 — Products & Solutions */}
+      {/* Section 2: Products & Solutions */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Sparkles className="w-4 h-4" /> Products & Solutions for Fleets
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
+              <Sparkles className="w-4 h-4" /> What we do for fleets
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Section 2 headline — products grid intro.
+              TODO: Section 2 headline: products grid intro.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               TODO: Replace with product cards (full wraps, spot graphics, decal kits, driver polos/jackets, safety vests, trailer graphics, branded ID badges).
@@ -100,15 +100,15 @@ const FleetAndLogistics = () => {
         </div>
       </section>
 
-      {/* Section 3 — Who We Serve */}
+      {/* Section 3: Who We Serve */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Users className="w-4 h-4" /> Who We Serve
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
+              <Users className="w-4 h-4" /> Who we serve
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
-              TODO: Fleet audiences —{" "}
+              TODO: Fleet audiences:{" "}
               <span className="text-primary">delivery, moving, service-fleet, trucking.</span>
             </h2>
             <ul className="space-y-3 text-lg text-muted-foreground">
@@ -120,12 +120,12 @@ const FleetAndLogistics = () => {
         </div>
       </section>
 
-      {/* Section 4 — The Buckeye Biz Hub Difference */}
+      {/* Section 4: The Buckeye Biz Hub Difference */}
       <section className="py-20 lg:py-24 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} custom={0} variants={fadeUp}>
-            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              <Award className="w-4 h-4" /> The Buckeye Biz Hub Difference
+            <span className="inline-flex items-center gap-2 text-xs font-extrabold text-primary mb-3">
+              <Award className="w-4 h-4" /> The Buckeye Biz Hub difference
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-foreground leading-[1.1]">
               TODO: Differentiator headline.
@@ -137,7 +137,7 @@ const FleetAndLogistics = () => {
         </div>
       </section>
 
-      {/* Operator credibility insert — above final CTA */}
+      {/* Operator credibility insert, above final CTA */}
       <section className="py-16 lg:py-20 bg-ohio-cream">
         <div className="container max-w-3xl">
           <motion.div
@@ -146,15 +146,15 @@ const FleetAndLogistics = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="inline-block text-xs font-extrabold text-primary tracking-[0.25em] uppercase mb-3">
-              Built by an Operator
+            <span className="inline-block text-xs font-extrabold text-primary mb-3">
+              Built by an operator
             </span>
             <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-foreground leading-[1.15]">
-              This Isn't Theory. It's Built by{" "}
-              <span className="text-primary">Someone Who's Done It.</span>
+              Run by someone who's{" "}
+              <span className="text-primary">been in your seat.</span>
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Buckeye Biz Hub is led by David Stein — a three-time Ohio business founder including the patented product company BeerTubes (28 patents, sold to industry in 2017). The branding and marketing recommendations you'll get here come from someone who's spent his own money on marketing, scaled real businesses, and knows what actually works.
+              David Stein co-founded Buckeye Biz Hub and runs it day to day. Before that, he co-founded BeerTubes, was named inventor on its patents, grew it from $79K in year one to $4.5M and sold it in 2017. Then he built SBC Hospitality Group to 100+ employees. He's spent his own money on marketing. He knows what works and what doesn't.
             </p>
             <Link
               to="/about"
@@ -180,17 +180,17 @@ const FleetAndLogistics = () => {
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-black text-primary-foreground mb-5 leading-tight">
               TODO: Final CTA headline for{" "}
-              <span className="text-primary text-glow-red">Fleet & Logistics.</span>
+              <span className="text-primary text-glow-red">fleet and logistics.</span>
             </h2>
             <p className="text-primary-foreground/70 text-lg md:text-xl mb-10 leading-relaxed">
-              TODO: Final CTA body — invitation to start a conversation.
+              TODO: Final CTA body: invitation to start a conversation.
             </p>
             <Link to="/contact">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl shadow-[0_0_40px_hsl(0_80%_42%/0.45)] hover:shadow-[0_0_70px_hsl(0_80%_42%/0.65)] transition-all duration-300 group uppercase tracking-wider"
+                className="bg-primary text-primary-foreground hover:bg-ohio-red-light font-black text-base md:text-lg px-9 py-7 rounded-2xl transition-all duration-300 group "
               >
-                Get a Free Fleet Quote
+                Get a free fleet quote
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
