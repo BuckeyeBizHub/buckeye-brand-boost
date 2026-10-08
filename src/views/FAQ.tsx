@@ -70,7 +70,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What payment methods do you accept?",
-        a: "Credit card, ACH bank transfer, business check and Zelle. Net 30 terms for established clients with approved credit.",
+        a: "Credit card, ACH bank transfer and business check. Net payment terms are available for established customers.",
       },
     ],
   },
@@ -112,7 +112,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What's the difference between vehicle wraps and spot graphics?",
-        a: "A full wrap covers the whole vehicle in printed vinyl. A full commercial van wrap starts at $2,800, installed. Spot graphics cover the spots people see most, like doors, the rear and accent panels, with your logo and contact info. Truck or van door lettering starts at $249, installed. A partial wrap, from $1,200, sits in between.",
+        a: "A full wrap covers the whole vehicle in printed vinyl. Wraps start at $14 per square foot for design, print and install, and less if your files are print ready. Spot graphics cover the spots people see most, like doors, the rear and accent panels, with your logo and contact info. Truck or van door lettering starts at $249, installed. A partial wrap sits in between.",
       },
       {
         q: "Which is right for my business: wraps or spot graphics?",

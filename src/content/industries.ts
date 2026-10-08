@@ -672,7 +672,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Fleet wraps, decal kits, USDOT lettering and driver apparel for growing fleets.",
     metaTitle: "Fleet Graphics and Truck Lettering in Columbus",
     metaDescription:
-      "Fleet wraps, decal kits, USDOT lettering and driver apparel for Columbus fleets. Truck door lettering from $249 installed, van wraps from $2,800. Free quote.",
+      "Fleet wraps, decal kits, USDOT lettering and driver apparel for Columbus fleets. Door lettering from $249 installed, wraps from $14/sq ft. Free quote.",
     eyebrow: "Fleet and logistics",
     h1: "Every truck in the fleet, the same look.",
     lede: "Fleet graphics in Columbus for delivery vans, service trucks, box trucks and trailers: wraps, decal kits, USDOT lettering and driver apparel. I keep the specs on file, so the newest truck matches the oldest one.",
@@ -714,7 +714,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       },
       {
         heading: "Wrap the fleet without parking it",
-        body: "Every day a truck sits in the shop is a day it isn't earning. For a fleet rollout, plan the wraps a few vehicles at a time so most of the fleet stays on the road. I'll line up the schedule with my partner wrap shops and trusted installers around your routes.\n\nA partial wrap on a van or pickup starts at $1,200 installed. A full wrap on a cargo van starts at $2,800 installed. Partials put your brand where people look first, and full wraps turn the whole van into a sign.\n\nBox trucks and trailers have big flat sides, which makes them a cost-effective place for large graphics.",
+        body: "Every day a truck sits in the shop is a day it isn't earning. For a fleet rollout, plan the wraps a few vehicles at a time so most of the fleet stays on the road. I'll line up the schedule with my partner wrap shops and trusted installers around your routes.\n\nWraps start at $14 per square foot for design, print and install, less if your files are print ready. Partials put your brand where people look first, and full wraps turn the whole van into a sign.\n\nBox trucks and trailers have big flat sides, which makes them a cost-effective place for large graphics.",
       },
       {
         heading: "USDOT numbers and the details that matter",
@@ -729,11 +729,11 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "embroidered-apparel",
       "wall-and-floor-graphics",
     ],
-    prices: ["door-lettering", "partial-wrap", "full-van-wrap", "embroidered-polos"],
+    prices: ["door-lettering", "vehicle-wrap", "embroidered-polos"],
     faqs: [
       {
         q: "How much does it cost to wrap a fleet van?",
-        a: "A full wrap on a cargo van starts at $2,800 installed. A partial wrap on a van or pickup starts at $1,200 installed. Fleet orders are quoted by vehicle type, so send me the makes, models and how many of each.",
+        a: "Wraps start at $14 per square foot for design, print and install, less if your files are print ready. Fleet orders are quoted by vehicle type, so send me the makes, models and how many of each.",
       },
       {
         q: "Can you wrap our trucks a few at a time?",

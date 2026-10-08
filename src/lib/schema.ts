@@ -56,6 +56,9 @@ export function serviceLd(opts: {
         minPrice: p.from,
         priceCurrency: "USD",
         ...(p.per === "each" ? { referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "each" } } : {}),
+        ...(p.per === "sq ft"
+          ? { referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "FTK", unitText: "square foot" } }
+          : {}),
       },
       eligibleQuantity: { "@type": "QuantitativeValue", minValue: p.quantity },
       availability: "https://schema.org/InStock",

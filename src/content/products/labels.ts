@@ -291,7 +291,7 @@ export const LABEL_PAGES: ProductPage[] = [
       },
       {
         q: "Is vehicle lettering cheaper than a wrap?",
-        a: "Yes, by a lot. Door lettering starts at $249 installed. A partial wrap on a van or pickup starts at $1,200. Lettering gets your name on the truck. A wrap turns the truck into a billboard.",
+        a: "Yes, by a lot. Door lettering starts at $249 installed. Wraps start at $14 per square foot, installed. Lettering gets your name on the truck. A wrap turns the truck into a billboard.",
       },
       {
         q: "How long does vehicle lettering last?",

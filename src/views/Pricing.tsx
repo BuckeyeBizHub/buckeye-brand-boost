@@ -9,7 +9,7 @@ const TABLES: { title: string; keys: PriceKey[] }[] = [
   { title: "Labels, decals and lettering", keys: ["roll-labels", "vinyl-decals", "door-lettering", "car-magnets", "window-lettering"] },
   { title: "Signs and banners", keys: ["yard-signs", "vinyl-banner", "aluminum-sign", "retractable-banner"] },
   { title: "Business printing", keys: ["business-cards", "postcards", "flyers", "door-hangers"] },
-  { title: "Vehicle wraps", keys: ["partial-wrap", "full-van-wrap"] },
+  { title: "Vehicle wraps", keys: ["vehicle-wrap"] },
   { title: "Apparel", keys: ["embroidered-polos", "screen-printed-tees"] },
 ];
 
@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     q: "Do prices include installation?",
-    a: "Lettering and wrap prices marked installed include installation. Printed items ship to you.",
+    a: "Lettering and wrap prices include installation. Printed items ship to you.",
   },
   {
     q: "What if I'm not happy with it?",

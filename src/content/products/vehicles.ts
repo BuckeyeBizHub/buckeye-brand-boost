@@ -9,7 +9,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
     blurb: "Full, partial and spot graphics wraps for vans, pickups, box trucks and trailers.",
     metaTitle: "Vehicle Wraps for Business in Columbus, Ohio",
     metaDescription:
-      "Commercial vehicle wraps for work vans, pickups, box trucks and trailers in Central Ohio. Partial wraps from $1,200, installed. Free quote in 24 hours.",
+      "Commercial vehicle wraps for work vans, pickups, box trucks and trailers in Central Ohio. From $14/sq ft with design and install. Free quote in 24 hours.",
     eyebrow: "Vehicle wraps",
     h1: "Wrap the truck you already drive to every job.",
     lede: "Vehicle wraps for work vans, pickups, box trucks, trailers and food trucks across Columbus and Central Ohio. Full, partial or spot graphics, with one person running the job from design to install.",
@@ -17,7 +17,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
       src: "/assets/vehicle-wrap-hero.jpg",
       alt: "Work van with a red, green and yellow wrap parked next to plain white vans",
     },
-    prices: ["partial-wrap", "full-van-wrap", "door-lettering"],
+    prices: ["vehicle-wrap", "door-lettering"],
     options: [
       {
         name: "Full vehicle wraps",
@@ -67,7 +67,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
       },
       {
         heading: "What affects the cost of a vehicle wrap?",
-        body: "Size is the big one. A box truck has a lot more surface than a pickup, and a full wrap on a high-roof van takes more vinyl and more install time than a partial on a smaller vehicle.\n\nAfter size comes coverage, design work and the shape of the vehicle. Deep curves, rivets and bumpers take longer to wrap clean. Paint condition matters too. Vinyl needs a solid surface, so peeling clear coat or rust has to be dealt with first.\n\nPartial wraps start at $1,200 and full commercial van wraps start at $2,800, installed. Send me the year, make and model, or a few photos, and you'll have a real number within 24 hours.",
+        body: "Size is the big one. A box truck has a lot more surface than a pickup, and a full wrap on a high-roof van takes more vinyl and more install time than a partial on a smaller vehicle.\n\nAfter size comes coverage, design work and the shape of the vehicle. Deep curves, rivets and bumpers take longer to wrap clean. Paint condition matters too. Vinyl needs a solid surface, so peeling clear coat or rust has to be dealt with first.\n\nWraps start at $14 per square foot for design, print and install. Less if your files are print ready. Send me the year, make and model, or a few photos, and you'll have a real number within 24 hours.",
       },
       {
         heading: "How long does a vehicle wrap last, and how do you care for it?",
@@ -77,7 +77,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does it cost to wrap a work van?",
-        a: "Partial wraps on a van or pickup start at $1,200, installed. Full commercial van wraps start at $2,800, installed. Size, coverage, design and the shape of the vehicle set the final price, and your quote comes back within 24 hours.",
+        a: "Wraps start at $14 per square foot for design, print and install. Less if your files are print ready. Every wrap is quoted to the vehicle. Size, coverage, design and the shape of the vehicle set the final price, and your quote comes back within 24 hours.",
       },
       {
         q: "Is a partial wrap worth it?",
@@ -114,7 +114,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
     blurb: "One design across your whole fleet, rolled out a truck at a time.",
     metaTitle: "Fleet Wraps for Work Trucks in Columbus, Ohio",
     metaDescription:
-      "Fleet wraps for businesses with two or more work vehicles in Central Ohio. One design, rolled out a truck at a time. Full van wraps from $2,800. Free quote.",
+      "Fleet wraps for businesses with two or more work vehicles in Central Ohio. One design, rolled out a truck at a time. Wraps from $14/sq ft installed. Free quote.",
     eyebrow: "Fleet wraps",
     h1: "One look across every truck you run.",
     lede: "Fleet wraps for businesses with two vans or twenty. One design, set up once and rolled out one vehicle at a time so your trucks keep working. Serving Columbus and Central Ohio.",
@@ -122,7 +122,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
       src: "/assets/vehicle-wrap-fleet.jpg",
       alt: "Aerial view of a parking lot full of matching white vans with red and blue graphics",
     },
-    prices: ["full-van-wrap", "partial-wrap", "door-lettering"],
+    prices: ["vehicle-wrap", "door-lettering"],
     options: [
       {
         name: "Full fleet wraps",
@@ -169,7 +169,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
       },
       {
         heading: "Do you have to wrap every truck in the fleet?",
-        body: "No. Most fleets aren't all new. Put full or partial wraps on the vans you'll keep for years, and put matching door lettering on the older trucks you plan to replace. Same fonts, same colors, same logo. From the street it reads as one fleet.\n\nWhen an old truck gets replaced, the new one gets the full design. The file is already built, so adding a vehicle is print and install, not a new design project.\n\nFull van wraps start at $2,800, partial wraps at $1,200 and door lettering at $249, all installed. Send me a list of your vehicles and I'll price the whole fleet within 24 hours.",
+        body: "No. Most fleets aren't all new. Put full or partial wraps on the vans you'll keep for years, and put matching door lettering on the older trucks you plan to replace. Same fonts, same colors, same logo. From the street it reads as one fleet.\n\nWhen an old truck gets replaced, the new one gets the full design. The file is already built, so adding a vehicle is print and install, not a new design project.\n\nWraps start at $14 per square foot and door lettering at $249, both installed. Send me a list of your vehicles and I'll price the whole fleet within 24 hours.",
         image: {
           src: "/assets/gallery-fleet-consistency.jpg",
           alt: "Two cargo vans in matching orange, red and black graphics parked in a snowy lot",
@@ -179,7 +179,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does it cost to wrap a fleet of vans?",
-        a: "Full commercial van wraps start at $2,800 each, installed. Partial wraps start at $1,200 and door lettering at $249. Send your vehicle list and the quote covers every truck, back within 24 hours.",
+        a: "Wraps start at $14 per square foot for design, print and install, less with print-ready files. Door lettering starts at $249. Send your vehicle list and the quote covers every truck, back within 24 hours.",
       },
       {
         q: "Do you quote fleets as one job?",

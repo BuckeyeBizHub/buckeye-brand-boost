@@ -1,5 +1,6 @@
 // Starting prices shown on the site. Approved by David on Oct 8, 2026
-// (target 25 to 40% margin, low end of the market). Change a number here and
+// (target 25 to 40% margin, low end of the market). Wraps: David's going rate,
+// $14/sq ft for design, print and install, less with print-ready files. Change a number here and
 // every page that shows it updates: product pages, the pricing page and the
 // structured data Google reads.
 //
@@ -19,8 +20,7 @@ export type PriceKey =
   | "aluminum-sign"
   | "door-lettering"
   | "window-lettering"
-  | "partial-wrap"
-  | "full-van-wrap"
+  | "vehicle-wrap"
   | "embroidered-polos"
   | "screen-printed-tees";
 
@@ -31,8 +31,8 @@ export interface StartingPrice {
   spec: string;
   /** Starting price in whole dollars. */
   from: number;
-  /** "each" for per-piece prices; omitted for a whole order. */
-  per?: "each";
+  /** "each" for per-piece prices, "sq ft" for wraps; omitted for a whole order. */
+  per?: "each" | "sq ft";
   /** Quantity the price applies to, for structured data. */
   quantity: number;
   /** True when the price includes installation. */
@@ -120,17 +120,11 @@ export const PRICES: Record<PriceKey, StartingPrice> = {
     quantity: 1,
     installed: true,
   },
-  "partial-wrap": {
-    item: "Partial vehicle wrap",
-    spec: "Van or pickup, printed and laminated, installed",
-    from: 1200,
-    quantity: 1,
-    installed: true,
-  },
-  "full-van-wrap": {
-    item: "Full commercial van wrap",
-    spec: "Cargo van, printed and laminated, installed",
-    from: 2800,
+  "vehicle-wrap": {
+    item: "Vehicle wraps",
+    spec: "Design, print and install. Less if your files are print ready.",
+    from: 14,
+    per: "sq ft",
     quantity: 1,
     installed: true,
   },
@@ -152,5 +146,5 @@ export const PRICES: Record<PriceKey, StartingPrice> = {
 
 export function formatPrice(p: StartingPrice): string {
   const n = p.from >= 1000 ? p.from.toLocaleString("en-US") : String(p.from);
-  return `$${n}${p.per === "each" ? " each" : ""}`;
+  return `$${n}${p.per === "each" ? " each" : p.per === "sq ft" ? "/sq ft" : ""}`;
 }
