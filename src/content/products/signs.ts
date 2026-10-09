@@ -11,7 +11,8 @@ export const SIGN_PAGES: ProductPage[] = [
     metaDescription:
       "Custom yard signs, aluminum signs and A-frames for Columbus contractors, realtors and events. 10 yard signs with H-stakes from $95. Free quote in 24 hours.",
     eyebrow: "Signs",
-    h1: "Signs for the yard, the job site and the sidewalk.",
+    h1: "Yard Signs and Custom Signs in Columbus, Ohio",
+    tagline: "Signs for the yard, the job site and the sidewalk.",
     lede: "Corrugated yard signs, aluminum signs and A-frame sidewalk signs for Columbus contractors, realtors and events. You approve the proof, and the signs show up ready to stake.",
     hero: {
       src: "/photos/1774656451713-ra2xilr8paq.jpeg",
@@ -121,7 +122,8 @@ export const SIGN_PAGES: ProductPage[] = [
     metaDescription:
       "Vinyl banners, mesh fence banners, feather flags and large format posters for Columbus businesses. 3 x 6 ft vinyl banner from $39. Free quote in 24 hours.",
     eyebrow: "Banners and large format",
-    h1: "Banners, flags and big prints people see from the road.",
+    h1: "Custom Banners and Flags in Columbus, Ohio",
+    tagline: "Banners, flags and big prints people see from the road.",
     lede: "Custom vinyl banners, mesh fence banners and feather flags for grand openings, job sites and events around Columbus. Plus large format posters and mounted prints when you need something big indoors.",
     hero: {
       src: "/assets/yard-sign-installation.jpg",
@@ -223,11 +225,12 @@ export const SIGN_PAGES: ProductPage[] = [
     group: "signs",
     navLabel: "Trade show displays",
     blurb: "Retractable banners, table throws, tents and backdrops for Ohio trade shows.",
-    metaTitle: "Trade Show Displays and Stands, Columbus OH",
+    metaTitle: "Trade Show Displays and Booth Graphics in Columbus, Ohio",
     metaDescription:
       "Retractable banners, table throws, tents and booth graphics for Ohio trade shows. Retractable banner with stand from $129. Buy it once, use it at every show.",
     eyebrow: "Trade shows and events",
-    h1: "Trade show booth graphics you own and reuse.",
+    h1: "Trade Show Displays and Booth Graphics in Columbus, Ohio",
+    tagline: "Trade show booth graphics you own and reuse.",
     lede: "Retractable banner stands, table throws, pop-up tents and backdrops for trade shows in Columbus and across Ohio. Buy your trade show display once and bring it to every show, open house and job fair after.",
     hero: {
       src: "/assets/tents-table-throws-bar-rails.jpg",

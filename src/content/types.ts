@@ -26,9 +26,12 @@ export interface ProductPage {
   metaTitle: string;
   /** Meta description, 140 to 160 characters, includes a starting price when there is one. */
   metaDescription: string;
-  /** Eyebrow above the H1, e.g. "Labels and decals". */
+  /** Short label used above section headings, e.g. "Labels and decals". */
   eyebrow: string;
+  /** The page's H1: primary keyword plus city, e.g. "Custom Labels and Roll Labels in Columbus, Ohio". Shown as the small label above the tagline. */
   h1: string;
+  /** The big headline under the H1, e.g. "Custom labels for the stuff you sell." */
+  tagline: string;
   /** Two or three short sentences under the H1. */
   lede: string;
   hero: Img;
@@ -57,7 +60,10 @@ export interface IndustryPage {
   metaTitle: string;
   metaDescription: string;
   eyebrow: string;
+  /** Keyword H1, same rules as product pages. */
   h1: string;
+  /** The big headline under the H1. */
+  tagline: string;
   lede: string;
   hero: Img;
   /** The jobs this kind of business needs done, each pointing at product pages. 3 to 6. */

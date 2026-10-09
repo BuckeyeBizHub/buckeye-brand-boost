@@ -39,27 +39,6 @@ const SOCIAL_PROFILES = [
   "https://www.facebook.com/BuckeyeBizHub",
 ];
 
-/**
- * Shared LocalBusiness defaults: single source of truth for telephone, email,
- * geo coords, opening hours, social profiles, and price range. Pass to
- * `localBusinessSchema()` and override `name`, `description`, or `url` per page.
- */
-export const BUCKEYE_LOCAL_BUSINESS_OPTS = {
-  telephone: "+16145613358",
-  email: "david@buckeyebizhub.com",
-  address: {
-    street: "1193 Virginia Ave",
-    city: "Columbus",
-    region: "OH",
-    postalCode: "43212",
-    country: "US",
-  },
-  geo: { latitude: 39.9612, longitude: -82.9988 },
-  openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
-  priceRange: "$",
-  sameAs: SOCIAL_PROFILES,
-};
-
 // ── Helper types ───────────────────────────────────────────
 
 export interface PersonRef {

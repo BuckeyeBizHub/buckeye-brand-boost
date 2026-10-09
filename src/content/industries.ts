@@ -6,11 +6,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "roofing",
     navLabel: "Roofers",
     blurb: "Yard signs, door hangers, truck lettering and crew shirts for roofing companies.",
-    metaTitle: "Roofing Yard Signs and Door Hangers Columbus",
+    metaTitle: "Roofing Yard Signs and Door Hangers in Columbus",
     metaDescription:
       "Yard signs, door hangers, postcards, truck lettering and crew shirts for Columbus roofing companies. 10 yard signs from $95. Free quote in 24 hours.",
     eyebrow: "Roofing",
-    h1: "Get the next roof on the same street.",
+    h1: "Yard Signs, Door Hangers and Truck Lettering for Roofers in Columbus",
+    tagline: "Get the next roof on the same street.",
     lede: "Roofing marketing that works the neighborhood while your crew works the roof. Yard signs, door hangers, postcards, truck lettering and crew shirts for Columbus roofing companies, all through one person.",
     hero: {
       src: "/photos/roofing-hero-sunset-crew.jpg",
@@ -103,11 +104,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "construction",
     navLabel: "Contractors",
     blurb: "Jobsite banners, hard hat stickers, truck lettering and workwear for contractors.",
-    metaTitle: "Contractor Jobsite Signs and Workwear Columbus",
+    metaTitle: "Contractor Jobsite Signs and Workwear in Columbus",
     metaDescription:
       "Jobsite banners, hard hat stickers, truck lettering and workwear for Columbus contractors. Truck door lettering from $249 installed. Free quote in 24 hours.",
     eyebrow: "Construction",
-    h1: "Signs on the fence, names on the trucks, logos on the crew.",
+    h1: "Jobsite Signs, Truck Lettering and Workwear for Contractors in Columbus",
+    tagline: "Signs on the fence, names on the trucks, logos on the crew.",
     lede: "Construction signs and workwear for Columbus contractors: jobsite banners, hard hat stickers, truck lettering and branded shirts. Every project you build is a chance to show who built it.",
     hero: {
       src: "/assets/construction-hero.jpg",
@@ -204,7 +206,8 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     metaDescription:
       "Dental office signs, business and appointment cards, staff apparel and referral gifts in Columbus. 500 business cards from $29. Free quote in 24 hours.",
     eyebrow: "Dental",
-    h1: "Print, signs and staff apparel for the dental office.",
+    h1: "Signs, Printing and Staff Apparel for Dental Offices in Columbus",
+    tagline: "Print, signs and staff apparel for the dental office.",
     lede: "Dental office printing and signs for practices in Columbus and Central Ohio: appointment cards, letterhead, door lettering, staff polos and thank-yous for referring doctors. One person handles all of it, so your front desk doesn't have to.",
     hero: {
       src: "/assets/dental-printed-materials.jpg",
@@ -297,11 +300,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "medical-specialty",
     navLabel: "Medical practices",
     blurb: "Office signs, patient printing, staff apparel and referral gifts for medical practices.",
-    metaTitle: "Medical Practice Printing and Signs Columbus",
+    metaTitle: "Medical Practice Printing and Signs in Columbus",
     metaDescription:
       "Printing, office signs, staff apparel and referral gifts for Columbus medical practices, chiropractors and PT clinics. 500 business cards from $29. Free quote.",
     eyebrow: "Medical and specialty",
-    h1: "Signs, print and apparel for the practice.",
+    h1: "Signs and Printing for Medical Practices in Columbus",
+    tagline: "Signs, print and apparel for the practice.",
     lede: "Medical practice printing and signs for clinics, chiropractors, physical therapists, vets and specialists in Columbus. Cards, forms, door lettering, staff apparel and thank-yous for referring doctors, all through one person.",
     hero: {
       src: "/assets/industry-medical.jpg",
@@ -389,11 +393,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "lawn-care-landscaping",
     navLabel: "Lawn care companies",
     blurb: "Door hangers, yard signs, truck lettering and crew shirts for lawn and landscaping crews.",
-    metaTitle: "Lawn Care Door Hangers and Yard Signs Columbus",
+    metaTitle: "Lawn Care Door Hangers and Yard Signs in Columbus",
     metaDescription:
       "Door hangers, yard signs, truck and trailer lettering and crew shirts for Columbus lawn care and landscaping companies. 500 door hangers from $179. Free quote.",
     eyebrow: "Lawn care and landscaping",
-    h1: "Your trucks are on every street. Put your name on them.",
+    h1: "Truck Lettering, Door Hangers and Yard Signs for Lawn Care in Columbus",
+    tagline: "Your trucks are on every street. Put your name on them.",
     lede: "Lawn care marketing for Columbus landscaping and mowing companies: door hangers, yard signs, truck and trailer lettering and crew shirts. Your crews already spend all day in the neighborhoods where your next customers live.",
     hero: {
       src: "/assets/lawncare-hero.jpg",
@@ -481,11 +486,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "real-estate",
     navLabel: "Real estate agents",
     blurb: "Yard signs, open house signs, car magnets, business cards and postcards for agents.",
-    metaTitle: "Real Estate Signs and Agent Printing Columbus",
+    metaTitle: "Real Estate Signs and Agent Printing in Columbus",
     metaDescription:
       "Real estate yard signs, open house signs, business cards, car magnets and just listed postcards for Columbus agents. 10 yard signs from $95. Free quote.",
     eyebrow: "Real estate",
-    h1: "Signs, cards and mailers for agents and teams.",
+    h1: "Real Estate Signs, Cards and Mailers in Columbus",
+    tagline: "Signs, cards and mailers for agents and teams.",
     lede: "Real estate signs and marketing print for Columbus agents, teams and brokerages: open house signs, business cards, car magnets and just listed postcards. Order what this listing needs, and every reorder matches.",
     hero: {
       src: "/assets/industry-realestate.jpg",
@@ -577,7 +583,8 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     metaDescription:
       "Lot banners, feather flags, showroom graphics, staff polos and customer gifts for Columbus car dealers. 3 x 6 ft vinyl banners from $39. Free quote in 24 hours.",
     eyebrow: "Auto dealers",
-    h1: "Banners, flags and gear for the lot and the showroom.",
+    h1: "Banners, Flags and Lot Signs for Car Dealers in Columbus",
+    tagline: "Banners, flags and gear for the lot and the showroom.",
     lede: "Car dealer signs and marketing for Columbus dealerships and independent lots: lot banners, feather flags, showroom graphics, staff polos and gifts for buyers. One person handles the whole list.",
     hero: {
       src: "/assets/industry-auto.jpg",
@@ -674,7 +681,8 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     metaDescription:
       "Fleet wraps, decal kits, USDOT lettering and driver apparel for Columbus fleets. Door lettering from $249 installed, wraps from $14/sq ft. Free quote.",
     eyebrow: "Fleet and logistics",
-    h1: "Every truck in the fleet, the same look.",
+    h1: "Fleet Graphics and Truck Lettering in Columbus",
+    tagline: "Every truck in the fleet, the same look.",
     lede: "Fleet graphics in Columbus for delivery vans, service trucks, box trucks and trailers: wraps, decal kits, USDOT lettering and driver apparel. I keep the specs on file, so the newest truck matches the oldest one.",
     hero: {
       src: "/assets/gallery-fleet-consistency.jpg",
@@ -761,11 +769,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     slug: "food-and-beverage",
     navLabel: "Food and drink makers",
     blurb: "Product labels, packaging, menus, window lettering and food truck wraps.",
-    metaTitle: "Food Labels and Restaurant Printing Columbus",
+    metaTitle: "Food Labels and Restaurant Printing in Columbus",
     metaDescription:
       "Custom food labels, packaging, menus, window lettering and food truck wraps for Columbus bakeries, roasters and breweries. 1,000 roll labels from $179.",
     eyebrow: "Food and drink",
-    h1: "Labels first. Then the menu, the window and the truck.",
+    h1: "Food Labels and Restaurant Printing in Columbus",
+    tagline: "Labels first. Then the menu, the window and the truck.",
     lede: "Custom food labels and restaurant printing in Columbus for bakeries, bagel shops, coffee roasters, breweries, sauce makers and food trucks. Start with a short run of labels, see how they sell, then reorder bigger.",
     hero: {
       src: "/photos/1774655757043-bcjuak3ub95.jpeg",

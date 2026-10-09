@@ -11,7 +11,8 @@ export const GEAR_PAGES: ProductPage[] = [
     metaDescription:
       "Custom embroidery in Columbus, Ohio for polos, hats, jackets and company hoodies, plus screen printed tees and hi-vis. Embroidered polos from $29 each.",
     eyebrow: "Apparel",
-    h1: "Embroidered shirts, hats and jackets for your crew.",
+    h1: "Custom Embroidery and Apparel in Columbus",
+    tagline: "Embroidered shirts, hats and jackets for your crew.",
     lede: "Custom embroidery for Columbus businesses: polos, hats, jackets and company hoodies with your logo stitched on. Screen printed tees and hi-vis safety wear too, so the whole crew matches.",
     hero: {
       src: "/assets/custom-apparel-polos-hoodies.jpg",
@@ -113,7 +114,8 @@ export const GEAR_PAGES: ProductPage[] = [
     metaDescription:
       "Promotional products for Columbus and Central Ohio businesses: drinkware, pens, bags, client gifts and trade show swag from 4,300+ vetted suppliers.",
     eyebrow: "Promotional products",
-    h1: "Branded stuff people keep and use.",
+    h1: "Promotional Products and Swag in Central Ohio",
+    tagline: "Branded stuff people keep and use.",
     lede: "Promotional products for Central Ohio businesses, picked from 4,300+ vetted suppliers at wholesale pricing. Drinkware, pens, bags, giveaways and client gifts with your logo on them.",
     hero: {
       src: "/assets/branded-drinkware-tumblers.jpg",
@@ -214,7 +216,8 @@ export const GEAR_PAGES: ProductPage[] = [
     metaDescription:
       "Custom packaging for Columbus small businesses: product boxes, mailer boxes, stand-up pouches, hang tags, bag toppers and branded tape. Free quote in 24 hours.",
     eyebrow: "Packaging",
-    h1: "Boxes, bags and tags that match your brand.",
+    h1: "Custom Packaging and Product Boxes in Columbus",
+    tagline: "Boxes, bags and tags that match your brand.",
     lede: "Custom packaging for Columbus businesses that sell a product. Product boxes, mailer boxes, stand-up pouches, hang tags and branded tape, made to work with your labels.",
     hero: {
       src: "/assets/service-promo.png",
@@ -311,7 +314,8 @@ export const GEAR_PAGES: ProductPage[] = [
     metaDescription:
       "Rebranding a Columbus business or opening a new location? Get cards, signs, vehicle lettering, apparel and your website updated in one coordinated rollout.",
     eyebrow: "Rebrand kits",
-    h1: "Put the new logo on everything at once.",
+    h1: "Full Rebrand Kits for Columbus Businesses",
+    tagline: "Put the new logo on everything at once.",
     lede: "A full rebrand kit gets your new logo onto business cards, signs, trucks, shirts and your website in one coordinated rollout. Built for Columbus businesses with a new brand, a new name or a new location.",
     hero: {
       src: "/assets/product-collage-hero.jpg",

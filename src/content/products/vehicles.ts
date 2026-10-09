@@ -11,7 +11,8 @@ export const VEHICLE_PAGES: ProductPage[] = [
     metaDescription:
       "Commercial vehicle wraps for work vans, pickups, box trucks and trailers in Central Ohio. From $14/sq ft with design and install. Free quote in 24 hours.",
     eyebrow: "Vehicle wraps",
-    h1: "Wrap the truck you already drive to every job.",
+    h1: "Vehicle Wraps for Business in Columbus, Ohio",
+    tagline: "Wrap the truck you already drive to every job.",
     lede: "Vehicle wraps for work vans, pickups, box trucks, trailers and food trucks across Columbus and Central Ohio. Full, partial or spot graphics, with one person running the job from design to install.",
     hero: {
       src: "/assets/vehicle-wrap-hero.jpg",
@@ -116,7 +117,8 @@ export const VEHICLE_PAGES: ProductPage[] = [
     metaDescription:
       "Fleet wraps for businesses with two or more work vehicles in Central Ohio. One design, rolled out a truck at a time. Wraps from $14/sq ft installed. Free quote.",
     eyebrow: "Fleet wraps",
-    h1: "One look across every truck you run.",
+    h1: "Fleet Wraps for Work Trucks in Columbus, Ohio",
+    tagline: "One look across every truck you run.",
     lede: "Fleet wraps for businesses with two vans or twenty. One design, set up once and rolled out one vehicle at a time so your trucks keep working. Serving Columbus and Central Ohio.",
     hero: {
       src: "/assets/vehicle-wrap-fleet.jpg",
