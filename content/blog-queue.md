@@ -7,10 +7,10 @@ reorder lines freely. Each line is: topic | page it must link | suggested image.
 Topics come from service and industry pages that no post supports yet,
 starting with the homepage targets (labels, decals, truck lettering).
 
-- [ ] Roll labels vs sheet labels: which one a Columbus small business actually needs | /custom-labels | pick the closest image in public/assets
-- [ ] What DOT numbers and USDOT lettering an Ohio work truck needs, and how to get them on the door | /vehicle-lettering | /assets/decal-dot-numbers.jpg
-- [ ] Vinyl decals vs printed stickers: picking the right one for trucks, windows and products | /decals-and-stickers | /assets/decals-hero.jpg
-- [ ] Car magnets vs vehicle lettering for a part-time or shared work vehicle | /car-magnets | /assets/vehicle-wrap-magnetic-real.jpg
+- [x] Roll labels vs sheet labels: which one a Columbus small business actually needs | /custom-labels | pick the closest image in public/assets
+- [x] What DOT numbers and USDOT lettering an Ohio work truck needs, and how to get them on the door | /vehicle-lettering | /assets/decal-dot-numbers.jpg
+- [x] Vinyl decals vs printed stickers: picking the right one for trucks, windows and products | /decals-and-stickers | /assets/decals-hero.jpg
+- [x] Car magnets vs vehicle lettering for a part-time or shared work vehicle | /car-magnets | /assets/vehicle-wrap-magnetic-real.jpg
 - [ ] Storefront window graphics in Columbus: hours, perforated vinyl and what reads from the street | /window-graphics | /assets/decal-window-clings.jpg
 - [ ] Door hangers for roofers and lawn care crews: what to print and how to plan a route | /door-hangers | /assets/door-hangers-hero.jpg
 - [ ] EDDM postcards in Central Ohio: how Every Door Direct Mail works for a neighborhood business | /eddm-postcards | /assets/postcards-hero.jpg
