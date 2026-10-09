@@ -5,20 +5,34 @@ Blog posts live in this repo as `content/blog/<slug>.json`. Merging a post to
 `/blog/<slug>`, in the sitemap and on the blog index. WordPress is no longer
 involved.
 
-A scheduled Claude routine runs every few days and does one post per run:
+A scheduled Claude routine runs once a week (Tuesday morning, US Eastern)
+and publishes one post per run. David asked on 2026-10-09 for the blog to
+keep updating on its own, so the routine merges its own post once every
+check is green. David reviews after the fact and can ask for any post to be
+edited or pulled.
 
 1. Start from the latest `main`. If an open pull request whose branch starts
-   with `blog/auto-` already exists, stop: one unreviewed post at a time.
-2. Take the first unchecked line in `content/blog-queue.md`. If none is
-   left, stop and say the queue is empty.
-3. Read the page that line names (its file in `src/content/`) so the post
+   with `blog/auto-` already exists, finish that one first (step 6) instead
+   of writing a new post.
+2. If fewer than four unchecked lines are left in `content/blog-queue.md`,
+   add six new lines first, in the same format: topics a Columbus or Central
+   Ohio buyer would search, each tied to a service or industry page in
+   `src/content/` that the queue and `content/blog/` don't already cover
+   (or a clearly different question about one), with a fitting image path.
+   Never repeat a topic or target keyword that an existing post covers.
+3. Take the first unchecked line in `content/blog-queue.md`.
+4. Read the page that line names (its file in `src/content/`) so the post
    matches what Buckeye Biz Hub actually sells and how the page describes it.
    Read two existing posts in `content/blog/` for tone.
-4. Write `content/blog/<slug>.json` (format below), check the queue line's
+5. Write `content/blog/<slug>.json` (format below), check the queue line's
    box, and run `node scripts/check-blog-post.mjs content/blog/<slug>.json`
-   until it passes.
-5. Push a branch named `blog/auto-<slug>` and open a pull request titled
-   `Blog: <post title>`. The pull request is the review step. Never merge it.
+   until it passes. Then run `node scripts/check-blog-post.mjs` (all posts).
+6. Push a branch named `blog/auto-<slug>` and open a pull request titled
+   `Blog: <post title>`. Wait for the GitHub "check" job and the Vercel
+   preview status on the head commit. When both are green, merge the pull
+   request (merge commit). If either fails, fix the post and push again; if
+   it still fails, leave the pull request open and say what failed. Never
+   push straight to `main` and never merge anything that is not green.
 
 ## Writing rules
 
