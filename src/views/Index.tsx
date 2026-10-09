@@ -27,7 +27,7 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
       <section className="relative isolate overflow-hidden bg-ink text-paper">
         <img
           src="/assets/branded-vehicle-fleet.jpg"
-          alt="White work vans lettered with the Buckeye Biz Hub logo"
+          alt="Mockup of white work vans with fleet lettering"
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 -z-10 h-full w-full object-cover"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { breadcrumbLd } from "@/lib/schema";
+import { davidPersonSchema } from "@/lib/structured-data";
 import { CtaBand, Crumbs } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
 
@@ -73,7 +74,7 @@ export default function About() {
 
   return (
     <>
-      <JsonLd data={breadcrumbLd(crumbs)} />
+      <JsonLd data={[breadcrumbLd(crumbs), davidPersonSchema()]} />
 
       {/* Hero */}
       <section className="bg-paper">
