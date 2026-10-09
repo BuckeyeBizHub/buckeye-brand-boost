@@ -4,7 +4,7 @@ import BlogCard from "@/components/blog/BlogCard";
 import { CtaBand, Crumbs } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, Section, SectionHead } from "@/components/site/ui";
 import { breadcrumbLd } from "@/lib/schema";
-import { articleSchema, SITE_URL } from "@/lib/structured-data";
+import { articleSchema, DAVID_STEIN, SITE_URL } from "@/lib/structured-data";
 import { getExcerpt, toPlainText, type BlogPost as BlogPostData, type BlogPostSummary } from "@/lib/blog-utils";
 
 interface BlogPostProps {
@@ -57,7 +57,7 @@ export default function BlogPost({ post, related = [] }: BlogPostProps) {
             image: image ? `${SITE_URL}${image}` : undefined,
             datePublished: post.date,
             dateModified: post.modified,
-            authors: { name: author },
+            authors: author === DAVID_STEIN.name ? DAVID_STEIN : { name: author },
             url: `${SITE_URL}${path}`,
             wordCount,
             isBlogPosting: true,

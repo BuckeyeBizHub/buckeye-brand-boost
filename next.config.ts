@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { NextConfig } from "next";
 
 // Real 301s. The Lovable site faked these in the browser after the old page
@@ -37,10 +39,38 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/quote", "/contact"],
 ];
 
+// The old WordPress blog. Once buckeyebizhub.blog points at this Vercel
+// project, every request on that host lands here: posts keep their slug
+// under /blog, and anything else (home, categories, feeds) goes to /blog.
+const SITE = "https://www.buckeyebizhub.com";
+const OLD_BLOG_HOSTS = ["buckeyebizhub.blog", "www.buckeyebizhub.blog"];
+const OLD_BLOG_SLUGS = fs
+  .readdirSync(path.join(process.cwd(), "content", "blog"))
+  .filter((f) => f.endsWith(".json"))
+  .map((f) => f.slice(0, -".json".length));
+
+function oldBlogRedirects() {
+  return OLD_BLOG_HOSTS.flatMap((host) => {
+    const has = [{ type: "host" as const, value: host }];
+    return [
+      ...OLD_BLOG_SLUGS.map((slug) => ({
+        source: `/${slug}`,
+        has,
+        destination: `${SITE}/blog/${slug}`,
+        statusCode: 301 as const,
+      })),
+      { source: "/:path*", has, destination: `${SITE}/blog`, statusCode: 301 as const },
+    ];
+  });
+}
+
 const nextConfig: NextConfig = {
   images: { unoptimized: true },
   async redirects() {
-    return PERMANENT_REDIRECTS.map(([source, destination]) => ({ source, destination, statusCode: 301 as const }));
+    return [
+      ...oldBlogRedirects(),
+      ...PERMANENT_REDIRECTS.map(([source, destination]) => ({ source, destination, statusCode: 301 as const })),
+    ];
   },
 };
 

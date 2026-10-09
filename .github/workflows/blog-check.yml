@@ -1,0 +1,24 @@
+name: Blog post check
+
+on:
+  pull_request:
+    paths:
+      - "content/blog/**"
+      - "scripts/check-blog-post.mjs"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Link check on every post
+        run: node scripts/check-blog-post.mjs
+      - name: Full check on new posts
+        run: |
+          files=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}...HEAD -- 'content/blog/*.json')
+          if [ -n "$files" ]; then node scripts/check-blog-post.mjs $files; else echo "No post files changed."; fi

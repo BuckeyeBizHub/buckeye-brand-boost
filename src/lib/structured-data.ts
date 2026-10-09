@@ -39,11 +39,32 @@ const SOCIAL_PROFILES = [
   "https://www.facebook.com/BuckeyeBizHub",
 ];
 
+/** David's public profiles. Used for Person schema on /about and as the blog author. */
+export const DAVID_STEIN = {
+  name: "David Stein",
+  url: `${SITE_URL}/about`,
+  sameAs: ["https://www.linkedin.com/in/buckeyebizhubdavid/"],
+};
+
+export function davidPersonSchema(): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/about#david-stein`,
+    name: DAVID_STEIN.name,
+    url: DAVID_STEIN.url,
+    image: `${SITE_URL}/assets/david-stein-headshot.jpg`,
+    sameAs: DAVID_STEIN.sameAs,
+    worksFor: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+  };
+}
+
 // ── Helper types ───────────────────────────────────────────
 
 export interface PersonRef {
   name: string;
   url?: string;
+  sameAs?: string[];
 }
 
 type JsonLd = Record<string, unknown>;
@@ -295,12 +316,13 @@ export function articleSchema(opts: ArticleSchemaOpts): JsonLd {
     ? Array.isArray(opts.authors)
       ? opts.authors
       : [opts.authors]
-    : [{ name: "David Stein" }];
+    : [DAVID_STEIN];
 
   const authorSchema = authorsList.map((a) => ({
     "@type": "Person" as const,
     name: a.name,
     ...(a.url && { url: a.url }),
+    ...(a.sameAs?.length && { sameAs: a.sameAs }),
   }));
 
   return {
