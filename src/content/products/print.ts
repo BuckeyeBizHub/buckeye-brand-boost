@@ -12,7 +12,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Business printing in Columbus, Ohio: cards, postcards, flyers, door hangers, letterhead and more. 500 business cards from $29. Free quote in 24 hours.",
     eyebrow: "Business printing",
-    h1: "Everything your business hands out, printed and handled by one person.",
+    h1: "Business Printing Services in Columbus, Ohio",
+    tagline: "Everything your business hands out, printed and handled by one person.",
     lede: "Business printing in Columbus for cards, mailers, flyers, forms, folders, catalogs and menus. I match the paper and finish to the job, send you a proof, and get it printed by trusted print partners at wholesale pricing.",
     hero: {
       src: "/assets/business-cards-letterhead-stack.jpg",
@@ -118,7 +119,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Business card printing in Columbus, Ohio. Standard, premium, foil, thick and rounded-corner cards. 500 cards from $29. Proof first. Free quote in 24 hours.",
     eyebrow: "Business cards",
-    h1: "Local business cards that are worth handing out.",
+    h1: "Business Card Printing in Columbus, Ohio",
+    tagline: "Local business cards that are worth handing out.",
     lede: "Business card printing in Columbus for contractors, agents, offices and anyone who still shakes hands. Standard, thick, foil or rounded corners. 500 full-color cards start at $29.",
     hero: {
       src: "/assets/luxury-gold-foil-cards.jpg",
@@ -224,7 +226,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Postcard printing and direct mail postcards for Columbus businesses. 500 full-color 4 x 6 postcards from $55. Proof before print. Free quote in 24 hours.",
     eyebrow: "Postcards",
-    h1: "Postcards that end up on the kitchen counter.",
+    h1: "Postcard Printing and Direct Mail in Columbus",
+    tagline: "Postcards that end up on the kitchen counter.",
     lede: "Postcard printing in Columbus for direct mail, reminders and leave-behinds. Mail them to your own list or every door on a route. 500 full-color 4 x 6 postcards start at $55.",
     hero: {
       src: "/assets/diecut-postcards-sample.jpg",
@@ -330,7 +333,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "EDDM printing in Columbus, Ohio. Pick USPS carrier routes and mail to every door with no mailing list. Postcards from $55. Free EDDM quote in 24 hours.",
     eyebrow: "Every Door Direct Mail",
-    h1: "Reach every house on the route without buying a mailing list.",
+    h1: "EDDM Postcards and Printing in Columbus, Ohio",
+    tagline: "Reach every house on the route without buying a mailing list.",
     lede: "EDDM printing in Columbus for businesses that work neighborhood by neighborhood. You pick the USPS carrier routes, and every address on them gets your postcard. No mailing list, no addresses to print.",
     hero: {
       src: "/assets/gallery/direct-mail-deli-postcard.jpg",
@@ -428,7 +432,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Flyer and brochure printing in Columbus, Ohio: flyers, sell sheets, tri-fold and bi-fold brochures and rack cards. 500 flyers from $119. Free quote in 24 hours.",
     eyebrow: "Flyers and brochures",
-    h1: "Flyers, brochures and sell sheets that explain what you do.",
+    h1: "Flyer and Brochure Printing in Columbus, Ohio",
+    tagline: "Flyers, brochures and sell sheets that explain what you do.",
     lede: "Flyer and brochure printing in Columbus for handouts, sales visits, counters and trade shows. Flyers, sell sheets, tri-folds, bi-folds and rack cards. 500 full-color flyers start at $119.",
     hero: {
       src: "/assets/brochures-flyers-layou.jpg",
@@ -530,7 +535,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Door hanger printing in Columbus, Ohio for roofers, lawn care and restaurants. 500 full-color door hangers from $179. Proof first. Free quote in 24 hours.",
     eyebrow: "Door hangers",
-    h1: "Door hangers for the streets you already work.",
+    h1: "Door Hanger Printing in Columbus, Ohio",
+    tagline: "Door hangers for the streets you already work.",
     lede: "Custom door hangers in Columbus for roofers, lawn crews, restaurants and anyone who works neighborhood by neighborhood. 500 full-color door hangers, with the hole and slit, start at $179.",
     hero: {
       src: "/photos/roofing-door-hanger-knock.jpg",
@@ -628,7 +634,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Letterhead, envelope, carbonless form and notepad printing in Columbus, Ohio. Matched to your business cards, from $29 for 500. Free quote in 24 hours.",
     eyebrow: "Letterhead, envelopes and forms",
-    h1: "Letterhead, envelopes and forms that match your business card.",
+    h1: "Letterhead and Envelope Printing in Columbus",
+    tagline: "Letterhead, envelopes and forms that match your business card.",
     lede: "Letterhead and envelope printing in Columbus for offices that still send paper. Add carbonless forms and logo notepads, and every piece carries the same logo and colors.",
     hero: {
       src: "/assets/gallery/custom-design-envelope.jpg",
@@ -730,7 +737,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Presentation folders in Columbus, Ohio. Two-pocket folders with business card slits, foil, spot UV and soft-touch. Proof before print. Free quote in 24 hours.",
     eyebrow: "Presentation folders",
-    h1: "Pocket folders that make a proposal look finished.",
+    h1: "Presentation Folder Printing in Columbus, Ohio",
+    tagline: "Pocket folders that make a proposal look finished.",
     lede: "Custom presentation folders in Columbus for proposals, welcome packets and listing presentations. Two pockets, a slit for your business card, and your logo on the front.",
     hero: {
       src: "/assets/business-cards-letterhead-stack.jpg",
@@ -826,7 +834,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Catalog and booklet printing in Columbus, Ohio. Saddle-stitched booklets, perfect-bound catalogs and wire-o manuals. Proof before print. Free quote in 24 hours.",
     eyebrow: "Catalogs and booklets",
-    h1: "Catalogs and booklets that sit on the desk for months.",
+    h1: "Catalog and Booklet Printing in Columbus, Ohio",
+    tagline: "Catalogs and booklets that sit on the desk for months.",
     lede: "Catalog and booklet printing in Columbus for product lines, programs, manuals and capability books. Stapled, glued or wire bound, full color, with a proof you approve first.",
     hero: {
       src: "/assets/brochures-flyers-layou.jpg",
@@ -926,7 +935,8 @@ export const PRINT_PAGES: ProductPage[] = [
     metaDescription:
       "Menu printing in Columbus, Ohio for restaurants, bars and cafes. Laminated menus, takeout menus, table tents and specials inserts. Free quote in 24 hours.",
     eyebrow: "Menus and table tents",
-    h1: "Menus and table tents that hold up to a dinner rush.",
+    h1: "Menu Printing and Table Tents in Columbus",
+    tagline: "Menus and table tents that hold up to a dinner rush.",
     lede: "Menu printing in Columbus for restaurants, bars, cafes and food trucks. Laminated menus, folded menus, takeout menus and table tents that push your specials.",
     hero: {
       src: "/assets/brochures-flyers-layou.jpg",

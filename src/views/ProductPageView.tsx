@@ -49,8 +49,9 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
         <Container className="grid grid-cols-1 gap-10 pb-14 pt-8 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-14 md:pb-20 md:pt-12">
           <div>
             <Crumbs items={crumbs.map((c, i) => ({ name: c.name, href: i < crumbs.length - 1 ? c.path : undefined }))} />
-            <Eyebrow>{page.eyebrow}</Eyebrow>
-            <h1 className="text-[clamp(2.5rem,5.6vw,4.5rem)]">{page.h1}</h1>
+            {/* Keyword H1 in the small label slot; the tagline keeps the big headline look. */}
+            <h1 className="eyebrow mb-4 leading-normal">{page.h1}</h1>
+            <p className="font-display text-[clamp(2.5rem,5.6vw,4.5rem)]">{page.tagline}</p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-body">{page.lede}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/contact">Get a free quote</ButtonLink>

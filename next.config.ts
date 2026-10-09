@@ -33,6 +33,8 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/eddm", "/eddm-postcards"],
   ["/flyers", "/flyers-and-brochures"],
   ["/brochures", "/flyers-and-brochures"],
+  // Old quote link from the WordPress blog.
+  ["/quote", "/contact"],
 ];
 
 const nextConfig: NextConfig = {

@@ -11,7 +11,8 @@ export const MORE_PAGES: ProductPage[] = [
     metaDescription:
       "Website design for Columbus and Central Ohio small businesses. Fast, phone-friendly sites with clear calls to action that bring in calls and quote requests.",
     eyebrow: "Website design",
-    h1: "A website that gets the phone to ring.",
+    h1: "Website Design for Small Business in Columbus",
+    tagline: "A website that gets the phone to ring.",
     lede: "Website design for Columbus small businesses that need more calls, not more animations. Fast, built for phones, and clear about what you do, where you work and how to reach you.",
     hero: {
       src: "/assets/rebrand-website.jpg",
@@ -99,7 +100,8 @@ export const MORE_PAGES: ProductPage[] = [
     metaDescription:
       "Local SEO for Columbus and Central Ohio businesses. Google Business Profile setup, reviews, listings and service area pages that help nearby customers find you.",
     eyebrow: "Local SEO",
-    h1: "Get found when people nearby search for what you do.",
+    h1: "Local SEO and Google Maps Help in Columbus",
+    tagline: "Get found when people nearby search for what you do.",
     lede: "Local SEO helps Columbus businesses show up in Google Maps and local search results. It starts with your Google Business Profile, your reviews and a website that says clearly what you do and where.",
     hero: {
       src: "/assets/local-seo-hero.jpg",
@@ -191,7 +193,8 @@ export const MORE_PAGES: ProductPage[] = [
     metaDescription:
       "Small business consulting in Columbus and Central Ohio. Operations and growth help from David Stein, BeerTubes co-founder and SBC Hospitality Group founder.",
     eyebrow: "Consulting",
-    h1: "Operations and growth help from someone who's run a business.",
+    h1: "Small Business Consulting in Columbus, Ohio",
+    tagline: "Operations and growth help from someone who's run a business.",
     lede: "Small business consulting for Columbus and Central Ohio owners who are stuck, stretched thin or growing faster than their systems. I've built, run and sold businesses, and I help owners fix how the work gets done.",
     hero: {
       src: "/assets/website-design-hero.jpg",

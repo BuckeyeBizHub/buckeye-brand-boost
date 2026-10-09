@@ -11,7 +11,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Custom product labels and roll labels for Columbus businesses. 1,000 roll labels from $179. Start small, reorder bigger. Free quote in 24 hours.",
     eyebrow: "Labels",
-    h1: "Custom labels for the stuff you sell.",
+    h1: "Custom Labels and Roll Labels in Columbus, Ohio",
+    tagline: "Custom labels for the stuff you sell.",
     lede: "Roll labels for jars, bags, bottles and boxes. Start with a short run, see it on the shelf, then reorder bigger when it sells.",
     hero: { src: "/assets/banner-decals-stickers.jpg", alt: "Sheet of custom printed logo stickers and labels in different shapes" },
     prices: ["roll-labels", "vinyl-decals"],
@@ -105,7 +106,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Custom vinyl decals, die-cut stickers, hard hat stickers and safety labels for Columbus businesses. 100 vinyl decals from $85. Free quote in 24 hours.",
     eyebrow: "Decals and stickers",
-    h1: "Vinyl decals and stickers for trucks, gear and giveaways.",
+    h1: "Custom Decals and Stickers in Columbus, Ohio",
+    tagline: "Vinyl decals and stickers for trucks, gear and giveaways.",
     lede: "Custom decals and stickers for Columbus businesses: trucks, hard hats, equipment, windows and handouts. Tell me where it's going to live and I'll match the vinyl to it. Short first runs are fine.",
     hero: {
       src: "/assets/decal-bumper-stickers.jpg",
@@ -216,7 +218,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Vehicle lettering in Columbus for trucks and vans: door lettering, DOT number decals and rear window graphics. Both doors installed from $249. Free quote.",
     eyebrow: "Vehicle lettering",
-    h1: "Put your name and number on the truck.",
+    h1: "Vehicle Lettering and DOT Decals in Columbus",
+    tagline: "Put your name and number on the truck.",
     lede: "Vehicle lettering in Columbus for work trucks, vans and trailers. Your company name, phone and DOT number in cut vinyl, installed. It's the lowest-cost way to turn a plain truck into a work truck people remember.",
     hero: {
       src: "/assets/vehicle-wrap-before-after.jpg",
@@ -322,7 +325,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Custom car magnets for Columbus businesses. Your name and number on the car for work, off for the weekend. A pair from $35. Free quote in 24 hours.",
     eyebrow: "Car magnets",
-    h1: "Business on the car all week. Off for the weekend.",
+    h1: "Car Magnets and Magnetic Signs in Columbus",
+    tagline: "Business on the car all week. Off for the weekend.",
     lede: "Custom car magnets put your business name and phone on a personal car or truck without anything permanent. On for work, off for the weekend. A pair of 12 x 18 magnets starts at $35.",
     hero: {
       src: "/assets/vehicle-decal-closeup.jpg",
@@ -416,7 +420,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Storefront window lettering, hours decals, frosted glass vinyl and one-way window film in Columbus. Hours and logo on one door from $149, installed.",
     eyebrow: "Window graphics",
-    h1: "Lettering, frost and graphics for your storefront glass.",
+    h1: "Window Graphics and Lettering in Columbus",
+    tagline: "Lettering, frost and graphics for your storefront glass.",
     lede: "Window graphics in Columbus for storefronts, offices and work vans. Hours, logo, frosted privacy vinyl, clings and see-through perforated film. Your glass is the first thing people see, so put it to work.",
     hero: {
       src: "/photos/roofing-qr-sticker-scan.jpg",
@@ -518,7 +523,8 @@ export const LABEL_PAGES: ProductPage[] = [
     metaDescription:
       "Wall murals, office logo walls, wall decals and floor graphics for Columbus businesses. Removable or permanent vinyl, matched to your surface. Free quote.",
     eyebrow: "Wall and floor graphics",
-    h1: "Graphics for the walls and floors you already have.",
+    h1: "Wall and Floor Graphics in Columbus, Ohio",
+    tagline: "Graphics for the walls and floors you already have.",
     lede: "Wall and floor graphics in Columbus for offices, shops, gyms and waiting rooms. A logo wall behind the front desk, a mural in the break room, or floor decals that tell people where to go. Removable or permanent, matched to your surface.",
     hero: {
       src: "/assets/printing-murals.jpg",

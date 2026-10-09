@@ -3,9 +3,9 @@ import { getAllPostSummaries, getCategories } from "@/lib/blog";
 import Blog from "@/views/Blog";
 
 export const metadata = pageMetadata({
-  title: "Blog - Ohio Business Branding Tips & News",
+  title: "Printing and Branding Guides for Ohio Businesses",
   description:
-    "Expert tips on business branding, printing, promotional products, vehicle wraps, and marketing strategies for Ohio small businesses.",
+    "Guides on labels, signs, vehicle wraps, business printing and promo products for Columbus and Central Ohio businesses, from Buckeye Biz Hub.",
   path: "/blog",
 });
 

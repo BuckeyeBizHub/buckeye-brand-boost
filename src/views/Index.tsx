@@ -36,7 +36,7 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
         <Container className="flex min-h-[78svh] flex-col justify-center py-20 md:min-h-[640px]">
           <p className="eyebrow mb-5 text-paper/70">Columbus and Central Ohio</p>
           <h1 className="max-w-3xl text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02]">
-            Labels, decals and truck lettering. One call.
+            Labels, decals and truck lettering in Columbus. One call.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/85">
             Custom labels for what you sell, lettering for what you drive, and signs and printing for everything else.
