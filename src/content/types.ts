@@ -41,7 +41,7 @@ export interface ProductPage {
   options: { name: string; detail: string }[];
   /** Who buys it / what it's for. 4 to 8 short items. */
   uses: string[];
-  /** Two or three longer sections, each an H2 and 1 to 3 short paragraphs (separate paragraphs with a blank line). Real SEO copy. */
+  /** Two to four longer sections, each an H2 and 1 to 3 short paragraphs (separate paragraphs with a blank line). Real SEO copy. */
   sections: { heading: string; body: string; image?: Img }[];
   /** Optional short true story. Only facts David has stated. */
   story?: { heading: string; body: string };

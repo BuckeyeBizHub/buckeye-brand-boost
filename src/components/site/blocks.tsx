@@ -3,6 +3,7 @@ import { ArrowRight, ChevronRight, Phone, Plus } from "lucide-react";
 import { PRICES, formatPrice, type PriceKey } from "@/content/prices";
 import type { Faq, Img } from "@/content/types";
 import { cn } from "@/lib/utils";
+import { OrderFlow } from "./OrderFlow";
 import { ButtonLink, Container, Eyebrow, PHONE_DISPLAY, PHONE_HREF } from "./ui";
 
 /** Starting-price cards. */
@@ -131,28 +132,13 @@ export function Crumbs({ items }: { items: { name: string; href?: string }[] }) 
   );
 }
 
-const STEPS = [
-  { t: "Tell me what you need", d: "Call, text or send the form. A photo of what you have now helps." },
-  { t: "Quote in 24 hours", d: "Exact price for your size, quantity and finish. No surprises later." },
-  { t: "Approve the proof", d: "You see it before anything prints. Change what you want." },
-  { t: "Shipped or installed", d: "Print ships to you. Vehicle and window work gets installed." },
-];
-
-export function HowItWorks({ title = "How it works" }: { title?: string }) {
+export function HowItWorks({ title = "How ordering works" }: { title?: string }) {
   return (
     <section className="on-ink">
       <Container className="py-16 md:py-24">
         <Eyebrow>One call, start to finish</Eyebrow>
         <h2 className="mb-12 max-w-2xl text-[clamp(2rem,4.2vw,3.25rem)]">{title}</h2>
-        <ol className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((s, i) => (
-            <li key={s.t} className="bg-ink p-6">
-              <span className="font-display text-[2.25rem] leading-none text-brand-bright">{i + 1}</span>
-              <h3 className="mt-4 font-sans text-[1.0625rem] font-semibold">{s.t}</h3>
-              <p className="mt-2 text-[0.95rem] text-muted-foreground">{s.d}</p>
-            </li>
-          ))}
-        </ol>
+        <OrderFlow />
       </Container>
     </section>
   );
