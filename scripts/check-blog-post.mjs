@@ -5,9 +5,11 @@
 //   node scripts/check-blog-post.mjs content/blog/<slug>.json   # full checks on new posts
 //   node scripts/check-blog-post.mjs                            # link checks on every post
 //
-// Exits 1 if anything fails.
+// Exits 1 if anything fails. A failing post is held: the auto blogger never
+// merges it, so it never goes live.
 import fs from "node:fs";
 import path from "node:path";
+import { BANNED, siteFactNumbers, unsourcedNumbers } from "./house-style.mjs";
 
 const ROOT = process.cwd();
 const BLOG_DIR = path.join(ROOT, "content", "blog");
@@ -42,6 +44,7 @@ function redirectSources() {
 }
 
 const routes = knownRoutes();
+const facts = siteFactNumbers(ROOT);
 const redirects = redirectSources();
 const productAndIndustry = [...routes].filter((r) => !r.startsWith("/blog") && r.split("/").length === 2);
 
@@ -101,11 +104,12 @@ function check(file, strict) {
   if (linked.size < 2) errors.push("link at least two service or industry pages");
   if (!hrefs.some((h) => h.startsWith("/contact"))) errors.push("link /contact at least once");
 
-  // House style: no em dashes, no invented numbers dressed up as facts.
-  if (/—|&mdash;/.test(raw)) errors.push("contains an em dash");
-  for (const phrase of [/\bguarantee[ds]?\b/i, /\b#1\b/, /\bnumber one\b/i, /\bstudies show\b/i, /\baccording to (a )?(recent )?(study|survey|research)\b/i]) {
-    if (phrase.test(content)) errors.push(`claim needs a source or should go: ${phrase}`);
-  }
+  // House style (scripts/house-style.mjs): no em dashes, no banned words,
+  // no numbers without a source.
+  if (/—|–|&mdash;|&ndash;|\s--\s/.test(raw)) errors.push("contains an em or en dash");
+  const prose = [post.title, post.excerpt, post.featuredAlt, content].join(" ").replace(/<[^>]*>/g, " ").replace(/&#39;|&rsquo;/g, "'");
+  for (const [pattern, reason] of BANNED) if (pattern.test(prose)) errors.push(reason);
+  errors.push(...unsourcedNumbers([post.title, post.excerpt].map((t) => `<p>${t}</p>`).join("") + content, facts));
 
   if (raw !== JSON.stringify(post, null, 2) + "\n") errors.push("format: write with 2-space indent and a trailing newline");
   return errors;

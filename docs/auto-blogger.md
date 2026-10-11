@@ -12,7 +12,7 @@ check is green. David reviews after the fact and can ask for any post to be
 edited or pulled.
 
 1. Start from the latest `main`. If an open pull request whose branch starts
-   with `blog/auto-` already exists, finish that one first (step 6) instead
+   with `blog/auto-` already exists, finish that one first (step 8) instead
    of writing a new post.
 2. If fewer than four unchecked lines are left in `content/blog-queue.md`,
    add six new lines first, in the same format: topics a Columbus or Central
@@ -24,10 +24,21 @@ edited or pulled.
 4. Read the page that line names (its file in `src/content/`) so the post
    matches what Buckeye Biz Hub actually sells and how the page describes it.
    Read two existing posts in `content/blog/` for tone.
-5. Write `content/blog/<slug>.json` (format below), check the queue line's
-   box, and run `node scripts/check-blog-post.mjs content/blog/<slug>.json`
-   until it passes. Then run `node scripts/check-blog-post.mjs` (all posts).
-6. Push a branch named `blog/auto-<slug>` and open a pull request titled
+5. Write `content/blog/<slug>.json` (format below) and check the queue
+   line's box.
+6. Humanizer pass, before anything can go live: follow
+   `.claude/skills/humanizer/SKILL.md` in embedded mode on the title,
+   excerpt, `featuredAlt` and every paragraph of `content`. Change prose
+   only; keep every link, price, number and HTML tag as it was, and do not
+   add facts. The Writing rules below win where the two disagree.
+7. Run `node scripts/check-blog-post.mjs content/blog/<slug>.json` until it
+   passes. Then run `node scripts/check-blog-post.mjs` (all posts). The
+   check holds the post (fails, so it can't merge) if it has an em or en
+   dash, a banned word or phrase from `scripts/house-style.mjs`, or a number
+   that isn't already on the site and isn't in a paragraph that links its
+   source. Fix the sentence; never edit `house-style.mjs` to get a post
+   through.
+8. Push a branch named `blog/auto-<slug>` and open a pull request titled
    `Blog: <post title>`. Wait for the GitHub "check" job and the Vercel
    preview status on the head commit. When both are green, merge the pull
    request (merge commit). If either fails, fix the post and push again; if
@@ -48,7 +59,10 @@ edited or pulled.
   results, statistics or partnerships. If a general fact needs a number
   (a USPS or USDOT rule, for example), say where it comes from and link the
   official source, or leave the number out.
-- No em dashes. No "guaranteed", "#1" or "best in Columbus" claims.
+- No em dashes. No "guaranteed", "#1" or "best in Columbus" claims. No
+  banned words (list in `scripts/house-style.mjs`): delve, unlock,
+  game-changer, tapestry, harness, cutting-edge, furthermore, "in
+  conclusion", "not just X, but Y", "Here's the thing" and the rest.
 - Internal links: relative paths only (`/custom-labels`, never
   `https://www.buckeyebizhub.com/custom-labels`). Link the queue line's page
   in the first few paragraphs with a descriptive anchor, link at least one

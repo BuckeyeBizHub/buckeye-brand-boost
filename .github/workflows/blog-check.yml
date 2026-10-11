@@ -5,6 +5,7 @@ on:
     paths:
       - "content/blog/**"
       - "scripts/check-blog-post.mjs"
+      - "scripts/house-style.mjs"
 
 jobs:
   check:
