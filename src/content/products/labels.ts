@@ -63,6 +63,10 @@ export const LABEL_PAGES: ProductPage[] = [
         heading: "Sizes, shapes and rolls that fit your process",
         body: "Hand-applying? I'll set up the roll so labels peel easily and there are not too many per roll. Using a label machine? Send me the core size and the direction the label comes off the roll, and it'll be printed to fit.\n\nNot sure on size? Measure the flat area of the container and send a photo. I'll suggest a size that leaves a little room on each side.",
       },
+      {
+        heading: "Labels for Columbus shops, makers and farm market vendors",
+        body: "Most of my label customers sell close to home. Bakeries and coffee roasters in Columbus. Sauce, jam and honey makers at farm markets from Dublin to Delaware. Candle and soap makers doing pop-ups around Central Ohio.\n\nSend a photo of your jar, bag or box with a ruler next to it and I'll size the label to the real thing. Reorders take one text, because your file and material are already approved.",
+      },
     ],
     story: {
       heading: "500 labels turned into 5,000.",
@@ -92,6 +96,10 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         q: "How long do labels take?",
         a: "Your quote comes back within 24 hours. Production time depends on the material and quantity, and I'll give you a date with the quote.",
+      },
+      {
+        q: "Do you make labels for businesses outside Columbus?",
+        a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
     related: ["decals-and-stickers", "packaging", "window-graphics", "vehicle-lettering"],
@@ -175,6 +183,10 @@ export const LABEL_PAGES: ProductPage[] = [
         heading: "QR code stickers people actually scan",
         body: "A QR sticker on your front door, your invoice or the back of a job sign is a cheap way to get reviews, payments and booked calls. A roofer can put one on a yard sign so a neighbor scans straight to the quote form.\n\nA few things make them work. Use a QR service that lets you change where the code points later, so you don't have to reprint when your page moves. Print it big enough to scan from where people will actually stand. And put a reason to scan next to it. \"Scan for a free estimate\" beats a bare code every time.\n\nI scan the code on the proof before it goes to print.",
       },
+      {
+        heading: "Decals for Central Ohio job sites, storefronts and trucks",
+        body: "Contractors from Hilliard to Newark put hard hat stickers and equipment labels on their gear. Columbus shops put store hours and QR codes on the front door. Service companies put DOT numbers and logos on vans and trailers.\n\nTell me where the decal goes and how long it needs to hold up outside. I'll match the vinyl to the job, and you approve a proof before anything prints.",
+      },
     ],
     faqs: [
       {
@@ -204,6 +216,10 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         q: "Can you design my sticker?",
         a: "Yes. Send your logo and an idea of the shape. You'll see and approve a proof before anything prints.",
+      },
+      {
+        q: "Do you make decals and stickers for businesses outside Columbus?",
+        a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
     related: ["custom-labels", "vehicle-lettering", "window-graphics", "wall-and-floor-graphics"],
@@ -286,6 +302,10 @@ export const LABEL_PAGES: ProductPage[] = [
         heading: "Letter one truck now, match the fleet later",
         body: "A lot of small companies letter one truck and add from there. I keep the layout, colors and sizes on file, so truck two matches truck one and the reorder is quick.\n\nIf you run a small fleet in Central Ohio, ask about a decal kit: the same name, phone, logo and unit number on every vehicle. It's easier to budget, and your crews are easy to spot when they're out on jobs.\n\nOn leased vehicles, cut vinyl on factory paint usually comes off with heat when the lease ends. Check your lease terms first, and tell me the truck is leased so I can plan for it. Repainted panels can be less predictable, so mention any body work too.",
       },
+      {
+        heading: "Truck lettering for Columbus contractors and service vans",
+        body: "Lettering is the quickest way to make a work truck look like a business. Your name, phone and logo on both doors, plus DOT numbers if you need them.\n\nSend a photo of the truck door. I'll put a mockup of the lettering on your actual truck so you see the size and placement before anything is cut. When the next truck comes, the same file letters it to match.",
+      },
     ],
     faqs: [
       {
@@ -311,6 +331,10 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         q: "Can you letter a trailer or box truck?",
         a: "Yes. Trailers and box trucks have big flat panels, which makes them a great spot for your name and phone in large letters. Send the panel size and a photo and I'll lay it out.",
+      },
+      {
+        q: "Do you letter trucks and vans for businesses outside Columbus?",
+        a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
     related: ["car-magnets", "vehicle-wraps", "fleet-wraps", "decals-and-stickers"],

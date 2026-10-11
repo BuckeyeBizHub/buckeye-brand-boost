@@ -177,6 +177,10 @@ export const VEHICLE_PAGES: ProductPage[] = [
           alt: "Two cargo vans in matching orange, red and black graphics parked in a snowy lot",
         },
       },
+      {
+        heading: "Fleet graphics for Central Ohio service companies",
+        body: "The fleets I focus on are contractors, movers, logistics companies, HVAC, roofing and lawn care crews with two or more work vehicles. Their trucks are on Columbus roads every day, so the fleet is their biggest sign.\n\nA fleet doesn't have to be all full wraps. Some vehicles get a full wrap, some get a partial wrap, and some get matching lettering and decals. You choose per vehicle, and the look stays the same across the whole fleet.",
+      },
     ],
     faqs: [
       {
@@ -202,6 +206,10 @@ export const VEHICLE_PAGES: ProductPage[] = [
       {
         q: "How long do fleet wraps last?",
         a: "Years, with care. Sun, road salt and washing habits make the difference. Hand wash when you can and skip the brush car washes.",
+      },
+      {
+        q: "Do you wrap fleets for businesses outside Columbus?",
+        a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
     related: ["vehicle-wraps", "vehicle-lettering", "embroidered-apparel", "full-rebrand-kits"],
