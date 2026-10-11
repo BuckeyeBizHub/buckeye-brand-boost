@@ -1,4 +1,5 @@
-// @ts-nocheck -- plain JS module shared with scripts/check-blog-post.mjs
+import { describe, expect, it } from "vitest";
+// Shared with scripts/check-blog-post.mjs, which holds posts that break these rules.
 import { BANNED, unsourcedNumbers } from "../../scripts/house-style.mjs";
 
 const facts = new Set(["29", "500", "614", "561", "3358"]);
