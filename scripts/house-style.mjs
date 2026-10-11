@@ -43,17 +43,50 @@ export const BANNED = [
 
 // Numbers a post may use without a link: anything already stated on the site
 // (prices, sizes and specs in src/content), our phone, address and ZIP.
+// Code comments don't count: a note like "target 25 to 40% margin" in
+// prices.ts is not something the site says. A number that reads as a claim
+// ("7 years", "40 fleets", "3 times") counts only when the site says that
+// same number with that same word, so "24 hours" passes and "40 fleets"
+// doesn't just because a 40 appears somewhere else.
 export function siteFactNumbers(root) {
   const facts = new Set(["614", "561", "3358", "1193", "43212"]);
   const walk = (dir) => {
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
       const p = path.join(dir, e.name);
       if (e.isDirectory()) walk(p);
-      else if (/\.tsx?$/.test(e.name)) for (const n of numbersIn(fs.readFileSync(p, "utf8"))) facts.add(n);
+      else if (/\.tsx?$/.test(e.name)) {
+        const text = stripComments(fs.readFileSync(p, "utf8"));
+        for (const m of text.matchAll(/\d[\d,]*(?:\.\d+)?/g)) {
+          const num = m[0].replace(/,/g, "").replace(/\.$/, "");
+          facts.add(num);
+          const unit = claimUnit(text.slice(m.index + m[0].length, m.index + m[0].length + 40));
+          if (unit) facts.add(`${num} ${unit}`);
+        }
+      }
     }
   };
   walk(path.join(root, "src", "content"));
   return facts;
+}
+
+export function stripComments(src) {
+  return src.replace(/\/\*[\s\S]*?\*\//g, " ").replace(/(^|[^:"'\\])\/\/.*$/gm, "$1");
+}
+
+// The word after a number that turns it into a claim: a time span, a rate,
+// a multiple, or a count of customers, reviews or stars. One word may sit in
+// between ("5 business days", "40 local fleets"). Returns the word in a
+// standard form ("day", "fleet", "%"), or null.
+const CLAIM_UNIT =
+  /^\s*\+?\s*(?:[a-z]+\s+)?(%|percent\b|x\b|times\b|years?\b|months?\b|weeks?\b|days?\b|hours?\b|minutes?\b|customers?\b|clients?\b|fleets?\b|businesses\b|companies\b|reviews?\b|-?stars?\b)/i;
+export function claimUnit(after) {
+  const m = after.match(CLAIM_UNIT);
+  if (!m) return null;
+  const u = m[1].toLowerCase().replace(/^-/, "");
+  if (u === "percent") return "%";
+  if (u === "businesses") return "business";
+  if (u === "companies") return "company";
+  return u.length > 1 ? u.replace(/s$/, "") : u;
 }
 
 // "1,000" and "1000" count as the same number; "$29" and "29" too.
@@ -63,10 +96,14 @@ export function numbersIn(text) {
 
 // A number needs a source unless it is a site fact, a year, or a small count
 // ("three to six sections", "step 2") that isn't dressed up as a statistic.
+// A number that reads as a claim ("7 years", "40 local fleets", "3 times")
+// needs a source unless the site already says it the same way.
 function needsSource(num, after, facts) {
+  const unit = claimUnit(after);
+  if (unit) return !facts.has(`${num} ${unit}`);
   if (facts.has(num)) return false;
   if (/^(19[89]\d|20[0-3]\d)$/.test(num)) return false;
-  const statistic = /^\s*(%|percent|x\b|times\b|in 10\b|out of\b)/i.test(after);
+  const statistic = /^\s*(in 10\b|out of\b)/i.test(after);
   if (!statistic && Number(num) <= 12 && !num.includes(".")) return false;
   return true;
 }
@@ -85,9 +122,9 @@ export function unsourcedNumbers(html, facts) {
     for (const m of text.matchAll(/\$?\d[\d,]*(?:\.\d+)?/g)) {
       const num = m[0].replace(/[$,]/g, "").replace(/\.$/, "");
       const before = text.slice(Math.max(0, m.index - 6), m.index);
-      const after = text.slice(m.index + m[0].length, m.index + m[0].length + 8);
+      const after = text.slice(m.index + m[0].length, m.index + m[0].length + 40);
       // Part of a name or form number (MCS-150, USDOT 123456), not a claim.
-      if (/[A-Za-z]-$|\b(USDOT|DOT|MC|Form|No\.) $/.test(before) || /^[A-Za-z]/.test(after)) continue;
+      if (/[A-Za-z]-$|\b(USDOT|DOT|MC|Form|No\.) $/.test(before) || /^(?!x\b)[A-Za-z]/i.test(after)) continue;
       if (needsSource(num, after, facts)) {
         const start = Math.max(0, m.index - 40);
         problems.push(`number with no source: "${text.slice(start, m.index + m[0].length + 20).replace(/\s+/g, " ").trim()}"`);
