@@ -11,6 +11,11 @@ vehicle lettering and fleet wraps.
 
 ## Outputs
 
+- 2026-10-11: audit fix 2. The number check no longer counts code comments
+  as site facts, and a number that reads as a claim ("7 years", "40
+  fleets", "3 times", "5-star") needs a source unless the site already
+  says it the same way. New `scripts/check-site-copy.mjs` runs house style on
+  site pages. New CI workflow `site-check.yml`: copy check, tests, strict build.
 - 2026-10-11: `CLAUDE.md`, `DESIGN.md`, `PRODUCT.md`, this file, repo
   skills in `.claude/skills/`, Humanizer step and hold check for the auto
   blogger (`docs/auto-blogger.md`, `scripts/house-style.mjs`).
@@ -32,13 +37,13 @@ vehicle lettering and fleet wraps.
 
 - Context7 isn't connected yet. Until it is, code sessions check official
   docs by hand.
-- The number check allows small counts (12 or under) without a source, so
-  "wraps last 7 years" would still pass. Humanizer and the writing rules
-  are the backstop.
+- Claims David hasn't decided (MARKETING-PLAN "Claims decision"): 5-star
+  badge, "within 24 hours", "we make it right", "wholesale pricing". Also
+  "4,300+ vetted suppliers" on the promo pages has no source in the repo.
 - Old WordPress-era posts fail the new strict checks. That's expected; the
   strict check only runs on new posts.
 
 ## Next action
 
-David merges the setup PR, then reviews the ordering flow and page
-upgrades PR and types PUBLISH when it's right.
+David reviews the audit fix 2 PR (number check and site check) and
+decides the four sitewide claims.
