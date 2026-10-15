@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "buckeyebizhub.blog" }],
+      "destination": "https://www.buckeyebizhub.com/blog/:path*",
+      "permanent": true
+    }
+  ]
+}
