@@ -11,6 +11,10 @@ vehicle lettering and fleet wraps.
 
 ## Outputs
 
+- 2026-10-16: 301s for 8 dead old printing and folder URLs
+  (`/business-printing-columbus`, `/*-folders-columbus` and others) to
+  `/business-printing`, `/real-estate` and `/presentation-folders`, with
+  `src/test/redirects.test.ts`. Draft PR, waiting on PUBLISH.
 - 2026-10-11: audit fix 2. The number check no longer counts code comments
   as site facts, and a number that reads as a claim ("7 years", "40
   fleets", "3 times", "5-star") needs a source unless the site already

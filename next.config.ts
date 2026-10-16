@@ -37,6 +37,15 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/brochures", "/flyers-and-brochures"],
   // Old quote link from the WordPress blog.
   ["/quote", "/contact"],
+  // Dead old printing and folder URLs, sent to the closest live page.
+  ["/business-printing-columbus", "/business-printing"],
+  ["/custom-printing-columbus", "/business-printing"],
+  ["/real-estate-printing", "/real-estate"],
+  ["/custom-die-cut-folders", "/presentation-folders"],
+  ["/branded-folders-columbus", "/presentation-folders"],
+  ["/presentation-folders-columbus", "/presentation-folders"],
+  ["/corporate-folders-columbus", "/presentation-folders"],
+  ["/eco-friendly-folders-columbus", "/presentation-folders"],
 ];
 
 // The old WordPress blog. Once buckeyebizhub.blog points at this Vercel
