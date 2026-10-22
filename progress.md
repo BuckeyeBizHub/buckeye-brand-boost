@@ -12,9 +12,10 @@ vehicle lettering and fleet wraps.
 ## Outputs
 
 - 2026-10-22: Contact quote form can switch from Tally to Fillout
-  (`@fillout/react`). Set `FILLOUT_QUOTE_FORM_ID` in `src/content/forms.ts`;
-  while it is empty the page keeps Tally QKYlz8. Draft PR, waiting on the
-  Fillout form id and PUBLISH.
+  (`@fillout/react`), form id `jPqs2ct8BQus` in `src/content/forms.ts`
+  (empty id falls back to Tally QKYlz8). Free plan caps uploads at 20 MB
+  per file. Draft PR #16, waiting on David to publish the form in Fillout,
+  connect Drive/Sheets, test, then PUBLISH.
 - 2026-10-16: 301s for 8 dead old printing and folder URLs
   (`/business-printing-columbus`, `/*-folders-columbus` and others) to
   `/business-printing`, `/real-estate` and `/presentation-folders`, with
