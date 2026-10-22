@@ -5,12 +5,23 @@ each section, dates as YYYY-MM-DD.
 
 ## Current task
 
-Tool setup (2026-10-11): standing rules, repo skills, blog guardrail, then
-the "how ordering works" flow and local SEO upgrades for labels, decals,
-vehicle lettering and fleet wraps.
+Site rebuild from the vendor catalog map (2026-10-22, plan:
+https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
+each: apparel (this PR), signs, printing, labels and packaging, then menus
+and home page.
 
 ## Outputs
 
+- 2026-10-22: apparel section. `/embroidered-apparel` split into a hub
+  (`/custom-apparel`), decoration pages (`/screen-printing`, `/embroidery`,
+  `/dtf-printing`), garment pages (`/custom-t-shirts`, `/custom-polos`,
+  `/custom-jackets`, `/custom-hats`, `/custom-hoodies-and-pullovers`) and
+  `/team-stores`. Garment pages show popular styles from the distributor
+  catalog (`src/content/products/apparel-styles.ts`, no prices) with the
+  distributor's photos hotlinked. 301 `/embroidered-apparel` to `/embroidery`.
+  Draft PR, waiting on PUBLISH.
+- 2026-10-22: quote form switched from Tally to Fillout (PR #16, PUBLISH by
+  David).
 - 2026-10-16: 301s for 8 dead old printing and folder URLs
   (`/business-printing-columbus`, `/*-folders-columbus` and others) to
   `/business-printing`, `/real-estate` and `/presentation-folders`, with
@@ -48,6 +59,11 @@ vehicle lettering and fleet wraps.
   strict check only runs on new posts.
 
 ## Next action
+
+David clicks through the apparel preview (check the style photos load) and
+types PUBLISH, or sends changes. Then the signs section.
+
+Earlier:
 
 David reviews the audit fix 2 PR (number check and site check) and
 decides the four sitewide claims.

@@ -212,7 +212,7 @@ export const VEHICLE_PAGES: ProductPage[] = [
         a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
-    related: ["vehicle-wraps", "vehicle-lettering", "embroidered-apparel", "full-rebrand-kits"],
+    related: ["vehicle-wraps", "vehicle-lettering", "custom-apparel", "full-rebrand-kits"],
     industries: ["fleet-and-logistics", "roofing", "construction", "lawn-care-landscaping"],
   },
 ];

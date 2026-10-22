@@ -5,6 +5,7 @@ import { LABEL_PAGES } from "./products/labels";
 import { SIGN_PAGES } from "./products/signs";
 import { PRINT_PAGES } from "./products/print";
 import { VEHICLE_PAGES } from "./products/vehicles";
+import { APPAREL_PAGES } from "./products/apparel";
 import { GEAR_PAGES } from "./products/gear";
 import { MORE_PAGES } from "./products/more";
 import { INDUSTRY_PAGES } from "./industries";
@@ -14,6 +15,7 @@ export const PRODUCTS: ProductPage[] = [
   ...SIGN_PAGES,
   ...PRINT_PAGES,
   ...VEHICLE_PAGES,
+  ...APPAREL_PAGES,
   ...GEAR_PAGES,
   ...MORE_PAGES,
 ];

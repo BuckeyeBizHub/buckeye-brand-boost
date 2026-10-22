@@ -1,6 +1,6 @@
 import { Check, Phone } from "lucide-react";
 import { getProduct, GROUP_LABEL, GROUP_HUB } from "@/content/catalog";
-import type { ProductPage } from "@/content/types";
+import type { GarmentStyle, ProductPage } from "@/content/types";
 import { breadcrumbLd, faqLd, serviceLd } from "@/lib/schema";
 import {
   CtaBand,
@@ -14,6 +14,33 @@ import {
 } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, Paragraphs, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
 
+function toCard(p: ProductPage) {
+  return { href: `/${p.slug}`, title: p.navLabel, blurb: p.blurb, image: p.hero, price: p.prices?.[0] };
+}
+
+function StyleGrid({ styles }: { styles: GarmentStyle[] }) {
+  return (
+    <ul className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+      {styles.map((s) => (
+        <li key={`${s.brand}-${s.style}`} className="flex flex-col overflow-hidden rounded-xl border border-border bg-white">
+          {s.image && (
+            <div className="aspect-square overflow-hidden bg-cream">
+              <img src={s.image.src} alt={s.image.alt} loading="lazy" decoding="async" className="h-full w-full object-contain" />
+            </div>
+          )}
+          <div className="flex flex-1 flex-col p-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              {s.brand} {s.style}
+            </p>
+            <h3 className="mt-1 font-display text-[1.25rem] leading-tight text-ink">{s.name}</h3>
+            <p className="mt-2 text-sm text-body">{s.colors.join(", ")}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function ProductPageView({ page }: { page: ProductPage }) {
   const path = `/${page.slug}`;
   const hub = GROUP_HUB[page.group];
@@ -25,7 +52,14 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
   const related = page.related
     .map((s) => getProduct(s))
     .filter((p): p is ProductPage => Boolean(p))
-    .map((p) => ({ href: `/${p.slug}`, title: p.navLabel, blurb: p.blurb, image: p.hero, price: p.prices?.[0] }));
+    .map(toCard);
+  const children = (page.children ?? []).map((g) => ({
+    ...g,
+    cards: g.slugs
+      .map((s) => getProduct(s))
+      .filter((p): p is ProductPage => Boolean(p))
+      .map(toCard),
+  }));
 
   return (
     <>
@@ -92,6 +126,14 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
         </Section>
       )}
 
+      {/* Hub pages: child pages as cards */}
+      {children.map((g, i) => (
+        <Section key={g.heading} tone={i % 2 === 0 ? "paper" : "white"} bordered>
+          <SectionHead eyebrow={page.eyebrow} title={g.heading} intro={g.intro} />
+          <LinkCards items={g.cards} />
+        </Section>
+      ))}
+
       {/* Options */}
       <Section bordered>
         <SectionHead eyebrow={page.eyebrow} title="What we make" />
@@ -104,6 +146,18 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
           ))}
         </div>
       </Section>
+
+      {/* Garment pages: popular styles, no prices */}
+      {page.styles && page.styles.length > 0 && (
+        <Section tone="white" bordered>
+          <SectionHead
+            eyebrow="Popular styles"
+            title="Styles customers pick most"
+            intro="A short list to start from. There are hundreds more styles and colors. Tell me what you have in mind and I'll find it."
+          />
+          <StyleGrid styles={page.styles} />
+        </Section>
+      )}
 
       {/* Start small */}
       <Section tone="cream">

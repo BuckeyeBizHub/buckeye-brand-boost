@@ -22,13 +22,14 @@ const REDIRECT_MAP: Record<string, RedirectEntry> = {
   "/wraps": { to: "/vehicle-wraps", permanent: true },
   "/cards": { to: "/business-printing", permanent: true },
   "/seo": { to: "/local-seo", permanent: true },
-  "/apparel": { to: "/embroidered-apparel", permanent: true },
+  "/apparel": { to: "/custom-apparel", permanent: true },
   "/signs": { to: "/yard-signs-and-signage", permanent: true },
   "/signage": { to: "/yard-signs-and-signage", permanent: true },
   "/rebrand": { to: "/full-rebrand-kits", permanent: true },
   "/web-design": { to: "/website-design", permanent: true },
   "/business-cards": { to: "/business-cards-printing", permanent: true },
-  "/branded-apparel-and-uniforms": { to: "/embroidered-apparel", permanent: true },
+  "/branded-apparel-and-uniforms": { to: "/custom-apparel", permanent: true },
+  "/embroidered-apparel": { to: "/embroidery", permanent: true },
   "/vehicle-wraps-and-fleet-branding": { to: "/vehicle-wraps", permanent: true },
 };
 
