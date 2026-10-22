@@ -119,7 +119,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Jobsite banners and fence signs",
         body: "Put your name on the fence line for the whole project. Mesh banners let wind through on chain-link.",
-        products: ["banners-and-flags", "yard-signs-and-signage"],
+        products: ["banners-and-flags", "yard-signs-and-signage", "safety-and-parking-signs"],
       },
       {
         heading: "Hard hat stickers and safety labels",
@@ -325,7 +325,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Office signs and privacy film",
         body: "Door lettering, frosted glass for exam rooms and directional signs in the hallway.",
-        products: ["window-graphics", "wall-and-floor-graphics", "yard-signs-and-signage"],
+        products: ["window-graphics", "wall-and-floor-graphics", "aluminum-signs"],
       },
       {
         heading: "Staff apparel",
@@ -501,7 +501,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Open house and directional signs",
         body: "Yard signs with arrows that get buyers from the main road to the front door.",
-        products: ["yard-signs-and-signage"],
+        products: ["yard-signs-and-signage", "a-frame-signs"],
       },
       {
         heading: "Business cards and folders",
@@ -712,7 +712,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Warehouse and dock graphics",
         body: "Floor markings, wall signs and safety labels for the warehouse and the dock.",
-        products: ["wall-and-floor-graphics", "decals-and-stickers", "yard-signs-and-signage"],
+        products: ["wall-and-floor-graphics", "decals-and-stickers", "safety-and-parking-signs"],
       },
     ],
     sections: [
