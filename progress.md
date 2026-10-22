@@ -11,6 +11,11 @@ vehicle lettering and fleet wraps.
 
 ## Outputs
 
+- 2026-10-22: Contact quote form can switch from Tally to Fillout
+  (`@fillout/react`), form id `jPqs2ct8BQus` in `src/content/forms.ts`
+  (empty id falls back to Tally QKYlz8). Free plan caps uploads at 20 MB
+  per file. Draft PR #16, waiting on David to publish the form in Fillout,
+  connect Drive/Sheets, test, then PUBLISH.
 - 2026-10-16: 301s for 8 dead old printing and folder URLs
   (`/business-printing-columbus`, `/*-folders-columbus` and others) to
   `/business-printing`, `/real-estate` and `/presentation-folders`, with
@@ -28,6 +33,8 @@ vehicle lettering and fleet wraps.
 
 ## Decisions
 
+- 2026-10-22: Quote form moves from Tally to Fillout so uploads land in a
+  Google Drive folder directly (David: "go Fillout").
 - 2026-10-11: Local SEO work strengthens the four existing category pages
   (`/custom-labels`, `/decals-and-stickers`, `/vehicle-lettering`,
   `/fleet-wraps`) instead of adding near-duplicate city pages, which would

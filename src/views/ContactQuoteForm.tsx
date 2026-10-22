@@ -1,37 +1,24 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { FilloutStandardEmbed } from "@fillout/react";
+import { FILLOUT_QUOTE_FORM_ID, TALLY_QUOTE_FORM_ID } from "@/content/forms";
 
 type TallyWindow = Window & { Tally?: { loadEmbeds: () => void } };
 
-/** The Tally quote form (QKYlz8). Loads Tally's embed script and shows a thank-you note on submit. */
+/**
+ * The quote form. Uses the Fillout form when FILLOUT_QUOTE_FORM_ID is set,
+ * otherwise the old Tally form. Shows a thank-you note on submit.
+ */
 export default function ContactQuoteForm() {
   const [submitted, setSubmitted] = useState(false);
 
-  // Load Tally embed script
-  useEffect(() => {
-    const existing = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
-    if (!existing) {
-      const script = document.createElement("script");
-      script.src = "https://tally.so/widgets/embed.js";
-      script.async = true;
-      document.head.appendChild(script);
-    } else {
-      (window as TallyWindow).Tally?.loadEmbeds();
-    }
-  }, []);
-
-  // Listen for Tally form submission via postMessage
-  useEffect(() => {
-    const handler = (event: MessageEvent) => {
-      if (typeof event.data !== "string") return;
-      if (event.data.includes("Tally.FormSubmitted") || event.data.includes("tally-form-submitted")) {
-        setSubmitted(true);
-        document.getElementById("quote-success")?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    };
-    window.addEventListener("message", handler);
-    return () => window.removeEventListener("message", handler);
+  const onSubmitted = useCallback(() => {
+    setSubmitted(true);
+    // Wait a tick so the note is rendered before scrolling to it
+    setTimeout(() => {
+      document.getElementById("quote-success")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 0);
   }, []);
 
   return (
@@ -50,19 +37,62 @@ export default function ContactQuoteForm() {
         </div>
       )}
 
-      <div className="w-full max-w-full overflow-x-hidden">
-        <iframe
-          data-tally-src="https://tally.so/embed/QKYlz8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy"
-          width="100%"
-          height="500"
-          frameBorder={0}
-          marginHeight={0}
-          marginWidth={0}
-          title="Buckeye Biz Hub Quote Request"
-          className="block min-h-[600px] w-full max-w-full"
-        />
-      </div>
+      {FILLOUT_QUOTE_FORM_ID ? (
+        <div className="w-full max-w-full overflow-x-hidden">
+          <FilloutStandardEmbed
+            filloutId={FILLOUT_QUOTE_FORM_ID}
+            inheritParameters
+            dynamicResize
+            onSubmit={onSubmitted}
+          />
+        </div>
+      ) : (
+        <TallyEmbed onSubmitted={onSubmitted} />
+      )}
     </>
+  );
+}
+
+/** The old Tally embed (form QKYlz8). Remove once Fillout is live and checked. */
+function TallyEmbed({ onSubmitted }: { onSubmitted: () => void }) {
+  // Load Tally embed script
+  useEffect(() => {
+    const existing = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+    if (!existing) {
+      const script = document.createElement("script");
+      script.src = "https://tally.so/widgets/embed.js";
+      script.async = true;
+      document.head.appendChild(script);
+    } else {
+      (window as TallyWindow).Tally?.loadEmbeds();
+    }
+  }, []);
+
+  // Listen for Tally form submission via postMessage
+  useEffect(() => {
+    const handler = (event: MessageEvent) => {
+      if (typeof event.data !== "string") return;
+      if (event.data.includes("Tally.FormSubmitted") || event.data.includes("tally-form-submitted")) {
+        onSubmitted();
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, [onSubmitted]);
+
+  return (
+    <div className="w-full max-w-full overflow-x-hidden">
+      <iframe
+        data-tally-src={`https://tally.so/embed/${TALLY_QUOTE_FORM_ID}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+        loading="lazy"
+        width="100%"
+        height="500"
+        frameBorder={0}
+        marginHeight={0}
+        marginWidth={0}
+        title="Buckeye Biz Hub Quote Request"
+        className="block min-h-[600px] w-full max-w-full"
+      />
+    </div>
   );
 }
