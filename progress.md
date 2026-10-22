@@ -20,8 +20,10 @@ and home page.
   catalog (`src/content/products/apparel-styles.ts`, no prices) with the
   distributor's photos hotlinked. 301 `/embroidered-apparel` to `/embroidery`.
   Draft PR, waiting on PUBLISH.
-- 2026-10-22: quote form switched from Tally to Fillout (PR #16, PUBLISH by
-  David).
+- 2026-10-22: Contact quote form switched from Tally to Fillout
+  (`@fillout/react`), form id `jPqs2ct8BQus` in `src/content/forms.ts`
+  (empty id falls back to Tally QKYlz8). Free plan caps uploads at 20 MB
+  per file. PR #16, merged on PUBLISH by David.
 - 2026-10-16: 301s for 8 dead old printing and folder URLs
   (`/business-printing-columbus`, `/*-folders-columbus` and others) to
   `/business-printing`, `/real-estate` and `/presentation-folders`, with
@@ -39,6 +41,8 @@ and home page.
 
 ## Decisions
 
+- 2026-10-22: Quote form moves from Tally to Fillout so uploads land in a
+  Google Drive folder directly (David: "go Fillout").
 - 2026-10-11: Local SEO work strengthens the four existing category pages
   (`/custom-labels`, `/decals-and-stickers`, `/vehicle-lettering`,
   `/fleet-wraps`) instead of adding near-duplicate city pages, which would
