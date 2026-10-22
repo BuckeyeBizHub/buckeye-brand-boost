@@ -7,11 +7,16 @@ each section, dates as YYYY-MM-DD.
 
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
-each: apparel (this PR), signs, printing, labels and packaging, then menus
-and home page.
+each: apparel (done, PR #17), signs (this PR), printing, labels and
+packaging, then menus and home page.
 
 ## Outputs
 
+- 2026-10-22: signs section. New `/aluminum-signs` (aluminum, ACM, PVC,
+  acrylic), `/a-frame-signs` and `/safety-and-parking-signs`. Trade show
+  page gets a table throw and step-and-repeat section. Construction, real
+  estate, medical and fleet industry pages link the new pages. Draft PR,
+  waiting on PUBLISH.
 - 2026-10-22: apparel section. `/embroidered-apparel` split into a hub
   (`/custom-apparel`), decoration pages (`/screen-printing`, `/embroidery`,
   `/dtf-printing`), garment pages (`/custom-t-shirts`, `/custom-polos`,
@@ -19,7 +24,7 @@ and home page.
   `/team-stores`. Garment pages show popular styles from the distributor
   catalog (`src/content/products/apparel-styles.ts`, no prices) with the
   distributor's photos hotlinked. 301 `/embroidered-apparel` to `/embroidery`.
-  Draft PR, waiting on PUBLISH.
+  PR #17, merged by David.
 - 2026-10-22: Contact quote form switched from Tally to Fillout
   (`@fillout/react`), form id `jPqs2ct8BQus` in `src/content/forms.ts`
   (empty id falls back to Tally QKYlz8). Free plan caps uploads at 20 MB

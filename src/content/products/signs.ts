@@ -73,7 +73,7 @@ export const SIGN_PAGES: ProductPage[] = [
       },
       {
         heading: "Coroplast, aluminum or A-frame: which sign fits the job",
-        body: "Coroplast is the corrugated plastic most yard signs are made of. It's light, waterproof and cheap enough to order by the dozen. It's built for months outside, not years. Use it for job sites, listings, events and campaigns.\n\nAluminum is the one to buy when the sign stays put. Parking spots, gates, building entrances, fences. A 12 x 18 aluminum sign starts at $35 and holds up far longer than plastic.\n\nA-frame sidewalk signs stand outside your door while you're open and come in at night. Good for storefronts, salons, cafes and anyone on a busy Central Ohio sidewalk. Tell me where the sign goes and how long it needs to last, and I'll point you to the right one.",
+        body: "Coroplast is the corrugated plastic most yard signs are made of. It's light, waterproof and cheap enough to order by the dozen. It's built for months outside, not years. Use it for job sites, listings, events and campaigns.\n\nAluminum is the one to buy when the sign stays put. Parking spots, gates, building entrances, fences. A 12 x 18 aluminum sign starts at $35 and holds up far longer than plastic.\n\nA-frame sidewalk signs stand outside your door while you're open and come in at night. Good for storefronts, salons, cafes and anyone on a busy Central Ohio sidewalk. My aluminum signs and A-frame signs pages go deeper on both. Tell me where the sign goes and how long it needs to last, and I'll point you to the right one.",
       },
       {
         heading: "What to put on a yard sign so people can read it",
@@ -110,8 +110,289 @@ export const SIGN_PAGES: ProductPage[] = [
         a: "Your quote comes back within 24 hours. Production time depends on the size and quantity, and I'll give you a date with the quote.",
       },
     ],
-    related: ["banners-and-flags", "car-magnets", "door-hangers", "vehicle-lettering"],
+    related: ["aluminum-signs", "a-frame-signs", "banners-and-flags", "door-hangers"],
     industries: ["roofing", "construction", "lawn-care-landscaping", "real-estate"],
+  },
+  {
+    slug: "aluminum-signs",
+    group: "signs",
+    navLabel: "Aluminum and rigid signs",
+    blurb: "Aluminum, ACM, PVC and acrylic signs for lots, gates, entrances and lobbies.",
+    metaTitle: "Custom Aluminum Signs and Rigid Signs in Columbus, Ohio",
+    metaDescription:
+      "Aluminum, ACM, PVC and acrylic signs for Columbus parking lots, gates, entrances and lobbies. 12 x 18 aluminum sign from $35. Free quote within 24 hours.",
+    eyebrow: "Signs",
+    h1: "Aluminum Signs and Rigid Signs in Columbus, Ohio",
+    tagline: "Metal and rigid signs for the spots that don't change.",
+    lede: "Aluminum, ACM, PVC and acrylic signs for parking spots, gates, building entrances, offices and lobbies around Columbus. Tell me where the sign goes and I'll match the material to the spot. You approve a proof before anything prints.",
+    hero: {
+      src: "/assets/yard-sign-event-directional-real.jpg",
+      alt: "Printed parking, event parking, no parking and restroom signs mounted on a concrete wall, with a blue parking post on the pavement",
+    },
+    prices: ["aluminum-sign"],
+    options: [
+      {
+        name: "Aluminum signs",
+        detail: "Printed metal signs for outdoor spots: parking, gates, fences, entrances and posts. Ask for rounded corners and mounting holes.",
+      },
+      {
+        name: "ACM signs",
+        detail: "Two thin aluminum sheets around a plastic core. Stiffer and flatter than plain aluminum, so it suits bigger wall and building signs.",
+      },
+      {
+        name: "PVC signs",
+        detail: "Light, rigid plastic board that's easy to hang. Good for indoor wall signs, menu boards and office signs.",
+      },
+      {
+        name: "Acrylic signs",
+        detail: "Clear or white acrylic with a glossy, finished look. Lobby logo signs, reception walls and office doors. Ask about standoffs.",
+      },
+      {
+        name: "Parking and property signs",
+        detail: "Reserved parking, visitor parking, no trespassing and private property signs. My safety and parking signs page has more.",
+      },
+      {
+        name: "Office and door signs",
+        detail: "Suite numbers, hours, room names and hallway arrows so visitors find the right door.",
+      },
+    ],
+    uses: [
+      "Property managers and HOAs",
+      "Offices, clinics and dental practices",
+      "Restaurants and retail shops",
+      "Churches and schools",
+      "Contractors and shops",
+      "Warehouses and parking lots",
+    ],
+    sections: [
+      {
+        heading: "Aluminum, ACM, PVC or acrylic: which one fits",
+        body: "Aluminum is the workhorse. It goes outside, takes rain and snow, and holds its shape where plastic can bend or curl. A 12 x 18 aluminum sign, 3mm and printed full color, starts at $35. That covers most parking, gate and entrance signs.\n\nACM is aluminum with a plastic core. It stays flat at bigger sizes, so it's the one for a sign on the side of a building or a large panel by the door.\n\nPVC and acrylic are mostly for inside. PVC is light and plain, fine for room signs and wall signs. Acrylic looks finished and a little upscale, which is why it shows up behind reception desks. Tell me where the sign goes and I'll point you to one.",
+      },
+      {
+        heading: "Where an aluminum sign beats a yard sign",
+        body: "Coroplast yard signs are great for a job that ends: a roof, a listing, an event. They're cheap and light, and nobody minds tossing one after a season.\n\nA sign that stays put is different. The reserved spot by your front door, the gate to the yard, the dumpster enclosure, the visitor lot. Those signs sit out in Central Ohio weather year round. Aluminum holds its shape and stays readable where plastic would sag or fade first.\n\nIf you're replacing a faded or bent sign, send me a photo and the size. I'll match it or clean up the layout so it reads better than the old one.",
+      },
+      {
+        heading: "Get the size and the mounting right",
+        body: "Measure the spot before you order. A sign for a post needs holes in the right place. A sign for a brick wall or a fence needs a different setup than one for a door. Tell me how it mounts and I'll set up the file to match.\n\nKeep the words short. A parking sign needs a few big words. Office and lobby signs can carry a logo and a little more, since people read them up close.\n\nSend your logo and what the sign needs to say. I'll lay it out, and you approve the proof before it prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does an aluminum sign cost?",
+        a: "A 12 x 18 aluminum sign, 3mm and printed full color, starts at $35. Bigger sizes, ACM and acrylic cost more. I'll quote your exact size within 24 hours.",
+      },
+      {
+        q: "Should I get aluminum or a coroplast sign?",
+        a: "Coroplast for a sign that comes down after a job, a listing or an event. Aluminum for a sign that stays up, like parking, gates and entrances.",
+      },
+      {
+        q: "Can aluminum signs go outside?",
+        a: "Yes. Aluminum is made for outdoor use and handles Ohio rain and snow. Full sun fades any printed sign over time.",
+      },
+      {
+        q: "What is ACM?",
+        a: "Aluminum composite material: two thin sheets of aluminum with a plastic core in between. It stays flatter than plain aluminum at bigger sizes, so it's common for building and wall signs.",
+      },
+      {
+        q: "Can you make a lobby sign with our logo?",
+        a: "Yes. Acrylic or PVC with your logo, sized for the wall behind the front desk. Send the logo file and a photo of the wall, and I'll mock it up.",
+      },
+      {
+        q: "Do I see the sign before it prints?",
+        a: "Yes. You get a proof to approve first. Nothing prints until you say it's right.",
+      },
+    ],
+    related: ["safety-and-parking-signs", "a-frame-signs", "yard-signs-and-signage", "window-graphics"],
+    industries: ["dental", "medical-specialty", "real-estate", "construction"],
+  },
+  {
+    slug: "a-frame-signs",
+    group: "signs",
+    navLabel: "A-frame sidewalk signs",
+    blurb: "Double-sided sidewalk signs for storefronts, open houses and events.",
+    metaTitle: "A-Frame Signs and Sidewalk Signs in Columbus, Ohio",
+    metaDescription:
+      "Custom A-frame sidewalk signs for Columbus storefronts, salons, cafes and open houses. Metal, plastic and chalkboard frames with printed panels. Free quote.",
+    eyebrow: "Signs",
+    h1: "A-Frame Signs and Sidewalk Signs in Columbus, Ohio",
+    tagline: "A sign that stands at the door and comes in at night.",
+    lede: "Double-sided A-frame signs for storefronts, salons, cafes, open houses and events in Columbus. Buy the frame once and swap the printed panels when the message changes.",
+    hero: {
+      src: "/assets/yard-sign-realestate-real.jpg",
+      alt: "Three black A-frame sidewalk signs with printed for sale and open house panels",
+    },
+    options: [
+      {
+        name: "Metal frames with printed panels",
+        detail: "A metal frame that holds two printed panels. Slide in new panels when the sale or the season changes.",
+      },
+      {
+        name: "Plastic sidewalk signs",
+        detail: "Molded plastic frames, light enough to carry out every morning. Some take water or sand in the base for windy days.",
+      },
+      {
+        name: "Chalkboard A-frames",
+        detail: "Your logo printed across the top and a chalkboard below for specials that change every day.",
+      },
+      {
+        name: "Real estate A-frames",
+        detail: "Open house and for sale signs that stand on a sidewalk or driveway where a stake won't go in.",
+      },
+      {
+        name: "New panels for your frame",
+        detail: "Already own a frame? Send me the panel size and I'll print new panels to fit it.",
+      },
+      {
+        name: "Event and wayfinding signs",
+        detail: "Check-in, parking and this-way signs for weddings, church events, festivals and 5Ks.",
+      },
+    ],
+    uses: [
+      "Cafes, bars and restaurants",
+      "Salons and barbershops",
+      "Retail shops and boutiques",
+      "Realtors and open houses",
+      "Churches and schools",
+      "Events and festivals",
+    ],
+    sections: [
+      {
+        heading: "Why a sidewalk sign still pulls people in",
+        body: "People walking past your door decide in a few steps whether to stop. A sign at their feet, set out where they're already looking, gives them a reason. Today's special, a sale or just \"we're open.\"\n\nIt works best where people walk: High Street, German Village, downtown Worthington, a strip center with a sidewalk out front. Put it out when you open and bring it in when you close.\n\nCheck with your city before you put one on a public sidewalk. Some cities and districts want a permit or set rules on where it can stand.",
+      },
+      {
+        heading: "Metal, plastic or chalkboard: picking a frame",
+        body: "A metal frame with printed panels looks the sharpest and lasts the longest. When the message changes, you print new panels and keep the frame.\n\nPlastic frames are lighter and cheaper. They're easy to carry out every morning, and some fill with water or sand so they don't tip over in the wind.\n\nChalkboard A-frames suit cafes, bars and salons with specials that change daily. Your logo stays printed at the top, and you write the rest by hand. Tell me how often your message changes and I'll suggest one.",
+      },
+      {
+        heading: "What to print on an A-frame",
+        body: "Treat it like a yard sign for people on foot. A few big words, your logo and an arrow if the door is hard to find. Skip the long list of services.\n\nUse both sides. Each side can say something different, like the special on one side and \"open\" with an arrow on the other.\n\nSend me your logo and what you want it to say. I'll lay out the panels, and you approve the proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does an A-frame sign cost?",
+        a: "It depends on the frame and the panels. Metal frames cost more than plastic, and you can reuse them. Tell me which style you want and I'll quote it within 24 hours.",
+      },
+      {
+        q: "Can each side say something different?",
+        a: "Yes. The two panels are printed separately, so each side can carry its own message.",
+      },
+      {
+        q: "Will an A-frame blow over?",
+        a: "A heavy frame or a plastic one with a weighted base holds up best. On a windy corner, bring it in when the weather turns.",
+      },
+      {
+        q: "Can you print panels for a frame I already own?",
+        a: "Yes. Measure the panel area and send me the size. I'll print panels to fit.",
+      },
+      {
+        q: "Do I need a permit for a sidewalk sign?",
+        a: "Some cities and business districts require one for a sign on a public sidewalk. Check with your city before you set it out.",
+      },
+      {
+        q: "Do I see the design before it prints?",
+        a: "Yes. You get a proof to approve first. Nothing prints until you say it's right.",
+      },
+    ],
+    related: ["yard-signs-and-signage", "aluminum-signs", "window-graphics", "banners-and-flags"],
+    industries: ["food-and-beverage", "real-estate"],
+  },
+  {
+    slug: "safety-and-parking-signs",
+    group: "signs",
+    navLabel: "Safety and parking signs",
+    blurb: "Parking, no trespassing, job site and warehouse safety signs with your name on them.",
+    metaTitle: "Custom Safety Signs and Parking Signs in Columbus, Ohio",
+    metaDescription:
+      "Reserved parking, tow-away, no trespassing and job site safety signs for Columbus businesses. 12 x 18 aluminum sign from $35. Free quote within 24 hours.",
+    eyebrow: "Signs",
+    h1: "Safety Signs and Parking Signs in Columbus, Ohio",
+    tagline: "Parking and safety signs that look like they belong to you.",
+    lede: "Reserved parking, visitor parking, tow-away, no trespassing and job site safety signs for Columbus lots, warehouses and crews. Printed on aluminum for signs that stay up, or on coroplast for a job that ends.",
+    hero: {
+      src: "/assets/construction-hero.jpg",
+      alt: "Orange Road Work Ahead sign with workers in safety vests and a dump truck on a dirt road behind it",
+    },
+    prices: ["aluminum-sign", "yard-signs"],
+    options: [
+      {
+        name: "Reserved and visitor parking",
+        detail: "Customer parking, visitor, employee and numbered spaces. Most go on 12 x 18 aluminum, on a post or a wall.",
+      },
+      {
+        name: "Tow-away and private property",
+        detail: "Tow-away zone, no trespassing and private property signs for lots, yards and buildings.",
+      },
+      {
+        name: "Job site safety signs",
+        detail: "Hard hat area, authorized personnel only and site rules signs for the fence or the trailer.",
+      },
+      {
+        name: "Warehouse and shop signs",
+        detail: "Forklift traffic, eye protection, fire extinguisher and exit signs for the shop floor and the dock.",
+      },
+      {
+        name: "Lot and traffic direction",
+        detail: "Entrance, exit, deliveries and drop-off signs that move cars through your lot.",
+      },
+      {
+        name: "Your logo on stock wording",
+        detail: "Familiar safety wording with your company name and colors added, so the sign looks like yours.",
+      },
+    ],
+    uses: [
+      "Property managers and HOAs",
+      "Contractors and roofing crews",
+      "Warehouses and distribution",
+      "Medical and dental offices",
+      "Restaurant and retail lots",
+      "Churches and schools",
+    ],
+    sections: [
+      {
+        heading: "Parking signs that keep your spaces open",
+        body: "The spots closest to your door should go to your customers. A clear \"Reserved for customers\" sign with your logo keeps them open. Add visitor, employee and numbered spaces as your lot needs them.\n\nMost parking signs are 12 x 18 aluminum, mounted on a post or a wall. A 12 x 18 aluminum sign starts at $35.\n\nPlanning to tow? Ohio law sets out what a private tow-away sign has to show. Get the wording from your towing company before you order, and I'll print exactly what they give you.",
+      },
+      {
+        heading: "Job site safety signs for contractors",
+        body: "A job site sign tells the neighbors who's working and tells visitors where they can't go. Hard hat area, authorized personnel only and the site rules belong on the fence or the trailer door.\n\nFor a job that lasts a few weeks, coroplast is fine and costs less. Ten 18 x 24 coroplast signs with H-stakes start at $95. For a yard or a shop you use every year, go aluminum.\n\nPair them with a mesh banner on the fence and your name is on the whole project.",
+      },
+      {
+        heading: "Colors people read before the words",
+        body: "Safety signs use colors people already know. Danger is red, warning is orange and caution is yellow. People read the color first, so I keep stock safety signs in those colors and add your logo where it fits.\n\nIf a sign needs to show up in headlights, like a lot entrance or a dark loading dock, ask about reflective material when you request the quote.\n\nSend me the list of signs you need and where each one goes. I'll lay them out as a set, and you approve the proofs before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a parking sign cost?",
+        a: "A 12 x 18 aluminum sign, 3mm and printed full color, starts at $35. That's the common size for a reserved parking sign. Bigger sizes cost more.",
+      },
+      {
+        q: "Can a parking sign have my logo on it?",
+        a: "Yes. Reserved for customers, visitor parking or any wording you need, with your logo and colors.",
+      },
+      {
+        q: "What does a tow-away sign need to say?",
+        a: "Ohio law sets out what a private tow-away sign has to show. Get the wording from your towing company, and I'll print it to match.",
+      },
+      {
+        q: "Aluminum or plastic for a safety sign?",
+        a: "Aluminum for a sign that stays up for good, like a shop, a dock or a parking lot. Coroplast for a job site that wraps up in a few weeks.",
+      },
+      {
+        q: "Can I order just one sign?",
+        a: "Yes. Small first orders are welcome, and one sign is fine.",
+      },
+      {
+        q: "Do I see the sign before it prints?",
+        a: "Yes. You get a proof to approve first. Nothing prints until you say it's right.",
+      },
+    ],
+    related: ["aluminum-signs", "yard-signs-and-signage", "decals-and-stickers", "wall-and-floor-graphics"],
+    industries: ["construction", "roofing", "fleet-and-logistics"],
   },
   {
     slug: "banners-and-flags",
@@ -292,6 +573,10 @@ export const SIGN_PAGES: ProductPage[] = [
       {
         heading: "Ohio trade show graphics that read from the aisle",
         body: "People walk past your booth at a steady clip, and they read it from 10 feet away or more. Small text and long lists get skipped. Your name, what you do and one reason to stop should all read from the aisle.\n\nPut the important words high on a retractable banner. The bottom third gets blocked by your table, your chair and the people standing in front of it. Save the details for handouts.\n\nOrder the pieces together and I'll match the colors across the banner, the table throw and the tent. Send me the show date when you ask for a quote. I'll give you a production date with the quote, so you know the graphics will be in hand before you load the truck.",
+      },
+      {
+        heading: "Table throws and step-and-repeat backdrops",
+        body: "A table throw makes a folding table look like part of the booth. It covers the front and sides, hides the boxes underneath and puts your name at eye level for people walking by. Tell me if your table is 6 ft or 8 ft and whether you want it fitted or draped.\n\nA step-and-repeat is the logo-pattern backdrop behind photo spots and sponsor walls. It works at galas, grand openings and fundraisers, anywhere people stop for a picture. Sponsors like it because their logo ends up in every photo.\n\nOrder them with the rest of the booth and I'll match the colors across every piece.",
       },
     ],
     faqs: [
