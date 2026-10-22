@@ -7,16 +7,23 @@ each section, dates as YYYY-MM-DD.
 
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
-each: apparel (done, PR #17), signs (this PR), printing, labels and
-packaging, then menus and home page.
+each: apparel (done, PR #17), signs (done, PR #18), printing (this PR),
+labels and packaging, then menus and home page.
 
 ## Outputs
 
+- 2026-10-22: printing section. New `/rack-cards`, `/poster-printing` and
+  `/magnets-and-calendars` (no prices yet, none in `prices.ts`). Business
+  cards page gets a specialty finishes section (foil, spot UV, soft touch,
+  painted edges). `/business-printing` hub lists every print page.
+  Letterhead page relabeled "Office stationery and forms" in menus. Dental
+  and restaurant industry pages link the new pages. Magnets and rack cards
+  use stand-in photos. Draft PR, waiting on PUBLISH.
 - 2026-10-22: signs section. New `/aluminum-signs` (aluminum, ACM, PVC,
   acrylic), `/a-frame-signs` and `/safety-and-parking-signs`. Trade show
   page gets a table throw and step-and-repeat section. Construction, real
-  estate, medical and fleet industry pages link the new pages. Draft PR,
-  waiting on PUBLISH.
+  estate, medical and fleet industry pages link the new pages. PR #18,
+  merged on PUBLISH by David.
 - 2026-10-22: apparel section. `/embroidered-apparel` split into a hub
   (`/custom-apparel`), decoration pages (`/screen-printing`, `/embroidery`,
   `/dtf-printing`), garment pages (`/custom-t-shirts`, `/custom-polos`,
@@ -69,8 +76,8 @@ packaging, then menus and home page.
 
 ## Next action
 
-David clicks through the apparel preview (check the style photos load) and
-types PUBLISH, or sends changes. Then the signs section.
+David clicks through the printing preview and types PUBLISH, or sends
+changes. Then step 4, labels and packaging.
 
 Earlier:
 

@@ -20,6 +20,25 @@ export const PRINT_PAGES: ProductPage[] = [
       alt: "Stacks of white business cards printed with a red Ohio-shaped Buckeye Biz Hub logo",
     },
     prices: ["business-cards", "postcards", "flyers"],
+    children: [
+      {
+        heading: "Everything I print",
+        slugs: [
+          "business-cards-printing",
+          "postcards",
+          "eddm-postcards",
+          "flyers-and-brochures",
+          "rack-cards",
+          "door-hangers",
+          "letterhead-and-envelopes",
+          "presentation-folders",
+          "catalogs-and-booklets",
+          "menus-and-table-tents",
+          "poster-printing",
+          "magnets-and-calendars",
+        ],
+      },
+    ],
     options: [
       {
         name: "Business cards",
@@ -34,8 +53,8 @@ export const PRINT_PAGES: ProductPage[] = [
         detail: "Every Door Direct Mail. Pick USPS carrier routes and reach every home on them, no mailing list needed.",
       },
       {
-        name: "Flyers and brochures",
-        detail: "Flyers, sell sheets, tri-fold and bi-fold brochures and rack cards.",
+        name: "Flyers, brochures and rack cards",
+        detail: "Flyers, sell sheets, tri-fold and bi-fold brochures, and rack cards for counters and lobbies.",
       },
       {
         name: "Door hangers",
@@ -177,7 +196,11 @@ export const PRINT_PAGES: ProductPage[] = [
       },
       {
         heading: "Standard, premium, foil or thick: which card is right?",
-        body: "Standard 14pt cards with gloss or matte are the right call for most businesses. They look professional and keep the cost low, which matters when you hand out a lot of them. 500 start at $29.\n\nPremium and thick cards cost more and feel it. They make sense when the card is part of the pitch: real estate, law, financial services, high-end contractors. Soft-touch gives a smooth, velvety feel. Painted edges add color on the sides of a thick card.\n\nFoil and spot UV are for when you want the logo to stand out. Use them on one or two details, like your logo or name. Covering the whole card in foil usually looks busy and costs more than it's worth.",
+        body: "Standard 14pt cards with gloss or matte are the right call for most businesses. They look professional and keep the cost low, which matters when you hand out a lot of them. 500 start at $29.\n\nPremium and thick cards cost more and feel it. They make sense when the card is part of the pitch: real estate, law, financial services, high-end contractors.\n\nFoil and spot UV are for when you want the logo to stand out. Use them on one or two details, like your logo or name. Covering the whole card in foil usually looks busy and costs more than it's worth.",
+      },
+      {
+        heading: "Specialty finishes: foil, spot UV, soft touch and painted edges",
+        body: "Foil is a thin metallic layer pressed onto the card. Gold, silver and other colors catch the light on a logo or a name. Raised foil sits up off the card, so people feel it as well as see it.\n\nSpot UV is a clear gloss coat on one part of the card, usually the logo, over a matte background. Tilt the card and that part shines. Soft touch is a coating that feels smooth, almost like velvet, and makes a thick card feel even heavier.\n\nPainted edges color the sides of a thick card. Pick a color from your logo and the card shows a stripe of it from every angle. Each finish adds to the price, so pick one or two. The proof shows where each finish goes before anything prints.",
       },
       {
         heading: "Ordering business cards for a whole team",
@@ -463,7 +486,7 @@ export const PRINT_PAGES: ProductPage[] = [
       },
       {
         name: "Rack cards",
-        detail: "Tall, narrow cards on stiff stock for display racks, front counters and hotel lobbies.",
+        detail: "Tall, narrow cards on stiff stock for display racks, front counters and hotel lobbies. My rack cards page has more.",
       },
       {
         name: "Folder and mailer inserts",
@@ -523,8 +546,97 @@ export const PRINT_PAGES: ProductPage[] = [
         a: "Yes. Send your logo, your photos and what you want it to say, and I'll lay it out with a proof for you to approve. First order? Design and setup are free.",
       },
     ],
-    related: ["postcards", "presentation-folders", "catalogs-and-booklets", "trade-show-displays"],
+    related: ["postcards", "rack-cards", "presentation-folders", "catalogs-and-booklets"],
     industries: ["real-estate", "food-and-beverage", "medical-specialty", "construction"],
+  },
+  {
+    slug: "rack-cards",
+    group: "print",
+    navLabel: "Rack cards and counter cards",
+    blurb: "Tall rack cards and counter cards for lobbies, front desks and visitor racks.",
+    metaTitle: "Rack Card and Counter Card Printing in Columbus, Ohio",
+    metaDescription:
+      "Rack card printing for Columbus hotels, offices, shops and attractions. 4 x 9 cards on heavy stock for display racks and front counters. Free quote in 24 hours.",
+    eyebrow: "Rack cards",
+    h1: "Rack Card and Counter Card Printing in Columbus, Ohio",
+    tagline: "A small card that sits where people wait.",
+    lede: "Rack cards and counter cards for hotel lobbies, visitor centers, waiting rooms and front counters around Columbus. Tall, sturdy and printed on both sides, so people pick one up and take it home.",
+    hero: {
+      src: "/assets/printing-flyers.jpg",
+      alt: "Stack of colorful printed flyers and cards on a wooden desk",
+    },
+    options: [
+      {
+        name: "Standard rack cards",
+        detail: "4 x 9 on heavy cover stock, full color on both sides. Fits most brochure racks.",
+      },
+      {
+        name: "Counter cards",
+        detail: "Folded tent cards that stand on a counter, a register or a check-in table.",
+      },
+      {
+        name: "Service and price cards",
+        detail: "Your services or a price list on one card for the front desk.",
+      },
+      {
+        name: "Tourism and attraction cards",
+        detail: "For hotels, visitor centers and attractions that keep racks full of local brochures.",
+      },
+      {
+        name: "Offer and coupon cards",
+        detail: "An offer or a code on the back, so you can tell which cards brought people in.",
+      },
+      {
+        name: "Event and program cards",
+        detail: "Schedules, maps and sponsor lists for events, tournaments and church programs.",
+      },
+    ],
+    uses: [
+      "Hotels and visitor centers",
+      "Dental and medical waiting rooms",
+      "Salons and spas",
+      "Auto shops and service counters",
+      "Wineries, breweries and attractions",
+      "Real estate and leasing offices",
+    ],
+    sections: [
+      {
+        heading: "Why a rack card works at the counter",
+        body: "People pick up a rack card while they wait: at the front desk, in a hotel lobby, at the register. It's small enough to slip in a pocket or a purse, and sturdy enough to survive the trip home.\n\nGive each card one subject. One service, one attraction, one offer. A card that tries to cover everything ends up saying nothing clearly.\n\nIf you have several services, print a card for each one and fill a small rack on your counter. People take the card that matches their problem.",
+      },
+      {
+        heading: "Rack card or brochure?",
+        body: "A rack card is one flat card printed on both sides. There's no folding, so it's quick to print and quick to read.\n\nA tri-fold brochure gives you six panels for photos, a full service list and answers to common questions. Folded, it fits the same racks.\n\nStart with a rack card when the message is short. Move to a brochure when people need the whole story before they call. My flyers and brochures page covers the folds.",
+      },
+      {
+        heading: "What to put on each side",
+        body: "In a rack, people only see the top of the card. Put your name and a short headline in the top third, big enough to read from a step away.\n\nUse the back for the details: services, hours, a map, an offer or a QR code that opens your booking page. A code or offer that only appears on the card tells you whether the cards are working.\n\nSend your logo and what each card needs to say. I'll lay them out, and you approve a proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What size is a rack card?",
+        a: "4 x 9 inches is the standard. It fits the slots in most brochure racks and counter displays.",
+      },
+      {
+        q: "How much do rack cards cost?",
+        a: "It depends on the quantity, the paper and the finish. Tell me how many you need and I'll quote it within 24 hours. Reorders cost less once your file is set up.",
+      },
+      {
+        q: "What paper is best for rack cards?",
+        a: "Heavy cover stock, so the card stands up in a rack and doesn't flop in someone's hand. Gloss makes photos pop. Matte is easier to write on.",
+      },
+      {
+        q: "Should I get rack cards or brochures?",
+        a: "Rack cards for a short message or a single service. A tri-fold brochure when people need more detail. Both fit in the same racks.",
+      },
+      {
+        q: "Can you design my rack cards?",
+        a: "Yes. Send your logo, photos and what you want each card to say, and you'll get a proof to approve. First order? Design and setup are free.",
+      },
+    ],
+    related: ["flyers-and-brochures", "postcards", "menus-and-table-tents", "business-cards-printing"],
+    industries: ["dental", "medical-specialty", "food-and-beverage", "real-estate"],
   },
   {
     slug: "door-hangers",
@@ -628,12 +740,12 @@ export const PRINT_PAGES: ProductPage[] = [
   {
     slug: "letterhead-and-envelopes",
     group: "print",
-    navLabel: "Letterhead and envelopes",
+    navLabel: "Office stationery and forms",
     blurb: "Letterhead, envelopes, carbonless forms and notepads that match your brand.",
     metaTitle: "Letterhead and Envelope Printing in Columbus",
     metaDescription:
       "Letterhead, envelope, carbonless form and notepad printing in Columbus, Ohio. Matched to your business cards, from $29 for 500. Free quote in 24 hours.",
-    eyebrow: "Letterhead, envelopes and forms",
+    eyebrow: "Office stationery",
     h1: "Letterhead and Envelope Printing in Columbus",
     tagline: "Letterhead, envelopes and forms that match your business card.",
     lede: "Letterhead and envelope printing in Columbus for offices that still send paper. Add carbonless forms and logo notepads, and every piece carries the same logo and colors.",
@@ -1026,5 +1138,183 @@ export const PRINT_PAGES: ProductPage[] = [
     ],
     related: ["door-hangers", "eddm-postcards", "window-graphics", "custom-labels"],
     industries: ["food-and-beverage"],
+  },
+  {
+    slug: "poster-printing",
+    group: "print",
+    navLabel: "Posters",
+    blurb: "Custom posters for windows, lobbies, events and in-store promotions.",
+    metaTitle: "Custom Poster Printing and Mounted Posters in Columbus",
+    metaDescription:
+      "Custom poster printing in Columbus for storefront windows, lobbies, events and in-store promos. Paper posters, foam board mounting and big sizes. Free quote.",
+    eyebrow: "Posters",
+    h1: "Custom Poster Printing in Columbus, Ohio",
+    tagline: "Posters that sell from the window and the wall.",
+    lede: "Custom posters for storefront windows, lobbies, events and in-store promotions in Columbus. Printed on paper or mounted to foam board, from counter sizes up to big lobby prints.",
+    hero: {
+      src: "/assets/printing-posters.jpg",
+      alt: "Wide format printer with a large, colorful poster print coming off the roll",
+    },
+    options: [
+      {
+        name: "Paper posters",
+        detail: "Full color on gloss or matte poster paper for walls, windows and bulletin boards.",
+      },
+      {
+        name: "Mounted posters",
+        detail: "Posters mounted to foam board so they stand on an easel or hang flat on a wall.",
+      },
+      {
+        name: "Window posters",
+        detail: "Promos and hours for the inside of a storefront window. For graphics printed right on the glass, see window graphics.",
+      },
+      {
+        name: "Event posters",
+        detail: "Concerts, fundraisers, festivals and church events, printed in a stack to hang around town.",
+      },
+      {
+        name: "In-store promo posters",
+        detail: "Sale, seasonal and new product posters for the register, the aisle and the front door.",
+      },
+      {
+        name: "Lobby and office prints",
+        detail: "Large prints of your work, your team or your story for the lobby wall.",
+      },
+    ],
+    uses: [
+      "Retail shops",
+      "Restaurants and bars",
+      "Gyms and studios",
+      "Schools and churches",
+      "Event organizers",
+      "Offices and lobbies",
+    ],
+    sections: [
+      {
+        heading: "Picking a poster size",
+        body: "11 x 17, 18 x 24 and 24 x 36 are the common poster sizes, and most frames and holders are made for them. Small posters work on a counter or a bulletin board. Big ones are for windows, walls and anything people read from across the room.\n\nMeasure the spot before you order. A poster that fills the window or the frame looks planned. One that floats in the middle looks like an afterthought.\n\nAny size is fine. If your spot is odd, send me the measurements and I'll set up the file to fit.",
+      },
+      {
+        heading: "Paper or mounted?",
+        body: "Paper posters cost less and are easy to hang with tape, tacks or a frame. They're the pick for event posters you'll put up all over town.\n\nMounted posters are printed and fixed to foam board. They stay flat, stand on an easel and look finished in a lobby or at a check-in table.\n\nPosters are made for inside. For a sign outside, look at a vinyl banner or a coroplast yard sign. Both handle rain.",
+      },
+      {
+        heading: "Your file decides how it looks",
+        body: "A logo or a photo that looks fine on your phone can turn blurry at 24 x 36. Big prints need big files.\n\nSend whatever you have. I'll check it before you approve the proof and tell you if it will hold up at the size you want. If it won't, I'll tell you what to send instead, or rebuild the logo so it prints clean.\n\nYou see a proof before anything prints, so there are no surprises when the poster comes off the printer.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What sizes do posters come in?",
+        a: "11 x 17, 18 x 24 and 24 x 36 are the most common, and frames are easy to find for them. Custom sizes are fine too.",
+      },
+      {
+        q: "How much does poster printing cost?",
+        a: "It depends on the size, the paper, the quantity and whether it's mounted. Tell me what you need and I'll quote it within 24 hours.",
+      },
+      {
+        q: "Can posters go outside?",
+        a: "Paper posters are made for inside or behind glass. For outside, a vinyl banner or a coroplast sign holds up to the weather.",
+      },
+      {
+        q: "Can you mount a poster on foam board?",
+        a: "Yes. Mounted posters stay flat and stand on an easel, which works well in lobbies and at events.",
+      },
+      {
+        q: "Will my logo look good printed big?",
+        a: "Send the file and I'll check it before the proof. If it's too small for the size you want, I'll tell you and help fix it.",
+      },
+    ],
+    related: ["banners-and-flags", "window-graphics", "wall-and-floor-graphics", "flyers-and-brochures"],
+    industries: ["food-and-beverage", "auto-dealers"],
+  },
+  {
+    slug: "magnets-and-calendars",
+    group: "print",
+    navLabel: "Magnets and calendars",
+    blurb: "Fridge magnets, business card magnets and wall calendars that stay in the house.",
+    metaTitle: "Custom Fridge Magnets and Calendars in Columbus, Ohio",
+    metaDescription:
+      "Custom fridge magnets, business card magnets, schedule magnets and wall calendars for Columbus businesses. Your number on the fridge. Free quote in 24 hours.",
+    eyebrow: "Magnets and calendars",
+    h1: "Custom Magnets and Calendars in Columbus, Ohio",
+    tagline: "Your phone number on the fridge.",
+    lede: "Business card magnets, fridge magnets, schedule magnets and wall calendars for Columbus businesses. They go on the fridge or the wall at home, right where people look when something breaks.",
+    hero: {
+      src: "/assets/diecut-postcards-sample.jpg",
+      alt: "Fanned stack of printed cards with rounded corners and full-color photos",
+    },
+    options: [
+      {
+        name: "Business card magnets",
+        detail: "Your business card printed on a thin magnet. Hand them out after a job or tuck one in with the invoice.",
+      },
+      {
+        name: "Custom shape magnets",
+        detail: "Cut to the shape of your logo, a house, a tooth or a truck.",
+      },
+      {
+        name: "Schedule magnets",
+        detail: "Season schedules for teams and schools, with your business across the top as the sponsor.",
+      },
+      {
+        name: "Service reminder magnets",
+        detail: "A spot to write the next service date, so the customer knows when to call you back.",
+      },
+      {
+        name: "Wall calendars",
+        detail: "A full year with your logo and contact info, for clients to hang at home or in the office.",
+      },
+      {
+        name: "Desk and magnet calendars",
+        detail: "A small calendar for the desk, or a one-page year printed on a magnet for the fridge.",
+      },
+    ],
+    uses: [
+      "Plumbers, HVAC and electricians",
+      "Realtors and mortgage lenders",
+      "Dentists and vets",
+      "Auto repair shops",
+      "Pizza and takeout restaurants",
+      "Youth sports sponsors",
+    ],
+    sections: [
+      {
+        heading: "Why service businesses want to be on the fridge",
+        body: "When the furnace quits or the sink backs up, people don't search for a company they've never heard of. They look on the fridge. A magnet with your name and number puts you there.\n\nHand one to every customer at the end of a job. Tuck one in with the invoice. It sits in the kitchen until the next time they need you.\n\nKeep the design simple: your name, what you do and a big phone number. A magnet is read from across the kitchen.",
+      },
+      {
+        heading: "Schedule magnets and team sponsorships",
+        body: "Every family with a kid on the team keeps the schedule somewhere they'll see it. Print that schedule on a magnet with your name across the top, and you're on the fridge for the whole season.\n\nSchools, youth leagues and booster clubs often look for sponsors. Ask the coach or the athletic director.\n\nSend me the schedule as soon as it's final. I'll lay it out with your logo and the team colors, and you approve a proof before anything prints.",
+      },
+      {
+        heading: "Calendars as a year-end gift",
+        body: "A wall calendar is a gift clients use every day for a year. Realtors, insurance agents, lenders and service companies send them to past customers in December.\n\nOrder in the fall so they're in hand before the holidays. Use your own photos, local scenes or your team, and keep your contact info on every page.\n\nA one-page calendar magnet is the low-cost version. It goes on the fridge in January and stays there.\n\nFor magnets on a truck or car door, see car magnets.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much do custom magnets cost?",
+        a: "It depends on the size, the shape and the quantity. Tell me what you have in mind and I'll quote it within 24 hours.",
+      },
+      {
+        q: "Will a magnet stick to my stainless steel fridge?",
+        a: "Not always. Some stainless steel fridges aren't magnetic. The sides of most fridges are, so try a magnet you already have before you order.",
+      },
+      {
+        q: "Can I mail magnets?",
+        a: "Business card magnets are flat and thin, so they slip into an envelope with an invoice or a letter.",
+      },
+      {
+        q: "When should I order calendars?",
+        a: "In the fall. That leaves time for the design and the proof, and the calendars are in hand before the holidays.",
+      },
+      {
+        q: "Do you make car magnets too?",
+        a: "Yes. Car and truck door magnets are on the car magnets page.",
+      },
+    ],
+    related: ["car-magnets", "postcards", "business-cards-printing", "promotional-products"],
+    industries: ["real-estate", "dental"],
   },
 ];
