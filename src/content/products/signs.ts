@@ -461,7 +461,7 @@ export const SIGN_PAGES: ProductPage[] = [
       },
       {
         heading: "Large format printing for posters, lobbies and events",
-        body: "Large format printing covers anything too big for a regular printer: posters, mounted prints, lobby graphics, event signs and window displays. It's the same idea as a banner, usually indoors and on paper, film or rigid board.\n\nPosters work for in-store promos, event signs and office walls. Mount one on foam board and it stands on an easel at a check-in table or in a lobby. For full walls, windows and floors, see my wall and floor graphics and window graphics pages.\n\nThe thing that matters most with a big print is your file. A logo that looks fine on a business card can blur at 4 feet wide. Send what you have. I'll check it and tell you if it holds up before you approve the proof.",
+        body: "Large format printing covers anything too big for a regular printer: posters, mounted prints, lobby graphics, event signs and window displays. It's the same idea as a banner, usually indoors and on paper, film or rigid board.\n\nPosters work for in-store promos, event signs and office walls. Mount one on foam board and it stands on an easel at a check-in table or in a lobby. My posters page covers sizes and mounting. For full walls, windows and floors, see my wall and floor graphics and window graphics pages.\n\nThe thing that matters most with a big print is your file. A logo that looks fine on a business card can blur at 4 feet wide. Send what you have. I'll check it and tell you if it holds up before you approve the proof.",
         image: {
           src: "/assets/printing-posters.jpg",
           alt: "Wide format printer with a large, colorful poster print coming off the roll",

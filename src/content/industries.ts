@@ -217,7 +217,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Cards for the front desk",
         body: "Business cards, appointment cards and recall postcards. The pieces that go home with every patient.",
-        products: ["business-cards-printing", "business-printing", "postcards"],
+        products: ["business-cards-printing", "business-printing", "postcards", "rack-cards"],
       },
       {
         heading: "Letterhead and referral pads",
@@ -794,7 +794,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Menus and table tents",
         body: "Menus, table tents and specials cards that are easy to update.",
-        products: ["menus-and-table-tents"],
+        products: ["menus-and-table-tents", "poster-printing"],
       },
       {
         heading: "Window lettering",
