@@ -16,7 +16,7 @@ const SERVICE_LINKS = [
   { href: "/custom-labels", label: "Custom labels" },
   { href: "/business-cards-printing", label: "Business cards" },
   { href: "/vehicle-wraps", label: "Vehicle wraps" },
-  { href: "/embroidered-apparel", label: "Embroidered apparel" },
+  { href: "/custom-apparel", label: "Custom apparel" },
   { href: "/promotional-products", label: "Promotional products" },
   { href: "/banners-and-flags", label: "Banners and flags" },
 ];

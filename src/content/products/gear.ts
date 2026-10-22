@@ -1,110 +1,7 @@
 import type { ProductPage } from "../types";
 
-// Apparel, promo products, packaging and rebrand kits. Order here is menu order.
+// Promo products, packaging and rebrand kits. Apparel lives in apparel.ts. Order here is menu order.
 export const GEAR_PAGES: ProductPage[] = [
-  {
-    slug: "embroidered-apparel",
-    group: "gear",
-    navLabel: "Embroidered apparel",
-    blurb: "Embroidered polos, hats and jackets, screen printed tees and hi-vis for your crew.",
-    metaTitle: "Custom Embroidery and Apparel in Columbus",
-    metaDescription:
-      "Custom embroidery in Columbus, Ohio for polos, hats, jackets and company hoodies, plus screen printed tees and hi-vis. Embroidered polos from $29 each.",
-    eyebrow: "Apparel",
-    h1: "Custom Embroidery and Apparel in Columbus",
-    tagline: "Embroidered shirts, hats and jackets for your crew.",
-    lede: "Custom embroidery for Columbus businesses: polos, hats, jackets and company hoodies with your logo stitched on. Screen printed tees and hi-vis safety wear too, so the whole crew matches.",
-    hero: {
-      src: "/assets/custom-apparel-polos-hoodies.jpg",
-      alt: "Red and black polos, a navy T-shirt and a black hoodie, each with the Buckeye Biz Hub Ohio logo",
-    },
-    prices: ["embroidered-polos", "screen-printed-tees"],
-    options: [
-      {
-        name: "Embroidered polos",
-        detail: "A stitched left chest logo for the office, the showroom and customer visits. The standard work uniform for a reason.",
-      },
-      {
-        name: "Embroidered hats and beanies",
-        detail: "Structured caps, trucker hats and knit beanies with a stitched logo or a sewn-on patch.",
-      },
-      {
-        name: "Jackets and company hoodies",
-        detail: "Work jackets, soft shells, fleece and hoodies with your logo on the chest, and your name across the back if you want it.",
-      },
-      {
-        name: "Screen printed T-shirts",
-        detail: "The lowest cost per shirt for crews, events and giveaways. Big, bold designs on the front or back.",
-      },
-      {
-        name: "Hi-vis safety wear",
-        detail: "Safety vests and hi-vis shirts with your logo for road crews, job sites and anyone working near traffic.",
-      },
-      {
-        name: "Work shirts and uniforms",
-        detail: "Button-ups, work shirts and scrubs with your logo, so customers know who's at the door.",
-      },
-      {
-        name: "Personalized names",
-        detail: "Each person's name stitched under the logo. A good fit for service techs and front desk staff.",
-      },
-    ],
-    uses: [
-      "Roofing, HVAC and construction crews",
-      "Lawn care and landscaping teams",
-      "Dental and medical offices",
-      "Restaurants, breweries and coffee shops",
-      "Real estate teams",
-      "Company events and team gifts",
-      "New hire welcome kits",
-    ],
-    sections: [
-      {
-        heading: "Embroidery or screen printing: which one should you pick?",
-        body: "Embroidery stitches your logo into the fabric with thread. It looks sharp on polos, hats and jackets, and it doesn't crack or peel. It's the right call for anything your team wears in front of customers.\n\nScreen printing puts ink on the fabric. It costs less per shirt on bigger runs and handles a big design on the back of a tee. It's the right call for crew shirts, events and giveaways.\n\nMost businesses use both. Embroidered polos and hats for the people customers see, screen printed tees for the field and the summer cookout. Embroidered polos start at $29 each and screen printed tees at $14 each. Send me your logo and I'll tell you which method fits each item.",
-      },
-      {
-        heading: "Branded company hoodies, polos and hi-vis for the whole crew",
-        body: "A crew in matching shirts looks like a real company. A crew in old concert tees looks like a few guys who showed up. Customers notice the difference before anyone says a word.\n\nI help Central Ohio businesses put together a simple uniform: a polo or work shirt for customer-facing staff, a tee for the field, a company hoodie and jacket for the cold months, and a hat that goes with all of it. Same logo, same colors, every piece.\n\nFor road work and job sites, hi-vis vests and shirts can carry your logo too. Tell me what the job calls for and I'll match the garment to it. When you hire someone, reorder a few pieces and they look like the rest of the crew on day one.",
-        image: {
-          src: "/assets/apparel-safety-hivis.jpg",
-          alt: "Orange and yellow hi-vis safety vests with reflective stripes and a printed logo, hanging over a workbench",
-        },
-      },
-      {
-        heading: "Looking for embroidery near me? Here's how it works",
-        body: "There's no walk-in shop. I come to you, or the whole job runs by phone and email. You send your logo and tell me the items, sizes and colors, and I quote it within 24 hours.\n\nBefore anything gets stitched, your logo is set up for embroidery and you approve a proof. Tiny text and thin lines don't always stitch clean, so I'll flag anything that needs a simpler version for thread. First order? Design and setup are free.\n\nI work with trusted print partners, and you deal with one person from start to finish. Small runs are fine. Ask and I'll tell you the minimum for your item. Reorders are easy because your logo is already set up. I serve Columbus, Dublin, Westerville, Hilliard, Grove City and the rest of Central Ohio.",
-      },
-    ],
-    faqs: [
-      {
-        q: "How much do embroidered polos cost?",
-        a: "Embroidered polos with a left chest logo start at $29 each. Screen printed tees start at $14 each. The garment, the quantity and the size of the logo set the final price, and the price per piece drops as quantity goes up.",
-      },
-      {
-        q: "What's the minimum order for custom embroidery?",
-        a: "Small runs are fine. Ask and I'll tell you the minimum for your item. Reorders get cheaper per piece because your logo is already set up.",
-      },
-      {
-        q: "Is embroidery or screen printing better for work shirts?",
-        a: "For polos, hats and jackets, embroidery. It looks more professional and holds up to washing. For T-shirts on bigger runs, screen printing costs less per shirt.",
-      },
-      {
-        q: "Can you embroider my logo on hats?",
-        a: "Yes. Caps, trucker hats and beanies, stitched directly or with a sewn-on patch. A very detailed logo sometimes needs a simpler version to fit a hat, and you see a proof first.",
-      },
-      {
-        q: "Can I mix sizes and garments in one order?",
-        a: "Yes. Polos for the office, tees for the crew and hats for everyone can go in one order. Send me a list of who needs what and I'll put the quote together.",
-      },
-      {
-        q: "What logo file do you need for embroidery?",
-        a: "Send whatever you have. A vector file (AI, EPS or PDF) is best, but a clear PNG works to start. Your logo gets set up for stitching and you approve the proof before anything is made.",
-      },
-    ],
-    related: ["promotional-products", "full-rebrand-kits", "vehicle-lettering", "business-cards-printing"],
-    industries: ["roofing", "construction", "lawn-care-landscaping", "dental", "food-and-beverage"],
-  },
   {
     slug: "promotional-products",
     group: "gear",
@@ -204,7 +101,7 @@ export const GEAR_PAGES: ProductPage[] = [
         a: "Yes. I work with businesses all over Central Ohio, from Dublin and Westerville to Newark and Mount Vernon, in person or by phone and email.",
       },
     ],
-    related: ["embroidered-apparel", "trade-show-displays", "banners-and-flags", "packaging"],
+    related: ["custom-apparel", "trade-show-displays", "banners-and-flags", "packaging"],
     industries: ["real-estate", "dental", "construction", "food-and-beverage"],
   },
   {

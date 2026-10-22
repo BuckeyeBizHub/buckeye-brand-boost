@@ -11,13 +11,13 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/wraps", "/vehicle-wraps"],
   ["/cards", "/business-printing"],
   ["/seo", "/local-seo"],
-  ["/apparel", "/embroidered-apparel"],
+  ["/apparel", "/custom-apparel"],
   ["/signs", "/yard-signs-and-signage"],
   ["/signage", "/yard-signs-and-signage"],
   ["/rebrand", "/full-rebrand-kits"],
   ["/web-design", "/website-design"],
   ["/business-cards", "/business-cards-printing"],
-  ["/branded-apparel-and-uniforms", "/embroidered-apparel"],
+  ["/branded-apparel-and-uniforms", "/custom-apparel"],
   ["/vehicle-wraps-and-fleet-branding", "/vehicle-wraps"],
   ["/decals", "/decals-and-stickers"],
   ["/vehicle-branding", "/vehicle-wraps"],
@@ -46,6 +46,9 @@ const PERMANENT_REDIRECTS: [string, string][] = [
   ["/presentation-folders-columbus", "/presentation-folders"],
   ["/corporate-folders-columbus", "/presentation-folders"],
   ["/eco-friendly-folders-columbus", "/presentation-folders"],
+  // Oct 2026 apparel section: the single apparel page split into a hub,
+  // decoration pages and garment pages.
+  ["/embroidered-apparel", "/embroidery"],
 ];
 
 // The old WordPress blog. Once buckeyebizhub.blog points at this Vercel

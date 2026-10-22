@@ -320,6 +320,6 @@ export const SIGN_PAGES: ProductPage[] = [
         a: "Order as soon as you have the show date. Your quote comes back within 24 hours with a production date, so you'll know right away if the timing works.",
       },
     ],
-    related: ["banners-and-flags", "promotional-products", "flyers-and-brochures", "embroidered-apparel"],
+    related: ["banners-and-flags", "promotional-products", "flyers-and-brochures", "custom-apparel"],
   },
 ];

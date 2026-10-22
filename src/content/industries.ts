@@ -41,7 +41,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Crews that look like one company",
         body: "Matching shirts, polos and hats so homeowners know who's on their roof. Hard hat stickers too.",
-        products: ["embroidered-apparel", "decals-and-stickers"],
+        products: ["custom-apparel", "decals-and-stickers"],
       },
       {
         heading: "Paperwork that closes the deal",
@@ -69,7 +69,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "eddm-postcards",
       "vehicle-lettering",
       "vehicle-wraps",
-      "embroidered-apparel",
+      "custom-apparel",
       "business-cards-printing",
     ],
     prices: ["yard-signs", "door-hangers", "door-lettering", "embroidered-polos"],
@@ -134,7 +134,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Workwear the crew will wear",
         body: "Embroidered polos for the office and site walks, tees and hoodies for the field, all with the same logo.",
-        products: ["embroidered-apparel", "promotional-products"],
+        products: ["custom-apparel", "promotional-products"],
       },
       {
         heading: "Bids that look buttoned up",
@@ -165,7 +165,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "banners-and-flags",
       "decals-and-stickers",
       "vehicle-lettering",
-      "embroidered-apparel",
+      "custom-apparel",
       "yard-signs-and-signage",
       "trade-show-displays",
       "presentation-folders",
@@ -232,7 +232,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Staff apparel that matches",
         body: "Embroidered polos and jackets for the team, in your practice colors.",
-        products: ["embroidered-apparel"],
+        products: ["custom-apparel"],
       },
       {
         heading: "Thank-yous for referring offices",
@@ -264,7 +264,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "letterhead-and-envelopes",
       "window-graphics",
       "wall-and-floor-graphics",
-      "embroidered-apparel",
+      "custom-apparel",
       "promotional-products",
       "full-rebrand-kits",
     ],
@@ -330,7 +330,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Staff apparel",
         body: "Embroidered polos and jackets so patients can tell who works there.",
-        products: ["embroidered-apparel"],
+        products: ["custom-apparel"],
       },
       {
         heading: "Health fairs and community events",
@@ -357,7 +357,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "business-printing",
       "window-graphics",
       "wall-and-floor-graphics",
-      "embroidered-apparel",
+      "custom-apparel",
       "promotional-products",
       "trade-show-displays",
     ],
@@ -423,7 +423,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Crew shirts",
         body: "Tees for the summer crew, polos for whoever runs the estimates.",
-        products: ["embroidered-apparel"],
+        products: ["custom-apparel"],
       },
       {
         heading: "Cards and estimate forms",
@@ -450,7 +450,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "yard-signs-and-signage",
       "vehicle-lettering",
       "fleet-wraps",
-      "embroidered-apparel",
+      "custom-apparel",
       "eddm-postcards",
       "business-cards-printing",
     ],
@@ -604,7 +604,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Staff apparel",
         body: "Embroidered polos and jackets for sales, service and finance, all matching.",
-        products: ["embroidered-apparel"],
+        products: ["custom-apparel"],
       },
       {
         heading: "Buyer gifts and giveaways",
@@ -640,7 +640,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "banners-and-flags",
       "window-graphics",
       "wall-and-floor-graphics",
-      "embroidered-apparel",
+      "custom-apparel",
       "promotional-products",
       "trade-show-displays",
       "postcards",
@@ -707,7 +707,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Driver apparel",
         body: "Polos, tees and jackets so customers know who's at the door.",
-        products: ["embroidered-apparel"],
+        products: ["custom-apparel"],
       },
       {
         heading: "Warehouse and dock graphics",
@@ -734,7 +734,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "vehicle-wraps",
       "vehicle-lettering",
       "decals-and-stickers",
-      "embroidered-apparel",
+      "custom-apparel",
       "wall-and-floor-graphics",
     ],
     prices: ["door-lettering", "vehicle-wrap", "embroidered-polos"],
@@ -809,7 +809,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Staff shirts and merch",
         body: "Tees, hats and aprons for the crew, plus merch to sell at the counter.",
-        products: ["embroidered-apparel", "promotional-products"],
+        products: ["custom-apparel", "promotional-products"],
       },
     ],
     sections: [
@@ -833,7 +833,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       "window-graphics",
       "vehicle-wraps",
       "decals-and-stickers",
-      "embroidered-apparel",
+      "custom-apparel",
       "promotional-products",
     ],
     prices: ["roll-labels", "vinyl-decals", "window-lettering", "screen-printed-tees"],

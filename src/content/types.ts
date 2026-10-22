@@ -14,6 +14,17 @@ export interface Faq {
   a: string;
 }
 
+/** One garment style we can source, from the apparel distributor's catalog. Never a price or a cost. */
+export interface GarmentStyle {
+  brand: string;
+  /** The maker's style number, e.g. "5000". */
+  style: string;
+  name: string;
+  /** A few popular color names. */
+  colors: string[];
+  image?: Img;
+}
+
 /** One product or service page, rendered by ProductPageView at /<slug>. */
 export interface ProductPage {
   slug: string;
@@ -37,6 +48,10 @@ export interface ProductPage {
   hero: Img;
   /** Starting prices shown on the page, in order. */
   prices?: PriceKey[];
+  /** Hub pages only: groups of child page slugs, shown as cards right after the hero. */
+  children?: { heading: string; intro?: string; slugs: string[] }[];
+  /** Garment pages only: popular styles, shown without prices. */
+  styles?: GarmentStyle[];
   /** What we make: 4 to 8 options, each one or two sentences. */
   options: { name: string; detail: string }[];
   /** Who buys it / what it's for. 4 to 8 short items. */

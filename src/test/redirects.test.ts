@@ -22,3 +22,17 @@ describe("old printing and folder URLs", () => {
     expect(SITE_ROUTES).toContain(destination);
   });
 });
+
+const APPAREL_URLS: [string, string][] = [
+  ["/embroidered-apparel", "/embroidery"],
+  ["/apparel", "/custom-apparel"],
+  ["/branded-apparel-and-uniforms", "/custom-apparel"],
+];
+
+describe("old apparel URLs", () => {
+  it.each(APPAREL_URLS)("%s 301s to %s, a live page", (source, destination) => {
+    const rule = redirects.find((r) => r.source === source && !r.has);
+    expect(rule).toMatchObject({ destination, statusCode: 301 });
+    expect(SITE_ROUTES).toContain(destination);
+  });
+});
