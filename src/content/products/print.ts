@@ -569,26 +569,32 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         name: "Standard rack cards",
         detail: "4 x 9 on heavy cover stock, full color on both sides. Fits most brochure racks.",
+        image: { src: "/assets/rack-opt-standard.jpg", alt: "Fanned stack of tall printed rack cards on a wood table, one standing upright" },
       },
       {
         name: "Counter cards",
         detail: "Folded tent cards that stand on a counter, a register or a check-in table.",
+        image: { src: "/assets/rack-opt-counter.jpg", alt: "Folded tent card on a cafe counter next to a card reader" },
       },
       {
         name: "Service and price cards",
         detail: "Your services or a price list on one card for the front desk.",
+        image: { src: "/assets/rack-opt-price.jpg", alt: "Printed service and price list card on a front desk beside a pen and appointment book" },
       },
       {
         name: "Tourism and attraction cards",
         detail: "For hotels, visitor centers and attractions that keep racks full of local brochures.",
+        image: { src: "/assets/rack-opt-tourism.jpg", alt: "Wall rack filled with tourism rack cards showing landscapes and local sights" },
       },
       {
         name: "Offer and coupon cards",
         detail: "An offer or a code on the back, so you can tell which cards brought people in.",
+        image: { src: "/assets/rack-opt-coupon.jpg", alt: "Printed coupon card offering 15 percent off with a promo code at the bottom" },
       },
       {
         name: "Event and program cards",
         detail: "Schedules, maps and sponsor lists for events, tournaments and church programs.",
+        image: { src: "/assets/rack-opt-event.jpg", alt: "Printed event schedule, map and sponsor cards on a check-in table" },
       },
     ],
     uses: [
@@ -1162,26 +1168,32 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         name: "Paper posters",
         detail: "Full color on gloss or matte poster paper for walls, windows and bulletin boards.",
+        image: { src: "/assets/poster-opt-paper.jpg", alt: "Printed paper poster partly unrolled on a table next to rolled posters and tape" },
       },
       {
         name: "Mounted posters",
         detail: "Posters mounted to foam board so they stand on an easel or hang flat on a wall.",
+        image: { src: "/assets/poster-opt-mounted.jpg", alt: "Corner of a poster mounted on white foam board leaning against a wall" },
       },
       {
         name: "Window posters",
         detail: "Promos and hours for the inside of a storefront window. For graphics printed right on the glass, see window graphics.",
+        image: { src: "/assets/poster-opt-window.jpg", alt: "Store hours poster inside a bakery window" },
       },
       {
         name: "Event posters",
         detail: "Concerts, fundraisers, festivals and church events, printed in a stack to hang around town.",
+        image: { src: "/assets/poster-opt-event.jpg", alt: "Fall festival poster pinned to a cork bulletin board among smaller flyers" },
       },
       {
         name: "In-store promo posters",
         detail: "Sale, seasonal and new product posters for the register, the aisle and the front door.",
+        image: { src: "/assets/poster-opt-instore.jpg", alt: "New arrivals poster in a floor sign holder at the end of a store aisle" },
       },
       {
         name: "Lobby and office prints",
         detail: "Large prints of your work, your team or your story for the lobby wall.",
+        image: { src: "/assets/poster-opt-lobby.jpg", alt: "Large framed city skyline print above an office reception desk" },
       },
     ],
     uses: [
@@ -1254,26 +1266,32 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         name: "Business card magnets",
         detail: "Your business card printed on a thin magnet. Hand them out after a job or tuck one in with the invoice.",
+        image: { src: "/assets/magnet-opt-card.jpg", alt: "Stack of business card magnets with one flipped to show the magnetic back" },
       },
       {
         name: "Custom shape magnets",
         detail: "Cut to the shape of your logo, a house, a tooth or a truck.",
+        image: { src: "/assets/magnet-opt-shape.jpg", alt: "House, tooth, truck and round die-cut magnets on a white fridge" },
       },
       {
         name: "Schedule magnets",
         detail: "Season schedules for teams and schools, with your business across the top as the sponsor.",
+        image: { src: "/assets/magnet-opt-schedule.jpg", alt: "Football season schedule magnet with a sponsor band on a black fridge" },
       },
       {
         name: "Service reminder magnets",
         detail: "A spot to write the next service date, so the customer knows when to call you back.",
+        image: { src: "/assets/magnet-opt-reminder.jpg", alt: "HVAC service reminder magnet with a next service date written in" },
       },
       {
         name: "Wall calendars",
         detail: "A full year with your logo and contact info, for clients to hang at home or in the office.",
+        image: { src: "/assets/magnet-opt-wall-calendar.jpg", alt: "Printed wall calendar with a snowy covered bridge photo hanging in a home office" },
       },
       {
         name: "Desk and magnet calendars",
         detail: "A small calendar for the desk, or a one-page year printed on a magnet for the fridge.",
+        image: { src: "/assets/magnet-opt-year-calendar.jpg", alt: "One-page year calendar magnet on a stainless fridge" },
       },
     ],
     uses: [
