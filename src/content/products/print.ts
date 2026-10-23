@@ -562,8 +562,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "A small card that sits where people wait.",
     lede: "Rack cards and counter cards for hotel lobbies, visitor centers, waiting rooms and front counters around Columbus. Tall, sturdy and printed on both sides, so people pick one up and take it home.",
     hero: {
-      src: "/assets/printing-flyers.jpg",
-      alt: "Stack of colorful printed flyers and cards on a wooden desk",
+      src: "/assets/rack-cards-hero.jpg",
+      alt: "Clear acrylic rack on a lobby counter holding four tall printed rack cards",
     },
     options: [
       {
@@ -603,7 +603,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Why a rack card works at the counter",
         body: "People pick up a rack card while they wait: at the front desk, in a hotel lobby, at the register. It's small enough to slip in a pocket or a purse, and sturdy enough to survive the trip home.\n\nGive each card one subject. One service, one attraction, one offer. A card that tries to cover everything ends up saying nothing clearly.\n\nIf you have several services, print a card for each one and fill a small rack on your counter. People take the card that matches their problem.",
-        image: { src: "/assets/brochures-hero.jpg", alt: "Fanned printed brochures standing on a counter by a bright window" },
+        image: { src: "/assets/rack-cards-counter-display.jpg", alt: "Three printed rack cards in a clear counter rack beside a folded tent card at a front desk" },
       },
       {
         heading: "Rack card or brochure?",
@@ -613,6 +613,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "What to put on each side",
         body: "In a rack, people only see the top of the card. Put your name and a short headline in the top third, big enough to read from a step away.\n\nUse the back for the details: services, hours, a map, an offer or a QR code that opens your booking page. A code or offer that only appears on the card tells you whether the cards are working.\n\nSend your logo and what each card needs to say. I'll lay them out, and you approve a proof before anything prints.",
+        image: { src: "/assets/rack-cards-front-back.jpg", alt: "Front and back of a printed rack card side by side, with a headline on the front and a map and QR code on the back" },
       },
     ],
     faqs: [
@@ -1154,8 +1155,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Posters that sell from the window and the wall.",
     lede: "Custom posters for storefront windows, lobbies, events and in-store promotions in Columbus. Printed on paper or mounted to foam board, from counter sizes up to big lobby prints.",
     hero: {
-      src: "/assets/printing-posters.jpg",
-      alt: "Wide format printer with a large, colorful poster print coming off the roll",
+      src: "/assets/posters-hero.jpg",
+      alt: "Two printed sale posters taped inside a shop window",
     },
     options: [
       {
@@ -1195,11 +1196,12 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Picking a poster size",
         body: "11 x 17, 18 x 24 and 24 x 36 are the common poster sizes, and most frames and holders are made for them. Small posters work on a counter or a bulletin board. Big ones are for windows, walls and anything people read from across the room.\n\nMeasure the spot before you order. A poster that fills the window or the frame looks planned. One that floats in the middle looks like an afterthought.\n\nAny size is fine. If your spot is odd, send me the measurements and I'll set up the file to fit.",
-        image: { src: "/assets/gallery/custom-banner-poster-music.png", alt: "Vintage-style printed event poster with a guitar, drums and music notes" },
+        image: { src: "/assets/posters-size-lineup.jpg", alt: "Three framed posters in small, medium and large sizes hung in a row on a white wall" },
       },
       {
         heading: "Paper or mounted?",
         body: "Paper posters cost less and are easy to hang with tape, tacks or a frame. They're the pick for event posters you'll put up all over town.\n\nMounted posters are printed and fixed to foam board. They stay flat, stand on an easel and look finished in a lobby or at a check-in table.\n\nPosters are made for inside. For a sign outside, look at a vinyl banner or a coroplast yard sign. Both handle rain.",
+        image: { src: "/assets/posters-mounted-easel.jpg", alt: "Printed welcome poster mounted on foam board, standing on an easel beside a check-in table" },
       },
       {
         heading: "Your file decides how it looks",
@@ -1245,8 +1247,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Your phone number on the fridge.",
     lede: "Business card magnets, fridge magnets, schedule magnets and wall calendars for Columbus businesses. They go on the fridge or the wall at home, right where people look when something breaks.",
     hero: {
-      src: "/assets/gallery/custom-tear-off-calendar.jpg",
-      alt: "Tear-off desk calendar with a daily quote on a gray background",
+      src: "/assets/magnets-calendars-hero.jpg",
+      alt: "Flat lay of a wall calendar, desk calendar, business card magnets and a house-shaped magnet in matching designs",
     },
     options: [
       {
@@ -1286,10 +1288,12 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Why service businesses want to be on the fridge",
         body: "When the furnace quits or the sink backs up, people don't search for a company they've never heard of. They look on the fridge. A magnet with your name and number puts you there.\n\nHand one to every customer at the end of a job. Tuck one in with the invoice. It sits in the kitchen until the next time they need you.\n\nKeep the design simple: your name, what you do and a big phone number. A magnet is read from across the kitchen.",
+        image: { src: "/assets/magnets-fridge.jpg", alt: "Plumber's business card magnet with a big phone number on a stainless fridge next to a child's drawing" },
       },
       {
         heading: "Schedule magnets and team sponsorships",
         body: "Every family with a kid on the team keeps the schedule somewhere they'll see it. Print that schedule on a magnet with your name across the top, and you're on the fridge for the whole season.\n\nSchools, youth leagues and booster clubs often look for sponsors. Ask the coach or the athletic director.\n\nSend me the schedule as soon as it's final. I'll lay it out with your logo and the team colors, and you approve a proof before anything prints.",
+        image: { src: "/assets/magnets-schedule.jpg", alt: "Youth soccer schedule magnet with a sponsor band across the top, on a white fridge" },
       },
       {
         heading: "Calendars as a year-end gift",
