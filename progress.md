@@ -12,13 +12,16 @@ labels and packaging, then menus and home page.
 
 ## Outputs
 
+- 2026-10-23: round 2 photo pack. 18 Higgsfield photos (plus 2 redos for
+  calendars that showed a past year, about 5 credits) as option photo tiles
+  on `/rack-cards`, `/poster-printing` and `/magnets-and-calendars`. Draft PR.
 - 2026-10-23: product page look, first pass (David: new pages "boring").
   Template now shows photo tiles for options when every option has an
   image, and a larger hero photo. Rack cards, posters and magnets pages get
   section photos from existing assets; magnets hero is now a calendar.
   Round 1 photo pack: 9 Higgsfield photos (David picked Higgsfield, about
   2.5 of 300 plan credits) as heroes and section photos on those 3 pages.
-  Shot list: /mnt/project-files/website/photo-pack/. Draft PR #20.
+  Shot list: /mnt/project-files/website/photo-pack/. PR #20, merged on PUBLISH by David.
 - 2026-10-22: printing section. New `/rack-cards`, `/poster-printing` and
   `/magnets-and-calendars` (no prices yet, none in `prices.ts`). Business
   cards page gets a specialty finishes section (foil, spot UV, soft touch,
