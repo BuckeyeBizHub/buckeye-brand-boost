@@ -7,18 +7,23 @@ each section, dates as YYYY-MM-DD.
 
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
-each: apparel (done, PR #17), signs (done, PR #18), printing (this PR),
+each: apparel (done, PR #17), signs (done, PR #18), printing (done, PR #19),
 labels and packaging, then menus and home page.
 
 ## Outputs
 
+- 2026-10-23: product page look, first pass (David: new pages "boring").
+  Template now shows photo tiles for options when every option has an
+  image, and a larger hero photo. Rack cards, posters and magnets pages get
+  section photos from existing assets; magnets hero is now a calendar.
+  Photo pack for each page comes next, tool pending David's pick. Draft PR.
 - 2026-10-22: printing section. New `/rack-cards`, `/poster-printing` and
   `/magnets-and-calendars` (no prices yet, none in `prices.ts`). Business
   cards page gets a specialty finishes section (foil, spot UV, soft touch,
   painted edges). `/business-printing` hub lists every print page.
   Letterhead page relabeled "Office stationery and forms" in menus. Dental
   and restaurant industry pages link the new pages. Magnets and rack cards
-  use stand-in photos. Draft PR, waiting on PUBLISH.
+  use stand-in photos. PR #19, merged on PUBLISH by David.
 - 2026-10-22: signs section. New `/aluminum-signs` (aluminum, ACM, PVC,
   acrylic), `/a-frame-signs` and `/safety-and-parking-signs`. Trade show
   page gets a table throw and step-and-repeat section. Construction, real

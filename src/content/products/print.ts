@@ -603,10 +603,12 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Why a rack card works at the counter",
         body: "People pick up a rack card while they wait: at the front desk, in a hotel lobby, at the register. It's small enough to slip in a pocket or a purse, and sturdy enough to survive the trip home.\n\nGive each card one subject. One service, one attraction, one offer. A card that tries to cover everything ends up saying nothing clearly.\n\nIf you have several services, print a card for each one and fill a small rack on your counter. People take the card that matches their problem.",
+        image: { src: "/assets/brochures-hero.jpg", alt: "Fanned printed brochures standing on a counter by a bright window" },
       },
       {
         heading: "Rack card or brochure?",
         body: "A rack card is one flat card printed on both sides. There's no folding, so it's quick to print and quick to read.\n\nA tri-fold brochure gives you six panels for photos, a full service list and answers to common questions. Folded, it fits the same racks.\n\nStart with a rack card when the message is short. Move to a brochure when people need the whole story before they call. My flyers and brochures page covers the folds.",
+        image: { src: "/assets/printing-brochures.jpg", alt: "Open tri-fold brochures with photos and text spread on a dark table" },
       },
       {
         heading: "What to put on each side",
@@ -1193,6 +1195,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Picking a poster size",
         body: "11 x 17, 18 x 24 and 24 x 36 are the common poster sizes, and most frames and holders are made for them. Small posters work on a counter or a bulletin board. Big ones are for windows, walls and anything people read from across the room.\n\nMeasure the spot before you order. A poster that fills the window or the frame looks planned. One that floats in the middle looks like an afterthought.\n\nAny size is fine. If your spot is odd, send me the measurements and I'll set up the file to fit.",
+        image: { src: "/assets/gallery/custom-banner-poster-music.png", alt: "Vintage-style printed event poster with a guitar, drums and music notes" },
       },
       {
         heading: "Paper or mounted?",
@@ -1201,6 +1204,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Your file decides how it looks",
         body: "A logo or a photo that looks fine on your phone can turn blurry at 24 x 36. Big prints need big files.\n\nSend whatever you have. I'll check it before you approve the proof and tell you if it will hold up at the size you want. If it won't, I'll tell you what to send instead, or rebuild the logo so it prints clean.\n\nYou see a proof before anything prints, so there are no surprises when the poster comes off the printer.",
+        image: { src: "/assets/printing-murals.jpg", alt: "Large wall print of a desert canyon covering an office wall" },
       },
     ],
     faqs: [
@@ -1241,8 +1245,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Your phone number on the fridge.",
     lede: "Business card magnets, fridge magnets, schedule magnets and wall calendars for Columbus businesses. They go on the fridge or the wall at home, right where people look when something breaks.",
     hero: {
-      src: "/assets/diecut-postcards-sample.jpg",
-      alt: "Fanned stack of printed cards with rounded corners and full-color photos",
+      src: "/assets/gallery/custom-tear-off-calendar.jpg",
+      alt: "Tear-off desk calendar with a daily quote on a gray background",
     },
     options: [
       {
@@ -1290,6 +1294,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Calendars as a year-end gift",
         body: "A wall calendar is a gift clients use every day for a year. Realtors, insurance agents, lenders and service companies send them to past customers in December.\n\nOrder in the fall so they're in hand before the holidays. Use your own photos, local scenes or your team, and keep your contact info on every page.\n\nA one-page calendar magnet is the low-cost version. It goes on the fridge in January and stays there.\n\nFor magnets on a truck or car door, see car magnets.",
+        image: { src: "/assets/gallery/custom-desk-calendar.png", alt: "Spiral desk calendar with a quote and a law firm's contact details along the bottom" },
       },
     ],
     faqs: [

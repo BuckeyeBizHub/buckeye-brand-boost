@@ -107,7 +107,7 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
               alt={page.hero.alt}
               fetchPriority="high"
               decoding="async"
-              className="aspect-[4/3] h-full w-full object-cover"
+              className="aspect-[4/3] h-full w-full object-cover lg:aspect-[5/4]"
             />
           </div>
         </Container>
@@ -137,14 +137,30 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
       {/* Options */}
       <Section bordered>
         <SectionHead eyebrow={page.eyebrow} title="What we make" />
-        <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
-          {page.options.map((o) => (
-            <div key={o.name} className="border-t border-border pt-5">
-              <h3 className="font-display text-[1.6rem] leading-tight">{o.name}</h3>
-              <p className="mt-2 text-body">{o.detail}</p>
-            </div>
-          ))}
-        </div>
+        {page.options.every((o) => o.image) ? (
+          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {page.options.map((o) => (
+              <li key={o.name} className="overflow-hidden rounded-xl border border-border bg-white">
+                <div className="aspect-[4/3] overflow-hidden bg-cream">
+                  <img src={o.image!.src} alt={o.image!.alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-[1.4rem] leading-tight">{o.name}</h3>
+                  <p className="mt-2 text-body">{o.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
+            {page.options.map((o) => (
+              <div key={o.name} className="border-t border-border pt-5">
+                <h3 className="font-display text-[1.6rem] leading-tight">{o.name}</h3>
+                <p className="mt-2 text-body">{o.detail}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </Section>
 
       {/* Garment pages: popular styles, no prices */}

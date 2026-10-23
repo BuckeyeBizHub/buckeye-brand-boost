@@ -52,8 +52,9 @@ export interface ProductPage {
   children?: { heading: string; intro?: string; slugs: string[] }[];
   /** Garment pages only: popular styles, shown without prices. */
   styles?: GarmentStyle[];
-  /** What we make: 4 to 8 options, each one or two sentences. */
-  options: { name: string; detail: string }[];
+  /** What we make: 4 to 8 options, each one or two sentences. Photo tiles
+   *  replace the text list only when every option has an image. */
+  options: { name: string; detail: string; image?: Img }[];
   /** Who buys it / what it's for. 4 to 8 short items. */
   uses: string[];
   /** Two to four longer sections, each an H2 and 1 to 3 short paragraphs (separate paragraphs with a blank line). Real SEO copy. */
