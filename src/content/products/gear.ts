@@ -199,7 +199,114 @@ export const GEAR_PAGES: ProductPage[] = [
         a: "Yes. Send your logo, your product info and anything that has to be on the package, and it gets laid out for the box, pouch or tag. First order? Design and setup are free.",
       },
     ],
-    related: ["custom-labels", "decals-and-stickers", "promotional-products", "business-printing"],
+    related: ["custom-labels", "hang-tags", "decals-and-stickers", "promotional-products"],
+    industries: ["food-and-beverage"],
+  },
+  {
+    slug: "hang-tags",
+    group: "gear",
+    navLabel: "Hang tags and retail tags",
+    blurb: "Printed hang tags, price tags, gift tags and bottle neck tags for retail products.",
+    metaTitle: "Custom Hang Tags and Retail Tags in Columbus, Ohio",
+    metaDescription:
+      "Custom hang tags for Columbus boutiques, makers and gift shops: apparel tags, price tags, gift tags and neck tags in custom shapes. Free quote in 24 hours.",
+    eyebrow: "Hang tags",
+    h1: "Custom Hang Tags and Retail Tags in Columbus, Ohio",
+    tagline: "A small tag that tells people whose product it is.",
+    lede: "Printed hang tags for clothing, candles, gifts and bottles. Your logo on the front, your story or care details on the back, and a string or fastener that fits the product.",
+    hero: {
+      src: "/assets/hang-tags-hero.jpg",
+      alt: "Folded sweaters and T-shirts on a shop table, each with a cream printed hang tag tied on with red string",
+    },
+    options: [
+      {
+        name: "Apparel hang tags",
+        detail: "Tags for shirts, sweatshirts and hats, attached with a plastic fastener, a safety pin or string.",
+        image: { src: "/assets/hangtag-opt-apparel.jpg", alt: "Folded charcoal T-shirt with a cream logo hang tag attached at the collar" },
+      },
+      {
+        name: "Gift and product tags",
+        detail: "Small tags tied on with twine or ribbon for candles, soap, baked goods and gift baskets.",
+        image: { src: "/assets/hangtag-opt-gift.jpg", alt: "Amber glass candle jar with a round Your Shop gift tag tied on with twine" },
+      },
+      {
+        name: "Price tags",
+        detail: "Your logo with a blank spot for the price or a barcode. One design works for every item in the shop.",
+        image: { src: "/assets/hangtag-opt-price.jpg", alt: "Handmade mug on a shelf with a price tag showing a logo, a blank price line and a barcode" },
+      },
+      {
+        name: "Custom shapes",
+        detail: "Circles, arches and scalloped edges cut to shape, so the tag looks like your brand.",
+        image: { src: "/assets/hangtag-opt-shaped.jpg", alt: "Round, arched, rectangle and scalloped hang tags with logos and strings on a cream surface" },
+      },
+      {
+        name: "Folded tags",
+        detail: "A tag that opens like a small card, with room inside for care instructions, ingredients or your story.",
+        image: { src: "/assets/hangtag-opt-folded.jpg", alt: "Open folded hang tag with a red logo on one side and care instructions on the other, lying on a wool scarf" },
+      },
+      {
+        name: "Bottle neck tags",
+        detail: "Tags that loop over the neck of a bottle or jar for sauces, oils, wine and gifts.",
+        image: { src: "/assets/hangtag-opt-bottle.jpg", alt: "Olive oil bottle on a kitchen counter with a printed neck tag on a red string" },
+      },
+    ],
+    uses: [
+      "Boutiques and clothing brands",
+      "Candle, soap and bath makers",
+      "Gift shops and florists",
+      "Bakeries and candy makers",
+      "Sauce, oil and drink makers",
+      "Farm market and craft fair vendors",
+    ],
+    sections: [
+      {
+        heading: "What goes on a hang tag",
+        body: "Keep the front simple: your logo and your name, big enough to read from a step away. That's what people see on the rack or the shelf.\n\nThe back does the work. Use it for one line about the product, care instructions, your website or a QR code, and the price if you print it. A folded tag gives you more room when you need it, like for ingredients or a short story about how it's made.\n\nSend me what you want on each side and I'll lay it out. You see a proof before anything prints.",
+        image: {
+          src: "/assets/hang-tags-back-side.jpg",
+          alt: "Two cream hang tags side by side, one showing a red logo on the front and one showing short text and a QR code on the back",
+        },
+      },
+      {
+        heading: "Paper, strings and fasteners",
+        body: "Hang tags print on thick cardstock, so they stay flat and don't bend on the rack. Kraft looks natural and handmade. White makes colors bright. Black looks premium with white or metallic ink. If you write prices by hand, pick an uncoated paper. Pens smear on a glossy coating.\n\nThen pick how the tag attaches. String or twine for gifts and candles. A thin ribbon for something dressier. A plastic fastener or a safety pin for clothing. Tell me what the product is and I'll suggest the match.",
+        image: {
+          src: "/assets/hang-tags-paper-strings.jpg",
+          alt: "Rows of blank kraft, white, black and cream hang tags beside red string, twine, ribbon, safety pins, eyelets and plastic fasteners",
+        },
+      },
+      {
+        heading: "Tags, labels and packaging that match",
+        body: "A hang tag looks best when it matches the rest of what you sell: the label on the jar, the sticker on the bag, the box it ships in. I handle all of it, so the colors, fonts and logo line up from one approved design.\n\nSmall first orders are welcome. Order a short run, see how it looks on the product, and reorder bigger when it sells. Your file is already set up, so reorders are quick.\n\nTell me what you sell and how many tags you need, and you'll have a quote within 24 hours. I work with shops and makers across Columbus and Central Ohio, in person or by phone and email.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much do custom hang tags cost?",
+        a: "It depends on the size, paper, shape, finish and quantity. The price per tag drops as the quantity goes up. Send me what you need and you'll have a quote within 24 hours.",
+      },
+      {
+        q: "What's the smallest hang tag order you'll do?",
+        a: "Small first orders are welcome. Tell me how many you need and I'll quote it. A short first run is a smart way to see the tag on your product before you buy more.",
+      },
+      {
+        q: "Do the tags come with string?",
+        a: "Tell me how you want them attached: string, twine, ribbon, a safety pin or a plastic fastener. I'll include it in the quote, or you can attach your own.",
+      },
+      {
+        q: "Can I write prices on the tag by hand?",
+        a: "Yes. Pick an uncoated paper and a pen writes on it like regular paper. Glossy coatings look great but make ink smear.",
+      },
+      {
+        q: "Can you design my hang tags?",
+        a: "Yes. Send your logo and what you want on the front and back. You'll see and approve a proof before anything prints.",
+      },
+      {
+        q: "Do you make hang tags for businesses outside Columbus?",
+        a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
+      },
+    ],
+    related: ["packaging", "custom-labels", "decals-and-stickers", "custom-apparel"],
     industries: ["food-and-beverage"],
   },
   {

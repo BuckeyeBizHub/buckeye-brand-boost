@@ -8,13 +8,22 @@ each section, dates as YYYY-MM-DD.
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
 each: apparel (done, PR #17), signs (done, PR #18), printing (done, PR #19),
-labels and packaging, then menus and home page.
+labels and packaging (draft PR), then menus and home page.
 
 ## Outputs
 
+- 2026-10-23: labels and packaging section. New `/hang-tags` page (apparel,
+  gift, price, shaped, folded and bottle neck tags; no price, none in
+  `prices.ts`). `/custom-labels` gets a materials section (paper, BOPP,
+  clear, metallic, kraft) and a finishes section (gloss, matte, laminate).
+  `/decals-and-stickers` gets a vinyl and laminate section. Round 3 photo
+  pack: 25 Higgsfield photos (about 6 credits) as option tiles on labels,
+  decals and hang tags, plus hang tags hero and section photos. Packaging
+  and labels pages link hang tags. Draft PR.
 - 2026-10-23: round 2 photo pack. 18 Higgsfield photos (plus 2 redos for
   calendars that showed a past year, about 5 credits) as option photo tiles
-  on `/rack-cards`, `/poster-printing` and `/magnets-and-calendars`. Draft PR.
+  on `/rack-cards`, `/poster-printing` and `/magnets-and-calendars`. PR #21,
+  merged on PUBLISH by David.
 - 2026-10-23: product page look, first pass (David: new pages "boring").
   Template now shows photo tiles for options when every option has an
   image, and a larger hero photo. Rack cards, posters and magnets pages get
