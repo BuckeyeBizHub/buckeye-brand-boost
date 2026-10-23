@@ -20,26 +20,32 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         name: "Roll labels",
         detail: "Labels on a roll, ready for hand application or a label machine. Squares, circles, rectangles or a custom shape.",
+        image: { src: "/assets/label-opt-roll.jpg", alt: "Roll of round cream labels with a red ring on a cardboard core, partly unrolled on a wood table" },
       },
       {
         name: "Product labels",
         detail: "Front labels, ingredient panels and back labels for food, candles, soap, sauces and baked goods.",
+        image: { src: "/assets/label-opt-product.jpg", alt: "Row of jam and honey jars with matching printed front labels, one turned to show an ingredient panel" },
       },
       {
         name: "Waterproof and freezer labels",
         detail: "BOPP film that holds up to condensation, ice and handling. Good for drinks, coolers and frozen goods.",
+        image: { src: "/assets/label-opt-waterproof.jpg", alt: "Glass drink bottles with white film labels sitting in a tub of ice, covered in water drops" },
       },
       {
         name: "Clear and metallic labels",
         detail: "Clear film for a no-label look on glass. Silver film for a premium shelf look.",
+        image: { src: "/assets/label-opt-clear-metallic.jpg", alt: "Clear glass bottle with a clear label next to a small jar with a silver metallic label" },
       },
       {
         name: "Paper labels",
         detail: "The lowest cost per label for dry goods, shipping boxes and short-term use.",
+        image: { src: "/assets/label-opt-paper.jpg", alt: "Brown shipping box with a white paper address label on top of a stack of boxes" },
       },
       {
         name: "Sheet labels and stickers",
         detail: "Labels and stickers cut one at a time for bags, boxes and thank-you notes.",
+        image: { src: "/assets/label-opt-sheet.jpg", alt: "Sheet of round logo and thank-you stickers beside a kraft bag sealed with a sticker and a thank-you card" },
       },
     ],
     uses: [
@@ -56,8 +62,13 @@ export const LABEL_PAGES: ProductPage[] = [
         body: "Most label customers don't know their real volume on day one. That's fine. Order a short run, put it on the product, and see how it looks and sells.\n\nWhen you reorder, the price per label drops fast. The setup is already done, the file is already approved, and I already know your jar.",
       },
       {
-        heading: "Get the material right the first time",
-        body: "The wrong label material is the most common mistake I see. Paper labels smear when they get wet. Film labels cost a little more and survive the fridge, the cooler and the dishwasher-wet hands.\n\nTell me what the label goes on and where it lives: shelf, fridge, freezer, outdoors. I'll match the material and finish to it before anything prints.",
+        heading: "Label materials: paper, film, clear, metallic and kraft",
+        body: "The wrong label material is the most common mistake I see.\n\nPaper labels cost the least and work for dry goods and shipping boxes. They smear when they get wet. White film, called BOPP, costs a little more and survives the fridge, the cooler and wet hands. Clear film disappears on glass, so the design looks printed right on the bottle. Silver metallic film gives a jar a premium shelf look. Kraft paper looks natural and handmade, which suits coffee, soap and baked goods.\n\nTell me what the label goes on and where it lives: shelf, fridge, freezer or outdoors. I'll match the material before anything prints.",
+        image: { src: "/assets/labels-materials.jpg", alt: "Same round red logo label on a white jar, a clear glass bottle, a silver tin and a kraft paper bag" },
+      },
+      {
+        heading: "Finishes: gloss, matte and laminate",
+        body: "The finish is the top layer of the label. Gloss makes colors bright and looks clean on a jar. Matte cuts the glare under store lights and feels more natural in the hand.\n\nA laminate adds a clear protective layer on top of the print. It's worth it for labels that get handled a lot, rub against each other in a box, or live in the cold.\n\nNot sure which look fits? Tell me how the product is sold and I'll suggest one. You see a proof before anything prints.",
       },
       {
         heading: "Sizes, shapes and rolls that fit your process",
@@ -102,7 +113,7 @@ export const LABEL_PAGES: ProductPage[] = [
         a: "Yes. I work with businesses across Central Ohio, including Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon. You deal with me directly by phone, text or email from the quote to delivery.",
       },
     ],
-    related: ["decals-and-stickers", "packaging", "window-graphics", "vehicle-lettering"],
+    related: ["decals-and-stickers", "packaging", "hang-tags", "window-graphics"],
     industries: ["food-and-beverage"],
   },
   {
@@ -126,34 +137,42 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         name: "Die-cut stickers",
         detail: "Cut right to the outline of your logo. Good for handouts, laptops, toolboxes and water bottles.",
+        image: { src: "/assets/decal-opt-diecut.jpg", alt: "Die-cut logo stickers on a gray laptop lid and a cream water bottle, with loose stickers on the desk" },
       },
       {
         name: "Custom vinyl decals",
         detail: "Outdoor vinyl for trucks, trailers, equipment and signs. Add a laminate for sun, scratches and washing.",
+        image: { src: "/assets/decal-opt-vinyl.jpg", alt: "Large red and charcoal vinyl logo decal with a phone number on the side of a white trailer" },
       },
       {
         name: "Bumper stickers",
         detail: "The classic rectangle for cars, schools, teams, campaigns and events.",
+        image: { src: "/assets/decal-opt-bumper.jpg", alt: "Stack of printed bumper stickers in red, cream and charcoal on a wood table" },
       },
       {
         name: "Hard hat stickers",
         detail: "Company logo, crew name or role stickers like First Aid or Safety Officer. Reflective vinyl is available.",
+        image: { src: "/assets/decal-opt-hardhat.jpg", alt: "White hard hat with a round red logo sticker and a reflective stripe, next to safety glasses and a tape measure" },
       },
       {
         name: "Safety and warning labels",
         detail: "Caution, warning and PPE labels in the familiar OSHA-style layout for shop walls, machines and doors.",
+        image: { src: "/assets/decal-opt-safety.jpg", alt: "Yellow and white caution label reading Wear eye protection on a gray machine panel" },
       },
       {
         name: "Equipment decals",
         detail: "Company name, asset numbers and warning decals for machines, trailers, mowers and tools.",
+        image: { src: "/assets/decal-opt-equipment.jpg", alt: "Red riding mower with a white company name decal and a Unit 12 asset number decal" },
       },
       {
         name: "QR code stickers",
         detail: "Scan-to-review, scan-to-pay or scan-to-book codes for doors, invoices, job signs and packaging.",
+        image: { src: "/assets/decal-opt-qr.jpg", alt: "QR code sticker reading Scan for a free estimate on a glass shop door beside store hours lettering" },
       },
       {
         name: "Stickers on a roll",
         detail: "For packaging or handing out in volume. Roll format peels fast, and the price per sticker drops with quantity.",
+        image: { src: "/assets/decal-opt-roll.jpg", alt: "Roll of round cafe logo stickers next to white paper takeout bags, one sealed with a sticker" },
       },
     ],
     uses: [
@@ -170,6 +189,14 @@ export const LABEL_PAGES: ProductPage[] = [
       {
         heading: "What's the difference between a decal and a sticker?",
         body: "Most people use the words the same way, and that's fine. In the print world, a sticker is usually printed on paper or thin vinyl and made to hand out, stick on a laptop or seal a bag. A decal is usually heavier outdoor vinyl made to go on a truck, a window, a machine or a sign, and stay there.\n\nWhat matters more is where it's going. A sticker that lives in a desk drawer can be cheap paper. A decal on a dump truck tailgate needs outdoor vinyl and a laminate to stand up to sun, road salt and the pressure washer.\n\nTell me the surface and the conditions. I'll match the material, adhesive and finish before anything prints, and you'll see a proof first.",
+      },
+      {
+        heading: "Vinyl and laminate: picking the right material",
+        body: "Most decals print on white vinyl. Clear vinyl lets the window or the painted surface show through around the design. Reflective vinyl lights up when headlights or a flashlight hit it, so it's the pick for hard hats, trailers and safety labels.\n\nA laminate goes over the print. Gloss looks bright. Matte cuts the glare and hides fingerprints. Either one protects the print from sun, scratches and the pressure washer, so ask for it on anything that lives outside.\n\nStickers that stay indoors or get handed out can skip the laminate and cost less.",
+        image: {
+          src: "/assets/decals-vinyl-finishes.jpg",
+          alt: "Same red logo decal on glossy vinyl, matte vinyl, silver reflective vinyl and clear vinyl on glass, with small swatches below",
+        },
       },
       {
         heading: "Hard hat stickers and safety labels for job sites",
