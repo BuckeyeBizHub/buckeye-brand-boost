@@ -562,8 +562,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "A small card that sits where people wait.",
     lede: "Rack cards and counter cards for hotel lobbies, visitor centers, waiting rooms and front counters around Columbus. Tall, sturdy and printed on both sides, so people pick one up and take it home.",
     hero: {
-      src: "/assets/printing-flyers.jpg",
-      alt: "Stack of colorful printed flyers and cards on a wooden desk",
+      src: "/assets/rack-cards-hero.jpg",
+      alt: "Clear acrylic rack on a lobby counter holding four tall printed rack cards",
     },
     options: [
       {
@@ -603,14 +603,17 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Why a rack card works at the counter",
         body: "People pick up a rack card while they wait: at the front desk, in a hotel lobby, at the register. It's small enough to slip in a pocket or a purse, and sturdy enough to survive the trip home.\n\nGive each card one subject. One service, one attraction, one offer. A card that tries to cover everything ends up saying nothing clearly.\n\nIf you have several services, print a card for each one and fill a small rack on your counter. People take the card that matches their problem.",
+        image: { src: "/assets/rack-cards-counter-display.jpg", alt: "Three printed rack cards in a clear counter rack beside a folded tent card at a front desk" },
       },
       {
         heading: "Rack card or brochure?",
         body: "A rack card is one flat card printed on both sides. There's no folding, so it's quick to print and quick to read.\n\nA tri-fold brochure gives you six panels for photos, a full service list and answers to common questions. Folded, it fits the same racks.\n\nStart with a rack card when the message is short. Move to a brochure when people need the whole story before they call. My flyers and brochures page covers the folds.",
+        image: { src: "/assets/printing-brochures.jpg", alt: "Open tri-fold brochures with photos and text spread on a dark table" },
       },
       {
         heading: "What to put on each side",
         body: "In a rack, people only see the top of the card. Put your name and a short headline in the top third, big enough to read from a step away.\n\nUse the back for the details: services, hours, a map, an offer or a QR code that opens your booking page. A code or offer that only appears on the card tells you whether the cards are working.\n\nSend your logo and what each card needs to say. I'll lay them out, and you approve a proof before anything prints.",
+        image: { src: "/assets/rack-cards-front-back.jpg", alt: "Front and back of a printed rack card side by side, with a headline on the front and a map and QR code on the back" },
       },
     ],
     faqs: [
@@ -1152,8 +1155,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Posters that sell from the window and the wall.",
     lede: "Custom posters for storefront windows, lobbies, events and in-store promotions in Columbus. Printed on paper or mounted to foam board, from counter sizes up to big lobby prints.",
     hero: {
-      src: "/assets/printing-posters.jpg",
-      alt: "Wide format printer with a large, colorful poster print coming off the roll",
+      src: "/assets/posters-hero.jpg",
+      alt: "Two printed sale posters taped inside a shop window",
     },
     options: [
       {
@@ -1193,14 +1196,17 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Picking a poster size",
         body: "11 x 17, 18 x 24 and 24 x 36 are the common poster sizes, and most frames and holders are made for them. Small posters work on a counter or a bulletin board. Big ones are for windows, walls and anything people read from across the room.\n\nMeasure the spot before you order. A poster that fills the window or the frame looks planned. One that floats in the middle looks like an afterthought.\n\nAny size is fine. If your spot is odd, send me the measurements and I'll set up the file to fit.",
+        image: { src: "/assets/posters-size-lineup.jpg", alt: "Three framed posters in small, medium and large sizes hung in a row on a white wall" },
       },
       {
         heading: "Paper or mounted?",
         body: "Paper posters cost less and are easy to hang with tape, tacks or a frame. They're the pick for event posters you'll put up all over town.\n\nMounted posters are printed and fixed to foam board. They stay flat, stand on an easel and look finished in a lobby or at a check-in table.\n\nPosters are made for inside. For a sign outside, look at a vinyl banner or a coroplast yard sign. Both handle rain.",
+        image: { src: "/assets/posters-mounted-easel.jpg", alt: "Printed welcome poster mounted on foam board, standing on an easel beside a check-in table" },
       },
       {
         heading: "Your file decides how it looks",
         body: "A logo or a photo that looks fine on your phone can turn blurry at 24 x 36. Big prints need big files.\n\nSend whatever you have. I'll check it before you approve the proof and tell you if it will hold up at the size you want. If it won't, I'll tell you what to send instead, or rebuild the logo so it prints clean.\n\nYou see a proof before anything prints, so there are no surprises when the poster comes off the printer.",
+        image: { src: "/assets/printing-murals.jpg", alt: "Large wall print of a desert canyon covering an office wall" },
       },
     ],
     faqs: [
@@ -1241,8 +1247,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Your phone number on the fridge.",
     lede: "Business card magnets, fridge magnets, schedule magnets and wall calendars for Columbus businesses. They go on the fridge or the wall at home, right where people look when something breaks.",
     hero: {
-      src: "/assets/diecut-postcards-sample.jpg",
-      alt: "Fanned stack of printed cards with rounded corners and full-color photos",
+      src: "/assets/magnets-calendars-hero.jpg",
+      alt: "Flat lay of a wall calendar, desk calendar, business card magnets and a house-shaped magnet in matching designs",
     },
     options: [
       {
@@ -1282,14 +1288,17 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Why service businesses want to be on the fridge",
         body: "When the furnace quits or the sink backs up, people don't search for a company they've never heard of. They look on the fridge. A magnet with your name and number puts you there.\n\nHand one to every customer at the end of a job. Tuck one in with the invoice. It sits in the kitchen until the next time they need you.\n\nKeep the design simple: your name, what you do and a big phone number. A magnet is read from across the kitchen.",
+        image: { src: "/assets/magnets-fridge.jpg", alt: "Plumber's business card magnet with a big phone number on a stainless fridge next to a child's drawing" },
       },
       {
         heading: "Schedule magnets and team sponsorships",
         body: "Every family with a kid on the team keeps the schedule somewhere they'll see it. Print that schedule on a magnet with your name across the top, and you're on the fridge for the whole season.\n\nSchools, youth leagues and booster clubs often look for sponsors. Ask the coach or the athletic director.\n\nSend me the schedule as soon as it's final. I'll lay it out with your logo and the team colors, and you approve a proof before anything prints.",
+        image: { src: "/assets/magnets-schedule.jpg", alt: "Youth soccer schedule magnet with a sponsor band across the top, on a white fridge" },
       },
       {
         heading: "Calendars as a year-end gift",
         body: "A wall calendar is a gift clients use every day for a year. Realtors, insurance agents, lenders and service companies send them to past customers in December.\n\nOrder in the fall so they're in hand before the holidays. Use your own photos, local scenes or your team, and keep your contact info on every page.\n\nA one-page calendar magnet is the low-cost version. It goes on the fridge in January and stays there.\n\nFor magnets on a truck or car door, see car magnets.",
+        image: { src: "/assets/gallery/custom-desk-calendar.png", alt: "Spiral desk calendar with a quote and a law firm's contact details along the bottom" },
       },
     ],
     faqs: [
