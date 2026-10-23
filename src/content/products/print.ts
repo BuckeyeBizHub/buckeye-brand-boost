@@ -1286,7 +1286,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         name: "Wall calendars",
         detail: "A full year with your logo and contact info, for clients to hang at home or in the office.",
-        image: { src: "/assets/magnet-opt-wall-calendar.jpg", alt: "Printed wall calendar with a landscape photo hanging in a home office" },
+        image: { src: "/assets/magnet-opt-wall-calendar.jpg", alt: "Printed wall calendar with a snowy covered bridge photo hanging in a home office" },
       },
       {
         name: "Desk and magnet calendars",
