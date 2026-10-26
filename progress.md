@@ -8,10 +8,15 @@ each section, dates as YYYY-MM-DD.
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
 each: apparel (done, PR #17), signs (done, PR #18), printing (done, PR #19),
-labels and packaging (draft PR), then menus and home page.
+labels and packaging (done, PR #22), then menus and home page.
 
 ## Outputs
 
+- 2026-10-26: apparel style picks v2 (David: "general showing, nicer
+  brands"). Garment pages now show 33 styles (was 44) from the updated
+  /mnt/project-files/apparel/site-styles/styles.json. Budget brands are out,
+  and Richardson, Columbia and DRI DUCK beanies are in. Still no prices.
+  Draft PR.
 - 2026-10-23: labels and packaging section. New `/hang-tags` page (apparel,
   gift, price, shaped, folded and bottle neck tags; no price, none in
   `prices.ts`). `/custom-labels` gets a materials section (paper, BOPP,
@@ -19,7 +24,7 @@ labels and packaging (draft PR), then menus and home page.
   `/decals-and-stickers` gets a vinyl and laminate section. Round 3 photo
   pack: 25 Higgsfield photos (about 6 credits) as option tiles on labels,
   decals and hang tags, plus hang tags hero and section photos. Packaging
-  and labels pages link hang tags. Draft PR.
+  and labels pages link hang tags. PR #22, merged on PUBLISH by David.
 - 2026-10-23: round 2 photo pack. 18 Higgsfield photos (plus 2 redos for
   calendars that showed a past year, about 5 credits) as option photo tiles
   on `/rack-cards`, `/poster-printing` and `/magnets-and-calendars`. PR #21,

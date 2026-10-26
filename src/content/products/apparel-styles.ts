@@ -1,32 +1,12 @@
 import type { GarmentStyle } from "../types";
 
-// Popular blanks from the apparel distributor's catalog, picked 2026-10-22.
-// Brand, style number, name and in-stock colors only. Never add a price or a
-// cost here: this file ships to the browser. Photos are the distributor's
-// stock images, which David confirmed we can use.
+// Popular blanks from the apparel distributor's catalog, re-picked 2026-10-26
+// (better-known brands, no budget lines). Brand, style number, name and
+// in-stock colors only. Never add a price or a cost here: this file ships to
+// the browser. Photos are the distributor's stock images, which David
+// confirmed we can use.
 
 export const T_SHIRT_STYLES: GarmentStyle[] = [
-  {
-    brand: "Gildan",
-    style: "5000",
-    name: "Unisex Heavy Cotton T-Shirt",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/16787_f_fm.jpg", alt: "Gildan 5000 Unisex Heavy Cotton T-Shirt in Black" },
-  },
-  {
-    brand: "Gildan",
-    style: "64000",
-    name: "Unisex Softstyle T-Shirt",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/29881_f_fm.jpg", alt: "Gildan 64000 Unisex Softstyle T-Shirt in Black" },
-  },
-  {
-    brand: "Hanes",
-    style: "5250",
-    name: "Unisex Authentic T-Shirt",
-    colors: ["Black", "White", "Navy", "Maroon", "Orange", "Safety Green"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/16942_f_fm.jpg", alt: "Hanes 5250 Unisex Authentic T-Shirt in Black" },
-  },
   {
     brand: "BELLA + CANVAS",
     style: "3001",
@@ -47,20 +27,6 @@ export const T_SHIRT_STYLES: GarmentStyle[] = [
     name: "Unisex Garment-Dyed Heavyweight T-Shirt",
     colors: ["Black", "White", "Navy", "True Navy", "Red", "Khaki"],
     image: { src: "https://www.ssactivewear.com/Images/Color/34669_f_fm.jpg", alt: "Comfort Colors 1717 Unisex Garment-Dyed Heavyweight T-Shirt in Black" },
-  },
-  {
-    brand: "Gildan",
-    style: "2300",
-    name: "Unisex Ultra Cotton Pocket T-Shirt",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/17986_f_fm.jpg", alt: "Gildan 2300 Unisex Ultra Cotton Pocket T-Shirt in Black" },
-  },
-  {
-    brand: "Gildan",
-    style: "H000",
-    name: "Unisex Hammer T-Shirt",
-    colors: ["Black", "White", "Sport Grey", "Graphite Heather", "Dark Navy", "Off White"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/66651_f_fm.jpg", alt: "Gildan H000 Unisex Hammer T-Shirt in Black" },
   },
   {
     brand: "Comfort Colors",
@@ -94,13 +60,6 @@ export const T_SHIRT_STYLES: GarmentStyle[] = [
 
 export const POLO_STYLES: GarmentStyle[] = [
   {
-    brand: "Gildan",
-    style: "8800",
-    name: "Unisex DryBlend Polo",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/18499_f_fm.jpg", alt: "Gildan 8800 Unisex DryBlend Polo in Black" },
-  },
-  {
     brand: "Harriton",
     style: "M200",
     name: "Men's Pique Polo",
@@ -129,11 +88,11 @@ export const POLO_STYLES: GarmentStyle[] = [
     image: { src: "https://www.ssactivewear.com/Images/Color/121638_f_fm.jpg", alt: "Team 365 TT21 Men's Command Snag Protection Polo in Black" },
   },
   {
-    brand: "adidas",
+    brand: "Adidas",
     style: "A230",
     name: "Men's Performance Polo",
     colors: ["Black", "White", "Navy", "Maroon", "Orange", "Collegiate Royal"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/74514_f_fm.jpg", alt: "adidas A230 Men's Performance Polo in Black" },
+    image: { src: "https://www.ssactivewear.com/Images/Color/74514_f_fm.jpg", alt: "Adidas A230 Men's Performance Polo in Black" },
   },
 ];
 
@@ -170,7 +129,7 @@ export const JACKET_STYLES: GarmentStyle[] = [
     brand: "DRI DUCK",
     style: "5350",
     name: "Men's Motion Soft Shell Jacket",
-    colors: ["Black", "Charcoal", "Black Heather/Black", "Saddle", "Deep Blue/Charcoal", "Red/Charcoal"],
+    colors: ["Black", "Charcoal", "Black Heather/ Black", "Saddle", "Deep Blue/ Charcoal", "Red/ Charcoal"],
     image: { src: "https://www.ssactivewear.com/Images/Color/31282_f_fm.jpg", alt: "DRI DUCK 5350 Men's Motion Soft Shell Jacket in Black" },
   },
   {
@@ -194,7 +153,7 @@ export const HAT_STYLES: GarmentStyle[] = [
     brand: "YP Classics",
     style: "6006",
     name: "Classic Five-Panel Trucker Cap",
-    colors: ["Black", "White", "Navy", "Red", "Charcoal", "Black/White"],
+    colors: ["Black", "White", "Navy", "Red", "Charcoal", "Black/ White"],
     image: { src: "https://www.ssactivewear.com/Images/Color/35926_f_fm.jpg", alt: "YP Classics 6006 Classic Five-Panel Trucker Cap in Black" },
   },
   {
@@ -205,32 +164,11 @@ export const HAT_STYLES: GarmentStyle[] = [
     image: { src: "https://www.ssactivewear.com/Images/Color/20234_f_fm.jpg", alt: "Flexfit 6277 Cotton Blend Cap in Black" },
   },
   {
-    brand: "Valucap",
-    style: "VC300A",
-    name: "Bio-Washed Classic Dad Hat",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Charcoal"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/20492_f_fm.jpg", alt: "Valucap VC300A Bio-Washed Classic Dad Hat in Black" },
-  },
-  {
     brand: "Richardson",
     style: "220",
     name: "Relaxed Performance Lite Cap",
     colors: ["Black", "Red", "Charcoal", "Maroon", "Stone", "Smoke Blue"],
     image: { src: "https://www.ssactivewear.com/Images/Color/130099_f_fm.jpg", alt: "Richardson 220 Relaxed Performance Lite Cap in Black" },
-  },
-  {
-    brand: "Sportsman",
-    style: "SP12",
-    name: "12\" Solid Cuffed Beanie",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Heather Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/25968_f_fm.jpg", alt: "Sportsman SP12 12\" Solid Cuffed Beanie in Black" },
-  },
-  {
-    brand: "Sportsman",
-    style: "SP15",
-    name: "12\" Pom-Pom Cuffed Beanie",
-    colors: ["Black", "Navy", "Red", "Forest", "Heather Charcoal", "Light Heather Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/39345_f_fm.jpg", alt: "Sportsman SP15 12\" Pom-Pom Cuffed Beanie in Black" },
   },
   {
     brand: "YP Classics",
@@ -239,16 +177,30 @@ export const HAT_STYLES: GarmentStyle[] = [
     colors: ["Black", "White", "Navy", "Royal", "Red", "Maroon"],
     image: { src: "https://www.ssactivewear.com/Images/Color/51224_f_fm.jpg", alt: "YP Classics 1501KC Cuffed Beanie in Black" },
   },
+  {
+    brand: "Richardson",
+    style: "146R",
+    name: "Waffle Cuffed Beanie",
+    colors: ["Black", "Navy", "Heather Grey", "Heather Charcoal", "Birch", "Rust"],
+    image: { src: "https://www.ssactivewear.com/Images/Color/29482_f_fm.jpg", alt: "Richardson 146R Waffle Cuffed Beanie in Black" },
+  },
+  {
+    brand: "Columbia",
+    style: "191132",
+    name: "Whirlibird Cuffed Beanie",
+    colors: ["Black", "White Marled", "Dark Nocturnal", "Black/ Graphite", "City Grey", "Delta"],
+    image: { src: "https://www.ssactivewear.com/Images/Color/96688_f_fm.jpg", alt: "Columbia 191132 Whirlibird Cuffed Beanie in Black" },
+  },
+  {
+    brand: "DRI DUCK",
+    style: "3562",
+    name: "Basecamp Performance Cuffed Beanie",
+    colors: ["Black", "Charcoal", "Deep Blue"],
+    image: { src: "https://www.ssactivewear.com/Images/Color/50922_f_fm.jpg", alt: "DRI DUCK 3562 Basecamp Performance Cuffed Beanie in Black" },
+  },
 ];
 
 export const PULLOVER_STYLES: GarmentStyle[] = [
-  {
-    brand: "Gildan",
-    style: "18500",
-    name: "Unisex Heavy Blend Hooded Sweatshirt",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/19728_f_fm.jpg", alt: "Gildan 18500 Unisex Heavy Blend Hooded Sweatshirt in Black" },
-  },
   {
     brand: "Independent Trading Co.",
     style: "SS4500",
@@ -271,17 +223,10 @@ export const PULLOVER_STYLES: GarmentStyle[] = [
     image: { src: "https://www.ssactivewear.com/Images/Color/37880_f_fm.jpg", alt: "BELLA + CANVAS 3719 Unisex Sponge Fleece Hoodie Sweatshirt in Black" },
   },
   {
-    brand: "Gildan",
-    style: "18810",
-    name: "Unisex Heavy Blend Quarter-Zip Sweatshirt",
-    colors: ["Black", "White", "Navy", "Royal", "Sport Grey", "Dark Heather"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/138286_f_fm.jpg", alt: "Gildan 18810 Unisex Heavy Blend Quarter-Zip Sweatshirt in Navy" },
-  },
-  {
     brand: "Independent Trading Co.",
     style: "SS4600QZ",
     name: "Unisex 8.5 oz. Midweight Quarter-Zip Pullover",
-    colors: ["Black", "Grey Heather", "Alpine Green", "Classic Navy", "Asphalt", "Cement"],
+    colors: ["Black", "Grey Heather", "Alpine Green", "Asphalt", "Cement", "Bone"],
     image: { src: "https://www.ssactivewear.com/Images/Color/115804_f_fm.jpg", alt: "Independent Trading Co. SS4600QZ Unisex 8.5 oz. Midweight Quarter-Zip Pullover in Black" },
   },
   {
@@ -292,17 +237,17 @@ export const PULLOVER_STYLES: GarmentStyle[] = [
     image: { src: "https://www.ssactivewear.com/Images/Color/122053_f_fm.jpg", alt: "Team 365 TT31 Men's Zone Performance Quarter-Zip Pullover in Black" },
   },
   {
-    brand: "adidas",
+    brand: "CORE365",
+    style: "CE405",
+    name: "Men's Fusion ChromaSoft Pique Quarter-Zip Pullover",
+    colors: ["Black", "White", "True Royal", "Forest", "Electric Blue", "Carbon Heather"],
+    image: { src: "https://www.ssactivewear.com/Images/Color/119173_f_fm.jpg", alt: "CORE365 CE405 Men's Fusion ChromaSoft Pique Quarter-Zip Pullover in Black" },
+  },
+  {
+    brand: "Adidas",
     style: "A401",
     name: "Men's Ultimate365 Lightweight Quarter-Zip Pullover",
     colors: ["Black", "White", "Collegiate Navy", "Black Heather", "Power Red", "Grey Three"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/78629_f_fm.jpg", alt: "adidas A401 Men's Ultimate365 Lightweight Quarter-Zip Pullover in Black" },
-  },
-  {
-    brand: "Gildan",
-    style: "18000",
-    name: "Unisex Heavy Blend Crewneck Sweatshirt",
-    colors: ["Black", "White", "Navy", "Royal", "Red", "Sport Grey"],
-    image: { src: "https://www.ssactivewear.com/Images/Color/19515_f_fm.jpg", alt: "Gildan 18000 Unisex Heavy Blend Crewneck Sweatshirt in Black" },
+    image: { src: "https://www.ssactivewear.com/Images/Color/78629_f_fm.jpg", alt: "Adidas A401 Men's Ultimate365 Lightweight Quarter-Zip Pullover in Black" },
   },
 ];
