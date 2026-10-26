@@ -1,6 +1,6 @@
 import type { ProductPage } from "../types";
 
-// Promo products, packaging and rebrand kits. Apparel lives in apparel.ts. Order here is menu order.
+// Promo products, packaging, hang tags and rebrand kits. Apparel lives in apparel.ts. Order here is menu order.
 export const GEAR_PAGES: ProductPage[] = [
   {
     slug: "promotional-products",

@@ -4,7 +4,7 @@ import { Hanken_Grotesk, Newsreader } from "next/font/google";
 import Providers from "./providers";
 import Navbar, { type NavGroup } from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GROUP_LABEL, GROUP_ORDER, productsInGroup } from "@/content/catalog";
+import { GROUP_LABEL, MENU_COLUMNS, productsInGroup } from "@/content/catalog";
 import ScrollToTop from "@/components/ScrollToTop";
 import GA4PageTracker from "@/components/GA4PageTracker";
 import BackToTop from "@/components/BackToTop";
@@ -17,10 +17,12 @@ const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader
 const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken", display: "swap" });
 
 // Product menu, built on the server so the browser only gets labels and links.
-const navGroups: NavGroup[] = GROUP_ORDER.filter((g) => g !== "more").map((g) => ({
-  title: GROUP_LABEL[g],
-  links: productsInGroup(g).map((p) => ({ label: p.navLabel, href: `/${p.slug}` })),
-}));
+const navColumns: NavGroup[][] = MENU_COLUMNS.map((col) =>
+  col.map((g) => ({
+    title: GROUP_LABEL[g],
+    links: productsInGroup(g).map((p) => ({ label: p.navLabel, href: `/${p.slug}` })),
+  })),
+);
 
 const GA4_ID = "G-WY6SCF05ZZ";
 
@@ -45,7 +47,7 @@ const localBusiness = {
   "@id": `${SITE_URL}/#localbusiness`,
   name: "Buckeye Biz Hub",
   description:
-    "Custom labels, decals, vehicle lettering, signs, business printing and fleet wraps for Columbus and Central Ohio businesses.",
+    "Custom labels, decals, vehicle lettering, signs, business printing, custom apparel and fleet wraps for Columbus and Central Ohio businesses.",
   url: `${SITE_URL}/`,
   telephone: "+1-614-561-3358",
   email: "david@buckeyebizhub.com",
@@ -79,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <ScrollToTop />
           <GA4PageTracker />
-          <Navbar groups={navGroups} />
+          <Navbar columns={navColumns} />
           <main id="main-content">{children}</main>
           <Footer />
           <BackToTop />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check, Phone } from "lucide-react";
-import { GROUP_LABEL, GROUP_ORDER, INDUSTRIES, getProduct, productsInGroup } from "@/content/catalog";
+import { GROUP_LABEL, INDUSTRIES, MENU_COLUMNS, getProduct, productsInGroup } from "@/content/catalog";
 import type { ProductPage } from "@/content/types";
 import type { BlogPostSummary } from "@/lib/blog-utils";
 import { CtaBand, HowItWorks, LinkCards, PriceCards, PriceFootnote, StartSmall } from "@/components/site/blocks";
@@ -39,7 +39,8 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
             Labels, decals and truck lettering in Columbus. One call.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/85">
-            Custom labels for what you sell, lettering for what you drive, and signs and printing for everything else.
+            Custom labels for what you sell, lettering for what you drive, shirts and hats for your crew, and signs and
+            printing for everything else.
             Real starting prices. Small first orders welcome. You deal with me, start to finish.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -112,19 +113,23 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
       <Section bordered>
         <SectionHead eyebrow="Everything we make" title="One person for all of it." />
         <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {GROUP_ORDER.filter((g) => g !== "more").map((g) => (
-            <div key={g} className="border-t border-border pt-5">
-              <h3 className="font-display text-[1.6rem] leading-tight">{GROUP_LABEL[g]}</h3>
-              <ul className="mt-4 space-y-2">
-                {productsInGroup(g).map((p) => (
-                  <li key={p.slug}>
-                    <Link href={`/${p.slug}`} className="group inline-flex items-center gap-1.5 text-body hover:text-brand">
-                      {p.navLabel}
-                      <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {MENU_COLUMNS.map((col) => (
+            <div key={col[0]} className="border-t border-border pt-5">
+              {col.map((g, i) => (
+                <div key={g} className={i > 0 ? "mt-8" : undefined}>
+                  <h3 className="font-display text-[1.6rem] leading-tight">{GROUP_LABEL[g]}</h3>
+                  <ul className="mt-4 space-y-2">
+                    {productsInGroup(g).map((p) => (
+                      <li key={p.slug}>
+                        <Link href={`/${p.slug}`} className="group inline-flex items-center gap-1.5 text-body hover:text-brand">
+                          {p.navLabel}
+                          <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           ))}
           <div className="border-t border-border pt-5">

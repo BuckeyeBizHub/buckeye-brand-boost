@@ -1,6 +1,6 @@
 import type { PriceKey } from "./prices";
 
-export type ProductGroup = "labels" | "signs" | "print" | "vehicles" | "gear" | "more";
+export type ProductGroup = "labels" | "signs" | "print" | "apparel" | "vehicles" | "gear" | "more";
 
 export interface Img {
   /** Path under /public, e.g. "/assets/decals-hero.jpg". */
