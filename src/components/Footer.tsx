@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GROUP_LABEL, GROUP_ORDER, INDUSTRIES, productsInGroup } from "@/content/catalog";
+import { GROUP_LABEL, INDUSTRIES, MENU_COLUMNS, productsInGroup } from "@/content/catalog";
 
 const logo = "/assets/buckeye-logo-256.png";
 
@@ -26,8 +26,8 @@ export default function Footer() {
               <span className="font-display text-[1.6rem] leading-none">Buckeye Biz Hub</span>
             </Link>
             <p className="mt-5 max-w-md text-muted-foreground">
-              Labels, decals, lettering, signs, printing and fleet wraps for Central Ohio businesses. One person to call,
-              start to finish.
+              Labels, decals, lettering, signs, printing, apparel and fleet wraps for Central Ohio businesses. One person
+              to call, start to finish.
             </p>
           </div>
           <div className="space-y-1.5 md:text-right">
@@ -42,18 +42,22 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-12 sm:grid-cols-3 lg:grid-cols-6">
-          {GROUP_ORDER.filter((g) => g !== "more").map((g) => (
-            <div key={g}>
-              <p className="eyebrow mb-4 text-[0.68rem]">{GROUP_LABEL[g]}</p>
-              <ul className="space-y-2">
-                {productsInGroup(g).map((p) => (
-                  <li key={p.slug}>
-                    <Link href={`/${p.slug}`} className="text-[0.92rem] text-paper/85 hover:text-paper">
-                      {p.navLabel}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {MENU_COLUMNS.map((col) => (
+            <div key={col[0]}>
+              {col.map((g, i) => (
+                <div key={g} className={i > 0 ? "mt-8" : undefined}>
+                  <p className="eyebrow mb-4 text-[0.68rem]">{GROUP_LABEL[g]}</p>
+                  <ul className="space-y-2">
+                    {productsInGroup(g).map((p) => (
+                      <li key={p.slug}>
+                        <Link href={`/${p.slug}`} className="text-[0.92rem] text-paper/85 hover:text-paper">
+                          {p.navLabel}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           ))}
           <div>

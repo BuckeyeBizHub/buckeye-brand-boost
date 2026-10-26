@@ -8,15 +8,24 @@ each section, dates as YYYY-MM-DD.
 Site rebuild from the vendor catalog map (2026-10-22, plan:
 https://claude.ai/artifact/L3QPvpjGSQLh94xBUrkuaj). Five sections, one PR
 each: apparel (done, PR #17), signs (done, PR #18), printing (done, PR #19),
-labels and packaging (done, PR #22), then menus and home page.
+labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-10-26: menus, home page and sitemap (step 5). Apparel is its own
+  product group ("Custom apparel"), split from "Promo and packaging"
+  (promo products, packaging, hang tags, rebrand kits). Products menu,
+  footer and the home page list now use five columns, with vehicle wraps
+  and promo sharing the last one (`MENU_COLUMNS` in `catalog.ts`). Products
+  hub, its title, the footer blurb, the home hero lede and the business
+  schema now mention apparel. The Products menu now centers under the
+  header (it was clipping the first column on the left). Sitemap already
+  lists every page from `src/content`. Draft PR.
 - 2026-10-26: apparel style picks v2 (David: "general showing, nicer
   brands"). Garment pages now show 33 styles (was 44) from the updated
   /mnt/project-files/apparel/site-styles/styles.json. Budget brands are out,
   and Richardson, Columbia and DRI DUCK beanies are in. Still no prices.
-  Draft PR.
+  PR #23, merged.
 - 2026-10-23: labels and packaging section. New `/hang-tags` page (apparel,
   gift, price, shaped, folded and bottle neck tags; no price, none in
   `prices.ts`). `/custom-labels` gets a materials section (paper, BOPP,

@@ -15,7 +15,8 @@ const mainLinks = [
   { label: "Blog", href: "/blog" },
 ];
 
-export default function Navbar({ groups }: { groups: NavGroup[] }) {
+export default function Navbar({ columns }: { columns: NavGroup[][] }) {
+  const groups = columns.flat();
   const pathname = usePathname() ?? "/";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,14 +62,14 @@ export default function Navbar({ groups }: { groups: NavGroup[] }) {
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-3 focus:py-2">
         Skip to content
       </a>
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-8">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px] lg:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="Buckeye Biz Hub home">
           <img src={logo} alt="" width={40} height={40} className="h-10 w-10" />
           <span className="font-display text-[1.35rem] leading-none text-ink">Buckeye Biz Hub</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
-          <div className="relative" onMouseEnter={open} onMouseLeave={close}>
+          <div onMouseEnter={open} onMouseLeave={close}>
             <button
               type="button"
               className={`inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium transition-colors hover:text-ink ${
@@ -81,26 +82,32 @@ export default function Navbar({ groups }: { groups: NavGroup[] }) {
               Products
               <ChevronDown className={`h-4 w-4 transition-transform ${menuOpen ? "rotate-180" : ""}`} aria-hidden />
             </button>
+            {/* Centered under the header, not the button. The -mt-4 pt-7 strip
+                bridges the gap below the button so hover holds. */}
             {menuOpen && (
-              <div className="absolute left-1/2 top-full z-50 w-[min(92vw,1040px)] -translate-x-1/2 pt-3">
+              <div className="absolute inset-x-0 top-full z-50 mx-auto -mt-4 w-[min(92vw,1040px)] pt-7">
                 <div className="grid grid-cols-5 gap-6 rounded-xl border border-border bg-white p-6 shadow-[0_24px_60px_-30px_hsl(var(--ink)/0.45)]">
-                  {groups.map((g) => (
-                    <div key={g.title}>
-                      <p className="eyebrow mb-3 text-[0.68rem]">{g.title}</p>
-                      <ul className="space-y-1.5">
-                        {g.links.map((l) => (
-                          <li key={l.href}>
-                            <Link
-                              href={l.href}
-                              className={`block text-[0.92rem] leading-snug hover:text-brand ${
-                                pathname === l.href ? "font-semibold text-brand" : "text-ink"
-                              }`}
-                            >
-                              {l.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                  {columns.map((col) => (
+                    <div key={col[0].title} className="space-y-6">
+                      {col.map((g) => (
+                        <div key={g.title}>
+                          <p className="eyebrow mb-3 text-[0.68rem]">{g.title}</p>
+                          <ul className="space-y-1.5">
+                            {g.links.map((l) => (
+                              <li key={l.href}>
+                                <Link
+                                  href={l.href}
+                                  className={`block text-[0.92rem] leading-snug hover:text-brand ${
+                                    pathname === l.href ? "font-semibold text-brand" : "text-ink"
+                                  }`}
+                                >
+                                  {l.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
                   ))}
                   <div className="col-span-5 flex items-center justify-between border-t border-border pt-4 text-sm">

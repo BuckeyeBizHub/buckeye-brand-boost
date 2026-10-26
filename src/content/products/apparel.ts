@@ -7,7 +7,7 @@ import { HAT_STYLES, JACKET_STYLES, POLO_STYLES, PULLOVER_STYLES, T_SHIRT_STYLES
 export const APPAREL_PAGES: ProductPage[] = [
   {
     slug: "custom-apparel",
-    group: "gear",
+    group: "apparel",
     navLabel: "Custom apparel",
     blurb: "Shirts, polos, jackets, hats and hoodies with your logo, printed or embroidered.",
     metaTitle: "Custom Apparel with Your Logo in Columbus, Ohio",
@@ -118,7 +118,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "screen-printing",
-    group: "gear",
+    group: "apparel",
     navLabel: "Screen printing",
     blurb: "Screen printed tees and hoodies. The lowest cost per shirt on bigger runs.",
     metaTitle: "Custom Screen Printing in Columbus, Ohio",
@@ -212,7 +212,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "embroidery",
-    group: "gear",
+    group: "apparel",
     navLabel: "Embroidery",
     blurb: "Embroidered polos, hats and jackets. Stitched logos that look sharp for years.",
     metaTitle: "Custom Embroidery in Columbus, Ohio",
@@ -310,7 +310,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "dtf-printing",
-    group: "gear",
+    group: "apparel",
     navLabel: "DTF printing",
     blurb: "Full color DTF prints for small runs, photos and a different name on every shirt.",
     metaTitle: "DTF Printing for Shirts and Apparel in Columbus",
@@ -394,7 +394,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "custom-t-shirts",
-    group: "gear",
+    group: "apparel",
     navLabel: "T-shirts and work tees",
     blurb: "Custom T-shirts and heavyweight work tees for crews, events and teams.",
     metaTitle: "Custom T-Shirts and Work Shirts in Columbus, Ohio",
@@ -481,7 +481,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "custom-polos",
-    group: "gear",
+    group: "apparel",
     navLabel: "Polos",
     blurb: "Embroidered polos for offices, techs and customer-facing staff.",
     metaTitle: "Custom Embroidered Polos in Columbus, Ohio",
@@ -564,7 +564,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "custom-jackets",
-    group: "gear",
+    group: "apparel",
     navLabel: "Jackets",
     blurb: "Soft shells, work jackets, fleece and vests with your logo.",
     metaTitle: "Custom Jackets with Your Logo in Columbus, Ohio",
@@ -646,7 +646,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "custom-hats",
-    group: "gear",
+    group: "apparel",
     navLabel: "Hats and beanies",
     blurb: "Ballcaps, trucker hats and winter beanies with a stitched logo or patch.",
     metaTitle: "Custom Hats and Beanies in Columbus, Ohio",
@@ -728,7 +728,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "custom-hoodies-and-pullovers",
-    group: "gear",
+    group: "apparel",
     navLabel: "Hoodies and pullovers",
     blurb: "Hoodies, crewnecks and quarter-zips, printed or embroidered.",
     metaTitle: "Custom Hoodies and Pullovers in Columbus, Ohio",
@@ -810,7 +810,7 @@ export const APPAREL_PAGES: ProductPage[] = [
   },
   {
     slug: "team-stores",
-    group: "gear",
+    group: "apparel",
     navLabel: "Team and spirit stores",
     blurb: "Online stores for schools, teams and companies. Everyone orders their own sizes.",
     metaTitle: "Team Stores and School Spirit Stores in Columbus",

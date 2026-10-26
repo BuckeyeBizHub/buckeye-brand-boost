@@ -33,14 +33,19 @@ export function getIndustry(slug: string): IndustryPage | undefined {
   return industryMap.get(slug);
 }
 
-export const GROUP_ORDER: ProductGroup[] = ["labels", "signs", "print", "vehicles", "gear", "more"];
+export const GROUP_ORDER: ProductGroup[] = ["labels", "signs", "print", "apparel", "vehicles", "gear", "more"];
+
+/** Menu and footer columns. Short groups share a column so the menu stays
+ *  five columns wide. "more" stays out of the menus. */
+export const MENU_COLUMNS: ProductGroup[][] = [["labels"], ["signs"], ["print"], ["apparel"], ["vehicles", "gear"]];
 
 export const GROUP_LABEL: Record<ProductGroup, string> = {
   labels: "Labels, decals and lettering",
   signs: "Signs, banners and displays",
   print: "Business printing",
+  apparel: "Custom apparel",
   vehicles: "Vehicle wraps",
-  gear: "Apparel and promo",
+  gear: "Promo and packaging",
   more: "More from David",
 };
 
@@ -48,6 +53,7 @@ export const GROUP_HUB: Record<ProductGroup, { name: string; path: string } | un
   labels: { name: "Products", path: "/services" },
   signs: { name: "Products", path: "/services" },
   print: { name: "Products", path: "/services" },
+  apparel: { name: "Products", path: "/services" },
   vehicles: { name: "Products", path: "/services" },
   gear: { name: "Products", path: "/services" },
   more: { name: "Products", path: "/services" },
