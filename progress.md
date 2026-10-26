@@ -107,3 +107,12 @@ Earlier:
 
 David reviews the audit fix 2 PR (number check and site check) and
 decides the four sitewide claims.
+
+## 2026-10-26: Contact page look
+
+David said the Contact page looked boring. Refinement only (same palette and
+fonts): hero now has David's photo with a "David answers every request
+himself" card, the phone card is dark ink, the duplicate clock card is gone,
+and the "how ordering works" band sits under the form. Draft PR, nothing
+live until PUBLISH. Open: the Fillout form inside the page still wears
+Fillout's blue default button; restyling it is a separate call.
