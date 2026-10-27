@@ -13,7 +13,7 @@ starting with the homepage targets (labels, decals, truck lettering).
 - [x] Car magnets vs vehicle lettering for a part-time or shared work vehicle | /car-magnets | /assets/vehicle-wrap-magnetic-real.jpg
 - [x] Storefront window graphics in Columbus: hours, perforated vinyl and what reads from the street | /window-graphics | /assets/decal-window-clings.jpg
 - [x] Door hangers for roofers and lawn care crews: what to print and how to plan a route | /door-hangers | /assets/door-hangers-hero.jpg
-- [ ] EDDM postcards in Central Ohio: how Every Door Direct Mail works for a neighborhood business | /eddm-postcards | /assets/postcards-hero.jpg
+- [x] EDDM postcards in Central Ohio: how Every Door Direct Mail works for a neighborhood business | /eddm-postcards | /assets/postcards-hero.jpg
 - [ ] Getting found on Google Maps in Columbus: a plain checklist for a service business | /local-seo | /assets/local-seo-hero.jpg
 - [ ] What a small business website needs before it can bring in calls | /website-design | /assets/website-design-hero.jpg
 - [ ] Restaurant menus and table tents: paper, lamination and when to reprint | /menus-and-table-tents | /assets/menus-hero.jpg
