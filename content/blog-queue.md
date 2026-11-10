@@ -15,7 +15,7 @@ starting with the homepage targets (labels, decals, truck lettering).
 - [x] Door hangers for roofers and lawn care crews: what to print and how to plan a route | /door-hangers | /assets/door-hangers-hero.jpg
 - [x] EDDM postcards in Central Ohio: how Every Door Direct Mail works for a neighborhood business | /eddm-postcards | /assets/postcards-hero.jpg
 - [x] Getting found on Google Maps in Columbus: a plain checklist for a service business | /local-seo | /assets/local-seo-hero.jpg
-- [ ] What a small business website needs before it can bring in calls | /website-design | /assets/website-design-hero.jpg
+- [x] What a small business website needs before it can bring in calls | /website-design | /assets/website-design-hero.jpg
 - [ ] Restaurant menus and table tents: paper, lamination and when to reprint | /menus-and-table-tents | /assets/menus-hero.jpg
 - [ ] Letterhead and envelopes still matter for contractors and professional offices: here's when | /letterhead-and-envelopes | /assets/letterhead-hero.jpg
 - [ ] Catalogs and booklets: page counts, binding and planning a print run | /catalogs-and-booklets | /assets/catalogs-hero.jpg
