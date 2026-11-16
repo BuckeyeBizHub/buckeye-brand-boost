@@ -46,7 +46,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Paperwork that closes the deal",
         body: "Business cards, folders for your estimates and contract forms with your name on them.",
-        products: ["business-cards-printing", "presentation-folders", "business-printing"],
+        products: ["business-cards-printing", "presentation-folders", "carbonless-forms"],
       },
     ],
     sections: [
@@ -139,12 +139,12 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Bids that look buttoned up",
         body: "Business cards, presentation folders and printed proposals that match the rest of your brand.",
-        products: ["business-cards-printing", "presentation-folders", "business-printing"],
+        products: ["business-cards-printing", "presentation-folders", "carbonless-forms"],
       },
       {
         heading: "Home shows and builder events",
         body: "A retractable banner, a table throw and something worth handing out.",
-        products: ["trade-show-displays", "promotional-products"],
+        products: ["trade-show-displays", "event-tents", "promotional-products"],
       },
     ],
     sections: [
@@ -227,7 +227,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Signs on the glass and walls",
         body: "Hours and logo on the door, frosted privacy film on interior glass and a logo wall behind the front desk.",
-        products: ["window-graphics", "wall-and-floor-graphics"],
+        products: ["window-graphics", "wall-and-floor-graphics", "canvas-and-wall-art"],
       },
       {
         heading: "Staff apparel that matches",
@@ -325,7 +325,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Office signs and privacy film",
         body: "Door lettering, frosted glass for exam rooms and directional signs in the hallway.",
-        products: ["window-graphics", "wall-and-floor-graphics", "aluminum-signs"],
+        products: ["window-graphics", "wall-and-floor-graphics", "canvas-and-wall-art"],
       },
       {
         heading: "Staff apparel",
@@ -428,7 +428,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Cards and estimate forms",
         body: "Business cards for every crew lead and estimate forms that look professional.",
-        products: ["business-cards-printing", "business-printing"],
+        products: ["business-cards-printing", "carbonless-forms"],
       },
     ],
     sections: [
@@ -794,7 +794,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Menus and table tents",
         body: "Menus, table tents and specials cards that are easy to update.",
-        products: ["menus-and-table-tents", "poster-printing"],
+        products: ["menus-and-table-tents", "custom-coasters", "poster-printing"],
       },
       {
         heading: "Window lettering",
@@ -809,7 +809,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Staff shirts and merch",
         body: "Tees, hats and aprons for the crew, plus merch to sell at the counter.",
-        products: ["custom-apparel", "promotional-products"],
+        products: ["custom-apparel", "plastic-cards", "promotional-products"],
       },
     ],
     sections: [

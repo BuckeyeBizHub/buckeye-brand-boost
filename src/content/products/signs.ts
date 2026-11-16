@@ -607,4 +607,191 @@ export const SIGN_PAGES: ProductPage[] = [
     ],
     related: ["banners-and-flags", "promotional-products", "flyers-and-brochures", "custom-apparel"],
   },
+  {
+    slug: "canvas-and-wall-art",
+    group: "signs",
+    navLabel: "Canvas prints and wall art",
+    blurb: "Canvas, acrylic, metal and framed prints for lobbies, offices and dining rooms.",
+    metaTitle: "Canvas Prints and Office Wall Art in Columbus, Ohio",
+    metaDescription:
+      "Custom canvas prints, acrylic, metal and framed wall art for Columbus offices, lobbies, waiting rooms and restaurants. Your photos or your brand. Free quote.",
+    eyebrow: "Wall art",
+    h1: "Canvas Prints and Office Wall Art in Columbus, Ohio",
+    tagline: "Blank walls tell people nothing.",
+    lede: "Canvas prints, acrylic, metal and framed prints for offices, lobbies, waiting rooms and restaurants around Columbus. Your own photos, local scenes or your brand story, sized to the wall you have.",
+    hero: {
+      src: "/assets/poster-opt-lobby.jpg",
+      alt: "Large framed city skyline print above an office reception desk",
+    },
+    options: [
+      {
+        name: "Stretched canvas",
+        detail: "Artist canvas on a 1.5 inch wood frame, ready to hang. The classic choice for a lobby or a hallway.",
+      },
+      {
+        name: "Rolled canvas",
+        detail: "Canvas without the frame, shipped in a tube, for your own frame or a framer you already use.",
+      },
+      {
+        name: "Acrylic prints",
+        detail: "Printed behind clear acrylic for a glossy, modern look with deep color.",
+      },
+      {
+        name: "Metal prints",
+        detail: "Printed on metal for bright color and a clean edge. Good in a modern office or a garage-style shop.",
+      },
+      {
+        name: "Framed prints",
+        detail: "A print in a finished frame for conference rooms, offices and hallways.",
+      },
+      {
+        name: "Wall murals",
+        detail: "When one print isn't enough, cover the whole wall. My wall and floor graphics page covers murals.",
+      },
+    ],
+    uses: [
+      "Dental and medical waiting rooms",
+      "Office lobbies and conference rooms",
+      "Restaurants, bars and breweries",
+      "Salons, spas and gyms",
+      "Real estate and model homes",
+      "Gifts for clients and employees",
+    ],
+    sections: [
+      {
+        heading: "What to hang in a business",
+        body: "Local scenes work almost anywhere. A Columbus skyline, an Ohio farm or the street your shop sits on tells people you're from here.\n\nYour own story works too. The first truck, the founder, the team at a job site or the building before you fixed it up. People ask about those, and that's a conversation you want.\n\nIn a waiting room, pick something calm. In a restaurant or a gym, go bigger and bolder.",
+        image: { src: "/assets/printing-murals.jpg", alt: "Large wall print of a desert canyon covering an office wall" },
+      },
+      {
+        heading: "Canvas, acrylic or metal?",
+        body: "Canvas has a soft, matte look with no glare, so it reads well under office lights. It's the easiest to hang.\n\nAcrylic and metal are glossy and sharp. Colors pop, and they look modern. They're a good fit for newer spaces and photos with a lot of color.\n\nFramed prints look finished and formal. They fit conference rooms, law and finance offices, and hallways with a row of pictures.",
+      },
+      {
+        heading: "Sizing for the wall",
+        body: "A common mistake is art that's too small for the wall. A piece over a couch, a desk or a reception counter should be about two thirds as wide as the furniture under it.\n\nSend me a photo of the wall and the width. I'll suggest a size or a set of pieces and show you a mockup before anything prints.\n\nOn canvas, gallery wrap carries the picture around the sides of the frame. Museum wrap uses a solid white or black edge instead.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What sizes do canvas prints come in?",
+        a: "Rolled canvas runs from 8 x 10 up to 40 x 60, and custom sizes are available. Tell me the wall and I'll suggest a size.",
+      },
+      {
+        q: "Can you print my own photos?",
+        a: "Yes. Send the largest file you have. I'll check that it's sharp enough for the size you want before we print.",
+      },
+      {
+        q: "What's the difference between gallery wrap and museum wrap?",
+        a: "Gallery wrap carries the picture around the sides of the frame. Museum wrap uses a solid white or black edge.",
+      },
+      {
+        q: "Do canvas prints come ready to hang?",
+        a: "Stretched canvas comes on a wood frame, ready for the wall. Rolled canvas ships in a tube for framing.",
+      },
+      {
+        q: "How much do canvas prints cost?",
+        a: "It depends on the size, the material and how many pieces. Tell me the wall and I'll send a quote.",
+      },
+      {
+        q: "Can you help pick the art?",
+        a: "Yes. Tell me the room and the feel you want, and I'll put together options to choose from. First order? Design and setup are free.",
+      },
+    ],
+    related: ["wall-and-floor-graphics", "poster-printing", "window-graphics", "aluminum-signs"],
+    industries: ["dental", "medical-specialty", "food-and-beverage", "real-estate"],
+  },
+  {
+    slug: "event-tents",
+    group: "signs",
+    navLabel: "Custom event tents",
+    blurb: "10 x 10 pop-up canopy tents printed with your logo for festivals, games and shows.",
+    metaTitle: "Custom Canopy Tents and Event Tents in Columbus, Ohio",
+    metaDescription:
+      "Custom 10 x 10 pop-up canopy tents printed with your logo for Columbus festivals, farmers markets, games and outdoor shows. Frame, canopy and carry bag. Free quote.",
+    eyebrow: "Event tents",
+    h1: "Custom Canopy Tents and Event Tents in Columbus, Ohio",
+    tagline: "Your name, ten feet up.",
+    lede: "Custom 10 x 10 pop-up canopy tents printed with your logo, for festivals, farmers markets, home shows, games and tailgates around Columbus. People spot a branded tent from across the lot.",
+    hero: {
+      src: "/assets/tents-table-throws-bar-rails.jpg",
+      alt: "Outdoor event booth with black and red Buckeye Biz Hub pop-up tents, a printed table throw, a high-top table cover and retractable banners",
+    },
+    options: [
+      {
+        name: "Tent with frame",
+        detail: "A 10 x 10 pop-up frame and a printed canopy, with a carry bag. Everything you need for the first event.",
+      },
+      {
+        name: "Replacement canopy",
+        detail: "Just the printed canopy for a frame you already own, or a new design after a rebrand.",
+      },
+      {
+        name: "Table throws",
+        detail: "A printed table cover for the front of the booth, so your name shows at eye level too.",
+      },
+      {
+        name: "Feather flags",
+        detail: "A tall flag beside the tent that people see from the road or the far end of the market.",
+      },
+      {
+        name: "Sandbags and carry bags",
+        detail: "Sandbags hold the tent down in wind. A wheeled bag makes the walk from the truck easier.",
+      },
+      {
+        name: "Banners and signs",
+        detail: "A retractable banner inside the tent or a banner across the front with your offer.",
+      },
+    ],
+    uses: [
+      "Festivals and farmers markets",
+      "Home and garden shows",
+      "Youth sports and school events",
+      "Tailgates and game days",
+      "Contractors at community events",
+      "Breweries and food trucks",
+    ],
+    sections: [
+      {
+        heading: "Why a branded tent beats a plain one",
+        body: "At a festival or a market, every booth has a tent. Most are plain white. A tent printed with your name and colors is the one people find again, and the one in the background of everybody's photos.\n\nPut your name on the valance, the strip that hangs down on each side. That's what people read as they walk up the row. Keep it big and short.",
+      },
+      {
+        heading: "What you get",
+        body: "The canopy is printed on 6 oz tent fabric with a water resistant coating. The frame is a 10 x 10 pop-up with four height settings.\n\nThe full tent weighs about 51 pounds and goes up with two people. A carry bag comes with it, and a wheeled bag is an option.\n\nAlways stake or weigh down a tent. Sandbags on each leg keep it from catching wind.",
+      },
+      {
+        heading: "Build the whole booth",
+        body: "A tent gets people to your booth. A table throw, a feather flag and a retractable banner tell them what you do once they're there.\n\nBuy the set once and use it at every festival, market and show for years. My trade show displays page covers the rest of the booth.\n\nSend me your logo and the events you're planning. I'll put together the tent and the pieces around it, and you approve a proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What size are custom event tents?",
+        a: "10 x 10, the standard size for most festival and market booths.",
+      },
+      {
+        q: "Does the tent come with a frame?",
+        a: "You can order the frame and canopy together, or just a printed canopy for a frame you already own.",
+      },
+      {
+        q: "Is the canopy waterproof?",
+        a: "The tent fabric has a water resistant coating. It handles rain at an outdoor event.",
+      },
+      {
+        q: "How heavy is it?",
+        a: "About 51 pounds for the frame and canopy together. Two people can set it up.",
+      },
+      {
+        q: "How much does a custom canopy tent cost?",
+        a: "It depends on the frame, the print and the extras. Tell me what you need and I'll send a quote.",
+      },
+      {
+        q: "Can you design the tent?",
+        a: "Yes. Send your logo and I'll lay out the canopy and valances. First order? Design and setup are free.",
+      },
+    ],
+    related: ["trade-show-displays", "banners-and-flags", "a-frame-signs", "custom-apparel"],
+    industries: ["food-and-beverage", "lawn-care-landscaping", "construction", "roofing"],
+  },
 ];
