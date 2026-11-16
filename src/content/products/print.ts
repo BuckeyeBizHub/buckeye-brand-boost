@@ -31,6 +31,7 @@ export const PRINT_PAGES: ProductPage[] = [
           "rack-cards",
           "door-hangers",
           "letterhead-and-envelopes",
+          "greeting-cards",
           "presentation-folders",
           "catalogs-and-booklets",
           "menus-and-table-tents",
@@ -848,6 +849,100 @@ export const PRINT_PAGES: ProductPage[] = [
     ],
     related: ["business-cards-printing", "presentation-folders", "business-printing", "full-rebrand-kits"],
     industries: ["dental", "medical-specialty", "construction", "real-estate"],
+  },
+  {
+    slug: "greeting-cards",
+    group: "print",
+    navLabel: "Greeting and holiday cards",
+    blurb: "Custom holiday, thank-you and greeting cards with your logo, plus envelopes.",
+    metaTitle: "Custom Business Holiday Cards and Greeting Cards, Columbus",
+    metaDescription:
+      "Custom business holiday cards, thank-you cards and greeting cards in Columbus, Ohio. Folded cards with your logo, a writable inside and envelopes. Free quote.",
+    eyebrow: "Greeting cards",
+    h1: "Custom Greeting Cards and Business Holiday Cards in Columbus, Ohio",
+    tagline: "A card people keep on the desk.",
+    lede: "Holiday cards, thank-you cards and greeting cards printed with your logo and your message. Folded cards with an inside you can sign, envelopes to match, and small runs for a short list of customers.",
+    hero: {
+      src: "/assets/printing-stationery.jpg",
+      alt: "Blank white envelopes, a sheet of letterhead and a pen on a dark desk",
+    },
+    options: [
+      {
+        name: "Business holiday cards",
+        detail: "Your logo and a holiday message for customers, vendors and the people who send you work.",
+      },
+      {
+        name: "Thank-you cards",
+        detail: "For referrals, big jobs and repeat customers. Keep a box at the front desk and send them all year.",
+      },
+      {
+        name: "Greeting cards for any occasion",
+        detail: "Birthdays, anniversaries, new customers and sympathy cards with your name on the back.",
+      },
+      {
+        name: "Invitations and announcements",
+        detail: "Open houses, grand openings, customer events and new location or new partner announcements.",
+      },
+      {
+        name: "Writable cards",
+        detail: "Glossy on the outside and uncoated on the inside, so a pen writes clean and the ink doesn't smear.",
+      },
+      {
+        name: "Foil, kraft and pearl cards",
+        detail: "Raised metallic foil, brown kraft paper, pearl paper or spot gloss when you want the card to feel special.",
+      },
+    ],
+    uses: [
+      "Holiday cards to customers and vendors",
+      "Thank-you cards for referrals",
+      "Dental and medical offices thanking referring doctors",
+      "Realtors and lenders staying in touch after closing",
+      "Contractors thanking customers after a job",
+      "Restaurants, salons and shops sending cards to regulars",
+    ],
+    sections: [
+      {
+        heading: "Why a printed card still works",
+        body: "A holiday email lands in a crowded inbox. A card comes in the mail, gets opened, and often sits on a desk or a shelf for a few weeks with your name on it.\n\nA thank-you card after a referral works the same way. A short note in your own handwriting tells the person you noticed what they did for you.",
+        image: { src: "/assets/business-cards-letterhead-stack.jpg", alt: "Stack of business cards printed with the Buckeye Biz Hub Ohio logo on a white desk" },
+      },
+      {
+        heading: "Sizes, paper and envelopes",
+        body: "The common folded sizes are 5 x 7, 5.5 x 8.5 and 4.25 x 5.5. The 5 x 7 is the classic holiday card size. Runs start at 25 cards, so a short list of key customers is fine.\n\nMost people pick a glossy outside with an uncoated, writable inside. Photos look sharp on the front, and you can sign the inside with any pen. For something richer, go with raised foil, kraft or pearl paper.\n\nCards come scored and flat, so they fold clean. White envelopes come with them if you want. Printed envelopes with your return address are on my letterhead and envelopes page.",
+      },
+      {
+        heading: "What to put on a business holiday card",
+        body: "Keep it simple. A clean front, your logo small on the back, and a short message inside. Leave room for a signature and a line or two in your own hand.\n\nSkip the sales pitch. A holiday card that turns into an ad feels cheap. Save the offer for a postcard.\n\nSend me your logo and the message you want. I'll lay it out, and you approve a proof before anything prints. Order early so you have time to sign and mail them before the holidays.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What size are business holiday cards?",
+        a: "5 x 7 folded is the most common. 5.5 x 8.5 and 4.25 x 5.5 folded are the other standard sizes, and each one has an envelope that fits.",
+      },
+      {
+        q: "How many holiday cards do I have to order?",
+        a: "Runs start at 25 cards. Most businesses order enough for their customer and vendor list plus a few extra for the front desk.",
+      },
+      {
+        q: "Do the cards come with envelopes?",
+        a: "Yes, plain white envelopes are available in the matching size. If you want your return address printed on them, I can print envelopes too.",
+      },
+      {
+        q: "Can I write inside the cards?",
+        a: "Yes. Pick a writable card. The outside is glossy and the inside is uncoated, so any pen works and nothing smears.",
+      },
+      {
+        q: "How much do custom holiday cards cost?",
+        a: "It depends on the size, the paper and how many you need. Tell me the count and I'll quote it within 24 hours.",
+      },
+      {
+        q: "Can you design my holiday cards?",
+        a: "Yes. Send your logo and the message you want, and you'll get a proof to approve. First order? Design and setup are free.",
+      },
+    ],
+    related: ["postcards", "letterhead-and-envelopes", "business-cards-printing", "promotional-products"],
+    industries: ["dental", "medical-specialty", "real-estate", "construction"],
   },
   {
     slug: "presentation-folders",

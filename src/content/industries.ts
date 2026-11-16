@@ -222,7 +222,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Letterhead and referral pads",
         body: "Letterhead, envelopes and referral forms that look like they came from the same office.",
-        products: ["letterhead-and-envelopes", "business-printing"],
+        products: ["letterhead-and-envelopes", "greeting-cards", "business-printing"],
       },
       {
         heading: "Signs on the glass and walls",
@@ -320,7 +320,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Referral materials",
         body: "Referral pads, letterhead and presentation folders for the doctors who send you patients.",
-        products: ["letterhead-and-envelopes", "presentation-folders"],
+        products: ["letterhead-and-envelopes", "presentation-folders", "greeting-cards"],
       },
       {
         heading: "Office signs and privacy film",
@@ -521,7 +521,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       {
         heading: "Closing gifts and pop-bys",
         body: "Branded gifts for closings and small drop-offs that keep you in front of past clients.",
-        products: ["promotional-products"],
+        products: ["promotional-products", "greeting-cards"],
       },
     ],
     sections: [
