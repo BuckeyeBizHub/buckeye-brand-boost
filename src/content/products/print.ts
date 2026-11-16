@@ -32,6 +32,9 @@ export const PRINT_PAGES: ProductPage[] = [
           "door-hangers",
           "letterhead-and-envelopes",
           "greeting-cards",
+          "plastic-cards",
+          "raffle-and-event-tickets",
+          "carbonless-forms",
           "presentation-folders",
           "catalogs-and-booklets",
           "menus-and-table-tents",
@@ -943,6 +946,286 @@ export const PRINT_PAGES: ProductPage[] = [
     ],
     related: ["postcards", "letterhead-and-envelopes", "business-cards-printing", "promotional-products"],
     industries: ["dental", "medical-specialty", "real-estate", "construction"],
+  },
+  {
+    slug: "plastic-cards",
+    group: "print",
+    navLabel: "Plastic gift and loyalty cards",
+    blurb: "Plastic gift cards, loyalty cards and membership cards, plus paper gift certificates.",
+    metaTitle: "Plastic Gift Cards and Loyalty Cards, Columbus, Ohio",
+    metaDescription:
+      "Custom plastic gift cards, loyalty cards and membership cards in Columbus, Ohio. White, frosted or clear plastic that won't tear or soak through. Free quote.",
+    eyebrow: "Plastic cards",
+    h1: "Custom Plastic Gift Cards and Loyalty Cards in Columbus, Ohio",
+    tagline: "A card that stays in the wallet.",
+    lede: "Gift cards, loyalty cards and membership cards printed on plastic with your logo. They hold up in a wallet, a purse or a cup holder. Paper gift certificates too, numbered so you can track them.",
+    hero: {
+      src: "/assets/rack-opt-coupon.jpg",
+      alt: "Printed card offering 15 percent off your next visit standing on a wood counter beside a plant",
+    },
+    options: [
+      {
+        name: "Plastic gift cards",
+        detail: "Your logo on the front and the value on the back. Sell them at the counter and online all year.",
+      },
+      {
+        name: "Loyalty and punch cards",
+        detail: "Buy 9, get the 10th free. Plastic survives months in a wallet where a paper punch card falls apart.",
+      },
+      {
+        name: "Membership cards",
+        detail: "For gyms, clubs, spas and members-only programs. Add a name line or a member number.",
+      },
+      {
+        name: "Plastic business cards",
+        detail: "White, frosted or clear plastic for a card people notice when they pull it out.",
+      },
+      {
+        name: "Paper gift certificates",
+        detail: "Printed on heavy card stock and numbered in order, so you know which ones were sold and redeemed.",
+      },
+      {
+        name: "Paper punch cards",
+        detail: "Loyalty cards on heavy card stock when you'd rather spend less per card and reprint more often.",
+      },
+    ],
+    uses: [
+      "Restaurants, bars and coffee shops",
+      "Salons, spas and med spas",
+      "Gyms and fitness studios",
+      "Car washes and auto service",
+      "Retail shops and boutiques",
+      "Golf courses and clubs",
+    ],
+    sections: [
+      {
+        heading: "Gift cards bring the money in before the visit",
+        body: "A gift card is a sale today and a new customer later. Someone buys it for a friend, and the friend walks in for the first time with the bill already paid.\n\nThe holidays are the big season. Have cards at the register by Thanksgiving, put a sign by the door, and tell your regulars they're for sale.\n\nPlastic looks like a real gift. A paper certificate in an envelope works too, and it costs less. I print both.",
+        image: { src: "/assets/rack-opt-counter.jpg", alt: "Folded tent card on a cafe counter next to a card reader" },
+      },
+      {
+        heading: "White, frosted or clear plastic",
+        body: "White plastic is the standard, and it prints color the way paper does. Frosted plastic lets some light through. Clear plastic shows whatever is behind it, so the design has to be planned around the see-through parts.\n\nThe standard credit card size is 2.125 x 3.375, the same as the cards already in someone's wallet. Business card size and a few other sizes are available too. Rounded corners are an option, and they look more like a bank card.\n\nPlastic is waterproof and won't tear, so the card still looks good after months in a wallet.",
+      },
+      {
+        heading: "Tracking what you sold",
+        body: "Paper gift certificates can be numbered in order. Write the number in a log when you sell one and cross it off when it comes back. That's the simplest way to know what's still out there.\n\nIf your register system needs a magnetic stripe or a barcode on the card, tell me which system you use before we print. The cards I print are printed plastic, and some systems need more than that.\n\nSend your logo and the values you sell. I'll lay out the card, and you approve a proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What size are plastic gift cards?",
+        a: "The standard is 2.125 x 3.375, the same size as a credit card. Business card size and a few other sizes are available too.",
+      },
+      {
+        q: "Do your plastic cards have a magnetic stripe?",
+        a: "No, they're printed plastic. If your register needs a stripe or a barcode, tell me the system you use and I'll check what it takes.",
+      },
+      {
+        q: "Plastic cards or paper gift certificates?",
+        a: "Plastic looks like a real gift card and lasts in a wallet. Paper certificates cost less and can be numbered in order for tracking. Plenty of businesses do both.",
+      },
+      {
+        q: "How many plastic cards do I have to order?",
+        a: "Runs start at 100 cards. Reorders cost less once your file is set up.",
+      },
+      {
+        q: "How much do plastic gift cards cost?",
+        a: "It depends on the quantity, the plastic and whether you print one or both sides. Tell me how many you need and I'll send a quote.",
+      },
+      {
+        q: "Can you design my gift cards?",
+        a: "Yes. Send your logo and the values you sell, and you'll get a proof to approve. First order? Design and setup are free.",
+      },
+    ],
+    related: ["business-cards-printing", "rack-cards", "menus-and-table-tents", "custom-labels"],
+    industries: ["food-and-beverage"],
+  },
+  {
+    slug: "raffle-and-event-tickets",
+    group: "print",
+    navLabel: "Raffle and event tickets",
+    blurb: "Numbered raffle tickets, event tickets and drink tickets with tear-off stubs.",
+    metaTitle: "Raffle Ticket and Event Ticket Printing, Columbus, Ohio",
+    metaDescription:
+      "Custom raffle tickets, event tickets and drink tickets in Columbus, Ohio. Full color, numbered in order, with perforated tear-off stubs. Free quote.",
+    eyebrow: "Tickets",
+    h1: "Raffle Ticket and Event Ticket Printing in Columbus, Ohio",
+    tagline: "Numbered, torn and counted.",
+    lede: "Custom raffle tickets, event tickets and drink tickets for fundraisers, festivals, galas and game nights around Columbus. Full color on heavy stock, numbered in order, with a stub that tears off clean.",
+    hero: {
+      src: "/assets/rack-opt-event.jpg",
+      alt: "Printed event schedule, map and sponsor cards on a check-in table",
+    },
+    options: [
+      {
+        name: "Raffle tickets",
+        detail: "A numbered ticket and a matching stub. The buyer keeps one half, and the other goes in the drum.",
+      },
+      {
+        name: "Event and admission tickets",
+        detail: "Concerts, galas, dinners and shows. Your event name, date, seat or table and a number on each one.",
+      },
+      {
+        name: "Drink and food tickets",
+        detail: "Hand them out at the door, then trade one for a beer or a plate. Easy to count at the end of the night.",
+      },
+      {
+        name: "VIP and backstage passes",
+        detail: "A different color or design so the door staff can spot them from a step away.",
+      },
+      {
+        name: "Ticket and coupon combos",
+        detail: "A ticket with a sponsor coupon on the back, so the people who paid for the event get something back.",
+      },
+      {
+        name: "Door prize and 50/50 tickets",
+        detail: "Simple numbered tickets for drawings, door prizes and 50/50 raffles.",
+      },
+    ],
+    uses: [
+      "School and booster club fundraisers",
+      "Churches and nonprofits",
+      "Breweries, bars and beer festivals",
+      "Galas, dinners and golf outings",
+      "Concerts, shows and community events",
+      "Sports leagues and tournaments",
+    ],
+    sections: [
+      {
+        heading: "Why print raffle tickets instead of buying a roll",
+        body: "A roll of generic tickets works. Printed tickets do more. Your event name, the prize, the date of the drawing and your sponsors' logos are all on the ticket, so people keep it and show it around.\n\nNumbering in order makes the count easy. You know how many you sold, and the numbers in the drum match the stubs people are holding.\n\nPrinted on heavy stock, the tickets don't tear in a pocket or blow off the table.",
+      },
+      {
+        heading: "What goes on a raffle ticket",
+        body: "The buyer's half needs the event, the drawing date and the ticket number. Add the prize if it helps sell tickets.\n\nThe stub needs the same number and blank lines for a name and a phone number. That's how you reach the winner if they've gone home.\n\nCheck your local rules before you sell. Raffles in Ohio have their own rules for who can hold one, so ask your organization first.",
+      },
+      {
+        heading: "Drink tickets for events and breweries",
+        body: "Drink tickets keep cash away from the tap. Sell them at the door, and the people pouring only take tickets. At the end of the night, count the tickets and you know what was poured.\n\nUse a different color for each event or each kind of drink. Put your logo on them, and people take a few home as a souvenir.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Can the tickets be numbered?",
+        a: "Yes. Each ticket gets its own number, printed in order, with the same number on the stub.",
+      },
+      {
+        q: "Do the tickets have a tear-off stub?",
+        a: "Yes. Tickets can be perforated so the stub tears off clean.",
+      },
+      {
+        q: "How many tickets do I need to order?",
+        a: "Order what you expect to sell plus a few extra. Tell me your count and I'll quote it.",
+      },
+      {
+        q: "Can you add sponsor logos?",
+        a: "Yes. Put sponsors on the front or the back. It's a simple way to give the people who paid for the event something back.",
+      },
+      {
+        q: "How much do raffle tickets cost?",
+        a: "It depends on the size, the quantity and the numbering. Tell me how many you need and I'll send a quote.",
+      },
+      {
+        q: "Can you design the tickets?",
+        a: "Yes. Send your event details and logo, and you'll get a proof to approve. First order? Design and setup are free.",
+      },
+    ],
+    related: ["poster-printing", "banners-and-flags", "flyers-and-brochures", "promotional-products"],
+    industries: ["food-and-beverage"],
+  },
+  {
+    slug: "carbonless-forms",
+    group: "print",
+    navLabel: "Carbonless forms and work orders",
+    blurb: "2, 3 and 4 part carbonless forms for invoices, estimates and work orders.",
+    metaTitle: "Carbonless Forms and Work Order Books, Columbus, Ohio",
+    metaDescription:
+      "Custom carbonless (NCR) form printing in Columbus, Ohio. 2, 3 and 4 part invoices, estimates and work orders, numbered in order, in sets or books. Free quote.",
+    eyebrow: "Carbonless forms",
+    h1: "Carbonless Form and NCR Form Printing in Columbus, Ohio",
+    tagline: "One signature. Every copy.",
+    lede: "Custom carbonless forms for contractors, shops and offices around Columbus. Invoices, estimates, work orders and delivery tickets in 2, 3 or 4 parts, numbered in order, in loose sets or bound books.",
+    hero: {
+      src: "/photos/roofing-carbonless-form.jpg",
+      alt: "Three-part carbonless form in white, yellow and pink sheets fanned out",
+    },
+    options: [
+      {
+        name: "Invoices and receipts",
+        detail: "Your logo, your terms and a copy for the customer, one for the office and one for the truck.",
+      },
+      {
+        name: "Estimates and proposals",
+        detail: "Write it up at the kitchen table, get a signature and leave a copy with the homeowner.",
+      },
+      {
+        name: "Work orders",
+        detail: "The job, the materials and the sign-off, with a copy for the crew and a copy for billing.",
+      },
+      {
+        name: "Delivery tickets and bills of lading",
+        detail: "Proof of delivery with a signature, and a copy for the driver to bring back.",
+      },
+      {
+        name: "Inspection and checklist forms",
+        detail: "Vehicle checks, safety walks and job site inspections with a copy for the file.",
+      },
+      {
+        name: "Books and pads",
+        detail: "Bound in books with a wrap-around cover, or glued in pads you tear sets from.",
+      },
+    ],
+    uses: [
+      "Roofers and contractors",
+      "HVAC, plumbing and electrical",
+      "Lawn care and landscaping",
+      "Auto repair shops",
+      "Delivery and logistics",
+      "Dental and medical offices",
+    ],
+    sections: [
+      {
+        heading: "How carbonless forms work",
+        body: "Carbonless forms, also called NCR forms, make copies without carbon paper. NCR stands for no carbon required. You write on the top sheet, and the writing shows up on the sheets underneath.\n\nA 2 part form makes one copy. A 3 part form makes two. A 4 part form makes three. Each part is a different color, usually white, yellow and pink, so everyone knows which copy is theirs.\n\nSets can be numbered in order. Numbers make it easy to find a job later and to see if a form went missing.",
+      },
+      {
+        heading: "Sizes, books and pads",
+        body: "The common sizes are 8.5 x 11, 8.5 x 14, 5.5 x 8.5 and 4.25 x 5.5. Half letter fits a clipboard in the truck. Letter size gives you room for line items. Custom sizes are available too.\n\nForms come as loose sets, glued pads or bound books with a wrap-around cover. Books hold up better in a truck.\n\nPrint the back of the form too if you need room for your terms, a warranty or a checklist.",
+      },
+      {
+        heading: "Your forms are part of your brand",
+        body: "The customer keeps the form. It's often the last thing they see from you, and it's what they pull out when a neighbor asks who did the work.\n\nPut your logo, phone number and website on it. Match the colors on your truck and your business cards. A clean, printed form looks like a company. A generic one from the office store looks like a guy.\n\nSend me the form you use now, even a photo of it. I'll rebuild it with your logo, and you approve a proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What does NCR mean?",
+        a: "No carbon required. The paper makes copies without carbon sheets, so writing on the top sheet shows up on the ones below.",
+      },
+      {
+        q: "How many parts can a carbonless form have?",
+        a: "2, 3 or 4 parts. Each part is a different color so everyone knows which copy is theirs.",
+      },
+      {
+        q: "Can the forms be numbered?",
+        a: "Yes. Each set gets its own number, printed in order, on every part.",
+      },
+      {
+        q: "Can I get them in books?",
+        a: "Yes. Loose sets, glued pads or bound books with a wrap-around cover.",
+      },
+      {
+        q: "How much do carbonless forms cost?",
+        a: "It depends on the size, the number of parts, the quantity and the binding. Tell me what you use now and I'll send a quote.",
+      },
+      {
+        q: "Can you redo the form I already use?",
+        a: "Yes. Send me a copy or a photo and I'll rebuild it with your logo. First order? Design and setup are free.",
+      },
+    ],
+    related: ["letterhead-and-envelopes", "business-cards-printing", "vehicle-lettering", "door-hangers"],
+    industries: ["roofing", "construction", "lawn-care-landscaping", "fleet-and-logistics", "auto-dealers"],
   },
   {
     slug: "presentation-folders",

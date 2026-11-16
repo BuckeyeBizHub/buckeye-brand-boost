@@ -410,4 +410,97 @@ export const GEAR_PAGES: ProductPage[] = [
     related: ["vehicle-lettering", "yard-signs-and-signage", "business-cards-printing", "website-design"],
     industries: ["roofing", "construction", "dental", "real-estate", "food-and-beverage"],
   },
+  {
+    slug: "custom-coasters",
+    group: "gear",
+    navLabel: "Custom coasters",
+    blurb: "Printed bar coasters with your logo for bars, breweries, restaurants and events.",
+    metaTitle: "Custom Coasters and Bar Coasters in Columbus, Ohio",
+    metaDescription:
+      "Custom printed coasters for Columbus bars, breweries, restaurants and events. Thick pulpboard, round or square, full color on one or both sides. Free quote.",
+    eyebrow: "Coasters",
+    h1: "Custom Coasters and Bar Coasters in Columbus, Ohio",
+    tagline: "Your logo under every drink.",
+    lede: "Custom bar coasters for breweries, bars, restaurants and events around Columbus. Thick pulpboard that soaks up the sweat off a cold glass, printed full color with your logo, a beer list or an offer.",
+    hero: {
+      src: "/assets/bar-coasters-in-use.jpg",
+      alt: "Square red and white Buckeye Biz Hub coasters under beer glasses on a bar top",
+    },
+    options: [
+      {
+        name: "Round coasters",
+        detail: "The classic bar coaster. Your logo in the middle, full color.",
+      },
+      {
+        name: "Square coasters",
+        detail: "More room for a beer list, a QR code or an event date.",
+      },
+      {
+        name: "Printed on both sides",
+        detail: "Logo on one side, an offer, a trivia question or your social handle on the other.",
+      },
+      {
+        name: "Thick and standard board",
+        detail: "Thick pulpboard for regular bar use, or a thinner board for events and giveaways.",
+      },
+      {
+        name: "Event and wedding coasters",
+        detail: "A date, a name or a sponsor logo for galas, weddings, golf outings and festivals.",
+      },
+      {
+        name: "Brewery release coasters",
+        detail: "A new coaster for each seasonal or limited release. Some people collect them.",
+      },
+    ],
+    uses: [
+      "Breweries and taprooms",
+      "Bars and restaurants",
+      "Hotels and event venues",
+      "Beer and wine festivals",
+      "Weddings, galas and golf outings",
+      "Sponsors and distributors",
+    ],
+    sections: [
+      {
+        heading: "A coaster is the cheapest ad in the bar",
+        body: "A coaster sits in front of a customer for the whole drink. They read it, flip it and play with it. Some go home in a pocket.\n\nThat's why breweries and distributors print them. I ran a brewery and restaurants before this, and a coaster is one of the cheapest places a bar can put its name.\n\nPut something on the back worth reading: a happy hour, a trivia night, a QR code for the beer list or a reason to come back.",
+      },
+      {
+        heading: "Sizes and board",
+        body: "Coasters are printed on pulpboard, a thick, absorbent paperboard made from wood pulp. It soaks up the water off a cold glass and keeps it off the bar. It's compostable too.\n\nThe common size is 3.5 inches, round or square. Sizes go up to 6 inches when you want more room.\n\nThick board holds up to a night of use at the bar. A damp coaster dries out and keeps working, though heavy use wears them over time. That's why bars reorder.",
+      },
+      {
+        heading: "Ordering for a bar or an event",
+        body: "For a bar, order enough to keep a stack at every station and set a reorder point. Coasters walk out the door, and that's the point.\n\nFor an event, order enough for every table and the bar. Add the date and a sponsor logo if someone else is paying for them.\n\nSend me your logo and what you want on the back. I'll lay it out, and you approve a proof before anything prints.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What are custom coasters made of?",
+        a: "Pulpboard, a thick, absorbent paperboard made from wood pulp. It soaks up water from a cold glass and is compostable.",
+      },
+      {
+        q: "What sizes and shapes are there?",
+        a: "Round or square, with 3.5 inches the most common. Sizes go up to 6 inches.",
+      },
+      {
+        q: "Can you print on both sides?",
+        a: "Yes. Full color on one side or both.",
+      },
+      {
+        q: "Are coasters reusable?",
+        a: "Yes, for a while. A damp coaster dries out and keeps working. Heavy bar use wears them down over time.",
+      },
+      {
+        q: "How much do custom coasters cost?",
+        a: "It depends on the size, the board and the quantity. Tell me how many you need and I'll send a quote.",
+      },
+      {
+        q: "Can you design the coasters?",
+        a: "Yes. Send your logo and what you want on them, and you'll get a proof to approve. First order? Design and setup are free.",
+      },
+    ],
+    related: ["menus-and-table-tents", "custom-labels", "promotional-products", "raffle-and-event-tickets"],
+    industries: ["food-and-beverage"],
+  },
 ];
