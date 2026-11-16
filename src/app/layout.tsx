@@ -9,6 +9,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import GA4PageTracker from "@/components/GA4PageTracker";
 import BackToTop from "@/components/BackToTop";
 import MobileCTABar from "@/components/MobileCTABar";
+import MetaPixel from "@/components/MetaPixel";
+import { META_DOMAIN_VERIFICATION } from "@/lib/tracking";
 import { SITE_URL } from "@/lib/structured-data";
 import "@/index.css";
 
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   authors: [{ name: "Buckeye Biz Hub" }],
   verification: { google: "GlfdZ2a56ajoxopx3uMFjqsApqB1sliewFOTh4LmI-c" },
+  other: { "facebook-domain-verification": META_DOMAIN_VERIFICATION },
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     apple: "/apple-touch-icon.png",
@@ -81,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <ScrollToTop />
           <GA4PageTracker />
+          <MetaPixel />
           <Navbar columns={navColumns} />
           <main id="main-content">{children}</main>
           <Footer />

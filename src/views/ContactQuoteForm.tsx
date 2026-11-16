@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { FilloutStandardEmbed } from "@fillout/react";
 import { FILLOUT_QUOTE_FORM_ID, TALLY_QUOTE_FORM_ID } from "@/content/forms";
+import { trackQuoteLead } from "@/lib/tracking";
 
 type TallyWindow = Window & { Tally?: { loadEmbeds: () => void } };
 
@@ -15,6 +16,7 @@ export default function ContactQuoteForm() {
 
   const onSubmitted = useCallback(() => {
     setSubmitted(true);
+    trackQuoteLead();
     // Wait a tick so the note is rendered before scrolling to it
     setTimeout(() => {
       document.getElementById("quote-success")?.scrollIntoView({ behavior: "smooth", block: "center" });
