@@ -53,7 +53,7 @@ export function davidPersonSchema(): JsonLd {
     "@id": `${SITE_URL}/about#david-stein`,
     name: DAVID_STEIN.name,
     url: DAVID_STEIN.url,
-    image: `${SITE_URL}/assets/david-stein-headshot.jpg`,
+    image: `${SITE_URL}/assets/david-stein-portrait.jpg`,
     sameAs: DAVID_STEIN.sameAs,
     worksFor: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
   };

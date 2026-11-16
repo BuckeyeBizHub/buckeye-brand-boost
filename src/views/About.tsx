@@ -5,7 +5,7 @@ import { davidPersonSchema } from "@/lib/structured-data";
 import { CtaBand, Crumbs } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
 
-const davidHero = "/assets/david-stein-hero.jpg";
+const davidHero = "/assets/david-stein-portrait.jpg";
 
 const stats = [
   { value: "20+", label: "Years running Central Ohio businesses" },
