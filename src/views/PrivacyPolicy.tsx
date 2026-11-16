@@ -61,6 +61,7 @@ const sections: { title: string; content: ReactNode[] }[] = [
     content: [
       "Our website uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. Cookies are small text files stored on your device that help us recognize your browser and capture certain information.",
       "You can choose to disable cookies through your browser settings. However, disabling cookies may affect the functionality of certain features on our website. We use third-party analytics services, including SearchAtlas, to help us understand website usage patterns.",
+      "We also use Google Analytics and the Meta Pixel. They tell us which pages get visited and whether one of our ads led someone to request a quote or call us, so we can see which ads work. We send them the type of action only. We never send your name, email, phone number or the answers you put in our quote form. Meta and Google handle this data under their own privacy policies, and you can change how Meta uses it for ads in your Facebook or Instagram ad settings.",
     ],
   },
   {
@@ -114,7 +115,7 @@ export default function PrivacyPolicy() {
           <Crumbs items={[{ name: "Home", href: "/" }, { name: "Privacy policy" }]} />
           <Eyebrow>Your privacy</Eyebrow>
           <h1 className="text-[clamp(2.5rem,5.6vw,4.5rem)]">Privacy policy</h1>
-          <p className="mt-6 text-sm text-muted-foreground">Last updated: September 21, 2026</p>
+          <p className="mt-6 text-sm text-muted-foreground">Last updated: November 16, 2026</p>
         </Container>
       </section>
 
