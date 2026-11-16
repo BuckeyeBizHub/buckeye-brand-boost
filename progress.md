@@ -12,11 +12,22 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-16: six new product pages from the SinaLite and UPrinting catalogs
+  (David: "add as many categories that make sense to drive more traffic and
+  quotes"): `/plastic-cards`, `/raffle-and-event-tickets`,
+  `/carbonless-forms`, `/canvas-and-wall-art`, `/event-tents`,
+  `/custom-coasters`. Specs from vendor product pages, no prices (David:
+  "most of what we do is to quote"). Fixed the broken crew shirt photo on
+  `/screen-printing` and `/custom-t-shirts`. New `content-links.test.ts`
+  catches broken links and missing photos. PR #30, draft. New headshot on
+  home and About in PR #31, draft. Greeting cards PR #29 merged on publish.
+  Before Meta ads: no Meta pixel on the site and no lead event when the
+  quote form is sent (GA4 only counts page views).
 - 2026-11-16: greeting and holiday cards page (`/greeting-cards`), from
   SinaLite's greeting card line (sizes, writable stock, envelopes). On the
   printing hub; linked from dental, medical and real estate. No price
   (none approved). Hero is a stand-in; needs a real card photo. PR #29,
-  draft. Site review the same day: mobile PageSpeed 82, LCP 4.7 s, photos
+  merged on publish 2026-11-16. Site review the same day: mobile PageSpeed 82, LCP 4.7 s, photos
   served full size (public/assets is 52 MB, many files 300 to 550 KB).
   SinaLite gaps worth a page: plastic gift and loyalty cards, numbered
   tickets, canvas and photo panels.
