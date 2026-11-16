@@ -154,11 +154,11 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-16">
           <div className="overflow-hidden rounded-2xl border border-border bg-white">
             <img
-              src="/assets/david-stein-headshot.jpg"
-              alt="David Stein, who runs Buckeye Biz Hub"
+              src="/assets/david-stein-portrait.jpg"
+              alt="David Stein, who runs Buckeye Biz Hub, in a navy blazer and blue shirt"
               loading="lazy"
               decoding="async"
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-[4/3] w-full object-cover object-top"
             />
           </div>
           <div>
