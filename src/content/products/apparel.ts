@@ -176,7 +176,7 @@ export const APPAREL_PAGES: ProductPage[] = [
         heading: "Getting the most out of a screen printed shirt",
         body: "Fewer colors cost less. If your logo has six colors, a one or two color version often looks just as good on a shirt and saves money on every order.\n\nShirt color matters too. A light design on a dark shirt needs a white base layer under the ink, which adds a step. I'll flag that on your proof so there are no surprises.\n\nPut your phone number or website on crew shirts. A shirt on a job site is a small billboard, and people should be able to find you from it.",
         image: {
-          src: "/assets/construction-team-apparel.jpg",
+          src: "/assets/gallery/construction-team-apparel.jpg",
           alt: "Five workers in hard hats and orange hi-vis vests standing together in a warehouse",
         },
       },
@@ -453,7 +453,7 @@ export const APPAREL_PAGES: ProductPage[] = [
         heading: "Work shirts that do some advertising",
         body: "A crew in matching shirts looks like a real company. Customers notice before anyone says a word.\n\nPut your logo on the chest and your phone number or website on the back. Neighbors watching your crew work can find you without looking you up. Order a mix of short and long sleeves so the crew stays covered all year.",
         image: {
-          src: "/assets/construction-team-apparel.jpg",
+          src: "/assets/gallery/construction-team-apparel.jpg",
           alt: "Five workers in hard hats and orange hi-vis vests standing together in a warehouse",
         },
       },
