@@ -12,6 +12,14 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-16: greeting and holiday cards page (`/greeting-cards`), from
+  SinaLite's greeting card line (sizes, writable stock, envelopes). On the
+  printing hub; linked from dental, medical and real estate. No price
+  (none approved). Hero is a stand-in; needs a real card photo. PR #29,
+  draft. Site review the same day: mobile PageSpeed 82, LCP 4.7 s, photos
+  served full size (public/assets is 52 MB, many files 300 to 550 KB).
+  SinaLite gaps worth a page: plastic gift and loyalty cards, numbered
+  tickets, canvas and photo panels.
 - 2026-10-26: menus, home page and sitemap (step 5). Apparel is its own
   product group ("Custom apparel"), split from "Promo and packaging"
   (promo products, packaging, hang tags, rebrand kits). Products menu,
