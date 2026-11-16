@@ -158,7 +158,7 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
               alt="David Stein, who runs Buckeye Biz Hub, in a navy blazer and blue shirt"
               loading="lazy"
               decoding="async"
-              className="aspect-[4/3] w-full object-cover object-[50%_15%]"
+              className="aspect-[4/3] w-full object-cover object-top"
             />
           </div>
           <div>
