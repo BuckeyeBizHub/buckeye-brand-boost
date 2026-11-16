@@ -12,6 +12,14 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-16: Meta Pixel 2501560067000271, domain verification tag,
+  PageView / Lead (quote form success) / Contact (tel: taps), plus GA4
+  generate_lead and phone_click. Privacy policy paragraph added. PR #32,
+  draft. Preview check: tag in server HTML head, events queue in the right
+  order (init, PageView, Contact, PageView on route change). fbevents.js
+  was blocked in David's Chrome, so test events from a phone or a browser
+  without an ad blocker. After publish David verifies the domain in Meta
+  Business Suite and runs Test events. PRs #30 and #31 merged on publish.
 - 2026-11-16: six new product pages from the SinaLite and UPrinting catalogs
   (David: "add as many categories that make sense to drive more traffic and
   quotes"): `/plastic-cards`, `/raffle-and-event-tickets`,
