@@ -5,6 +5,7 @@ import type { IndustryPage, ProductPage } from "@/content/types";
 import { breadcrumbLd, faqLd } from "@/lib/schema";
 import { CtaBand, Crumbs, FaqList, HowItWorks, LinkCards, PriceCards, PriceFootnote } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, Paragraphs, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
+import { responsive, SIZES } from "@/lib/responsive-image";
 
 export default function IndustryPageView({ page }: { page: IndustryPage }) {
   const path = `/${page.slug}`;
@@ -39,7 +40,7 @@ export default function IndustryPageView({ page }: { page: IndustryPage }) {
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl border border-border bg-cream">
-            <img src={page.hero.src} alt={page.hero.alt} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
+            <img src={page.hero.src} {...responsive(page.hero.src, SIZES.hero)} alt={page.hero.alt} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
           </div>
         </Container>
       </section>

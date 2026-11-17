@@ -6,6 +6,7 @@ import type { BlogPostSummary } from "@/lib/blog-utils";
 import { CtaBand, HowItWorks, LinkCards, PriceCards, PriceFootnote, StartSmall } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
 import LatestBlogSection from "@/components/LatestBlogSection";
+import { responsive, SIZES } from "@/lib/responsive-image";
 
 const PROMISES = [
   "Free quote within 24 hours",
@@ -27,6 +28,7 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
       <section className="relative isolate overflow-hidden bg-ink text-paper">
         <img
           src="/assets/branded-vehicle-fleet.jpg"
+          {...responsive("/assets/branded-vehicle-fleet.jpg", SIZES.full)}
           alt="Mockup of white work vans with fleet lettering"
           fetchPriority="high"
           decoding="async"
