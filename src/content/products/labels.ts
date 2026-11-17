@@ -374,11 +374,11 @@ export const LABEL_PAGES: ProductPage[] = [
     blurb: "Magnetic signs for personal cars and trucks you also use for work.",
     metaTitle: "Car Magnets and Magnetic Signs in Columbus",
     metaDescription:
-      "Custom car magnets for Columbus businesses. Your name and number on the car for work, off for the weekend. A pair from $35. Free quote in 24 hours.",
+      "Custom car magnets for Columbus businesses. Your name and number on the car for work, off for the weekend. A pair from $58. Free quote in 24 hours.",
     eyebrow: "Car magnets",
     h1: "Car Magnets and Magnetic Signs in Columbus",
     tagline: "Business on the car all week. Off for the weekend.",
-    lede: "Custom car magnets put your business name and phone on a personal car or truck without anything permanent. On for work, off for the weekend. A pair of 12 x 18 magnets starts at $35.",
+    lede: "Custom car magnets put your business name and phone on a personal car or truck without anything permanent. On for work, off for the weekend. A pair of 12 x 18 magnets starts at $58.",
     hero: {
       src: "/assets/vehicle-decal-closeup.jpg",
       alt: "Red Ohio-shaped Buckeye Biz Hub logo with a black name bar on the white side of a vehicle",
@@ -422,7 +422,7 @@ export const LABEL_PAGES: ProductPage[] = [
     sections: [
       {
         heading: "Car magnets or vehicle lettering?",
-        body: "Magnets make sense when the car is yours, the business is part-time, or you share the vehicle with family. They go on in seconds and come off just as fast. A pair of 12 x 18 magnets starts at $35.\n\nLettering makes sense when the truck works every day. Cut vinyl looks cleaner, stays put on the highway and can't be pulled off the door by someone walking by. Door lettering on both doors starts at $249 installed.\n\nPlenty of people start with magnets, prove the business, then move to lettering on a dedicated work truck. That's a smart order to do it in, and I can set up both from the same design.",
+        body: "Magnets make sense when the car is yours, the business is part-time, or you share the vehicle with family. They go on in seconds and come off just as fast. A pair of 12 x 18 magnets starts at $58.\n\nLettering makes sense when the truck works every day. Cut vinyl looks cleaner, stays put on the highway and can't be pulled off the door by someone walking by. Door lettering on both doors starts at $249 installed.\n\nPlenty of people start with magnets, prove the business, then move to lettering on a dedicated work truck. That's a smart order to do it in, and I can set up both from the same design.",
       },
       {
         heading: "Will a magnet stick to my car?",
@@ -436,7 +436,7 @@ export const LABEL_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much do car magnets cost?",
-        a: "A pair of 12 x 18 car magnets, 30 mil with rounded corners, starts at $35. Bigger sizes, custom shapes and larger quantities change the price. Reorders cost less per piece.",
+        a: "A pair of 12 x 18 car magnets, 30 mil with rounded corners, starts at $58. Bigger sizes, custom shapes and larger quantities change the price. Reorders cost less per piece.",
       },
       {
         q: "Will car magnets damage my paint?",

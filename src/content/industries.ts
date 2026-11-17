@@ -8,7 +8,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Yard signs, door hangers, truck lettering and crew shirts for roofing companies.",
     metaTitle: "Roofing Yard Signs and Door Hangers in Columbus",
     metaDescription:
-      "Yard signs, door hangers, postcards, truck lettering and crew shirts for Columbus roofing companies. 10 yard signs from $95. Free quote in 24 hours.",
+      "Yard signs, door hangers, postcards, truck lettering and crew shirts for Columbus roofing companies. 10 yard signs from $117. Free quote in 24 hours.",
     eyebrow: "Roofing",
     h1: "Yard Signs, Door Hangers and Truck Lettering for Roofers in Columbus",
     tagline: "Get the next roof on the same street.",
@@ -76,7 +76,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much do roofing yard signs cost?",
-        a: "10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $95. Bigger quantities bring the price per sign down. Send your logo and phone number and I'll quote it within 24 hours.",
+        a: "10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $117. Bigger quantities bring the price per sign down. Send your logo and phone number and I'll quote it within 24 hours.",
       },
       {
         q: "What should a roofing door hanger say?",
@@ -174,7 +174,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much does a jobsite banner cost?",
-        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Bigger banners, mesh material and double-sided printing change the price. Send the size of the fence or wall and I'll quote it within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $62. Bigger banners, mesh material and double-sided printing change the price. Send the size of the fence or wall and I'll quote it within 24 hours.",
       },
       {
         q: "What's the difference between a vinyl banner and a mesh banner?",
@@ -204,7 +204,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Office signs, appointment cards, staff apparel and referral thank-yous for dentists.",
     metaTitle: "Dental Office Signs and Printing in Columbus",
     metaDescription:
-      "Dental office signs, business and appointment cards, staff apparel and referral gifts in Columbus. 500 business cards from $29. Free quote in 24 hours.",
+      "Dental office signs, business and appointment cards, staff apparel and referral gifts in Columbus. 500 business cards from $42. Free quote in 24 hours.",
     eyebrow: "Dental",
     h1: "Signs, Printing and Staff Apparel for Dental Offices in Columbus",
     tagline: "Print, signs and staff apparel for the dental office.",
@@ -248,7 +248,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     sections: [
       {
         heading: "What printing does a dental office need?",
-        body: "Most practices run on a short list: business cards, appointment cards, recall postcards, letterhead and envelopes. Specialists add referral pads and report letterhead for the general dentists who send them patients.\n\nThe trouble usually isn't the list. It's that each piece was ordered at a different time from a different place, so the logo and colors drift. Send me what you have now, and I'll set everything up from one set of files so the next reorder matches the last one.\n\n500 business cards, full color on both sides, start at $29. Once I have your files, a reorder is one email from the front desk.",
+        body: "Most practices run on a short list: business cards, appointment cards, recall postcards, letterhead and envelopes. Specialists add referral pads and report letterhead for the general dentists who send them patients.\n\nThe trouble usually isn't the list. It's that each piece was ordered at a different time from a different place, so the logo and colors drift. Send me what you have now, and I'll set everything up from one set of files so the next reorder matches the last one.\n\n500 business cards, full color on both sides, start at $42. Once I have your files, a reorder is one email from the front desk.",
       },
       {
         heading: "Signs patients see before the front desk",
@@ -272,7 +272,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much do dental business cards cost?",
-        a: "500 business cards, full color on both sides, start at $29. Appointment lines on the back, special paper or rounded corners change the price. Send your current card and I'll quote it within 24 hours.",
+        a: "500 business cards, full color on both sides, start at $42. Appointment lines on the back, special paper or rounded corners change the price. Send your current card and I'll quote it within 24 hours.",
       },
       {
         q: "Can you print appointment cards and recall postcards?",
@@ -302,7 +302,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Office signs, patient printing, staff apparel and referral gifts for medical practices.",
     metaTitle: "Medical Practice Printing and Signs in Columbus",
     metaDescription:
-      "Printing, office signs, staff apparel and referral gifts for Columbus medical practices, chiropractors and PT clinics. 500 business cards from $29. Free quote.",
+      "Printing, office signs, staff apparel and referral gifts for Columbus medical practices, chiropractors and PT clinics. 500 business cards from $42. Free quote.",
     eyebrow: "Medical and specialty",
     h1: "Signs and Printing for Medical Practices in Columbus",
     tagline: "Signs, print and apparel for the practice.",
@@ -365,7 +365,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much do business cards cost for a medical office?",
-        a: "500 business cards, full color on both sides, start at $29. Special paper, rounded corners or appointment lines on the back change the price. Reorders are quick once your file is set up.",
+        a: "500 business cards, full color on both sides, start at $42. Special paper, rounded corners or appointment lines on the back change the price. Reorders are quick once your file is set up.",
       },
       {
         q: "Can you print our intake forms and patient handouts?",
@@ -442,7 +442,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       },
       {
         heading: "Plan the season before it starts",
-        body: "Spring hits fast in Central Ohio. Once the grass starts growing, you won't have time to chase print. Order crew shirts, yard signs and door hangers in the slow months, so they're on the shelf when the phone starts ringing.\n\nScreen printed T-shirts start at $14 each and suit summer crews. 10 yard signs, printed on both sides with stakes, start at $95. Put one in every yard you finish, with the homeowner's OK.\n\nI keep your files on record, so a mid-season reorder is one call. You deal with me from the quote to delivery.",
+        body: "Spring hits fast in Central Ohio. Once the grass starts growing, you won't have time to chase print. Order crew shirts, yard signs and door hangers in the slow months, so they're on the shelf when the phone starts ringing.\n\nScreen printed T-shirts start at $14 each and suit summer crews. 10 yard signs, printed on both sides with stakes, start at $117. Put one in every yard you finish, with the homeowner's OK.\n\nI keep your files on record, so a mid-season reorder is one call. You deal with me from the quote to delivery.",
       },
     ],
     featured: [
@@ -488,7 +488,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Yard signs, open house signs, car magnets, business cards and postcards for agents.",
     metaTitle: "Real Estate Signs and Agent Printing in Columbus",
     metaDescription:
-      "Real estate yard signs, open house signs, business cards, car magnets and just listed postcards for Columbus agents. 10 yard signs from $95. Free quote.",
+      "Real estate yard signs, open house signs, business cards, car magnets and just listed postcards for Columbus agents. 10 yard signs from $117. Free quote.",
     eyebrow: "Real estate",
     h1: "Real Estate Signs, Cards and Mailers in Columbus",
     tagline: "Signs, cards and mailers for agents and teams.",
@@ -527,7 +527,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     sections: [
       {
         heading: "Open house signs that get people to the door",
-        body: "A lot of open house traffic comes from people who see a sign and turn. Put directional signs at each turn from the nearest main road, so a buyer never has to guess. Keep them simple: Open House, an arrow and your name or brokerage.\n\n10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $95. Coroplast signs are light, cheap and easy to throw in the trunk. Make the arrows big and the words bigger.\n\nFollow your brokerage's sign rules and the local rules on signs near the road. Some Central Ohio communities and homeowner associations limit where signs can go and how long they can stay.",
+        body: "A lot of open house traffic comes from people who see a sign and turn. Put directional signs at each turn from the nearest main road, so a buyer never has to guess. Keep them simple: Open House, an arrow and your name or brokerage.\n\n10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $117. Coroplast signs are light, cheap and easy to throw in the trunk. Make the arrows big and the words bigger.\n\nFollow your brokerage's sign rules and the local rules on signs near the road. Some Central Ohio communities and homeowner associations limit where signs can go and how long they can stay.",
       },
       {
         heading: "Just listed and just sold postcards",
@@ -535,7 +535,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       },
       {
         heading: "Look like the same agent everywhere",
-        body: "Buyers and sellers see you on a sign, a card, a car door and a mailer before they meet you in person. When the logo, colors and photo match on all of it, you look established, even in your first year.\n\nCar magnets are an easy start. A pair at 12 x 18 starts at $35, and they come off when the car is a family car again. 500 business cards start at $29.\n\nIf you switch brokerages, I'll update everything together so nothing old stays out there. Teams can order through one account and keep every agent's pieces matching.",
+        body: "Buyers and sellers see you on a sign, a card, a car door and a mailer before they meet you in person. When the logo, colors and photo match on all of it, you look established, even in your first year.\n\nCar magnets are an easy start. A pair at 12 x 18 starts at $58, and they come off when the car is a family car again. 500 business cards start at $42.\n\nIf you switch brokerages, I'll update everything together so nothing old stays out there. Teams can order through one account and keep every agent's pieces matching.",
       },
     ],
     featured: [
@@ -551,7 +551,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much do real estate yard signs cost?",
-        a: "10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $95. More signs bring the price per sign down. Aluminum signs cost more and last longer.",
+        a: "10 yard signs at 18 x 24, printed on both sides with H-stakes, start at $117. More signs bring the price per sign down. Aluminum signs cost more and last longer.",
       },
       {
         q: "What size should an open house sign be?",
@@ -581,7 +581,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     blurb: "Lot banners, feather flags, showroom graphics, staff polos and gifts for car dealers.",
     metaTitle: "Car Dealer Banners and Lot Signs in Columbus",
     metaDescription:
-      "Lot banners, feather flags, showroom graphics, staff polos and customer gifts for Columbus car dealers. 3 x 6 ft vinyl banners from $39. Free quote in 24 hours.",
+      "Lot banners, feather flags, showroom graphics, staff polos and customer gifts for Columbus car dealers. 3 x 6 ft vinyl banners from $62. Free quote in 24 hours.",
     eyebrow: "Auto dealers",
     h1: "Banners, Flags and Lot Signs for Car Dealers in Columbus",
     tagline: "Banners, flags and gear for the lot and the showroom.",
@@ -625,7 +625,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     sections: [
       {
         heading: "Lot signs and banners that work from the road",
-        body: "Drivers pass your lot at speed. They get a second or two to notice a sale, a price or a brand. Big words, high contrast and one message per banner work better than a crowded design.\n\nA 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Feather flags add motion along the frontage, and pole banners dress up the lot for a sale event. Swap the message for each event, and keep a set of evergreen pieces up the rest of the time.\n\nCheck the local sign code before you add a lot of temporary signs. Some Central Ohio cities limit banners and flags by size or by how many days they can stay up.",
+        body: "Drivers pass your lot at speed. They get a second or two to notice a sale, a price or a brand. Big words, high contrast and one message per banner work better than a crowded design.\n\nA 3 x 6 ft vinyl banner, hemmed with grommets, starts at $62. Feather flags add motion along the frontage, and pole banners dress up the lot for a sale event. Swap the message for each event, and keep a set of evergreen pieces up the rest of the time.\n\nCheck the local sign code before you add a lot of temporary signs. Some Central Ohio cities limit banners and flags by size or by how many days they can stay up.",
       },
       {
         heading: "Showroom, service lane and staff",
@@ -649,7 +649,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     faqs: [
       {
         q: "How much does a car lot banner cost?",
-        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39. Bigger sizes, double-sided printing and mesh material change the price. Send the size and where it hangs and I'll quote it within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $62. Bigger sizes, double-sided printing and mesh material change the price. Send the size and where it hangs and I'll quote it within 24 hours.",
       },
       {
         q: "Do you make feather flags for car lots?",

@@ -9,7 +9,7 @@ export const SIGN_PAGES: ProductPage[] = [
     blurb: "Coroplast yard signs, aluminum signs and A-frames for jobs, listings and events.",
     metaTitle: "Yard Signs and Custom Signs in Columbus, Ohio",
     metaDescription:
-      "Custom yard signs, aluminum signs and A-frames for Columbus contractors, realtors and events. 10 yard signs with H-stakes from $95. Free quote in 24 hours.",
+      "Custom yard signs, aluminum signs and A-frames for Columbus contractors, realtors and events. 10 yard signs with H-stakes from $117. Free quote in 24 hours.",
     eyebrow: "Signs",
     h1: "Yard Signs and Custom Signs in Columbus, Ohio",
     tagline: "Signs for the yard, the job site and the sidewalk.",
@@ -65,7 +65,7 @@ export const SIGN_PAGES: ProductPage[] = [
     sections: [
       {
         heading: "Why contractors put a yard sign at every job",
-        body: "A yard sign is one of the cheapest ads a roofer, painter or landscaper can buy. You're already at the house. The neighbors are already watching the crew. A sign by the driveway tells them who's doing the work and how to call you.\n\nOrder them by the stack so every truck carries a few. Ten 18 x 24 signs with H-stakes start at $95, and reorders cost less per sign because the file is already set up.\n\nAsk the homeowner first, pull the sign when the job wraps up, and put it in the next yard. One clean sign that keeps coming back out of the truck all season earns its keep.",
+        body: "A yard sign is one of the cheapest ads a roofer, painter or landscaper can buy. You're already at the house. The neighbors are already watching the crew. A sign by the driveway tells them who's doing the work and how to call you.\n\nOrder them by the stack so every truck carries a few. Ten 18 x 24 signs with H-stakes start at $117, and reorders cost less per sign because the file is already set up.\n\nAsk the homeowner first, pull the sign when the job wraps up, and put it in the next yard. One clean sign that keeps coming back out of the truck all season earns its keep.",
         image: {
           src: "/photos/roofing-yard-sign-contractors.jpg",
           alt: "Stack of printed roofing contractor yard signs with a free estimates message and a sample phone number",
@@ -83,7 +83,7 @@ export const SIGN_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much do yard signs cost?",
-        a: "Ten 18 x 24 yard signs, printed on both sides with H-stakes, start at $95. A 12 x 18 aluminum sign starts at $35. Price depends on size, quantity and material, and the price per sign drops as quantity goes up.",
+        a: "Ten 18 x 24 yard signs, printed on both sides with H-stakes, start at $117. A 12 x 18 aluminum sign starts at $35. Price depends on size, quantity and material, and the price per sign drops as quantity goes up.",
       },
       {
         q: "What size is a standard yard sign?",
@@ -95,7 +95,7 @@ export const SIGN_PAGES: ProductPage[] = [
       },
       {
         q: "Do yard signs come with stakes?",
-        a: "The $95 starting price for 10 yard signs includes H-stakes. If you'd rather hang them on a fence, ask for grommets when you request the quote.",
+        a: "The $117 starting price for 10 yard signs includes H-stakes. If you'd rather hang them on a fence, ask for grommets when you request the quote.",
       },
       {
         q: "Can yard signs be printed on both sides?",
@@ -358,7 +358,7 @@ export const SIGN_PAGES: ProductPage[] = [
       },
       {
         heading: "Job site safety signs for contractors",
-        body: "A job site sign tells the neighbors who's working and tells visitors where they can't go. Hard hat area, authorized personnel only and the site rules belong on the fence or the trailer door.\n\nFor a job that lasts a few weeks, coroplast is fine and costs less. Ten 18 x 24 coroplast signs with H-stakes start at $95. For a yard or a shop you use every year, go aluminum.\n\nPair them with a mesh banner on the fence and your name is on the whole project.",
+        body: "A job site sign tells the neighbors who's working and tells visitors where they can't go. Hard hat area, authorized personnel only and the site rules belong on the fence or the trailer door.\n\nFor a job that lasts a few weeks, coroplast is fine and costs less. Ten 18 x 24 coroplast signs with H-stakes start at $117. For a yard or a shop you use every year, go aluminum.\n\nPair them with a mesh banner on the fence and your name is on the whole project.",
       },
       {
         heading: "Colors people read before the words",
@@ -401,7 +401,7 @@ export const SIGN_PAGES: ProductPage[] = [
     blurb: "Vinyl and mesh banners, feather flags and large format prints in any size.",
     metaTitle: "Custom Banners and Flags in Columbus, Ohio",
     metaDescription:
-      "Vinyl banners, mesh fence banners, feather flags and large format posters for Columbus businesses. 3 x 6 ft vinyl banner from $39. Free quote in 24 hours.",
+      "Vinyl banners, mesh fence banners, feather flags and large format posters for Columbus businesses. 3 x 6 ft vinyl banner from $62. Free quote in 24 hours.",
     eyebrow: "Banners and large format",
     h1: "Custom Banners and Flags in Columbus, Ohio",
     tagline: "Banners, flags and big prints people see from the road.",
@@ -453,7 +453,7 @@ export const SIGN_PAGES: ProductPage[] = [
     sections: [
       {
         heading: "Vinyl or mesh: which banner do you need?",
-        body: "Vinyl is the default. 13oz vinyl is waterproof, prints sharp and holds grommets well. It's right for most banners on a building, a stage, a table or a fence that's out of the wind. A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $39.\n\nMesh is vinyl full of tiny holes. Wind passes through instead of pulling on the grommets, so it's the right call on chain-link fences, scaffolding and anything hung up high. Contractors use it to wrap a job site fence. The print looks a little lighter up close, but from the street it reads the same.\n\nTell me where the banner hangs and how long it stays up. I'll match the material, the hems and the grommets to the spot.",
+        body: "Vinyl is the default. 13oz vinyl is waterproof, prints sharp and holds grommets well. It's right for most banners on a building, a stage, a table or a fence that's out of the wind. A 3 x 6 ft vinyl banner, hemmed with grommets, starts at $62.\n\nMesh is vinyl full of tiny holes. Wind passes through instead of pulling on the grommets, so it's the right call on chain-link fences, scaffolding and anything hung up high. Contractors use it to wrap a job site fence. The print looks a little lighter up close, but from the street it reads the same.\n\nTell me where the banner hangs and how long it stays up. I'll match the material, the hems and the grommets to the spot.",
       },
       {
         heading: "Feather flags and grand opening banners that pull people in",
@@ -471,7 +471,7 @@ export const SIGN_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does a custom vinyl banner cost?",
-        a: "A 3 x 6 ft vinyl banner on 13oz material, hemmed with grommets, starts at $39. Bigger sizes, double-sided printing and pole pockets add to the price. I'll quote your exact size within 24 hours.",
+        a: "A 3 x 6 ft vinyl banner on 13oz material, hemmed with grommets, starts at $62. Bigger sizes, double-sided printing and pole pockets add to the price. I'll quote your exact size within 24 hours.",
       },
       {
         q: "What size banner should I get?",

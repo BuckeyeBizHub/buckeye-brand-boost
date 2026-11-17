@@ -10,7 +10,7 @@ export const PRINT_PAGES: ProductPage[] = [
     blurb: "Cards, postcards, flyers, door hangers, stationery, folders, catalogs and menus.",
     metaTitle: "Business Printing Services in Columbus, Ohio",
     metaDescription:
-      "Business printing in Columbus, Ohio: cards, postcards, flyers, door hangers, letterhead and more. 500 business cards from $29. Free quote in 24 hours.",
+      "Business printing in Columbus, Ohio: cards, postcards, flyers, door hangers, letterhead and more. 500 business cards from $42. Free quote in 24 hours.",
     eyebrow: "Business printing",
     h1: "Business Printing Services in Columbus, Ohio",
     tagline: "Everything your business hands out, printed and handled by one person.",
@@ -107,7 +107,7 @@ export const PRINT_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does business printing cost?",
-        a: "500 business cards start at $29. 500 postcards at 4 x 6 start at $55, and 500 flyers at 8.5 x 11 start at $119. Paper, size, finish and quantity change the price, and every quote comes back within 24 hours.",
+        a: "500 business cards start at $42. 500 postcards at 4 x 6 start at $55, and 500 flyers at 8.5 x 11 start at $119. Paper, size, finish and quantity change the price, and every quote comes back within 24 hours.",
       },
       {
         q: "Do you have a print shop I can walk into?",
@@ -140,11 +140,11 @@ export const PRINT_PAGES: ProductPage[] = [
     blurb: "Standard, premium, foil, thick and rounded-corner business cards.",
     metaTitle: "Business Card Printing in Columbus, Ohio",
     metaDescription:
-      "Business card printing in Columbus, Ohio. Standard, premium, foil, thick and rounded-corner cards. 500 cards from $29. Proof first. Free quote in 24 hours.",
+      "Business card printing in Columbus, Ohio. Standard, premium, foil, thick and rounded-corner cards. 500 cards from $42. Proof first. Free quote in 24 hours.",
     eyebrow: "Business cards",
     h1: "Business Card Printing in Columbus, Ohio",
     tagline: "Local business cards that are worth handing out.",
-    lede: "Business card printing in Columbus for contractors, agents, offices and anyone who still shakes hands. Standard, thick, foil or rounded corners. 500 full-color cards start at $29.",
+    lede: "Business card printing in Columbus for contractors, agents, offices and anyone who still shakes hands. Standard, thick, foil or rounded corners. 500 full-color cards start at $42.",
     hero: {
       src: "/assets/luxury-gold-foil-cards.jpg",
       alt: "Stack of dark business cards with raised gold foil lettering and a gold dot pattern",
@@ -200,7 +200,7 @@ export const PRINT_PAGES: ProductPage[] = [
       },
       {
         heading: "Standard, premium, foil or thick: which card is right?",
-        body: "Standard 14pt cards with gloss or matte are the right call for most businesses. They look professional and keep the cost low, which matters when you hand out a lot of them. 500 start at $29.\n\nPremium and thick cards cost more and feel it. They make sense when the card is part of the pitch: real estate, law, financial services, high-end contractors.\n\nFoil and spot UV are for when you want the logo to stand out. Use them on one or two details, like your logo or name. Covering the whole card in foil usually looks busy and costs more than it's worth.",
+        body: "Standard 14pt cards with gloss or matte are the right call for most businesses. They look professional and keep the cost low, which matters when you hand out a lot of them. 500 start at $42.\n\nPremium and thick cards cost more and feel it. They make sense when the card is part of the pitch: real estate, law, financial services, high-end contractors.\n\nFoil and spot UV are for when you want the logo to stand out. Use them on one or two details, like your logo or name. Covering the whole card in foil usually looks busy and costs more than it's worth.",
       },
       {
         heading: "Specialty finishes: foil, spot UV, soft touch and painted edges",
@@ -218,7 +218,7 @@ export const PRINT_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much do business cards cost?",
-        a: "500 full-color business cards, 3.5 x 2 on 14pt stock and printed on both sides, start at $29. Thicker stock, foil, spot UV, rounded corners and bigger quantities change the price.",
+        a: "500 full-color business cards, 3.5 x 2 on 14pt stock and printed on both sides, start at $42. Thicker stock, foil, spot UV, rounded corners and bigger quantities change the price.",
       },
       {
         q: "What's the smallest business card order?",
@@ -757,7 +757,7 @@ export const PRINT_PAGES: ProductPage[] = [
     blurb: "Letterhead, envelopes, carbonless forms and notepads that match your brand.",
     metaTitle: "Letterhead and Envelope Printing in Columbus",
     metaDescription:
-      "Letterhead, envelope, carbonless form and notepad printing in Columbus, Ohio. Matched to your business cards, from $29 for 500. Free quote in 24 hours.",
+      "Letterhead, envelope, carbonless form and notepad printing in Columbus, Ohio. Matched to your business cards, from $42 for 500. Free quote in 24 hours.",
     eyebrow: "Office stationery",
     h1: "Letterhead and Envelope Printing in Columbus",
     tagline: "Letterhead, envelopes and forms that match your business card.",
@@ -827,7 +827,7 @@ export const PRINT_PAGES: ProductPage[] = [
     faqs: [
       {
         q: "How much does letterhead cost?",
-        a: "It depends on the paper, the quantity and how many colors print. Matching business cards start at $29 for 500. Send me what you need and I'll quote the whole set within 24 hours.",
+        a: "It depends on the paper, the quantity and how many colors print. Matching business cards start at $42 for 500. Send me what you need and I'll quote the whole set within 24 hours.",
       },
       {
         q: "What paper is best for letterhead?",
