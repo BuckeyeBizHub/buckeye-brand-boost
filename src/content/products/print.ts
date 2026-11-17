@@ -1694,7 +1694,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Calendars as a year-end gift",
         body: "A wall calendar is a gift clients use every day for a year. Realtors, insurance agents, lenders and service companies send them to past customers in December.\n\nOrder in the fall so they're in hand before the holidays. Use your own photos, local scenes or your team, and keep your contact info on every page.\n\nA one-page calendar magnet is the low-cost version. It goes on the fridge in January and stays there.\n\nFor magnets on a truck or car door, see car magnets.",
-        image: { src: "/assets/gallery/custom-desk-calendar.png", alt: "Spiral desk calendar with a quote and a law firm's contact details along the bottom" },
+        image: { src: "/assets/gallery/custom-desk-calendar.jpg", alt: "Spiral desk calendar with a quote and a law firm's contact details along the bottom" },
       },
     ],
     faqs: [

@@ -12,6 +12,15 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-16 (evening): PR #32 Meta Pixel merged on publish; David verified
+  the domain in Meta. Test events not confirmed yet. PR #33 faster photos
+  (favicon and touch icon were 1.4 MB each, now 12 and 33 KB; 109 photos
+  recompressed; 800 px phone copies with srcset; home hero 266 to 121 KB).
+  PR #34 four Higgsfield product photos (greeting cards, plastic cards,
+  raffle tickets; 1 credit). Previews are behind Vercel login, so run
+  PageSpeed on the live site after publish. First Meta ad drafts (holiday
+  cards, gift cards) given in chat with UTM links. Still David's: Instagram
+  login and 2FA in Meta, ad budget, the two open promises.
 - 2026-11-16: Meta Pixel 2501560067000271, domain verification tag,
   PageView / Lead (quote form success) / Contact (tel: taps), plus GA4
   generate_lead and phone_click. Privacy policy paragraph added. PR #32,

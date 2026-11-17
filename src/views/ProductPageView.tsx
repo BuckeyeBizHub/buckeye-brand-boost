@@ -13,6 +13,7 @@ import {
   StartSmall,
 } from "@/components/site/blocks";
 import { ButtonLink, Container, Eyebrow, JsonLd, Paragraphs, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
+import { responsive, SIZES } from "@/lib/responsive-image";
 
 function toCard(p: ProductPage) {
   return { href: `/${p.slug}`, title: p.navLabel, blurb: p.blurb, image: p.hero, price: p.prices?.[0] };
@@ -104,6 +105,7 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
           <div className="overflow-hidden rounded-2xl border border-border bg-cream">
             <img
               src={page.hero.src}
+              {...responsive(page.hero.src, SIZES.hero)}
               alt={page.hero.alt}
               fetchPriority="high"
               decoding="async"
@@ -142,7 +144,7 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
             {page.options.map((o) => (
               <li key={o.name} className="overflow-hidden rounded-xl border border-border bg-white">
                 <div className="aspect-[4/3] overflow-hidden bg-cream">
-                  <img src={o.image!.src} alt={o.image!.alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+                  <img src={o.image!.src} {...responsive(o.image!.src, SIZES.card)} alt={o.image!.alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-display text-[1.4rem] leading-tight">{o.name}</h3>
@@ -192,7 +194,7 @@ export default function ProductPageView({ page }: { page: ProductPage }) {
             </div>
             {s.image && (
               <div className="overflow-hidden rounded-2xl border border-border bg-cream">
-                <img src={s.image.src} alt={s.image.alt} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover" />
+                <img src={s.image.src} {...responsive(s.image.src, SIZES.hero)} alt={s.image.alt} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover" />
               </div>
             )}
           </div>

@@ -5,6 +5,7 @@ import type { Faq, Img } from "@/content/types";
 import { cn } from "@/lib/utils";
 import { OrderFlow } from "./OrderFlow";
 import { ButtonLink, Container, Eyebrow, PHONE_DISPLAY, PHONE_HREF } from "./ui";
+import { responsive, SIZES } from "@/lib/responsive-image";
 
 /** Starting-price cards. */
 export function PriceCards({ keys, className, compact }: { keys: PriceKey[]; className?: string; compact?: boolean }) {
@@ -82,6 +83,7 @@ export function LinkCards({ items, className }: { items: CardItem[]; className?:
             <div className="aspect-[16/10] overflow-hidden bg-cream">
               <img
                 src={it.image.src}
+                {...responsive(it.image.src, SIZES.card)}
                 alt={it.image.alt}
                 loading="lazy"
                 decoding="async"
