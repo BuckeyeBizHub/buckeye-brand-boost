@@ -12,6 +12,15 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-17: David adopted one quote formula (vendor cost x 1.35, plus $25
+  per order, shipping at cost; nonprofits x 1.30; setup always included).
+  Small "from" prices raised to match, from real vendor costs: 500 business
+  cards $29 to $42, car magnet pair $35 to $58, 3 x 6 vinyl banner $39 to
+  $62, 10 yard signs with stakes $95 to $117. prices.ts plus every hard-coded
+  copy line (38 spots) and one blog post. Draft PR, waits on PUBLISH. Not
+  changed (no matching vendor cost yet): flyers $119, retractable $129
+  (one real cost on file is above it), aluminum sign $35, decals, postcards,
+  door hangers, roll labels. Meta ad build sheet still says "cards from $29".
 - 2026-11-16: claims decision from David. KEEP "Free quote within 24 hours".
   DROP "If you're not happy, we make it right": removed from home promises,
   CTA band, contact, pricing and FAQ (replaced with the proof-before-print

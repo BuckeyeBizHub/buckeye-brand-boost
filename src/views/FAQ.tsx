@@ -139,7 +139,7 @@ const categories: FAQCategory[] = [
     items: [
       {
         q: "What kind of business cards do you offer?",
-        a: "Standard 14pt stock up to ultra-thick. Gold and silver foil, spot UV, embossing and debossing, soft-touch and silk finishes, custom die-cuts and edge painting. 500 business cards start at $29, and the price goes up with paper and finish.",
+        a: "Standard 14pt stock up to ultra-thick. Gold and silver foil, spot UV, embossing and debossing, soft-touch and silk finishes, custom die-cuts and edge painting. 500 business cards start at $42, and the price goes up with paper and finish.",
       },
       {
         q: "Can you do small print runs or only bulk?",
@@ -220,7 +220,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What yard sign options do you have?",
-        a: "The standard is an 18 x 24 inch sign on 4mm corrugated plastic, the go-to for real estate and contractors. 10 yard signs start at $95, printed both sides with H-stakes. Aluminum works for permanent signs, and custom shapes and sizes are available.",
+        a: "The standard is an 18 x 24 inch sign on 4mm corrugated plastic, the go-to for real estate and contractors. 10 yard signs start at $117, printed both sides with H-stakes. Aluminum works for permanent signs, and custom shapes and sizes are available.",
       },
       {
         q: "What promotional products work best for trade shows?",

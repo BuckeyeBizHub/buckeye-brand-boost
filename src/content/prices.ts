@@ -1,5 +1,8 @@
 // Starting prices shown on the site. Approved by David on Oct 8, 2026
-// (target 25 to 40% margin, low end of the market). Wraps: David's going rate,
+// (target 25 to 40% margin, low end of the market). On Nov 17, 2026 David
+// adopted one quote formula (cost x 1.35, plus $25 per order, shipping
+// extra); business cards, car magnets, vinyl banners and yard signs were
+// raised to match it. Wraps: David's going rate,
 // $14/sq ft for design, print and install, less with print-ready files. Change a number here and
 // every page that shows it updates: product pages, the pricing page and the
 // structured data Google reads.
@@ -43,7 +46,7 @@ export const PRICES: Record<PriceKey, StartingPrice> = {
   "business-cards": {
     item: "500 business cards",
     spec: "3.5 x 2, 14pt, full color both sides",
-    from: 29,
+    from: 42,
     quantity: 500,
   },
   postcards: {
@@ -79,19 +82,19 @@ export const PRICES: Record<PriceKey, StartingPrice> = {
   "car-magnets": {
     item: "Car magnets, pair",
     spec: "12 x 18, 30 mil, rounded corners",
-    from: 35,
+    from: 58,
     quantity: 2,
   },
   "vinyl-banner": {
     item: "Vinyl banner",
     spec: "3 x 6 ft, 13oz, hemmed with grommets",
-    from: 39,
+    from: 62,
     quantity: 1,
   },
   "yard-signs": {
     item: "10 yard signs",
     spec: "18 x 24, 4mm coroplast, both sides, with H-stakes",
-    from: 95,
+    from: 117,
     quantity: 10,
   },
   "retractable-banner": {
