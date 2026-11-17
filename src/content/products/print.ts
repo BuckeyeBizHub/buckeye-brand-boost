@@ -866,8 +866,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "A card people keep on the desk.",
     lede: "Holiday cards, thank-you cards and greeting cards printed with your logo and your message. Folded cards with an inside you can sign, envelopes to match, and small runs for a short list of customers.",
     hero: {
-      src: "/assets/printing-stationery.jpg",
-      alt: "Blank white envelopes, a sheet of letterhead and a pen on a dark desk",
+      src: "/assets/holiday-greeting-cards-envelopes.jpg",
+      alt: "Folded cream holiday cards with pine branch and red berry corners, white envelopes and a fountain pen on a wood desk",
     },
     options: [
       {
@@ -960,8 +960,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "A card that stays in the wallet.",
     lede: "Gift cards, loyalty cards and membership cards printed on plastic with your logo. They hold up in a wallet, a purse or a cup holder. Paper gift certificates too, numbered so you can track them.",
     hero: {
-      src: "/assets/rack-opt-coupon.jpg",
-      alt: "Printed card offering 15 percent off your next visit standing on a wood counter beside a plant",
+      src: "/assets/plastic-gift-cards-counter.jpg",
+      alt: "Fanned stack of glossy plastic gift cards with a red and cream wave design on a cafe counter beside a card reader",
     },
     options: [
       {
@@ -1001,7 +1001,7 @@ export const PRINT_PAGES: ProductPage[] = [
       {
         heading: "Gift cards bring the money in before the visit",
         body: "A gift card is a sale today and a new customer later. Someone buys it for a friend, and the friend walks in for the first time with the bill already paid.\n\nThe holidays are the big season. Have cards at the register by Thanksgiving, put a sign by the door, and tell your regulars they're for sale.\n\nPlastic looks like a real gift. A paper certificate in an envelope works too, and it costs less. I print both.",
-        image: { src: "/assets/rack-opt-counter.jpg", alt: "Folded tent card on a cafe counter next to a card reader" },
+        image: { src: "/assets/plastic-loyalty-membership-cards.jpg", alt: "Stack of white plastic punch cards and frosted and white plastic cards with a red stripe beside a leather wallet" },
       },
       {
         heading: "White, frosted or clear plastic",
@@ -1054,8 +1054,8 @@ export const PRINT_PAGES: ProductPage[] = [
     tagline: "Numbered, torn and counted.",
     lede: "Custom raffle tickets, event tickets and drink tickets for fundraisers, festivals, galas and game nights around Columbus. Full color on heavy stock, numbered in order, with a stub that tears off clean.",
     hero: {
-      src: "/assets/rack-opt-event.jpg",
-      alt: "Printed event schedule, map and sponsor cards on a check-in table",
+      src: "/assets/raffle-tickets-numbered-stubs.jpg",
+      alt: "Strip of numbered raffle tickets with perforated stubs on a table, torn stubs in a glass jar at an outdoor fundraiser",
     },
     options: [
       {
