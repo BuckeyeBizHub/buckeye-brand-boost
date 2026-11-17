@@ -3,12 +3,12 @@ import { breadcrumbLd } from "@/lib/schema";
 import { Crumbs, HowItWorks } from "@/components/site/blocks";
 import { ButtonLink, Container, EMAIL, Eyebrow, JsonLd, PHONE_DISPLAY, PHONE_HREF, Section } from "@/components/site/ui";
 import ContactQuoteForm from "./ContactQuoteForm";
+import { GoogleRating } from "@/components/site/GoogleRating";
 
 const trustPoints = [
   "Free quotes, no obligation",
   "Every fee up front",
   "4,300+ vetted suppliers for promo products",
-  "5-star rating on Google",
 ];
 
 const AREA = "Columbus, Dublin, Westerville, Gahanna, Hilliard, Grove City, Delaware, Newark and Mount Vernon";
@@ -101,6 +101,9 @@ export default function Contact() {
                   <span>{t}</span>
                 </li>
               ))}
+              <li>
+                <GoogleRating />
+              </li>
             </ul>
           </aside>
 

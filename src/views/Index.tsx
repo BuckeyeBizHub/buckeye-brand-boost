@@ -7,6 +7,7 @@ import { CtaBand, HowItWorks, LinkCards, PriceCards, PriceFootnote, StartSmall }
 import { ButtonLink, Container, Eyebrow, PHONE_DISPLAY, PHONE_HREF, Section, SectionHead } from "@/components/site/ui";
 import LatestBlogSection from "@/components/LatestBlogSection";
 import { responsive, SIZES } from "@/lib/responsive-image";
+import { GoogleRating } from "@/components/site/GoogleRating";
 
 const PROMISES = [
   "Free quote within 24 hours",
@@ -177,7 +178,10 @@ export default function Index({ latestPosts = [] }: { latestPosts?: BlogPostSumm
                 up late or looks cheap. I run every job the way I&apos;d want mine run.
               </p>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6">
+              <GoogleRating />
+            </div>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/about" variant="outline">
                 Read my story
               </ButtonLink>
