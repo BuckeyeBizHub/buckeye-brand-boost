@@ -250,8 +250,8 @@ const categories: FAQCategory[] = [
         a: "No. Buckeye Biz Hub is home-based, with no walk-in showroom. David comes to your business, or works with you by phone and email. Set up a time through the contact form or call 614-561-3358.",
       },
       {
-        q: "What's your satisfaction guarantee?",
-        a: "If you're not happy with the result, we make it right. You also see and approve a proof before anything prints, so nothing comes as a surprise.",
+        q: "Do I see a proof before it prints?",
+        a: "Yes. You see and approve a proof before anything prints, so nothing comes as a surprise.",
       },
     ],
   },

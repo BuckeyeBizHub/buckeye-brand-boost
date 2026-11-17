@@ -35,6 +35,7 @@ export const BANNED = [
   [/\bit'?s not [^.!?]{1,60}[.;,] it'?s\b/i, 'banned shape: "It\'s not X. It\'s Y."'],
   // Claims we can't back up.
   [/\bguarantee[ds]?\b/i, "claim: guarantee"],
+  [/\bmake it right\b|\bnot happy with (it|the result)\b/i, "claim David dropped Nov 16, 2026: \"we make it right\""],
   [/\B#1\b|\bnumber one\b/i, "claim: #1 / number one"],
   [/\bbest in (columbus|ohio|central ohio|town)\b/i, "claim: best in Columbus"],
   [/\bstudies show\b|\bresearch shows\b|\bexperts (say|agree)\b/i, "claim needs a named, linked source"],

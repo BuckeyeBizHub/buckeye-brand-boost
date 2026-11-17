@@ -72,7 +72,7 @@ export const GEAR_PAGES: ProductPage[] = [
       },
       {
         heading: "4,300+ suppliers, one person to deal with",
-        body: "I source promotional products from 4,300+ vetted suppliers at wholesale pricing. That means a wide range of items and price points without you digging through catalogs or chasing five vendors.\n\nYou tell me the occasion, the quantity and the budget. I come back with options and a quote within 24 hours, then a proof of your logo on the item. Nothing gets made until you approve it. First order? Design and setup are free.\n\nMixing items in one order is fine: drinkware for clients, pens for the front desk, totes for the fall festival. Minimums vary by item, and I'll tell you each one up front. If you're not happy with the result, we make it right.",
+        body: "I source promotional products from 4,300+ vetted suppliers at wholesale pricing. That means a wide range of items and price points without you digging through catalogs or chasing five vendors.\n\nYou tell me the occasion, the quantity and the budget. I come back with options and a quote within 24 hours, then a proof of your logo on the item. Nothing gets made until you approve it. First order? Design and setup are free.\n\nMixing items in one order is fine: drinkware for clients, pens for the front desk, totes for the fall festival. Minimums vary by item, and I'll tell you each one up front.",
       },
     ],
     faqs: [
@@ -378,7 +378,7 @@ export const GEAR_PAGES: ProductPage[] = [
       },
       {
         heading: "Rolling out a rebrand or a new location without the chaos",
-        body: "Pick a launch date and work backward from it. I'll give you a date for each piece with the quote. Vehicles get done one at a time so the trucks keep running. Apparel goes in once you send sizes. The website and Google profile change when the signs do, so nobody finds the old look online.\n\nOpening a new location in Dublin, Grove City or Delaware? Same idea. Signs, window graphics, cards and staff shirts get planned around your opening day.\n\nI keep your files after launch, so the next card order, the next van and the next hire's polo all match. If you're not happy with the result, we make it right.",
+        body: "Pick a launch date and work backward from it. I'll give you a date for each piece with the quote. Vehicles get done one at a time so the trucks keep running. Apparel goes in once you send sizes. The website and Google profile change when the signs do, so nobody finds the old look online.\n\nOpening a new location in Dublin, Grove City or Delaware? Same idea. Signs, window graphics, cards and staff shirts get planned around your opening day.\n\nI keep your files after launch, so the next card order, the next van and the next hire's polo all match.",
       },
     ],
     faqs: [

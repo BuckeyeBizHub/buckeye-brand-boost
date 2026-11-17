@@ -12,7 +12,7 @@ const PROMISES = [
   "Free quote within 24 hours",
   "Real starting prices on the site",
   "Small first orders welcome",
-  "If you're not happy, we make it right",
+  "You approve a proof before it prints",
 ];
 
 const LEAD = ["custom-labels", "decals-and-stickers", "vehicle-lettering"];
