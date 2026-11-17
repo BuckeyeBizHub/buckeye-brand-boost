@@ -36,8 +36,8 @@ const FAQS = [
     a: "Lettering and wrap prices include installation. Printed items ship to you.",
   },
   {
-    q: "What if I'm not happy with it?",
-    a: "If you're not happy with the result, we make it right.",
+    q: "Do I see it before it prints?",
+    a: "Yes. You get a proof to approve first. Nothing prints until you sign off on it.",
   },
 ];
 

@@ -149,7 +149,7 @@ export function HowItWorks({ title = "How ordering works" }: { title?: string })
 /** Closing call to action. */
 export function CtaBand({
   title = "Tell me what you need.",
-  body = "Free quote within 24 hours. Small first orders are welcome. If you're not happy with the result, we make it right.",
+  body = "Free quote within 24 hours. Small first orders are welcome. You approve a proof before anything prints.",
 }: {
   title?: string;
   body?: string;

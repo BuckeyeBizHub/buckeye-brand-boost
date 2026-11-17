@@ -59,7 +59,7 @@ export const MORE_PAGES: ProductPage[] = [
       },
       {
         heading: "How a website project works",
-        body: "It starts with a conversation about your business, your customers and what you want the site to do. I look at what you have now and what the people you compete with around Columbus are doing.\n\nThen comes the plan: which pages you need, what goes on each one and what you want visitors to do. You see the design before it's built, and you review the whole site before it goes live.\n\nYou'll have a quote within 24 hours of that first talk, with what's included spelled out. If you already have a domain and hosting, I'll work with what you have. If you're not happy with the result, we make it right.",
+        body: "It starts with a conversation about your business, your customers and what you want the site to do. I look at what you have now and what the people you compete with around Columbus are doing.\n\nThen comes the plan: which pages you need, what goes on each one and what you want visitors to do. You see the design before it's built, and you review the whole site before it goes live.\n\nYou'll have a quote within 24 hours of that first talk, with what's included spelled out. If you already have a domain and hosting, I'll work with what you have.",
       },
     ],
     faqs: [

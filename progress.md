@@ -12,6 +12,12 @@ labels and packaging (done, PR #22), then menus and home page (draft PR).
 
 ## Outputs
 
+- 2026-11-16: claims decision from David. KEEP "Free quote within 24 hours".
+  DROP "If you're not happy, we make it right": removed from home promises,
+  CTA band, contact, pricing and FAQ (replaced with the proof-before-print
+  line), three product pages and three blog posts. house-style.mjs now fails
+  any page or post that says it. PRs #33 (faster photos: home mobile score
+  82 to 96, LCP 4.7 s to 2.7 s) and #34 (product photos) merged on publish.
 - 2026-11-16 (evening): PR #32 Meta Pixel merged on publish; David verified
   the domain in Meta. Test events not confirmed yet. PR #33 faster photos
   (favicon and touch icon were 1.4 MB each, now 12 and 33 KB; 109 photos

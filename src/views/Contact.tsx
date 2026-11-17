@@ -8,7 +8,6 @@ const trustPoints = [
   "Free quotes, no obligation",
   "Every fee up front",
   "4,300+ vetted suppliers for promo products",
-  "If you're not happy with the result, we make it right",
   "5-star rating on Google",
 ];
 

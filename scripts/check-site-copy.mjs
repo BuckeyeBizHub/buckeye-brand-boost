@@ -26,8 +26,9 @@ const ALLOWED = [
 // Claims David hasn't decided on yet (Projects/Website/MARKETING-PLAN.md,
 // "Claims decision"). They print as warnings so they stay visible, and they
 // don't fail the check. Move a line to ALLOWED or reword the copy once David
-// decides.
-const WAITING_ON_DAVID = [["What's your satisfaction guarantee?", "claims decision: satisfaction guarantee"]];
+// decides. Decided Nov 16, 2026: "Free quote within 24 hours" stays; "we make
+// it right" is dropped and now fails the check (house-style.mjs).
+const WAITING_ON_DAVID = [];
 
 const files = [];
 const walk = (dir) => {
