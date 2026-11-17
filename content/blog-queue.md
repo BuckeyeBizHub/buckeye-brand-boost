@@ -16,6 +16,11 @@ starting with the homepage targets (labels, decals, truck lettering).
 - [x] EDDM postcards in Central Ohio: how Every Door Direct Mail works for a neighborhood business | /eddm-postcards | /assets/postcards-hero.jpg
 - [x] Getting found on Google Maps in Columbus: a plain checklist for a service business | /local-seo | /assets/local-seo-hero.jpg
 - [x] What a small business website needs before it can bring in calls | /website-design | /assets/website-design-hero.jpg
+- [ ] Business holiday cards: who to send them to, what to write inside, and how early to order | /greeting-cards | /assets/holiday-greeting-cards-envelopes.jpg
+- [ ] Selling gift cards over the holidays: plastic gift cards vs paper gift certificates for Columbus spas, salons and restaurants | /plastic-cards | /assets/plastic-gift-cards-counter.jpg
+- [ ] Year-end thank-you gifts for clients and staff that don't end up in a drawer | /promotional-products | pick the closest image in public/assets
+- [ ] Raffle tickets and printing for a winter fundraiser: numbering, stubs and sponsor logos | /raffle-and-event-tickets | /assets/raffle-tickets-numbered-stubs.jpg
+- [ ] Carbonless forms and work order books for contractors: setting them up before the new year | /carbonless-forms | /photos/roofing-carbonless-form.jpg
 - [ ] Restaurant menus and table tents: paper, lamination and when to reprint | /menus-and-table-tents | /assets/menus-hero.jpg
 - [ ] Letterhead and envelopes still matter for contractors and professional offices: here's when | /letterhead-and-envelopes | /assets/letterhead-hero.jpg
 - [ ] Catalogs and booklets: page counts, binding and planning a print run | /catalogs-and-booklets | /assets/catalogs-hero.jpg
